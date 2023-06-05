@@ -1,4 +1,5 @@
-// Theme Colors
+/* Theme Colors */
+
 $primary: #D6A330;
 $secondary: #FFFF4E;
 $accent: #DAB77A;
@@ -7,6 +8,8 @@ $white: #FFFFFF;
 $primary-bg: #EBEBEB;
 $secondary-bg: #E0DFDF;
 $font-accent: #8C8686;
+$alert: #FF0404;
+$green: #67FF4E;
 
 /* Typography */
 
@@ -21,8 +24,8 @@ $font-weight-black: 900;
 
 /* ---------------------- 1rem = 10px -------------------- */
 
-$font-size-x-display: 5.16rem;
-$font-size-display: 4.3rem;
+$font-size-x-display: 7rem;
+$font-size-display: 3.5rem;
 $font-size-xx-large: 3rem;
 $font-size-x-large: 2.5rem;
 $font-size-large: 2rem;
@@ -37,11 +40,13 @@ $lineheight-short: 1.2;
 
 /* Borders */
 
-$border-radius-x-small: .25rem;
-$border-radius-small: .5rem;
-$border-radius-medium: .75rem;
+$border-radius-x-small: .50rem;
+$border-radius-small: .75rem;
+$border-radius-medium: 1rem;
 $border-radius-large: 1.5rem;
+$border-radius-x-large: 2rem;
 $border-radius-btn: 3rem;
+$circle: 50%;
 $border-width-hairline: 0.5px;
 $border-width: 1px;
 $border-width-thin: 2px;
@@ -82,10 +87,16 @@ $duration-slowly: 1s;
 /* Buttons */
 
 $btn-padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+$btn-padding-2: 0.8rem 4rem 0.8rem 4rem;
+$btn-padding-3: 0.8rem 2rem 0.8rem 2rem;
 $btn-x-padding: 1.2rem 10rem 1.2rem 10rem;
 $stat-padding: 0.4rem 1.2rem 0.4rem 1.2rem;
 $task-padding: 0.2rem 1.2rem 0.2rem 1.2rem;
 $sqr-padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+
+/* Box Shadows */
+
+$box-shadow: -1px 3px 3px 0px rgba(0, 0, 0, 0.26);
 :export {
     primaryColor: $primary;
 }
