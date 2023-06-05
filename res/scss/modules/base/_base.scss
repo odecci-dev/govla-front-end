@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* <html> = the root */
+
+html {
+    font-size: 62.5%;
+    /* (62.5/100) * 16px = 10px */
+}
+
+body {
+    font-family: $font-family;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    height: 100%;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+menu,
+ol,
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+dialog { 
+    border: none !important;
+}
+
+hr {
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    border: none;
+    outline: none;
+}

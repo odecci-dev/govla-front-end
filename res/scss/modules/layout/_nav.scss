@@ -1,0 +1,143 @@
+// Style for main nav container
+.nav {
+    position: fixed;
+    width: calc(100% - 92%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 0 4.5rem 0;
+    background-color: $black;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+    img {
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    // Styles for the navlinks inside the containers
+    .nav-links {
+        width: 100%;
+        position: relative;
+        margin-top: $spacing-5x-large;
+        // navlink
+        .link {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: $spacing-medium;
+            p {
+                font-size: $font-size;
+                font-weight: $font-weight-bold;
+                margin-top: 1rem;
+                color: $white;
+            }
+        }
+        // navlink
+        li:hover,
+        li:focus {
+            background-color: $primary;
+        }
+        // Display carret right to all the links
+        .link.dropdown::after {
+            content: url(../assets/icons/carret-right.svg);
+            position: absolute;
+            display: inline-block;
+            right: 0;
+            transform: translateX(-1.5rem) translateY(1rem)
+        }
+    }
+    // Styles for nav-container-1
+    .nav-con-1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .nav-links {
+            // Submenu will have relative position to the dropdown container
+            .dropdown {
+                position: relative;
+            }
+            // When a link IS clicked
+            .dropdown.showMenu>.link.dropdown+.sub-menu {
+                opacity: 1;
+                transition: opacity ease-out 300ms;
+            }
+            .sub-menu {
+                // When a link IS NOT clicked 
+                opacity: 0;
+                // Styles for submenu
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                left: 100%;
+                top: 0;
+                // margin: $spacing-small $spacing-4x-large $spacing-medium $spacing-2x-large;
+                background-color: $primary;
+                li {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    padding: $spacing-2x-large $spacing-4x-large $spacing-2x-large $spacing-2x-large;
+                    img {
+                        position: absolute;
+                    }
+                    span {
+                        font-size: $font-size;
+                        font-weight: $font-weight-bold;
+                        white-space: nowrap;
+                        color: $white;
+                        padding-left: $spacing-6x-large;
+                    }
+                }
+                li:hover {
+                    cursor: pointer;
+                    background: rgba(0, 0, 0, 0.125);
+                    background-blend-mode: darken;
+                }
+            }
+        }
+    }
+    // Styles for nav-container-2
+    .nav-con-2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.profile-nav {
+    position: fixed;
+    width: calc(100% - 8%);
+    height: calc(100% - 90%);
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 5rem 0 4.5rem;
+    background-color: $black;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+    .profile-nav-con {
+        display: flex;
+        align-items: center;
+        img:first-child {
+            padding-right: 2rem;
+        }
+    }
+}

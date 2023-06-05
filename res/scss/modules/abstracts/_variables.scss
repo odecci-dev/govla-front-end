@@ -1,0 +1,91 @@
+// Theme Colors
+$primary: #D6A330;
+$secondary: #FFFF4E;
+$accent: #DAB77A;
+$black: #29292B;
+$white: #FFFFFF;
+$primary-bg: #EBEBEB;
+$secondary-bg: #E0DFDF;
+$font-accent: #8C8686;
+
+/* Typography */
+
+$font-family: 'Inter',
+sans-serif;
+$font-family-alt: 'Helvetica',
+Arial,
+sans-serif;
+$font-weight: 400;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+/* ---------------------- 1rem = 10px -------------------- */
+
+$font-size-x-display: 5.16rem;
+$font-size-display: 4.3rem;
+$font-size-xx-large: 3rem;
+$font-size-x-large: 2.5rem;
+$font-size-large: 2rem;
+$font-size-x-medium: 1.8rem;
+$font-size-medium: 1.5rem;
+$font-size: 1.2rem;
+$font-size-small: 0.833rem;
+$font-size-x-small: 0.694rem;
+$font-size-xx-small: 0.579rem;
+$lineheight-text: 1.55;
+$lineheight-short: 1.2;
+
+/* Borders */
+
+$border-radius-x-small: .25rem;
+$border-radius-small: .5rem;
+$border-radius-medium: .75rem;
+$border-radius-large: 1.5rem;
+$border-radius-btn: 3rem;
+$border-width-hairline: 0.5px;
+$border-width: 1px;
+$border-width-thin: 2px;
+$border-width-thick: 5px;
+
+/* Grid */
+
+$grid-64: 3fr 1fr 2fr 2fr 1fr 3fr;
+$grid-gap: 4vw;
+
+/* Space */
+
+$max-width: 80rem;
+$spacing-xx-small: .125rem;
+$spacing-x-small: .25rem;
+$spacing-small: .5rem;
+$spacing: .75rem;
+$spacing-medium: 1rem;
+$spacing-large: 1.5rem;
+$spacing-2x-large: 2rem;
+$spacing-3x-large: 3rem;
+$spacing-4x-large: 4rem;
+$spacing-5x-large: 5rem;
+$spacing-6x-large: 6rem;
+$spacing-7x-large: 7rem;
+$spacing-8x-large: 8rem;
+$spacing-9x-large: 9rem;
+$spacing-10x-large: 10rem;
+
+/* Animation */
+
+$duration-instantly: 0;
+$duration-immediately: 0.1s;
+$duration-quickly: 0.2s;
+$duration-promptly: 0.5s;
+$duration-slowly: 1s;
+
+/* Buttons */
+
+$btn-padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+$btn-x-padding: 1.2rem 10rem 1.2rem 10rem;
+$stat-padding: 0.4rem 1.2rem 0.4rem 1.2rem;
+$task-padding: 0.2rem 1.2rem 0.2rem 1.2rem;
+$sqr-padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+:export {
+    primaryColor: $primary;
+}

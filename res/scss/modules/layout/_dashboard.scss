@@ -1,0 +1,8 @@
+.main-dashboard {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: calc(100% - 10%);
+    width: calc(100% - 8%);
+    background-color: $secondary-bg;
+}

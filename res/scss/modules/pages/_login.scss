@@ -1,0 +1,127 @@
+// Styles for main login container
+.login-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // Background Image of the login page
+
+    background: rgba(41, 41, 41, 70%) url("../assets/img/login-image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+
+    
+
+    // Style for the Login Form
+    .login-wrapper {
+        position: relative;
+        z-index: 1;
+        height: 50%;
+        // max-height: 30%;
+        min-height: 25%;
+        // max-width: 30%;
+        min-width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    
+        .container {
+            min-width:  100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .input-box {
+                position: relative;
+                width: 100%;
+                margin-top: $spacing-2x-large;
+
+                input {
+                    width: 100%;
+                    padding: $spacing-2x-large 0 $spacing-large $spacing-large;
+                    border-radius: $border-radius-medium;
+                    outline: none;
+                    border: none;
+                    color: $font-accent;
+                    background-color: $primary-bg;
+                    font-size: $font-size-large;
+                    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                }
+
+                span {
+                    position: absolute;
+                    left: 0%;
+                    padding: $spacing-large;
+                    pointer-events: none;
+                    font-size: $font-size-large;
+                    color: $font-accent;
+                }
+
+                input:focus ~ span,
+                input:valid ~ span {
+                    font-size: calc($font-size-large - 90%);
+                    transform: translateY(-.7rem);
+                    color: $font-accent;
+                }
+    
+            }
+
+            .input-box:first-child {
+                margin-top: $spacing-3x-large;
+            }
+            
+            // Styles for the form buttons
+            .wrapper {
+                min-width: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+    
+                button {
+                    cursor: pointer;
+                }
+                
+                // 
+                .forgot-btn {
+                    margin-top: $spacing-2x-large;
+                    font-size: $font-size-x-large;
+                    font-weight: $font-weight;
+                    color: $primary;
+                    background-color: transparent;
+                }
+
+                .login-btn {
+                    margin-top: $spacing-3x-large;
+                    padding: $btn-x-padding;
+                    font-size: $font-size-x-large;
+                    font-weight: $font-weight-bold;
+                    color: $white;
+                    background-color: $primary;
+                    border-radius: $border-radius-medium;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                }
+
+            }
+
+
+            
+        }
+
+        
+    }
+}
+
+
+.login-container::after {
+    content:'' ;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 15%);
+}
