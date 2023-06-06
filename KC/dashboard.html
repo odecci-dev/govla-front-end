@@ -5,169 +5,169 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gold One Victory Lending</title>
-    <link rel="stylesheet" href="res/css/app.css" />
+    <title>Gold One Victory Lending App</title>
+    <link rel="stylesheet" href="../res/css/app.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js" defer></script>
+    <script src="../res/js/chart.js" defer></script>
 </head>
 
 <body>
     <main>
-        <!-- The styles are in ../layout/_nav.scss -->
 
-        <!-- Main Nav Container -->
+        <!-- * The styles are in ../res/scss/modules/layout/_nav.scss -->
+
+        <!-- * Main Nav Container -->
         <div class="nav">
-
-            <!-- Nav Container 1 inside main nav-->
+            <!-- * Nav Container 1 inside main nav-->
             <div class="nav-con-1">
+                <!-- * Logo -->
+                <img src="../res/assets/icons/nav-logo.svg" alt="GOVL Logo" />
 
-                <!-- Logo -->
-                <img src="res/assets/icons/nav-logo.svg" alt="GOVL Logo" />
-
-                <!-- Nav Links Container -->
+                <!-- * Nav Links Container -->
                 <ul class="nav-links">
-
-                    <!-- Link Wrapper -->
-                    <!-- Overview -->
+                    <!-- * Link Wrapper -->
+                    <!-- * Overview -->
                     <li class="link" no-data-dropdown>
-                        <img src="res/assets/icons/overview.svg" alt="overview" />
+                        <img src="../res/assets/icons/overview.svg" alt="overview" />
                         <p>Overview</p>
                     </li>
 
-                    <!-- Link Wrapper w/ SubMenu -->
-                    <!-- Members -->
+                    <!-- * Link Wrapper w/ SubMenu -->
+                    <!-- * Members -->
                     <div class="dropdown" data-dropdown>
                         <li class="link dropdown" data-dropdown-button>
-                            <img src="res/assets/icons/members.svg" alt="members" data-dropdown-button/>
+                            <img src="../res/assets/icons/members.svg" alt="members" data-dropdown-button />
                             <p data-dropdown-button>Members</p>
                         </li>
 
-                        <!-- Submenu -->
+                        <!-- * Submenu -->
                         <ul class="sub-menu">
                             <li>
-                                <img src="res/assets/icons/sub-menu/all-members.svg" alt="all-members" />
+                                <img src="../res/assets/icons/sub-menu/all-members.svg" alt="all-members" />
                                 <span>All Members</span>
                             </li>
                             <li>
-                                <img src="res/assets/icons/sub-menu/new-member.svg" alt="new-member" />
+                                <img src="../res/assets/icons/sub-menu/new-member.svg" alt="new-member" />
                                 <span>New Member</span>
                             </li>
                         </ul>
                     </div>
 
-                    <!-- Link Wrapper w/ SubMenu -->
-                    <!-- Maintenance -->
+                    <!-- * Link Wrapper w/ SubMenu -->
+                    <!-- * Maintenance -->
                     <div class="dropdown" data-dropdown>
                         <li class="link dropdown" data-dropdown-button>
-                            <img src="res/assets/icons/maintenance.svg" alt="maintenance" data-dropdown-button/>
+                            <img src="../res/assets/icons/maintenance.svg" alt="maintenance" data-dropdown-button />
                             <p data-dropdown-button>Maintenance</p>
                         </li>
 
-                        <!-- Submenu -->
+                        <!-- * Submenu -->
                         <ul class="sub-menu">
                             <li>
-                                <img src="res/assets/icons/sub-menu/co-maker.svg" alt="co-maker" />
+                                <img src="../res/assets/icons/sub-menu/co-maker.svg" alt="co-maker" />
                                 <span>Co Maker</span>
                             </li>
                             <li>
-                                <img src="res/assets/icons/sub-menu/field-officer.svg" alt="field-officer" />
+                                <img src="../res/assets/icons/sub-menu/field-officer.svg" alt="field-officer" />
                                 <span>Field Officer</span>
                             </li>
                             <li>
-                                <img src="res/assets/icons/sub-menu/field-area.svg" alt="field-area" />
+                                <img src="../res/assets/icons/sub-menu/field-area.svg" alt="field-area" />
                                 <span>Field Area</span>
                             </li>
                             <li>
-                                <img src="res/assets/icons/sub-menu/loan-type.svg" alt="loan-type" />
+                                <img src="../res/assets/icons/sub-menu/loan-type.svg" alt="loan-type" />
                                 <span>Loan Type</span>
                             </li>
                         </ul>
                     </div>
 
-                    <!-- Link Wrapper w/ SubMenu -->
-                    <!-- Collection -->
+                    <!-- * Link Wrapper w/ SubMenu -->
+                    <!-- * Collection -->
                     <div class="dropdown" data-dropdown>
                         <li class="link dropdown" data-dropdown-button>
-                            <img src="res/assets/icons/collection.svg" alt="collection" data-dropdown-button/>
+                            <img src="../res/assets/icons/collection.svg" alt="collection" data-dropdown-button />
                             <p data-dropdown-button>Collection</p>
                         </li>
 
-                        <!-- Submenu -->
+                        <!-- * Submenu -->
                         <ul class="sub-menu">
                             <li>
-                                <img src="res/assets/icons/sub-menu/collection.svg" alt="collection" />
+                                <img src="../res/assets/icons/sub-menu/collection.svg" alt="collection" />
                                 <span>Collection</span>
                             </li>
                             <li>
-                                <img src="res/assets/icons/sub-menu/areas.svg" alt="areas" />
+                                <img src="../res/assets/icons/sub-menu/areas.svg" alt="areas" />
                                 <span>Areas</span>
                             </li>
                         </ul>
                     </div>
 
-                    <!-- Link Wrapper w/ SubMenu -->
-                    <!-- Transactions -->
+                    <!-- * Link Wrapper w/ SubMenu -->
+                    <!-- * Transactions -->
                     <div class="dropdown" data-dropdown>
                         <li class="link dropdown" data-dropdown-button>
-                            <img src="res/assets/icons/transactions.svg" alt="transactions" data-dropdown-button/>
+                            <img src="../res/assets/icons/transactions.svg" alt="transactions" data-dropdown-button />
                             <p data-dropdown-button>Transactions</p>
                         </li>
 
-                        <!-- Submenu -->
+                        <!-- * Submenu -->
                         <ul class="sub-menu">
                             <li>
-                                <img src="res/assets/icons/sub-menu/new-application.svg" alt="new-member" />
+                                <img src="../res/assets/icons/sub-menu/new-application.svg" alt="new-member" />
                                 <span>New Application</span>
                             </li>
                             <li>
-                                <img src="res/assets/icons/sub-menu/credit-investigation.svg" alt="credit-investigation" />
+                                <img src="../res/assets/icons/sub-menu/credit-investigation.svg" alt="credit-investigation" />
                                 <span>Credit Investigation </span>
                             </li>
                             <li>
-                                <img src="res/assets/icons/sub-menu/remittance.svg" alt="remittance" />
+                                <img src="../res/assets/icons/sub-menu/remittance.svg" alt="remittance" />
                                 <span>Remittance</span>
                             </li>
                             <li>
-                                <img src="res/assets/icons/sub-menu/approval.svg" alt="approval" />
+                                <img src="../res/assets/icons/sub-menu/approval.svg" alt="approval" />
                                 <span>Approval</span>
                             </li>
                             <li>
-                                <img src="res/assets/icons/sub-menu/releasing.svg" alt="releasing" />
+                                <img src="../res/assets/icons/sub-menu/releasing.svg" alt="releasing" />
                                 <span>Releasing</span>
                             </li>
                             <li>
-                                <img src="res/assets/icons/sub-menu/loan-calc.svg" alt="loan-calc" />
+                                <img src="../res/assets/icons/sub-menu/loan-calc.svg" alt="loan-calc" />
                                 <span>Loan Calculator</span>
                             </li>
                         </ul>
                     </div>
 
-                    <!-- Link Wrapper w/ SubMenu -->
-                    <!-- Reports -->
+                    <!-- * Link Wrapper w/ SubMenu -->
+                    <!-- * Reports -->
                     <div class="dropdown" data-dropdown>
                         <li class="link dropdown" data-dropdown-button>
-                            <img src="res/assets/icons/reports.svg" alt="reports" data-dropdown-button/>
+                            <img src="../res/assets/icons/reports.svg" alt="reports" data-dropdown-button />
                             <p data-dropdown-button>Reports</p>
                         </li>
 
-                        <!-- Submenu -->
+                        <!-- * Submenu -->
                         <ul class="sub-menu">
                             <li>
-                                <img src="res/assets/icons/sub-menu/outstanding-report.svg" alt="" />
+                                <img src="../res/assets/icons/sub-menu/outstanding-report.svg" alt="" />
                                 <span>Outstanding Reports</span>
                             </li>
                             <li>
-                                <img src="res/assets/icons/sub-menu/custom-report.svg" alt="outstanding-report" />
+                                <img src="../res/assets/icons/sub-menu/custom-report.svg" alt="outstanding-report" />
                                 <span>Custom Report</span>
                             </li>
                             <li>
-                                <img src="res/assets/icons/sub-menu/custom-report.svg" alt="custom-report" />
+                                <img src="../res/assets/icons/sub-menu/custom-report.svg" alt="custom-report" />
                                 <span>Custom Report</span>
                             </li>
                             <li>
-                                <img src="res/assets/icons/sub-menu/custom-report.svg" alt="custom-report" />
+                                <img src="../res/assets/icons/sub-menu/custom-report.svg" alt="custom-report" />
                                 <span>Custom Report</span>
                             </li>
                             <li>
-                                <img src="res/assets/icons/sub-menu/custom-report.svg" alt="custom-report" />
+                                <img src="../res/assets/icons/sub-menu/custom-report.svg" alt="custom-report" />
                                 <span>Custom Report</span>
                             </li>
                         </ul>
@@ -175,38 +175,188 @@
                 </ul>
             </div>
 
-            <!-- Nav Container 2 inside main nav-->
+            <!-- * Nav Container 2 inside main nav-->
             <div class="nav-con-2">
 
-                <!-- Nav Links Container -->
+                <!-- * Nav Links Container -->
                 <ul class="nav-links">
 
-                    <!-- Link Wrapper -->
+                    <!-- * Link Wrapper -->
                     <li class="link" no-data-dropdown>
-                        <img src="res/assets/icons/settings.svg" alt="settings" />
+                        <img src="../res/assets/icons/settings.svg" alt="settings" />
                         <p>Settings</p>
                     </li>
                 </ul>
-
             </div>
-
         </div>
 
+        <!-- * Navigation Profile -->
         <div class="profile-nav">
             <div class="profile-nav-con">
-                <img src="res/assets/icons/bell.svg" alt="Bell">
-                <img src="res/assets/icons/profile.svg" alt="Profile">
+                <img src="../res/assets/icons/bell.svg" alt="Bell" />
+                <img src="../res/assets/icons/profile.svg" alt="Profile" />
             </div>
         </div>
 
+        <!-- * MAIN DASHBOARD -->
         <div class="main-dashboard">
-            <div class="md-con-1"></div>
-            <div class="md-con-2"></div>
-            <div class="md-con-3"></div>
-        </div>
 
+            <!-- * Dashboard Container 1 -->
+            <div class="md-con-1">
+                <div class="wrapper">
+                    <p>Active Member</p>
+                    <p>300</p>
+                </div>
+                <div class="wrapper">
+                    <p>Total Loan Released</p>
+                    <p>500,000</p>
+                </div>
+                <div class="wrapper">
+                    <p>Total Penalties</p>
+                    <p>100,000</p>
+                </div>
+                <div class="wrapper">
+                    <p>Total Savings</p>
+                    <p>125,000</p>
+                </div>
+                <div class="wrapper">
+                    <p>Total Interest</p>
+                    <p>75,000</p>
+                </div>
+                <div class="wrapper">
+                    <p>Total Loan Outstanding</p>
+                    <p>75,000</p>
+                </div>
+                <div class="wrapper">
+                    <p>Total Interest</p>
+                    <p>180,000</p>
+                </div>
+            </div>
+
+            <!-- * Wrapper for Container 1 & 2-->
+
+            <div class="con-wrapper">
+
+                <!-- * Dashboard Container 2 -->
+                <div class="md-con-2">
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="p-wrap">
+                                <p>Daily Target Collection</p>
+                                <p>15,232</p>
+                            </div>
+                            <div class="tag-wrap">
+                                <p>
+                                    Covered the
+                                    <!-- * Special Span -->
+                                    <span>10%</span> of the monthly target
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="p-wrap">
+                                <p>Penalties to be collected today</p>
+                                <p>8,000</p>
+                            </div>
+                            <div class="tag-wrap">
+                                <p>
+                                    Most penalties are from
+                                    <!-- * Special Span -->
+                                    <span>Area 2</span>
+                                </p>
+
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="p-wrap">
+                                <p>Application for Approval</p>
+                                <p>50</p>
+                            </div>
+                            <div class="tag-wrap">
+                                <button>View All</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- * Big Card -->
+                    <div class="big-card">
+                        <div class="div-1">
+                            <h2>Active Members</h2>
+                            <div class="btn-wrapper">
+                                <button>Select Area</button>
+                                <button>
+                                    <span>Last 7 Days</span>
+                                    <img
+                                        src="../res/assets/icons/carret-down.svg"
+                                        alt="carret-down"
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                        <!-- * Line Chart -->
+                        <div class="div-2">
+                            <div class="graph">
+                                <canvas id="Chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- * Dashboard Container 3 -->
+                <div class="md-con-3">
+                    <div class="card-2">
+                        <div class="div-1">
+                            <h3>Monthly Target Collection</h3>
+                            <p>200,000</p>
+                            <p>10 days left to achieve the target.</p>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="div-2">
+                            <div class="circle-div">
+                                <div class="progress-value">
+                                    <p>50%</p>
+                                    <p>100,000</p>
+                                    <p>As of last entry</p>
+                                </div>
+                            </div>
+                            <p>Last month target <span>Achieved</span></p>
+                        </div>
+                    </div>
+                    <div class="card-2">
+                        <h3>Top Members with Penalty</h3>
+                        <div class="div-1">
+                            <div class="p-wrap">
+                                <div class="wrap">
+                                    <p>Juana Dela Cruz</p>
+                                    <p>900.00</p>
+                                </div>
+                                <p>Area 3</p>
+                            </div>
+                            <div class="p-wrap">
+                                <div class="wrap">
+                                    <p>Julius Perez</p>
+                                    <p>500.00</p>
+                                </div>
+                                <p>Area 1</p>
+                            </div>
+                            <div class="p-wrap">
+                                <div class="wrap">
+                                    <p>Macario Reyes</p>
+                                    <p>300.00</p>
+                                </div>
+                                <p>Area 2</p>
+                            </div>
+                        </div>
+                        <div class="div-2">
+                            <button>View All</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </main>
-    <script src="res/js/app.js" type="module" defer></script>
+    <script src="../res/js/app.js" type="module" defer></script>
 </body>
 
 </html>

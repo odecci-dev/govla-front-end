@@ -1,4 +1,4 @@
-// Style for main nav container
+// * Style for main nav container
 .nav {
     position: fixed;
     width: calc(100% - 92%);
@@ -22,12 +22,12 @@
         -webkit-user-select: none;
         -ms-user-select: none;
     }
-    // Styles for the navlinks inside the containers
+    // * Styles for the navlinks inside the containers
     .nav-links {
         width: 100%;
         position: relative;
         margin-top: $spacing-5x-large;
-        // navlink
+        // * navlink
         .link {
             cursor: pointer;
             display: flex;
@@ -41,12 +41,12 @@
                 color: $white;
             }
         }
-        // navlink
+        // * navlink
         li:hover,
         li:focus {
             background-color: $primary;
         }
-        // Display carret right to all the links
+        // * Display carret right to all the links
         .link.dropdown::after {
             content: url(../assets/icons/carret-right.svg);
             position: absolute;
@@ -55,32 +55,31 @@
             transform: translateX(-1.5rem) translateY(1rem)
         }
     }
-    // Styles for nav-container-1
+    // * Styles for nav-container-1
     .nav-con-1 {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         .nav-links {
-            // Submenu will have relative position to the dropdown container
+            // * Submenu will have relative position to the dropdown container
             .dropdown {
                 position: relative;
             }
-            // When a link IS clicked
+            // * When a link IS clicked
             .dropdown.showMenu>.link.dropdown+.sub-menu {
                 opacity: 1;
                 transition: opacity ease-out 300ms;
             }
             .sub-menu {
-                // When a link IS NOT clicked 
+                // * When a link IS NOT clicked 
                 opacity: 0;
-                // Styles for submenu
+                // * Styles for submenu
                 position: absolute;
                 display: flex;
                 flex-direction: column;
                 left: 100%;
                 top: 0;
-                // margin: $spacing-small $spacing-4x-large $spacing-medium $spacing-2x-large;
                 background-color: $primary;
                 li {
                     position: relative;
@@ -107,7 +106,7 @@
             }
         }
     }
-    // Styles for nav-container-2
+    // * Styles for nav-container-2
     .nav-con-2 {
         width: 100%;
         display: flex;
@@ -116,6 +115,7 @@
     }
 }
 
+// * Profile Nav
 .profile-nav {
     position: fixed;
     width: calc(100% - 8%);
