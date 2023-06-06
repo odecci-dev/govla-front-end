@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gold One Victory Lending App</title>
     <link rel="stylesheet" href="./res/css/app.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js" defer></script>
+    <script src="./res/js/chart.js" defer></script>
 </head>
 
 <body>
     <main>
+
         <!-- * The styles are in ./res/scss/modules/layout/_nav.scss -->
 
         <!-- * Main Nav Container -->
@@ -282,17 +285,19 @@
                             <div class="btn-wrapper">
                                 <button>Select Area</button>
                                 <button>
-                    <span>Last 7 Days</span
-                    ><img
-                      src="./res/assets/icons/carret-down.svg"
-                      alt="carret-down"
-                    />
-                  </button>
+                                    <span>Last 7 Days</span>
+                                    <img
+                                        src="./res/assets/icons/carret-down.svg"
+                                        alt="carret-down"
+                                    />
+                                </button>
                             </div>
                         </div>
                         <!-- TODO: Graph -->
                         <div class="div-2">
-                            <div class="graph"></div>
+                            <div class="graph">
+                                <canvas id="Chart"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>

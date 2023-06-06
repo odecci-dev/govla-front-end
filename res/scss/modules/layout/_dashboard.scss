@@ -168,6 +168,16 @@
                         }
                     }
                 }
+                .div-2 {
+                    height: 100%;
+                    // * Chart Styles
+                    .graph {
+                        position: relative;
+                        display: inline-block;
+                        width: 100%;
+                        height: 90%;
+                    }
+                }
             }
         }
         // * Container 3

@@ -354,6 +354,15 @@ button {
 .main-dashboard .con-wrapper .md-con-2 .big-card .div-1 .btn-wrapper button:last-child span {
   margin-right: 2rem;
 }
+.main-dashboard .con-wrapper .md-con-2 .big-card .div-2 {
+  height: 100%;
+}
+.main-dashboard .con-wrapper .md-con-2 .big-card .div-2 .graph {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 90%;
+}
 .main-dashboard .con-wrapper .md-con-3 {
   display: grid;
   grid-auto-flow: row dense;
