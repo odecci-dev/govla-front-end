@@ -1,0 +1,50 @@
+// * Dashboard Mixins
+@mixin dashboard {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: calc(100% - 10%);
+    width: calc(100% - 8%);
+}
+
+// * Button Mixins
+@mixin primaryButton {
+    border-radius: $border-radius-medium;
+    padding: $btn-padding-2;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    color: $white;
+    background-color: $primary;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+}
+
+@mixin transparentButton {
+    font-size: calc($font-size + .1rem);
+    font-weight: $font-weight-bold;
+    color: $primary;
+    background: transparent;
+}
+
+// * Input Mixins
+@mixin inputField {
+    font-size: $font-size-large;
+    padding: 1rem 2rem 1rem 2rem;
+    border: none;
+    outline: none;
+    background-color: $primary-bg;
+    border-radius: $border-radius-medium;
+    box-shadow: inset $box-shadow;
+}
+
+@mixin loginInputField {
+    width: 100%;
+    padding: $spacing-2x-large 0 $spacing-large $spacing-large;
+    border-radius: $border-radius-medium;
+    outline: none;
+    border: none;
+    color: $font-accent;
+    background-color: $primary-bg;
+    font-size: $font-size-large;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

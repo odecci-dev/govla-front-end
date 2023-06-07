@@ -11,14 +11,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: multiply;
-    // Style for the Login Form
+    // * Styles for the Login Form
     .login-wrapper {
         position: relative;
         z-index: 1;
         height: 50%;
-        // max-height: 30%;
         min-height: 25%;
-        // max-width: 30%;
         min-width: 40%;
         display: flex;
         flex-direction: column;
@@ -34,15 +32,7 @@
                 width: 100%;
                 margin-top: $spacing-2x-large;
                 input {
-                    width: 100%;
-                    padding: $spacing-2x-large 0 $spacing-large $spacing-large;
-                    border-radius: $border-radius-medium;
-                    outline: none;
-                    border: none;
-                    color: $font-accent;
-                    background-color: $primary-bg;
-                    font-size: $font-size-large;
-                    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    @include loginInputField;
                 }
                 span {
                     position: absolute;
@@ -62,7 +52,7 @@
             .input-box:first-child {
                 margin-top: $spacing-3x-large;
             }
-            // Styles for the form buttons
+            // * Styles for the form buttons
             .wrapper {
                 min-width: 100%;
                 width: 100%;
@@ -72,7 +62,7 @@
                 button {
                     cursor: pointer;
                 }
-                // 
+                // * Forgot Password Button
                 .forgot-btn {
                     margin-top: $spacing-2x-large;
                     font-size: $font-size-x-large;
@@ -80,6 +70,7 @@
                     color: $primary;
                     background-color: transparent;
                 }
+                // * Login Button
                 .login-btn {
                     margin-top: $spacing-3x-large;
                     padding: $btn-x-padding;

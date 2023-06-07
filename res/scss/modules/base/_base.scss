@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
 *,
 *::before,
 *::after {
     box-sizing: border-box;
     margin: 0;
 }
+
 
 /* <html> = the root */
 
@@ -39,7 +39,7 @@ a {
     text-decoration: none;
 }
 
-dialog { 
+dialog {
     border: none !important;
 }
 
@@ -52,6 +52,7 @@ img {
 }
 
 button {
+    font-family: $font-family;
     border: none;
     outline: none;
 }

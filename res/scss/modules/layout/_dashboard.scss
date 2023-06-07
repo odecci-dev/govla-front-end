@@ -1,11 +1,12 @@
+// * MIXINS that are used in this file are in ../res/scss/modules/abstracts/_mixins.scss
+// * VARIABLES that are used in this file are in ../res/scss/modules/abstracts/_variables.scss
+// 
 // * Main Dashboard Styles
 .main-dashboard {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    height: calc(100% - 10%);
-    width: calc(100% - 8%);
+    @include dashboard;
+    // * Dashboard Backgroud Color
     background-color: $secondary-bg;
+    // * Main-Dashboard-Container-1
     // * Container 1: Data Highlights
     .md-con-1 {
         padding: $spacing-2x-large $spacing-4x-large $spacing-2x-large $spacing-2x-large;
@@ -128,6 +129,7 @@
                     }
                 }
             }
+            // * Main-Dashboard-Container-2
             // * Container 2: Big Card (Graph)
             .big-card {
                 height: 100%;
@@ -180,6 +182,7 @@
                 }
             }
         }
+        // * Main-Dashboard-Container-3
         // * Container 3
         .md-con-3 {
             display: grid;
