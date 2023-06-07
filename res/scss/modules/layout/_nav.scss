@@ -42,6 +42,9 @@
             }
         }
         // * navlink
+        li {
+            transition: background-color ease-out 200ms;
+        }
         li:hover,
         li:focus {
             background-color: $primary;
@@ -65,6 +68,9 @@
             // * Submenu will have relative position to the dropdown container
             .dropdown {
                 position: relative;
+            }
+            .dropdown.showMenu {
+                background-color: #D6A330;
             }
             // * When a link IS clicked
             .dropdown.showMenu>.link.dropdown+.sub-menu {

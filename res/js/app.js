@@ -18,6 +18,7 @@ document.addEventListener("click", e => {
         currentDropdown = e.target.closest("[data-dropdown]")
             // * Hide or Show submenu toggle
         currentDropdown.classList.toggle("showMenu")
+
     }
 
     // * Get rid off the submenus that are not open (closing submenus that are not clicked)
@@ -27,21 +28,20 @@ document.addEventListener("click", e => {
 
         // * If this dropdown is equal to the current dropdown then add a z-index of 1 to prevent overlapping...   
         if (dropdown === currentDropdown) {
-            dropdown.style.backgroundColor = '#D6A330';
             dropdown.style.zIndex = 9
             dashboard.style.zIndex = -1
             return
         }
         // * Otherwise, close it
-        dashboard.style.zIndex = ''
-        dropdown.style.backgroundColor = '';
-        dropdown.style.zIndex = ''
         dropdown.classList.remove("showMenu")
+        dropdown.style.zIndex = ''
+        dashboard.style.zIndex = ''
 
         return
 
     })
 
+    // Todo: When the current dropdownbutton is clicked again, remove background color
 
 })
 

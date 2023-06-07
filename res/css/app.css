@@ -107,6 +107,9 @@ button {
   margin-top: 1rem;
   color: #FFFFFF;
 }
+.nav .nav-links li {
+  transition: background-color ease-out 200ms;
+}
 .nav .nav-links li:hover,
 .nav .nav-links li:focus {
   background-color: #D6A330;
@@ -126,6 +129,9 @@ button {
 }
 .nav .nav-con-1 .nav-links .dropdown {
   position: relative;
+}
+.nav .nav-con-1 .nav-links .dropdown.showMenu {
+  background-color: #D6A330;
 }
 .nav .nav-con-1 .nav-links .dropdown.showMenu > .link.dropdown + .sub-menu {
   opacity: 1;
