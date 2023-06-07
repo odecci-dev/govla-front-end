@@ -522,6 +522,7 @@ button {
 .main-dashboard-2 .am-con-1 {
   display: flex;
   flex-direction: column;
+  height: 26%;
   padding: 4rem 4rem 2rem 4rem;
 }
 .main-dashboard-2 .am-con-1 h2 {
@@ -610,6 +611,38 @@ button {
   font-weight: 700;
   color: #D6A330;
   background: transparent;
+}
+.main-dashboard-2 .am-con-2 {
+  height: 74%;
+  padding: 4rem 4rem 2rem 4rem;
+}
+.main-dashboard-2 .am-con-2 .table-container {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  box-shadow: -1px 3px 3px 0px rgba(0, 0, 0, 0.25);
+}
+.main-dashboard-2 .am-con-2 .pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+  height: 10%;
+}
+.main-dashboard-2 .am-con-2 .pagination-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0.5rem;
+  color: #29292B;
+}
+.main-dashboard-2 .am-con-2 .pagination-container a:first-of-type {
+  margin-right: 6rem;
+}
+.main-dashboard-2 .am-con-2 .pagination-container a:last-of-type {
+  margin-left: 6rem;
 }
 
 .login-container {

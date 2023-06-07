@@ -8,14 +8,20 @@ June 05, 2023 (Monday)
 
 
 June 06, 2023 (Tuesday)
-first commit:
+First Commit:
 • Implemented Line Chart using Chart.js (https://www.chartjs.org/docs/latest/charts/line.html)
-second commit:
-finished dashboard
+
+Second Commit:
+• Finished Dashboard
 
 June 07, 2023 (Wednesday)
+First Commit:
 • Implemented the All Members Page on all-members.html
 - All-Members-Container-1
     * Container 1: All Members - Header, Buttons, and Searchbar 
 • Incorporated the SASS Mixins (../res/scss/modules/abstracts/_mixins.scss)
 • Simple page navigation through anchor elements URL 
+
+Second Commit:
+• All Members: Table Container
+• and Pagination
