@@ -41,98 +41,21 @@ document.addEventListener("click", e => {
 
     })
 
-    // Todo: When the current dropdownbutton is clicked again, remove background color
-
 })
 
 
+// * Table Checkbox Toggle
 
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// for (let i = 0; i < links.length; i++) {
-//     const allLinks = links[i];
-//     allLinks.addEventListener('click', () => {
-
-//         let subMenu = document.querySelectorAll('.sub-menu');
-
-
-//         // for (let i = 0; i < subMenu.length; i++) {
-
-//         //     const subMenuItem = subMenu[i];
-
-//         //     subMenuItem.forEach((item, index) => {
-
-//         //         (item + index).classList.toggle('showMenu');
-
-//         //     });
-
-
-
-//         //     // subMenu[i].addEventListener('click', () => {
-//         //     //     let subMenuItem = e.target.parentNode.firstChild;
-//         //     //     console.log("Clicked")
-//         //     //     subMenuItem.classList.toggle('showMenu');
-
-//         //     // });
-
-//         // }
-
-
-//     })
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// for (let i = 0; i <= links.length; i++) {
-
-//     links[i].addEventListener('click', (e) => {
-
-//         let subMenuParent = document.querySelectorAll(".sub-menu");
-
-//             for (let i = 0; i <= subMenuParent.length; i++) {
-
-//                 // const element = array[i];
-//                 console.log(subMenuParent);
-//                 subMenuParent[i].classList.toggle('showMenu')
-
-//             }
-
-//     })
-
-// }
+function checkAll(tableCheckBox) {
+    if (tableCheckBox.checked == true) {
+        checkboxes.forEach(function(checkbox) {
+            checkbox.checked = true;
+        })
+    } else {
+        checkboxes.forEach(function(checkbox) {
+            checkbox.checked = false;
+        })
+    }
+}

@@ -108,6 +108,112 @@
             flex-direction: column;
             height: calc(100% - 10%);
             box-shadow: $box-shadow;
+            table {
+                // **                         ** //
+                // **** Table Header Styles **** //
+                // **                         ** //
+                th {
+                    padding: 2rem 0;
+                    text-align: center;
+                    span.th-name {
+                        font-size: $font-size-medium;
+                        font-weight: $font-weight-bold;
+                    }
+                    .th-wrapper {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            cursor: pointer;
+                            padding-left: .5rem;
+                        }
+                    }
+                }
+                // * Table Checkbox
+                input[type="checkbox"] {
+                    cursor: pointer;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    outline: none;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    aspect-ratio: 1/1;
+                    height: 2rem;
+                    width: 2rem;
+                    border-radius: .4rem;
+                    background-color: $primary-bg;
+                }
+                input[type="checkbox"]::after {
+                    content: url('../assets/icons/white-check.svg');
+                    position: absolute;
+                    top: .1rem;
+                    display: none;
+                }
+                input[type="checkbox"]:checked {
+                    background-color: $primary;
+                }
+                input[type="checkbox"]:checked:after {
+                    display: block;
+                }
+                // * All table header except the last child
+                th:nth-of-type(-n+6) {
+                    text-align: left;
+                }
+                // * Table Checkbox
+                th:first-of-type {
+                    padding-left: 1rem;
+                }
+                // * Borrower
+                th:nth-of-type(2) {
+                    padding-left: 1rem;
+                }
+                // **                       ** //
+                // **** Table Data Styles **** //
+                // **                       ** //
+                td {
+                    font-size: $font-size-medium;
+                    // * Borrowers' Data Styles
+                    .td-wrapper {
+                        display: flex;
+                        align-items: center;
+                        .td-num {
+                            font-weight: $font-weight-bold;
+                            margin-left: 1rem;
+                        }
+                        .td-name {
+                            margin-left: 2rem;
+                        }
+                    }
+                    // * Table Buttons Styles
+                    .td-btn-wrapper {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        button {
+                            cursor: pointer;
+                        }
+                        // * Table View Button 
+                        .a-btn-view {
+                            @include secondaryButton;
+                        }
+                        // * Table Trash Button
+                        .a-btn-trash {
+                            @include transparentButton2;
+                        }
+                    }
+                }
+                // * Due Date Data
+                .td-due {
+                    font-weight: $font-weight-bold;
+                }
+                td:first-of-type {
+                    padding-left: 1rem;
+                }
+                td:nth-of-type(2) {
+                    padding-left: 1rem;
+                }
+            }
         }
         // * Pagination Container
         .pagination-container {

@@ -14,6 +14,7 @@ First Commit:
 Second Commit:
 • Finished Dashboard
 
+
 June 07, 2023 (Wednesday)
 First Commit:
 • Implemented the All Members Page on all-members.html
@@ -25,3 +26,11 @@ First Commit:
 Second Commit:
 • All Members: Table Container
 • and Pagination
+
+
+June 08, 2023 (Thursday)
+First Commit:
+• Finished the All Members Table Layout
+- Table Container
+    * Table, Table Checkbox, Table Header, Table Data, and Table Buttons
+• Implemented checkall function in checkbox

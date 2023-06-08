@@ -19,11 +19,22 @@
     cursor: pointer;
 }
 
+@mixin secondaryButton {
+    @include primaryButton;
+    padding: $btn-padding-4;
+}
+
 @mixin transparentButton {
     font-size: calc($font-size + .1rem);
     font-weight: $font-weight-bold;
     color: $primary;
     background: transparent;
+}
+
+@mixin transparentButton2 {
+    @include transparentButton;
+    padding: $btn-padding-2;
+    font-size: $font-size-medium;
 }
 
 // * Input Mixins
