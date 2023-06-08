@@ -119,13 +119,9 @@
                 }
                 .card:nth-of-type(3) .tag-wrap {
                     button {
-                        cursor: pointer;
+                        @include transparentButton;
                         color: $white;
                         font-size: $font-size-medium;
-                        font-weight: $font-weight-bold;
-                        outline: none;
-                        border: none;
-                        background: transparent;
                     }
                 }
             }
@@ -141,6 +137,7 @@
                 .div-1 {
                     display: flex;
                     justify-content: space-between;
+                    margin-bottom: 1rem;
                     h2 {
                         font-size: $font-size-x-large;
                         color: $black;
@@ -148,12 +145,7 @@
                     .btn-wrapper {
                         display: flex;
                         button {
-                            cursor: pointer;
-                            border-radius: $border-radius-medium;
-                            font-size: $font-size-medium;
-                            font-weight: $font-weight-bold;
-                            color: $white;
-                            background-color: $primary;
+                            @include primaryButton;
                         }
                         button:first-child {
                             padding: $btn-padding-2;
@@ -318,13 +310,7 @@
                     display: flex;
                     justify-content: flex-end;
                     button {
-                        cursor: pointer;
-                        padding: $btn-padding-2;
-                        border-radius: $border-radius-medium;
-                        font-size: $font-size-medium;
-                        font-weight: $font-weight-bold;
-                        color: $white;
-                        background-color: $primary;
+                        @include primaryButton;
                     }
                 }
             }

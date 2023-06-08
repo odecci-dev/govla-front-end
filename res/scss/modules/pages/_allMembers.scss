@@ -2,7 +2,7 @@
 // * VARIABLES that are used in this file are in ../res/scss/modules/abstracts/_variables.scss
 // 
 // * Main Dashboard 2 Styles
-.main-dashboard-2 {
+.main-dashboard {
     @include dashboard;
     // * Dashboard Backgroud Color
     background-color: $third-bg;
@@ -172,6 +172,7 @@
                 // **** Table Data Styles **** //
                 // **                       ** //
                 td {
+                    padding: $spacing-medium 0;
                     font-size: $font-size-medium;
                     // * Borrowers' Data Styles
                     .td-wrapper {

@@ -5,6 +5,7 @@
     bottom: 0;
     height: calc(100% - 10%);
     width: calc(100% - 8%);
+    z-index: 10;
 }
 
 // * Button Mixins
@@ -25,6 +26,7 @@
 }
 
 @mixin transparentButton {
+    cursor: pointer;
     font-size: calc($font-size + .1rem);
     font-weight: $font-weight-bold;
     color: $primary;

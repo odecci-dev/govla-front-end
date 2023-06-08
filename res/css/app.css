@@ -75,6 +75,7 @@ table {
 
 .nav {
   position: fixed;
+  z-index: 9;
   width: 8%;
   height: 100%;
   display: flex;
@@ -140,11 +141,14 @@ table {
   background-color: #D6A330;
 }
 .nav .nav-con-1 .nav-links .dropdown.showMenu > .link.dropdown + .sub-menu {
+  visibility: visible;
   opacity: 1;
-  transition: opacity ease-out 300ms;
+  transition: opacity ease-out 250ms;
 }
 .nav .nav-con-1 .nav-links .sub-menu {
+  z-index: -9;
   opacity: 0;
+  visibility: hidden;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -211,6 +215,7 @@ table {
   bottom: 0;
   height: 90%;
   width: 92%;
+  z-index: 10;
   background-color: #E0DFDF;
 }
 .main-dashboard .md-con-1 {
@@ -319,12 +324,12 @@ table {
 }
 .main-dashboard .con-wrapper .md-con-2 .card-wrapper .card:nth-of-type(3) .tag-wrap button {
   cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #D6A330;
+  background: transparent;
   color: #FFFFFF;
   font-size: 1.5rem;
-  font-weight: 700;
-  outline: none;
-  border: none;
-  background: transparent;
 }
 .main-dashboard .con-wrapper .md-con-2 .big-card {
   height: 100%;
@@ -337,6 +342,7 @@ table {
 .main-dashboard .con-wrapper .md-con-2 .big-card .div-1 {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 .main-dashboard .con-wrapper .md-con-2 .big-card .div-1 h2 {
   font-size: 2.5rem;
@@ -346,12 +352,14 @@ table {
   display: flex;
 }
 .main-dashboard .con-wrapper .md-con-2 .big-card .div-1 .btn-wrapper button {
-  cursor: pointer;
   border-radius: 1rem;
+  padding: 0.8rem 4rem 0.8rem 4rem;
   font-size: 1.5rem;
   font-weight: 700;
   color: #FFFFFF;
   background-color: #D6A330;
+  box-shadow: -1px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 .main-dashboard .con-wrapper .md-con-2 .big-card .div-1 .btn-wrapper button:first-child {
   padding: 0.8rem 4rem 0.8rem 4rem;
@@ -507,49 +515,6 @@ table {
   justify-content: flex-end;
 }
 .main-dashboard .con-wrapper .md-con-3 .card-2:last-child .div-2 button {
-  cursor: pointer;
-  padding: 0.8rem 4rem 0.8rem 4rem;
-  border-radius: 1rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-}
-
-.main-dashboard-2 {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  height: 90%;
-  width: 92%;
-  background-color: #FFFFFF;
-}
-.main-dashboard-2 .am-con-1 {
-  display: flex;
-  flex-direction: column;
-  height: 26%;
-  padding: 4rem 4rem 2rem 4rem;
-}
-.main-dashboard-2 .am-con-1 h2 {
-  font-size: 2.5rem;
-}
-.main-dashboard-2 .am-con-1 p {
-  margin-top: 1.5rem;
-  font-size: 1.8rem;
-}
-.main-dashboard-2 .am-con-1 p span {
-  font-weight: 700;
-}
-.main-dashboard-2 .am-con-1 .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1.5rem;
-}
-.main-dashboard-2 .am-con-1 .container .wrapper {
-  display: flex;
-}
-.main-dashboard-2 .am-con-1 .container .wrapper:first-of-type button {
   border-radius: 1rem;
   padding: 0.8rem 4rem 0.8rem 4rem;
   font-size: 1.5rem;
@@ -559,31 +524,76 @@ table {
   box-shadow: -1px 3px 3px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
-.main-dashboard-2 .am-con-1 .container .wrapper:first-of-type button img {
+
+.main-dashboard {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 90%;
+  width: 92%;
+  z-index: 10;
+  background-color: #FFFFFF;
+}
+.main-dashboard .am-con-1 {
+  display: flex;
+  flex-direction: column;
+  height: 26%;
+  padding: 4rem 4rem 2rem 4rem;
+}
+.main-dashboard .am-con-1 h2 {
+  font-size: 2.5rem;
+}
+.main-dashboard .am-con-1 p {
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+}
+.main-dashboard .am-con-1 p span {
+  font-weight: 700;
+}
+.main-dashboard .am-con-1 .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.main-dashboard .am-con-1 .container .wrapper {
+  display: flex;
+}
+.main-dashboard .am-con-1 .container .wrapper:first-of-type button {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: -1px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.main-dashboard .am-con-1 .container .wrapper:first-of-type button img {
   margin-left: 3rem;
 }
-.main-dashboard-2 .am-con-1 .container .wrapper:first-of-type button:nth-of-type(n+2) {
+.main-dashboard .am-con-1 .container .wrapper:first-of-type button:nth-of-type(n+2) {
   position: relative;
   padding-right: 8rem;
 }
-.main-dashboard-2 .am-con-1 .container .wrapper:first-of-type button:nth-of-type(n+2) img {
+.main-dashboard .am-con-1 .container .wrapper:first-of-type button:nth-of-type(n+2) img {
   position: absolute;
   transform: translateY(0.3rem);
 }
-.main-dashboard-2 .am-con-1 .container .wrapper:first-of-type button:nth-of-type(2) {
+.main-dashboard .am-con-1 .container .wrapper:first-of-type button:nth-of-type(2) {
   margin: 0 2rem 0 2rem;
 }
-.main-dashboard-2 .am-con-1 .container .wrapper:last-of-type button {
+.main-dashboard .am-con-1 .container .wrapper:last-of-type button {
   cursor: pointer;
   margin-right: 2rem;
   background: none;
 }
-.main-dashboard-2 .am-con-1 .container .wrapper:last-of-type .search-wrap {
+.main-dashboard .am-con-1 .container .wrapper:last-of-type .search-wrap {
   position: relative;
   display: flex;
   align-items: center;
 }
-.main-dashboard-2 .am-con-1 .container .wrapper:last-of-type .search-wrap input {
+.main-dashboard .am-con-1 .container .wrapper:last-of-type .search-wrap input {
   font-size: 2rem;
   padding: 1rem 2rem 1rem 2rem;
   border: none;
@@ -594,56 +604,57 @@ table {
   position: relative;
   padding-left: 6rem;
 }
-.main-dashboard-2 .am-con-1 .container .wrapper:last-of-type .search-wrap input::placeholder {
+.main-dashboard .am-con-1 .container .wrapper:last-of-type .search-wrap input::placeholder {
   font-size: 2rem;
   position: absolute;
   top: 0;
   transform: translateY(1rem);
 }
-.main-dashboard-2 .am-con-1 .container .wrapper:last-of-type .search-wrap input::-webkit-search-cancel-button {
+.main-dashboard .am-con-1 .container .wrapper:last-of-type .search-wrap input::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
-.main-dashboard-2 .am-con-1 .container .wrapper:last-of-type .search-wrap img {
+.main-dashboard .am-con-1 .container .wrapper:last-of-type .search-wrap img {
   position: absolute;
   width: 8%;
   transform: translateX(1.5rem);
 }
-.main-dashboard-2 .am-con-1 .btn-container {
+.main-dashboard .am-con-1 .btn-container {
   margin-top: 1.5rem;
 }
-.main-dashboard-2 .am-con-1 .btn-container button {
+.main-dashboard .am-con-1 .btn-container button {
+  cursor: pointer;
   font-size: 1.3rem;
   font-weight: 700;
   color: #D6A330;
   background: transparent;
 }
-.main-dashboard-2 .am-con-2 {
+.main-dashboard .am-con-2 {
   height: 74%;
   padding: 4rem 4rem 2rem 4rem;
 }
-.main-dashboard-2 .am-con-2 .table-container {
+.main-dashboard .am-con-2 .table-container {
   display: flex;
   flex-direction: column;
   height: 90%;
   box-shadow: -1px 3px 3px 0px rgba(0, 0, 0, 0.25);
 }
-.main-dashboard-2 .am-con-2 .table-container table th {
+.main-dashboard .am-con-2 .table-container table th {
   padding: 2rem 0;
   text-align: center;
 }
-.main-dashboard-2 .am-con-2 .table-container table th span.th-name {
+.main-dashboard .am-con-2 .table-container table th span.th-name {
   font-size: 1.5rem;
   font-weight: 700;
 }
-.main-dashboard-2 .am-con-2 .table-container table th .th-wrapper {
+.main-dashboard .am-con-2 .table-container table th .th-wrapper {
   display: flex;
   align-items: center;
 }
-.main-dashboard-2 .am-con-2 .table-container table th .th-wrapper img {
+.main-dashboard .am-con-2 .table-container table th .th-wrapper img {
   cursor: pointer;
   padding-left: 0.5rem;
 }
-.main-dashboard-2 .am-con-2 .table-container table input[type=checkbox] {
+.main-dashboard .am-con-2 .table-container table input[type=checkbox] {
   cursor: pointer;
   position: relative;
   display: flex;
@@ -658,50 +669,51 @@ table {
   border-radius: 0.4rem;
   background-color: #EBEBEB;
 }
-.main-dashboard-2 .am-con-2 .table-container table input[type=checkbox]::after {
+.main-dashboard .am-con-2 .table-container table input[type=checkbox]::after {
   content: url("../assets/icons/white-check.svg");
   position: absolute;
   top: 0.1rem;
   display: none;
 }
-.main-dashboard-2 .am-con-2 .table-container table input[type=checkbox]:checked {
+.main-dashboard .am-con-2 .table-container table input[type=checkbox]:checked {
   background-color: #D6A330;
 }
-.main-dashboard-2 .am-con-2 .table-container table input[type=checkbox]:checked:after {
+.main-dashboard .am-con-2 .table-container table input[type=checkbox]:checked:after {
   display: block;
 }
-.main-dashboard-2 .am-con-2 .table-container table th:nth-of-type(-n+6) {
+.main-dashboard .am-con-2 .table-container table th:nth-of-type(-n+6) {
   text-align: left;
 }
-.main-dashboard-2 .am-con-2 .table-container table th:first-of-type {
+.main-dashboard .am-con-2 .table-container table th:first-of-type {
   padding-left: 1rem;
 }
-.main-dashboard-2 .am-con-2 .table-container table th:nth-of-type(2) {
+.main-dashboard .am-con-2 .table-container table th:nth-of-type(2) {
   padding-left: 1rem;
 }
-.main-dashboard-2 .am-con-2 .table-container table td {
+.main-dashboard .am-con-2 .table-container table td {
+  padding: 1rem 0;
   font-size: 1.5rem;
 }
-.main-dashboard-2 .am-con-2 .table-container table td .td-wrapper {
+.main-dashboard .am-con-2 .table-container table td .td-wrapper {
   display: flex;
   align-items: center;
 }
-.main-dashboard-2 .am-con-2 .table-container table td .td-wrapper .td-num {
+.main-dashboard .am-con-2 .table-container table td .td-wrapper .td-num {
   font-weight: 700;
   margin-left: 1rem;
 }
-.main-dashboard-2 .am-con-2 .table-container table td .td-wrapper .td-name {
+.main-dashboard .am-con-2 .table-container table td .td-wrapper .td-name {
   margin-left: 2rem;
 }
-.main-dashboard-2 .am-con-2 .table-container table td .td-btn-wrapper {
+.main-dashboard .am-con-2 .table-container table td .td-btn-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.main-dashboard-2 .am-con-2 .table-container table td .td-btn-wrapper button {
+.main-dashboard .am-con-2 .table-container table td .td-btn-wrapper button {
   cursor: pointer;
 }
-.main-dashboard-2 .am-con-2 .table-container table td .td-btn-wrapper .a-btn-view {
+.main-dashboard .am-con-2 .table-container table td .td-btn-wrapper .a-btn-view {
   border-radius: 1rem;
   padding: 0.8rem 4rem 0.8rem 4rem;
   font-size: 1.5rem;
@@ -712,7 +724,8 @@ table {
   cursor: pointer;
   padding: 0.6rem 3.5rem 0.6rem 3.5rem;
 }
-.main-dashboard-2 .am-con-2 .table-container table td .td-btn-wrapper .a-btn-trash {
+.main-dashboard .am-con-2 .table-container table td .td-btn-wrapper .a-btn-trash {
+  cursor: pointer;
   font-size: 1.3rem;
   font-weight: 700;
   color: #D6A330;
@@ -720,23 +733,23 @@ table {
   padding: 0.8rem 4rem 0.8rem 4rem;
   font-size: 1.5rem;
 }
-.main-dashboard-2 .am-con-2 .table-container table .td-due {
+.main-dashboard .am-con-2 .table-container table .td-due {
   font-weight: 700;
 }
-.main-dashboard-2 .am-con-2 .table-container table td:first-of-type {
+.main-dashboard .am-con-2 .table-container table td:first-of-type {
   padding-left: 1rem;
 }
-.main-dashboard-2 .am-con-2 .table-container table td:nth-of-type(2) {
+.main-dashboard .am-con-2 .table-container table td:nth-of-type(2) {
   padding-left: 1rem;
 }
-.main-dashboard-2 .am-con-2 .pagination-container {
+.main-dashboard .am-con-2 .pagination-container {
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 3rem;
   height: 10%;
 }
-.main-dashboard-2 .am-con-2 .pagination-container a {
+.main-dashboard .am-con-2 .pagination-container a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -745,10 +758,10 @@ table {
   margin: 0 0.5rem;
   color: #29292B;
 }
-.main-dashboard-2 .am-con-2 .pagination-container a:first-of-type {
+.main-dashboard .am-con-2 .pagination-container a:first-of-type {
   margin-right: 6rem;
 }
-.main-dashboard-2 .am-con-2 .pagination-container a:last-of-type {
+.main-dashboard .am-con-2 .pagination-container a:last-of-type {
   margin-left: 6rem;
 }
 
