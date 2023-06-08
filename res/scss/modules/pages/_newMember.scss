@@ -1,0 +1,46 @@
+// * MIXINS that are used in this file are in ../res/scss/modules/abstracts/_mixins.scss
+// * VARIABLES that are used in this file are in ../res/scss/modules/abstracts/_variables.scss
+// 
+// * Main Dashboard 2 Styles
+.main-dashboard {
+    @include dashboard2;
+    // * New-Member-Form-Container
+    .nm-form-con {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        // * Container 1: New Member Form Fields and Buttons
+        .nm-container-1 {
+            width: calc(100% - 30%);
+            padding: 2rem 1rem 2rem 2rem;
+            background-color: aqua;
+            // * Big Container 
+            .big-con {
+                height: 100%;
+                width: 100%;
+                background-color: midnightblue;
+                display: grid;
+                grid-auto-flow: row dense;
+                grid-auto-columns: 1fr;
+                grid-auto-rows: 1fr;
+                grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                gap: 25px 0px;
+            }
+        }
+        // * Container 2: File Attachments and Monthly Bills
+        .nm-container-2 {
+            width: calc(100% - 70%);
+            padding: 2rem 2rem 2rem 1rem;
+            background-color: aqua;
+            display: grid;
+            grid-auto-flow: row dense;
+            grid-auto-columns: 1fr;
+            grid-auto-rows: 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px 0px;
+            .colspan {
+                background-color: mediumvioletred;
+            }
+        }
+    }
+}

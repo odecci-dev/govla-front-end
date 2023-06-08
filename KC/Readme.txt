@@ -34,3 +34,13 @@ First Commit:
 - Table Container
     * Table, Table Checkbox, Table Header, Table Data, and Table Buttons
 • Implemented checkall function in checkbox
+
+Second Commit:
+• Implemented Button Mixins in dashboard.scss
+• Fixed some minor bugs of the navigation
+
+Third Commit:
+• Started the New Member Field Layout
+• Created new HTML page (new-member.html) and
+• Made _newMember.scss for styles
+- In-progress (20%)

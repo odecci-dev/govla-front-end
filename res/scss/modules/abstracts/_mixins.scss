@@ -8,6 +8,11 @@
     z-index: 10;
 }
 
+@mixin dashboard2 {
+    @include dashboard;
+    background-color: $third-bg;
+}
+
 // * Button Mixins
 @mixin primaryButton {
     border-radius: $border-radius-medium;

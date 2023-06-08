@@ -3,9 +3,7 @@
 // 
 // * Main Dashboard 2 Styles
 .main-dashboard {
-    @include dashboard;
-    // * Dashboard Backgroud Color
-    background-color: $third-bg;
+    @include dashboard2;
     // * All-Members-Container-1
     // * Container 1: All Members Header, Buttons, and Searchbar
     .am-con-1 {
