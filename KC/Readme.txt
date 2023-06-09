@@ -44,3 +44,8 @@ Third Commit:
 • Created new HTML page (new-member.html) and
 • Made _newMember.scss for styles
 - In-progress (20%)
+
+
+June 09, 2023 (Friday)
+First Commit:
+• New Member input fields (Container 1)
