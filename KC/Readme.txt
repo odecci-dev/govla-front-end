@@ -49,3 +49,7 @@ Third Commit:
 June 09, 2023 (Friday)
 First Commit:
 • New Member input fields (Container 1)
+
+Second Commit:
+• Styled the input fields (Container 1)
+- Added new mixins

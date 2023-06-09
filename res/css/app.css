@@ -787,27 +787,155 @@ table {
 .main-dashboard .nm-form-con .nm-container-1 .big-con {
   height: 100%;
   width: 100%;
-  background-color: midnightblue;
+  padding: 5rem 4rem 2rem 4rem;
+  background-color: mediumspringgreen;
   display: grid;
   grid-auto-flow: row dense;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 25px 0px;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-rows: minmax(0, 1fr);
+  align-items: center;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem 0px;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan {
+  min-height: 0;
+  /* NEW */
+  min-width: 0;
+  /* NEW; needed for Firefox */
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper span {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper input {
+  font-size: 2rem;
+  padding: 1rem 2rem 1rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #EBEBEB;
+  border-radius: 1rem;
+  box-shadow: inset -1px 3px 3px 0px rgba(0, 0, 0, 0.25);
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper select {
+  font-size: 2rem;
+  padding: 1rem 2rem 1rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #EBEBEB;
+  border-radius: 1rem;
+  /* Firefox */
+  /* Safari and Chrome */
+  appearance: none;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .box-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .box-wrap .checkbox-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan:first-of-type h2 {
+  font-size: 2.5rem;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan:first-of-type .btn-wrapper button {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: -1px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan:nth-of-type(2) {
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-rows: minmax(0, 1fr);
+  align-items: center;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.8fr) minmax(0, 0.8fr);
+  gap: 0px 2rem;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan:nth-of-type(3) {
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-rows: minmax(0, 1fr);
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: 0px 2rem;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan:nth-of-type(4) {
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-rows: minmax(0, 1fr);
+  align-items: center;
+  grid-template-columns: minmax(0, 0.6fr) minmax(0, 1.6fr) minmax(0, 1.3fr) minmax(0, 1.3fr);
+  gap: 0px 2rem;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan:nth-of-type(5) {
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-rows: minmax(0, 1fr);
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr);
+  gap: 0px 2rem;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan:nth-of-type(6) {
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-rows: minmax(0, 1fr);
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0px 2rem;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan:nth-of-type(7) {
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-rows: minmax(0, 1fr);
+  align-items: center;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.1fr) minmax(0, 1.1fr);
+  gap: 0px 2rem;
 }
 .main-dashboard .nm-form-con .nm-container-2 {
   width: 30%;
   padding: 2rem 2rem 2rem 1rem;
   background-color: aqua;
+}
+.main-dashboard .nm-form-con .nm-container-2 .small-con {
+  height: 100%;
+  width: 100%;
+  padding: 5rem 4rem 2rem 4rem;
+  background-color: mediumvioletred;
   display: grid;
   grid-auto-flow: row dense;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 20px 0px;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-rows: minmax(0, 1fr);
+  align-items: center;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem 0px;
 }
-.main-dashboard .nm-form-con .nm-container-2 .colspan {
-  background-color: mediumvioletred;
+.main-dashboard .nm-form-con .nm-container-2 .small-con .colspan {
+  min-height: 0;
+  /* NEW */
+  min-width: 0;
+  /* NEW; needed for Firefox */
 }
 
 .login-container {

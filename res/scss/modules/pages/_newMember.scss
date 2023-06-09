@@ -18,13 +18,80 @@
             .big-con {
                 height: 100%;
                 width: 100%;
-                background-color: midnightblue;
-                display: grid;
-                grid-auto-flow: row dense;
-                grid-auto-columns: 1fr;
-                grid-auto-rows: 1fr;
-                grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-                gap: 25px 0px;
+                padding: 5rem 4rem 2rem 4rem;
+                background-color: mediumspringgreen;
+                @include bigContainerGrid;
+                // * Rowspan Global Styles
+                .rowspan {
+                    min-height: 0;
+                    /* NEW */
+                    min-width: 0;
+                    /* NEW; needed for Firefox */
+                    .input-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        span {
+                            margin-bottom: 1rem;
+                            font-size: $font-size;
+                        }
+                        // * Input Global Styles
+                        input {
+                            @include inputField;
+                        }
+                        // * Select Global Styles
+                        select {
+                            @include selectField;
+                        }
+                        .box-wrap {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .checkbox-wrapper {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+                // * Rowspan 1: Name, Date of Birth, and Age 
+                .rowspan:first-of-type {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    h2 {
+                        font-size: $font-size-x-large;
+                    }
+                    .btn-wrapper {
+                        button {
+                            @include primaryButton
+                        }
+                    }
+                }
+                // * Rowspan 2: Gender, Birth Place, Civil Status and Mobile Number 
+                .rowspan:nth-of-type(2) {
+                    @include rowspan2;
+                }
+                // * Rowspan 3: House Number, Street, Barangay and City 
+                .rowspan:nth-of-type(3) {
+                    @include rowspan3;
+                }
+                // * Rowspan 4: Province, Rented, Owned, Free of Use Checkboxes and Years of Stay
+                .rowspan:nth-of-type(4) {
+                    @include rowspan4;
+                }
+                // * Rowspan 5: Current Employement, Previous Employment, and Name Of Company 
+                .rowspan:nth-of-type(5) {
+                    @include rowspan5;
+                }
+                // * Rowspan 6: Years Of Service, Monthly Income, and Other Source Of Income 
+                .rowspan:nth-of-type(6) {
+                    @include rowspan6;
+                }
+                // * Rowspan 7: Check Toggle 
+                .rowspan:nth-of-type(7) {
+                    @include rowspan7;
+                }
             }
         }
         // * Container 2: File Attachments and Monthly Bills
@@ -32,14 +99,20 @@
             width: calc(100% - 70%);
             padding: 2rem 2rem 2rem 1rem;
             background-color: aqua;
-            display: grid;
-            grid-auto-flow: row dense;
-            grid-auto-columns: 1fr;
-            grid-auto-rows: 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 20px 0px;
-            .colspan {
+            // * Small Container
+            .small-con {
+                height: 100%;
+                width: 100%;
+                padding: 5rem 4rem 2rem 4rem;
                 background-color: mediumvioletred;
+                @include twoBlockGrid;
+                // * Rowspan Global Styles
+                .colspan {
+                    min-height: 0;
+                    /* NEW */
+                    min-width: 0;
+                    /* NEW; needed for Firefox */
+                }
             }
         }
     }
