@@ -820,7 +820,11 @@ table {
   border-radius: 1rem;
   box-shadow: inset -1px 3px 3px 0px rgba(0, 0, 0, 0.25);
 }
-.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper select {
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .select-box {
+  position: relative;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .select-box select {
+  position: relative;
   font-size: 2rem;
   padding: 1rem 2rem 1rem 2rem;
   border: none;
@@ -830,6 +834,33 @@ table {
   /* Firefox */
   /* Safari and Chrome */
   appearance: none;
+  width: 100%;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .select-box select option {
+  position: absolute;
+  outline: none;
+  border: none;
+  background-color: #E0DFDF;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .select-box::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 2;
+  right: 0;
+  transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
+  border-bottom: 2px solid #29292B;
+  border-left: 2px solid #29292B;
+  transition: ease-out 300ms;
+  pointer-events: none;
+}
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .select-box:focus-within::before {
+  border-top: 2px solid #29292B;
+  border-right: 2px solid #29292B;
+  border-bottom: none;
+  border-left: none;
+  transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
 }
 .main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .box-wrap {
   display: flex;

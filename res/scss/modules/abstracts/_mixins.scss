@@ -64,6 +64,7 @@
 
 // * Input Select Field
 @mixin selectField {
+    position: relative;
     font-size: $font-size-large;
     padding: 1rem 2rem 1rem 2rem;
     border: none;
