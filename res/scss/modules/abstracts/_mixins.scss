@@ -15,6 +15,19 @@
     background-color: $third-bg;
 }
 
+// *** Defaults
+// * Container Default
+@mixin containerDefault {
+    border-radius: $border-radius-large;
+    background-color: $white;
+    box-shadow: $box-shadow;
+}
+
+@mixin containerDefault2 {
+    @include containerDefault;
+    box-shadow: $box-shadow-2;
+}
+
 // *** Button Mixins
 // * Primary Button
 @mixin primaryButton {
@@ -91,6 +104,48 @@
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+// * Table Checkbox
+@mixin tableCheckboxInput {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    aspect-ratio: 1/1;
+    height: 2rem;
+    width: 2rem;
+    border-radius: .4rem;
+    background-color: $primary-bg;
+}
+
+// * Form Checkbox
+@mixin formCheckbox {
+    @include tableCheckboxInput;
+    box-shadow: none;
+    height: 4.4rem;
+    width: 4.4rem;
+    border-radius: $border-radius-medium;
+    border: 1px solid $font-accent;
+    background-color: $white;
+}
+
+@mixin formCheckboxAfter {
+    content: url('../assets/icons/big-check.svg');
+    position: absolute;
+    top: 1.2rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: ease-out 250ms;
+}
+
+@mixin formCheckboxChecked {
+    visibility: visible;
+    opacity: 1;
+}
+
 // **** Grid Layout Mixins **** //
 // *** Containers Grid Layouts
 @mixin displayGrid {
@@ -163,4 +218,10 @@
     @include displayGrid;
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.1fr) minmax(0, 1.1fr);
     gap: 0px $spacing-2x-large;
+}
+
+// * Rowspan 8
+@mixin rowspan8 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 1fr);
 }

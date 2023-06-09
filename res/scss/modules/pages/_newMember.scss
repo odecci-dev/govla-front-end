@@ -11,17 +11,16 @@
         width: 100%;
         // * Container 1: New Member Form Fields and Buttons
         .nm-container-1 {
-            width: calc(100% - 30%);
+            width: calc(100% - 20%);
             padding: 2rem 1rem 2rem 2rem;
-            background-color: aqua;
             // * Big Container 
             .big-con {
                 height: 100%;
                 width: 100%;
                 padding: 5rem 4rem 2rem 4rem;
-                background-color: mediumspringgreen;
+                @include containerDefault2;
                 @include bigContainerGrid;
-                // * Rowspan Global Styles
+                // ** Rowspan Global Styles
                 .rowspan {
                     min-height: 0;
                     /* NEW */
@@ -38,7 +37,7 @@
                         input {
                             @include inputField;
                         }
-                        // * Select Global Styles
+                        // * Select Input Global Styles
                         .select-box {
                             position: relative;
                             // img {
@@ -58,6 +57,7 @@
                                 }
                             }
                         }
+                        // * Select Input Arrow
                         .select-box::before {
                             content: '';
                             position: absolute;
@@ -81,17 +81,30 @@
                         }
                         .box-wrap {
                             display: flex;
-                            justify-content: space-between;
                             align-items: center;
+                            justify-content: center;
                             .checkbox-wrapper {
                                 display: flex;
                                 flex-direction: column;
                                 align-items: center;
+                                margin: 0 1rem;
+                                span {
+                                    letter-spacing: -1px;
+                                }
+                                input[type="checkbox"] {
+                                    @include formCheckbox;
+                                }
+                                input[type="checkbox"]::after {
+                                    @include formCheckboxAfter
+                                }
+                                input[type="checkbox"]:checked:after {
+                                    @include formCheckboxChecked
+                                }
                             }
                         }
                     }
                 }
-                // * Rowspan 1: Name, Date of Birth, and Age 
+                // * Rowspan Header: Header and Buttons 
                 .rowspan:first-of-type {
                     display: flex;
                     justify-content: space-between;
@@ -103,52 +116,134 @@
                         button {
                             @include primaryButton
                         }
+                        button:first-of-type {
+                            margin-right: 1.5rem;
+                        }
                     }
                 }
-                // * Rowspan 2: Gender, Birth Place, Civil Status and Mobile Number 
+                // * Rowspan 2: Name, Date of Birth, and Age 
                 .rowspan:nth-of-type(2) {
                     @include rowspan2;
                 }
-                // * Rowspan 3: House Number, Street, Barangay and City 
+                // * Rowspan 3: Gender, Birth Place, Civil Status and Mobile Number 
                 .rowspan:nth-of-type(3) {
                     @include rowspan3;
                 }
-                // * Rowspan 4: Province, Rented, Owned, Free of Use Checkboxes and Years of Stay
+                // * Rowspan 4: House Number, Street, Barangay and City 
                 .rowspan:nth-of-type(4) {
                     @include rowspan4;
                 }
-                // * Rowspan 5: Current Employement, Previous Employment, and Name Of Company 
+                // * Rowspan 5: Province, Rented, Owned, Free of Use Checkboxes and Years of Stay
                 .rowspan:nth-of-type(5) {
                     @include rowspan5;
                 }
-                // * Rowspan 6: Years Of Service, Monthly Income, and Other Source Of Income 
+                // * Rowspan 6: Current Employement, Previous Employment, and Name Of Company 
                 .rowspan:nth-of-type(6) {
                     @include rowspan6;
                 }
-                // * Rowspan 7: Check Toggle 
+                // * Rowspan 7: Years Of Service, Monthly Income, and Other Source Of Income 
                 .rowspan:nth-of-type(7) {
                     @include rowspan7;
+                }
+                // * Rowspan 8: Check Toggle 
+                .rowspan:nth-of-type(8) {
+                    @include rowspan8;
+                    .box-wrap {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        .checkbox-wrapper {
+                            display: flex;
+                            align-items: center;
+                            span {
+                                margin-left: 1rem;
+                                font-weight: $font-weight-bold;
+                                font-style: italic;
+                            }
+                            input[type="checkbox"] {
+                                @include formCheckbox;
+                            }
+                            input[type="checkbox"]::after {
+                                @include formCheckboxAfter
+                            }
+                            input[type="checkbox"]:checked:after {
+                                @include formCheckboxChecked
+                            }
+                        }
+                    }
                 }
             }
         }
         // * Container 2: File Attachments and Monthly Bills
         .nm-container-2 {
-            width: calc(100% - 70%);
+            width: calc(100% - 80%);
             padding: 2rem 2rem 2rem 1rem;
-            background-color: aqua;
             // * Small Container
             .small-con {
                 height: 100%;
                 width: 100%;
-                padding: 5rem 4rem 2rem 4rem;
-                background-color: mediumvioletred;
                 @include twoBlockGrid;
                 // * Rowspan Global Styles
-                .colspan {
-                    min-height: 0;
-                    /* NEW */
-                    min-width: 0;
-                    /* NEW; needed for Firefox */
+                .box-wrap {
+                    display: flex;
+                    height: 100%;
+                    width: 100%;
+                    padding: 3rem 4rem;
+                    @include containerDefault2;
+                    .colspan {
+                        display: flex;
+                        min-height: 0px;
+                        min-width: 0px;
+                    }
+                }
+                .box-wrap:first-of-type {
+                    .colspan {
+                        min-width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 20px 0px;
+                        .input-wrapper {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            input[type="image"] {
+                                min-height: 100%;
+                                min-width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                        button {
+                            min-width: 100%;
+                            @include primaryButton;
+                        }
+                    }
+                }
+                .box-wrap:last-of-type {
+                    .colspan:last-of-type {
+                        min-width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px 0px;
+                        h3 {
+                            margin-bottom: 1rem;
+                            font-size: $font-size-medium;
+                        }
+                        .input-wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            span {
+                                margin-bottom: 1rem;
+                                font-size: $font-size;
+                            }
+                            // * Input Global Styles
+                            input {
+                                @include inputField;
+                            }
+                        }
+                    }
                 }
             }
         }

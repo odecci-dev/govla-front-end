@@ -235,6 +235,8 @@
                     <div class="big-con">
 
                         <!-- * Form Header -->
+
+                        <!-- * Rowspan 1: Rowspan Header: Header and Buttons -->
                         <div class="rowspan">
                             <h2>New Member</h2>
 
@@ -250,7 +252,7 @@
                             </div>
                         </div>
 
-                        <!-- * Rowspan 1: Name, Date of Birth, and Age -->
+                        <!-- * Rowspan 2: Name, Date of Birth, and Age -->
                         <div class="rowspan">
 
                             <!-- * Name -->
@@ -273,7 +275,7 @@
 
                         </div>
 
-                        <!-- * Rowspan 2: Gender, Birth Place, Civil Status and Mobile Number -->
+                        <!-- * Rowspan 3: Gender, Birth Place, Civil Status and Mobile Number -->
                         <div class="rowspan">
 
                             <!-- * Gender -->
@@ -318,7 +320,7 @@
 
                         </div>
 
-                        <!-- * Rowspan 3: House Number, Street, Barangay and City -->
+                        <!-- * Rowspan 4: House Number, Street, Barangay and City -->
                         <div class="rowspan">
 
                             <!-- * House Number -->
@@ -347,7 +349,7 @@
 
                         </div>
 
-                        <!-- * Rowspan 4: Province, Rented, Owned, Free of Use Checkboxes and Years of Stay -->
+                        <!-- * Rowspan 5: Province, Rented, Owned, Free of Use Checkboxes and Years of Stay -->
                         <div class="rowspan">
 
                             <!-- * Province -->
@@ -373,10 +375,10 @@
                                         <input type="checkbox" name="owned" id="owned">
                                     </div>
 
-                                    <!-- * Free of Use -->
+                                    <!-- * Free Use -->
                                     <div class="checkbox-wrapper">
-                                        <span>Free of Use</span>
-                                        <input type="checkbox" name="fou" id="fou">
+                                        <span>Free Use</span>
+                                        <input type="checkbox" name="freeUse" id="freeUse">
                                     </div>
 
                                 </div>
@@ -391,7 +393,7 @@
 
                         </div>
 
-                        <!-- * Rowspan 5: Current Employement, Previous Employment, and Name Of Company -->
+                        <!-- * Rowspan 6: Current Employement, Previous Employment, and Name Of Company -->
                         <div class="rowspan">
 
                             <!-- * Current Employement -->
@@ -414,7 +416,7 @@
 
                         </div>
 
-                        <!-- * Rowspan 6: Years Of Service, Monthly Income, and Other Source Of Income -->
+                        <!-- * Rowspan 7: Years Of Service, Monthly Income, and Other Source Of Income -->
                         <div class="rowspan">
 
                             <!-- * Years Of Service -->
@@ -437,22 +439,83 @@
 
                         </div>
 
-                        <!-- * Rowspan 7: Check Toggle -->
+                        <!-- * Rowspan 8: Check Toggle -->
                         <div class="rowspan">
 
-                            <!-- * Form Toggle -->
-                            <div class="checkbox-wrapper">
-                                <input type="checkbox" name="fou" id="fou">
-                                <span>Check this button if the applicant owns a business</span>
+                            <div class="box-wrap">
+
+                                <!-- * Form Toggle -->
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" name="formToggle" id="formToggle">
+                                    <span>Check this button if the applicant owns a business</span>
+                                </div>
+
                             </div>
 
                         </div>
                     </div>
                 </div>
+
+                <!-- * Container 2: Upload Images, Files and Monthly Bills Input Fields -->
                 <div class="nm-container-2">
+
+                    <!-- * Small Container -->
                     <div class="small-con">
-                        <div class="colspan"></div>
-                        <div class="colspan"></div>
+
+                        <div class="box-wrap">
+
+                            <!-- * Colspan 2: Upload Image and Attach Files Buttons  -->
+                            <div class="colspan">
+
+                                <!-- * Upload Image -->
+                                <div class="input-wrapper">
+                                    <input type="image" src="../res/assets/icons/upload-image.svg" alt="upload-image">
+                                </div>
+
+                                <!-- * Upload Button -->
+                                <!-- <div class="input-wrapper"> -->
+                                <button submit="">Upload Image</button>
+                                <!-- </div> -->
+
+                                <!-- * Attach Button -->
+                                <!-- <div class="input-wrapper"> -->
+                                <button submit="">Attach Files</button>
+                                <!-- </div> -->
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="box-wrap">
+
+                            <!-- * Colspan 2: Monthly Bills - Electricity Bill, Water Bill, and Daily Expenses -->
+                            <div class="colspan">
+
+                                <h3>Monthly Bills:</h3>
+
+                                <!-- * Electricity Bill -->
+                                <div class="input-wrapper">
+                                    <span>Electricity Bill</span>
+                                    <input type="number" id="elecBill" name="elecBill">
+                                </div>
+
+                                <!-- * Water Bill -->
+                                <div class="input-wrapper">
+                                    <span>Water Bill</span>
+                                    <input type="number" id="waterBill" name="waterBill">
+                                </div>
+
+                                <!-- * Daily Expenses -->
+                                <div class="input-wrapper">
+                                    <span>Daily Expenses</span>
+                                    <input type="number" id="dailyExp" name="dailyExp">
+                                </div>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
                 </div>

@@ -56,3 +56,8 @@ Second Commit:
 
 Third Commit:
 • Select Input Dropdown
+
+Fourth Commit:
+• Finished the New Member Field Layout for Single
+- Implemented contents
+- Implemented the styles 

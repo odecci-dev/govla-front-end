@@ -105,6 +105,7 @@
             display: flex;
             flex-direction: column;
             height: calc(100% - 10%);
+            border-radius: $border-radius-large;
             box-shadow: $box-shadow;
             table {
                 // **                         ** //
@@ -128,19 +129,7 @@
                 }
                 // * Table Checkbox
                 input[type="checkbox"] {
-                    cursor: pointer;
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    outline: none;
-                    appearance: none;
-                    -webkit-appearance: none;
-                    aspect-ratio: 1/1;
-                    height: 2rem;
-                    width: 2rem;
-                    border-radius: .4rem;
-                    background-color: $primary-bg;
+                    @include tableCheckboxInput;
                 }
                 input[type="checkbox"]::after {
                     content: url('../assets/icons/white-check.svg');
