@@ -71,3 +71,8 @@ First Commit:
 Second Commit:
 • New Member: Implemented the adjustments in Container 1
 - Changed the checkbox to radio buttons (HTML element)
+
+Third Commit:
+• All Members: Implemented dropdown menu on Borrower Dropdown Button
+- Reused the styles from the Side Nav and made some minor tweaks
+- Reused the dropdown function from the Side Nav and made some minor tweaks

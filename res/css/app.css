@@ -138,19 +138,21 @@ table {
 }
 .nav .nav-con-1 .nav-links .dropdown.showMenu > .link.dropdown + .sub-menu {
   visibility: visible;
+  pointer-events: auto;
   opacity: 1;
   transition: opacity ease-out 250ms;
 }
 .nav .nav-con-1 .nav-links .sub-menu {
+  position: absolute;
   z-index: -9;
   opacity: 0;
   visibility: hidden;
-  position: absolute;
   display: flex;
   flex-direction: column;
-  left: 100%;
   top: 0;
   background-color: #D6A330;
+  pointer-events: none;
+  left: 100%;
 }
 .nav .nav-con-1 .nav-links .sub-menu li {
   position: relative;
@@ -565,7 +567,11 @@ table {
   box-shadow: -1px 3px 3px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
+.main-dashboard .am-con-1 .container .wrapper:first-of-type button a {
+  color: #FFFFFF;
+}
 .main-dashboard .am-con-1 .container .wrapper:first-of-type button img {
+  cursor: pointer;
   margin-left: 3rem;
 }
 .main-dashboard .am-con-1 .container .wrapper:first-of-type button:nth-of-type(n+2) {
@@ -578,6 +584,64 @@ table {
 }
 .main-dashboard .am-con-1 .container .wrapper:first-of-type button:nth-of-type(2) {
   margin: 0 2rem 0 2rem;
+}
+.main-dashboard .am-con-1 .container .wrapper:first-of-type .borrower-dropdown {
+  position: relative;
+}
+.main-dashboard .am-con-1 .container .wrapper:first-of-type .borrower-dropdown .dropdown-menu {
+  position: absolute;
+  z-index: -9;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  background-color: #D6A330;
+  pointer-events: none;
+  box-shadow: -1px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  top: 100%;
+  width: 100%;
+}
+.main-dashboard .am-con-1 .container .wrapper:first-of-type .borrower-dropdown .dropdown-menu a {
+  cursor: pointer;
+}
+.main-dashboard .am-con-1 .container .wrapper:first-of-type .borrower-dropdown .dropdown-menu a li {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 4rem;
+}
+.main-dashboard .am-con-1 .container .wrapper:first-of-type .borrower-dropdown .dropdown-menu a li span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #FFFFFF;
+}
+.main-dashboard .am-con-1 .container .wrapper:first-of-type .borrower-dropdown .dropdown-menu a li:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.125);
+  background-blend-mode: darken;
+}
+.main-dashboard .am-con-1 .container .wrapper:first-of-type .borrower-dropdown.showMenu > .link.dropdown {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: none;
+}
+.main-dashboard .am-con-1 .container .wrapper:first-of-type .borrower-dropdown > .link.dropdown > img {
+  transition: transform ease-out 300ms;
+}
+.main-dashboard .am-con-1 .container .wrapper:first-of-type .borrower-dropdown.showMenu > .link.dropdown > img {
+  transform: scaleY(-1);
+}
+.main-dashboard .am-con-1 .container .wrapper:first-of-type .borrower-dropdown.showMenu > .link.dropdown + .dropdown-menu {
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 1;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  transition: opacity ease-out 250ms;
 }
 .main-dashboard .am-con-1 .container .wrapper:last-of-type button {
   cursor: pointer;

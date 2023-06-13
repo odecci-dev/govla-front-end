@@ -1,3 +1,16 @@
+// *** Nav Mixins
+@mixin submenu {
+    position: absolute;
+    z-index: -9;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    background-color: $primary;
+    pointer-events: none;
+}
+
 // *** Dashboard Mixins
 // * Dashboard 1
 @mixin dashboard {

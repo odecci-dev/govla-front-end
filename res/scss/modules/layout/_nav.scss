@@ -76,21 +76,15 @@
             // * When a link IS clicked
             .dropdown.showMenu>.link.dropdown+.sub-menu {
                 visibility: visible;
+                pointer-events: auto;
                 opacity: 1;
                 transition: opacity ease-out 250ms;
             }
             .sub-menu {
                 // * When a link IS NOT clicked 
                 // * Styles for submenu
-                z-index: -9;
-                opacity: 0;
-                visibility: hidden;
-                position: absolute;
-                display: flex;
-                flex-direction: column;
+                @include submenu;
                 left: 100%;
-                top: 0;
-                background-color: $primary;
                 li {
                     position: relative;
                     display: flex;

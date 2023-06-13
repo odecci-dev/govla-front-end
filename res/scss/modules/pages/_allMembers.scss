@@ -35,7 +35,11 @@
                 // * All-Member Button Styles
                 button {
                     @include primaryButton;
+                    a {
+                        color: $white;
+                    }
                     img {
+                        cursor: pointer;
                         margin-left: $spacing-3x-large;
                     }
                 }
@@ -50,6 +54,61 @@
                 }
                 button:nth-of-type(2) {
                     margin: 0 $spacing-2x-large 0 $spacing-2x-large;
+                }
+                // * Borrower Dropdown Button
+                .borrower-dropdown {
+                    position: relative;
+                    .dropdown-menu {
+                        // * When a link IS NOT clicked 
+                        // * Styles for submenu
+                        @include submenu;
+                        box-shadow: $box-shadow;
+                        top: 100%;
+                        width: 100%;
+                        a {
+                            cursor: pointer;
+                            li {
+                                position: relative;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                width: 100%;
+                                padding: $spacing-large $spacing-4x-large;
+                                span {
+                                    font-size: $font-size-medium;
+                                    font-weight: $font-weight-bold;
+                                    white-space: nowrap;
+                                    color: $white;
+                                }
+                            }
+                            li:hover {
+                                cursor: pointer;
+                                background: rgba(0, 0, 0, 0.125);
+                                background-blend-mode: darken;
+                            }
+                        }
+                    }
+                }
+                .borrower-dropdown.showMenu>.link.dropdown {
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                    box-shadow: none;
+                }
+                .borrower-dropdown>.link.dropdown>img {
+                    transition: transform ease-out 300ms;
+                }
+                .borrower-dropdown.showMenu>.link.dropdown>img {
+                    -webkit-transform: scaleY(-1);
+                    transform: scaleY(-1);
+                }
+                // * Borrower Dropdown Menu
+                .borrower-dropdown.showMenu>.link.dropdown+.dropdown-menu {
+                    visibility: visible;
+                    pointer-events: auto;
+                    opacity: 1;
+                    border-bottom-left-radius: $border-radius-large;
+                    border-bottom-right-radius: $border-radius-large;
+                    transition: opacity ease-out 250ms;
                 }
             }
             // * Search Wrapper
@@ -67,7 +126,6 @@
                     input {
                         @include inputField;
                         position: relative;
-                        // width: calc($spacing-10x-large * 4);
                         padding-left: $spacing-6x-large;
                     }
                     input::placeholder {
