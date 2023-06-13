@@ -792,7 +792,6 @@ table {
   grid-auto-flow: row dense;
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-rows: minmax(0, 1fr);
-  align-items: center;
   grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   gap: 2rem 0px;
 }
@@ -934,7 +933,6 @@ table {
   grid-auto-flow: row dense;
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-rows: minmax(0, 1fr);
-  align-items: center;
   grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.8fr) minmax(0, 0.8fr);
   gap: 0px 2rem;
 }
@@ -943,7 +941,6 @@ table {
   grid-auto-flow: row dense;
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-rows: minmax(0, 1fr);
-  align-items: center;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1.4fr);
   gap: 0px 2rem;
 }
@@ -952,7 +949,6 @@ table {
   grid-auto-flow: row dense;
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-rows: minmax(0, 1fr);
-  align-items: center;
   grid-template-columns: minmax(0, 0.6fr) minmax(0, 1.6fr) minmax(0, 1.3fr) minmax(0, 1.3fr);
   gap: 0px 2rem;
 }
@@ -961,7 +957,6 @@ table {
   grid-auto-flow: row dense;
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-rows: minmax(0, 1fr);
-  align-items: center;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr);
   gap: 0px 2rem;
 }
@@ -970,7 +965,6 @@ table {
   grid-auto-flow: row dense;
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-rows: minmax(0, 1fr);
-  align-items: center;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   gap: 0px 2rem;
 }
@@ -979,7 +973,6 @@ table {
   grid-auto-flow: row dense;
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-rows: minmax(0, 1fr);
-  align-items: center;
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.1fr) minmax(0, 1.1fr);
   gap: 0px 2rem;
 }
@@ -988,7 +981,6 @@ table {
   grid-auto-flow: row dense;
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-rows: minmax(0, 1fr);
-  align-items: center;
   grid-template-columns: minmax(0, 1fr);
 }
 .main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan:nth-of-type(8) .box-wrap {
@@ -1049,46 +1041,43 @@ table {
   grid-auto-flow: row dense;
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-rows: minmax(0, 1fr);
-  align-items: center;
+  grid-auto-flow: column dense;
   grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
   gap: 2rem 0px;
 }
 .main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap {
-  display: flex;
-  height: 100%;
-  width: 100%;
   padding: 3rem 4rem;
+  padding: min(3rem, 5%) min(4rem, 10%);
   border-radius: 1.5rem;
   background-color: #FFFFFF;
   box-shadow: -1px 3px 3px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
 }
-.main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap .colspan {
-  display: flex;
-  min-height: 0px;
-  min-width: 0px;
-}
-.main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:first-of-type .colspan {
-  min-width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px 0px;
-}
-.main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:first-of-type .colspan .input-wrapper {
+.main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:first-of-type {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:first-of-type .colspan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:first-of-type .colspan .input-wrapper {
+  margin-bottom: min(2rem, 10%);
+  display: grid;
+  place-items: center;
+}
 .main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:first-of-type .colspan .input-wrapper input[type=image] {
-  min-height: 100%;
-  min-width: 100%;
+  width: clamp(4rem, 10vw, 100%);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:first-of-type .colspan button {
-  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  width: clamp(2rem, 10vw, 100%);
   border-radius: 1rem;
   padding: 0.8rem 4rem 0.8rem 4rem;
   font-size: 1.5rem;
@@ -1097,15 +1086,19 @@ table {
   background-color: #D6A330;
   box-shadow: -1px 3px 3px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  margin-bottom: 2rem;
+  white-space: nowrap;
 }
-.main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:last-of-type .colspan:last-of-type {
-  min-width: 100%;
+.main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:last-of-type {
   display: flex;
   flex-direction: column;
-  gap: 20px 0px;
+}
+.main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:last-of-type .colspan:last-of-type {
+  display: flex;
+  flex-direction: column;
 }
 .main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:last-of-type .colspan:last-of-type h3 {
-  margin-bottom: 1rem;
+  margin: min(2rem, 10%) 0;
   font-size: 1.5rem;
 }
 .main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:last-of-type .colspan:last-of-type .input-wrapper {
@@ -1113,7 +1106,7 @@ table {
   flex-direction: column;
 }
 .main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:last-of-type .colspan:last-of-type .input-wrapper span {
-  margin-bottom: 1rem;
+  margin: min(2rem, 5%) 0;
   font-size: 1.2rem;
 }
 .main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:last-of-type .colspan:last-of-type .input-wrapper input {
@@ -1124,6 +1117,9 @@ table {
   background-color: #EBEBEB;
   border-radius: 1rem;
   box-shadow: inset -1px 3px 3px 0px rgba(0, 0, 0, 0.25);
+}
+.main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:last-of-type .colspan:last-of-type .input-wrapper:last-of-type input {
+  padding: 1rem 2rem min(2rem, 10%) 2rem;
 }
 
 .login-container {

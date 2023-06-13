@@ -61,3 +61,8 @@ Fourth Commit:
 • Finished the New Member Field Layout for Single
 - Implemented contents
 - Implemented the styles 
+
+
+June 13, 2023 (Tuesday)
+First Commit:
+• New Member: Fixed adjustments on input image Container 1
