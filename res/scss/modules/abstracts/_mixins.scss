@@ -134,6 +134,35 @@
     background-color: $primary-bg;
 }
 
+// * Form Radio Buttons
+@mixin formRadioButtons {
+    @include tableCheckboxInput;
+    box-shadow: none;
+    aspect-ratio: none;
+    height: 4.4rem;
+    width: 4.4rem;
+    border-radius: $circle;
+    border: max(1px, 0.15em) solid $primary;
+    background-color: $white;
+}
+
+@mixin formRadioButtonsAfter {
+    content: '';
+    position: absolute;
+    width: calc(100% - 50%);
+    height: calc(100% - 50%);
+    border-radius: $circle;
+    background-color: $primary;
+    visibility: hidden;
+    opacity: 0;
+    transition: ease-out 250ms;
+}
+
+@mixin formRadioButtonsChecked {
+    visibility: visible;
+    opacity: 1;
+}
+
 // * Form Checkbox
 @mixin formCheckbox {
     @include tableCheckboxInput;
@@ -201,35 +230,35 @@
 // * Rowspan 3
 @mixin rowspan3 {
     @include displayGrid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1.4fr);
+    grid-template-columns: minmax(0, 0.4fr) minmax(0, 1fr) minmax(0, 0.4fr) minmax(0, 1fr) minmax(0, 0.4fr);
     gap: 0px $spacing-2x-large;
 }
 
 // * Rowspan 4
 @mixin rowspan4 {
     @include displayGrid;
-    grid-template-columns: minmax(0, 0.6fr) minmax(0, 1.6fr) minmax(0, 1.3fr) minmax(0, 1.3fr);
+    grid-template-columns: minmax(0, 0.4fr) minmax(0, 1.6fr);
     gap: 0px $spacing-2x-large;
 }
 
 // * Rowspan 5
 @mixin rowspan5 {
     @include displayGrid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr);
+    grid-template-columns: minmax(0, 0.4fr) minmax(0, 1.6fr);
     gap: 0px $spacing-2x-large;
 }
 
 // * Rowspan 6
 @mixin rowspan6 {
     @include displayGrid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr)minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     gap: 0px $spacing-2x-large;
 }
 
 // * Rowspan 7
 @mixin rowspan7 {
     @include displayGrid;
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.1fr) minmax(0, 1.1fr);
+    grid-template-columns: minmax(0, 1fr)minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     gap: 0px $spacing-2x-large;
 }
 

@@ -78,6 +78,14 @@ Third Commit:
 - Reused the dropdown function from the Side Nav and made some minor tweaks
 
 Fourth Commit:
-• New Members: Started the implemation of the Sprint 2 Revisions
+• New Members: Started the implementation of the Sprint 2 Revisions
 - Adjustment on Fieldsets in HTML
 - Adjustments on SASS Mixins Grid
+
+
+June 14, 2023 (Wednesday)
+First Commit:
+• New Members: Implementation of Sprint 2 Revisions
+- Adjustment on Fieldsets in HTML
+- Adjustments on SASS Mixins Grid
+- Implemented the radio buttons

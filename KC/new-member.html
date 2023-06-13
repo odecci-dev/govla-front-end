@@ -226,7 +226,7 @@
         <div class="main-dashboard">
 
             <!-- * New-Member-Form-Container -->
-            <form action="" class="nm-form-con">
+            <form action="" class="nm-form-con" autocomplete="off">
 
                 <!-- * Container 1: New Member Form Fields and Buttons -->
                 <div class="nm-container-1">
@@ -258,42 +258,30 @@
                             <!-- * First Name -->
                             <div class="input-wrapper">
                                 <span>First Name</span>
-                                <input type="text" id="fName" name="fName">
+                                <input autocomplete="off" type="text" id="fName" name="fName">
                             </div>
 
                             <!-- * Middle Name -->
                             <div class="input-wrapper">
                                 <span>Middle Name</span>
-                                <input type="text" id="midName" name="midName">
+                                <input autocomplete="off" type="text" id="midName" name="midName">
                             </div>
 
                             <!-- * Last Name -->
                             <div class="input-wrapper">
                                 <span>Last Name</span>
-                                <input type="text" id="lName" name="lName">
+                                <input autocomplete="off" type="text" id="lName" name="lName">
                             </div>
 
                             <!-- * Suffix -->
                             <div class="input-wrapper">
                                 <span>Suffix</span>
-                                <input type="text" id="suffix" name="suffix">
+                                <input autocomplete="off" type="text" id="suffix" name="suffix">
                             </div>
-
-                            <!-- * Date of Birth -->
-                            <!-- <div class="input-wrapper">
-                                <span>Date of Birth</span>
-                                <input type="text" id="dobirth" name="dobirth">
-                            </div> -->
-
-                            <!-- * Age -->
-                            <!-- <div class="input-wrapper">
-                                <span>Age</span>
-                                <input type="number" id="age" name="age">
-                            </div> -->
 
                         </div>
 
-                        <!-- * Rowspan 3: Gender, Birth Place, Civil Status and Mobile Number -->
+                        <!-- * Rowspan 3: Gender, Date Of Birth, Age, Place Of Birth and Civil Status -->
                         <div class="rowspan">
 
                             <!-- * Gender -->
@@ -308,17 +296,28 @@
                                 </div>
                             </div>
 
-                            <!-- * Birth Place -->
+                            <!-- * Date Of Birth -->
                             <div class="input-wrapper">
-                                <span>Birth Place</span>
-                                <input type="text" id="bplace" name="bplace">
+                                <span>Date Of Birth</span>
+                                <input autocomplete="off" type="text" id="doBirth" name="doBirth">
+                            </div>
+
+                            <!-- * Age -->
+                            <div class="input-wrapper">
+                                <span>Age</span>
+                                <input autocomplete="off" type="number" id="age" name="age">
+                            </div>
+
+                            <!-- * Place Of Birth -->
+                            <div class="input-wrapper">
+                                <span>Place Of Birth</span>
+                                <input autocomplete="off" type="text" id="poBirth" name="poBirth">
                             </div>
 
                             <!-- * Civil Status -->
                             <div class="input-wrapper">
                                 <span>Civil Status</span>
                                 <div class="select-box">
-                                    <!-- <img src="../res/assets/icons/carret-down.svg" alt="carret-down"> -->
                                     <select name="Civil Status" id="civStat">
                                         <option value="0"></option>
                                         <option value="1">Widow</option>
@@ -328,55 +327,37 @@
                                 </div>
                             </div>
 
-                            <!-- * Mobile Number -->
+
+
+                        </div>
+
+                        <!-- * Rowspan 4: Contact Number and Email Address -->
+                        <div class="rowspan">
+
+                            <!-- * Contact Number -->
                             <div class="input-wrapper">
                                 <div class="input-wrapper">
-                                    <span>Mobile Number</span>
-                                    <input type="number" id="mobNum" name="mobNum">
+                                    <span>Contact Number</span>
+                                    <input autocomplete="off" type="number" id="conNum" name="conNum">
                                 </div>
                             </div>
 
-                        </div>
-
-                        <!-- * Rowspan 4: House Number, Street, Barangay and City -->
-                        <div class="rowspan">
-
-                            <!-- * House Number -->
+                            <!-- * Email Address -->
                             <div class="input-wrapper">
-                                <span>House Number</span>
-                                <input type="text" id="houseNum" name="houseNum">
+                                <div class="input-wrapper">
+                                    <span>Email Address</span>
+                                    <input autocomplete="off" type="email" id="eMail" name="eMail">
+                                </div>
                             </div>
 
-                            <!-- * Street -->
-                            <div class="input-wrapper">
-                                <span>Street</span>
-                                <input type="text" id="street" name="street">
-                            </div>
 
-                            <!-- * Barangay -->
-                            <div class="input-wrapper">
-                                <span>Barangay</span>
-                                <input type="text" id="brgy" name="brgy">
-                            </div>
-
-                            <!-- * City -->
-                            <div class="input-wrapper">
-                                <span>City</span>
-                                <input type="text" id="city" name="city">
-                            </div>
 
                         </div>
 
-                        <!-- * Rowspan 5: Province, Rented, Owned, Free of Use Checkboxes and Years of Stay -->
+                        <!-- * Rowspan 5: Rented, Owned, Free of Use Radio Buttons and House Address-->
                         <div class="rowspan">
 
-                            <!-- * Province -->
-                            <div class="input-wrapper">
-                                <span>Province</span>
-                                <input type="text" id="province" name="province">
-                            </div>
-
-                            <!-- * Rented, Owned, and Free of Use Checkboxes -->
+                            <!-- * Rented, Owned, and Free of Use Radio Buttons -->
                             <div class="input-wrapper">
 
                                 <div class="box-wrap">
@@ -384,91 +365,121 @@
                                     <!-- * Rented -->
                                     <div class="radio-btn-wrapper">
                                         <span>Rented</span>
-                                        <input type="radio" name="radio" value="rented" id="rented">
+                                        <input autocomplete="off" type="radio" name="radio" value="rented" id="rented">
                                     </div>
 
                                     <!-- * Owned -->
                                     <div class="radio-btn-wrapper">
                                         <span>Owned</span>
-                                        <input type="radio" name="radio" value="owned" id="owned">
+                                        <input autocomplete="off" type="radio" name="radio" value="owned" id="owned">
                                     </div>
 
                                     <!-- * Free Use -->
                                     <div class="radio-btn-wrapper">
                                         <span>Free Use</span>
-                                        <input type="radio" name="radio" value="freeUse" id="freeUse">
+                                        <input autocomplete="off" type="radio" name="radio" value="freeUse" id="freeUse">
                                     </div>
 
                                 </div>
 
                             </div>
 
-                            <!-- * Years of Stay -->
+                            <!-- * House No./ Bldg. No./ Room No./ Subdivision/ Street -->
                             <div class="input-wrapper">
-                                <span>Years of Stay</span>
-                                <input type="text" id="yos" name="yoStay">
+                                <span>House No./ Bldg. No./ Room No./ Subdivision/ Street</span>
+                                <input autocomplete="off" type="text" id="houseAdd" name="houseAdd">
                             </div>
 
                         </div>
 
-                        <!-- * Rowspan 6: Current Employement, Previous Employment, and Name Of Company -->
+                        <!-- * Rowspan 6: Barangay, City / Municipality, Province / Region, and Country -->
                         <div class="rowspan">
+
+                            <!-- * Barangay -->
+                            <div class="input-wrapper">
+                                <span>Barangay</span>
+                                <input autocomplete="off" type="text" id="brgy" name="brgy">
+                            </div>
+
+                            <!-- * City / Municipality -->
+                            <div class="input-wrapper">
+                                <span>City / Municipality</span>
+                                <input autocomplete="off" type="text" id="city" name="city">
+                            </div>
+
+                            <!-- * Province / Region -->
+                            <div class="input-wrapper">
+                                <span>Province / Region</span>
+                                <input autocomplete="off" type="text" id="province" name="province">
+                            </div>
+
+                            <!-- * Country -->
+                            <div class="input-wrapper">
+                                <span>Country</span>
+                                <input autocomplete="off" type="text" id="country" name="country">
+                            </div>
 
                             <!-- * Current Employement -->
-                            <div class="input-wrapper">
+                            <!-- <div class="input-wrapper">
                                 <span>Current Employement</span>
                                 <input type="text" id="currentEmp" name="currentEmp">
-                            </div>
+                            </div> -->
 
                             <!-- * Previous Employment -->
-                            <div class="input-wrapper">
+                            <!-- <div class="input-wrapper">
                                 <span>Previous Employment</span>
                                 <input type="text" id="prevEmp" name="prevEmp">
-                            </div>
+                            </div> -->
 
                             <!-- * Name Of Company -->
-                            <div class="input-wrapper">
+                            <!-- <div class="input-wrapper">
                                 <span>Name Of Company</span>
                                 <input type="text" id="nameOfComp" name="nameOfComp">
-                            </div>
+                            </div> -->
 
                         </div>
 
-                        <!-- * Rowspan 7: Years Of Service, Monthly Income, and Other Source Of Income -->
+                        <!-- * Rowspan 7: Zip Code and Years Of Stay -->
                         <div class="rowspan">
 
-                            <!-- * Years Of Service -->
+                            <!-- * Zip Code -->
                             <div class="input-wrapper">
-                                <span>Years Of Service</span>
-                                <input type="text" id="yoService" name="yoService">
+                                <span>Zip Code</span>
+                                <input type="number" id="zipCode" name="zipCode">
+                            </div>
+
+                            <!-- * Years Of Stay -->
+                            <div class="input-wrapper">
+                                <span>Years of stay on the mentioned address</span>
+                                <input type="number" id="yoStay" name="yoStay">
                             </div>
 
                             <!-- * Monthly Income -->
-                            <div class="input-wrapper">
+                            <!-- <div class="input-wrapper">
                                 <span>Monthly Income</span>
                                 <input type="text" id="monthlyInc" name="monthlyInc">
-                            </div>
+                            </div> -->
 
                             <!-- * Other Source Of Income -->
-                            <div class="input-wrapper">
+                            <!-- <div class="input-wrapper">
                                 <span>Other Source Of Income</span>
                                 <input type="text" id="othSorOfInc" name="othSorOfInc">
-                            </div>
+                            </div> -->
 
                         </div>
 
                         <!-- * Rowspan 8: Check Toggle -->
                         <div class="rowspan">
 
-                            <div class="box-wrap">
+                            <!-- <div class="box-wrap"> -->
 
-                                <!-- * Form Toggle -->
-                                <div class="checkbox-wrapper">
+                            <!-- * Form Toggle -->
+                            <!-- <div class="checkbox-wrapper">
                                     <input type="checkbox" name="formToggle" id="formToggle">
                                     <span>Check this button if the applicant owns a business</span>
                                 </div>
 
-                            </div>
+                            </div> -->
 
                         </div>
                     </div>
@@ -517,6 +528,12 @@
                                 <div class="input-wrapper">
                                     <span>Water Bill</span>
                                     <input type="number" id="waterBill" name="waterBill">
+                                </div>
+
+                                <!-- * Other Bills -->
+                                <div class="input-wrapper">
+                                    <span>Other Bills</span>
+                                    <input type="number" id="otherBill" name="otherBill">
                                 </div>
 
                                 <!-- * Daily Expenses -->

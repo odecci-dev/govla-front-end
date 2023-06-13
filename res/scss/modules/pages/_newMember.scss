@@ -41,12 +41,6 @@
                         // * Select Input Global Styles
                         .select-box {
                             position: relative;
-                            // img {
-                            //     cursor: pointer;
-                            //     position: absolute;
-                            //     z-index: 2;
-                            //     transform: translateY(1.5rem) translateX(-1rem);
-                            // }
                             select {
                                 @include selectField;
                                 width: 100%;
@@ -80,6 +74,7 @@
                             border-left: none;
                             transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
                         }
+                        // * Radio Buttons
                         .box-wrap {
                             display: flex;
                             align-items: center;
@@ -93,16 +88,16 @@
                                     white-space: nowrap;
                                 }
                                 input[type="radio"] {
-                                    @include formCheckbox;
+                                    @include formRadioButtons;
                                 }
                                 input[type="radio"]::after {
-                                    @include formCheckboxAfter
+                                    @include formRadioButtonsAfter;
                                 }
                                 input[type="radio"]:checked:after {
-                                    @include formCheckboxChecked
+                                    @include formRadioButtonsChecked;
                                 }
                                 // input[type="radio"]:focus {
-                                //     outline: max(1px, 0.15em) solid currentColor;
+                                //     outline: max(1px, 0.15em) solid $primary;
                                 //     outline-offset: max(2px, 0.15em);
                                 // }
                             }
@@ -126,27 +121,27 @@
                         }
                     }
                 }
-                // * Rowspan 2: Name, Date of Birth, and Age 
+                // * Rowspan 2: First Name, Middle Name , Last Name, and Suffix
                 .rowspan:nth-of-type(2) {
                     @include rowspan2;
                 }
-                // * Rowspan 3: Gender, Birth Place, Civil Status and Mobile Number 
+                // * Rowspan 3: Gender, Date Of Birth, Age, Place Of Birth and Civil Status
                 .rowspan:nth-of-type(3) {
                     @include rowspan3;
                 }
-                // * Rowspan 4: House Number, Street, Barangay and City 
+                // * Rowspan 4: Contact Number and Email Address
                 .rowspan:nth-of-type(4) {
                     @include rowspan4;
                 }
-                // * Rowspan 5: Province, Rented, Owned, Free of Use Checkboxes and Years of Stay
+                // * Rowspan 5: Rented, Owned, Free of Use Radio Buttons and House Address
                 .rowspan:nth-of-type(5) {
                     @include rowspan5;
                 }
-                // * Rowspan 6: Current Employement, Previous Employment, and Name Of Company 
+                // * Rowspan 6: Barangay, City / Municipality, Province / Region, and Country
                 .rowspan:nth-of-type(6) {
                     @include rowspan6;
                 }
-                // * Rowspan 7: Years Of Service, Monthly Income, and Other Source Of Income 
+                // * Rowspan 7: Zip Code and Years Of Stay 
                 .rowspan:nth-of-type(7) {
                     @include rowspan7;
                 }
@@ -190,7 +185,7 @@
                 @include twoBlockGrid;
                 // * Rowspan Global Styles
                 .box-wrap {
-                    padding: 3rem 4rem;
+                    // padding: 3rem 4rem;
                     padding: min(3rem, 5%) min(4rem, 10%);
                     @include containerDefault2;
                 }
@@ -235,7 +230,7 @@
                         display: flex;
                         flex-direction: column;
                         h3 {
-                            margin: min(2rem, 10%) 0;
+                            margin: min(1rem, 10%) 0;
                             font-style: italic;
                             font-size: $font-size-medium;
                             span {
@@ -254,12 +249,6 @@
                             // * Input Global Styles
                             input {
                                 @include inputField;
-                            }
-                        }
-                        // * Daily Expenses
-                        .input-wrapper:last-of-type {
-                            input {
-                                padding: 1rem 2rem min(2rem, 10%) 2rem;
                             }
                         }
                     }
