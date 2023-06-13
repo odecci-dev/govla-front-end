@@ -65,4 +65,9 @@ Fourth Commit:
 
 June 13, 2023 (Tuesday)
 First Commit:
-• New Member: Fixed adjustments on input image Container 1
+• New Member: Implemented the adjustments in Container 2 
+- Fixed the overflow on input image (scss)
+
+Second Commit:
+• New Member: Implemented the adjustments in Container 1
+- Changed the checkbox to radio buttons (HTML element)

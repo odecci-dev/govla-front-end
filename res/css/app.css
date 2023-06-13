@@ -865,16 +865,16 @@ table {
   align-items: center;
   justify-content: center;
 }
-.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .box-wrap .checkbox-wrapper {
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 1rem;
 }
-.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .box-wrap .checkbox-wrapper span {
-  letter-spacing: -1px;
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper span {
+  white-space: nowrap;
 }
-.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .box-wrap .checkbox-wrapper input[type=checkbox] {
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio] {
   cursor: pointer;
   position: relative;
   display: flex;
@@ -895,7 +895,7 @@ table {
   border: 1px solid #8C8686;
   background-color: #FFFFFF;
 }
-.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .box-wrap .checkbox-wrapper input[type=checkbox]::after {
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: url("../assets/icons/big-check.svg");
   position: absolute;
   top: 1.2rem;
@@ -903,7 +903,7 @@ table {
   opacity: 0;
   transition: ease-out 250ms;
 }
-.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .box-wrap .checkbox-wrapper input[type=checkbox]:checked:after {
+.main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
   visibility: visible;
   opacity: 1;
 }

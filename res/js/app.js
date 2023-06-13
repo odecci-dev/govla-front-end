@@ -46,8 +46,6 @@ function navigationEvents() {
 
 }
 
-
-
 // * Table Checkbox Toggle
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
