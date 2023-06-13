@@ -31,6 +31,7 @@
                         flex-direction: column;
                         span {
                             margin-bottom: 1rem;
+                            font-weight: $font-weight-bold;
                             font-size: $font-size;
                         }
                         // * Input Global Styles
@@ -235,13 +236,18 @@
                         flex-direction: column;
                         h3 {
                             margin: min(2rem, 10%) 0;
+                            font-style: italic;
                             font-size: $font-size-medium;
+                            span {
+                                font-weight: $font-weight;
+                            }
                         }
                         // * Colspan 2 : Input Fields
                         .input-wrapper {
                             display: flex;
                             flex-direction: column;
                             span {
+                                font-weight: $font-weight-bold;
                                 margin: min(2rem, 5%) 0;
                                 font-size: $font-size;
                             }

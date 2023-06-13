@@ -76,3 +76,8 @@ Third Commit:
 • All Members: Implemented dropdown menu on Borrower Dropdown Button
 - Reused the styles from the Side Nav and made some minor tweaks
 - Reused the dropdown function from the Side Nav and made some minor tweaks
+
+Fourth Commit:
+• New Members: Started the implemation of the Sprint 2 Revisions
+- Adjustment on Fieldsets in HTML
+- Adjustments on SASS Mixins Grid

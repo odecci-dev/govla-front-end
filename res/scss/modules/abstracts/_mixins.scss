@@ -194,7 +194,7 @@
 // * Rowspan 2
 @mixin rowspan2 {
     @include displayGrid;
-    grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.8fr) minmax(0, 0.8fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.4fr);
     gap: 0px $spacing-2x-large;
 }
 
