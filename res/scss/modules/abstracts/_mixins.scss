@@ -316,14 +316,28 @@
     gap: $spacing-2x-large 0px;
 }
 
-// * Small Container Grid 2
+// * Small Container Grid 3
 @mixin smallContainerGrid3 {
     @include displayGrid;
     grid-template-rows: minmax(0, 0.6fr) minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 0.6fr) minmax(0, 1fr);
     gap: $spacing-2x-large 0px;
 }
 
+// * Small Container Grid 4
+@mixin smallContainerGrid4 {
+    @include displayGrid;
+    grid-template-rows: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);
+    gap: $spacing-2x-large 0px;
+}
+
 // *** Rowspan Grid Layouts
+// * Rowspan Empty
+@mixin rowspanEmpty {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0px $spacing-2x-large;
+}
+
 // ** Big Container Grid Layouts
 // * Rowspan 2
 @mixin rowspan2 {
@@ -373,36 +387,8 @@
     grid-template-columns: minmax(0, 1fr);
 }
 
-// ** Small Container Grid Layouts
-// * Rowspan 1
-@mixin smallconRowspan1 {
-    @include displayGrid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0px $spacing-2x-large;
-}
-
-// * Rowspan 2
-@mixin smallconRowspan2 {
-    @include displayGrid;
-    grid-template-columns: minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 1fr);
-    gap: 0px $spacing-2x-large;
-}
-
-// * Rowspan 3
-@mixin smallconRowspan3 {
-    @include displayGrid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 0.6fr);
-    gap: 0px $spacing-2x-large;
-}
-
+// *** Small Container Grid Layouts
 // ** Small Container 2 Grid Layouts
-// * Rowspan Empty
-@mixin smallcon2RowspanEmpty {
-    @include displayGrid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0px $spacing-2x-large;
-}
-
 // * Rowspan 1
 @mixin smallcon2Rowspan1 {
     @include displayGrid;
@@ -410,30 +396,94 @@
     gap: 0px $spacing-2x-large;
 }
 
+// * Rowspan 2
+@mixin smallcon2Rowspan2 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 1fr);
+    gap: 0px $spacing-2x-large;
+}
+
 // * Rowspan 3
 @mixin smallcon2Rowspan3 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 0.6fr);
+    gap: 0px $spacing-2x-large;
+}
+
+// ** Small Container 3 Grid Layouts
+// * Rowspan 1
+@mixin smallcon3Rowspan1 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0px $spacing-2x-large;
+}
+
+// * Rowspan 3
+@mixin smallcon3Rowspan3 {
     @include displayGrid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.4fr) minmax(0, 0.6fr) minmax(0, 0.4fr);
     gap: 0px $spacing-2x-large;
 }
 
 // * Rowspan 4
-@mixin smallcon2Rowspan4 {
+@mixin smallcon3Rowspan4 {
     @include displayGrid;
     grid-template-columns: minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 0.4fr);
     gap: 0px $spacing-2x-large;
 }
 
 // * Rowspan 5
-@mixin smallcon2Rowspan5 {
+@mixin smallcon3Rowspan5 {
     @include displayGrid;
     grid-template-columns: minmax(0, 0.4fr) minmax(0, 2.4fr);
     gap: 0px $spacing-2x-large;
 }
 
 // * Rowspan 8
-@mixin smallcon2Rowspan8 {
+@mixin smallcon3Rowspan8 {
     @include displayGrid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.4fr) minmax(0, 0.6fr) minmax(0, 0.4fr);
+    gap: 0px $spacing-2x-large;
+}
+
+// ** Small Container 4 Grid Layouts
+// * Rowspan 1
+@mixin smallcon4Rowspan1 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0px $spacing-2x-large;
+}
+
+@mixin smallcon4Rowspan2 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0px $spacing-2x-large;
+}
+
+// * Rowspan 3
+@mixin smallcon4Rowspan3 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 0.6fr) minmax(0, 0.8fr) minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0px $spacing-2x-large;
+}
+
+// * Rowspan 4
+@mixin smallcon4Rowspan4 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0px $spacing-2x-large;
+}
+
+// * Rowspan 5
+@mixin smallcon4Rowspan5 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0px $spacing-2x-large;
+}
+
+// * Rowspan 6
+@mixin smallcon4Rowspan6 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0px $spacing-2x-large;
 }

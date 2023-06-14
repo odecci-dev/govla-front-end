@@ -341,11 +341,11 @@
                 }
                 // * Rowspan 2: Employment Status, Current Job / Position, Years Of Service and Company Name
                 .rowspan:nth-of-type(2) {
-                    @include smallconRowspan2;
+                    @include smallcon2Rowspan2;
                 }
                 // * Rowspan 3: Company Address, Monthly Salary, Other Source of Income, and Do you own a Business?
                 .rowspan:nth-of-type(3) {
-                    @include smallconRowspan3;
+                    @include smallcon2Rowspan3;
                     // *  Do you own a Business?
                     .input-wrapper:last-of-type>span {
                         font-style: italic;
@@ -453,7 +453,7 @@
                 }
                 // * Rowspan 2: Subheader
                 .rowspan:nth-of-type(2) {
-                    @include smallcon2RowspanEmpty;
+                    @include rowspanEmpty;
                     h3 {
                         font-size: $font-size-large;
                         font-style: italic;
@@ -461,23 +461,23 @@
                 }
                 // * Rowspan 3: First Name, Middle Name, Last Name, Suffix, Date Of Birth and Age 
                 .rowspan:nth-of-type(3) {
-                    @include smallcon2Rowspan3;
+                    @include smallcon3Rowspan3;
                 }
                 // * Rowspan 4: Employment Status, Current Job / Position, Years Of Service and Company Name 
                 .rowspan:nth-of-type(4) {
-                    @include smallcon2Rowspan4;
+                    @include smallcon3Rowspan4;
                 }
                 // * Rowspan 5: Number Of Dependants 
                 .rowspan:nth-of-type(5) {
-                    @include smallcon2Rowspan5;
+                    @include smallcon3Rowspan5;
                 }
                 // * Rowspan 6: Empty Rowspan
                 .rowspan:nth-of-type(6) {
-                    @include smallcon2RowspanEmpty;
+                    @include rowspanEmpty;
                 }
                 // * Rowspan 7: Subheader - Children(s) Information
                 .rowspan:nth-of-type(7) {
-                    @include smallcon2RowspanEmpty;
+                    @include rowspanEmpty;
                     h3 {
                         font-size: $font-size-large;
                         font-style: italic;
@@ -485,7 +485,7 @@
                 }
                 // * Rowspan 8: First Name, Middle Name , Last Name, Age, Name Of School and Add/Sub Button 
                 .rowspan:nth-of-type(8) {
-                    @include smallcon2Rowspan8;
+                    @include smallcon3Rowspan8;
                     .input-wrapper:last-of-type {
                         // * Add/Sub Button 
                         display: flex;
@@ -493,6 +493,7 @@
                         align-items: flex-end;
                         button {
                             @include addOrSubButton;
+                            margin-bottom: $spacing-small;
                             transition: all ease-in-out 100ms;
                         }
                         button:hover {
@@ -517,7 +518,7 @@
             .small-con-4 {
                 height: 100%;
                 width: 100%;
-                @include smallContainerGrid3;
+                @include smallContainerGrid4;
                 @include containerDefault2;
                 padding: 3rem 4rem 3rem 4rem;
                 .rowspan {
@@ -528,7 +529,7 @@
                     .input-wrapper {
                         display: flex;
                         flex-direction: column;
-                        >span {
+                        span {
                             margin-bottom: 1rem;
                             font-weight: $font-weight-bold;
                             font-size: $font-size;
@@ -537,63 +538,31 @@
                         input {
                             @include inputField;
                         }
-                        // * Select Input Global Styles
-                        .select-box {
-                            position: relative;
-                            select {
-                                @include selectField;
-                                width: 100%;
-                                option {
-                                    position: absolute;
-                                    outline: none;
-                                    border: none;
-                                    background-color: $secondary-bg;
-                                }
-                            }
-                        }
-                        // * Select Input Arrow
-                        .select-box::before {
-                            content: '';
-                            position: absolute;
-                            width: 15px;
-                            height: 15px;
-                            z-index: 2;
-                            right: 0;
-                            transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
-                            border-bottom: 2px solid $black;
-                            border-left: 2px solid $black;
-                            transition: ease-out 300ms;
-                            pointer-events: none;
-                        }
-                        .select-box:focus-within::before {
-                            border-top: 2px solid $black;
-                            border-right: 2px solid $black;
-                            border-bottom: none;
-                            border-left: none;
-                            transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
-                        }
                         // * Radio Buttons
                         .box-wrap {
                             display: flex;
                             align-items: center;
+                            justify-content: space-around;
                             .radio-btn-wrapper {
                                 display: flex;
-                                flex-direction: row;
+                                flex-direction: column;
                                 align-items: center;
                                 span {
-                                    font-weight: $font-weight-bold;
-                                    margin-left: 1rem;
                                     white-space: nowrap;
                                 }
                                 input[type="radio"] {
-                                    @include formCheckbox;
+                                    @include formRadioButtons;
                                 }
                                 input[type="radio"]::after {
-                                    @include formCheckboxAfter;
+                                    @include formRadioButtonsAfter;
                                 }
                                 input[type="radio"]:checked:after {
-                                    @include formCheckboxChecked;
+                                    @include formRadioButtonsChecked;
                                 }
+                                // input[type="radio"]:focus {
+                                //     outline: max(1px, 0.15em) solid $primary;
+                                //     outline-offset: max(2px, 0.15em);
+                                // }
                             }
                         }
                     }
@@ -604,59 +573,55 @@
                         font-size: $font-size-x-large;
                     }
                 }
-                // * Rowspan 2: Subheader
+                // * Rowspan 2: Business Name, Business Type and Business Address
                 .rowspan:nth-of-type(2) {
-                    @include smallcon2RowspanEmpty;
-                    h3 {
-                        font-size: $font-size-large;
-                        font-style: italic;
-                    }
+                    @include smallcon4Rowspan2;
                 }
-                // * Rowspan 3: First Name, Middle Name, Last Name, Suffix, Date Of Birth and Age 
+                // * Rowspan 3: Rented or Owned, Years Of Business, Number Of Employees, Salary / Day, Value Of Stocks and Amount Of Sales / Day 
                 .rowspan:nth-of-type(3) {
-                    @include smallcon2Rowspan3;
+                    @include smallcon4Rowspan3;
                 }
-                // * Rowspan 4: Employment Status, Current Job / Position, Years Of Service and Company Name 
+                // * Rowspan 4: Rowspan 4: Add Business and Attach Files Buttons 
                 .rowspan:nth-of-type(4) {
-                    @include smallcon2Rowspan4;
-                }
-                // * Rowspan 5: Number Of Dependants 
-                .rowspan:nth-of-type(5) {
-                    @include smallcon2Rowspan5;
-                }
-                // * Rowspan 6: Empty Rowspan
-                .rowspan:nth-of-type(6) {
-                    @include smallcon2RowspanEmpty;
-                }
-                // * Rowspan 7: Subheader - Children(s) Information
-                .rowspan:nth-of-type(7) {
-                    @include smallcon2RowspanEmpty;
-                    h3 {
-                        font-size: $font-size-large;
-                        font-style: italic;
+                    @include smallcon4Rowspan4;
+                    .btn-wrapper {
+                        button {
+                            @include primaryButton
+                        }
+                        button:first-of-type {
+                            margin-right: 1.5rem;
+                        }
                     }
                 }
-                // * Rowspan 8: First Name, Middle Name , Last Name, Age, Name Of School and Add/Sub Button 
-                .rowspan:nth-of-type(8) {
-                    @include smallcon2Rowspan8;
-                    .input-wrapper:last-of-type {
-                        // * Add/Sub Button 
+                // * Rowspan 5: Add Business Table
+                .rowspan:nth-of-type(5) {
+                    @include smallcon4Rowspan5;
+                }
+                // * Rowspan 6: Pagination
+                .rowspan:nth-of-type(6) {
+                    @include smallcon4Rowspan6;
+                    // * Pagination Container
+                    .pagination-container {
                         display: flex;
-                        flex-direction: row;
-                        align-items: flex-end;
-                        button {
-                            @include addOrSubButton;
-                            transition: all ease-in-out 100ms;
+                        align-items: center;
+                        justify-content: center;
+                        padding-top: 3rem;
+                        height: calc(100% - 90%);
+                        // * Pagination Links
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: $font-size-large;
+                            font-weight: $font-weight-bold;
+                            margin: 0 $spacing-small;
+                            color: $black;
                         }
-                        button:hover {
-                            background: rgba(0, 0, 0, 0.125);
-                            background-blend-mode: darken;
+                        a:first-of-type {
+                            margin-right: $spacing-6x-large;
                         }
-                        button:active {
-                            transform: translateY(4px);
-                        }
-                        button:last-of-type {
-                            margin-left: $spacing-2x-large;
+                        a:last-of-type {
+                            margin-left: $spacing-6x-large;
                         }
                     }
                 }

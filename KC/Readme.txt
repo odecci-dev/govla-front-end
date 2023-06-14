@@ -123,3 +123,9 @@ First Commit:
 - Added styles for Container 4
 - Finished the Family Background Fieldsets
 
+Second Commit: 
+• New Member: Implementation of Business Information
+- Added new html elements for New Members Container 5
+- Added styles for Container 5
+- In-progress on completing Family Background Fieldsets (75%)
+

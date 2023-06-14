@@ -253,6 +253,7 @@
                                     <button>Save & Apply for loan </button>
 
                                 </div>
+
                             </div>
 
                             <!-- * Rowspan 2: First Name, Middle Name , Last Name, and Suffix -->
@@ -685,7 +686,6 @@
 
                         </div>
 
-
                         <!-- * Rowspan 4: Employment Status, Current Job / Position, Years Of Service and Company Name -->
                         <div class="rowspan">
 
@@ -731,11 +731,10 @@
                             <!-- * Current Job / Position -->
                             <div class="input-wrapper">
                                 <span>Number Of Dependants</span>
-                                <input type="number" id="currentJob" name="currentJob">
+                                <input type="number" id="numOfDependants" name="numOfDependants">
                             </div>
 
                         </div>
-
 
                         <!-- * Rowspan 6: Empty Rowspan -->
                         <div class="rowspan">
@@ -782,7 +781,7 @@
                             <!-- * Name Of School -->
                             <div class="input-wrapper">
                                 <span>Name Of School</span>
-                                <input autocomplete="off" type="text" id="suffix" name="suffix">
+                                <input autocomplete="off" type="text" id="nameOfSchool" name="nameOfSchool">
                             </div>
 
                             <!-- * Add and Subtract Button  -->
@@ -808,93 +807,131 @@
                         <!-- * Rowspan 1: Header -->
                         <div class="rowspan">
 
-                            <!-- * Job Information -->
+                            <!-- * Business Information -->
                             <div class="input-wrapper">
-                                <h2>Job Information</h2>
-                                <span>(Borrower)</span>
+                                <h2>Business Information</h2>
                             </div>
 
                         </div>
 
-                        <!-- * Rowspan 2: Employment Status, Current Job / Position, Years Of Service and Company Name -->
+                        <!-- * Rowspan 2: Business Name, Business Type and Business Address -->
                         <div class="rowspan">
 
-
-                            <!-- * Employment Status -->
+                            <!-- * Business Name -->
                             <div class="input-wrapper">
-                                <span>Employment Status</span>
-                                <div class="select-box">
-                                    <select name="empStat" id="empStat">
-                                        <option value="0"></option>
-                                        <option value="1">Employed</option>
-                                        <option value="2">Unemployed</option>
-                                    </select>
-                                </div>
+                                <span>Business Name</span>
+                                <input type="text" id="busName" name="busName">
                             </div>
 
-                            <!-- * Current Job / Position -->
+                            <!-- * Business Type -->
                             <div class="input-wrapper">
-                                <span>Current Job / Position</span>
-                                <input type="text" id="currentJob" name="currentJob">
+                                <span>Business Type</span>
+                                <input type="text" id="busType" name="busType">
                             </div>
 
-                            <!-- * Years Of Service -->
+                            <!-- * Business Address -->
                             <div class="input-wrapper">
-                                <span>Years Of Service</span>
-                                <input type="text" id="yoService" name="yoService">
-                            </div>
-
-                            <!-- * Company Name -->
-                            <div class="input-wrapper">
-                                <span>Company Name</span>
-                                <input type="text" id="compName" name="compName">
+                                <span>Business Address</span>
+                                <input type="text" id="busAddr" name="busAddr">
                             </div>
 
                         </div>
 
-
-                        <!-- * Rowspan 3: Company Address, Monthly Salary, Other Source of Income, and Do you own a Business?  -->
+                        <!-- * Rowspan 3: Rented or Owned, Years Of Business, Number Of Employees, Salary / Day, Value Of Stocks and Amount Of Sales / Day  -->
                         <div class="rowspan">
 
-                            <!-- * Company Address -->
                             <div class="input-wrapper">
-                                <span>Company Address</span>
-                                <input type="text" id="compAddr" name="compAddr">
-                            </div>
-
-                            <!-- * Monthly Salary -->
-                            <div class="input-wrapper">
-                                <span>Monthly Salary</span>
-                                <input type="number" id="monthSal" name="monthSal">
-                            </div>
-
-                            <!-- * Other Source Of Income -->
-                            <div class="input-wrapper">
-                                <span>Other Source Of Income</span>
-                                <input type="text" id="othSorOfInc" name="othSorOfInc">
-                            </div>
-
-                            <!-- * Do you own a Business?  -->
-                            <div class="input-wrapper">
-                                <span>Do you own a Business?</span>
-
-                                <!-- * Form Toggle -->
 
                                 <div class="box-wrap">
 
                                     <!-- * Rented -->
                                     <div class="radio-btn-wrapper">
-                                        <input autocomplete="off" type="radio" name="formToggle" value="formToggleYes" id="formToggleYes">
-                                        <span>Yes</span>
+                                        <span>Rented</span>
+                                        <input autocomplete="off" type="radio" name="radio" value="rented" id="rented">
                                     </div>
 
                                     <!-- * Owned -->
                                     <div class="radio-btn-wrapper">
-                                        <input autocomplete="off" type="radio" name="formToggle" value="formToggleNo" id="formToggleNo">
-                                        <span>No</span>
+                                        <span>Owned</span>
+                                        <input autocomplete="off" type="radio" name="radio" value="owned" id="owned">
                                     </div>
 
                                 </div>
+
+                            </div>
+
+                            <!-- * Years Of Business -->
+                            <div class="input-wrapper">
+                                <span>Years Of Business</span>
+                                <input type="text" id="yearsOfBus" name="yearsOfBus">
+                            </div>
+
+                            <!-- * Number Of Employees -->
+                            <div class="input-wrapper">
+                                <span>Number Of Employees</span>
+                                <input type="number" id="numOfEmploy" name="numOfEmploy">
+                            </div>
+
+                            <!-- * Salary / Day -->
+                            <div class="input-wrapper">
+                                <span>Salary / Day</span>
+                                <input type="text" id="salDay" name="salDay">
+                            </div>
+
+                            <!-- * Value Of Stocks -->
+                            <div class="input-wrapper">
+                                <span>Value Of Stocks</span>
+                                <input type="number" id="valOfStocks" name="valOfStocks">
+                            </div>
+
+                            <!-- * Amount Of Sales / Day -->
+                            <div class="input-wrapper">
+                                <span>Amount Of Sales / Day</span>
+                                <input type="text" id="amtSalDay" name="amtSalDay">
+                            </div>
+
+                        </div>
+
+                        <!-- * Rowspan 4: Add Business and Attach Files Buttons -->
+                        <div class="rowspan">
+
+                            <!-- * Buttons -->
+                            <div class="btn-wrapper">
+
+                                <!-- * Add Business -->
+                                <button>Add Business</button>
+
+                                <!-- * Attach Files -->
+                                <button>Attach Files</button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- * Rowspan 5: Add Business Table -->
+                        <div class="rowspan">
+
+                            <!-- * Business Information -->
+                            <!-- <div class="input-wrapper">
+                                <h2>Business Information</h2>
+                            </div> -->
+
+                        </div>
+
+                        <!-- * Rowspan 6: Pagination -->
+                        <div class="rowspan">
+
+                            <!-- * Pagination Container -->
+                            <div class="pagination-container">
+
+                                <!-- * Pagination Links -->
+                                <a href="#"><img src="../res/assets/icons/caret-left.svg" alt="caret-left"></a>
+                                <a href="#">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#"><img src="../res/assets/icons/caret-right.svg" alt="caret-right"></a>
 
                             </div>
 
