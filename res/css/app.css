@@ -1265,7 +1265,7 @@ table {
   display: flex;
   flex-direction: column;
 }
-.main-dashboard .nm-form-con .nm-container-3 .small-con-2 .rowspan .input-wrapper span {
+.main-dashboard .nm-form-con .nm-container-3 .small-con-2 .rowspan .input-wrapper > span {
   margin-bottom: 1rem;
   font-weight: 700;
   font-size: 1.2rem;
@@ -1321,15 +1321,21 @@ table {
   border-left: none;
   transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
 }
-.main-dashboard .nm-form-con .nm-container-3 .small-con-2 .rowspan .input-wrapper .checkbox-wrapper {
+.main-dashboard .nm-form-con .nm-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap {
   display: flex;
   align-items: center;
 }
-.main-dashboard .nm-form-con .nm-container-3 .small-con-2 .rowspan .input-wrapper .checkbox-wrapper span {
-  margin-left: 1rem;
-  font-weight: 700;
+.main-dashboard .nm-form-con .nm-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-.main-dashboard .nm-form-con .nm-container-3 .small-con-2 .rowspan .input-wrapper .checkbox-wrapper input[type=checkbox] {
+.main-dashboard .nm-form-con .nm-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper span {
+  font-weight: 700;
+  margin-left: 1rem;
+  white-space: nowrap;
+}
+.main-dashboard .nm-form-con .nm-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio] {
   cursor: pointer;
   position: relative;
   display: flex;
@@ -1350,7 +1356,7 @@ table {
   border: 1px solid #8C8686;
   background-color: #FFFFFF;
 }
-.main-dashboard .nm-form-con .nm-container-3 .small-con-2 .rowspan .input-wrapper .checkbox-wrapper input[type=checkbox]::after {
+.main-dashboard .nm-form-con .nm-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: url("../assets/icons/big-check.svg");
   position: absolute;
   top: 1.2rem;
@@ -1358,7 +1364,7 @@ table {
   opacity: 0;
   transition: ease-out 250ms;
 }
-.main-dashboard .nm-form-con .nm-container-3 .small-con-2 .rowspan .input-wrapper .checkbox-wrapper input[type=checkbox]:checked:after {
+.main-dashboard .nm-form-con .nm-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
   visibility: visible;
   opacity: 1;
 }

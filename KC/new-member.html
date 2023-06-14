@@ -441,16 +441,6 @@
                             <!-- * Rowspan 8: Check Toggle -->
                             <div class="rowspan">
 
-                                <!-- <div class="box-wrap"> -->
-
-                                <!-- * Form Toggle -->
-                                <!-- <div class="checkbox-wrapper">
-                                    <input type="checkbox" name="formToggle" id="formToggle">
-                                    <span>Check this button if the applicant owns a business</span>
-                                </div>
-
-                            </div> -->
-
                             </div>
                         </div>
                     </div>
@@ -602,14 +592,33 @@
                                 <span>Do you own a Business?</span>
 
                                 <!-- * Form Toggle -->
-                                <div class="checkbox-wrapper">
-                                    <input type="checkbox" name="formToggle" id="formToggle">
+                                <!-- <div class="checkbox-wrapper">
+                                    <input type="radio" name="formToggle" id="formToggleYes">
                                     <span>Yes</span>
-                                    <input type="checkbox" name="formToggle" id="formToggle">
+                                    <input type="radio" name="formToggle" id="formToggleNo">
                                     <span>No</span>
+                                </div> -->
+
+                                <!-- * Form Toggle -->
+
+                                <div class="box-wrap">
+
+                                    <!-- * Rented -->
+                                    <div class="radio-btn-wrapper">
+                                        <input autocomplete="off" type="radio" name="formToggle" value="formToggleYes" id="formToggleYes">
+                                        <span>Yes</span>
+                                    </div>
+
+                                    <!-- * Owned -->
+                                    <div class="radio-btn-wrapper">
+                                        <input autocomplete="off" type="radio" name="formToggle" value="formToggleNo" id="formToggleNo">
+                                        <span>No</span>
+                                    </div>
+
                                 </div>
 
                             </div>
+
                         </div>
 
                     </div>

@@ -106,3 +106,7 @@ Fourth Commit:
 - Modified styles for Dashboard
 - Turning the Grid Layouts into Mixins for reusability and neatness
 
+Fifth Commit:
+• New Member: Business Check Toggle 
+- Modified some HTML Elements inside the New Member
+- Modified styles for Check toggle Radio Button
