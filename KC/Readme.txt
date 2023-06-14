@@ -100,3 +100,9 @@ Third Commit:
 - Added new SCSS Mixins for Container 3
 - Reused most of the styles of Container 1 for Container 3
 - Enabled the Overflow-Y for vertical scroll
+
+Fourth Commit:
+• Made some minor adjustments in Dashboard for responsiveness
+- Modified styles for Dashboard
+- Turning the Grid Layouts into Mixins for reusability and neatness
+
