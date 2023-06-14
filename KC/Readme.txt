@@ -89,3 +89,7 @@ First Commit:
 - Adjustment on Fieldsets in HTML
 - Adjustments on SASS Mixins Grid
 - Implemented the radio buttons
+
+Second Commit:
+• New Members Container 2 
+- Fixed Colspan 2 content overflow

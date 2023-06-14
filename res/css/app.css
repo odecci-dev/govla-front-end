@@ -928,13 +928,12 @@ table {
 .main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .box-wrap {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 1rem;
 }
 .main-dashboard .nm-form-con .nm-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper span {
   white-space: nowrap;
@@ -1166,7 +1165,7 @@ table {
   flex-direction: column;
 }
 .main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:last-of-type .colspan:last-of-type h3 {
-  margin: min(1rem, 10%) 0;
+  margin: min(0.5rem, 5%) 0;
   font-style: italic;
   font-size: 1.5rem;
 }
@@ -1179,7 +1178,7 @@ table {
 }
 .main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:last-of-type .colspan:last-of-type .input-wrapper span {
   font-weight: 700;
-  margin: min(2rem, 5%) 0;
+  margin: min(1rem, 5%) 0;
   font-size: 1.2rem;
 }
 .main-dashboard .nm-form-con .nm-container-2 .small-con .box-wrap:last-of-type .colspan:last-of-type .input-wrapper input {
