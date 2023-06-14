@@ -153,29 +153,6 @@
                     // * Rowspan 8: Check Toggle 
                     .rowspan:nth-of-type(8) {
                         @include rowspan8;
-                        .box-wrap {
-                            display: flex;
-                            align-items: center;
-                            justify-content: flex-start;
-                            .checkbox-wrapper {
-                                display: flex;
-                                align-items: center;
-                                span {
-                                    margin-left: 1rem;
-                                    font-weight: $font-weight-bold;
-                                    font-style: italic;
-                                }
-                                input[type="checkbox"] {
-                                    @include formCheckbox;
-                                }
-                                input[type="checkbox"]::after {
-                                    @include formCheckboxAfter
-                                }
-                                input[type="checkbox"]:checked:after {
-                                    @include formCheckboxChecked
-                                }
-                            }
-                        }
                     }
                 }
             }
@@ -261,6 +238,7 @@
                 }
             }
         }
+        // * Container 3: Job Information Input Fields
         .nm-container-3 {
             height: calc(100% - 50%);
             width: 100%;
@@ -374,6 +352,312 @@
                     }
                     span:first-of-type {
                         margin-right: 1.5rem;
+                    }
+                }
+            }
+        }
+        // * Container 4: Family Background Information
+        .nm-container-4 {
+            height: 100%;
+            width: 100%;
+            padding: 2rem;
+            .small-con-3 {
+                height: 100%;
+                width: 100%;
+                @include smallContainerGrid3;
+                @include containerDefault2;
+                padding: 3rem 4rem 3rem 4rem;
+                .rowspan {
+                    min-height: 0;
+                    /* NEW */
+                    min-width: 0;
+                    /* NEW; needed for Firefox */
+                    .input-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        >span {
+                            margin-bottom: 1rem;
+                            font-weight: $font-weight-bold;
+                            font-size: $font-size;
+                        }
+                        // * Input Global Styles
+                        input {
+                            @include inputField;
+                        }
+                        // * Select Input Global Styles
+                        .select-box {
+                            position: relative;
+                            select {
+                                @include selectField;
+                                width: 100%;
+                                option {
+                                    position: absolute;
+                                    outline: none;
+                                    border: none;
+                                    background-color: $secondary-bg;
+                                }
+                            }
+                        }
+                        // * Select Input Arrow
+                        .select-box::before {
+                            content: '';
+                            position: absolute;
+                            width: 15px;
+                            height: 15px;
+                            z-index: 2;
+                            right: 0;
+                            transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
+                            border-bottom: 2px solid $black;
+                            border-left: 2px solid $black;
+                            transition: ease-out 300ms;
+                            pointer-events: none;
+                        }
+                        .select-box:focus-within::before {
+                            border-top: 2px solid $black;
+                            border-right: 2px solid $black;
+                            border-bottom: none;
+                            border-left: none;
+                            transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
+                        }
+                        // * Radio Buttons
+                        .box-wrap {
+                            display: flex;
+                            align-items: center;
+                            .radio-btn-wrapper {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                span {
+                                    font-weight: $font-weight-bold;
+                                    margin-left: 1rem;
+                                    white-space: nowrap;
+                                }
+                                input[type="radio"] {
+                                    @include formCheckbox;
+                                }
+                                input[type="radio"]::after {
+                                    @include formCheckboxAfter;
+                                }
+                                input[type="radio"]:checked:after {
+                                    @include formCheckboxChecked;
+                                }
+                            }
+                        }
+                    }
+                }
+                // * Rowspan Header
+                .rowspan:first-of-type {
+                    h2 {
+                        font-size: $font-size-x-large;
+                    }
+                }
+                // * Rowspan 2: Subheader
+                .rowspan:nth-of-type(2) {
+                    @include smallcon2RowspanEmpty;
+                    h3 {
+                        font-size: $font-size-large;
+                        font-style: italic;
+                    }
+                }
+                // * Rowspan 3: First Name, Middle Name, Last Name, Suffix, Date Of Birth and Age 
+                .rowspan:nth-of-type(3) {
+                    @include smallcon2Rowspan3;
+                }
+                // * Rowspan 4: Employment Status, Current Job / Position, Years Of Service and Company Name 
+                .rowspan:nth-of-type(4) {
+                    @include smallcon2Rowspan4;
+                }
+                // * Rowspan 5: Number Of Dependants 
+                .rowspan:nth-of-type(5) {
+                    @include smallcon2Rowspan5;
+                }
+                // * Rowspan 6: Empty Rowspan
+                .rowspan:nth-of-type(6) {
+                    @include smallcon2RowspanEmpty;
+                }
+                // * Rowspan 7: Subheader - Children(s) Information
+                .rowspan:nth-of-type(7) {
+                    @include smallcon2RowspanEmpty;
+                    h3 {
+                        font-size: $font-size-large;
+                        font-style: italic;
+                    }
+                }
+                // * Rowspan 8: First Name, Middle Name , Last Name, Age, Name Of School and Add/Sub Button 
+                .rowspan:nth-of-type(8) {
+                    @include smallcon2Rowspan8;
+                    .input-wrapper:last-of-type {
+                        // * Add/Sub Button 
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-end;
+                        button {
+                            @include addOrSubButton;
+                            transition: all ease-in-out 100ms;
+                        }
+                        button:hover {
+                            background: rgba(0, 0, 0, 0.125);
+                            background-blend-mode: darken;
+                        }
+                        button:active {
+                            transform: translateY(4px);
+                        }
+                        button:last-of-type {
+                            margin-left: $spacing-2x-large;
+                        }
+                    }
+                }
+            }
+        }
+        // * Container 5: Business Information
+        .nm-container-5 {
+            height: 100%;
+            width: 100%;
+            padding: 2rem;
+            .small-con-4 {
+                height: 100%;
+                width: 100%;
+                @include smallContainerGrid3;
+                @include containerDefault2;
+                padding: 3rem 4rem 3rem 4rem;
+                .rowspan {
+                    min-height: 0;
+                    /* NEW */
+                    min-width: 0;
+                    /* NEW; needed for Firefox */
+                    .input-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        >span {
+                            margin-bottom: 1rem;
+                            font-weight: $font-weight-bold;
+                            font-size: $font-size;
+                        }
+                        // * Input Global Styles
+                        input {
+                            @include inputField;
+                        }
+                        // * Select Input Global Styles
+                        .select-box {
+                            position: relative;
+                            select {
+                                @include selectField;
+                                width: 100%;
+                                option {
+                                    position: absolute;
+                                    outline: none;
+                                    border: none;
+                                    background-color: $secondary-bg;
+                                }
+                            }
+                        }
+                        // * Select Input Arrow
+                        .select-box::before {
+                            content: '';
+                            position: absolute;
+                            width: 15px;
+                            height: 15px;
+                            z-index: 2;
+                            right: 0;
+                            transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
+                            border-bottom: 2px solid $black;
+                            border-left: 2px solid $black;
+                            transition: ease-out 300ms;
+                            pointer-events: none;
+                        }
+                        .select-box:focus-within::before {
+                            border-top: 2px solid $black;
+                            border-right: 2px solid $black;
+                            border-bottom: none;
+                            border-left: none;
+                            transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
+                        }
+                        // * Radio Buttons
+                        .box-wrap {
+                            display: flex;
+                            align-items: center;
+                            .radio-btn-wrapper {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                span {
+                                    font-weight: $font-weight-bold;
+                                    margin-left: 1rem;
+                                    white-space: nowrap;
+                                }
+                                input[type="radio"] {
+                                    @include formCheckbox;
+                                }
+                                input[type="radio"]::after {
+                                    @include formCheckboxAfter;
+                                }
+                                input[type="radio"]:checked:after {
+                                    @include formCheckboxChecked;
+                                }
+                            }
+                        }
+                    }
+                }
+                // * Rowspan Header
+                .rowspan:first-of-type {
+                    h2 {
+                        font-size: $font-size-x-large;
+                    }
+                }
+                // * Rowspan 2: Subheader
+                .rowspan:nth-of-type(2) {
+                    @include smallcon2RowspanEmpty;
+                    h3 {
+                        font-size: $font-size-large;
+                        font-style: italic;
+                    }
+                }
+                // * Rowspan 3: First Name, Middle Name, Last Name, Suffix, Date Of Birth and Age 
+                .rowspan:nth-of-type(3) {
+                    @include smallcon2Rowspan3;
+                }
+                // * Rowspan 4: Employment Status, Current Job / Position, Years Of Service and Company Name 
+                .rowspan:nth-of-type(4) {
+                    @include smallcon2Rowspan4;
+                }
+                // * Rowspan 5: Number Of Dependants 
+                .rowspan:nth-of-type(5) {
+                    @include smallcon2Rowspan5;
+                }
+                // * Rowspan 6: Empty Rowspan
+                .rowspan:nth-of-type(6) {
+                    @include smallcon2RowspanEmpty;
+                }
+                // * Rowspan 7: Subheader - Children(s) Information
+                .rowspan:nth-of-type(7) {
+                    @include smallcon2RowspanEmpty;
+                    h3 {
+                        font-size: $font-size-large;
+                        font-style: italic;
+                    }
+                }
+                // * Rowspan 8: First Name, Middle Name , Last Name, Age, Name Of School and Add/Sub Button 
+                .rowspan:nth-of-type(8) {
+                    @include smallcon2Rowspan8;
+                    .input-wrapper:last-of-type {
+                        // * Add/Sub Button 
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-end;
+                        button {
+                            @include addOrSubButton;
+                            transition: all ease-in-out 100ms;
+                        }
+                        button:hover {
+                            background: rgba(0, 0, 0, 0.125);
+                            background-blend-mode: darken;
+                        }
+                        button:active {
+                            transform: translateY(4px);
+                        }
+                        button:last-of-type {
+                            margin-left: $spacing-2x-large;
+                        }
                     }
                 }
             }

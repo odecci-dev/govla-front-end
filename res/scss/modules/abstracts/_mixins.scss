@@ -155,6 +155,17 @@
     font-size: $font-size-medium;
 }
 
+// * Add/Subtract Button
+@mixin addOrSubButton {
+    cursor: pointer;
+    font-size: $font-size-xx-large;
+    font-weight: $font-weight-bold;
+    width: 4rem;
+    height: 4rem;
+    border-radius: $border-radius-x-small;
+    box-shadow: $box-shadow-3;
+}
+
 // *** Input Field Mixins
 // * Input Field
 @mixin inputField {
@@ -305,6 +316,13 @@
     gap: $spacing-2x-large 0px;
 }
 
+// * Small Container Grid 2
+@mixin smallContainerGrid3 {
+    @include displayGrid;
+    grid-template-rows: minmax(0, 0.6fr) minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 0.6fr) minmax(0, 1fr);
+    gap: $spacing-2x-large 0px;
+}
+
 // *** Rowspan Grid Layouts
 // ** Big Container Grid Layouts
 // * Rowspan 2
@@ -374,5 +392,48 @@
 @mixin smallconRowspan3 {
     @include displayGrid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 0.6fr);
+    gap: 0px $spacing-2x-large;
+}
+
+// ** Small Container 2 Grid Layouts
+// * Rowspan Empty
+@mixin smallcon2RowspanEmpty {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0px $spacing-2x-large;
+}
+
+// * Rowspan 1
+@mixin smallcon2Rowspan1 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0px $spacing-2x-large;
+}
+
+// * Rowspan 3
+@mixin smallcon2Rowspan3 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.4fr) minmax(0, 0.6fr) minmax(0, 0.4fr);
+    gap: 0px $spacing-2x-large;
+}
+
+// * Rowspan 4
+@mixin smallcon2Rowspan4 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 0.4fr);
+    gap: 0px $spacing-2x-large;
+}
+
+// * Rowspan 5
+@mixin smallcon2Rowspan5 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 0.4fr) minmax(0, 2.4fr);
+    gap: 0px $spacing-2x-large;
+}
+
+// * Rowspan 8
+@mixin smallcon2Rowspan8 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.4fr) minmax(0, 0.6fr) minmax(0, 0.4fr);
     gap: 0px $spacing-2x-large;
 }

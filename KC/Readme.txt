@@ -114,4 +114,12 @@ Fifth Commit:
 Sixth Commit:
 • Dashboard: Minor adjustments
 - MD-Con-3: Circle Progress Bar and Card 2 div padding
-- 
+
+
+June 15, 2023 (Thursday)
+First Commit: 
+• New Member: Implementation of Family Background Information
+- Added new html elements for New Members Container 4
+- Added styles for Container 4
+- Finished the Family Background Fieldsets
+
