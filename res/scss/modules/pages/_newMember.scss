@@ -4,23 +4,273 @@
 // * Main Dashboard 2 Styles
 .main-dashboard {
     @include dashboard2;
+    overflow-y: scroll;
     // * New-Member-Form-Container
     .nm-form-con {
         display: flex;
+        flex-direction: column;
         height: 100%;
         width: 100%;
-        // * Container 1: New Member Form Fields and Buttons
-        .nm-container-1 {
-            width: calc(100% - 20%);
-            padding: 2rem 1rem 2rem 2rem;
-            // * Big Container 
-            .big-con {
+        // * New Member Container Wrapper
+        .nm-container-wrapper {
+            display: flex;
+            flex-direction: row;
+            // * Container 1: New Member Form Fields and Buttons
+            .nm-container-1 {
+                width: calc(100% - 20%);
+                padding: 2rem 1rem 2rem 2rem;
+                // * Big Container 
+                .big-con {
+                    height: 100%;
+                    width: 100%;
+                    padding: 5rem 4rem 2rem 4rem;
+                    @include containerDefault2;
+                    @include bigContainerGrid;
+                    // ** Rowspan Global Styles
+                    .rowspan {
+                        min-height: 0;
+                        /* NEW */
+                        min-width: 0;
+                        /* NEW; needed for Firefox */
+                        .input-wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            span {
+                                margin-bottom: 1rem;
+                                font-weight: $font-weight-bold;
+                                font-size: $font-size;
+                            }
+                            // * Input Global Styles
+                            input {
+                                @include inputField;
+                            }
+                            // * Select Input Global Styles
+                            .select-box {
+                                position: relative;
+                                select {
+                                    @include selectField;
+                                    width: 100%;
+                                    option {
+                                        position: absolute;
+                                        outline: none;
+                                        border: none;
+                                        background-color: $secondary-bg;
+                                    }
+                                }
+                            }
+                            // * Select Input Arrow
+                            .select-box::before {
+                                content: '';
+                                position: absolute;
+                                width: 15px;
+                                height: 15px;
+                                z-index: 2;
+                                right: 0;
+                                transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
+                                // border: 2px solid $black;
+                                border-bottom: 2px solid $black;
+                                border-left: 2px solid $black;
+                                transition: ease-out 300ms;
+                                pointer-events: none;
+                            }
+                            .select-box:focus-within::before {
+                                border-top: 2px solid $black;
+                                border-right: 2px solid $black;
+                                border-bottom: none;
+                                border-left: none;
+                                transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
+                            }
+                            // * Radio Buttons
+                            .box-wrap {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-around;
+                                .radio-btn-wrapper {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    span {
+                                        white-space: nowrap;
+                                    }
+                                    input[type="radio"] {
+                                        @include formRadioButtons;
+                                    }
+                                    input[type="radio"]::after {
+                                        @include formRadioButtonsAfter;
+                                    }
+                                    input[type="radio"]:checked:after {
+                                        @include formRadioButtonsChecked;
+                                    }
+                                    // input[type="radio"]:focus {
+                                    //     outline: max(1px, 0.15em) solid $primary;
+                                    //     outline-offset: max(2px, 0.15em);
+                                    // }
+                                }
+                            }
+                        }
+                    }
+                    // * Rowspan Header: Header and Buttons 
+                    .rowspan:first-of-type {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        h2 {
+                            font-size: $font-size-x-large;
+                        }
+                        .btn-wrapper {
+                            button {
+                                @include primaryButton
+                            }
+                            button:first-of-type {
+                                margin-right: 1.5rem;
+                            }
+                        }
+                    }
+                    // * Rowspan 2: First Name, Middle Name , Last Name, and Suffix
+                    .rowspan:nth-of-type(2) {
+                        @include rowspan2;
+                    }
+                    // * Rowspan 3: Gender, Date Of Birth, Age, Place Of Birth and Civil Status
+                    .rowspan:nth-of-type(3) {
+                        @include rowspan3;
+                    }
+                    // * Rowspan 4: Contact Number and Email Address
+                    .rowspan:nth-of-type(4) {
+                        @include rowspan4;
+                    }
+                    // * Rowspan 5: Rented, Owned, Free of Use Radio Buttons and House Address
+                    .rowspan:nth-of-type(5) {
+                        @include rowspan5;
+                    }
+                    // * Rowspan 6: Barangay, City / Municipality, Province / Region, and Country
+                    .rowspan:nth-of-type(6) {
+                        @include rowspan6;
+                    }
+                    // * Rowspan 7: Zip Code and Years Of Stay 
+                    .rowspan:nth-of-type(7) {
+                        @include rowspan7;
+                    }
+                    // * Rowspan 8: Check Toggle 
+                    .rowspan:nth-of-type(8) {
+                        @include rowspan8;
+                        .box-wrap {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            .checkbox-wrapper {
+                                display: flex;
+                                align-items: center;
+                                span {
+                                    margin-left: 1rem;
+                                    font-weight: $font-weight-bold;
+                                    font-style: italic;
+                                }
+                                input[type="checkbox"] {
+                                    @include formCheckbox;
+                                }
+                                input[type="checkbox"]::after {
+                                    @include formCheckboxAfter
+                                }
+                                input[type="checkbox"]:checked:after {
+                                    @include formCheckboxChecked
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // * Container 2: File Attachments and Monthly Bills
+            .nm-container-2 {
+                width: calc(100% - 80%);
+                padding: 2rem 2rem 2rem 1rem;
+                // * Small Container
+                .small-con {
+                    height: 100%;
+                    width: 100%;
+                    @include twoBlockGrid;
+                    // * Rowspan Global Styles
+                    .box-wrap {
+                        // padding: 3rem 4rem;
+                        padding: min(3rem, 5%) min(4rem, 10%);
+                        @include containerDefault2;
+                    }
+                    // * Boxwrap 1
+                    .box-wrap:first-of-type {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        // * Colspan 1
+                        .colspan {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            .input-wrapper {
+                                margin-bottom: min(2rem, 10%);
+                                display: grid;
+                                place-items: center;
+                                input[type="image"] {
+                                    width: clamp(4rem, 10vw, 100%);
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+                            }
+                            // * Colspan 1 : Buttons
+                            button {
+                                display: flex;
+                                justify-content: center;
+                                width: clamp(2rem, 10vw, 100%);
+                                @include primaryButton;
+                                margin-bottom: 2rem;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                    // * Boxwrap 2
+                    .box-wrap:last-of-type {
+                        display: flex;
+                        flex-direction: column;
+                        // * Colspan 2
+                        .colspan:last-of-type {
+                            display: flex;
+                            flex-direction: column;
+                            h3 {
+                                margin: min(0.5rem, 5%) 0;
+                                font-style: italic;
+                                font-size: $font-size-medium;
+                                span {
+                                    font-weight: $font-weight;
+                                }
+                            }
+                            // * Colspan 2 : Input Fields
+                            .input-wrapper {
+                                display: flex;
+                                flex-direction: column;
+                                span {
+                                    font-weight: $font-weight-bold;
+                                    margin: min(1rem, 5%) 0;
+                                    font-size: $font-size;
+                                }
+                                // * Input Global Styles
+                                input {
+                                    @include inputField;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .nm-container-3 {
+            height: calc(100% - 50%);
+            width: 100%;
+            padding: 2rem;
+            .small-con-2 {
                 height: 100%;
                 width: 100%;
-                padding: 5rem 4rem 2rem 4rem;
+                @include smallContainerGrid2;
                 @include containerDefault2;
-                @include bigContainerGrid;
-                // ** Rowspan Global Styles
+                padding: 3rem 4rem 3rem 4rem;
                 .rowspan {
                     min-height: 0;
                     /* NEW */
@@ -74,90 +324,12 @@
                             border-left: none;
                             transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
                         }
-                        // * Radio Buttons
-                        .box-wrap {
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-around;
-                            .radio-btn-wrapper {
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                span {
-                                    white-space: nowrap;
-                                }
-                                input[type="radio"] {
-                                    @include formRadioButtons;
-                                }
-                                input[type="radio"]::after {
-                                    @include formRadioButtonsAfter;
-                                }
-                                input[type="radio"]:checked:after {
-                                    @include formRadioButtonsChecked;
-                                }
-                                // input[type="radio"]:focus {
-                                //     outline: max(1px, 0.15em) solid $primary;
-                                //     outline-offset: max(2px, 0.15em);
-                                // }
-                            }
-                        }
-                    }
-                }
-                // * Rowspan Header: Header and Buttons 
-                .rowspan:first-of-type {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    h2 {
-                        font-size: $font-size-x-large;
-                    }
-                    .btn-wrapper {
-                        button {
-                            @include primaryButton
-                        }
-                        button:first-of-type {
-                            margin-right: 1.5rem;
-                        }
-                    }
-                }
-                // * Rowspan 2: First Name, Middle Name , Last Name, and Suffix
-                .rowspan:nth-of-type(2) {
-                    @include rowspan2;
-                }
-                // * Rowspan 3: Gender, Date Of Birth, Age, Place Of Birth and Civil Status
-                .rowspan:nth-of-type(3) {
-                    @include rowspan3;
-                }
-                // * Rowspan 4: Contact Number and Email Address
-                .rowspan:nth-of-type(4) {
-                    @include rowspan4;
-                }
-                // * Rowspan 5: Rented, Owned, Free of Use Radio Buttons and House Address
-                .rowspan:nth-of-type(5) {
-                    @include rowspan5;
-                }
-                // * Rowspan 6: Barangay, City / Municipality, Province / Region, and Country
-                .rowspan:nth-of-type(6) {
-                    @include rowspan6;
-                }
-                // * Rowspan 7: Zip Code and Years Of Stay 
-                .rowspan:nth-of-type(7) {
-                    @include rowspan7;
-                }
-                // * Rowspan 8: Check Toggle 
-                .rowspan:nth-of-type(8) {
-                    @include rowspan8;
-                    .box-wrap {
-                        display: flex;
-                        align-items: center;
-                        justify-content: flex-start;
                         .checkbox-wrapper {
                             display: flex;
                             align-items: center;
                             span {
                                 margin-left: 1rem;
                                 font-weight: $font-weight-bold;
-                                font-style: italic;
                             }
                             input[type="checkbox"] {
                                 @include formCheckbox;
@@ -171,85 +343,30 @@
                         }
                     }
                 }
-            }
-        }
-        // * Container 2: File Attachments and Monthly Bills
-        .nm-container-2 {
-            width: calc(100% - 80%);
-            padding: 2rem 2rem 2rem 1rem;
-            // * Small Container
-            .small-con {
-                height: 100%;
-                width: 100%;
-                @include twoBlockGrid;
-                // * Rowspan Global Styles
-                .box-wrap {
-                    // padding: 3rem 4rem;
-                    padding: min(3rem, 5%) min(4rem, 10%);
-                    @include containerDefault2;
-                }
-                // * Boxwrap 1
-                .box-wrap:first-of-type {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    // * Colspan 1
-                    .colspan {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        .input-wrapper {
-                            margin-bottom: min(2rem, 10%);
-                            display: grid;
-                            place-items: center;
-                            input[type="image"] {
-                                width: clamp(4rem, 10vw, 100%);
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                            }
-                        }
-                        // * Colspan 1 : Buttons
-                        button {
-                            display: flex;
-                            justify-content: center;
-                            width: clamp(2rem, 10vw, 100%);
-                            @include primaryButton;
-                            margin-bottom: 2rem;
-                            white-space: nowrap;
-                        }
+                // * Rowspan Header
+                .rowspan:first-of-type {
+                    h2 {
+                        font-size: $font-size-x-large;
+                    }
+                    span {
+                        font-size: $font-size-medium;
+                        font-weight: $font-weight;
+                        font-style: italic;
                     }
                 }
-                // * Boxwrap 2
-                .box-wrap:last-of-type {
-                    display: flex;
-                    flex-direction: column;
-                    // * Colspan 2
-                    .colspan:last-of-type {
-                        display: flex;
-                        flex-direction: column;
-                        h3 {
-                            margin: min(0.5rem, 5%) 0;
-                            font-style: italic;
-                            font-size: $font-size-medium;
-                            span {
-                                font-weight: $font-weight;
-                            }
-                        }
-                        // * Colspan 2 : Input Fields
-                        .input-wrapper {
-                            display: flex;
-                            flex-direction: column;
-                            span {
-                                font-weight: $font-weight-bold;
-                                margin: min(1rem, 5%) 0;
-                                font-size: $font-size;
-                            }
-                            // * Input Global Styles
-                            input {
-                                @include inputField;
-                            }
-                        }
+                // * Rowspan 2: Employment Status, Current Job / Position, Years Of Service and Company Name
+                .rowspan:nth-of-type(2) {
+                    @include smallconRowspan2;
+                }
+                // * Rowspan 3: Company Address, Monthly Salary, Other Source of Income, and Do you own a Business?
+                .rowspan:nth-of-type(3) {
+                    @include smallconRowspan3;
+                    // *  Do you own a Business?
+                    .input-wrapper:last-of-type>span {
+                        font-style: italic;
+                    }
+                    span:first-of-type {
+                        margin-right: 1.5rem;
                     }
                 }
             }

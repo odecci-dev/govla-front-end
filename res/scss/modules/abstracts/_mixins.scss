@@ -219,7 +219,15 @@
     // calc($spacing-2x-large + 0.5rem)
 }
 
-// ** Rowspan Grid Layouts
+// * Small Container Grid 2
+@mixin smallContainerGrid2 {
+    @include displayGrid;
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: $spacing-2x-large 0px;
+}
+
+// *** Rowspan Grid Layouts
+// ** Big Container Grid Layouts
 // * Rowspan 2
 @mixin rowspan2 {
     @include displayGrid;
@@ -266,4 +274,26 @@
 @mixin rowspan8 {
     @include displayGrid;
     grid-template-columns: minmax(0, 1fr);
+}
+
+// ** Small Container Grid Layouts
+// * Rowspan 1
+@mixin smallconRowspan1 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0px $spacing-2x-large;
+}
+
+// * Rowspan 2
+@mixin smallconRowspan2 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 1fr);
+    gap: 0px $spacing-2x-large;
+}
+
+// * Rowspan 3
+@mixin smallconRowspan3 {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 0.6fr);
+    gap: 0px $spacing-2x-large;
 }

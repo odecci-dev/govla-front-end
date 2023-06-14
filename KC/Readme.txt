@@ -93,3 +93,10 @@ First Commit:
 Second Commit:
 • New Members Container 2 
 - Fixed Colspan 2 content overflow
+
+Third Commit:
+• Implemented the new container for Job Info 
+- Added new HTML elements for the input field requirements
+- Added new SCSS Mixins for Container 3
+- Reused most of the styles of Container 1 for Container 3
+- Enabled the Overflow-Y for vertical scroll
