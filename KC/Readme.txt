@@ -110,3 +110,8 @@ Fifth Commit:
 • New Member: Business Check Toggle 
 - Modified some HTML Elements inside the New Member
 - Modified styles for Check toggle Radio Button
+
+Sixth Commit:
+• Dashboard: Minor adjustments
+- MD-Con-3: Circle Progress Bar and Card 2 div padding
+- 

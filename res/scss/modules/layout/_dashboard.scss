@@ -206,7 +206,7 @@
                     }
                 }
                 .divider {
-                    margin: auto;
+                    margin: 1rem 0;
                     width: 100%;
                     height: 3px;
                     background-color: $white;
@@ -225,8 +225,8 @@
                         align-items: center;
                         justify-content: center;
                         aspect-ratio: 1/1;
-                        height: 18rem;
-                        width: 18rem;
+                        height: 150px;
+                        width: 150px;
                         .progress-value {
                             position: relative;
                             z-index: 2;
@@ -263,8 +263,8 @@
                         position: absolute;
                         z-index: 1;
                         aspect-ratio: 1/1;
-                        height: 18rem;
-                        width: 18rem;
+                        height: 100%;
+                        width: 100%;
                         border-radius: $circle;
                         background: conic-gradient($primary 50%, $secondary 50%);
                     }
@@ -272,8 +272,8 @@
                         content: '';
                         position: absolute;
                         z-index: 1;
-                        height: 15rem;
-                        width: 15rem;
+                        height: 85%;
+                        width: 85%;
                         aspect-ratio: 1/1;
                         border-radius: $circle;
                         background-color: $black;
@@ -291,7 +291,8 @@
                 .div-1 {
                     margin: min(1rem, 0%);
                     .p-wrap {
-                        padding: 1rem 0;
+                        padding-top: min(0.4rem, 10%);
+                        padding-bottom: 1rem;
                         border-bottom: $secondary-bg 1px solid;
                         .wrap {
                             display: flex;
