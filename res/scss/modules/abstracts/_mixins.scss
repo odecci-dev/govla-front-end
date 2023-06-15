@@ -352,9 +352,17 @@
 }
 
 // ***** New Application Container Grid Layout
+// * NA Small Container Grid 3
 @mixin naSmallContainerGrid3 {
     @include displayGrid;
     grid-template-rows: minmax(0, 0.8fr) minmax(0, 1fr);
+    gap: $spacing-2x-large 0px;
+}
+
+// * NA Small Container Grid 4
+@mixin naSmallContainerGrid4 {
+    @include displayGrid;
+    grid-template-rows: minmax(0, 0.2fr) minmax(0, 1fr);
     gap: $spacing-2x-large 0px;
 }
 
