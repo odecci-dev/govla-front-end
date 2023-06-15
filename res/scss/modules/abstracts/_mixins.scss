@@ -323,6 +323,13 @@
 }
 
 // ***** New Member Container Grid Layouts
+// * Big Container Grid 2
+@mixin bigContainer2Grid {
+    @include displayGrid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.4fr);
+    gap: $spacing-2x-large 0px;
+}
+
 // * Small Container Grid 2
 @mixin smallContainerGrid2 {
     @include displayGrid;

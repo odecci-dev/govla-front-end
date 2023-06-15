@@ -160,3 +160,9 @@ Seventh Commit:
 
 Eigth Commit:
 • New Application: Loan Details Input Fields
+- Added new Mixins 
+
+Eigth Commit:
+• New Application: Co-Maker New Application Form Fields
+• New Application: Co-Maker Job Information Input Fields
+
