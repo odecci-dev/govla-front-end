@@ -596,6 +596,57 @@
                 // * Rowspan 5: Add Business Table
                 .rowspan:nth-of-type(5) {
                     @include smallcon4Rowspan5;
+                    // padding: 2rem;
+                    border-radius: $border-radius-medium;
+                    table {
+                        border-radius: $border-radius-medium;
+                        box-shadow: $box-shadow-3;
+                        border-spacing: 1rem;
+                        tr {
+                            text-align: left;
+                            border-bottom: 1px solid $black;
+                        }
+                        th,
+                        td {
+                            font-weight: $font-weight;
+                            font-size: $font-size-x-medium;
+                            padding: 2rem 0;
+                        }
+                        th:first-of-type,
+                        td:first-of-type {
+                            padding-left: 2rem;
+                        }
+                        th:last-of-type,
+                        td:last-of-type {
+                            font-weight: $font-weight-bold;
+                            padding-right: 2rem;
+                            text-align: center;
+                        }
+                        th:nth-of-type(4),
+                        td:nth-of-type(4) {
+                            text-align: center;
+                        }
+                        // * Table Buttons Styles
+                        .td-btn-wrapper {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            button {
+                                cursor: pointer;
+                                margin: 0 $spacing-small;
+                            }
+                            // * Table View Button 
+                            .a-btn-edit {
+                                @include tableButton;
+                                font-size: calc($font-size + 1px);
+                            }
+                            // * Table Trash Button
+                            .a-btn-delete {
+                                @include tableButton;
+                                font-size: calc($font-size + 1px);
+                            }
+                        }
+                    }
                 }
                 // * Rowspan 6: Pagination
                 .rowspan:nth-of-type(6) {

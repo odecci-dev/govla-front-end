@@ -129,3 +129,7 @@ Second Commit:
 - Added styles for Container 5
 - In-progress on completing Family Background Fieldsets (75%)
 
+Third Commit:
+• New Member: Finished the Implementation of Business Information
+- Added styles for Container 5
+- Reused some styles from All Members Table

@@ -139,6 +139,12 @@
     padding: $btn-padding-4;
 }
 
+// * Table Button
+@mixin tableButton {
+    @include primaryButton;
+    padding: $btn-padding-5;
+}
+
 // * Transparent Button
 @mixin transparentButton {
     cursor: pointer;
@@ -377,7 +383,7 @@
 // * Rowspan 7
 @mixin rowspan7 {
     @include displayGrid;
-    grid-template-columns: minmax(0, 1fr)minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr)minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr);
     gap: 0px $spacing-2x-large;
 }
 
