@@ -157,3 +157,6 @@ Sixth Commit:
 
 Seventh Commit:
 • New Application: Progress Bar Layout
+
+Eigth Commit:
+• New Application: Loan Details Input Fields
