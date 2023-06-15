@@ -166,8 +166,12 @@ Ninth Commit:
 • New Application: Co-Maker New Application Form Fields
 • New Application: Co-Maker Job Information Input Fields
 
-
-Ninth Commit:
+Tenth Commit:
 • New Application: Payment History Table
+
+Eleventh Commit:
+• New Application: Loan History Table
+
+
 
 

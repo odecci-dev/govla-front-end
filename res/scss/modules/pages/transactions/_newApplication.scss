@@ -682,5 +682,48 @@
                 }
             }
         }
+        // * Container 8: Loan History Table
+        .na-container-8 {
+            height: 100%;
+            width: 100%;
+            padding: 2rem;
+            .small-con-5 {
+                height: 100%;
+                width: 100%;
+                @include naSmallContainerGrid4;
+                @include containerDefault2;
+                padding: 3rem 4rem 3rem 4rem;
+                .rowspan {
+                    min-height: 0;
+                    /* NEW */
+                    min-width: 0;
+                    /* NEW; needed for Firefox */
+                }
+                // * Rowspan Header
+                .rowspan:first-of-type {
+                    h2 {
+                        font-size: $font-size-x-large;
+                        font-weight: $font-weight-bold;
+                    }
+                }
+                // * Rowspan 2: Payment History Table 
+                .rowspan:nth-of-type(2) {
+                    table {
+                        tr {
+                            text-align: left;
+                        }
+                        tr:first-of-type {
+                            border-bottom: 1px solid $secondary-bg;
+                        }
+                        th,
+                        td {
+                            font-weight: $font-weight;
+                            font-size: $font-size-x-medium;
+                            padding: 2rem 0;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
