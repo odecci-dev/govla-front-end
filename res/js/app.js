@@ -95,7 +95,6 @@ document.addEventListener('change', _ => {
     const famBGForm = document.querySelector('[data-family-background-form]')
     const civilStatus = document.querySelector('[data-civil-status]')
 
-    // console.log(civilStatus.value)
     if (civilStatus.selectedIndex === 2) {
         famBGForm.style.display = 'block'
     } else {
@@ -104,11 +103,27 @@ document.addEventListener('change', _ => {
 
 })
 
+// ****** Child Form Toggle ***** //
+
+// * Add Child
+function addChild() {
+    const childForm = document.querySelector('[data-child]')
+    const childContainer = document.querySelector('[data-child-container]')
+
+    const clone = childForm.cloneNode(true)
+    childContainer.appendChild(clone)
+
+}
+
+// * Subtract Child
+function subChild() {
+    const childForm = document.querySelector('[data-child]')
+    childForm.remove()
+}
 
 // * Business Informartion Form Toggle
 document.addEventListener('click', _ => {
     const businessForm = document.querySelector('[data-business-form]')
-
     const yesToggle = document.getElementById('formToggleYes')
 
     if (yesToggle.checked) {

@@ -622,7 +622,7 @@
                 <div class="nm-container-4" data-family-background-form>
 
                     <!-- * Small Container -->
-                    <div class="small-con-3">
+                    <div class="small-con-3" data-child-container>
 
                         <!-- * Rowspan 1: Header -->
                         <div class="rowspan">
@@ -752,7 +752,7 @@
                         </div>
 
                         <!-- * Rowspan 8: First Name, Middle Name , Last Name, Age, Name Of School and Add/Subtract Button -->
-                        <div class="rowspan" data-child>
+                        <div class="rowspan child" data-child>
 
                             <!-- * First Name -->
                             <div class="input-wrapper">
@@ -786,8 +786,8 @@
 
                             <!-- * Add and Subtract Button  -->
                             <div class="input-wrapper">
-                                <button data-add-child>+</button>
-                                <button data-subtract-child>-</button>
+                                <button type="button" onclick="addChild()">+</button>
+                                <button type="button" onclick="subChild()">-</button>
                             </div>
 
 

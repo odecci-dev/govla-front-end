@@ -142,3 +142,9 @@ Fifth Commit:
 • Family Background Information Form Toggle
 - Added new function in app.js for Family Background form toggle (show or hide)
 - Civil status married 
+
+Sixth Commit:
+• Child Information Cloning
+- Added new function in app.js for Adding
+- and Subtract nodes
+- Made the container responsive (While adding or subtracting the height of the container varies)

@@ -359,7 +359,7 @@
         // * Container 4: Family Background Information
         .nm-container-4 {
             display: none;
-            height: 100%;
+            height: min(100%) max(200%);
             width: 100%;
             padding: 2rem;
             .small-con-3 {
@@ -485,7 +485,7 @@
                     }
                 }
                 // * Rowspan 8: First Name, Middle Name , Last Name, Age, Name Of School and Add/Sub Button 
-                .rowspan:nth-of-type(8) {
+                .rowspan.child {
                     @include smallcon3Rowspan8;
                     .input-wrapper:last-of-type {
                         // * Add/Sub Button 

@@ -1356,7 +1356,7 @@ table {
 }
 .main-dashboard .nm-form-con .nm-container-4 {
   display: none;
-  height: 100%;
+  height: 100% 200%;
   width: 100%;
   padding: 2rem;
 }
@@ -1548,7 +1548,7 @@ table {
   font-size: 2rem;
   font-style: italic;
 }
-.main-dashboard .nm-form-con .nm-container-4 .small-con-3 .rowspan:nth-of-type(8) {
+.main-dashboard .nm-form-con .nm-container-4 .small-con-3 .rowspan.child {
   display: grid;
   grid-auto-flow: row dense;
   grid-auto-columns: minmax(0, 1fr);
@@ -1556,12 +1556,12 @@ table {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.4fr) minmax(0, 0.6fr) minmax(0, 0.4fr);
   gap: 0px 2rem;
 }
-.main-dashboard .nm-form-con .nm-container-4 .small-con-3 .rowspan:nth-of-type(8) .input-wrapper:last-of-type {
+.main-dashboard .nm-form-con .nm-container-4 .small-con-3 .rowspan.child .input-wrapper:last-of-type {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
 }
-.main-dashboard .nm-form-con .nm-container-4 .small-con-3 .rowspan:nth-of-type(8) .input-wrapper:last-of-type button {
+.main-dashboard .nm-form-con .nm-container-4 .small-con-3 .rowspan.child .input-wrapper:last-of-type button {
   cursor: pointer;
   font-size: 3rem;
   font-weight: 700;
@@ -1572,14 +1572,14 @@ table {
   margin-bottom: 0.5rem;
   transition: all ease-in-out 100ms;
 }
-.main-dashboard .nm-form-con .nm-container-4 .small-con-3 .rowspan:nth-of-type(8) .input-wrapper:last-of-type button:hover {
+.main-dashboard .nm-form-con .nm-container-4 .small-con-3 .rowspan.child .input-wrapper:last-of-type button:hover {
   background: rgba(0, 0, 0, 0.125);
   background-blend-mode: darken;
 }
-.main-dashboard .nm-form-con .nm-container-4 .small-con-3 .rowspan:nth-of-type(8) .input-wrapper:last-of-type button:active {
+.main-dashboard .nm-form-con .nm-container-4 .small-con-3 .rowspan.child .input-wrapper:last-of-type button:active {
   transform: translateY(4px);
 }
-.main-dashboard .nm-form-con .nm-container-4 .small-con-3 .rowspan:nth-of-type(8) .input-wrapper:last-of-type button:last-of-type {
+.main-dashboard .nm-form-con .nm-container-4 .small-con-3 .rowspan.child .input-wrapper:last-of-type button:last-of-type {
   margin-left: 2rem;
 }
 .main-dashboard .nm-form-con .nm-container-5 {
