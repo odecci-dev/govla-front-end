@@ -133,3 +133,7 @@ Third Commit:
 • New Member: Finished the Implementation of Business Information
 - Added styles for Container 5
 - Reused some styles from All Members Table
+
+Third Commit:
+• Business Informartion Form Toggle
+- Added new function in app.js for business form toggle (show or hide)

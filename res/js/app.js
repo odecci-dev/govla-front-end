@@ -90,20 +90,33 @@ document.addEventListener("click", e => {
 
 })
 
+// * Business Informartion Form Toggle
+document.addEventListener('click', _ => {
+    const businessForm = document.querySelector('[data-business-form]')
+
+    const yesToggle = document.getElementById('formToggleYes')
+
+    if (yesToggle.checked) {
+        businessForm.style.display = 'block'
+    } else {
+        businessForm.style.display = 'none'
+    }
+
+})
 
 
 // * Table Checkbox Toggle
 
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+// const checkboxes = document.querySelectorAll('input[type="radio"]');
 
-function checkAll(tableCheckBox) {
-    if (tableCheckBox.checked == true) {
-        checkboxes.forEach(function(checkbox) {
-            checkbox.checked = true;
-        })
-    } else {
-        checkboxes.forEach(function(checkbox) {
-            checkbox.checked = false;
-        })
-    }
-}
+// function checkAll(tableCheckBox) {
+//     if (tableCheckBox.checked == true) {
+//         checkboxes.forEach(function(checkbox) {
+//             checkbox.checked = true;
+//         })
+//     } else {
+//         checkboxes.forEach(function(checkbox) {
+//             checkbox.checked = false;
+//         })
+//     }
+// }
