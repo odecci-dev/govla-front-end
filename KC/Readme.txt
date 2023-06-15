@@ -154,3 +154,6 @@ Sixth Commit:
 - Added _newApplication.scss file in SCSS pages folder 
 - Sorted the SCSS Files, created a folder for each page
 • Linked the New Application HTML file to the Navigation Links
+
+Seventh Commit:
+• New Application: Progress Bar Layout

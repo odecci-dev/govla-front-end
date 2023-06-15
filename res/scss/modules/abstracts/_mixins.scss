@@ -139,6 +139,12 @@
     padding: $btn-padding-4;
 }
 
+// * Secondary Button
+@mixin progressBarButton {
+    @include primaryButton;
+    padding: 1.5rem 1rem;
+}
+
 // * Table Button
 @mixin tableButton {
     @include primaryButton;
