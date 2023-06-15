@@ -148,3 +148,9 @@ Sixth Commit:
 - Added new function in app.js for Adding
 - and Subtract nodes
 - Made the container responsive (While adding or subtracting the height of the container varies)
+
+Sixth Commit:
+• Started the implementation of New Application Module 
+- Added _newApplication.scss file in SCSS pages folder 
+- Sorted the SCSS Files, created a folder for each page
+• Linked the New Application HTML file to the Navigation Links

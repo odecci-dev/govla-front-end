@@ -1,21 +1,25 @@
 // @charset "UTF-8";
-// // 1. Configuration and helpers
-@import //   'modules/abstracts/functions',
+// * 1
+@import // * Abstracts
 'modules/abstracts/mixins',
 'modules/abstracts/variables';
-// // 2. Base stuff
-@import 'modules/base/base';
+// * 2
+@import // * Base
+'modules/base/base';
 //   'modules/base/base',
 //   'modules/base/fonts',
 //   'modules/base/typography',
 //   'modules/base/helpers';
-// // 3. Components
+// 3. Components
 // @import
 // 'modules/components/button';
-// // 4. Layout-related sections
-@import 'modules/layout/nav',
+// * 4 
+@import // * Layouts
+'modules/layout/nav',
 'modules/layout/dashboard';
-// 5. Page-specific styles
-@import 'modules/pages/allMembers',
-'modules/pages/newMember',
-'modules/pages/login';
+// * 5
+@import // * Pages
+'modules/pages/login',
+'modules/pages/members/allMembers',
+'modules/pages/members/newMember',
+'modules/pages/transactions/newApplication';
