@@ -90,6 +90,21 @@ document.addEventListener("click", e => {
 
 })
 
+// * Civil Status Selector Form Toggle
+document.addEventListener('change', _ => {
+    const famBGForm = document.querySelector('[data-family-background-form]')
+    const civilStatus = document.querySelector('[data-civil-status]')
+
+    // console.log(civilStatus.value)
+    if (civilStatus.selectedIndex === 2) {
+        famBGForm.style.display = 'block'
+    } else {
+        famBGForm.style.display = 'none'
+    }
+
+})
+
+
 // * Business Informartion Form Toggle
 document.addEventListener('click', _ => {
     const businessForm = document.querySelector('[data-business-form]')
@@ -103,20 +118,3 @@ document.addEventListener('click', _ => {
     }
 
 })
-
-
-// * Table Checkbox Toggle
-
-// const checkboxes = document.querySelectorAll('input[type="radio"]');
-
-// function checkAll(tableCheckBox) {
-//     if (tableCheckBox.checked == true) {
-//         checkboxes.forEach(function(checkbox) {
-//             checkbox.checked = true;
-//         })
-//     } else {
-//         checkboxes.forEach(function(checkbox) {
-//             checkbox.checked = false;
-//         })
-//     }
-// }

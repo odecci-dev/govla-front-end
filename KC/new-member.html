@@ -322,12 +322,12 @@
                                 <div class="input-wrapper">
                                     <span>Civil Status</span>
                                     <div class="select-box">
-                                        <select name="Civil Status" id="civStat">
-                                        <option value="0"></option>
-                                        <option value="1">Widow</option>
-                                        <option value="2">Married</option>
-                                        <option value="3">Single</option>
-                                    </select>
+                                        <select name="Civil Status" id="civStat" data-civil-status>
+                                            <option value="0"></option>
+                                            <option value="Widow">Widow</option>
+                                            <option value="Married">Married</option>
+                                            <option value="Single">Single</option>
+                                        </select>
                                     </div>
                                 </div>
 
@@ -619,7 +619,7 @@
                 </div>
 
                 <!-- * Container 4: Family Background Information -->
-                <div class="nm-container-4">
+                <div class="nm-container-4" data-family-background-form>
 
                     <!-- * Small Container -->
                     <div class="small-con-3">
@@ -752,7 +752,7 @@
                         </div>
 
                         <!-- * Rowspan 8: First Name, Middle Name , Last Name, Age, Name Of School and Add/Subtract Button -->
-                        <div class="rowspan">
+                        <div class="rowspan" data-child>
 
                             <!-- * First Name -->
                             <div class="input-wrapper">
@@ -786,8 +786,8 @@
 
                             <!-- * Add and Subtract Button  -->
                             <div class="input-wrapper">
-                                <button>+</button>
-                                <button>-</button>
+                                <button data-add-child>+</button>
+                                <button data-subtract-child>-</button>
                             </div>
 
 
