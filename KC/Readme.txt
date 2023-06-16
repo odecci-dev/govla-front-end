@@ -173,5 +173,10 @@ Eleventh Commit:
 • New Application: Loan History Table
 
 
+June 16, 2023 (Friday)
+First Commmit:
+• New Application: In-progress making the Assets and Properties Section
+• New Member: Added the the Family Background Information Form Toggle Function in New Member
+
 
 

@@ -350,18 +350,22 @@
                                 align-items: center;
                                 span {
                                     font-weight: $font-weight-bold;
-                                    margin-left: 1rem;
+                                    margin-left: calc(1rem - 0.4rem);
                                     white-space: nowrap;
                                 }
                                 input[type="radio"] {
-                                    @include formCheckbox;
+                                    @include formRadioButtons;
                                 }
                                 input[type="radio"]::after {
-                                    @include formCheckboxAfter;
+                                    @include formRadioButtonsAfter;
                                 }
                                 input[type="radio"]:checked:after {
-                                    @include formCheckboxChecked;
+                                    @include formRadioButtonsChecked;
                                 }
+                                // input[type="radio"]:focus {
+                                //     outline: max(1px, 0.15em) solid $primary;
+                                //     outline-offset: max(2px, 0.15em);
+                                // }
                             }
                         }
                     }
@@ -390,6 +394,330 @@
                     }
                     span:first-of-type {
                         margin-right: 1.5rem;
+                    }
+                }
+            }
+        }
+        // * Container 4: Family Background Information
+        .nm-container-4 {
+            display: none;
+            height: min(100%) max(200%);
+            width: 100%;
+            padding: 2rem;
+            .small-con-3 {
+                height: 100%;
+                width: 100%;
+                @include smallContainerGrid3;
+                @include containerDefault2;
+                padding: 3rem 4rem 3rem 4rem;
+                .rowspan {
+                    min-height: 0;
+                    /* NEW */
+                    min-width: 0;
+                    /* NEW; needed for Firefox */
+                    .input-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        >span {
+                            margin-bottom: 1rem;
+                            font-weight: $font-weight-bold;
+                            font-size: $font-size;
+                        }
+                        // * Input Global Styles
+                        input {
+                            @include inputField;
+                        }
+                        // * Select Input Global Styles
+                        .select-box {
+                            position: relative;
+                            select {
+                                @include selectField;
+                                width: 100%;
+                                option {
+                                    position: absolute;
+                                    outline: none;
+                                    border: none;
+                                    background-color: $secondary-bg;
+                                }
+                            }
+                        }
+                        // * Select Input Arrow
+                        .select-box::before {
+                            content: '';
+                            position: absolute;
+                            width: 15px;
+                            height: 15px;
+                            z-index: 2;
+                            right: 0;
+                            transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
+                            border-bottom: 2px solid $black;
+                            border-left: 2px solid $black;
+                            transition: ease-out 300ms;
+                            pointer-events: none;
+                        }
+                        .select-box:focus-within::before {
+                            border-top: 2px solid $black;
+                            border-right: 2px solid $black;
+                            border-bottom: none;
+                            border-left: none;
+                            transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
+                        }
+                        // * Radio Buttons
+                        .box-wrap {
+                            display: flex;
+                            align-items: center;
+                            .radio-btn-wrapper {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                span {
+                                    font-weight: $font-weight-bold;
+                                    margin-left: 1rem;
+                                    white-space: nowrap;
+                                }
+                                input[type="radio"] {
+                                    @include formCheckbox;
+                                }
+                                input[type="radio"]::after {
+                                    @include formCheckboxAfter;
+                                }
+                                input[type="radio"]:checked:after {
+                                    @include formCheckboxChecked;
+                                }
+                            }
+                        }
+                    }
+                }
+                // * Rowspan Header
+                .rowspan:first-of-type {
+                    h2 {
+                        font-size: $font-size-x-large;
+                    }
+                }
+                // * Rowspan 2: Subheader
+                .rowspan:nth-of-type(2) {
+                    @include rowspanEmpty;
+                    h3 {
+                        font-size: $font-size-large;
+                        font-style: italic;
+                    }
+                }
+                // * Rowspan 3: First Name, Middle Name, Last Name, Suffix, Date Of Birth and Age 
+                .rowspan:nth-of-type(3) {
+                    @include smallcon3Rowspan3;
+                }
+                // * Rowspan 4: Employment Status, Current Job / Position, Years Of Service and Company Name 
+                .rowspan:nth-of-type(4) {
+                    @include smallcon3Rowspan4;
+                }
+                // * Rowspan 5: Number Of Dependants 
+                .rowspan:nth-of-type(5) {
+                    @include smallcon3Rowspan5;
+                }
+                // * Rowspan 6: Empty Rowspan
+                .rowspan:nth-of-type(6) {
+                    @include rowspanEmpty;
+                }
+                // * Rowspan 7: Subheader - Children(s) Information
+                .rowspan:nth-of-type(7) {
+                    @include rowspanEmpty;
+                    h3 {
+                        font-size: $font-size-large;
+                        font-style: italic;
+                    }
+                }
+                // * Rowspan 8: First Name, Middle Name , Last Name, Age, Name Of School and Add/Sub Button 
+                .rowspan.child {
+                    @include smallcon3Rowspan8;
+                    .input-wrapper:last-of-type {
+                        // * Add/Sub Button 
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-end;
+                        button {
+                            @include addOrSubButton;
+                            margin-bottom: $spacing-small;
+                            transition: all ease-in-out 100ms;
+                        }
+                        button:hover {
+                            background: rgba(0, 0, 0, 0.125);
+                            background-blend-mode: darken;
+                        }
+                        button:active {
+                            transform: translateY(4px);
+                        }
+                        button:last-of-type {
+                            margin-left: $spacing-2x-large;
+                        }
+                    }
+                }
+            }
+        }
+        // * Container 5: Business Information
+        .nm-container-5 {
+            display: none;
+            height: 100%;
+            width: 100%;
+            padding: 2rem;
+            .small-con-4 {
+                height: 100%;
+                width: 100%;
+                @include smallContainerGrid4;
+                @include containerDefault2;
+                padding: 3rem 4rem 3rem 4rem;
+                .rowspan {
+                    min-height: 0;
+                    /* NEW */
+                    min-width: 0;
+                    /* NEW; needed for Firefox */
+                    .input-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        span {
+                            margin-bottom: 1rem;
+                            font-weight: $font-weight-bold;
+                            font-size: $font-size;
+                        }
+                        // * Input Global Styles
+                        input {
+                            @include inputField;
+                        }
+                        // * Radio Buttons
+                        .box-wrap {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            .radio-btn-wrapper {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                span {
+                                    white-space: nowrap;
+                                }
+                                input[type="radio"] {
+                                    @include formRadioButtons;
+                                }
+                                input[type="radio"]::after {
+                                    @include formRadioButtonsAfter;
+                                }
+                                input[type="radio"]:checked:after {
+                                    @include formRadioButtonsChecked;
+                                }
+                                // input[type="radio"]:focus {
+                                //     outline: max(1px, 0.15em) solid $primary;
+                                //     outline-offset: max(2px, 0.15em);
+                                // }
+                            }
+                        }
+                    }
+                }
+                // * Rowspan Header
+                .rowspan:first-of-type {
+                    h2 {
+                        font-size: $font-size-x-large;
+                    }
+                }
+                // * Rowspan 2: Business Name, Business Type and Business Address
+                .rowspan:nth-of-type(2) {
+                    @include smallcon4Rowspan2;
+                }
+                // * Rowspan 3: Rented or Owned, Years Of Business, Number Of Employees, Salary / Day, Value Of Stocks and Amount Of Sales / Day 
+                .rowspan:nth-of-type(3) {
+                    @include smallcon4Rowspan3;
+                }
+                // * Rowspan 4: Rowspan 4: Add Business and Attach Files Buttons 
+                .rowspan:nth-of-type(4) {
+                    @include smallcon4Rowspan4;
+                    .btn-wrapper {
+                        button {
+                            @include primaryButton
+                        }
+                        button:first-of-type {
+                            margin-right: 1.5rem;
+                        }
+                    }
+                }
+                // * Rowspan 5: Add Business Table
+                .rowspan:nth-of-type(5) {
+                    @include smallcon4Rowspan5;
+                    // padding: 2rem;
+                    border-radius: $border-radius-medium;
+                    table {
+                        border-radius: $border-radius-medium;
+                        box-shadow: $box-shadow-3;
+                        border-spacing: 1rem;
+                        tr {
+                            text-align: left;
+                            border-bottom: 1px solid $black;
+                        }
+                        th,
+                        td {
+                            font-weight: $font-weight;
+                            font-size: $font-size-x-medium;
+                            padding: 2rem 0;
+                        }
+                        th:first-of-type,
+                        td:first-of-type {
+                            padding-left: 2rem;
+                        }
+                        th:last-of-type,
+                        td:last-of-type {
+                            font-weight: $font-weight-bold;
+                            padding-right: 2rem;
+                            text-align: center;
+                        }
+                        th:nth-of-type(4),
+                        td:nth-of-type(4) {
+                            text-align: center;
+                        }
+                        // * Table Buttons Styles
+                        .td-btn-wrapper {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            button {
+                                cursor: pointer;
+                                margin: 0 $spacing-small;
+                            }
+                            // * Table View Button 
+                            .a-btn-edit {
+                                @include tableButton;
+                                font-size: calc($font-size + 1px);
+                            }
+                            // * Table Trash Button
+                            .a-btn-delete {
+                                @include tableButton;
+                                font-size: calc($font-size + 1px);
+                            }
+                        }
+                    }
+                }
+                // * Rowspan 6: Pagination
+                .rowspan:nth-of-type(6) {
+                    @include smallcon4Rowspan6;
+                    // * Pagination Container
+                    .pagination-container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding-top: 3rem;
+                        height: calc(100% - 90%);
+                        // * Pagination Links
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: $font-size-large;
+                            font-weight: $font-weight-bold;
+                            margin: 0 $spacing-small;
+                            color: $black;
+                        }
+                        a:first-of-type {
+                            margin-right: $spacing-6x-large;
+                        }
+                        a:last-of-type {
+                            margin-left: $spacing-6x-large;
+                        }
                     }
                 }
             }
@@ -721,6 +1049,143 @@
                             font-size: $font-size-x-medium;
                             padding: 2rem 0;
                         }
+                    }
+                }
+            }
+        }
+        // * New Member Container Wrapper
+        .na-container-wrapper-3 {
+            height: 120%;
+            display: flex;
+            flex-direction: row;
+            // * Container 1: New Member Form Fields and Buttons
+            .na-container-6 {
+                height: 100%;
+                width: calc(100% - 65%);
+                padding: 2rem 1rem 2rem 2rem;
+                // * Big Container 
+                .big-con-2 {
+                    height: 100%;
+                    width: 100%;
+                    padding: 5rem 4rem 2rem 4rem;
+                    @include containerDefault2;
+                    @include nabigContainer2Grid;
+                    // ** Rowspan Global Styles
+                    .rowspan {
+                        min-height: 0;
+                        /* NEW */
+                        min-width: 0;
+                        /* NEW; needed for Firefox */
+                        >span {
+                            font-size: $font-size;
+                        }
+                        >.input-wrapper {
+                            span {
+                                font-weight: $font-weight-bold;
+                                font-size: $font-size;
+                            }
+                            // * Input Global Styles
+                            input {
+                                @include inputField;
+                            }
+                            // * Radio Buttons
+                            .box-wrap {
+                                display: grid;
+                                grid-auto-flow: column;
+                                grid-auto-columns: minmax(0, 1fr);
+                                grid-auto-rows: minmax(0, 1fr);
+                                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+                                gap: 0px 2rem;
+                                .radio-btn-wrapper {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    span {
+                                        font-weight: $font-weight-bold;
+                                        margin-left: calc(1rem - 0.4rem);
+                                        white-space: nowrap;
+                                    }
+                                    input[type="radio"] {
+                                        @include formRadioButtons;
+                                    }
+                                    input[type="radio"]::after {
+                                        @include formRadioButtonsAfter;
+                                    }
+                                    input[type="radio"]:checked:after {
+                                        @include formRadioButtonsChecked;
+                                    }
+                                    // input[type="radio"]:focus {
+                                    //     outline: max(1px, 0.15em) solid $primary;
+                                    //     outline-offset: max(2px, 0.15em);
+                                    // }
+                                }
+                            }
+                        }
+                    }
+                    // * Rowspan Header: Header and Buttons 
+                    .rowspan:first-of-type {
+                        h2 {
+                            font-size: $font-size-x-large;
+                        }
+                    }
+                    .rowspan-container {
+                        height: 100%;
+                        width: 100%;
+                        .rowspan {
+                            @include naRowspan1;
+                            .input-wrapper {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 1.5rem;
+                                .box-wrap>.radio-btn-wrapper:last-of-type {
+                                    margin-left: 1rem;
+                                }
+                            }
+                        }
+                        .rowspan.child {
+                            @include naRowspanContainer;
+                            .input-wrapper:last-of-type {
+                                // * Add/Sub Button 
+                                display: flex;
+                                flex-direction: row;
+                                align-items: flex-end;
+                                button {
+                                    @include addOrSubButton;
+                                    margin-bottom: $spacing-small;
+                                    transition: all ease-in-out 100ms;
+                                }
+                                button:hover {
+                                    background: rgba(0, 0, 0, 0.125);
+                                    background-blend-mode: darken;
+                                }
+                                button:active {
+                                    transform: translateY(4px);
+                                }
+                                button:last-of-type {
+                                    margin-left: $spacing-2x-large;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // * Container 2: File Attachments and Monthly Bills
+            .na-container-2 {
+                width: calc(100% - 35%);
+                height: 100%;
+                padding: 2rem 2rem 2rem 1rem;
+                // * Small Container
+                .small-con {
+                    height: 100%;
+                    width: 100%;
+                    @include twoBlockGrid;
+                    // * Rowspan Global Styles
+                    // * Box-wrap
+                    .box-wrap {
+                        // padding: 3rem 4rem;
+                        padding: min(3rem, 5%) min(4rem, 10%);
+                        @include containerDefault2;
+                        .colspan {}
                     }
                 }
             }

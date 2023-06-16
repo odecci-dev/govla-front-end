@@ -92,13 +92,24 @@ document.addEventListener("click", e => {
 
 // * Civil Status Selector Form Toggle
 document.addEventListener('change', _ => {
-    const famBGForm = document.querySelector('[data-family-background-form]')
+    const famBGFormSingle = document.querySelector('[data-family-background-single]')
+    const famBGFormMarried = document.querySelector('[data-family-background-married]')
     const civilStatus = document.querySelector('[data-civil-status]')
 
+    // * If Married is Selected show Family Background Form for Single
     if (civilStatus.selectedIndex === 2) {
-        famBGForm.style.display = 'block'
-    } else {
-        famBGForm.style.display = 'none'
+        famBGFormMarried.style.display = 'block'
+        famBGFormSingle.style.display = 'none'
+            // * If Single is Selected show Family Background Form for Single
+    } else if (civilStatus.selectedIndex === 3) {
+        famBGFormMarried.style.display = 'none'
+        famBGFormSingle.style.display = 'block'
+    } else if (civilStatus.selectedIndex === 1) {
+        famBGFormSingle.style.display = 'none'
+        famBGFormMarried.style.display = 'none'
+    } else if (civilStatus.selectedIndex === 0) {
+        famBGFormSingle.style.display = 'none'
+        famBGFormMarried.style.display = 'none'
     }
 
 })
@@ -121,6 +132,25 @@ function subChild() {
     childForm.remove()
 }
 
+// * Add Child (Single)
+function addChildSingle() {
+    const childForm = document.querySelector('[data-child-2]')
+    const childContainer = document.querySelector('[data-child-container-2]')
+
+    const clone = childForm.cloneNode(true)
+    childContainer.appendChild(clone)
+
+}
+
+// * Subtract Child (Single)
+function subChildSingle() {
+    const childForm = document.querySelector('[data-child-2]')
+    childForm.remove()
+}
+
+// ****** END --- Child Form Toggle ***** //
+
+
 // * Business Informartion Form Toggle
 document.addEventListener('click', _ => {
     const businessForm = document.querySelector('[data-business-form]')
@@ -133,3 +163,36 @@ document.addEventListener('click', _ => {
     }
 
 })
+
+
+// * Add Vehicle
+function addVehicle() {
+    const childForm = document.querySelector('[data-vehicle]')
+    const childContainer = document.querySelector('[data-vehicle-container]')
+
+    const clone = childForm.cloneNode(true)
+    childContainer.appendChild(clone)
+
+}
+
+// * Subtract Vehicle
+function subVehicle() {
+    const childForm = document.querySelector('[data-vehicle]')
+    childForm.remove()
+}
+
+// * Add Property
+function addProperty() {
+    const childForm = document.querySelector('[data-property]')
+    const childContainer = document.querySelector('[data-property-container]')
+
+    const clone = childForm.cloneNode(true)
+    childContainer.appendChild(clone)
+
+}
+
+// * Subtract Property
+function subProperty() {
+    const childForm = document.querySelector('[data-property]')
+    childForm.remove()
+}
