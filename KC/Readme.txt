@@ -178,5 +178,10 @@ First Commmit:
 • New Application: In-progress making the Assets and Properties Section
 • New Member: Added the the Family Background Information Form Toggle Function in New Member
 
-
-
+Second Commmit:
+• New Application: Completed the Assets and Properties Section
+• Improved the Add and Subtract Child Functions (app.js)
+- in Family Background Information Form
+- and in Assets and Properties
+• Modified some Mixins (_mixins.scss)
+- New Application Grid layouts for Assets anf Properties

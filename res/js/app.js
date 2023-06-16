@@ -116,7 +116,7 @@ document.addEventListener('change', _ => {
 
 // ****** Child Form Toggle ***** //
 
-// * Add Child
+// * Add Child (Married)
 function addChild() {
     const childForm = document.querySelector('[data-child]')
     const childContainer = document.querySelector('[data-child-container]')
@@ -126,10 +126,14 @@ function addChild() {
 
 }
 
-// * Subtract Child
+// * Subtract Child (Married)
 function subChild() {
     const childForm = document.querySelector('[data-child]')
-    childForm.remove()
+
+    if (childForm.firstChild != null) {
+        childForm.remove()
+    }
+
 }
 
 // * Add Child (Single)
@@ -145,7 +149,11 @@ function addChildSingle() {
 // * Subtract Child (Single)
 function subChildSingle() {
     const childForm = document.querySelector('[data-child-2]')
-    childForm.remove()
+
+    if (childForm.firstChild != null) {
+        childForm.remove()
+    }
+
 }
 
 // ****** END --- Child Form Toggle ***** //
@@ -164,35 +172,50 @@ document.addEventListener('click', _ => {
 
 })
 
-
+// ***** Add and Subtract Vehicle ***** //
 // * Add Vehicle
 function addVehicle() {
-    const childForm = document.querySelector('[data-vehicle]')
-    const childContainer = document.querySelector('[data-vehicle-container]')
+    const vehicleForm = document.querySelector('[data-vehicle]')
+    const vehicleContainer = document.querySelector('[data-vehicle-container]')
 
-    const clone = childForm.cloneNode(true)
-    childContainer.appendChild(clone)
+    const clone = vehicleForm.cloneNode(true)
+    vehicleContainer.appendChild(clone)
 
 }
 
 // * Subtract Vehicle
 function subVehicle() {
-    const childForm = document.querySelector('[data-vehicle]')
-    childForm.remove()
+    const vehicleForm = document.querySelector('[data-vehicle]')
+
+    if (vehicleForm.nextSibling != null) {
+        vehicleForm.remove()
+    }
+
 }
+
+// ***** END ---- Add and Subtract Vehicle ***** //
+
+
+// ***** Add and Subtract Property ***** //
 
 // * Add Property
 function addProperty() {
-    const childForm = document.querySelector('[data-property]')
-    const childContainer = document.querySelector('[data-property-container]')
+    const propertyForm = document.querySelector('[data-property]')
+    const propertyContainer = document.querySelector('[data-property-container]')
 
-    const clone = childForm.cloneNode(true)
-    childContainer.appendChild(clone)
+    const clone = propertyForm.cloneNode(true)
+    propertyContainer.appendChild(clone)
 
 }
 
 // * Subtract Property
 function subProperty() {
-    const childForm = document.querySelector('[data-property]')
-    childForm.remove()
+    const propertyForm = document.querySelector('[data-property]')
+
+    if (propertyForm.nextSibling != null) {
+        propertyForm.remove()
+    }
+
 }
+
+// ***** END ---- Add and Subtract Property ***** //

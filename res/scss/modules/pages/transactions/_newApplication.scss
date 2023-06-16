@@ -1055,11 +1055,11 @@
         }
         // * New Member Container Wrapper
         .na-container-wrapper-3 {
-            height: 120%;
+            height: min(100) max(200%);
             display: flex;
             flex-direction: row;
             // * Container 1: New Member Form Fields and Buttons
-            .na-container-6 {
+            .na-container-9 {
                 height: 100%;
                 width: calc(100% - 65%);
                 padding: 2rem 1rem 2rem 2rem;
@@ -1067,102 +1067,107 @@
                 .big-con-2 {
                     height: 100%;
                     width: 100%;
-                    padding: 5rem 4rem 2rem 4rem;
+                    padding: 5rem 4rem 4rem 4rem;
                     @include containerDefault2;
                     @include nabigContainer2Grid;
                     // ** Rowspan Global Styles
-                    .rowspan {
-                        min-height: 0;
-                        /* NEW */
-                        min-width: 0;
-                        /* NEW; needed for Firefox */
-                        >span {
-                            font-size: $font-size;
-                        }
-                        >.input-wrapper {
-                            span {
-                                font-weight: $font-weight-bold;
-                                font-size: $font-size;
-                            }
-                            // * Input Global Styles
-                            input {
-                                @include inputField;
-                            }
-                            // * Radio Buttons
-                            .box-wrap {
-                                display: grid;
-                                grid-auto-flow: column;
-                                grid-auto-columns: minmax(0, 1fr);
-                                grid-auto-rows: minmax(0, 1fr);
-                                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-                                gap: 0px 2rem;
-                                .radio-btn-wrapper {
-                                    display: flex;
-                                    flex-direction: row;
-                                    align-items: center;
-                                    span {
-                                        font-weight: $font-weight-bold;
-                                        margin-left: calc(1rem - 0.4rem);
-                                        white-space: nowrap;
-                                    }
-                                    input[type="radio"] {
-                                        @include formRadioButtons;
-                                    }
-                                    input[type="radio"]::after {
-                                        @include formRadioButtonsAfter;
-                                    }
-                                    input[type="radio"]:checked:after {
-                                        @include formRadioButtonsChecked;
-                                    }
-                                    // input[type="radio"]:focus {
-                                    //     outline: max(1px, 0.15em) solid $primary;
-                                    //     outline-offset: max(2px, 0.15em);
-                                    // }
-                                }
-                            }
+                    .rowspan-container {
+                        .rowspan {
+                            min-height: 0;
+                            /* NEW */
+                            min-width: 0;
+                            /* NEW; needed for Firefox */
                         }
                     }
                     // * Rowspan Header: Header and Buttons 
-                    .rowspan:first-of-type {
+                    .rowspan-container:first-of-type {
                         h2 {
                             font-size: $font-size-x-large;
                         }
                     }
-                    .rowspan-container {
+                    // * Rowspan Container 2 and 3
+                    .rowspan-container:nth-of-type(2),
+                    .rowspan-container:nth-of-type(3) {
                         height: 100%;
                         width: 100%;
                         .rowspan {
                             @include naRowspan1;
-                            .input-wrapper {
+                            >span {
+                                font-size: $font-size;
+                                margin: clamp(1.2rem, 1vw, 1rem) 0;
+                            }
+                            >.input-wrapper {
                                 display: flex;
                                 flex-direction: column;
-                                gap: 1.5rem;
-                                .box-wrap>.radio-btn-wrapper:last-of-type {
-                                    margin-left: 1rem;
+                                gap: 1rem;
+                                // * Radio Buttons
+                                span {
+                                    font-weight: $font-weight-bold;
+                                    font-size: $font-size;
+                                }
+                                .box-wrap {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    .radio-btn-wrapper {
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center;
+                                        span {
+                                            font-weight: $font-weight-bold;
+                                            margin-left: calc(1rem - 0.4rem);
+                                            white-space: nowrap;
+                                        }
+                                        input[type="radio"] {
+                                            @include formRadioButtons;
+                                        }
+                                        input[type="radio"]::after {
+                                            @include formRadioButtonsAfter;
+                                        }
+                                        input[type="radio"]:checked:after {
+                                            @include formRadioButtonsChecked;
+                                        }
+                                        // input[type="radio"]:focus {
+                                        //     outline: max(1px, 0.15em) solid $primary;
+                                        //     outline-offset: max(2px, 0.15em);
+                                        // }
+                                    }
+                                }
+                                .box-wrap>.radio-btn-wrapper:first-of-type span {
+                                    margin-right: 1rem;
                                 }
                             }
-                        }
-                        .rowspan.child {
-                            @include naRowspanContainer;
-                            .input-wrapper:last-of-type {
+                            .rowspan-2.child {
+                                display: grid;
+                                grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+                                gap: 0 2rem;
                                 // * Add/Sub Button 
-                                display: flex;
-                                flex-direction: row;
-                                align-items: flex-end;
-                                button {
-                                    @include addOrSubButton;
-                                    margin-bottom: $spacing-small;
-                                    transition: all ease-in-out 100ms;
+                                .input-wrapper:first-of-type {
+                                    // * Input Global Styles
+                                    input {
+                                        @include inputField;
+                                        width: 100%;
+                                    }
                                 }
-                                button:hover {
-                                    background: rgba(0, 0, 0, 0.125);
-                                    background-blend-mode: darken;
-                                }
-                                button:active {
-                                    transform: translateY(4px);
-                                }
-                                button:last-of-type {
-                                    margin-left: $spacing-2x-large;
+                                .input-wrapper:last-of-type {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: flex-end;
+                                    gap: 2rem;
+                                    button {
+                                        @include addOrSubButton;
+                                        margin-bottom: $spacing-small;
+                                        transition: all ease-in-out 100ms;
+                                    }
+                                    button:hover {
+                                        background: rgba(0, 0, 0, 0.125);
+                                        background-blend-mode: darken;
+                                    }
+                                    button:active {
+                                        transform: translateY(4px);
+                                    }
+                                    // button:first-of-type {
+                                    //     margin-left: $spacing-2x-large;
+                                    // }
                                 }
                             }
                         }
@@ -1170,7 +1175,7 @@
                 }
             }
             // * Container 2: File Attachments and Monthly Bills
-            .na-container-2 {
+            .na-container-10 {
                 width: calc(100% - 35%);
                 height: 100%;
                 padding: 2rem 2rem 2rem 1rem;
