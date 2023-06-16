@@ -219,3 +219,53 @@ function subProperty() {
 }
 
 // ***** END ---- Add and Subtract Property ***** //
+
+
+// ***** Add and Subtract Appliances ***** //
+
+// * Add Appliances
+function addAppliances() {
+    const appliancesForm = document.querySelector('[data-appliances]')
+    const appliancesContainer = document.querySelector('[data-appliances-container]')
+
+    const clone = appliancesForm.cloneNode(true)
+    appliancesContainer.appendChild(clone)
+
+}
+
+// * Subtract Appliances
+function subAppliances() {
+    const appliancesForm = document.querySelector('[data-appliances]')
+
+    if (appliancesForm.nextSibling != null) {
+        appliancesForm.remove()
+    }
+
+}
+
+// ***** END ---- Add and Subtract Appliances ***** //
+
+
+// ***** Add and Subtract Bank ***** //
+
+// * Add Bank
+function addBank() {
+    const bankForm = document.querySelector('[data-bank]')
+    const bankContainer = document.querySelector('[data-bank-container]')
+
+    const clone = bankForm.cloneNode(true)
+    bankContainer.appendChild(clone)
+
+}
+
+// * Subtract Bank
+function subBank() {
+    const bankForm = document.querySelector('[data-bank]')
+
+    if (bankForm.nextSibling != null) {
+        bankForm.remove()
+    }
+
+}
+
+// ***** END ---- Add and Subtract Bank ***** //

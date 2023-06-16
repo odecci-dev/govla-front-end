@@ -3356,7 +3356,7 @@ table {
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 {
   height: 100%;
   width: 100%;
-  padding: 5rem 4rem 4rem 4rem;
+  padding: 4rem;
   border-radius: 1.5rem;
   background-color: #FFFFFF;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -3517,7 +3517,7 @@ table {
   height: 100%;
   padding: 2rem 2rem 2rem 1rem;
 }
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con {
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 {
   height: 100%;
   width: 100%;
   display: grid;
@@ -3528,10 +3528,72 @@ table {
   grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
   gap: 2rem 0px;
 }
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con .box-wrap {
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 0.4fr) minmax(0, 1fr);
+  gap: 20px 0px;
+  align-items: end;
   padding: min(3rem, 5%) min(4rem, 10%);
   border-radius: 1.5rem;
   background-color: #FFFFFF;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan:first-of-type h2 {
+  font-size: 2.5rem;
+}
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan.child {
+  display: grid;
+  align-items: end;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 2fr) minmax(0, 1fr);
+  gap: 0px 20px;
+}
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan.child .input-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan.child .input-wrapper > span {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan.child .input-wrapper input {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #EBEBEB;
+  border-radius: 1rem;
+  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan.child .input-wrapper:last-of-type {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 2rem;
+}
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan.child .input-wrapper:last-of-type button {
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 700;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0.5rem;
+  transition: all ease-in-out 100ms;
+}
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan.child .input-wrapper:last-of-type button:hover {
+  background: rgba(0, 0, 0, 0.125);
+  background-blend-mode: darken;
+}
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan.child .input-wrapper:last-of-type button:active {
+  transform: translateY(4px);
 }/*# sourceMappingURL=app.css.map */

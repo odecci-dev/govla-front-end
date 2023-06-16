@@ -184,4 +184,9 @@ Second Commmit:
 - in Family Background Information Form
 - and in Assets and Properties
 • Modified some Mixins (_mixins.scss)
-- New Application Grid layouts for Assets anf Properties
+- New Application Grid layouts for Assets and Properties
+
+Third Commmit:
+• New Application: Completed Appliances and Bank Accounts Field Section 
+- New Application Grid layouts for Appliances and Bank Accounts Field Section 
+- Add and Subtract Button Functions (app.js)
