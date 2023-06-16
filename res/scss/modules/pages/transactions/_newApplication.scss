@@ -1249,5 +1249,56 @@
                 }
             }
         }
+        // * Container 10: Signature Input Fields
+        .na-container-10 {
+            height: calc(100% - 50%);
+            width: 100%;
+            padding: 2rem;
+            .small-con-7 {
+                height: 100%;
+                width: 100%;
+                @include naSmallContainerGrid3;
+                @include containerDefault2;
+                padding: 3rem 4rem 3rem 4rem;
+                .rowspan {
+                    min-height: 0;
+                    /* NEW */
+                    min-width: 0;
+                    /* NEW; needed for Firefox */
+                    .input-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        >span {
+                            margin-bottom: 1rem;
+                            font-weight: $font-weight-bold;
+                            font-size: $font-size;
+                        }
+                        // * Input Global Styles
+                        input {
+                            @include inputField;
+                            height: $spacing-8x-large;
+                        }
+                    }
+                }
+                // * Rowspan Header
+                .rowspan:first-of-type {
+                    .input-wrapper {
+                        @include naSmallcon3Rowspan1;
+                        h2 {
+                            font-size: $font-size-x-large;
+                        }
+                        span {
+                            color: $primary;
+                            text-align: right;
+                            font-size: $font-size-x-large;
+                        }
+                    }
+                }
+                // * Rowspan 2: Applied Loan Amount, Terms Of Payment and Purpose
+                .rowspan:nth-of-type(2) {
+                    @include naSmallcon3Rowspan2;
+                }
+            }
+        }
     }
 }

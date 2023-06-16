@@ -190,3 +190,6 @@ Third Commmit:
 • New Application: Completed Appliances and Bank Accounts Field Section 
 - New Application Grid layouts for Appliances and Bank Accounts Field Section 
 - Add and Subtract Button Functions (app.js)
+
+Fourth Commmit:
+• New Application: Started the Signature Field Section
