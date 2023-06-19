@@ -193,3 +193,9 @@ Third Commmit:
 
 Fourth Commmit:
 • New Application: Started the Signature Field Section
+
+
+June 18, 2023 (Monday)
+First Commit:
+• New Application: Completed Signature Field Section
+- Added SCSS Functions for advance positioning (_functions.scss)

@@ -1251,14 +1251,13 @@
         }
         // * Container 10: Signature Input Fields
         .na-container-10 {
-            height: calc(100% - 50%);
+            height: calc(100% - 40%);
             width: 100%;
             padding: 2rem;
             .small-con-7 {
                 height: 100%;
                 width: 100%;
-                @include naSmallContainerGrid3;
-                @include containerDefault2;
+                @include naSmallContainerGrid4;
                 padding: 3rem 4rem 3rem 4rem;
                 .rowspan {
                     min-height: 0;
@@ -1283,7 +1282,6 @@
                 // * Rowspan Header
                 .rowspan:first-of-type {
                     .input-wrapper {
-                        @include naSmallcon3Rowspan1;
                         h2 {
                             font-size: $font-size-x-large;
                         }
@@ -1294,9 +1292,97 @@
                         }
                     }
                 }
-                // * Rowspan 2: Applied Loan Amount, Terms Of Payment and Purpose
+                // * Rowspan 2: Applicant Signature Pad, Co-Maker Signature Pad and Buttons
                 .rowspan:nth-of-type(2) {
-                    @include naSmallcon3Rowspan2;
+                    @include naSmallcon3Rowspan1;
+                    .box-wrapper {
+                        @include displayGrid;
+                        grid-template-rows: minmax(0, 2fr) minmax(0, 0.4fr);
+                        gap: $spacing-2x-large 0px;
+                        .input-wrapper:nth-of-type(1) {
+                            position: relative;
+                            height: clamp(10rem, 20vh, 40vh);
+                            // * For Signature Pad
+                            .signature-wrapper {
+                                border: 1px solid $font-accent;
+                                border-right: 0;
+                                canvas.signature-pad {
+                                    background: #fff;
+                                    width: 100%;
+                                    height: 100%;
+                                    cursor: crosshair;
+                                }
+                            }
+                            // * For Signature Pad
+                            .clear-btn {
+                                position: absolute;
+                                height: 100%;
+                                right: 0;
+                                button[type="button"] {
+                                    width: 5rem;
+                                    position: relative;
+                                    height: 100%;
+                                    background: $font-accent;
+                                    color: #fff;
+                                    font-weight: $font-weight-bold;
+                                    cursor: pointer;
+                                    transition: ease-in-out 200ms;
+                                    &:hover {
+                                        color: $black;
+                                        background: rgba($font-accent, 0.800)
+                                    }
+                                }
+                                button[type="button"] span {
+                                    position: absolute;
+                                    top: 30%;
+                                    left: 70%;
+                                    transform-origin: 0 0;
+                                    transform: rotate(90deg);
+                                    text-transform: uppercase;
+                                    letter-spacing: .5rem;
+                                }
+                            }
+                            // * For Signature Image Input
+                            .signature-wrapper-2 {
+                                position: relative;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                border: 1px solid $font-accent;
+                                // input[type="image"] {
+                                //     height: 100%;
+                                //     width: 100%;
+                                //     box-shadow: none;
+                                //     background: none;
+                                //     font-size: 0;
+                                // }
+                                img {
+                                    height: 100%;
+                                    width: 100%;
+                                    box-shadow: none;
+                                    background: none;
+                                    font-size: 0;
+                                }
+                                span {
+                                    position: absolute;
+                                    bottom: 2rem;
+                                    font-size: $font-size-large;
+                                    font-weight: $font-weight-bold;
+                                    font-style: italic;
+                                }
+                            }
+                        }
+                        // * Signature Field Buttons
+                        .input-wrapper:nth-of-type(2) {
+                            padding: 0 15rem;
+                            button {
+                                @include primaryButton;
+                                display: flex;
+                                justify-content: center;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
                 }
             }
         }

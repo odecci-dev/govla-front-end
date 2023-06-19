@@ -269,3 +269,30 @@ function subBank() {
 }
 
 // ***** END ---- Add and Subtract Bank ***** //
+
+// ***** Signature Pad ***** //
+
+// let canvas = document.querySelectorAll(".signature-pad").forEach((e) => {
+
+//     function resizeCanvas() {
+//         let ratio = Math.max(window.devicePixelRatio || 1, 1);
+//         e.width = e.offsetWidth * ratio;
+//         e.height = e.offsetHeight * ratio;
+//         e.getContext("2d").scale(ratio, ratio);
+//     }
+//     window.onresize = resizeCanvas;
+//     resizeCanvas();
+
+//     let signaturePad = new SignaturePad(e, {
+//         backgroundColor: 'rgb(250,250,250)'
+//     });
+
+//     document.getElementById("clearAppSig").addEventListener('click', function() {
+//         signaturePad.clear();
+//     })
+
+//     document.getElementById("clearCoSig").addEventListener('click', function() {
+//         signaturePad.clear();
+//     })
+
+// });
