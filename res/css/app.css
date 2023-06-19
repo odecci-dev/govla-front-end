@@ -7,7 +7,6 @@
 /* Animation */
 /* Buttons */
 /* Box Shadows */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 *,
 *::before,
 *::after {
@@ -1991,6 +1990,85 @@ table {
 .main-dashboard .na-form-con .na-progress-bar-container .progress-bar-level .level.approved {
   background-color: #D6A330;
   color: #67FF4E;
+}
+.main-dashboard .na-form-con .na-requirements-sec {
+  border-radius: 1.5rem;
+  background-color: #FFFFFF;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
+  margin: 2rem 2rem;
+  padding: 5rem;
+  color: #FF0404;
+  font-style: italic;
+  font-weight: 500;
+}
+.main-dashboard .na-form-con .na-requirements-sec h5 {
+  font-size: 1.8rem;
+}
+.main-dashboard .na-form-con .na-requirements-sec h5 span {
+  font-size: 2rem;
+}
+.main-dashboard .na-form-con .na-notes-remarks-sec {
+  border-radius: 1.5rem;
+  background-color: #FFFFFF;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-rows: minmax(0.2fr) minmax(0, 1fr);
+  gap: 4rem 0;
+  margin: 2rem 2rem;
+  padding: 5rem;
+}
+.main-dashboard .na-form-con .na-notes-remarks-sec .wrapper-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-dashboard .na-form-con .na-notes-remarks-sec .wrapper-1 h3 {
+  font-size: 2.5rem;
+}
+.main-dashboard .na-form-con .na-notes-remarks-sec .wrapper-1 .btn-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.main-dashboard .na-form-con .na-notes-remarks-sec .wrapper-1 .btn-wrapper button:first-of-type {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.main-dashboard .na-form-con .na-notes-remarks-sec .wrapper-1 .btn-wrapper button:last-of-type {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  background: transparent;
+  color: #FF0404;
+  border: 1px solid #FF0404;
+  padding: 0.6rem 3.5rem 0.6rem 3.5rem;
+  transition: all 300ms ease-in-out;
+}
+.main-dashboard .na-form-con .na-notes-remarks-sec .wrapper-1 .btn-wrapper button:last-of-type:hover {
+  background-color: #FF0404;
+  color: #FFFFFF;
+}
+.main-dashboard .na-form-con .na-notes-remarks-sec .wrapper-2 {
+  padding: 4rem;
+  height: 100%;
+  border-radius: 2rem;
+  background-color: #EBEBEB;
+  color: #8C8686;
+  font-size: 2rem;
+  font-weight: 500;
 }
 .main-dashboard .na-form-con .na-container-wrapper {
   height: 120%;

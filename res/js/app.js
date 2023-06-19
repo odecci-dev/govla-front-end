@@ -90,21 +90,35 @@ document.addEventListener("click", e => {
 
 })
 
-document.addEventListener('click', _ => {
-    const ciButton = document.querySelector('[data-proceed-to-ci]')
+function ciButton() {
+    // const ciButton = document.querySelector('[data-proceed-to-ci]')
     const level2 = document.querySelectorAll('[data-level-2]')
 
     if (ciButton) {
 
         level2.forEach((e) => {
 
-            e.classList.toggle("active")
+            e.classList.add("active")
 
         })
 
     }
+}
+// document.addEventListener('click', _ => {
+//     const ciButton = document.querySelector('[data-proceed-to-ci]')
+//     const level2 = document.querySelectorAll('[data-level-2]')
 
-})
+//     if (ciButton) {
+
+//         level2.forEach((e) => {
+
+//             e.classList.toggle("active")
+
+//         })
+
+//     }
+
+// })
 
 // * Civil Status Selector Form Toggle
 document.addEventListener('change', _ => {

@@ -204,3 +204,12 @@ Second Commit:
 • New Application: Form Progress Bar
 - Added a function for progress tracking (app.js)
 - TODO: CI Page, Approval and Releasing
+
+Third Commit:
+• New Application: CI Page
+- Created a new HTML Page (new-application-credit-investigation.html)
+- Added new required HTML Elemnts
+- Added new styles in SCSS + New decline button Mixin
+- Updated the imported Google Fonts
+    - The import url was embedded to the _typography.scss (from _base.scss to _typography.scss)
+    - Added new font variable in the _variables.scss
