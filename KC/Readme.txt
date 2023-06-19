@@ -199,3 +199,8 @@ June 18, 2023 (Monday)
 First Commit:
 • New Application: Completed Signature Field Section
 - Added SCSS Functions for advance positioning (_functions.scss)
+
+Second Commit:
+• New Application: Form Progress Bar
+- Added a function for progress tracking (app.js)
+- TODO: CI Page, Approval and Releasing

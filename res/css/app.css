@@ -1949,8 +1949,9 @@ table {
   grid-auto-flow: row dense;
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-rows: minmax(0, 1fr);
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-  gap: 0 20rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0 1rem;
+  align-items: center;
 }
 .main-dashboard .na-form-con .na-progress-bar-container .progress-bar-level .level {
   border-radius: 1rem;
@@ -1968,15 +1969,28 @@ table {
   align-items: center;
   text-align: center;
   border-radius: 10rem;
-}
-.main-dashboard .na-form-con .na-progress-bar-container .progress-bar-level .progress-bar {
-  position: absolute;
   background-color: #E0DFDF;
-  width: 100%;
-  height: 2rem;
-  top: 40%;
-  border-radius: 10rem;
+  color: #29292B;
+  height: 100%;
+  transition: all 400ms ease;
+}
+.main-dashboard .na-form-con .na-progress-bar-container .progress-bar-level .line {
+  position: relative;
+  transform: translateX(-1.5rem);
   z-index: -1;
+  width: 115%;
+  height: 1.5rem;
+  background-color: #E0DFDF;
+  transition: all 400ms ease;
+}
+.main-dashboard .na-form-con .na-progress-bar-container .progress-bar-level .line.active,
+.main-dashboard .na-form-con .na-progress-bar-container .progress-bar-level .level.active {
+  background-color: #D6A330;
+  color: #FFFFFF;
+}
+.main-dashboard .na-form-con .na-progress-bar-container .progress-bar-level .level.approved {
+  background-color: #D6A330;
+  color: #67FF4E;
 }
 .main-dashboard .na-form-con .na-container-wrapper {
   height: 120%;

@@ -239,11 +239,25 @@
                 <!-- * New Application Progress Bar Container -->
                 <div class="na-progress-bar-container">
                     <div class="progress-bar-level">
-                        <div class="level"><span>Registration</span></div>
-                        <div class="level"><span>Credit<br>Investigation</span></div>
-                        <div class="level"><span>Approval</span></div>
-                        <div class="level"><span>Releasing</span></div>
-                        <div class="progress-bar"></div>
+                        <div class="level level1 active">
+                            <span>Registration</span>
+                        </div>
+                        <div class="line" data-level-2></div>
+                        <div class="level" data-level-2>
+                            <span>Credit<br>Investigation</span>
+                        </div>
+
+                        <!-- TODO: Form Progress -->
+                        <div class="line line3"></div>
+                        <div class="level level3">
+                            <span>Approval</span>
+                        </div>
+
+                        <!-- TODO: Form Progress -->
+                        <div class="line line3"></div>
+                        <div class="level level4">
+                            <span>Releasing</span>
+                        </div>
 
                     </div>
                 </div>
@@ -267,10 +281,10 @@
                                 <div class="btn-wrapper">
 
                                     <!-- * Save -->
-                                    <button>Save</button>
+                                    <button type="button" id="saveBtn" data-save>Save</button>
 
                                     <!-- * Save & Apply for loan  -->
-                                    <button>Save & Proceed to CI</button>
+                                    <button type="button" id="proceedToCI" data-proceed-to-ci>Save & Proceed to CI</button>
 
                                 </div>
 

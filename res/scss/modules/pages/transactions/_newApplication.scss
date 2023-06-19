@@ -26,8 +26,9 @@
                 grid-auto-flow: row dense;
                 grid-auto-columns: minmax(0, 1fr);
                 grid-auto-rows: minmax(0, 1fr);
-                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-                gap: 0 calc($spacing-10x-large * 2);
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+                gap: 0 1rem;
+                align-items: center;
                 .level {
                     @include progressBarButton;
                     display: flex;
@@ -36,15 +37,28 @@
                     align-items: center;
                     text-align: center;
                     border-radius: $border-radius-xxx-large;
-                }
-                .progress-bar {
-                    position: absolute;
                     background-color: $secondary-bg;
-                    width: 100%;
-                    height: 2rem;
-                    top: 40%;
-                    border-radius: $border-radius-xxx-large;
+                    color: $black;
+                    height: 100%;
+                    transition: all 400ms ease;
+                }
+                .line {
+                    position: relative;
+                    transform: translateX(-1.5rem);
                     z-index: -1;
+                    width: 115%;
+                    height: 1.5rem;
+                    background-color: $secondary-bg;
+                    transition: all 400ms ease;
+                }
+                .line.active,
+                .level.active {
+                    background-color: $primary;
+                    color: $white;
+                }
+                .level.approved {
+                    background-color: $primary;
+                    color: $green
                 }
             }
         }

@@ -90,6 +90,22 @@ document.addEventListener("click", e => {
 
 })
 
+document.addEventListener('click', _ => {
+    const ciButton = document.querySelector('[data-proceed-to-ci]')
+    const level2 = document.querySelectorAll('[data-level-2]')
+
+    if (ciButton) {
+
+        level2.forEach((e) => {
+
+            e.classList.toggle("active")
+
+        })
+
+    }
+
+})
+
 // * Civil Status Selector Form Toggle
 document.addEventListener('change', _ => {
     const famBGFormSingle = document.querySelector('[data-family-background-single]')
