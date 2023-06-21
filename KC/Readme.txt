@@ -238,3 +238,8 @@ Third Commit:
 - Made .declineButton (_mixins.scss)
 - Made .releaseButton (_mixins.scss)
 • Changed the hex of variable $green from (_variables.scss)
+
+Fourth Commit:
+• New Application Releasing: Progress Bar Indicator
+- Made the release level green while in Releasing Page
+- Added activeGreen class 

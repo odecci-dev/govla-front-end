@@ -68,6 +68,13 @@ table {
     transition: all 200ms ease-in-out;
 }
 
+.activeGreen {
+    display: block;
+    background-color: $green;
+    color: $white;
+    transition: all 200ms ease-in-out;
+}
+
 .button {
     @include primaryButton;
     &:hover {

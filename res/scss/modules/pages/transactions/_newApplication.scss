@@ -57,9 +57,9 @@
                     background-color: $primary;
                     color: $white;
                 }
-                .level.approved {
-                    background-color: $primary;
-                    color: $green
+                .level.activeGreen {
+                    background-color: $green;
+                    color: $white;
                 }
             }
         }

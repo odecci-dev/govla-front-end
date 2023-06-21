@@ -75,6 +75,13 @@ table {
   transition: all 200ms ease-in-out;
 }
 
+.activeGreen {
+  display: block;
+  background-color: #36A623;
+  color: #FFFFFF;
+  transition: all 200ms ease-in-out;
+}
+
 .button {
   border-radius: 1rem;
   padding: 0.8rem 4rem 0.8rem 4rem;
@@ -2082,9 +2089,9 @@ table {
   background-color: #D6A330;
   color: #FFFFFF;
 }
-.main-dashboard .na-form-con .na-progress-bar-container .progress-bar-level .level.approved {
-  background-color: #D6A330;
-  color: #36A623;
+.main-dashboard .na-form-con .na-progress-bar-container .progress-bar-level .level.activeGreen {
+  background-color: #36A623;
+  color: #FFFFFF;
 }
 .main-dashboard .na-form-con .na-requirements-sec {
   border-radius: 1.5rem;
