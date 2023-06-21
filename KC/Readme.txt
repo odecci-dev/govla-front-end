@@ -246,3 +246,8 @@ Fourth Commit:
 
 Fifth Commit:
 • Created new HTML for New Application Group (new-application-group.html)
+
+Sixth Commit:
+• Completed the New Application Group
+- Completed the layout for New Application Group
+- TODO: Modal for add new member for the group 

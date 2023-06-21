@@ -1503,5 +1503,240 @@
                 }
             }
         }
+        // * New Group Application: Container 1 
+        .na-container-group-1 {
+            height: calc(100% - 50%);
+            width: 100%;
+            padding: 2rem;
+            .small-con-3 {
+                height: 100%;
+                width: 100%;
+                @include containerDefault2;
+                padding: 3rem 4rem 3rem 4rem;
+                .rowspan {
+                    min-height: 0;
+                    /* NEW */
+                    min-width: 0;
+                    /* NEW; needed for Firefox */
+                    .input-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        >span {
+                            margin-bottom: 1rem;
+                            font-weight: $font-weight-bold;
+                            font-size: $font-size;
+                        }
+                        // * Input Global Styles
+                        input {
+                            @include inputField;
+                        }
+                    }
+                }
+                // * Rowspan Header
+                .rowspan:first-of-type {
+                    .input-wrapper {
+                        display: grid;
+                        align-items: center;
+                        grid-template-columns: minmax(0, 0.25fr) minmax(0, 1.7fr);
+                        gap: 0 2rem;
+                        h2 {
+                            font-size: $font-size-x-large;
+                        }
+                    }
+                }
+            }
+        }
+        // * New Group Application: Container 2 
+        .na-container-group-2 {
+            height: calc(100% - 26%);
+            margin: 2rem;
+            // * Table Container
+            .table-container {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                border-radius: $border-radius-large;
+                box-shadow: $box-shadow-2;
+                padding: $spacing-4x-large $spacing-4x-large $spacing-2x-large $spacing-4x-large;
+                // * Add Member Button
+                .btn-wrapper {
+                    margin-bottom: 2rem;
+                }
+                // * Group Table
+                table {
+                    // **                         ** //
+                    // **** Table Header Styles **** //
+                    // **                         ** //
+                    th {
+                        padding: 2rem 0;
+                        text-align: center;
+                        span.th-name {
+                            font-size: calc($font-size-large + .2rem);
+                            font-weight: $font-weight-bold;
+                        }
+                        .th-wrapper {
+                            display: flex;
+                            align-items: center;
+                            img {
+                                cursor: pointer;
+                                padding-left: .5rem;
+                            }
+                        }
+                    }
+                    // * Table Checkbox
+                    input[type="checkbox"] {
+                        @include tableCheckboxInput;
+                    }
+                    input[type="checkbox"]::after {
+                        content: url('../assets/icons/white-check.svg');
+                        position: absolute;
+                        top: .1rem;
+                        display: none;
+                    }
+                    input[type="checkbox"]:checked {
+                        background-color: $primary;
+                    }
+                    input[type="checkbox"]:checked:after {
+                        display: block;
+                    }
+                    // * All table header except the last child
+                    th:nth-of-type(-n+6) {
+                        text-align: left;
+                    }
+                    // * Table Checkbox
+                    th:first-of-type {
+                        padding-left: 1rem;
+                    }
+                    // * Borrower
+                    th:nth-of-type(2) {
+                        padding-left: 1rem;
+                    }
+                    th:last-of-type {
+                        text-align: center;
+                    }
+                    // **                       ** //
+                    // **** Table Data Styles **** //
+                    // **                       ** //
+                    td {
+                        padding: $spacing-medium 0;
+                        font-size: $font-size-medium;
+                        // * Borrowers' Data Styles
+                        .td-wrapper {
+                            display: flex;
+                            align-items: center;
+                            // .td-num {
+                            //     font-weight: $font-weight-bold;
+                            //     margin-left: 1rem;
+                            // }
+                            .td-name {
+                                margin-left: 2rem;
+                            }
+                        }
+                        // * Table Buttons Styles
+                        .td-btn-wrapper {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 0 1rem;
+                            button {
+                                cursor: pointer;
+                            }
+                            // * Table View Button 
+                            // * Table Trash Button
+                            .a-btn-view,
+                            .a-btn-trash {
+                                @include secondaryButton;
+                            }
+                        }
+                    }
+                    // // * Due Date Data
+                    // .td-due {
+                    //     font-weight: $font-weight-bold;
+                    // }
+                    td:first-of-type {
+                        padding-left: 1rem;
+                    }
+                    td:nth-of-type(2) {
+                        padding-left: 1rem;
+                    }
+                }
+                // * Pagination Container
+                .pagination-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: right;
+                    padding-top: 3rem;
+                    height: calc(100% - 90%);
+                    margin-top: 2rem;
+                    // * Pagination Links
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: $font-size-large;
+                        font-weight: $font-weight-bold;
+                        margin: 0 $spacing-small;
+                        color: $black;
+                    }
+                    a:first-of-type {
+                        margin-right: $spacing-6x-large;
+                    }
+                    a:last-of-type {
+                        margin-left: $spacing-6x-large;
+                    }
+                }
+            }
+        }
+        // * New Group Application: Container 3 
+        .na-container-group-3 {
+            height: calc(100% - 50%);
+            width: 100%;
+            padding: 2rem;
+            .small-con-3 {
+                height: 100%;
+                width: 100%;
+                @include naSmallContainerGrid3;
+                @include containerDefault2;
+                padding: 3rem 4rem 3rem 4rem;
+                .rowspan {
+                    min-height: 0;
+                    /* NEW */
+                    min-width: 0;
+                    /* NEW; needed for Firefox */
+                    .input-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        >span {
+                            margin-bottom: 1rem;
+                            font-weight: $font-weight-bold;
+                            font-size: $font-size;
+                        }
+                        // * Input Global Styles
+                        input {
+                            @include inputField;
+                            height: $spacing-8x-large;
+                        }
+                    }
+                }
+                // * Rowspan Header
+                .rowspan:first-of-type {
+                    .input-wrapper {
+                        @include naSmallcon3Rowspan1;
+                        h2 {
+                            font-size: $font-size-x-large;
+                        }
+                        span {
+                            color: $primary;
+                            text-align: right;
+                            font-size: $font-size-x-large;
+                        }
+                    }
+                }
+                // * Rowspan 2: Applied Loan Amount, Terms Of Payment and Purpose
+                .rowspan:nth-of-type(2) {
+                    @include naSmallcon3Rowspan2;
+                }
+            }
+        }
     }
 }
