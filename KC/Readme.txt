@@ -227,3 +227,14 @@ First Commit:
 Second Commit:
 • New Application: Completed the Approval Page
 - Linked the submit for approval button from CI Page to Approval
+
+Third Commit:
+• Created new HTML for New Application Releasing (new-application-releasing.html)
+• New Application: Completed the Releasing Page
+- Linked the approve for releasing button from Approval Page to Releasing
+- Responsive progress bar level 
+• Custom className for Buttons (_base.scss):
+- Made .button
+- Made .declineButton (_mixins.scss)
+- Made .releaseButton (_mixins.scss)
+• Changed the hex of variable $green from (_variables.scss)

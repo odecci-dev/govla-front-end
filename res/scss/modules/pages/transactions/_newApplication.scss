@@ -11,6 +11,7 @@
         flex-direction: column;
         height: 100%;
         width: 100%;
+        // * New Application: Progress Bar
         .na-progress-bar-container {
             height: 30%;
             display: grid;
@@ -62,6 +63,7 @@
                 }
             }
         }
+        // * New Application: Requirements Section
         .na-requirements-sec {
             @include containerDefault2;
             margin: 2rem 2rem;
@@ -76,6 +78,7 @@
                 }
             }
         }
+        // * New Application: Notes and Remarks Section
         .na-notes-remarks-sec {
             @include containerDefault2;
             display: grid;
@@ -94,15 +97,6 @@
                     display: flex;
                     flex-wrap: wrap;
                     gap: $spacing-2x-large;
-                    button:first-of-type {
-                        @include primaryButton;
-                    }
-                    button:last-of-type {
-                        @include declineButton;
-                        &:hover {
-                            @include declineButtonHover
-                        }
-                    }
                 }
             }
             .wrapper-2 {
@@ -115,13 +109,14 @@
                 font-weight: $font-weight-medium;
             }
         }
+        // * New Application: Approval Section
         .na-approval-sec {
             @include containerDefault2;
             display: grid;
-            grid-template-rows: minmax(0.2fr) minmax(0, 1fr);
-            gap: $spacing-4x-large 0;
+            grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)minmax(0, 1fr);
+            gap: $spacing-2x-large 0;
             margin: 2rem 2rem;
-            padding: 5rem;
+            padding: 4rem;
             .rowspan {
                 display: grid;
                 align-items: center;
@@ -139,8 +134,18 @@
                     input {
                         @include inputField;
                     }
-                    button {
-                        @include primaryButton;
+                    .button {
+                        width: 100%;
+                        padding: 1rem;
+                        margin-top: 2rem;
+                    }
+                    button.declineButton {
+                        width: 50%;
+                        padding: 1rem;
+                        margin-top: 2rem;
+                    }
+                    button.releaseButton {
+                        padding: 1rem;
                         margin-top: 2rem;
                     }
                 }
@@ -154,12 +159,9 @@
                 }
             }
             .rowspan:last-of-type {
-                button {
-                    @include declineButton;
-                    padding: 1rem 3rem;
-                    &:hover {
-                        @include declineButtonHover;
-                    }
+                .input-wrapper:last-of-type {
+                    display: flex;
+                    align-items: center;
                 }
             }
         }

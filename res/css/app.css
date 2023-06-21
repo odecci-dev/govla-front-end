@@ -72,7 +72,85 @@ table {
   display: block;
   background-color: #D6A330;
   color: #FFFFFF;
-  transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.button {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.button:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
+
+.declineButton {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  box-shadow: none;
+  background: transparent;
+  color: #FF0404;
+  border: 1px solid #FF0404;
+  padding: 0.6rem 3.5rem 0.6rem 3.5rem;
+  transition: all 200ms ease-in-out;
+}
+.declineButton:hover {
+  background-color: #FF0404;
+  color: #FFFFFF;
+}
+
+.releaseButton {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  box-shadow: none;
+  background: transparent;
+  color: #FF0404;
+  border: 1px solid #FF0404;
+  padding: 0.6rem 3.5rem 0.6rem 3.5rem;
+  transition: all 200ms ease-in-out;
+  border: 1px solid #36A623;
+  color: #36A623;
+}
+.releaseButton:hover {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  box-shadow: none;
+  background: transparent;
+  color: #FF0404;
+  border: 1px solid #FF0404;
+  padding: 0.6rem 3.5rem 0.6rem 3.5rem;
+  transition: all 200ms ease-in-out;
+  border: 1px solid #36A623;
+  background-color: #36A623;
+  color: #FFFFFF;
 }
 
 .nav {
@@ -378,6 +456,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
 }
 .main-dashboard .con-wrapper .md-con-2 .big-card .div-1 .btn-wrapper button:first-child {
   padding: 0.8rem 4rem 0.8rem 4rem;
@@ -499,7 +578,7 @@ table {
 }
 .main-dashboard .con-wrapper .md-con-3 .card-2:first-child .div-2 .circle-div ~ p span {
   font-weight: 700;
-  color: #67FF4E;
+  color: #36A623;
 }
 .main-dashboard .con-wrapper .md-con-3 .card-2:first-child .div-2 .circle-div::before {
   content: "";
@@ -567,6 +646,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
 }
 
 .login-container {
@@ -710,6 +790,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
 }
 .main-dashboard .am-con-1 .container .wrapper:first-of-type button a {
   color: #FFFFFF;
@@ -927,6 +1008,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
   padding: 0.6rem 3.5rem 0.6rem 3.5rem;
 }
 .main-dashboard .am-con-2 .table-container table td .td-btn-wrapper .a-btn-trash {
@@ -1143,6 +1225,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
 }
 .main-dashboard .nm-form-con .nm-container-wrapper .nm-container-1 .big-con .rowspan:first-of-type .btn-wrapper button:first-of-type {
   margin-right: 1.5rem;
@@ -1257,6 +1340,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
   margin-bottom: 2rem;
   white-space: nowrap;
 }
@@ -1817,6 +1901,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
 }
 .main-dashboard .nm-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(4) .btn-wrapper button:first-of-type {
   margin-right: 1.5rem;
@@ -1877,6 +1962,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
   padding: 0.4rem 3.5rem 0.4rem 3.5rem;
   font-size: calc(1.2rem + 1px);
 }
@@ -1889,6 +1975,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
   padding: 0.4rem 3.5rem 0.4rem 3.5rem;
   font-size: calc(1.2rem + 1px);
 }
@@ -1968,6 +2055,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
   padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
@@ -1996,7 +2084,7 @@ table {
 }
 .main-dashboard .na-form-con .na-progress-bar-container .progress-bar-level .level.approved {
   background-color: #D6A330;
-  color: #67FF4E;
+  color: #36A623;
 }
 .main-dashboard .na-form-con .na-requirements-sec {
   border-radius: 1.5rem;
@@ -2039,36 +2127,6 @@ table {
   flex-wrap: wrap;
   gap: 2rem;
 }
-.main-dashboard .na-form-con .na-notes-remarks-sec .wrapper-1 .btn-wrapper button:first-of-type {
-  border-radius: 1rem;
-  padding: 0.8rem 4rem 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-}
-.main-dashboard .na-form-con .na-notes-remarks-sec .wrapper-1 .btn-wrapper button:last-of-type {
-  border-radius: 1rem;
-  padding: 0.8rem 4rem 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  box-shadow: none;
-  background: transparent;
-  color: #FF0404;
-  border: 1px solid #FF0404;
-  padding: 0.6rem 3.5rem 0.6rem 3.5rem;
-  transition: all 300ms ease-in-out;
-}
-.main-dashboard .na-form-con .na-notes-remarks-sec .wrapper-1 .btn-wrapper button:last-of-type:hover {
-  background-color: #FF0404;
-  color: #FFFFFF;
-}
 .main-dashboard .na-form-con .na-notes-remarks-sec .wrapper-2 {
   padding: 4rem;
   height: 100%;
@@ -2084,10 +2142,10 @@ table {
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
   display: grid;
-  grid-template-rows: minmax(0.2fr) minmax(0, 1fr);
-  gap: 4rem 0;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem 0;
   margin: 2rem 2rem;
-  padding: 5rem;
+  padding: 4rem;
 }
 .main-dashboard .na-form-con .na-approval-sec .rowspan {
   display: grid;
@@ -2113,15 +2171,18 @@ table {
   border-radius: 1rem;
   box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.main-dashboard .na-form-con .na-approval-sec .rowspan .input-wrapper button {
-  border-radius: 1rem;
-  padding: 0.8rem 4rem 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
+.main-dashboard .na-form-con .na-approval-sec .rowspan .input-wrapper .button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.main-dashboard .na-form-con .na-approval-sec .rowspan .input-wrapper button.declineButton {
+  width: 50%;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.main-dashboard .na-form-con .na-approval-sec .rowspan .input-wrapper button.releaseButton {
+  padding: 1rem;
   margin-top: 2rem;
 }
 .main-dashboard .na-form-con .na-approval-sec .rowspan:first-of-type {
@@ -2132,26 +2193,9 @@ table {
 .main-dashboard .na-form-con .na-approval-sec .rowspan:first-of-type h3 {
   font-size: 2.5rem;
 }
-.main-dashboard .na-form-con .na-approval-sec .rowspan:last-of-type button {
-  border-radius: 1rem;
-  padding: 0.8rem 4rem 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  box-shadow: none;
-  background: transparent;
-  color: #FF0404;
-  border: 1px solid #FF0404;
-  padding: 0.6rem 3.5rem 0.6rem 3.5rem;
-  transition: all 300ms ease-in-out;
-  padding: 1rem 3rem;
-}
-.main-dashboard .na-form-con .na-approval-sec .rowspan:last-of-type button:hover {
-  background-color: #FF0404;
-  color: #FFFFFF;
+.main-dashboard .na-form-con .na-approval-sec .rowspan:last-of-type .input-wrapper:last-of-type {
+  display: flex;
+  align-items: center;
 }
 .main-dashboard .na-form-con .na-container-wrapper {
   height: 120%;
@@ -2311,6 +2355,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
 }
 .main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan:first-of-type .btn-wrapper button:first-of-type {
   margin-right: 1.5rem;
@@ -2425,6 +2470,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
   margin-bottom: 2rem;
   white-space: nowrap;
 }
@@ -2989,6 +3035,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
 }
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(4) .btn-wrapper button:first-of-type {
   margin-right: 1.5rem;
@@ -3049,6 +3096,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
   padding: 0.4rem 3.5rem 0.4rem 3.5rem;
   font-size: calc(1.2rem + 1px);
 }
@@ -3061,6 +3109,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
   padding: 0.4rem 3.5rem 0.4rem 3.5rem;
   font-size: calc(1.2rem + 1px);
 }
@@ -3324,6 +3373,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
 }
 .main-dashboard .na-form-con .na-container-5 .container-wrapper .big-con .rowspan:first-of-type .btn-wrapper button:first-of-type {
   margin-right: 1.5rem;
@@ -3431,6 +3481,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
   margin-bottom: 2rem;
   white-space: nowrap;
 }
@@ -3912,6 +3963,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
   display: flex;
   justify-content: center;
   white-space: nowrap;
