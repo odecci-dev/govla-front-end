@@ -1361,7 +1361,218 @@
 
                 </div>
 
-                <!-- * Container 4: Loan Details Input Fields -->
+                <!-- * Container 6 (Wrapper): Assets and Properties, Appliances and Bank Accounts -->
+                <div class="na-container-wrapper-3">
+
+                    <!-- * Container 9: Assets and Properties -->
+                    <div class="na-container-9">
+
+                        <!-- * Big Container -->
+                        <div class="big-con-2">
+
+                            <!-- * Form Header -->
+
+                            <!-- * Rowspan Container 1: Rowspan Header - Assets and Properties -->
+                            <div class="rowspan-container">
+
+                                <div class="rowspan">
+                                    <h2>Assets and Properties</h2>
+                                </div>
+
+                            </div>
+
+                            <!-- * Rowspan Container 2: Do you own motor vehicles? -->
+                            <div class="rowspan-container">
+                                <!-- * Rowspan 2: Do you own motor vehicles? -->
+                                <div class="rowspan" data-vehicle-container>
+
+                                    <!-- * Do you own motor vehicles? -->
+                                    <div class="input-wrapper">
+
+                                        <span>Do you own motor vehicles?</span>
+
+                                        <!-- * Form Toggle -->
+                                        <div class="box-wrap">
+
+                                            <!-- * Rented -->
+                                            <div class="radio-btn-wrapper">
+                                                <input autocomplete="off" type="radio" name="formToggle" value="formToggleYes" id="formToggleYes">
+                                                <span>Yes</span>
+                                            </div>
+
+                                            <!-- * Owned -->
+                                            <div class="radio-btn-wrapper">
+                                                <input autocomplete="off" type="radio" name="formToggle" value="formToggleNo" id="formToggleNo">
+                                                <span>No</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <span>If yes please specify,</span>
+
+                                    <!-- * Rowspan 3: Vehicle Input Field -->
+                                    <div class="rowspan-2 child" data-vehicle>
+
+                                        <!-- * Vehicle Input Field -->
+                                        <div class="input-wrapper">
+                                            <input autocomplete="off" type="text" id="ownVehicle" name="ownVehicle">
+                                        </div>
+
+                                        <!-- * Add and Subtract Button  -->
+                                        <div class="input-wrapper">
+                                            <button type="button" onclick="addVehicle()">+</button>
+                                            <button type="button" onclick="subVehicle()">-</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- * Rowspan Container 3: Do you own real property? -->
+                            <div class="rowspan-container">
+
+                                <!-- * Rowspan 4: Do you own real property? -->
+                                <div class="rowspan" data-property-container>
+
+                                    <!-- * Do you own real property? -->
+                                    <div class="input-wrapper">
+                                        <span>Do you own real property?</span>
+
+                                        <!-- * Form Toggle -->
+
+                                        <div class="box-wrap">
+
+                                            <!-- * Rented -->
+                                            <div class="radio-btn-wrapper">
+                                                <input autocomplete="off" type="radio" name="formToggle" value="formToggleYes" id="formToggleYes">
+                                                <span>Yes</span>
+                                            </div>
+
+                                            <!-- * Owned -->
+                                            <div class="radio-btn-wrapper">
+                                                <input autocomplete="off" type="radio" name="formToggle" value="formToggleNo" id="formToggleNo">
+                                                <span>No</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <span>If yes please specify,</span>
+                                    <!-- * Rowspan 5: Property Input Field -->
+                                    <div class="rowspan-2 child" data-property>
+
+                                        <!-- * Vehicle Input Field -->
+                                        <div class="input-wrapper">
+                                            <input autocomplete="off" type="text" id="nameOfSchool" name="nameOfSchool">
+                                        </div>
+
+                                        <!-- * Add and Subtract Button  -->
+                                        <div class="input-wrapper">
+                                            <button type="button" onclick="addProperty()">+</button>
+                                            <button type="button" onclick="subProperty()">-</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                    <!-- * Container 10: Appliances and Bank Accounts -->
+                    <div class="na-container-10">
+
+                        <!-- * Small Container -->
+                        <div class="small-con-6">
+
+                            <div class="box-wrap" data-appliances-container>
+
+                                <!-- * Rowspan 1: Appliances -->
+                                <div class="rowspan">
+
+                                    <h2>Appliances</h2>
+
+                                </div>
+
+
+                                <!-- * Rowspan 2: Appliances and Brand / Model -->
+                                <div class="rowspan child" data-appliances>
+
+                                    <!-- * Appliances -->
+                                    <div class="input-wrapper">
+                                        <span>Appliances</span>
+                                        <input autocomplete="off" type="number" id="appliances" name="appliances">
+                                    </div>
+
+                                    <!-- * Brand / Model -->
+                                    <div class="input-wrapper">
+                                        <span>Brand / Model</span>
+                                        <input autocomplete="off" type="text" id="brandModel" name="brandModel">
+                                    </div>
+
+                                    <!-- * Add and Subtract Button  -->
+                                    <div class="input-wrapper">
+                                        <button type="button" onclick="addAppliances()">+</button>
+                                        <button type="button" onclick="subAppliances()">-</button>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="box-wrap" data-bank-container>
+
+                                <!-- * Rowspan 3: Bank Accounts -->
+                                <div class="rowspan">
+
+                                    <h2>Bank Accounts</h2>
+
+                                </div>
+
+
+                                <!-- * Rowspan 4: Bank account and Address -->
+                                <div class="rowspan child" data-bank>
+
+                                    <!-- * Bank account -->
+                                    <div class="input-wrapper">
+                                        <span>Bank account</span>
+                                        <input autocomplete="off" type="bankAcc" id="bankAcc" name="appliances">
+                                    </div>
+
+                                    <!-- * Address -->
+                                    <div class="input-wrapper">
+                                        <span>Address</span>
+                                        <input autocomplete="off" type="bankAddr" id="bankAddr" name="brandModel">
+                                    </div>
+
+                                    <!-- * Add and Subtract Button  -->
+                                    <div class="input-wrapper">
+                                        <button type="button" onclick="addBank()">+</button>
+                                        <button type="button" onclick="subBank()">-</button>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <!-- * Container 7: Loan Details Input Fields -->
                 <div class="na-container-4">
 
                     <!-- * Small Container -->
@@ -1405,7 +1616,7 @@
 
                 </div>
 
-                <!-- * Container 5: Co-Maker New Application Form Fields -->
+                <!-- * Container 8: Co-Maker New Application Form Fields -->
                 <div class="na-container-wrapper-2">
 
                     <!-- * Container 5: New Application Form Fields and Buttons -->
@@ -1650,7 +1861,7 @@
 
                 </div>
 
-                <!-- * Container 6: Co-Maker Job Information Input Fields -->
+                <!-- * Container 9: Co-Maker Job Information Input Fields -->
                 <div class="na-container-3">
 
                     <!-- * Small Container -->
@@ -1755,7 +1966,7 @@
 
                 </div>
 
-                <!-- * Container 7: Payment History Table -->
+                <!-- * Container 10: Payment History Table -->
                 <div class="na-container-7">
 
                     <!-- * Small Container -->
@@ -1814,7 +2025,7 @@
 
                 </div>
 
-                <!-- * Container 8: Loan History Table -->
+                <!-- * Container 11: Loan History Table -->
                 <div class="na-container-8">
 
                     <!-- * Small Container -->
@@ -1873,218 +2084,7 @@
 
                 </div>
 
-                <!-- * Container 9 (Wrapper): Assets and Properties, Appliances and Bank Accounts -->
-                <div class="na-container-wrapper-3">
-
-                    <!-- * Container 9: Assets and Properties -->
-                    <div class="na-container-9">
-
-                        <!-- * Big Container -->
-                        <div class="big-con-2">
-
-                            <!-- * Form Header -->
-
-                            <!-- * Rowspan Container 1: Rowspan Header - Assets and Properties -->
-                            <div class="rowspan-container">
-
-                                <div class="rowspan">
-                                    <h2>Assets and Properties</h2>
-                                </div>
-
-                            </div>
-
-                            <!-- * Rowspan Container 2: Do you own motor vehicles? -->
-                            <div class="rowspan-container">
-                                <!-- * Rowspan 2: Do you own motor vehicles? -->
-                                <div class="rowspan" data-vehicle-container>
-
-                                    <!-- * Do you own motor vehicles? -->
-                                    <div class="input-wrapper">
-
-                                        <span>Do you own motor vehicles?</span>
-
-                                        <!-- * Form Toggle -->
-                                        <div class="box-wrap">
-
-                                            <!-- * Rented -->
-                                            <div class="radio-btn-wrapper">
-                                                <input autocomplete="off" type="radio" name="formToggle" value="formToggleYes" id="formToggleYes">
-                                                <span>Yes</span>
-                                            </div>
-
-                                            <!-- * Owned -->
-                                            <div class="radio-btn-wrapper">
-                                                <input autocomplete="off" type="radio" name="formToggle" value="formToggleNo" id="formToggleNo">
-                                                <span>No</span>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <span>If yes please specify,</span>
-
-                                    <!-- * Rowspan 3: Vehicle Input Field -->
-                                    <div class="rowspan-2 child" data-vehicle>
-
-                                        <!-- * Vehicle Input Field -->
-                                        <div class="input-wrapper">
-                                            <input autocomplete="off" type="text" id="ownVehicle" name="ownVehicle">
-                                        </div>
-
-                                        <!-- * Add and Subtract Button  -->
-                                        <div class="input-wrapper">
-                                            <button type="button" onclick="addVehicle()">+</button>
-                                            <button type="button" onclick="subVehicle()">-</button>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- * Rowspan Container 3: Do you own real property? -->
-                            <div class="rowspan-container">
-
-                                <!-- * Rowspan 4: Do you own real property? -->
-                                <div class="rowspan" data-property-container>
-
-                                    <!-- * Do you own real property? -->
-                                    <div class="input-wrapper">
-                                        <span>Do you own real property?</span>
-
-                                        <!-- * Form Toggle -->
-
-                                        <div class="box-wrap">
-
-                                            <!-- * Rented -->
-                                            <div class="radio-btn-wrapper">
-                                                <input autocomplete="off" type="radio" name="formToggle" value="formToggleYes" id="formToggleYes">
-                                                <span>Yes</span>
-                                            </div>
-
-                                            <!-- * Owned -->
-                                            <div class="radio-btn-wrapper">
-                                                <input autocomplete="off" type="radio" name="formToggle" value="formToggleNo" id="formToggleNo">
-                                                <span>No</span>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <span>If yes please specify,</span>
-                                    <!-- * Rowspan 5: Property Input Field -->
-                                    <div class="rowspan-2 child" data-property>
-
-                                        <!-- * Vehicle Input Field -->
-                                        <div class="input-wrapper">
-                                            <input autocomplete="off" type="text" id="nameOfSchool" name="nameOfSchool">
-                                        </div>
-
-                                        <!-- * Add and Subtract Button  -->
-                                        <div class="input-wrapper">
-                                            <button type="button" onclick="addProperty()">+</button>
-                                            <button type="button" onclick="subProperty()">-</button>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-
-                    </div>
-                    <!-- * Container 10: Appliances and Bank Accounts -->
-                    <div class="na-container-10">
-
-                        <!-- * Small Container -->
-                        <div class="small-con-6">
-
-                            <div class="box-wrap" data-appliances-container>
-
-                                <!-- * Rowspan 1: Appliances -->
-                                <div class="rowspan">
-
-                                    <h2>Appliances</h2>
-
-                                </div>
-
-
-                                <!-- * Rowspan 2: Appliances and Brand / Model -->
-                                <div class="rowspan child" data-appliances>
-
-                                    <!-- * Appliances -->
-                                    <div class="input-wrapper">
-                                        <span>Appliances</span>
-                                        <input autocomplete="off" type="number" id="appliances" name="appliances">
-                                    </div>
-
-                                    <!-- * Brand / Model -->
-                                    <div class="input-wrapper">
-                                        <span>Brand / Model</span>
-                                        <input autocomplete="off" type="text" id="brandModel" name="brandModel">
-                                    </div>
-
-                                    <!-- * Add and Subtract Button  -->
-                                    <div class="input-wrapper">
-                                        <button type="button" onclick="addAppliances()">+</button>
-                                        <button type="button" onclick="subAppliances()">-</button>
-                                    </div>
-
-
-                                </div>
-
-                            </div>
-
-                            <div class="box-wrap" data-bank-container>
-
-                                <!-- * Rowspan 3: Bank Accounts -->
-                                <div class="rowspan">
-
-                                    <h2>Bank Accounts</h2>
-
-                                </div>
-
-
-                                <!-- * Rowspan 4: Bank account and Address -->
-                                <div class="rowspan child" data-bank>
-
-                                    <!-- * Bank account -->
-                                    <div class="input-wrapper">
-                                        <span>Bank account</span>
-                                        <input autocomplete="off" type="bankAcc" id="bankAcc" name="appliances">
-                                    </div>
-
-                                    <!-- * Address -->
-                                    <div class="input-wrapper">
-                                        <span>Address</span>
-                                        <input autocomplete="off" type="bankAddr" id="bankAddr" name="brandModel">
-                                    </div>
-
-                                    <!-- * Add and Subtract Button  -->
-                                    <div class="input-wrapper">
-                                        <button type="button" onclick="addBank()">+</button>
-                                        <button type="button" onclick="subBank()">-</button>
-                                    </div>
-
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-                <!-- * Container 10: Signature Field -->
+                <!-- * Container 12: Signature Field -->
                 <div class="na-container-10">
 
                     <!-- * Small Container 7 -->
@@ -2165,7 +2165,9 @@
                     </div>
 
                 </div>
+
             </form>
+
     </main>
     <script src="../res/js/app.js" defer></script>
 </body>

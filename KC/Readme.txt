@@ -251,3 +251,7 @@ Sixth Commit:
 • Completed the New Application Group
 - Completed the layout for New Application Group
 - TODO: Modal for add new member for the group 
+
+Seventh Commit:
+• Sprint 3 Revisions
+- Adjustments: Moved the Assets and Properties, Appliances and Bank Accounts after the Job Information Container
