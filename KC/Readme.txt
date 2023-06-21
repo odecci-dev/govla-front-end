@@ -195,7 +195,7 @@ Fourth Commmit:
 • New Application: Started the Signature Field Section
 
 
-June 18, 2023 (Monday)
+June 19, 2023 (Monday)
 First Commit:
 • New Application: Completed Signature Field Section
 - Added SCSS Functions for advance positioning (_functions.scss)
@@ -213,3 +213,13 @@ Third Commit:
 - Updated the imported Google Fonts
     - The import url was embedded to the _typography.scss (from _base.scss to _typography.scss)
     - Added new font variable in the _variables.scss
+
+
+June 21, 2023 (Wednesday)
+First Commit:
+• Updated the Navlinks
+- Wrapped it with anchor tags 
+- Linked the a tags to their particular html page
+• New Application: CI Progress Button
+- When the Save & Proceed to CI Button is clicked, it adds a .active className on progress level 2
+• Downloaded a time.svg on Figma

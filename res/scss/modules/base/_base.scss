@@ -60,3 +60,9 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
+
+.active {
+    display: block;
+    background-color: $primary;
+    color: $white;
+}

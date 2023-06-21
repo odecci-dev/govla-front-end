@@ -25,7 +25,7 @@
                 <!-- * Nav Links Container -->
                 <ul class="nav-links">
                     <!-- * Link Wrapper -->
-                    <a href="../KC/dashboard.html">
+                    <a href="../KC/dashboard.html" data-nav-link>
                         <li class="link" no-data-dropdown>
                             <!-- * Overview -->
                             <img src="../res/assets/icons/overview.svg" alt="overview" />
@@ -35,6 +35,7 @@
 
                     <!-- * Link Wrapper w/ SubMenu -->
                     <div class="dropdown" data-dropdown>
+
                         <li class="link dropdown" data-dropdown-button>
                             <!-- * Members -->
                             <img src="../res/assets/icons/members.svg" alt="members" data-dropdown-button />
@@ -43,26 +44,30 @@
 
                         <!-- * Submenu -->
                         <ul class="sub-menu">
-                            <a href="../KC/all-members.html">
+
+                            <a href="../KC/all-members.html" data-nav-link>
                                 <li>
                                     <!-- * All Members -->
                                     <img src="../res/assets/icons/sub-menu/all-members.svg" alt="all-members" />
                                     <span>All Members</span>
                                 </li>
                             </a>
-                            <a href="../KC/new-member.html">
+
+                            <a href="../KC/new-member.html" data-nav-link>
                                 <li>
                                     <!-- * New Member -->
                                     <img src="../res/assets/icons/sub-menu/new-member.svg" alt="new-member" />
                                     <span>New Member</span>
                                 </li>
                             </a>
+
                         </ul>
                     </div>
 
                     <!-- * Link Wrapper w/ SubMenu -->
                     <!-- * Maintenance -->
                     <div class="dropdown" data-dropdown>
+
                         <li class="link dropdown" data-dropdown-button>
                             <img src="../res/assets/icons/maintenance.svg" alt="maintenance" data-dropdown-button />
                             <p data-dropdown-button>Maintenance</p>
@@ -70,32 +75,46 @@
 
                         <!-- * Submenu -->
                         <ul class="sub-menu">
-                            <li>
-                                <!-- * Co Maker -->
-                                <img src="../res/assets/icons/sub-menu/co-maker.svg" alt="co-maker" />
-                                <span>Co Maker</span>
-                            </li>
-                            <li>
-                                <!-- * Field Officer -->
-                                <img src="../res/assets/icons/sub-menu/field-officer.svg" alt="field-officer" />
-                                <span>Field Officer</span>
-                            </li>
-                            <li>
-                                <!-- * Field Area -->
-                                <img src="../res/assets/icons/sub-menu/field-area.svg" alt="field-area" />
-                                <span>Field Area</span>
-                            </li>
-                            <li>
-                                <!-- * Loan Type -->
-                                <img src="../res/assets/icons/sub-menu/loan-type.svg" alt="loan-type" />
-                                <span>Loan Type</span>
-                            </li>
+
+                            <!-- <a href="../KC/co-maker.html" data-nav-link>
+                                <li> -->
+                            <!-- * Co Maker -->
+                            <!-- <img src="../res/assets/icons/sub-menu/co-maker.svg" alt="co-maker" />
+                                    <span>Co Maker</span>
+                                </li>
+                            </a> -->
+
+                            <a href="../KC/field-officer.html" data-nav-link>
+                                <li>
+                                    <!-- * Field Officer -->
+                                    <img src="../res/assets/icons/sub-menu/field-officer.svg" alt="field-officer" />
+                                    <span>Field Officer</span>
+                                </li>
+                            </a>
+
+                            <a href="../KC/field-area.html" data-nav-link>
+                                <li>
+                                    <!-- * Field Area -->
+                                    <img src="../res/assets/icons/sub-menu/field-area.svg" alt="field-area" />
+                                    <span>Field Area</span>
+                                </li>
+                            </a>
+
+                            <a href="../KC/loan-type.html" data-nav-link>
+                                <li>
+                                    <!-- * Loan Type -->
+                                    <img src="../res/assets/icons/sub-menu/loan-type.svg" alt="loan-type" />
+                                    <span>Loan Type</span>
+                                </li>
+                            </a>
+
                         </ul>
                     </div>
 
                     <!-- * Link Wrapper w/ SubMenu -->
                     <!-- * Collection -->
                     <div class="dropdown" data-dropdown>
+
                         <li class="link dropdown" data-dropdown-button>
                             <img src="../res/assets/icons/collection.svg" alt="collection" data-dropdown-button />
                             <p data-dropdown-button>Collection</p>
@@ -103,22 +122,30 @@
 
                         <!-- * Submenu -->
                         <ul class="sub-menu">
-                            <li>
-                                <!-- * Collection -->
-                                <img src="../res/assets/icons/sub-menu/collection.svg" alt="collection" />
-                                <span>Collection</span>
-                            </li>
-                            <li>
-                                <!-- * Areas -->
-                                <img src="../res/assets/icons/sub-menu/areas.svg" alt="areas" />
-                                <span>Areas</span>
-                            </li>
+
+                            <a href="../KC/collection.html" data-nav-link>
+                                <li>
+                                    <!-- * Collection -->
+                                    <img src="../res/assets/icons/sub-menu/collection.svg" alt="collection" />
+                                    <span>Collection</span>
+                                </li>
+                            </a>
+
+                            <a href="../KC/areas.html" data-nav-link>
+                                <li>
+                                    <!-- * Areas -->
+                                    <img src="../res/assets/icons/sub-menu/areas.svg" alt="areas" />
+                                    <span>Areas</span>
+                                </li>
+                            </a>
+
                         </ul>
                     </div>
 
                     <!-- * Link Wrapper w/ SubMenu -->
                     <!-- * Transactions -->
                     <div class="dropdown" data-dropdown>
+
                         <li class="link dropdown" data-dropdown-button>
                             <img src="../res/assets/icons/transactions.svg" alt="transactions" data-dropdown-button />
                             <p data-dropdown-button>Transactions</p>
@@ -127,7 +154,7 @@
                         <!-- * Submenu -->
                         <ul class="sub-menu">
 
-                            <a href="../KC/new-application.html">
+                            <a href="../KC/new-application.html" data-nav-link>
 
                                 <li>
                                     <!-- * New Application -->
@@ -137,37 +164,53 @@
 
                             </a>
 
-                            <li>
-                                <!-- * Credit Investigation  -->
-                                <img src="../res/assets/icons/sub-menu/credit-investigation.svg" alt="credit-investigation" />
-                                <span>Credit Investigation</span>
-                            </li>
-                            <li>
-                                <!-- * Remittance  -->
-                                <img src="../res/assets/icons/sub-menu/remittance.svg" alt="remittance" />
-                                <span>Remittance</span>
-                            </li>
-                            <li>
-                                <!-- * Approval  -->
-                                <img src="../res/assets/icons/sub-menu/approval.svg" alt="approval" />
-                                <span>Approval</span>
-                            </li>
-                            <li>
-                                <!-- * Releasing  -->
-                                <img src="../res/assets/icons/sub-menu/releasing.svg" alt="releasing" />
-                                <span>Releasing</span>
-                            </li>
-                            <li>
-                                <!-- * Loan Calculator  -->
-                                <img src="../res/assets/icons/sub-menu/loan-calc.svg" alt="loan-calc" />
-                                <span>Loan Calculator</span>
-                            </li>
+                            <a href="../KC/new-application-credit-investigation.html" data-nav-link>
+                                <li>
+                                    <!-- * Credit Investigation  -->
+                                    <img src="../res/assets/icons/sub-menu/credit-investigation.svg" alt="credit-investigation" />
+                                    <span>Credit Investigation</span>
+                                </li>
+                            </a>
+
+                            <a href="../KC/remittance.html" data-nav-link>
+                                <li>
+                                    <!-- * Remittance  -->
+                                    <img src="../res/assets/icons/sub-menu/remittance.svg" alt="remittance" />
+                                    <span>Remittance</span>
+                                </li>
+                            </a>
+
+                            <a href="../KC/approval.html" data-nav-link>
+                                <li>
+                                    <!-- * Approval  -->
+                                    <img src="../res/assets/icons/sub-menu/approval.svg" alt="approval" />
+                                    <span>Approval</span>
+                                </li>
+                            </a>
+
+                            <a href="../KC/releasing.html" data-nav-link>
+                                <li>
+                                    <!-- * Releasing  -->
+                                    <img src="../res/assets/icons/sub-menu/releasing.svg" alt="releasing" />
+                                    <span>Releasing</span>
+                                </li>
+                            </a>
+
+                            <a href="../KC/loan-calculator.html" data-nav-link>
+                                <li>
+                                    <!-- * Loan Calculator  -->
+                                    <img src="../res/assets/icons/sub-menu/loan-calc.svg" alt="loan-calc" />
+                                    <span>Loan Calculator</span>
+                                </li>
+                            </a>
+
                         </ul>
                     </div>
 
                     <!-- * Link Wrapper w/ SubMenu -->
                     <!-- * Reports -->
                     <div class="dropdown" data-dropdown>
+
                         <li class="link dropdown" data-dropdown-button>
                             <img src="../res/assets/icons/reports.svg" alt="reports" data-dropdown-button />
                             <p data-dropdown-button>Reports</p>
@@ -175,31 +218,47 @@
 
                         <!-- * Submenu -->
                         <ul class="sub-menu">
-                            <li>
-                                <!-- * Outstanding Reports -->
-                                <img src="../res/assets/icons/sub-menu/outstanding-report.svg" alt="" />
-                                <span>Outstanding Reports</span>
-                            </li>
-                            <li>
-                                <!-- * Custom Report -->
-                                <img src="../res/assets/icons/sub-menu/custom-report.svg" alt="outstanding-report" />
-                                <span>Custom Report</span>
-                            </li>
-                            <li>
-                                <!-- * Custom Report -->
-                                <img src="../res/assets/icons/sub-menu/custom-report.svg" alt="custom-report" />
-                                <span>Custom Report</span>
-                            </li>
-                            <li>
-                                <!-- * Custom Report -->
-                                <img src="../res/assets/icons/sub-menu/custom-report.svg" alt="custom-report" />
-                                <span>Custom Report</span>
-                            </li>
-                            <li>
-                                <!-- * Custom Report -->
-                                <img src="../res/assets/icons/sub-menu/custom-report.svg" alt="custom-report" />
-                                <span>Custom Report</span>
-                            </li>
+
+                            <a href="../KC/outstanding-report.html" data-nav-link>
+                                <li>
+                                    <!-- * Outstanding Reports -->
+                                    <img src="../res/assets/icons/sub-menu/outstanding-report.svg" alt="" />
+                                    <span>Outstanding Reports</span>
+                                </li>
+                            </a>
+
+                            <a href="../KC/custom-report.html" data-nav-link>
+                                <li>
+                                    <!-- * Custom Report -->
+                                    <img src="../res/assets/icons/sub-menu/custom-report.svg" alt="outstanding-report" />
+                                    <span>Custom Report</span>
+                                </li>
+                            </a>
+
+                            <a href="../KC/custom-report.html" data-nav-link>
+                                <li>
+                                    <!-- * Custom Report -->
+                                    <img src="../res/assets/icons/sub-menu/custom-report.svg" alt="custom-report" />
+                                    <span>Custom Report</span>
+                                </li>
+                            </a>
+
+                            <a href="../KC/custom-report.html" data-nav-link>
+                                <li>
+                                    <!-- * Custom Report -->
+                                    <img src="../res/assets/icons/sub-menu/custom-report.svg" alt="custom-report" />
+                                    <span>Custom Report</span>
+                                </li>
+                            </a>
+
+                            <a href="../KC/custom-report.html" data-nav-link>
+                                <li>
+                                    <!-- * Custom Report -->
+                                    <img src="../res/assets/icons/sub-menu/custom-report.svg" alt="custom-report" />
+                                    <span>Custom Report</span>
+                                </li>
+                            </a>
+
                         </ul>
                     </div>
                 </ul>

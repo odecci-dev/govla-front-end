@@ -52,6 +52,18 @@ window.onload = function() {
     navigationEvents();
 }
 
+
+const navLinkEls = document.querySelectorAll('[data-nav-link]')
+const windowPathName = window.location.pathname;
+
+navLinkEls.forEach(navLink => {
+    const navLinkPathName = new URL(navLink.href).pathname
+
+    if ((windowPathName === navLinkPathName) || (windowPathName === '/index.html' && navLinkPathName === '/')) {
+        navLink.classList.toggle("active");
+    }
+})
+
 // * Dropdown Menu Toggle
 document.addEventListener("click", e => {
 
@@ -90,35 +102,14 @@ document.addEventListener("click", e => {
 
 })
 
-function ciButton() {
-    // const ciButton = document.querySelector('[data-proceed-to-ci]')
+function activeProgressButton() {
     const level2 = document.querySelectorAll('[data-level-2]')
 
-    if (ciButton) {
+    level2.forEach((e) => {
+        window.onload(e.classList.add("active"))
+    })
 
-        level2.forEach((e) => {
-
-            e.classList.add("active")
-
-        })
-
-    }
 }
-// document.addEventListener('click', _ => {
-//     const ciButton = document.querySelector('[data-proceed-to-ci]')
-//     const level2 = document.querySelectorAll('[data-level-2]')
-
-//     if (ciButton) {
-
-//         level2.forEach((e) => {
-
-//             e.classList.toggle("active")
-
-//         })
-
-//     }
-
-// })
 
 // * Civil Status Selector Form Toggle
 document.addEventListener('change', _ => {
