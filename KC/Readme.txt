@@ -243,3 +243,6 @@ Fourth Commit:
 • New Application Releasing: Progress Bar Indicator
 - Made the release level green while in Releasing Page
 - Added activeGreen class 
+
+Fifth Commit:
+• Created new HTML for New Application Group (new-application-group.html)
