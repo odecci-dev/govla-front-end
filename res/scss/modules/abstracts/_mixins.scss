@@ -142,6 +142,7 @@
 // * Decline Button
 @mixin declineButton {
     @include primaryButton;
+    box-shadow: none;
     background: transparent;
     color: $alert;
     border: 1px solid $alert;

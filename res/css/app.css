@@ -72,6 +72,7 @@ table {
   display: block;
   background-color: #D6A330;
   color: #FFFFFF;
+  transition: all 300ms ease-in-out;
 }
 
 .nav {
@@ -2057,6 +2058,7 @@ table {
   background-color: #D6A330;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  box-shadow: none;
   background: transparent;
   color: #FF0404;
   border: 1px solid #FF0404;
@@ -2075,6 +2077,81 @@ table {
   color: #8C8686;
   font-size: 2rem;
   font-weight: 500;
+}
+.main-dashboard .na-form-con .na-approval-sec {
+  border-radius: 1.5rem;
+  background-color: #FFFFFF;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-rows: minmax(0.2fr) minmax(0, 1fr);
+  gap: 4rem 0;
+  margin: 2rem 2rem;
+  padding: 5rem;
+}
+.main-dashboard .na-form-con .na-approval-sec .rowspan {
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0 2rem;
+}
+.main-dashboard .na-form-con .na-approval-sec .rowspan .input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.main-dashboard .na-form-con .na-approval-sec .rowspan .input-wrapper span {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.main-dashboard .na-form-con .na-approval-sec .rowspan .input-wrapper input {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #EBEBEB;
+  border-radius: 1rem;
+  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.main-dashboard .na-form-con .na-approval-sec .rowspan .input-wrapper button {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  margin-top: 2rem;
+}
+.main-dashboard .na-form-con .na-approval-sec .rowspan:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-dashboard .na-form-con .na-approval-sec .rowspan:first-of-type h3 {
+  font-size: 2.5rem;
+}
+.main-dashboard .na-form-con .na-approval-sec .rowspan:last-of-type button {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  box-shadow: none;
+  background: transparent;
+  color: #FF0404;
+  border: 1px solid #FF0404;
+  padding: 0.6rem 3.5rem 0.6rem 3.5rem;
+  transition: all 300ms ease-in-out;
+  padding: 1rem 3rem;
+}
+.main-dashboard .na-form-con .na-approval-sec .rowspan:last-of-type button:hover {
+  background-color: #FF0404;
+  color: #FFFFFF;
 }
 .main-dashboard .na-form-con .na-container-wrapper {
   height: 120%;

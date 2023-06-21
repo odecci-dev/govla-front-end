@@ -312,7 +312,7 @@
 
                         <!-- * New Application Approval Level 3 -->
                         <div class="line line3"></div>
-                        <div class="level level3">
+                        <div class="level level3 active">
                             <span>Approval</span>
                         </div>
 
@@ -326,28 +326,102 @@
                     </div>
                 </div>
 
-                <!-- * New Application Requirements Section -->
-                <div class="na-requirements-sec">
-                    <h5>
-                        Missing Requirements:
-                        <span>Proof of Income,</span>
-                        <span>Barangay ID</span>
-                    </h5>
-                </div>
+                <!-- * New Application Loan Details -->
+                <div class="na-approval-sec">
 
-                <!-- * New Application Notes and Remarks Section -->
-                <div class="na-notes-remarks-sec">
-                    <div class="wrapper-1">
-                        <h3>Notes/Remarks</h3>
-                        <div class="btn-wrapper">
+                    <!-- * Rowspan 1: Loan Details Header -->
+                    <div class="rowspan">
+                        <h3>Loan Details</h3>
+                        <!-- <div class="btn-wrapper">
                             <a href="new-application-approval.html">
                                 <button type="button">Submit for approval</button>
-                                <button type="button">Decline</button>
                             </a>
-                        </div>
+                            <button type="button">Decline</button>
+                        </div> -->
                     </div>
-                    <div class="wrapper-2">
-                        <p>The subject has maintained a good credit score over the years, indicating a strong credit worthiness and a positive repayment history.</p>
+
+                    <!-- * Rowspan 2: Applied Loan Amount, Terms of Payment, Purpose, and Approve for Releasing Button -->
+                    <div class="rowspan">
+
+                        <!-- * Applied Loan Amount -->
+                        <div class="input-wrapper">
+                            <span>Applied Loan Amount</span>
+                            <input autocomplete="off" type="text" id="appliedLoanAmnt" name="appliedLoanAmnt">
+                        </div>
+
+                        <!-- * Terms of Payment -->
+                        <div class="input-wrapper">
+                            <span>Terms of Payment</span>
+                            <input autocomplete="off" type="text" id="termsOfPaymnt" name="termsOfPaymnt">
+                        </div>
+
+                        <!-- * Purpose -->
+                        <div class="input-wrapper">
+                            <span>Purpose</span>
+                            <input autocomplete="off" type="text" id="loanPurpose" name="loanPurpose">
+                        </div>
+
+                        <!-- * Approve for Releasing Button -->
+                        <div class="input-wrapper">
+                            <button type="button">Approve for Releasing</button>
+                        </div>
+
+                    </div>
+
+                    <!-- * Rowspan 3: Savings, Notarial Fee, Advance Payment, and Change Loan Payment Button -->
+                    <div class="rowspan">
+
+                        <!-- * Savings -->
+                        <div class="input-wrapper">
+                            <span>Savings</span>
+                            <input autocomplete="off" type="text" id="loanSavings" name="loanSavings">
+                        </div>
+
+                        <!-- * Notarial Fee -->
+                        <div class="input-wrapper">
+                            <span>Notarial Fee</span>
+                            <input autocomplete="off" type="text" id="notarialFee" name="notarialFee">
+                        </div>
+
+                        <!-- * Advance Payment -->
+                        <div class="input-wrapper">
+                            <span>Advance Payment</span>
+                            <input autocomplete="off" type="text" id="advPayment" name="advPayment">
+                        </div>
+
+                        <!-- * Change Loan Payment -->
+                        <div class="input-wrapper">
+                            <button type="button">Change Loan Payment</button>
+                        </div>
+
+                    </div>
+
+                    <!-- * Rowspan 4: Interest, Releasing Amount, Daily Amount Due, and Decline Button -->
+                    <div class="rowspan">
+
+                        <!-- * Interest -->
+                        <div class="input-wrapper">
+                            <span>Interest</span>
+                            <input autocomplete="off" type="text" id="interest" name="interest">
+                        </div>
+
+                        <!-- * Releasing Amount -->
+                        <div class="input-wrapper">
+                            <span>Releasing Amount</span>
+                            <input autocomplete="off" type="text" id="releasingAmnt" name="releasingAmnt">
+                        </div>
+
+                        <!-- * Daily Amount Due -->
+                        <div class="input-wrapper">
+                            <span>Daily Amount Due</span>
+                            <input autocomplete="off" type="text" id="dailyAmntDue" name="dailyAmntDue">
+                        </div>
+
+                        <!-- * Decline Button -->
+                        <div class="input-wrapper">
+                            <button type="button">Decline</button>
+                        </div>
+
                     </div>
 
                 </div>

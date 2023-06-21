@@ -223,3 +223,7 @@ First Commit:
 • New Application: CI Progress Button
 - When the Save & Proceed to CI Button is clicked, it adds a .active className on progress level 2
 • Downloaded a time.svg on Figma
+
+Second Commit:
+• New Application: Completed the Approval Page
+- Linked the submit for approval button from CI Page to Approval

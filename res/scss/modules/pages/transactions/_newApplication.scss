@@ -115,6 +115,54 @@
                 font-weight: $font-weight-medium;
             }
         }
+        .na-approval-sec {
+            @include containerDefault2;
+            display: grid;
+            grid-template-rows: minmax(0.2fr) minmax(0, 1fr);
+            gap: $spacing-4x-large 0;
+            margin: 2rem 2rem;
+            padding: 5rem;
+            .rowspan {
+                display: grid;
+                align-items: center;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+                gap: 0 $spacing-2x-large;
+                .input-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    span {
+                        margin-bottom: 1rem;
+                        font-weight: $font-weight-bold;
+                        font-size: $font-size;
+                    }
+                    // * Input Global Styles
+                    input {
+                        @include inputField;
+                    }
+                    button {
+                        @include primaryButton;
+                        margin-top: 2rem;
+                    }
+                }
+            }
+            .rowspan:first-of-type {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                h3 {
+                    font-size: $font-size-x-large;
+                }
+            }
+            .rowspan:last-of-type {
+                button {
+                    @include declineButton;
+                    padding: 1rem 3rem;
+                    &:hover {
+                        @include declineButtonHover;
+                    }
+                }
+            }
+        }
         // * Container Wrapper 1: New Member Container Wrapper
         .na-container-wrapper {
             height: 120%;
