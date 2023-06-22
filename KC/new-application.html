@@ -1537,7 +1537,7 @@
                             <div class="box-wrap" data-appliances-container>
 
                                 <!-- * Rowspan 1: Appliances -->
-                                <div class="rowspan">
+                                <div class="rowspan header">
 
                                     <h2>Appliances</h2>
 
@@ -1568,12 +1568,36 @@
 
                                 </div>
 
+                                <div class="rowspan child" data-appliances>
+
+                                    <!-- * Appliances -->
+                                    <div class="input-wrapper">
+                                        <span>Appliances</span>
+                                        <input autocomplete="off" type="number" id="appliances" name="appliances">
+                                    </div>
+
+                                    <!-- * Brand / Model -->
+                                    <div class="input-wrapper">
+                                        <span>Brand / Model</span>
+                                        <input autocomplete="off" type="text" id="brandModel" name="brandModel">
+                                    </div>
+
+                                    <!-- * Add and Subtract Button  -->
+                                    <div class="input-wrapper">
+                                        <button type="button" onclick="addAppliances()">+</button>
+                                        <button type="button" onclick="subAppliances()">-</button>
+                                    </div>
+
+
+                                </div>
+
+
                             </div>
 
                             <div class="box-wrap" data-bank-container>
 
                                 <!-- * Rowspan 3: Bank Accounts -->
-                                <div class="rowspan">
+                                <div class="rowspan header">
 
                                     <h2>Bank Accounts</h2>
 
@@ -1581,6 +1605,29 @@
 
 
                                 <!-- * Rowspan 4: Bank account and Address -->
+                                <div class="rowspan child" data-bank>
+
+                                    <!-- * Bank account -->
+                                    <div class="input-wrapper">
+                                        <span>Bank account</span>
+                                        <input autocomplete="off" type="bankAcc" id="bankAcc" name="appliances">
+                                    </div>
+
+                                    <!-- * Address -->
+                                    <div class="input-wrapper">
+                                        <span>Address</span>
+                                        <input autocomplete="off" type="bankAddr" id="bankAddr" name="brandModel">
+                                    </div>
+
+                                    <!-- * Add and Subtract Button  -->
+                                    <div class="input-wrapper">
+                                        <button type="button" onclick="addBank()">+</button>
+                                        <button type="button" onclick="subBank()">-</button>
+                                    </div>
+
+
+                                </div>
+
                                 <div class="rowspan child" data-bank>
 
                                     <!-- * Bank account -->

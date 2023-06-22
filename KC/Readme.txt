@@ -278,8 +278,16 @@ Third Commit:
 - Added a function for the modal in app.js
 • Created a new scss component called _animation.scss
 
-Third Commit:
+Fourth Commit:
 • New Application: Completed the Loan and Payment History Modal
 - Added some animations when toggling on and off
 - Added the animations from the _animation.scss
 - Added some functions in the existing modal function (app.css)
+
+Fifth Commit:
+• New Application: Completed the Loan and Payment History Modal
+
+Sixth Commit:
+• New Application: Adjustments on Assets and Properties
+- Modified the function add and subtracting
+- Modified the container styles

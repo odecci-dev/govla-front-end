@@ -252,7 +252,7 @@ function addVehicle() {
 function subVehicle() {
     const vehicleForm = document.querySelector('[data-vehicle]')
 
-    if (vehicleForm.nextSibling != null) {
+    if (vehicleForm.nextElementSibling) {
         vehicleForm.remove()
     }
 
@@ -277,7 +277,7 @@ function addProperty() {
 function subProperty() {
     const propertyForm = document.querySelector('[data-property]')
 
-    if (propertyForm.nextSibling != null) {
+    if (propertyForm.nextElementSibling) {
         propertyForm.remove()
     }
 
@@ -302,7 +302,7 @@ function addAppliances() {
 function subAppliances() {
     const appliancesForm = document.querySelector('[data-appliances]')
 
-    if (appliancesForm.nextSibling != null) {
+    if (appliancesForm.nextElementSibling) {
         appliancesForm.remove()
     }
 
@@ -327,7 +327,7 @@ function addBank() {
 function subBank() {
     const bankForm = document.querySelector('[data-bank]')
 
-    if (bankForm.nextSibling != null) {
+    if (bankForm.nextElementSibling) {
         bankForm.remove()
     }
 
