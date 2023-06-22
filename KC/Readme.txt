@@ -255,3 +255,8 @@ Sixth Commit:
 Seventh Commit:
 • Sprint 3 Revisions
 - Adjustments: Moved the Assets and Properties, Appliances and Bank Accounts after the Job Information Container
+
+June 22, 2023 (Thursday)
+First Commit:
+• Login Page 
+- Adeed a transition when focused on input field

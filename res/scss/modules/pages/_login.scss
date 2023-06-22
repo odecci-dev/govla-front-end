@@ -41,6 +41,7 @@
                     pointer-events: none;
                     font-size: $font-size-large;
                     color: $font-accent;
+                    transition: all 150ms ease-in;
                 }
                 input:focus~span,
                 input:valid~span {

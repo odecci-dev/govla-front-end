@@ -708,6 +708,7 @@ table {
   pointer-events: none;
   font-size: 2rem;
   color: #8C8686;
+  transition: all 150ms ease-in;
 }
 .login-container .login-wrapper .container .input-box input:focus ~ span,
 .login-container .login-wrapper .container .input-box input:valid ~ span {
