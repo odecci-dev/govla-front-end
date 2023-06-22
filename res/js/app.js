@@ -65,7 +65,6 @@ navLinkEls.forEach(navLink => {
 })
 
 
-
 // * All members Dropdown Menu Toggle
 document.addEventListener("click", e => {
 
@@ -101,6 +100,38 @@ document.addEventListener("click", e => {
         return
 
     })
+
+})
+
+// ****** New Application Module ****** //
+
+const openLoanDetailsButton = document.querySelector('[data-loan-details-open]')
+const closeLoanDetailsButton = document.querySelector('[data-loan-details-close]')
+const loanDetailsModal = document.querySelector("[data-loan-details-modal]")
+
+loanDetailsModal.style.display = 'none'
+
+openLoanDetailsButton.addEventListener('click', () => {
+    loanDetailsModal.classList.add('open')
+    loanDetailsModal.style.display = 'grid'
+})
+
+closeLoanDetailsButton.addEventListener('click', () => {
+    loanDetailsModal.classList.remove('open')
+    loanDetailsModal.style.display = 'none'
+})
+
+loanDetailsModal.addEventListener('click', e => {
+    const loanDetailsModalDimensions = loanDetailsModal.getBoundingClientRect()
+
+    if (
+        e.clientX < loanDetailsModalDimensions.left ||
+        e.clientX > loanDetailsModalDimensions.right ||
+        e.clientY < loanDetailsModalDimensions.top ||
+        e.clientY > loanDetailsModalDimensions.bottom
+    ) {
+        loanDetailsModal.style.display = 'none'
+    }
 
 })
 

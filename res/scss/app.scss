@@ -5,14 +5,14 @@
 'modules/abstracts/variables';
 // * 2
 @import // * Base
-'modules/base/base';
-//   'modules/base/base',
+'modules/base/base',
+'modules/base/typography';
 //   'modules/base/fonts',
-//   'modules/base/typography',
 //   'modules/base/helpers';
-// 3. Components
-// @import
-// 'modules/components/button';
+// * 3
+@import // * Components
+'modules/components/button',
+'modules/components/animations';
 // * 4 
 @import // * Layouts
 'modules/layout/nav',

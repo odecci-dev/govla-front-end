@@ -7,6 +7,7 @@
 /* Animation */
 /* Buttons */
 /* Box Shadows */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap");
 *,
 *::before,
 *::after {
@@ -157,6 +158,11 @@ table {
   color: #FFFFFF;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+}
+
+@keyframes fade-in {}
 .nav {
   position: fixed;
   z-index: 9;
@@ -2551,6 +2557,44 @@ table {
   background-color: #EBEBEB;
   border-radius: 1rem;
   box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.main-dashboard .na-form-con .na-loan-details-modal {
+  position: fixed;
+  display: grid;
+  margin: auto;
+  height: 80%;
+  width: 80%;
+  z-index: 5;
+  background: none;
+}
+.main-dashboard .na-form-con .na-loan-details-modal::backdrop {
+  background-color: rgba(41, 41, 43, 0.7);
+}
+.main-dashboard .na-form-con .na-loan-details-modal::before {
+  content: "";
+  z-index: -1;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(41, 41, 43, 0.7);
+}
+.main-dashboard .na-form-con .na-loan-details-modal .button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1.2rem;
+  height: 10%;
+}
+.main-dashboard .na-form-con .na-loan-details-modal .button-wrapper button {
+  cursor: pointer;
+  height: 100%;
+  background: none;
+}
+.main-dashboard .na-form-con .na-loan-details-modal .button-wrapper button img {
+  transition: all 150ms ease-in-out;
+}
+.main-dashboard .na-form-con .na-loan-details-modal .button-wrapper button img:hover {
+  transform: scale(1.1);
+  filter: opacity(0.7);
 }
 .main-dashboard .na-form-con .na-container-3 {
   height: 50%;

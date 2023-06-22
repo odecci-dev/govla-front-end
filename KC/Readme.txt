@@ -270,3 +270,10 @@ Second Commit:
     - .releaseButton
 - Made some adjustments in _newApplication.scss incorporating the modified mixins
 - Copy and pasted the na-container-wrapper in all new-application pages
+
+Third Commit:
+• New Application Loan and Payment History Modal
+- Moved the Loan and Payment Container inside the modal (new-application.html)
+- Downloaded a x-circle svg from Iconduck for the Modal
+- Added a function for the modal in app.js
+• Created a new scss component called _animation.scss
