@@ -306,3 +306,8 @@ First Commit:
 - Reused the fields from All Members Page
 - Reused and modified some styles from allMembers.scss
 - Reused the function from Loan and Payment Modal for showing, closing and animation
+
+Second Commit:
+• Implemented the New Application & Checkbox IN-PROGRESS
+- Applied all the modal elements in each pages
+• Reapplied a deleted function from previous commit for Checkboxes in All Members Page (app.js)

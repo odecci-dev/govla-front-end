@@ -49,8 +49,16 @@
         // * Exit Button
         .exit-button {
             position: absolute;
-            background: none;
             right: 0;
+            cursor: pointer;
+            background: none;
+            img {
+                transition: all 150ms ease-in-out;
+            }
+            img:hover {
+                transform: scale(1.1);
+                filter: opacity(.7);
+            }
         }
         // * Choose Type Of Loan
         .rowspan:nth-of-type(1) {
@@ -333,10 +341,8 @@
         justify-content: flex-end;
         align-items: center;
         padding: 0 1.2rem;
-        // height: 10%;
         button {
             cursor: pointer;
-            // height: 100%;
             background: none;
             img {
                 transition: all 150ms ease-in-out;

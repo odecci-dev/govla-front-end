@@ -384,8 +384,16 @@ body {
 }
 .na-modal .modal-container .exit-button {
   position: absolute;
-  background: none;
   right: 0;
+  cursor: pointer;
+  background: none;
+}
+.na-modal .modal-container .exit-button img {
+  transition: all 150ms ease-in-out;
+}
+.na-modal .modal-container .exit-button img:hover {
+  transform: scale(1.1);
+  filter: opacity(0.7);
 }
 .na-modal .modal-container .rowspan:nth-of-type(1) {
   display: grid;

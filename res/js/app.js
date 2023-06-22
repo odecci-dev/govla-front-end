@@ -103,9 +103,25 @@ document.addEventListener("click", e => {
 
 })
 
+// * Table Checkbox Toggle
+
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+function checkAll(tableCheckBox) {
+    if (tableCheckBox.checked == true) {
+        checkboxes.forEach(function(checkbox) {
+            checkbox.checked = true;
+        })
+    } else {
+        checkboxes.forEach(function(checkbox) {
+            checkbox.checked = false;
+        })
+    }
+}
+
 // ****** New Application Module ****** //
 
-// *** Loan and Payement History Modal *** //
+// *** New Application Modal *** //
 
 const openNewApplicationButton = document.querySelector('#data-open-new-application-modal')
 const closeNewApplicationButton = document.querySelector('#data-close-new-application-modal')
@@ -146,7 +162,7 @@ newApplicationModal.addEventListener('click', e => {
 
 })
 
-// *** END --- Loan and Payement History Modal *** //
+// *** END --- New Application Modal *** //
 
 // *** Loan and Payement History Modal *** //
 
