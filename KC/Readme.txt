@@ -298,3 +298,11 @@ Sixth Commit:
     - new-application-credit-investigation
     - new-application-approval
     - new-application-releasing
+
+
+June 23, 2023 (Friday)
+First Commit:
+• Created the New Application Modal IN-PROGRESS
+- Reused the fields from All Members Page
+- Reused and modified some styles from allMembers.scss
+- Reused the function from Loan and Payment Modal for showing, closing and animation

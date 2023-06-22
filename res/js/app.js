@@ -107,6 +107,49 @@ document.addEventListener("click", e => {
 
 // *** Loan and Payement History Modal *** //
 
+const openNewApplicationButton = document.querySelector('#data-open-new-application-modal')
+const closeNewApplicationButton = document.querySelector('#data-close-new-application-modal')
+const newApplicationModal = document.querySelector('[data-new-application-modal]')
+
+
+openNewApplicationButton.addEventListener('click', () => {
+    console.log("hello")
+    newApplicationModal.showModal();
+})
+
+closeNewApplicationButton.addEventListener('click', () => {
+    newApplicationModal.setAttribute("closing", "");
+    newApplicationModal.addEventListener("animationend", () => {
+        newApplicationModal.removeAttribute("closing");
+        newApplicationModal.close();
+    }, { once: true });
+
+})
+
+newApplicationModal.addEventListener('click', e => {
+    newApplicationModal.setAttribute("closing", "");
+    newApplicationModal.addEventListener("animationend", () => {
+
+        const newApplicationModalDimensions = newApplicationModal.getBoundingClientRect()
+
+        if (
+            e.clientX < newApplicationModalDimensions.left ||
+            e.clientX > newApplicationModalDimensions.right ||
+            e.clientY < newApplicationModalDimensions.top ||
+            e.clientY > newApplicationModalDimensions.bottom
+        ) {
+            newApplicationModal.removeAttribute("closing");
+        }
+        newApplicationModal.close()
+
+    }, { once: true })
+
+})
+
+// *** END --- Loan and Payement History Modal *** //
+
+// *** Loan and Payement History Modal *** //
+
 const openLoanDetailsButton = document.querySelector('#data-open-loan-details')
 const closeLoanDetailsButton = document.querySelector('#data-close-loan-details')
 const loanDetailsModal = document.querySelector('[data-loan-details-modal]')
