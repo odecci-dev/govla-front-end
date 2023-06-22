@@ -259,4 +259,14 @@ Seventh Commit:
 June 22, 2023 (Thursday)
 First Commit:
 • Login Page 
-- Adeed a transition when focused on input field
+- Added a transition when focused on input field
+
+Second Commit:
+• New Application CTA Buttons Hover
+- Made some button mixins adjustments in _mixins.scss
+- Minor changes on _base.scss
+    - .button
+    - .declineButton
+    - .releaseButton
+- Made some adjustments in _newApplication.scss incorporating the modified mixins
+- Copy and pasted the na-container-wrapper in all new-application pages

@@ -77,21 +77,12 @@ table {
 
 .button {
     @include primaryButton;
-    &:hover {
-        @include primaryButtonHover;
-    }
 }
 
 .declineButton {
     @include declineButton;
-    &:hover {
-        @include declineButtonHover;
-    }
 }
 
 .releaseButton {
     @include releaseButton;
-    &:hover {
-        @include releaseButtonHover;
-    }
 }

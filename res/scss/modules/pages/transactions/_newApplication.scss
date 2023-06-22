@@ -269,16 +269,18 @@
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        h2 {
-                            font-size: $font-size-x-large;
+                        .header-wrapper {
+                            h2 {
+                                font-size: $font-size-x-large;
+                            }
+                            button {
+                                @include transparentButton3;
+                            }
                         }
                         .btn-wrapper {
-                            button {
-                                @include primaryButton
-                            }
-                            button:first-of-type {
-                                margin-right: 1.5rem;
-                            }
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 1.5rem;
                         }
                     }
                     // * Rowspan 2: First Name, Middle Name , Last Name, and Suffix
@@ -352,7 +354,7 @@
                                 display: flex;
                                 justify-content: center;
                                 width: clamp(2rem, 10vw, 100%);
-                                @include primaryButton;
+                                // @include primaryButton;
                                 margin-bottom: 2rem;
                                 white-space: nowrap;
                             }
@@ -1638,9 +1640,6 @@
                             align-items: center;
                             justify-content: center;
                             gap: 0 1rem;
-                            button {
-                                cursor: pointer;
-                            }
                             // * Table View Button 
                             // * Table Trash Button
                             .a-btn-view,

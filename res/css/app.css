@@ -116,6 +116,10 @@ table {
   transition: all 200ms ease-in-out;
 }
 .declineButton:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
+.declineButton:hover {
   background-color: #FF0404;
   color: #FFFFFF;
 }
@@ -140,21 +144,14 @@ table {
   color: #36A623;
 }
 .releaseButton:hover {
-  border-radius: 1rem;
-  padding: 0.8rem 4rem 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
+  background-color: #29292B;
   color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
-  box-shadow: none;
-  background: transparent;
-  color: #FF0404;
-  border: 1px solid #FF0404;
-  padding: 0.6rem 3.5rem 0.6rem 3.5rem;
-  transition: all 200ms ease-in-out;
+}
+.releaseButton:hover {
+  background-color: #FF0404;
+  color: #FFFFFF;
+}
+.releaseButton:hover {
   border: 1px solid #36A623;
   background-color: #36A623;
   color: #FFFFFF;
@@ -465,6 +462,10 @@ table {
   cursor: pointer;
   transition: all 200ms ease-in-out;
 }
+.main-dashboard .con-wrapper .md-con-2 .big-card .div-1 .btn-wrapper button:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
 .main-dashboard .con-wrapper .md-con-2 .big-card .div-1 .btn-wrapper button:first-child {
   padding: 0.8rem 4rem 0.8rem 4rem;
   margin-right: 2rem;
@@ -655,6 +656,10 @@ table {
   cursor: pointer;
   transition: all 200ms ease-in-out;
 }
+.main-dashboard .con-wrapper .md-con-3 .card-2:last-child .div-2 button:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
 
 .login-container {
   position: relative;
@@ -799,6 +804,10 @@ table {
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: all 200ms ease-in-out;
+}
+.main-dashboard .am-con-1 .container .wrapper:first-of-type button:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
 }
 .main-dashboard .am-con-1 .container .wrapper:first-of-type button a {
   color: #FFFFFF;
@@ -1019,6 +1028,14 @@ table {
   transition: all 200ms ease-in-out;
   padding: 0.6rem 3.5rem 0.6rem 3.5rem;
 }
+.main-dashboard .am-con-2 .table-container table td .td-btn-wrapper .a-btn-view:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
+.main-dashboard .am-con-2 .table-container table td .td-btn-wrapper .a-btn-view:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
 .main-dashboard .am-con-2 .table-container table td .td-btn-wrapper .a-btn-trash {
   cursor: pointer;
   font-size: 1.3rem;
@@ -1235,6 +1252,10 @@ table {
   cursor: pointer;
   transition: all 200ms ease-in-out;
 }
+.main-dashboard .nm-form-con .nm-container-wrapper .nm-container-1 .big-con .rowspan:first-of-type .btn-wrapper button:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
 .main-dashboard .nm-form-con .nm-container-wrapper .nm-container-1 .big-con .rowspan:first-of-type .btn-wrapper button:first-of-type {
   margin-right: 1.5rem;
 }
@@ -1351,6 +1372,10 @@ table {
   transition: all 200ms ease-in-out;
   margin-bottom: 2rem;
   white-space: nowrap;
+}
+.main-dashboard .nm-form-con .nm-container-wrapper .nm-container-2 .small-con .box-wrap:first-of-type .colspan button:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
 }
 .main-dashboard .nm-form-con .nm-container-wrapper .nm-container-2 .small-con .box-wrap:last-of-type {
   display: flex;
@@ -1911,6 +1936,10 @@ table {
   cursor: pointer;
   transition: all 200ms ease-in-out;
 }
+.main-dashboard .nm-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(4) .btn-wrapper button:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
 .main-dashboard .nm-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(4) .btn-wrapper button:first-of-type {
   margin-right: 1.5rem;
 }
@@ -1974,6 +2003,10 @@ table {
   padding: 0.4rem 3.5rem 0.4rem 3.5rem;
   font-size: calc(1.2rem + 1px);
 }
+.main-dashboard .nm-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table .td-btn-wrapper .a-btn-edit:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
 .main-dashboard .nm-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table .td-btn-wrapper .a-btn-delete {
   border-radius: 1rem;
   padding: 0.8rem 4rem 0.8rem 4rem;
@@ -1986,6 +2019,10 @@ table {
   transition: all 200ms ease-in-out;
   padding: 0.4rem 3.5rem 0.4rem 3.5rem;
   font-size: calc(1.2rem + 1px);
+}
+.main-dashboard .nm-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table .td-btn-wrapper .a-btn-delete:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
 }
 .main-dashboard .nm-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(6) {
   display: grid;
@@ -2075,6 +2112,10 @@ table {
   color: #29292B;
   height: 100%;
   transition: all 400ms ease;
+}
+.main-dashboard .na-form-con .na-progress-bar-container .progress-bar-level .level:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
 }
 .main-dashboard .na-form-con .na-progress-bar-container .progress-bar-level .line {
   position: relative;
@@ -2351,22 +2392,26 @@ table {
   justify-content: space-between;
   align-items: center;
 }
-.main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan:first-of-type h2 {
+.main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan:first-of-type .header-wrapper h2 {
   font-size: 2.5rem;
 }
-.main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan:first-of-type .btn-wrapper button {
-  border-radius: 1rem;
-  padding: 0.8rem 4rem 0.8rem 4rem;
+.main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan:first-of-type .header-wrapper button {
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  color: #D6A330;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
+  text-decoration: underline;
+  transition: 200ms ease-in-out;
 }
-.main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan:first-of-type .btn-wrapper button:first-of-type {
-  margin-right: 1.5rem;
+.main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan:first-of-type .header-wrapper button:hover {
+  color: #29292B;
+}
+.main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan:first-of-type .btn-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 .main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan:nth-of-type(2) {
   display: grid;
@@ -2470,15 +2515,6 @@ table {
   display: flex;
   justify-content: center;
   width: clamp(2rem, 10vw, 100%);
-  border-radius: 1rem;
-  padding: 0.8rem 4rem 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
   margin-bottom: 2rem;
   white-space: nowrap;
 }
@@ -3045,6 +3081,10 @@ table {
   cursor: pointer;
   transition: all 200ms ease-in-out;
 }
+.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(4) .btn-wrapper button:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(4) .btn-wrapper button:first-of-type {
   margin-right: 1.5rem;
 }
@@ -3108,6 +3148,10 @@ table {
   padding: 0.4rem 3.5rem 0.4rem 3.5rem;
   font-size: calc(1.2rem + 1px);
 }
+.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table .td-btn-wrapper .a-btn-edit:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table .td-btn-wrapper .a-btn-delete {
   border-radius: 1rem;
   padding: 0.8rem 4rem 0.8rem 4rem;
@@ -3120,6 +3164,10 @@ table {
   transition: all 200ms ease-in-out;
   padding: 0.4rem 3.5rem 0.4rem 3.5rem;
   font-size: calc(1.2rem + 1px);
+}
+.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table .td-btn-wrapper .a-btn-delete:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
 }
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(6) {
   display: grid;
@@ -3383,6 +3431,10 @@ table {
   cursor: pointer;
   transition: all 200ms ease-in-out;
 }
+.main-dashboard .na-form-con .na-container-5 .container-wrapper .big-con .rowspan:first-of-type .btn-wrapper button:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
 .main-dashboard .na-form-con .na-container-5 .container-wrapper .big-con .rowspan:first-of-type .btn-wrapper button:first-of-type {
   margin-right: 1.5rem;
 }
@@ -3492,6 +3544,10 @@ table {
   transition: all 200ms ease-in-out;
   margin-bottom: 2rem;
   white-space: nowrap;
+}
+.main-dashboard .na-form-con .na-container-5 .container-wrapper .na-container-2 .small-con .box-wrap:first-of-type .colspan button:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
 }
 .main-dashboard .na-form-con .na-container-7 {
   height: 100%;
@@ -3976,6 +4032,10 @@ table {
   justify-content: center;
   white-space: nowrap;
 }
+.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(2) button:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
 .main-dashboard .na-form-con .na-container-group-1 {
   height: 50%;
   width: 100%;
@@ -4110,9 +4170,6 @@ table {
   justify-content: center;
   gap: 0 1rem;
 }
-.main-dashboard .na-form-con .na-container-group-2 .table-container table td .td-btn-wrapper button {
-  cursor: pointer;
-}
 .main-dashboard .na-form-con .na-container-group-2 .table-container table td .td-btn-wrapper .a-btn-view,
 .main-dashboard .na-form-con .na-container-group-2 .table-container table td .td-btn-wrapper .a-btn-trash {
   border-radius: 1rem;
@@ -4125,6 +4182,16 @@ table {
   cursor: pointer;
   transition: all 200ms ease-in-out;
   padding: 0.6rem 3.5rem 0.6rem 3.5rem;
+}
+.main-dashboard .na-form-con .na-container-group-2 .table-container table td .td-btn-wrapper .a-btn-view:hover,
+.main-dashboard .na-form-con .na-container-group-2 .table-container table td .td-btn-wrapper .a-btn-trash:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
+.main-dashboard .na-form-con .na-container-group-2 .table-container table td .td-btn-wrapper .a-btn-view:hover,
+.main-dashboard .na-form-con .na-container-group-2 .table-container table td .td-btn-wrapper .a-btn-trash:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
 }
 .main-dashboard .na-form-con .na-container-group-2 .table-container table td:first-of-type {
   padding-left: 1rem;

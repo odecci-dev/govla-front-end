@@ -364,16 +364,23 @@
 
                             <!-- * Rowspan 1: Rowspan Header: Header and Buttons -->
                             <div class="rowspan">
-                                <h2>Borrower Information</h2>
+
+                                <!-- * Header Wrapper -->
+                                <div class="header-wrapper">
+                                    <h2>Borrower Information</h2>
+                                    <button type="button">View loan & payment history</button>
+                                </div>
 
                                 <!-- * Buttons -->
                                 <div class="btn-wrapper">
 
                                     <!-- * Save -->
-                                    <button type="button" id="saveBtn" data-save>Save</button>
+                                    <button type="button" id="saveBtn" class="button" data-save>Save</button>
 
                                     <!-- * Save & Apply for loan  -->
-                                    <button type="button" id="proceedToCI" onclick="ciButton()">Save & Proceed to CI</button>
+                                    <a href="new-application-credit-investigation.html">
+                                        <button type="button" id="proceedToCI" class="button" onclick="activeProgressButton()" data-proceed-to-ci>Save & Proceed to CI</button>
+                                    </a>
 
                                 </div>
 
@@ -586,10 +593,10 @@
                                     </div>
 
                                     <!-- * Upload Button -->
-                                    <button submit="">Upload Image</button>
+                                    <button type="button" submit="" class="button">Upload Image</button>
 
                                     <!-- * Attach Button -->
-                                    <button submit="">Attach Files</button>
+                                    <button type="button" submit="" class="button">Attach Files</button>
 
                                 </div>
 

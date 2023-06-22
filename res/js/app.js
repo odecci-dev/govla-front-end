@@ -64,7 +64,9 @@ navLinkEls.forEach(navLink => {
     }
 })
 
-// * Dropdown Menu Toggle
+
+
+// * All members Dropdown Menu Toggle
 document.addEventListener("click", e => {
 
     // * When a link is clicked, toggle the submenu
