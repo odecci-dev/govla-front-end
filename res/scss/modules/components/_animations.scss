@@ -1,1 +1,42 @@
-@keyframes fade-in {}
+// * Fade-in
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+// * Fade-out
+@keyframes fade-out {
+    100% {
+        opacity: 0;
+    }
+    0% {
+        opacity: 1;
+    }
+}
+
+// * Pop Up
+@keyframes pop-up {
+    0% {
+        transform: scale(.8);
+    }
+    75% {
+        transform: scale(1.010);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+// * Slide-down
+@keyframes slide-down {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}

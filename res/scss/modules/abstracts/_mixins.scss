@@ -69,10 +69,16 @@
     }
 }
 
-// * Secondary Button
+// * Progress Bar Button
 @mixin progressBarButton {
-    @include primaryButton;
-    padding: 1.5rem 1rem;
+    border-radius: $border-radius-xxx-large;
+    padding: $spacing-large $spacing-medium;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    color: $black;
+    background-color: $secondary-bg;
+    box-shadow: $box-shadow;
+    cursor: pointer;
 }
 
 // * Table Button

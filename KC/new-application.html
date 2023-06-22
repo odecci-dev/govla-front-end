@@ -342,7 +342,7 @@
                                 <!-- * Header Wrapper -->
                                 <div class="header-wrapper">
                                     <h2>Borrower Information</h2>
-                                    <button type="button" data-loan-details-open>View loan & payment history</button>
+                                    <button type="button" id="data-open-loan-details">View loan & payment history</button>
                                 </div>
 
                                 <!-- * Buttons -->
@@ -620,129 +620,136 @@
                 <!-- * New Application Loan Details Modal -->
                 <dialog class="na-loan-details-modal" data-loan-details-modal>
 
-                    <div class="button-wrapper">
-                        <button type="button" data-loan-details-close>
-                            <img src="../res/assets/icons/x-circle.svg" alt="close">
-                        </button>
-                    </div>
+                    <!-- * Modal Container -->
+                    <div class="modal-container">
 
-                    <!-- * Container 11: Loan History Table -->
-                    <div class="na-container-8">
+                        <!-- * Button Wrapper -->
+                        <div class="button-wrapper">
+                            <button type="button" id="data-close-loan-details">
+                                <img src="../res/assets/icons/x-circle.svg" alt="close">
+                            </button>
+                        </div>
 
-                        <!-- * Small Container -->
-                        <div class="small-con-5">
+                        <!-- * Container 11: Loan History Table -->
+                        <div class="na-container-8">
 
-                            <!-- * Rowspan 1: Header -->
-                            <div class="rowspan">
+                            <!-- * Small Container -->
+                            <div class="small-con-5">
 
-                                <!-- * Loan History -->
-                                <div class="input-wrapper">
-                                    <h2>Loan History</h2>
+                                <!-- * Rowspan 1: Header -->
+                                <div class="rowspan">
+
+                                    <!-- * Loan History -->
+                                    <div class="input-wrapper">
+                                        <h2>Loan History</h2>
+                                    </div>
+
+                                </div>
+
+                                <!-- * Rowspan 2: Loan History Table -->
+                                <div class="rowspan">
+
+                                    <table>
+                                        <tr>
+                                            <th>Loan Amount</th>
+                                            <th>Savings</th>
+                                            <th>Penalty</th>
+                                            <th>Outstanding Balance</th>
+                                            <th>Date Released</th>
+                                            <th>Due Date</th>
+                                            <th>Due Date</th>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                    </table>
+
+
                                 </div>
 
                             </div>
 
-                            <!-- * Rowspan 2: Loan History Table -->
-                            <div class="rowspan">
 
-                                <table>
-                                    <tr>
-                                        <th>Loan Amount</th>
-                                        <th>Savings</th>
-                                        <th>Penalty</th>
-                                        <th>Outstanding Balance</th>
-                                        <th>Date Released</th>
-                                        <th>Due Date</th>
-                                        <th>Due Date</th>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-
-                                </table>
-
-
-                            </div>
 
                         </div>
 
+                        <!-- * Container 10: Payment History Table -->
+                        <div class="na-container-7">
+
+                            <!-- * Small Container -->
+                            <div class="small-con-4">
+
+                                <!-- * Rowspan 1: Header -->
+                                <div class="rowspan">
+
+                                    <!-- * Payment History -->
+                                    <div class="input-wrapper">
+                                        <h2>Payment History</h2>
+                                    </div>
+
+                                </div>
+
+                                <!-- * Rowspan 2: Payment History Table -->
+                                <div class="rowspan">
+
+                                    <table>
+                                        <tr>
+                                            <th>Loan Amount</th>
+                                            <th>Outstanding Balance</th>
+                                            <th>Paid Amount</th>
+                                            <th>Collector</th>
+                                            <th>Payment Date</th>
+                                            <th>Payment Type</th>
+                                            <th>Penalty</th>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                    </table>
 
 
-                    </div>
-
-                    <!-- * Container 10: Payment History Table -->
-                    <div class="na-container-7">
-
-                        <!-- * Small Container -->
-                        <div class="small-con-4">
-
-                            <!-- * Rowspan 1: Header -->
-                            <div class="rowspan">
-
-                                <!-- * Payment History -->
-                                <div class="input-wrapper">
-                                    <h2>Payment History</h2>
                                 </div>
 
                             </div>
 
-                            <!-- * Rowspan 2: Payment History Table -->
-                            <div class="rowspan">
 
-                                <table>
-                                    <tr>
-                                        <th>Loan Amount</th>
-                                        <th>Outstanding Balance</th>
-                                        <th>Paid Amount</th>
-                                        <th>Collector</th>
-                                        <th>Payment Date</th>
-                                        <th>Payment Type</th>
-                                        <th>Penalty</th>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-
-                                </table>
-
-
-                            </div>
 
                         </div>
 
-
-
                     </div>
+
 
                 </dialog>
 

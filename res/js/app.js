@@ -105,35 +105,46 @@ document.addEventListener("click", e => {
 
 // ****** New Application Module ****** //
 
-const openLoanDetailsButton = document.querySelector('[data-loan-details-open]')
-const closeLoanDetailsButton = document.querySelector('[data-loan-details-close]')
-const loanDetailsModal = document.querySelector("[data-loan-details-modal]")
+// *** Loan and Payement History Modal *** //
 
-loanDetailsModal.style.display = 'none'
+const openLoanDetailsButton = document.querySelector('#data-open-loan-details')
+const closeLoanDetailsButton = document.querySelector('#data-close-loan-details')
+const loanDetailsModal = document.querySelector('[data-loan-details-modal]')
+
 
 openLoanDetailsButton.addEventListener('click', () => {
-    loanDetailsModal.classList.add('open')
-    loanDetailsModal.style.display = 'grid'
+    loanDetailsModal.showModal();
 })
 
 closeLoanDetailsButton.addEventListener('click', () => {
-    loanDetailsModal.classList.remove('open')
-    loanDetailsModal.style.display = 'none'
+    loanDetailsModal.setAttribute("closing", "");
+    loanDetailsModal.addEventListener("animationend", () => {
+        loanDetailsModal.removeAttribute("closing");
+        loanDetailsModal.close();
+    }, { once: true });
 })
 
 loanDetailsModal.addEventListener('click', e => {
-    const loanDetailsModalDimensions = loanDetailsModal.getBoundingClientRect()
+    loanDetailsModal.setAttribute("closing", "");
+    loanDetailsModal.addEventListener("animationend", () => {
 
-    if (
-        e.clientX < loanDetailsModalDimensions.left ||
-        e.clientX > loanDetailsModalDimensions.right ||
-        e.clientY < loanDetailsModalDimensions.top ||
-        e.clientY > loanDetailsModalDimensions.bottom
-    ) {
-        loanDetailsModal.style.display = 'none'
-    }
+        const loanDetailsModalDimensions = loanDetailsModal.getBoundingClientRect()
+
+        if (
+            e.clientX < loanDetailsModalDimensions.left ||
+            e.clientX > loanDetailsModalDimensions.right ||
+            e.clientY < loanDetailsModalDimensions.top ||
+            e.clientY > loanDetailsModalDimensions.bottom
+        ) {
+            loanDetailsModal.removeAttribute("closing");
+        }
+        loanDetailsModal.close()
+
+    }, { once: true })
 
 })
+
+// *** END --- Loan and Payement History Modal *** //
 
 function activeProgressButton() {
     const level2 = document.querySelectorAll('[data-level-2]')

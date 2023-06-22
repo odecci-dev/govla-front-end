@@ -162,7 +162,41 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-@keyframes fade-in {}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
+}
+@keyframes pop-up {
+  0% {
+    transform: scale(0.8);
+  }
+  75% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slide-down {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
 .nav {
   position: fixed;
   z-index: 9;
@@ -2098,30 +2132,20 @@ body {
   align-items: center;
 }
 .main-dashboard .na-form-con .na-progress-bar-container .progress-bar-level .level {
-  border-radius: 1rem;
-  padding: 0.8rem 4rem 0.8rem 4rem;
+  border-radius: 10rem;
+  padding: 1.5rem 1rem;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
+  color: #29292B;
+  background-color: #E0DFDF;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  transition: all 200ms ease-in-out;
-  padding: 1.5rem 1rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 10rem;
-  background-color: #E0DFDF;
-  color: #29292B;
   height: 100%;
-  transition: all 400ms ease;
-}
-.main-dashboard .na-form-con .na-progress-bar-container .progress-bar-level .level:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
+  transition: all 400ms ease-in-out;
 }
 .main-dashboard .na-form-con .na-progress-bar-container .progress-bar-level .line {
   position: relative;
@@ -2559,8 +2583,6 @@ body {
   box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .main-dashboard .na-form-con .na-loan-details-modal {
-  position: fixed;
-  display: grid;
   margin: auto;
   height: 80%;
   width: 80%;
@@ -2570,23 +2592,38 @@ body {
 .main-dashboard .na-form-con .na-loan-details-modal::backdrop {
   background-color: rgba(41, 41, 43, 0.7);
 }
-.main-dashboard .na-form-con .na-loan-details-modal::before {
-  content: "";
-  z-index: -1;
-  position: fixed;
+.main-dashboard .na-form-con .na-loan-details-modal[open] {
+  animation: fade-in 500ms forwards, pop-up 500ms;
+}
+.main-dashboard .na-form-con .na-loan-details-modal::backdrop[open] {
+  animation: fade-in 500ms forwards;
+}
+.main-dashboard .na-form-con .na-loan-details-modal[closing] {
+  display: block;
+  pointer-events: none;
   inset: 0;
-  background-color: rgba(41, 41, 43, 0.7);
+  animation: fade-out 500ms forwards, slide-down 500ms forwards;
+}
+.main-dashboard .na-form-con .na-loan-details-modal::backdrop[closing] {
+  animation: fade-out 500ms forwards;
+}
+.main-dashboard .na-form-con .na-loan-details-modal::-webkit-scrollbar {
+  display: none;
+}
+.main-dashboard .na-form-con .na-loan-details-modal {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 .main-dashboard .na-form-con .na-loan-details-modal .button-wrapper {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0 1.2rem;
-  height: 10%;
 }
 .main-dashboard .na-form-con .na-loan-details-modal .button-wrapper button {
   cursor: pointer;
-  height: 100%;
   background: none;
 }
 .main-dashboard .na-form-con .na-loan-details-modal .button-wrapper button img {

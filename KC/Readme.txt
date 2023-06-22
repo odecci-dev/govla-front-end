@@ -277,3 +277,9 @@ Third Commit:
 - Downloaded a x-circle svg from Iconduck for the Modal
 - Added a function for the modal in app.js
 • Created a new scss component called _animation.scss
+
+Third Commit:
+• New Application: Completed the Loan and Payment History Modal
+- Added some animations when toggling on and off
+- Added the animations from the _animation.scss
+- Added some functions in the existing modal function (app.css)
