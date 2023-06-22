@@ -311,3 +311,7 @@ Second Commit:
 • Implemented the New Application & Checkbox IN-PROGRESS
 - Applied all the modal elements in each pages
 • Reapplied a deleted function from previous commit for Checkboxes in All Members Page (app.js)
+
+Third Commit:
+• Added an animation in All Members Checkboxes
+- Created an animation from an existing animation and modified it

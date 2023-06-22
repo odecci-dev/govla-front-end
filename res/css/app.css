@@ -187,8 +187,22 @@ body {
   0% {
     transform: scale(0.8);
   }
-  75% {
+  50% {
     transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes pop-up-big {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.015);
+  }
+  75% {
+    transform: scale(0.9);
   }
   100% {
     transform: scale(1);
@@ -1386,13 +1400,14 @@ body {
   content: url("../assets/icons/white-check.svg");
   position: absolute;
   top: 0.1rem;
-  display: none;
+  visibility: hidden;
 }
 .main-dashboard .am-con-2 .table-container table input[type=checkbox]:checked {
   background-color: #D6A330;
+  animation: pop-up-big 300ms forwards;
 }
 .main-dashboard .am-con-2 .table-container table input[type=checkbox]:checked:after {
-  display: block;
+  visibility: visible;
 }
 .main-dashboard .am-con-2 .table-container table th:nth-of-type(-n+6) {
   text-align: left;
