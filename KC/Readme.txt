@@ -291,3 +291,10 @@ Sixth Commit:
 • New Application: Adjustments on Assets and Properties
 - Modified the function add and subtracting
 - Modified the container styles
+
+Sixth Commit:
+• Loan and Payment Modal was implemented to the whole New Application Module
+- Added the modal to:
+    - new-application-credit-investigation
+    - new-application-approval
+    - new-application-releasing

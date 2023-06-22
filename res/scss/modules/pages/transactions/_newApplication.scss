@@ -1379,8 +1379,7 @@
                         align-items: flex-start;
                         padding: min(4rem, 5%) min(4rem, 10%);
                         @include containerDefault2;
-                        .rowspan.header {
-                            // padding-bottom: 10rem;
+                        .rowspan {
                             h2 {
                                 font-size: $font-size-x-large;
                             }
