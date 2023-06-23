@@ -317,8 +317,12 @@ Third Commit:
 - Created an animation from an existing animation and modified it
 
 Fourth Commit:
-• All Members: Sprint 3
+• All Members: Sprint 3 
 - Created new dropdown button for Type Of Loan
 - Added a dropdown button animations
 • Modified the Navlinks
 - Commented the New Member Page
+
+Fifth Commit:
+• All Members: Sprint 3 
+- All Members Revisions
