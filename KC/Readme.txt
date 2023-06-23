@@ -326,3 +326,11 @@ Fourth Commit:
 Fifth Commit:
 • All Members: Sprint 3 
 - All Members Revisions
+
+Sixth Commit:
+• All Members: Sprint 3 
+- All Members Revisions
+
+Seventh Commit:
+• All Members Sprint 3: Created a All Members Co-borrower page  
+- Added an all-member-co-borrower.html

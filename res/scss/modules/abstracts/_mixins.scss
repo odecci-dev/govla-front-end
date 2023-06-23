@@ -122,6 +122,11 @@
     font-weight: $font-weight-bold;
     color: $primary;
     background: transparent;
+    transition: all 200ms ease-in-out;
+    &:hover {
+        color: $black;
+        transform: scale(1.005);
+    }
 }
 
 // * Transparent Button 2

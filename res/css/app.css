@@ -642,8 +642,13 @@ body {
   font-weight: 700;
   color: #D6A330;
   background: transparent;
+  transition: all 200ms ease-in-out;
   padding: 0.8rem 4rem 0.8rem 4rem;
   font-size: 1.5rem;
+}
+.na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td .td-btn-wrapper .a-btn-trash:hover {
+  color: #29292B;
+  transform: scale(1.005);
 }
 .na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table .td-due {
   font-weight: 700;
@@ -852,8 +857,13 @@ body {
   font-weight: 700;
   color: #D6A330;
   background: transparent;
+  transition: all 200ms ease-in-out;
   color: #FFFFFF;
   font-size: 1.5rem;
+}
+.main-dashboard .con-wrapper .md-con-2 .card-wrapper .card:nth-of-type(3) .tag-wrap button:hover {
+  color: #29292B;
+  transform: scale(1.005);
 }
 .main-dashboard .con-wrapper .md-con-2 .big-card {
   display: grid;
@@ -1212,11 +1222,16 @@ body {
 .main-dashboard .am-con-1 h2 {
   font-size: 2.5rem;
 }
-.main-dashboard .am-con-1 p {
+.main-dashboard .am-con-1 .p-1 {
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+  font-style: italic;
+}
+.main-dashboard .am-con-1 .p-2 {
   margin-top: 1.5rem;
   font-size: 1.8rem;
 }
-.main-dashboard .am-con-1 p span {
+.main-dashboard .am-con-1 .p-2 span {
   font-weight: 700;
 }
 .main-dashboard .am-con-1 .container {
@@ -1375,6 +1390,11 @@ body {
   font-weight: 700;
   color: #D6A330;
   background: transparent;
+  transition: all 200ms ease-in-out;
+}
+.main-dashboard .am-con-1 .btn-container button:hover {
+  color: #29292B;
+  transform: scale(1.005);
 }
 .main-dashboard .am-con-2 {
   height: 74%;
@@ -1489,8 +1509,13 @@ body {
   font-weight: 700;
   color: #D6A330;
   background: transparent;
+  transition: all 200ms ease-in-out;
   padding: 0.8rem 4rem 0.8rem 4rem;
   font-size: 1.5rem;
+}
+.main-dashboard .am-con-2 .table-container table td .td-btn-wrapper .a-btn-trash:hover {
+  color: #29292B;
+  transform: scale(1.005);
 }
 .main-dashboard .am-con-2 .table-container table .td-due {
   font-weight: 700;
