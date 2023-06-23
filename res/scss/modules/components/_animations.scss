@@ -56,3 +56,15 @@
         transform: translateY(100%);
     }
 }
+
+// * Drop-down
+@keyframes drop-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-35%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}

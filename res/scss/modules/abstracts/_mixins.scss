@@ -11,6 +11,34 @@
     pointer-events: none;
 }
 
+// *** Nav Mixins
+@mixin dropdownMenu {
+    position: absolute;
+    z-index: -9;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: $primary;
+    pointer-events: none;
+    a {
+        cursor: pointer;
+        transition: background-color 200ms ease-in-out;
+        &:hover {
+            background-color: $black;
+        }
+        &:not(:first-of-type):hover {
+            background-color: $black;
+            border-bottom-left-radius: $border-radius-large;
+            border-bottom-right-radius: $border-radius-large;
+        }
+        &:last-of-type {
+            border-bottom-left-radius: $border-radius-large;
+            border-bottom-right-radius: $border-radius-large;
+        }
+    }
+}
+
 // *** Button Mixins
 // * Primary Button
 @mixin primaryButton {

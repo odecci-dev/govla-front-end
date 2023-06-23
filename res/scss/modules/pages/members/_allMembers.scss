@@ -32,6 +32,7 @@
             }
             // * Button Wrapper
             .wrapper:first-of-type {
+                gap: 2rem;
                 // * All-Member Button Styles
                 button {
                     @include primaryButton;
@@ -43,17 +44,14 @@
                         margin-left: $spacing-3x-large;
                     }
                 }
-                // * Selection and Borrower Button
+                // * Borrower and Type Of Loan Dropdown Button
                 button:nth-of-type(n+2) {
                     position: relative;
-                    padding-right: 8rem;
+                    background-color: aqua;
                     img {
                         position: absolute;
                         transform: translateY(.3rem);
                     }
-                }
-                button:nth-of-type(2) {
-                    margin: 0 $spacing-2x-large 0 $spacing-2x-large;
                 }
                 // * Borrower Dropdown Button
                 .borrower-dropdown {
@@ -61,14 +59,11 @@
                     .dropdown-menu {
                         // * When a link IS NOT clicked 
                         // * Styles for submenu
-                        @include submenu;
+                        @include dropdownMenu;
                         box-shadow: $box-shadow;
-                        top: 100%;
                         width: 100%;
                         a {
-                            cursor: pointer;
                             li {
-                                position: relative;
                                 display: flex;
                                 justify-content: flex-start;
                                 align-items: center;
@@ -80,11 +75,6 @@
                                     white-space: nowrap;
                                     color: $white;
                                 }
-                            }
-                            li:hover {
-                                cursor: pointer;
-                                background: rgba(0, 0, 0, 0.125);
-                                background-blend-mode: darken;
                             }
                         }
                     }
@@ -108,15 +98,21 @@
                     opacity: 1;
                     border-bottom-left-radius: $border-radius-large;
                     border-bottom-right-radius: $border-radius-large;
-                    transition: opacity ease-out 250ms;
+                    // transition: opacity ease-out 250ms;
+                    animation: drop-down 500ms ease-in-out forwards;
                 }
             }
             // * Search Wrapper
             .wrapper:last-of-type {
+                gap: 2rem;
+                display: flex;
+                align-items: center;
                 button {
                     cursor: pointer;
-                    margin-right: $spacing-2x-large;
                     background: none;
+                    &:hover {
+                        transform: scale(1.015);
+                    }
                 }
                 .search-wrap {
                     position: relative;
@@ -127,15 +123,15 @@
                         @include inputField;
                         position: relative;
                         padding-left: $spacing-6x-large;
-                    }
-                    input::placeholder {
-                        font-size: $font-size-large;
-                        position: absolute;
-                        top: 0;
-                        transform: translateY(1rem);
-                    }
-                    input::-webkit-search-cancel-button {
-                        -webkit-appearance: none;
+                        &::placeholder {
+                            font-size: $font-size-large;
+                            position: absolute;
+                            top: 0;
+                            transform: translateY(1rem);
+                        }
+                        &::-webkit-search-cancel-button {
+                            -webkit-appearance: none;
+                        }
                     }
                     img {
                         position: absolute;
