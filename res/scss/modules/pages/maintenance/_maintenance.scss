@@ -296,7 +296,7 @@
             }
         }
     }
-    // * New-Member-Form-Container
+    // * New Officer Form Container
     .no-form-con {
         display: flex;
         flex-direction: column;
@@ -619,6 +619,280 @@
                         display: grid;
                         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
                         gap: 0 $spacing-2x-large;
+                    }
+                }
+            }
+        }
+    }
+    // * New Officer Form Container
+    .fa-form-con {
+        // display: flex;
+        height: 100%;
+        // flex-direction: column;
+        // height: calc(100% - 80%);
+        width: 100%;
+        // * New Member Container Wrapper
+        .fa-container-wrapper {
+            height: 100%;
+            // * Container 1: New Member Form Fields and Buttons
+            .fa-container-1 {
+                height: 100%;
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+                grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+                gap: $spacing-2x-large;
+                padding: $spacing-2x-large;
+                // * Big Container 
+                .verti-con {
+                    height: 100%;
+                    width: 100%;
+                    padding: 5rem 4rem 4rem 4rem;
+                    @include containerDefault2;
+                    display: grid;
+                    grid-template-rows: minmax(0, 0.4fr) minmax(0, 2fr) minmax(0, 1fr);
+                    gap: $spacing-4x-large;
+                    grid-area: 1 / 1 / -1 / 3;
+                    // ** Rowspan Global Styles
+                    .rowspan {
+                        min-height: 0;
+                        /* NEW */
+                        min-width: 0;
+                        /* NEW; needed for Firefox */
+                        .input-wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            span {
+                                margin-bottom: 1rem;
+                                font-weight: $font-weight-bold;
+                                font-size: $font-size-large;
+                            }
+                            // * Input Global Styles
+                            input {
+                                @include inputField;
+                            }
+                        }
+                    }
+                    // * Rowspan 1: Header
+                    .rowspan:first-of-type {
+                        display: grid;
+                        flex-direction: column;
+                        h2 {
+                            font-size: $font-size-display;
+                        }
+                        p {
+                            font-size: $font-size;
+                        }
+                    }
+                    // * Rowspan 2: Area Name, Location and Search Bar
+                    .rowspan:nth-of-type(2) {
+                        display: grid;
+                        grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+                        gap: 3rem 0;
+                        .search-wrap {
+                            position: relative;
+                            input {
+                                width: 100%;
+                                &:hover~img {
+                                    opacity: 0;
+                                }
+                                &:focus~img,
+                                &:focus-within~img,
+                                &:focus-visible~img {
+                                    scale: 0;
+                                    opacity: 0;
+                                    transform: translateY(.6rem) translateX(-2.5rem);
+                                    transition: 300ms ease-in-out;
+                                }
+                            }
+                            img {
+                                position: absolute;
+                                width: 3rem;
+                                right: 0;
+                                transform: translateY(.6rem) translateX(-2.5rem);
+                                transition: 200ms ease-in-out;
+                            }
+                        }
+                    }
+                    // * Rowspan 3: Save Button
+                    .rowspan:nth-of-type(3) {
+                        display: grid;
+                        align-items: flex-end;
+                        justify-items: flex-end;
+                    }
+                }
+                .horiz-con {
+                    height: 100%;
+                    width: 100%;
+                    // * Rowspan Global Styles
+                    &.con1 {
+                        grid-area: 1 / 3 / 4 / -1;
+                    }
+                    &.con2 {
+                        grid-area: 4 / 3 / -1 / -1;
+                    }
+                    .box-wrap {
+                        height: 100%;
+                        padding: min(3rem, 5%) min(4rem, 10%);
+                        @include containerDefault2;
+                        display: grid;
+                        grid-template-rows: minmax(0, 0.2fr) minmax(0, 1fr);
+                        .rowspan:first-of-type {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            h3 {
+                                font-size: $font-size-x-large;
+                            }
+                            .input-wrapper {
+                                // * Input Global Styles
+                                .search-wrap {
+                                    position: relative;
+                                    input {
+                                        @include inputField;
+                                        padding-left: 8rem;
+                                        transition: 200ms ease-in-out;
+                                        &:hover~img {
+                                            opacity: 0;
+                                        }
+                                        &:focus~img,
+                                        &:focus-within~img,
+                                        &:focus-visible~img {
+                                            scale: 0;
+                                            opacity: 0;
+                                            transform: translateY(.6rem) translateX(2rem);
+                                            transition: 300ms ease-in-out;
+                                        }
+                                        &:focus,
+                                        &:focus-within,
+                                        &:focus-visible {
+                                            padding-left: 3.5rem;
+                                        }
+                                    }
+                                    img {
+                                        width: 3rem;
+                                        position: absolute;
+                                        left: 0;
+                                        transform: translateY(.6rem) translateX(2rem);
+                                        transition: 200ms ease-in-out;
+                                    }
+                                }
+                            }
+                        }
+                        .rowspan:last-of-type {
+                            display: grid;
+                            grid-template-rows: minmax(0, 1fr) minmax(0, 0.2fr);
+                            gap: $spacing-large 0;
+                            .table-container {
+                                // display: flex;
+                                // flex-direction: column;
+                                // height: calc(100% - 10%);
+                                table {
+                                    // **                         ** //
+                                    // **** Table Header Styles **** //
+                                    // **                         ** //
+                                    height: 100%;
+                                    tr:first-of-type,
+                                    tr:last-of-type {
+                                        border-bottom: 1px solid $black;
+                                    }
+                                    th {
+                                        padding: $spacing-2x-large 0;
+                                        text-align: center;
+                                        span.th-name {
+                                            font-size: $font-size-medium;
+                                            font-weight: $font-weight-bold;
+                                        }
+                                        .th-wrapper {
+                                            display: flex;
+                                            align-items: center;
+                                            img {
+                                                cursor: pointer;
+                                                padding-left: .5rem;
+                                            }
+                                        }
+                                    }
+                                    // * Table Checkbox
+                                    input[type="checkbox"] {
+                                        @include tableCheckboxInput;
+                                        &::after {
+                                            content: url('../assets/icons/white-check.svg');
+                                            position: absolute;
+                                            top: .1rem;
+                                            visibility: hidden;
+                                        }
+                                        &:checked {
+                                            background-color: $primary;
+                                            animation: pop-up-big 300ms forwards;
+                                        }
+                                        &:checked:after {
+                                            // animation: pop-up 300ms forwards;
+                                            visibility: visible;
+                                        }
+                                    }
+                                    // * All table header except the last child
+                                    th:nth-of-type(-n+4) {
+                                        text-align: left;
+                                    }
+                                    // **                       ** //
+                                    // **** Table Data Styles **** //
+                                    // **                       ** //
+                                    td {
+                                        padding: $spacing-2x-large 0;
+                                        font-size: $font-size-medium;
+                                        // * Borrowers' Data Styles
+                                        .td-wrapper {
+                                            display: flex;
+                                            align-items: center;
+                                            .td-name {
+                                                // margin-left: 2rem;
+                                            }
+                                        }
+                                        // * Table Buttons Styles
+                                        .td-btn-wrapper {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            button {
+                                                cursor: pointer;
+                                            }
+                                            // * Table View Button 
+                                            .a-btn-view {
+                                                @include secondaryButton;
+                                            }
+                                            // * Table Trash Button
+                                            .a-btn-trash {
+                                                @include tableButton;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            // * Pagination Container
+                            .pagination-container {
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+                                // * Pagination Links
+                                a {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-size: $font-size;
+                                    font-weight: $font-weight-bold;
+                                    margin: 0 $spacing-small;
+                                    color: $black;
+                                    img {
+                                        width: 50%;
+                                    }
+                                }
+                                a:first-of-type {
+                                    margin-right: $spacing-6x-large;
+                                }
+                                a:last-of-type {
+                                    margin-left: $spacing-6x-large;
+                                }
+                            }
+                        }
                     }
                 }
             }
