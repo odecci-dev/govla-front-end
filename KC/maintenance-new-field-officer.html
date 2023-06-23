@@ -300,7 +300,7 @@
             </div>
         </div>
 
-        <!-- * Main Dashboard -->
+        <!-- * Main Dashboard  -->
         <div class="main-dashboard">
 
             <!-- * New Application Modal -->
@@ -433,226 +433,304 @@
 
             </dialog>
 
-            <!-- * Maintenance' Containers -->
-            <!-- * Container 1: Maintenance Header, Buttons, and Searchbar -->
+            <!-- * New-Member-Form-Container -->
+            <form action="" class="no-form-con" autocomplete="off">
 
-            <div class="m-con-1">
-                <h2>Field Officers</h2>
+                <!-- * New Member Container Wrapper -->
+                <div class="no-container-wrapper">
 
-                <!-- * Button Container -->
-                <div class="container">
+                    <!-- * Container 1: New Member Form Fields and Buttons -->
+                    <div class="no-container-1">
 
-                    <!-- * Button Wrapper -->
-                    <div class="wrapper">
+                        <!-- * Big Container -->
+                        <div class="big-con">
 
-                        <!-- * Add New Button -->
-                        <button>
-                            <a href="../KC/maintenance-new-field-officer.html"><span>Add New</span></a>
-                        </button>
+                            <!-- * Form Header -->
 
+                            <!-- * Rowspan 1: Rowspan Header: Header and Buttons -->
+                            <div class="rowspan">
+
+                                <h2>New Field Officer</h2>
+
+                            </div>
+
+                            <!-- * Rowspan 2: First Name, Middle Name , Last Name, and Suffix -->
+                            <div class="rowspan">
+
+                                <!-- * First Name -->
+                                <div class="input-wrapper">
+                                    <span>First Name</span>
+                                    <input autocomplete="off" type="text" id="fName" name="fName">
+                                </div>
+
+                                <!-- * Middle Name -->
+                                <div class="input-wrapper">
+                                    <span>Middle Name</span>
+                                    <input autocomplete="off" type="text" id="midName" name="midName">
+                                </div>
+
+                                <!-- * Last Name -->
+                                <div class="input-wrapper">
+                                    <span>Last Name</span>
+                                    <input autocomplete="off" type="text" id="lName" name="lName">
+                                </div>
+
+                                <!-- * Suffix -->
+                                <div class="input-wrapper">
+                                    <span>Suffix</span>
+                                    <input autocomplete="off" type="text" id="suffix" name="suffix">
+                                </div>
+
+                            </div>
+
+                            <!-- * Rowspan 3: Gender, Date Of Birth, Age, Place Of Birth and Civil Status -->
+                            <div class="rowspan">
+
+                                <!-- * Gender -->
+                                <div class="input-wrapper">
+                                    <span>Gender</span>
+                                    <div class="select-box">
+                                        <select name="Gender" id="gender">
+                                        <option value="0"></option>
+                                        <option value="1">Male</option>
+                                        <option value="2">Female</option>
+                                    </select>
+                                    </div>
+                                </div>
+
+                                <!-- * Date Of Birth -->
+                                <div class="input-wrapper">
+                                    <span>Date Of Birth</span>
+                                    <input autocomplete="off" type="text" id="doBirth" name="doBirth">
+                                </div>
+
+                                <!-- * Age -->
+                                <div class="input-wrapper">
+                                    <span>Age</span>
+                                    <input autocomplete="off" type="number" id="age" name="age">
+                                </div>
+
+                                <!-- * Place Of Birth -->
+                                <div class="input-wrapper">
+                                    <span>Place Of Birth</span>
+                                    <input autocomplete="off" type="text" id="poBirth" name="poBirth">
+                                </div>
+
+                                <!-- * Civil Status -->
+                                <div class="input-wrapper">
+                                    <span>Civil Status</span>
+                                    <div class="select-box">
+                                        <select name="Civil Status" id="civStat" data-civil-status>
+                                            <option value="0"></option>
+                                            <option value="Widow">Widow</option>
+                                            <option value="Married">Married</option>
+                                            <option value="Single">Single</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- * Rowspan 4: Contact Number and Email Address -->
+                            <div class="rowspan">
+
+                                <!-- * Contact Number -->
+                                <div class="input-wrapper">
+                                    <div class="input-wrapper">
+                                        <span>Contact Number</span>
+                                        <input autocomplete="off" type="number" id="conNum" name="conNum">
+                                    </div>
+                                </div>
+
+                                <!-- * Email Address -->
+                                <div class="input-wrapper">
+                                    <div class="input-wrapper">
+                                        <span>Email Address</span>
+                                        <input autocomplete="off" type="email" id="eMail" name="eMail">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- * Rowspan 5: Barangay and House Address-->
+                            <div class="rowspan">
+
+                                <!-- * House No./ Bldg. No./ Room No./ Subdivision/ Street -->
+                                <div class="input-wrapper">
+                                    <span>House No./ Bldg. No./ Room No./ Subdivision/ Street</span>
+                                    <input autocomplete="off" type="text" id="houseAdd" name="houseAdd">
+                                </div>
+
+                                <!-- * Barangay -->
+                                <div class="input-wrapper">
+                                    <span>Barangay</span>
+                                    <input autocomplete="off" type="text" id="brgy" name="brgy">
+                                </div>
+
+                            </div>
+
+                            <!-- * Rowspan 6: City / Municipality, Province / Region, and Country -->
+                            <div class="rowspan">
+
+
+                                <!-- * City / Municipality -->
+                                <div class="input-wrapper">
+                                    <span>City / Municipality</span>
+                                    <input autocomplete="off" type="text" id="city" name="city">
+                                </div>
+
+                                <!-- * Province / Region -->
+                                <div class="input-wrapper">
+                                    <span>Province / Region</span>
+                                    <input autocomplete="off" type="text" id="province" name="province">
+                                </div>
+
+                                <!-- * Country -->
+                                <div class="input-wrapper">
+                                    <span>Country</span>
+                                    <input autocomplete="off" type="text" id="country" name="country">
+                                </div>
+
+
+                            </div>
+
+                        </div>
                     </div>
 
-                    <!-- * Search Wrapper -->
-                    <div class="wrapper">
+                    <!-- * Container 2: Upload Images, Files and Monthly Bills Input Fields -->
+                    <div class="no-container-2">
 
-                        <!-- * Search Bar -->
-                        <div class="search-wrap">
-                            <input type="search" id="search" name="search" placeholder="Search for collector">
-                            <img src="../res/assets/icons/magnifyingglass.svg" alt="search">
+                        <!-- * Small Container -->
+                        <div class="small-con">
+
+                            <div class="box-wrap">
+
+                                <h3>Upload Files</h3>
+
+                                <!-- * Colspan 1: Upload Image, Attach Files and Save Buttons  -->
+                                <div class="colspan">
+
+                                    <!-- * Upload Image -->
+                                    <div class="input-wrapper">
+                                        <input type="image" src="../res/assets/icons/upload-image.svg" alt="upload-image">
+                                    </div>
+
+                                    <!-- * Upload Button -->
+                                    <button type="button" submit="" class="button">Upload Image</button>
+
+                                    <!-- * Attach Button -->
+                                    <button type="button" submit="" class="button">Attach Files</button>
+
+                                    <!-- * Save Button -->
+                                    <button type="button" submit="" class="button">Save</button>
+
+                                </div>
+
+                            </div>
+
                         </div>
 
                     </div>
 
                 </div>
 
-                <!-- * View Trash Button -->
-                <div class="btn-container">
-                    <button>View Trash</button>
-                </div>
-            </div>
+                <!-- * Container 3: Requirements -->
+                <div class="no-container-3">
 
-            <!-- * Container 2: Maintenance Field Officer Table and Table and Pagination -->
-            <div class="m-con-2">
+                    <!-- * Small Container -->
+                    <div class="small-con-2">
 
-                <!-- * Table Container -->
-                <div class="table-container">
+                        <!-- * Rowspan 1: Header -->
+                        <div class="rowspan">
 
-                    <!-- * All Members Table -->
-                    <table>
+                            <!-- * Requirements -->
+                            <div class="input-wrapper">
+                                <h2>Requirements</h2>
+                            </div>
 
-                        <!-- * Table Header -->
-                        <tr>
+                        </div>
 
-                            <!-- * Checkbox ALl-->
-                            <th>
-                                <!-- <input type="checkbox" id="allCheckbox" onchange="checkAll(this)"> -->
-                            </th>
+                        <!-- * Rowspan 2: Valid ID Presented and ID Number -->
+                        <div class="rowspan">
 
-                            <!-- * Name -->
-                            <th>
-                                <span class="th-name">Name</span>
-                            </th>
-
-                            <!-- * Contact No. -->
-                            <th>
-                                <span class="th-name">Contact No.</span>
-                            </th>
-
-                            <!-- * Address -->
-                            <th>
-                                <div class="th-wrapper">
-                                    <span class="th-name">Address</span>
-                                    <!-- <img src="../res/assets/icons/funnel-simple.svg" alt="funnel"> -->
+                            <!-- * Valid ID Presented -->
+                            <div class="input-wrapper">
+                                <span>Valid ID Presented</span>
+                                <div class="select-box">
+                                    <select name="validID" id="validID">
+                                    <option value="0"></option>
+                                    <option value="Philhealth">Philhealth</option>
+                                    <option value="SSS">SSS</option>
+                                    <option value="Pag-ibig">Pag-ibig</option>
+                                    </select>
                                 </div>
-                            </th>
+                            </div>
 
-                            <!-- * Contact No. -->
-                            <th>
-                                <div class="th-wrapper">
-                                    <span class="th-name">Contact No.</span>
-                                    <!-- <img src="../res/assets/icons/funnel-simple.svg" alt="funnel"> -->
-                                </div>
-                            </th>
+                            <!-- * ID Number -->
+                            <div class="input-wrapper">
+                                <span>ID Number</span>
+                                <input type="text" id="idNumber" name="idNumber">
+                            </div>
 
-                            <!-- * Area -->
-                            <th>
-                                <div class="th-wrapper">
-                                    <span class="th-name">Area</span>
-                                    <!-- <img src="../res/assets/icons/funnel-simple.svg" alt="funnel"> -->
-                                </div>
-                            </th>
+                        </div>
 
-                            <!-- * Action -->
-                            <th>
-                                <span class="th-name">Action</span>
-                            </th>
-                        </tr>
+                        <!-- * Rowspan 3: ID Front and Back Image Input  -->
+                        <div class="rowspan">
 
+                            <div class="wrapper">
 
-                        <!-- * All Members Data -->
-                        <tr>
-
-                            <!-- * Number -->
-                            <td class="number">
-                                <!-- <input type="checkbox" id="checkbox" data-checkbox> -->
-                            </td>
-
-                            <!-- * Officer Name -->
-                            <td>
-
-                                <!-- * Officers' Name-->
-                                <div class="td-wrapper">
-                                    <!-- <img src="../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> <span class="td-num">1</span> -->
-                                    <span class="td-name">Dela Cruz, Juana</span>
+                                <!-- * ID Front Image Input -->
+                                <div class="input-wrapper">
+                                    <span>Front</span>
+                                    <input type="image" src="../res/assets/icons/upload-image.svg" alt="Front Image" id="frontImage" name="frontImage">
                                 </div>
 
-                            </td>
-
-                            <!-- * Contact Number 1 -->
-                            <td class="td-con-1">
-                                0935 239 234
-                            </td>
-
-                            <!-- * Address -->
-                            <td class="td-address">
-                                1216 Goosetown Drive Asheville, North Carolina
-                            </td>
-
-                            <!-- * Contact Number 2 -->
-                            <td class="td-con-2">
-                                0934 312 3432
-                            </td>
-
-                            <!-- * Area -->
-                            <td class="td-area">
-                                Area 1
-                            </td>
-
-                            <!-- * Action -->
-                            <td class="td-btns">
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view">View</button>
-                                    <button class="a-btn-trash">Trash</button>
+                                <!-- * ID Back Image Input -->
+                                <div class="input-wrapper">
+                                    <span>Back</span>
+                                    <input type="image" src="../res/assets/icons/upload-image.svg" alt="Back Image" id="backImage" name="backImage">
                                 </div>
-                            </td>
 
-                        </tr>
+                            </div>
 
-                        <tr>
+                            <button class="button">Upload Image</button>
 
-                            <!-- * Checkbox -->
-                            <td>
-                                <!-- <input type="checkbox" id=" checkbox" data-checkbox> -->
-                            </td>
+                        </div>
 
-                            <!-- * Borrower Data-->
-                            <td>
-                                <!-- <div class="td-wrapper">
-                                    <img src="../res/assets/icons/sample-dp/Borrower-2.svg" alt=""> <span class="td-num">1</span>
-                                    <span class="td-name">Beverly, Haily</span>
-                                </div> -->
-                            </td>
+                        <!-- * Rowspan 4: Philhealth Number, Pag-ibig Number and SSS Number -->
+                        <div class="rowspan">
 
-                            <!-- * Co-Makers Data-->
-                            <td>
-                                <!-- <div class="td-wrapper">
-                                    <img src="../res/assets/icons/sample-dp/CoMaker-2.svg" alt="">
-                                    <span class="td-name">Barbosa, June</span>
-                                </div> -->
-                            </td>
+                            <div class="wrapper-2">
 
-                            <!-- * Current Loan Data-->
-                            <td class="td-curLoan">
-                                <!-- 18,000.00 -->
-                                <!--  -->
-                            </td>
+                                <!-- * Philhealth Number -->
+                                <div class="input-wrapper">
+                                    <span>Philhealth Number</span>
+                                    <input type="number" id="philhealthNum" name="philhealthNum">
+                                </div>
 
-                            <!-- * Outstading Balance Data-->
-                            <td class="td-bal">
-                                <!-- 10,000.00 -->
-                                <!--  -->
-                            </td>
+                                <!-- * Pag-ibig Number -->
+                                <div class="input-wrapper">
+                                    <span>Pag-ibig Number</span>
+                                    <input type="number" id="pagibigNum" name="pagibigNum">
+                                </div>
 
-                            <!-- * Due Date Info-->
-                            <td class="td-due">
-                                <!-- May 30, 2023 -->
-                                <!--  -->
-                            </td>
+                            </div>
 
-                            <!-- * Table View and Trash Button -->
-                            <td class="td-btns">
+                            <!-- * SSS Number -->
+                            <div class="input-wrapper">
+                                <span>SSS Number</span>
+                                <input type="number" id="sssNumber" name="sssNumber">
+                            </div>
 
-                                <!-- 
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view">View</button>
-                                    <button class="a-btn-trash">Trash</button>
-                                </div> -->
+                        </div>
 
-                            </td>
-
-                        </tr>
-
-                    </table>
-                </div>
-
-                <!-- * Pagination Container -->
-                <div class="pagination-container">
-
-                    <!-- * Pagination Links -->
-                    <a href="#"><img src="../res/assets/icons/caret-left.svg" alt="caret-left"></a>
-                    <a href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#"><img src="../res/assets/icons/caret-right.svg" alt="caret-right"></a>
+                    </div>
 
                 </div>
-
-            </div>
 
         </div>
 
+        </form>
     </main>
     <script src="../res/js/app.js" defer></script>
 </body>

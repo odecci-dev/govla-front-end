@@ -400,6 +400,13 @@
     gap: $spacing-2x-large 0px;
 }
 
+// * Big Container 2
+@mixin bigContainerGrid2 {
+    @include displayGrid;
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: $spacing-2x-large 0px;
+}
+
 // * Small Container
 @mixin twoBlockGrid {
     @include displayGrid;

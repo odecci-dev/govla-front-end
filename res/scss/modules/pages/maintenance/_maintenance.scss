@@ -296,4 +296,332 @@
             }
         }
     }
+    // * New-Member-Form-Container
+    .no-form-con {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        // * New Member Container Wrapper
+        .no-container-wrapper {
+            display: grid;
+            grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.4fr);
+            // * Container 1: New Member Form Fields and Buttons
+            .no-container-1 {
+                padding: 2rem 1rem 1rem 2rem;
+                // * Big Container 
+                .big-con {
+                    width: 100%;
+                    // height: calc(100% - 20%);
+                    padding: 5rem 4rem 4rem 4rem;
+                    @include containerDefault2;
+                    @include bigContainerGrid2;
+                    gap: $spacing-4x-large;
+                    // ** Rowspan Global Styles
+                    .rowspan {
+                        min-height: 0;
+                        /* NEW */
+                        min-width: 0;
+                        /* NEW; needed for Firefox */
+                        .input-wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            span {
+                                margin-bottom: 1rem;
+                                font-weight: $font-weight-bold;
+                                font-size: $font-size;
+                            }
+                            // * Input Global Styles
+                            input {
+                                @include inputField;
+                            }
+                            // * Select Input Global Styles
+                            .select-box {
+                                position: relative;
+                                select {
+                                    @include selectField;
+                                    width: 100%;
+                                    option {
+                                        position: absolute;
+                                        outline: none;
+                                        border: none;
+                                        background-color: $secondary-bg;
+                                    }
+                                }
+                            }
+                            // * Select Input Arrow
+                            .select-box::before {
+                                content: '';
+                                position: absolute;
+                                width: 15px;
+                                height: 15px;
+                                z-index: 2;
+                                right: 0;
+                                transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
+                                // border: 2px solid $black;
+                                border-bottom: 2px solid $black;
+                                border-left: 2px solid $black;
+                                transition: ease-out 300ms;
+                                pointer-events: none;
+                            }
+                            .select-box:focus-within::before {
+                                border-top: 2px solid $black;
+                                border-right: 2px solid $black;
+                                border-bottom: none;
+                                border-left: none;
+                                transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
+                            }
+                            // * Radio Buttons
+                            .box-wrap {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-around;
+                                .radio-btn-wrapper {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    span {
+                                        white-space: nowrap;
+                                    }
+                                    input[type="radio"] {
+                                        @include formRadioButtons;
+                                    }
+                                    input[type="radio"]::after {
+                                        @include formRadioButtonsAfter;
+                                    }
+                                    input[type="radio"]:checked:after {
+                                        @include formRadioButtonsChecked;
+                                    }
+                                    // input[type="radio"]:focus {
+                                    //     outline: max(1px, 0.15em) solid $primary;
+                                    //     outline-offset: max(2px, 0.15em);
+                                    // }
+                                }
+                            }
+                        }
+                    }
+                    // * Rowspan Header: Header and Buttons 
+                    .rowspan:first-of-type {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        h2 {
+                            font-size: $font-size-x-large;
+                        }
+                    }
+                    // * Rowspan 2: First Name, Middle Name , Last Name, and Suffix
+                    .rowspan:nth-of-type(2) {
+                        @include rowspan2;
+                    }
+                    // * Rowspan 3: Gender, Date Of Birth, Age, Place Of Birth and Civil Status
+                    .rowspan:nth-of-type(3) {
+                        @include rowspan3;
+                    }
+                    // * Rowspan 4: Contact Number and Email Address
+                    .rowspan:nth-of-type(4) {
+                        @include rowspan4;
+                    }
+                    // * Rowspan 5: House Address and Barangay
+                    .rowspan:nth-of-type(5) {
+                        @include rowspan5;
+                        grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.4fr);
+                    }
+                    // * Rowspan 6: Barangay, City / Municipality, Province / Region, and Country
+                    .rowspan:nth-of-type(6) {
+                        @include rowspan6;
+                    }
+                }
+            }
+            // * Container 2: File Attachments and Monthly Bills
+            .no-container-2 {
+                padding: 2rem 2rem 1rem 1rem;
+                // * Small Container
+                .small-con {
+                    height: 100%;
+                    width: 100%;
+                    // * Rowspan Global Styles
+                    .box-wrap {
+                        height: 100%;
+                        padding: min(3rem, 5%) min(4rem, 10%);
+                        @include containerDefault2;
+                    }
+                    // * Boxwrap 1
+                    .box-wrap:first-of-type {
+                        display: grid;
+                        grid-template-rows: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+                        align-items: center;
+                        justify-items: center;
+                        // * Colspan 1
+                        h3 {
+                            font-size: $font-size-x-large;
+                        }
+                        .colspan {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 2rem;
+                            .input-wrapper {
+                                // margin-bottom: min(2rem, 10%);
+                                display: grid;
+                                place-items: center;
+                                input[type="image"] {
+                                    width: clamp(4rem, 10vw, 100%);
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+                            }
+                            // * Colspan 1 : Buttons
+                            button {
+                                display: flex;
+                                justify-content: center;
+                                width: clamp(2rem, 10vw, 100%);
+                                white-space: nowrap;
+                                &:last-of-type {
+                                    width: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // * Container 3: Job Information Input Fields
+        .no-container-3 {
+            height: calc(100% - 40%);
+            width: 100%;
+            padding: 1rem 2rem 2rem;
+            .small-con-2 {
+                height: 100%;
+                width: 100%;
+                @include smallContainerGrid2;
+                @include containerDefault2;
+                grid-template-rows: minmax(0, 2fr) minmax(0, 2fr) minmax(0, 2fr) minmax(0, 2fr);
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+                gap: $spacing-2x-large $spacing-2x-large;
+                padding: 3rem 4rem 3rem 4rem;
+                .rowspan {
+                    min-height: 0;
+                    /* NEW */
+                    min-width: 0;
+                    /* NEW; needed for Firefox */
+                    .input-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        >span {
+                            margin-bottom: 1rem;
+                            font-weight: $font-weight-bold;
+                            font-size: $font-size;
+                        }
+                        // * Input Global Styles
+                        input {
+                            @include inputField;
+                        }
+                        // * Select Input Global Styles
+                        .select-box {
+                            position: relative;
+                            select {
+                                @include selectField;
+                                width: 100%;
+                                option {
+                                    position: absolute;
+                                    outline: none;
+                                    border: none;
+                                    background-color: $secondary-bg;
+                                }
+                            }
+                        }
+                        // * Select Input Arrow
+                        .select-box::before {
+                            content: '';
+                            position: absolute;
+                            width: 15px;
+                            height: 15px;
+                            z-index: 2;
+                            right: 0;
+                            transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
+                            // border: 2px solid $black;
+                            border-bottom: 2px solid $black;
+                            border-left: 2px solid $black;
+                            transition: ease-out 300ms;
+                            pointer-events: none;
+                        }
+                        .select-box:focus-within::before {
+                            border-top: 2px solid $black;
+                            border-right: 2px solid $black;
+                            border-bottom: none;
+                            border-left: none;
+                            transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
+                        }
+                        // * Radio Buttons
+                        .box-wrap {
+                            display: flex;
+                            align-items: center;
+                            .radio-btn-wrapper {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                span {
+                                    font-weight: $font-weight-bold;
+                                    margin-left: 1rem;
+                                    white-space: nowrap;
+                                }
+                                input[type="radio"] {
+                                    @include formCheckbox;
+                                }
+                                input[type="radio"]::after {
+                                    @include formCheckboxAfter;
+                                }
+                                input[type="radio"]:checked:after {
+                                    @include formCheckboxChecked;
+                                }
+                            }
+                        }
+                    }
+                }
+                // * Rowspan Header
+                .rowspan:nth-of-type(1) {
+                    grid-area: 1 / 1 / 2 / -1;
+                    h2 {
+                        font-size: $font-size-x-large;
+                    }
+                }
+                // * Rowspan 2: Valid ID Presented and ID Number
+                .rowspan:nth-of-type(2) {
+                    @include smallcon2Rowspan2;
+                    grid-area: 2 / 1 / 2 / -1;
+                    grid-template-columns: minmax(0, 0.3fr) minmax(0, 1.7fr);
+                }
+                // * Rowspan 3: ID Front and Back Image Input
+                .rowspan:nth-of-type(3) {
+                    display: grid;
+                    grid-area: 3 / 1 / 5 / 1;
+                    grid-template-rows: minmax(0, 1fr) minmax(0, 0.4fr);
+                    gap: $spacing-2x-large 0;
+                    .wrapper {
+                        height: 100%;
+                        display: grid;
+                        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                        gap: 0 $spacing-2x-large;
+                        .input-wrapper>input[type=image] {
+                            height: 30%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                // * Rowspan 4: Philhealth Number, Pag-ibig Number and SSS Number
+                .rowspan:nth-of-type(4) {
+                    display: grid;
+                    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+                    grid-area: 3 / 2 / 5 / -1;
+                    gap: $spacing-3x-large 0;
+                    .wrapper-2 {
+                        display: grid;
+                        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                        gap: 0 $spacing-2x-large;
+                    }
+                }
+            }
+        }
+    }
 }
