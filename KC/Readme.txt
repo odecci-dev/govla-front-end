@@ -334,3 +334,6 @@ Sixth Commit:
 Seventh Commit:
 • All Members Sprint 3: Created a All Members Co-borrower page  
 - Added an all-member-co-borrower.html
+
+Eight Commit:
+• Sprint 3: Implemented the Holiday in Submenu Navlinks

@@ -24,7 +24,9 @@
 
                 <!-- * Nav Links Container -->
                 <ul class="nav-links">
+
                     <!-- * Link Wrapper -->
+                    <!-- * Dashboard -->
                     <a href="../KC/dashboard.html" data-nav-link>
                         <li class="link" no-data-dropdown>
                             <!-- * Overview -->
@@ -34,6 +36,7 @@
                     </a>
 
                     <!-- * Link Wrapper w/ SubMenu -->
+                    <!-- * Members -->
                     <div class="dropdown" data-dropdown>
 
                         <li class="link dropdown" data-dropdown-button>
@@ -106,6 +109,14 @@
                                     <!-- * Loan Type -->
                                     <img src="../res/assets/icons/sub-menu/loan-type.svg" alt="loan-type" />
                                     <span>Loan Type</span>
+                                </li>
+                            </a>
+
+                            <a href="../KC/holidays.html" data-nav-link>
+                                <li>
+                                    <!-- * Holidays -->
+                                    <img src="../res/assets/icons/sub-menu/holidays.svg" alt="loan-type" />
+                                    <span>Holidays</span>
                                 </li>
                             </a>
 
@@ -262,6 +273,7 @@
 
                         </ul>
                     </div>
+
                 </ul>
             </div>
 
@@ -480,14 +492,14 @@
                             <ul class="dropdown-menu">
 
                                 <!-- * Collateral Loan -->
-                                <a href="../KC/all-members.html">
+                                <a href="../KC/all-members-borrower.html">
                                     <li>
                                         <span>Collateral Loan</span>
                                     </li>
                                 </a>
 
                                 <!-- * Group Loan -->
-                                <a href="#">
+                                <a href="../KC/all-members-group-loan.html">
                                     <li>
                                         <span>Group Loan</span>
                                     </li>
@@ -534,13 +546,19 @@
                         <tr>
 
                             <!-- * Checkbox ALl-->
-                            <th><input type="checkbox" id="allCheckbox" onchange="checkAll(this)"></th>
+                            <th>
+                                <input type="checkbox" id="allCheckbox" onchange="checkAll(this)">
+                            </th>
 
                             <!-- * Borrower -->
-                            <th><span class="th-name">Borrower</span></th>
+                            <th>
+                                <span class="th-name">Borrower</span>
+                            </th>
 
                             <!-- * Co-borrower -->
-                            <th><span class="th-name">Co-borrower</span></th>
+                            <th>
+                                <span class="th-name">Co-borrower</span>
+                            </th>
 
                             <!-- * Current Loan -->
                             <th>
@@ -574,42 +592,51 @@
                         <tr>
 
                             <!-- * Checkbox Opt -->
-                            <td><input type="checkbox" id="checkbox" data-checkbox></td>
+                            <td>
+                                <!-- <input type="checkbox" id="checkbox" data-checkbox> -->
+                            </td>
 
                             <td>
+
                                 <!-- * Borrower Data-->
-                                <div class="td-wrapper">
+                                <!-- <div class="td-wrapper">
                                     <img src="../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> <span class="td-num">1</span>
                                     <span class="td-name">Dela Cruz, Juana</span>
-                                </div>
+                                </div> -->
 
                             </td>
 
                             <td>
 
                                 <!-- * Co-Makers Data-->
-                                <div class="td-wrapper">
+                                <!-- <div class="td-wrapper">
                                     <img src="../res/assets/icons/sample-dp/CoMaker-1.svg" alt="Alfreds Futterkiste">
                                     <span class="td-name">Palermo, Juliana</span>
-                                </div>
+                                </div> -->
 
                             </td>
 
                             <!-- * Current Loan Data-->
-                            <td class="td-curLoan">18,000.00</td>
+                            <td class="td-curLoan">
+                                <!-- 18,000.00 -->
+                            </td>
 
                             <!-- * Outstading Balance Data-->
-                            <td class="td-bal">10,000.00</td>
+                            <td class="td-bal">
+                                <!-- 10,000.00 -->
+                            </td>
 
                             <!-- * Due Date Info-->
-                            <td class="td-due">June 4, 2023</td>
+                            <td class="td-due">
+                                <!-- June 4, 2023 -->
+                            </td>
 
                             <!-- * Table View and Trash Button -->
                             <td class="td-btns">
-                                <div class="td-btn-wrapper">
+                                <!-- <div class="td-btn-wrapper">
                                     <button class="a-btn-view">View</button>
                                     <button class="a-btn-trash">Trash</button>
-                                </div>
+                                </div> -->
                             </td>
 
                         </tr>
@@ -617,44 +644,57 @@
                         <tr>
 
                             <!-- * Checkbox -->
-                            <td><input type="checkbox" id=" checkbox" data-checkbox></td>
+                            <td>
+                                <!-- <input type="checkbox" id=" checkbox" data-checkbox> -->
+                            </td>
 
                             <!-- * Borrower Data-->
                             <td>
-                                <div class="td-wrapper">
+                                <!-- <div class="td-wrapper">
                                     <img src="../res/assets/icons/sample-dp/Borrower-2.svg" alt=""> <span class="td-num">1</span>
                                     <span class="td-name">Beverly, Haily</span>
-                                </div>
+                                </div> -->
                             </td>
 
                             <!-- * Co-Makers Data-->
                             <td>
-                                <div class="td-wrapper">
+                                <!-- <div class="td-wrapper">
                                     <img src="../res/assets/icons/sample-dp/CoMaker-2.svg" alt="">
                                     <span class="td-name">Barbosa, June</span>
-                                </div>
+                                </div> -->
                             </td>
 
                             <!-- * Current Loan Data-->
-                            <td class="td-curLoan">18,000.00</td>
+                            <td class="td-curLoan">
+                                <!-- 18,000.00 -->
+                                <!--  -->
+                            </td>
 
                             <!-- * Outstading Balance Data-->
-                            <td class="td-bal">10,000.00</td>
+                            <td class="td-bal">
+                                <!-- 10,000.00 -->
+                                <!--  -->
+                            </td>
 
                             <!-- * Due Date Info-->
-                            <td class="td-due">May 30, 2023</td>
+                            <td class="td-due">
+                                <!-- May 30, 2023 -->
+                                <!--  -->
+                            </td>
 
                             <!-- * Table View and Trash Button -->
                             <td class="td-btns">
 
+                                <!-- 
                                 <div class="td-btn-wrapper">
                                     <button class="a-btn-view">View</button>
                                     <button class="a-btn-trash">Trash</button>
-                                </div>
+                                </div> -->
 
                             </td>
 
                         </tr>
+
                     </table>
                 </div>
 
