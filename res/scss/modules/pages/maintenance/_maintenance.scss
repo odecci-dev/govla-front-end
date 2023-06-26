@@ -661,7 +661,7 @@
                         .input-wrapper {
                             display: flex;
                             flex-direction: column;
-                            span {
+                            >span {
                                 margin-bottom: 1rem;
                                 font-weight: $font-weight-bold;
                                 font-size: $font-size-large;
@@ -696,11 +696,14 @@
                                 overflow-y: auto;
                                 display: grid;
                                 grid-template-columns: repeat(4, minmax(0, 1fr));
-                                gap: 1rem;
+                                gap: $spacing-large;
                                 padding: $spacing-2x-large;
                                 height: 100%;
                                 .tb-chip {
-                                    @include tableChipsWithX;
+                                    @include tableChips;
+                                    .tb-chips-w-x {
+                                        @include tableChipsWithX;
+                                    }
                                 }
                             }
                         }

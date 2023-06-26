@@ -164,13 +164,15 @@ table {
 }
 
 .tb-chip {
+  position: relative;
+  height: clamp(1.5rem, 2.5vw, 4rem);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.8rem 2rem 0.8rem 2rem;
   border-radius: 0.75rem;
   font-size: 1.5rem;
-  font-weight: 1.5rem;
+  font-weight: 500;
   background-color: #FFFFFF;
   color: #29292B;
   white-space: nowrap;
@@ -2028,7 +2030,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan .input-wrapper span {
+.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan .input-wrapper > span {
   margin-bottom: 1rem;
   font-weight: 700;
   font-size: 2rem;
@@ -2070,24 +2072,25 @@ body {
   overflow-y: auto;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 2rem;
   height: 100%;
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .tb-chip {
+  position: relative;
+  height: clamp(1.5rem, 2.5vw, 4rem);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.8rem 2rem 0.8rem 2rem;
   border-radius: 0.75rem;
   font-size: 1.5rem;
-  font-weight: 1.5rem;
+  font-weight: 500;
   background-color: #FFFFFF;
   color: #29292B;
   white-space: nowrap;
-  position: relative;
 }
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .tb-chip::before {
+.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .tb-chip .tb-chips-w-x::before {
   content: "X";
   cursor: pointer;
   position: absolute;

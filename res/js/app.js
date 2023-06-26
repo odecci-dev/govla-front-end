@@ -1,5 +1,7 @@
 const dashboard = document.querySelector(".main-dashboard")
 
+
+
 function navigationEvents() {
     // * Side Nav
 
@@ -118,6 +120,22 @@ function checkAll(tableCheckBox) {
         })
     }
 }
+
+
+// ***** Maintenance ***** //
+
+// ** Field Area Maintenance ** //
+const tbChips = document.querySelectorAll('[data-tb-chip]');
+
+tbChips.forEach(tbChip => {
+    spanXs = document.createElement('span')
+    spanXs.classList.add('tb-chips-w-x')
+    tbChip.appendChild(spanXs)
+
+    spanXs.addEventListener('click', _ => {
+        tbChip.remove()
+    })
+})
 
 // ****** New Application Module ****** //
 
@@ -394,17 +412,6 @@ function subBank() {
 
 // ***** END ---- Add and Subtract Bank ***** //
 
-
-// ***** Maintenance ***** //
-
-// ** Field Area Maintenance ** //
-const tbChips = document.querySelectorAll('[data-tb-chip]');
-
-tbChips.forEach(tbChip => {
-    tbChip.addEventListener('click', _ => {
-        console.log('clicked')
-    })
-})
 
 
 // const tbChips = document.querySelectorAll('.tb-chip').forEach(e => {

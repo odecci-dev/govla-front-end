@@ -356,4 +356,8 @@ Twelfth Commit:
 
 June 26, 2023 (Monday)
 First Commit:
-• Field Area Maintence: Table body hover animation
+• Field Area Maintenance: Table body hover animation
+
+Second Commit:
+• Field Area Maintenance: Location Chips
+- Created function for removing chips (app.js)
