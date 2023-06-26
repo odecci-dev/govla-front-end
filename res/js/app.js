@@ -1,7 +1,5 @@
 const dashboard = document.querySelector(".main-dashboard")
 
-
-
 function navigationEvents() {
     // * Side Nav
 
@@ -67,7 +65,7 @@ navLinkEls.forEach(navLink => {
 })
 
 
-// * All members Dropdown Menu Toggle
+// * All Members: Dropdown Menu Toggle
 document.addEventListener("click", e => {
 
     // * When a link is clicked, toggle the submenu
@@ -105,26 +103,27 @@ document.addEventListener("click", e => {
 
 })
 
-// * Table Checkbox Toggle
+// * All Members: Table Checkbox Toggle
+const allMemberCheckboxes = document.querySelectorAll('[data-allmembers-checkbox]');
 
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-function checkAll(tableCheckBox) {
+function checkAll1(tableCheckBox) {
     if (tableCheckBox.checked == true) {
-        checkboxes.forEach(function(checkbox) {
+        areaCheckboxes.forEach(function(checkbox) {
             checkbox.checked = true;
         })
     } else {
-        checkboxes.forEach(function(checkbox) {
+        areaCheckboxes.forEach(function(checkbox) {
             checkbox.checked = false;
         })
     }
 }
 
 
+
+
 // ***** Maintenance ***** //
 
-// ** Field Area Maintenance ** //
+// ** Field Area Maintenance: Location ** //
 const tbChips = document.querySelectorAll('[data-tb-chip]');
 
 tbChips.forEach(tbChip => {
@@ -136,6 +135,36 @@ tbChips.forEach(tbChip => {
         tbChip.remove()
     })
 })
+
+// * Field Area Maintenance: Table Area Checkbox Toggle
+const areaCheckboxes = document.querySelectorAll('[data-area-checkbox]');
+
+function checkAll2(tableCheckBox) {
+    if (tableCheckBox.checked == true) {
+        areaCheckboxes.forEach(function(checkbox) {
+            checkbox.checked = true;
+        })
+    } else {
+        areaCheckboxes.forEach(function(checkbox) {
+            checkbox.checked = false;
+        })
+    }
+}
+
+// * Field Area Maintenance: Table Locations Checkbox Toggle
+const locationCheckboxes = document.querySelectorAll('[data-location-checkbox]');
+
+function checkAll3(tableCheckBox) {
+    if (tableCheckBox.checked == true) {
+        locationCheckboxes.forEach(function(checkbox) {
+            checkbox.checked = true;
+        })
+    } else {
+        locationCheckboxes.forEach(function(checkbox) {
+            checkbox.checked = false;
+        })
+    }
+}
 
 // ****** New Application Module ****** //
 

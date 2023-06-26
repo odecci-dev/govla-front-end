@@ -361,3 +361,7 @@ First Commit:
 Second Commit:
 • Field Area Maintenance: Location Chips
 - Created function for removing chips (app.js)
+
+Third Commit:
+• Field Area Maintenance: Completed the Layout
+

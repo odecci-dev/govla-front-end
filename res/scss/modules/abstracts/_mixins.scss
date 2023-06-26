@@ -112,6 +112,7 @@
 // * Table Button
 @mixin tableButton {
     @include primaryButton;
+    font-size: 1rem;
     padding: $btn-padding-5;
 }
 
