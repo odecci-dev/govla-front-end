@@ -283,7 +283,7 @@ function subChildSingle() {
 // ****** END --- Child Form Toggle ***** //
 
 
-// * Business Informartion Form Toggle
+// * Business Information Form Toggle
 document.addEventListener('click', _ => {
     const businessForm = document.querySelector('[data-business-form]')
     const yesToggle = document.getElementById('formToggleYes')
@@ -393,6 +393,34 @@ function subBank() {
 }
 
 // ***** END ---- Add and Subtract Bank ***** //
+
+
+// ***** Maintenance ***** //
+
+// ** Field Area Maintenance ** //
+const tbChips = document.querySelectorAll('[data-tb-chip]');
+
+tbChips.forEach(tbChip => {
+    tbChip.addEventListener('click', _ => {
+        console.log('clicked')
+    })
+})
+
+
+// const tbChips = document.querySelectorAll('.tb-chip').forEach(e => {
+//     for (let tbChip of tbChips)
+//         tbChip.addEventListener('click', _ => {
+//             console.log('clicked')
+//         })
+
+// })
+
+
+// const tbChip = window.getComputedStyle(document.querySelector('.tb-chip'), ':before')
+
+// tbChip.addEventListener('click', _ => {
+//     console.log('clicked')
+// })
 
 // ***** Signature Pad ***** //
 

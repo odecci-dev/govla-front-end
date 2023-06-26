@@ -649,7 +649,7 @@
                     padding: 5rem 4rem 4rem 4rem;
                     @include containerDefault2;
                     display: grid;
-                    grid-template-rows: minmax(0, 0.4fr) minmax(0, 2fr) minmax(0, 1fr);
+                    grid-template-rows: minmax(0, 0.4fr) minmax(0, 3fr) minmax(0, 1fr);
                     gap: $spacing-4x-large;
                     grid-area: 1 / 1 / -1 / 3;
                     // ** Rowspan Global Styles
@@ -686,8 +686,24 @@
                     // * Rowspan 2: Area Name, Location and Search Bar
                     .rowspan:nth-of-type(2) {
                         display: grid;
-                        grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+                        grid-template-rows: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);
                         gap: 3rem 0;
+                        .input-wrapper:nth-of-type(2) {
+                            .locations-container {
+                                @include inputField;
+                                height: 100%;
+                                max-height: 100%;
+                                overflow-y: auto;
+                                display: grid;
+                                grid-template-columns: repeat(4, minmax(0, 1fr));
+                                gap: 1rem;
+                                padding: $spacing-2x-large;
+                                height: 100%;
+                                .tb-chip {
+                                    @include tableChipsWithX;
+                                }
+                            }
+                        }
                         .search-wrap {
                             position: relative;
                             input {
@@ -782,10 +798,8 @@
                             display: grid;
                             grid-template-rows: minmax(0, 1fr) minmax(0, 0.2fr);
                             gap: $spacing-large 0;
+                            // * Table Container
                             .table-container {
-                                // display: flex;
-                                // flex-direction: column;
-                                // height: calc(100% - 10%);
                                 table {
                                     // **                         ** //
                                     // **** Table Header Styles **** //
@@ -795,8 +809,23 @@
                                     tr:last-of-type {
                                         border-bottom: 1px solid $black;
                                     }
+                                    tr:not(:first-of-type):hover {
+                                        cursor: pointer;
+                                        background-color: $primary;
+                                        color: $white;
+                                        transition: 300ms ease-out;
+                                    }
+                                    tr:hover>.td-btns>.td-btn-wrapper>button {
+                                        background-color: $white;
+                                        color: $primary;
+                                        transition: 200ms ease-out;
+                                        &:hover {
+                                            background-color: $black;
+                                            color: $white;
+                                        }
+                                    }
                                     th {
-                                        padding: $spacing-2x-large 0;
+                                        padding: $spacing-2x-large $spacing-medium;
                                         text-align: center;
                                         span.th-name {
                                             font-size: $font-size-medium;
@@ -837,7 +866,7 @@
                                     // **** Table Data Styles **** //
                                     // **                       ** //
                                     td {
-                                        padding: $spacing-2x-large 0;
+                                        padding: $spacing-2x-large $spacing-medium;
                                         font-size: $font-size-medium;
                                         // * Borrowers' Data Styles
                                         .td-wrapper {

@@ -163,6 +163,19 @@ table {
   color: #FFFFFF;
 }
 
+.tb-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem 0.8rem 2rem;
+  border-radius: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 1.5rem;
+  background-color: #FFFFFF;
+  color: #29292B;
+  white-space: nowrap;
+}
+
 body {
   font-family: "Inter", sans-serif;
 }
@@ -2001,7 +2014,7 @@ body {
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
   display: grid;
-  grid-template-rows: minmax(0, 0.4fr) minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 0.4fr) minmax(0, 3fr) minmax(0, 1fr);
   gap: 4rem;
   grid-area: 1/1/-1/3;
 }
@@ -2041,8 +2054,56 @@ body {
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) {
   display: grid;
-  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);
   gap: 3rem 0;
+}
+.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #EBEBEB;
+  border-radius: 1rem;
+  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  height: 100%;
+}
+.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .tb-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem 0.8rem 2rem;
+  border-radius: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 1.5rem;
+  background-color: #FFFFFF;
+  color: #29292B;
+  white-space: nowrap;
+  position: relative;
+}
+.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .tb-chip::before {
+  content: "X";
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 0;
+  transform: translate(0.2rem, -0.2rem);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #FF0404;
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .search-wrap {
   position: relative;
@@ -2144,8 +2205,23 @@ body {
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table tr:last-of-type {
   border-bottom: 1px solid #29292B;
 }
+.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table tr:not(:first-of-type):hover {
+  cursor: pointer;
+  background-color: #D6A330;
+  color: #FFFFFF;
+  transition: 300ms ease-out;
+}
+.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table tr:hover > .td-btns > .td-btn-wrapper > button {
+  background-color: #FFFFFF;
+  color: #D6A330;
+  transition: 200ms ease-out;
+}
+.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table tr:hover > .td-btns > .td-btn-wrapper > button:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table th {
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   text-align: center;
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table th span.th-name {
@@ -2192,7 +2268,7 @@ body {
   text-align: left;
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table td {
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   font-size: 1.5rem;
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table td .td-wrapper {
