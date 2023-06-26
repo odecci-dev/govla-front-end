@@ -365,3 +365,7 @@ Second Commit:
 Third Commit:
 • Field Area Maintenance: Completed the Layout
 
+Third Commit:
+• Field Area Maintenance: Un-assigned Locations Function
+- When clicked the location data from the table are converted into a chip in the location input 
+

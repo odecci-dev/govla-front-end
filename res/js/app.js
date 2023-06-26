@@ -124,6 +124,7 @@ function checkAll1(tableCheckBox) {
 // ***** Maintenance ***** //
 
 // ** Field Area Maintenance: Location ** //
+// ** For Existing Chips
 const tbChips = document.querySelectorAll('[data-tb-chip]');
 
 tbChips.forEach(tbChip => {
@@ -135,6 +136,34 @@ tbChips.forEach(tbChip => {
         tbChip.remove()
     })
 })
+
+
+
+
+// ** Field Are Maintenance Hori-Con 2: Un-assigned Locations
+// ** For Generating Location Chips 
+const locations = document.querySelectorAll('[data-location]')
+
+for (let location of locations) {
+
+    const locationContainer = document.getElementById('mLocation')
+
+    location.addEventListener('click', _ => {
+        const locationName = document.createTextNode(location.innerText)
+        spans = document.createElement('span')
+        spans.classList.add('tb-chip')
+        spans.setAttribute('data-tb-chip', '')
+        spans.appendChild(locationName)
+        spanXs = document.createElement('span')
+        spanXs.classList.add('tb-chips-w-x')
+        spans.appendChild(spanXs)
+        const spanLocation = locationContainer.appendChild(spans)
+
+        spanXs.addEventListener('click', _ => {
+            spanLocation.remove()
+        })
+    })
+}
 
 // * Field Area Maintenance: Table Area Checkbox Toggle
 const areaCheckboxes = document.querySelectorAll('[data-area-checkbox]');
@@ -165,6 +194,7 @@ function checkAll3(tableCheckBox) {
         })
     }
 }
+
 
 // ****** New Application Module ****** //
 
