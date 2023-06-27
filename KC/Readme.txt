@@ -365,7 +365,12 @@ Second Commit:
 Third Commit:
 • Field Area Maintenance: Completed the Layout
 
-Third Commit:
+Fourth Commit:
 • Field Area Maintenance: Un-assigned Locations Function
 - When clicked the location data from the table are converted into a chip in the location input 
 
+June 26, 2023 (Tuesday)
+First Commit:
+• Field Area Maintenance Form Functions
+- When the data from the table is clicked it displays in the input
+- When the save button is clicked data from input is stored in localStorage

@@ -434,7 +434,7 @@
             </dialog>
 
             <!-- * Field Area Maintenance -->
-            <form action="" class="fa-form-con" autocomplete="off">
+            <form class="fa-form-con" id="field-area-maintenance-form" autocomplete="off">
 
                 <!-- * Field Area Maintenance -->
                 <div class="fa-container-wrapper">
@@ -466,26 +466,27 @@
                                 <!-- * Area Name -->
                                 <div class="input-wrapper">
                                     <span>Area Name</span>
-                                    <input autocomplete="off" type="text" id="mAreaName" name="mAreaName">
+                                    <input autocomplete="off" type="text" id="mAreaName" name="mAreaName" value="">
                                 </div>
 
                                 <!-- * Location -->
                                 <div class="input-wrapper">
+
                                     <span>Location</span>
-                                    <div class="locations-container" id="mLocation">
-                                        <span class="tb-chip" data-tb-chip>
-                                            Pandi
-                                        </span>
-                                        <span class="tb-chip" data-tb-chip>
-                                            Sta. Maria
-                                        </span>
-                                        <span class="tb-chip" data-tb-chip>
-                                            Malibo
-                                        </span>
-
-
+                                    <div class="locations-container">
+                                        <div class="chip-container" id="mLocationContainer">
+                                            <!-- <span class="tb-chip" data-tb-chip>
+                                                Pandi
+                                            </span>
+                                            <span class="tb-chip" data-tb-chip>
+                                                Sta. Maria
+                                            </span>
+                                            <span class="tb-chip" data-tb-chip>
+                                                Malibo
+                                            </span> -->
+                                        </div>
+                                        <input class="input-chips" autocomplete="off" type="text" id="mInputLocation" name="mLocation">
                                     </div>
-                                    <!-- <input autocomplete="off" type="text" id="mLocation" name="mLocation"> -->
                                 </div>
 
                                 <!-- * Search Wrapper -->
@@ -493,7 +494,7 @@
                                     <span>Field Officer</span>
                                     <!-- * Search Bar -->
                                     <div class="search-wrap">
-                                        <input type="search" id="search" name="search" placeholder="Search">
+                                        <input type="search" id="mSearch" name="mSearch" placeholder="Search" value="">
                                         <img src="../res/assets/icons/magnifyingglass.svg" alt="search">
                                     </div>
 
@@ -506,7 +507,7 @@
 
                                 <!-- * Save Button -->
                                 <div class="input-wrapper">
-                                    <button type="button" class="button" submit="">Save</button>
+                                    <button type="submit" class="button">Save</button>
                                 </div>
 
                             </div>
@@ -531,7 +532,7 @@
 
                                         <!-- * Search Bar -->
                                         <div class="search-wrap">
-                                            <input type="search" id="search" name="search" placeholder="Search for Areas">
+                                            <input type="search" id="search" name="areaSearch" placeholder="Search for Areas">
                                             <img src="../res/assets/icons/magnifyingglass.svg" alt="search">
                                         </div>
 
@@ -545,7 +546,7 @@
                                     <!-- * Table Container -->
                                     <div class="table-container tbc-1">
 
-                                        <!-- * All Members Table -->
+                                        <!-- * Area Table -->
                                         <table>
 
                                             <!-- * Table Header -->
@@ -569,8 +570,8 @@
                                             </tr>
 
 
-                                            <!-- * All Members Data -->
-                                            <tr>
+                                            <!-- * Field Maintenance Data -->
+                                            <tr data-area-maintenance>
 
                                                 <!-- * Checkbox Opt -->
                                                 <td>
@@ -578,48 +579,48 @@
                                                 </td>
 
                                                 <!-- * Data Area Name-->
-                                                <td class="td-name">
+                                                <td class="td-name" data-area-name>
                                                     Area 1
                                                 </td>
 
                                                 <!-- * Data Locations-->
-                                                <td class="td-name">
-                                                    Pandi, Sta Maria, Mal...
+                                                <td class="td-name" data-area-location>
+                                                    Pandi, Sta Maria, Malibo
                                                 </td>
 
                                                 <!-- * Data Field Officer-->
-                                                <td class="td-field-off">
+                                                <td class="td-field-off" data-area-field-officer>
                                                     Alisandro Villegas
                                                 </td>
 
                                                 <!-- * Table Trash Button -->
-                                                <td class="td-btns">
+                                                <td class="td-btns" data-area-button>
                                                     <div class="td-btn-wrapper">
                                                         <!-- <button class="a-btn-view">View</button> -->
-                                                        <button class="a-btn-trash">Trash</button>
+                                                        <button class="a-btn-trash" data-area-trash-btn>Trash</button>
                                                     </div>
                                                 </td>
 
                                             </tr>
 
-                                            <tr>
+                                            <tr data-area-maintenance>
                                                 <!-- * Checkbox Opt -->
                                                 <td>
                                                     <input type="checkbox" data-area-checkbox>
                                                 </td>
 
                                                 <!-- * Data Area Name-->
-                                                <td class="td-name">
-                                                    Area 1
+                                                <td class="td-name" data-area-name>
+                                                    Area 2
                                                 </td>
 
                                                 <!-- * Data Locations-->
-                                                <td class="td-name">
-                                                    San jose, Novaliches, Ma..
+                                                <td class="td-name" data-area-location>
+                                                    San Jose, Novaliches, Macapagal
                                                 </td>
 
                                                 <!-- * Data Field Officer-->
-                                                <td class="td-field-off">
+                                                <td class="td-field-off" data-area-field-officer>
                                                     Lerjun Barasona
                                                 </td>
 
@@ -627,7 +628,7 @@
                                                 <td class="td-btns">
                                                     <div class="td-btn-wrapper">
                                                         <!-- <button class="a-btn-view">View</button> -->
-                                                        <button class="a-btn-trash">Trash</button>
+                                                        <button class="a-btn-trash" data-area-trash-btn>Trash</button>
                                                     </div>
                                                 </td>
 
@@ -676,7 +677,7 @@
 
                                         <!-- * Search Bar -->
                                         <div class="search-wrap">
-                                            <input type="search" id="search" name="search" placeholder="Search for Locations">
+                                            <input type="search" id="search" name="unassignedLocSearch" placeholder="Search for Locations">
                                             <img src="../res/assets/icons/magnifyingglass.svg" alt="search">
                                         </div>
 
@@ -690,7 +691,7 @@
                                     <!-- * Table Container -->
                                     <div class="table-container tbc-2">
 
-                                        <!-- * All Members Table -->
+                                        <!-- * Un-assigned Locations Table -->
                                         <table>
 
                                             <!-- * Table Header -->
@@ -705,7 +706,7 @@
                                             </tr>
 
 
-                                            <!-- * All Members Data -->
+                                            <!-- * Un-assigned Locations Data -->
                                             <tr data-location>
 
                                                 <!-- * Checkbox Opt -->

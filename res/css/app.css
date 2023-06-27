@@ -2016,7 +2016,7 @@ body {
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
   display: grid;
-  grid-template-rows: minmax(0, 0.4fr) minmax(0, 3fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 0.4fr) minmax(0, 4fr) minmax(0, 0.6fr);
   gap: 4rem;
   grid-area: 1/1/-1/3;
 }
@@ -2056,7 +2056,7 @@ body {
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) {
   display: grid;
-  grid-template-rows: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 4fr) minmax(0, 1fr);
   gap: 3rem 0;
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container {
@@ -2067,16 +2067,23 @@ body {
   background-color: #EBEBEB;
   border-radius: 1rem;
   box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 50%;
+  display: grid;
+  grid-template-rows: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
   height: 100%;
+}
+.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .chip-container {
+  padding: 0.5rem;
+  height: clamp(1rem, 10vw, 10rem);
   max-height: 100%;
   overflow-y: auto;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.5rem;
-  padding: 2rem;
-  height: 100%;
 }
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .tb-chip {
+.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .chip-container .tb-chip {
   position: relative;
   height: clamp(1.5rem, 2.5vw, 4rem);
   display: flex;
@@ -2090,7 +2097,7 @@ body {
   color: #29292B;
   white-space: nowrap;
 }
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .tb-chip .tb-chips-w-x::before {
+.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .chip-container .tb-chip .tb-chips-w-x::before {
   content: "X";
   cursor: pointer;
   position: absolute;
@@ -2107,6 +2114,10 @@ body {
   height: 1.5rem;
   border-radius: 50%;
   background-color: #FF0404;
+}
+.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .input-chips {
+  height: 100%;
+  background-color: #FFFFFF;
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .search-wrap {
   position: relative;
@@ -2228,6 +2239,7 @@ body {
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table th {
   padding: 2rem 1rem;
   text-align: center;
+  white-space: nowrap;
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table th span.th-name {
   font-size: 1.5rem;
@@ -2275,6 +2287,7 @@ body {
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table td {
   padding: 2rem 1rem;
   font-size: 1.5rem;
+  white-space: nowrap;
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table td .td-wrapper {
   display: flex;
