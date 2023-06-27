@@ -374,3 +374,8 @@ First Commit:
 • Field Area Maintenance Form Functions
 - When the data from the table is clicked it displays in the input
 - When the save button is clicked data from input is stored in localStorage
+
+Second Commit:
+• New Application Modal 
+- Seperated the script of the New Application Module
+- Fixed a bug
