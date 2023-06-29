@@ -4,7 +4,7 @@
 // * Main Dashboard 2 Styles
 .main-dashboard {
     @include dashboard2;
-    // * All-Members-Container-1
+    // * Field Officer and Loan Type
     // * Container 1: All Members Header, Buttons, and Searchbar
     .m-con-1 {
         display: flex;
@@ -154,7 +154,7 @@
             }
         }
     }
-    // * All-Members-Container-2
+    // * Field Officer and Loan Type
     // * Container 2: Table and Pagination
     .m-con-2 {
         height: calc(100% - 26%);
@@ -173,6 +173,17 @@
                 counter-reset: row-num;
                 tr {
                     counter-increment: row-num;
+                }
+                .tr-loan-type th:nth-of-type(-n+5) {
+                    // background-color: aqua;
+                    text-align: left;
+                }
+                .tr-loan-type th:nth-of-type(6) {
+                    text-align: center;
+                }
+                .tr-loan-type .td-btns {
+                    width: 20%;
+                    text-align: center;
                 }
                 th {
                     padding: 2rem 0;
@@ -233,9 +244,6 @@
                         .td-num {
                             font-weight: $font-weight-bold;
                             margin-left: 1rem;
-                        }
-                        .td-name {
-                            // margin-left: 2rem;
                         }
                         .number::before {
                             content: counter(row-num);
@@ -624,7 +632,7 @@
             }
         }
     }
-    // * New Officer Form Container
+    // * Field Area Form Container
     .fa-form-con {
         // display: flex;
         height: 100%;
@@ -890,9 +898,6 @@
                                         .td-wrapper {
                                             display: flex;
                                             align-items: center;
-                                            .td-name {
-                                                // margin-left: 2rem;
-                                            }
                                         }
                                         // * Table Buttons Styles
                                         .td-btn-wrapper {

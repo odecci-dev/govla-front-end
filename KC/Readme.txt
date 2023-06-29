@@ -385,3 +385,7 @@ First Commit
 • Created the Loan Type page for Maintenance
 - Commented the animation for clicking outside the modal (newApplication.js, line 25-36)
 - TODO: Trash button for Field Area Maintenance
+
+Second Commit
+• Completed the Layout for Loan Type Maintenance
+- TODO: Add Loan Type Maintenance
