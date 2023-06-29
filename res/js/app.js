@@ -161,14 +161,14 @@ for (let maintenanceField of maintenanceFields) {
 
 
     // TODO: Trash Button in Area Table
-    const deleteAreaBtns = document.querySelectorAll('[data-area-trash-btn]')
+    // const deleteAreaBtns = document.querySelectorAll('[data-area-trash-btn]')
 
-    for (const deleteAreaBtn of deleteAreaBtns) {
-        deleteAreaBtn.addEventListener('click', _ => {
-            // console.log('deleteAreaBtn')
-            maintenanceField.remove()
-        })
-    }
+    // for (const deleteAreaBtn of deleteAreaBtns) {
+    //     deleteAreaBtn.addEventListener('click', _ => {
+    //         // console.log('deleteAreaBtn')
+    //         maintenanceField.remove()
+    //     })
+    // }
     // TODO: ----- Trash Button in Area Table
 
     // * When the data from area table is clicked, it displays in the form

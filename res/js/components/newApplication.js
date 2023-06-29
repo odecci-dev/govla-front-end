@@ -21,12 +21,19 @@ closeNewApplicationButton.addEventListener('click', () => {
 
 })
 
-newApplicationModal.addEventListener('click', e => {
 
-    if (e.target.nodeName === 'DIALOG')
-        newApplicationModal.close()
+// newApplicationModal.addEventListener('click', e => {
 
-})
+//     newApplicationModal.setAttribute("closing", "");
+//     newApplicationModal.addEventListener("animationend", () => {
+
+//         if (e.target.nodeName === 'DIALOG')
+//             newApplicationModal.removeAttribute("closing")
+
+//         newApplicationModal.close()
+
+//     }, { once: true })
+// })
 
 // newApplicationModal.addEventListener('click', e => {
 //     newApplicationModal.setAttribute("closing", "");

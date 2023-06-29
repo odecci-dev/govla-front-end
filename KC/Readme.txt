@@ -379,3 +379,9 @@ Second Commit:
 • New Application Modal 
 - Seperated the script of the New Application Module
 - Fixed a bug
+
+June 26, 2023 (Thursday)
+First Commit
+• Created the Loan Type page for Maintenance
+- Commented the animation for clicking outside the modal (newApplication.js, line 25-36)
+- TODO: Trash button for Field Area Maintenance
