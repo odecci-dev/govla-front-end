@@ -2,13 +2,28 @@
 
 // *** New Application Modal *** //
 
+// ** Loan Type Dropdown
+const selected = document.querySelector(".selected");
+const optionsContainer = document.querySelector(".options-container");
+const optionsList = document.querySelectorAll(".option");
+
+selected.addEventListener("click", () => {
+    optionsContainer.classList.toggle("active");
+});
+
+optionsList.forEach(option => {
+    option.addEventListener("click", () => {
+        selected.innerHTML = option.querySelector("label").innerHTML;
+        optionsContainer.classList.remove("active");
+    });
+});
+
 const openNewApplicationButton = document.querySelector('#data-open-new-application-modal')
 const closeNewApplicationButton = document.querySelector('#data-close-new-application-modal')
 const newApplicationModal = document.querySelector('[data-new-application-modal]')
 
 
 openNewApplicationButton.addEventListener('click', () => {
-    console.log("hello")
     newApplicationModal.showModal();
 })
 

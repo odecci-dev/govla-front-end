@@ -441,58 +441,86 @@ body {
 .na-modal .modal-container .rowspan:nth-of-type(1) h3 {
   font-size: 2.5rem;
 }
-.na-modal .modal-container .rowspan:nth-of-type(1) .select-box {
-  position: relative;
-  width: clamp(10vw, 30rem, 100vw);
-}
-.na-modal .modal-container .rowspan:nth-of-type(1) .select-box select {
-  position: relative;
-  text-align: left;
+.na-modal .modal-container .rowspan:nth-of-type(1) .selected {
   font-size: 2rem;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem;
   border: none;
   outline: none;
   background-color: #EBEBEB;
   border-radius: 1rem;
-  /* Firefox */
-  /* Safari and Chrome */
-  appearance: none;
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: 100%;
-  font-weight: 700;
-}
-.na-modal .modal-container .rowspan:nth-of-type(1) .select-box select option {
+  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
   position: relative;
-  outline: none;
-  border: none;
-  background-color: #E0DFDF;
+  width: 30rem;
+  height: 3.6rem;
 }
-.na-modal .modal-container .rowspan:nth-of-type(1) .select-box select option::before {
-  content: "";
+.na-modal .modal-container .rowspan:nth-of-type(1) .selected::after {
+  /* BG Img	 */
+  content: url("../assets/icons/carret-down.svg");
   position: absolute;
+  right: 15px;
+  top: 50%;
+  transition: transform 0.5s;
+  transform: translateY(-50%);
+}
+.na-modal .modal-container .rowspan:nth-of-type(1) .selected h4,
+.na-modal .modal-container .rowspan:nth-of-type(1) .select-box h4 {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #29292B;
+}
+.na-modal .modal-container .rowspan:nth-of-type(1) .select-box {
+  display: flex;
+  width: 30rem;
+  flex-direction: column;
+  position: relative;
+}
+.na-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container {
+  z-index: 5;
+  max-height: 0;
   width: 100%;
-  height: 100%;
-  background-color: aqua;
-}
-.na-modal .modal-container .rowspan:nth-of-type(1) .select-box::before {
-  content: "";
+  opacity: 0;
+  overflow: hidden;
+  transition: all 300ms;
+  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: #EBEBEB;
   position: absolute;
-  width: 15px;
-  height: 15px;
-  z-index: 2;
-  right: 0;
-  transform: translateY(1rem) translateX(-2.5rem) rotate(-45deg);
-  border-bottom: 2px solid #29292B;
-  border-left: 2px solid #29292B;
-  transition: ease-out 300ms;
-  pointer-events: none;
+  top: 100%;
 }
-.na-modal .modal-container .rowspan:nth-of-type(1) .select-box:focus-within::before {
-  border-top: 2px solid #29292B;
-  border-right: 2px solid #29292B;
-  border-bottom: none;
-  border-left: none;
-  transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
+.na-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container.active {
+  max-height: 240px;
+  box-shadow: none;
+  opacity: 1;
+}
+.na-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container.active + .selected {
+  box-shadow: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.na-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container.active + .selected::after {
+  transform: translateY(-50%) rotateX(180deg);
+}
+.na-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container .option:hover {
+  color: #FFFFFF;
+  background-color: #D6A330;
+}
+.na-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container .option:hover > label > h4 {
+  color: #FFFFFF;
+}
+.na-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container .option label {
+  cursor: pointer;
+}
+.na-modal .modal-container .rowspan:nth-of-type(1) input[type=radio] {
+  display: none;
+}
+.na-modal .modal-container .rowspan:nth-of-type(1) .select-box .option,
+.na-modal .modal-container .rowspan:nth-of-type(1) .selected {
+  padding: 1.5rem 2rem;
+  cursor: pointer;
 }
 .na-modal .modal-container .rowspan:nth-of-type(2) {
   display: grid;

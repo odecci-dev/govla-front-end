@@ -68,49 +68,81 @@
                 font-size: $font-size-x-large;
             }
             // * Select Input Global Styles
-            .select-box {
+            .selected {
+                @include inputField;
+                display: flex;
+                align-items: center;
                 position: relative;
-                width: clamp(10vw, 30rem, 100vw);
-                select {
-                    @include selectField;
-                    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                width: 30rem;
+                height: 3.6rem;
+                // * Select Input Arrow
+                &::after {
+                    /* BG Img	 */
+                    content: url("../assets/icons/carret-down.svg");
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    transition: transform .5s;
+                    transform: translateY(-50%);
+                }
+            }
+            .selected h4,
+            .select-box h4 {
+                cursor: pointer;
+                font-size: $font-size-large;
+                font-weight: $font-weight-bold;
+                color: $black;
+            }
+            .select-box {
+                display: flex;
+                width: 30rem;
+                flex-direction: column;
+                position: relative;
+                .options-container {
+                    z-index: 5;
+                    max-height: 0;
                     width: 100%;
-                    font-weight: $font-weight-bold;
-                    option {
-                        position: relative;
-                        outline: none;
-                        border: none;
-                        background-color: $secondary-bg;
-                        &::before {
-                            content: '';
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            background-color: aqua;
-                        }
+                    opacity: 0;
+                    overflow: hidden;
+                    transition: all 300ms;
+                    box-shadow: inset $box-shadow;
+                    border-bottom-left-radius: $border-radius-medium;
+                    border-bottom-right-radius: $border-radius-medium;
+                    background-color: $primary-bg;
+                    position: absolute;
+                    top: 100%;
+                    &.active {
+                        max-height: 240px;
+                        box-shadow: none;
+                        opacity: 1;
+                    }
+                    &.active+.selected {
+                        box-shadow: none;
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+                    &.active+.selected::after {
+                        transform: translateY(-50%) rotateX(180deg);
+                    }
+                    .option:hover {
+                        color: $white;
+                        background-color: $primary;
+                    }
+                    .option:hover>label>h4 {
+                        color: $white;
+                    }
+                    .option label {
+                        cursor: pointer;
                     }
                 }
             }
-            // * Select Input Arrow
-            .select-box::before {
-                content: '';
-                position: absolute;
-                width: 15px;
-                height: 15px;
-                z-index: 2;
-                right: 0;
-                transform: translateY(1rem) translateX(-2.5rem) rotate(-45deg);
-                border-bottom: 2px solid $black;
-                border-left: 2px solid $black;
-                transition: ease-out 300ms;
-                pointer-events: none;
+            input[type='radio'] {
+                display: none;
             }
-            .select-box:focus-within::before {
-                border-top: 2px solid $black;
-                border-right: 2px solid $black;
-                border-bottom: none;
-                border-left: none;
-                transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
+            .select-box .option,
+            .selected {
+                padding: 1.5rem 2rem;
+                cursor: pointer;
             }
         }
         // * Search Bar

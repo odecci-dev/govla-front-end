@@ -410,3 +410,7 @@ Eight Commit
 • In-progress Holiday Maintenance
 • Created navigation.html 
 • Created new-application-modal.html
+
+Eight Commit
+• New Application Modal Loan Type Dropdown
+- Implementation of the design
