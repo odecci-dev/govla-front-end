@@ -458,6 +458,13 @@
     gap: $spacing-2x-large 0px;
 }
 
+// * Big Container 4
+@mixin bigContainerGrid5 {
+    @include displayGrid;
+    grid-template-rows: minmax(0, 0.6fr) minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: $spacing-2x-large 0px;
+}
+
 // * Small Container
 @mixin twoBlockGrid {
     @include displayGrid;

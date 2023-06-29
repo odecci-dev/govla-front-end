@@ -402,3 +402,11 @@ Fifth Commit
 
 Sixth Commit
 • Completed the Holiday Page for Maintenance
+
+Seventh Commit
+• Created the Add Holiday Page for Maintenance
+
+Eight Commit
+• In-progress Holiday Maintenance
+• Created navigation.html 
+• Created new-application-modal.html
