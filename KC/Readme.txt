@@ -392,3 +392,7 @@ Second Commit
 
 Third Commit
 • Created the Add Loan Type page for Maintenance
+
+Fourth Commit
+• Completed the Add Loan Type page for Maintenance
+- Added Grid templates in _mixins.scss
