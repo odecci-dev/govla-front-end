@@ -389,3 +389,6 @@ First Commit
 Second Commit
 • Completed the Layout for Loan Type Maintenance
 - TODO: Add Loan Type Maintenance
+
+Third Commit
+• Created the Add Loan Type page for Maintenance
