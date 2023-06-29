@@ -396,3 +396,6 @@ Third Commit
 Fourth Commit
 • Completed the Add Loan Type page for Maintenance
 - Added Grid templates in _mixins.scss
+
+Fifth Commit
+• Created the Holiday Page for Maintenance
