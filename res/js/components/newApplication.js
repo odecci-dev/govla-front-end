@@ -1,40 +1,89 @@
 // ****** New Application Module ****** //
 
 // *** New Application Modal *** //
+function newAppModal() {
 
-// ** Loan Type Dropdown
-const selected = document.querySelector(".selected");
-const optionsContainer = document.querySelector(".options-container");
-const optionsList = document.querySelectorAll(".option");
+    // * New Application (Individual)
+    const openNewApplicationButton = document.querySelector('#data-open-new-application-modal')
+    const closeNewApplicationButton = document.querySelector('#data-close-new-application-modal')
+    const newApplicationModal = document.querySelector('[data-new-application-modal]')
 
-selected.addEventListener("click", () => {
-    optionsContainer.classList.toggle("active");
-});
 
-optionsList.forEach(option => {
-    option.addEventListener("click", () => {
-        selected.innerHTML = option.querySelector("label").innerHTML;
-        optionsContainer.classList.remove("active");
+    openNewApplicationButton.addEventListener('click', () => {
+        newApplicationModal.showModal();
+    })
+
+    closeNewApplicationButton.addEventListener('click', () => {
+        newApplicationModal.setAttribute("closing", "");
+        newApplicationModal.addEventListener("animationend", () => {
+            newApplicationModal.removeAttribute("closing");
+            newApplicationModal.close();
+        }, { once: true });
+
+    })
+
+
+}
+
+// newAppModal()
+// modalDropdown()
+
+function modalDropdown() {
+
+    // ** Loan Type Dropdown
+    const selected = document.querySelector('[data-type-loan-select]');
+    const optionsContainer = document.querySelector('[data-type-opt-con');
+    const optionsList = document.querySelectorAll('[data-type-loan-opt]');
+
+    selected.addEventListener("click", () => {
+        optionsContainer.classList.toggle("active");
     });
-});
 
-const openNewApplicationButton = document.querySelector('#data-open-new-application-modal')
-const closeNewApplicationButton = document.querySelector('#data-close-new-application-modal')
-const newApplicationModal = document.querySelector('[data-new-application-modal]')
+    optionsList.forEach(option => {
+        option.addEventListener("click", () => {
+            selected.innerHTML = option.querySelector("label").innerHTML;
+            optionsContainer.classList.remove("active");
+        });
+    });
+
+    // * Linked to Group Loan
+    const groupLoanOpt = document.querySelector('[data-group-app-link]')
+
+    groupLoanOpt.addEventListener('click', () => {
+        const url = '/KC/new-group-application.html'
+        window.location = url;
+    })
+
+    // * Linked to New Application
+    const btnToNewApp = document.querySelector('[data-link-to-newapp]')
+
+    btnToNewApp.addEventListener('click', () => {
+        const url = '/KC/new-application.html'
+        window.location = url;
+    })
+
+}
 
 
-openNewApplicationButton.addEventListener('click', () => {
-    newApplicationModal.showModal();
-})
+// // * New Application (Group)
+// const openNewGroupButton = document.getElementById('data-open-new-group-modal')
+// const closeNewGroupButton = document.querySelector('#data-close-new-group-modal')
+// const newGroupModal = document.querySelector('[data-new-group-modal]')
 
-closeNewApplicationButton.addEventListener('click', () => {
-    newApplicationModal.setAttribute("closing", "");
-    newApplicationModal.addEventListener("animationend", () => {
-        newApplicationModal.removeAttribute("closing");
-        newApplicationModal.close();
-    }, { once: true });
+// openNewGroupButton.addEventListener('click', () => {
+//     // window.alert('open')
+//     console.log('open')
+//         // newGroupModal.showModal();
+// })
 
-})
+// closeNewGroupButton.addEventListener('click', () => {
+//     newGroupModal.setAttribute("closing", "");
+//     newGroupModal.addEventListener("animationend", () => {
+//         newGroupModal.removeAttribute("closing");
+//         newGroupModal.close();
+//     }, { once: true });
+
+// })
 
 
 // newApplicationModal.addEventListener('click', e => {
@@ -71,18 +120,6 @@ closeNewApplicationButton.addEventListener('click', () => {
 // })
 
 // *** END --- New Application Modal *** //
-
-
-function activeProgressButton() {
-    const level2 = document.querySelectorAll('[data-level-2]')
-
-    level2.forEach((e) => {
-        window.onload(e.classList.add("active"))
-    })
-
-}
-
-
 
 // * Loan and Payement History Modal * //
 
@@ -152,24 +189,47 @@ document.addEventListener('change', _ => {
 // ****** Child Form Toggle ***** //
 
 // * Add Child (Married)
-function addChild() {
-    const childForm = document.querySelector('[data-child]')
-    const childContainer = document.querySelector('[data-child-container]')
+const childForm = document.querySelector('[data-child]')
+const childContainer = document.querySelector('[data-child-container]')
 
-    const clone = childForm.cloneNode(true)
-    childContainer.appendChild(clone)
+let cloneCount = 1
+
+
+function addChild() {
+
+    childForm.setAttribute('id', 'child-1')
+
+    // * Clone the original element
+    const clonedChild = childForm.cloneNode(true)
+
+    // * Increment the clone count and modify the ID
+    cloneCount++
+    const newId = `child-${cloneCount}`
+    clonedChild.id = newId
+
+    // * Hide the increment button
+    clonedChild.lastElementChild.children[0].style.visibility = 'hidden'
+
+
+    // * Append the cloned element to the target container
+    childContainer.appendChild(clonedChild)
 
 }
 
 // * Subtract Child (Married)
 function subChild() {
-    const childForm = document.querySelector('[data-child]')
 
-    if (childForm.firstChild != null) {
-        childForm.remove()
+    // * Reset cloneCount when decrement
+    cloneCount = 1
+
+    // * Remove the the next sibling of child-1
+    if (childContainer.children[7].nextElementSibling !== null) {
+        childContainer.lastElementChild.remove()
     }
 
 }
+
+
 
 // * Add Child (Single)
 function addChildSingle() {
@@ -185,7 +245,7 @@ function addChildSingle() {
 function subChildSingle() {
     const childForm = document.querySelector('[data-child-2]')
 
-    if (childForm.firstChild != null) {
+    if (childForm.nextElementSibling) {
         childForm.remove()
     }
 
@@ -195,15 +255,22 @@ function subChildSingle() {
 
 
 // * Business Information Form Toggle
-document.addEventListener('click', _ => {
+const yesToggle = document.getElementById('formToggleYes')
+const noToggle = document.getElementById('formToggleNo')
+
+yesToggle.addEventListener('click', _ => {
+
     const businessForm = document.querySelector('[data-business-form]')
-    const yesToggle = document.getElementById('formToggleYes')
 
     if (yesToggle.checked) {
         businessForm.style.display = 'block'
-    } else {
-        businessForm.style.display = 'none'
     }
+
+    noToggle.addEventListener('click', _ => {
+        if (noToggle.checked) {
+            businessForm.style.display = 'none'
+        }
+    })
 
 })
 

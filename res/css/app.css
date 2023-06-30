@@ -576,13 +576,22 @@ body {
 .na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 100%;
   border-radius: 1.5rem;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+.na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table {
+  width: 95%;
+}
 .na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table tr {
   border-bottom: 1px solid #29292B;
+  transition: 200ms ease-in-out;
+}
+.na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table tr:not(:first-of-type):hover {
+  color: #FFFFFF;
+  background-color: #D6A330;
 }
 .na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table th {
   padding: 2rem 0;
@@ -722,6 +731,361 @@ body {
   margin-right: 6rem;
 }
 .na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .pagination-container a:last-of-type {
+  margin-left: 6rem;
+}
+
+.ng-modal {
+  margin: auto;
+  height: 90%;
+  width: 55%;
+  z-index: 5;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+}
+.ng-modal::backdrop {
+  background-color: rgba(41, 41, 43, 0.7);
+}
+.ng-modal[open] {
+  animation: fade-in 500ms forwards, pop-up 500ms;
+}
+.ng-modal::backdrop[open] {
+  animation: fade-in 500ms forwards;
+}
+.ng-modal[closing] {
+  display: block;
+  pointer-events: none;
+  inset: 0;
+  animation: fade-out 500ms forwards, slide-down 500ms forwards;
+}
+.ng-modal::backdrop[closing] {
+  animation: fade-out 500ms forwards;
+}
+.ng-modal::-webkit-scrollbar {
+  display: none;
+}
+.ng-modal {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.ng-modal .modal-container {
+  display: grid;
+  grid-template-rows: minmax(0, 0.6fr) minmax(0, 0.6fr) minmax(0, 2fr);
+  gap: 2rem 0;
+  padding: 3rem 5rem;
+  position: relative;
+}
+.ng-modal .modal-container .exit-button {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  background: none;
+}
+.ng-modal .modal-container .exit-button img {
+  transition: all 150ms ease-in-out;
+}
+.ng-modal .modal-container .exit-button img:hover {
+  transform: scale(1.1);
+  filter: opacity(0.7);
+}
+.ng-modal .modal-container .rowspan:nth-of-type(1) {
+  display: grid;
+  gap: 2rem 0;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(1) h3 {
+  font-size: 2.5rem;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(1) .selected {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #EBEBEB;
+  border-radius: 1rem;
+  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 30rem;
+  height: 3.6rem;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(1) .selected::after {
+  /* BG Img	 */
+  content: url("../assets/icons/carret-down.svg");
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transition: transform 0.5s;
+  transform: translateY(-50%);
+}
+.ng-modal .modal-container .rowspan:nth-of-type(1) .selected h4,
+.ng-modal .modal-container .rowspan:nth-of-type(1) .select-box h4 {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #29292B;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(1) .select-box {
+  display: flex;
+  width: 30rem;
+  flex-direction: column;
+  position: relative;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container {
+  z-index: 5;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 300ms;
+  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: #EBEBEB;
+  position: absolute;
+  top: 100%;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container.active {
+  max-height: 240px;
+  box-shadow: none;
+  opacity: 1;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container.active + .selected {
+  box-shadow: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container.active + .selected::after {
+  transform: translateY(-50%) rotateX(180deg);
+}
+.ng-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container .option:hover {
+  color: #FFFFFF;
+  background-color: #D6A330;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container .option:hover > label > h4 {
+  color: #FFFFFF;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container .option label {
+  cursor: pointer;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(1) input[type=radio] {
+  display: none;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(1) .select-box .option,
+.ng-modal .modal-container .rowspan:nth-of-type(1) .selected {
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(2) {
+  display: grid;
+  gap: 2rem 0;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(2) h3 {
+  font-size: 2.5rem;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(2) .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(2) .wrapper .search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(2) .wrapper .search-wrap input {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #EBEBEB;
+  border-radius: 1rem;
+  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 1.5rem;
+  position: relative;
+  padding-left: 2rem;
+  padding-right: 5rem;
+  width: clamp(10vw, 30rem, 100vw);
+}
+.ng-modal .modal-container .rowspan:nth-of-type(2) .wrapper .search-wrap input::placeholder {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0;
+  transform: translateY(1rem);
+}
+.ng-modal .modal-container .rowspan:nth-of-type(2) .wrapper .search-wrap input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(2) .wrapper .search-wrap img {
+  position: absolute;
+  width: 6%;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transform: translateX(25.5rem);
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con {
+  width: 100%;
+  height: clamp(10vh, 30rem, 100vh);
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table {
+  width: 95%;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table tr {
+  border-bottom: 1px solid #29292B;
+  transition: 200ms ease-in-out;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table tr:not(:first-of-type):hover {
+  color: #FFFFFF;
+  background-color: #D6A330;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table th {
+  padding: 2rem 0;
+  text-align: center;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table th span.th-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table th .th-wrapper {
+  display: flex;
+  align-items: center;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table th .th-wrapper img {
+  cursor: pointer;
+  padding-left: 0.5rem;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table input[type=checkbox] {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  aspect-ratio: 1/1;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.4rem;
+  background-color: #EBEBEB;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table input[type=checkbox]::after {
+  content: url("../assets/icons/white-check.svg");
+  position: absolute;
+  top: 0.1rem;
+  display: none;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table input[type=checkbox]:checked {
+  background-color: #D6A330;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table input[type=checkbox]:checked:after {
+  display: block;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table th {
+  text-align: left;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table th:first-of-type {
+  padding-left: 2rem;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table th:last-of-type {
+  padding-right: 2rem;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td .td-wrapper {
+  display: flex;
+  align-items: center;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td .td-wrapper .td-num {
+  font-weight: 700;
+  margin-left: 1rem;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td .td-wrapper .td-name {
+  margin-left: 2rem;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td .td-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td .td-btn-wrapper button {
+  cursor: pointer;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td .td-btn-wrapper .a-btn-view {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  padding: 0.6rem 3.5rem;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td .td-btn-wrapper .a-btn-view:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td .td-btn-wrapper .a-btn-view:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td .td-btn-wrapper .a-btn-trash {
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #D6A330;
+  background: transparent;
+  transition: all 200ms ease-in-out;
+  padding: 0.8rem 4rem;
+  font-size: 1.5rem;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td .td-btn-wrapper .a-btn-trash:hover {
+  color: #29292B;
+  transform: scale(1.005);
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table .td-due {
+  font-weight: 700;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td:first-of-type {
+  padding-left: 2rem;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td:last-of-type {
+  padding-right: 2rem;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+  height: 10%;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .pagination-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0.5rem;
+  color: #29292B;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .pagination-container a:first-of-type {
+  margin-right: 6rem;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .pagination-container a:last-of-type {
   margin-left: 6rem;
 }
 

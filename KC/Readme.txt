@@ -411,6 +411,12 @@ Eight Commit
 • Created navigation.html 
 • Created new-application-modal.html
 
-Eight Commit
+Ninth Commit
 • New Application Modal Loan Type Dropdown
 - Implementation of the design
+
+June 26, 2023 (Friday)
+First Commit:
+• New Application Children's Info Add&Sub Child Function Optimization
+- Made changes in the function
+- When incrementing the row fields container the container IDs also increments 
