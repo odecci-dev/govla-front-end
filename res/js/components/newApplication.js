@@ -163,10 +163,11 @@ loanDetailsModal.addEventListener('click', e => {
 // *** END --- Loan and Payement History Modal *** //
 
 // * Civil Status Selector Form Toggle
-document.addEventListener('change', _ => {
+const civilStatus = document.querySelector('[data-civil-status]')
+
+civilStatus.addEventListener('change', _ => {
     const famBGFormSingle = document.querySelector('[data-family-background-single]')
     const famBGFormMarried = document.querySelector('[data-family-background-married]')
-    const civilStatus = document.querySelector('[data-civil-status]')
 
     // * If Married is Selected show Family Background Form for Single
     if (civilStatus.selectedIndex === 2) {
@@ -233,25 +234,70 @@ function subChild() {
 
 // * Add Child (Single)
 function addChildSingle() {
+
     const childForm = document.querySelector('[data-child-2]')
     const childContainer = document.querySelector('[data-child-container-2]')
 
-    const clone = childForm.cloneNode(true)
-    childContainer.appendChild(clone)
+    childForm.setAttribute('id', 'child-1')
 
+    // * Clone the original element
+    const clonedChild = childForm.cloneNode(true)
+
+    // * Increment the clone count and modify the ID
+    cloneCount++
+    const newId = `child-${cloneCount}`
+    clonedChild.id = newId
+
+    // * Hide the increment button
+    clonedChild.lastElementChild.children[0].style.visibility = 'hidden'
+
+
+    // * Append the cloned element to the target container
+    childContainer.appendChild(clonedChild)
 }
 
 // * Subtract Child (Single)
 function subChildSingle() {
-    const childForm = document.querySelector('[data-child-2]')
 
-    if (childForm.nextElementSibling) {
-        childForm.remove()
+    const childContainer = document.querySelector('[data-child-container-2]')
+
+    // * Reset cloneCount when decrement
+    cloneCount = 1
+
+    // * Remove the the next sibling of child-1
+    if (childContainer.children[7].nextElementSibling !== null) {
+        childContainer.lastElementChild.remove()
     }
 
 }
 
 // ****** END --- Child Form Toggle ***** //
+
+
+// * Job Information
+const employmentStatus = document.getElementById('empStat')
+const previousJob = document.querySelectorAll('[data-previous-job]')
+
+for (const previousJobItems of previousJob) {
+    previousJobItems.style.display = 'none'
+
+    employmentStatus.addEventListener('change', () => {
+        const currentJob = document.querySelectorAll('[data-current-job]')
+
+        for (const currentJobItems of currentJob) {
+            // * If Employed is Selected show Current Job / Position
+            if (employmentStatus.selectedIndex === 1) {
+                previousJobItems.style.display = 'none'
+                currentJobItems.style.display = 'block'
+                    // * If Unemployed is Selected show Previous Job / Position
+            } else if (employmentStatus.selectedIndex === 2) {
+                previousJobItems.style.display = 'block'
+                currentJobItems.style.display = 'none'
+            }
+        }
+
+    })
+}
 
 
 // * Business Information Form Toggle
@@ -277,20 +323,40 @@ yesToggle.addEventListener('click', _ => {
 // ***** Add and Subtract Vehicle ***** //
 // * Add Vehicle
 function addVehicle() {
+
     const vehicleForm = document.querySelector('[data-vehicle]')
     const vehicleContainer = document.querySelector('[data-vehicle-container]')
 
-    const clone = vehicleForm.cloneNode(true)
-    vehicleContainer.appendChild(clone)
+    vehicleForm.setAttribute('id', 'vehicle-1')
+
+    // * Clone the original element
+    const clonedChild = vehicleForm.cloneNode(true)
+
+    // * Increment the clone count and modify the ID
+    cloneCount++
+    const newId = `vehicle-${cloneCount}`
+    clonedChild.id = newId
+
+    // * Hide the increment button
+    clonedChild.lastElementChild.children[1].children[0].style.visibility = 'hidden'
+
+
+    // * Append the cloned element to the target container
+    vehicleContainer.appendChild(clonedChild)
 
 }
 
 // * Subtract Vehicle
 function subVehicle() {
-    const vehicleForm = document.querySelector('[data-vehicle]')
 
-    if (vehicleForm.nextElementSibling) {
-        vehicleForm.remove()
+    const vehicleContainer = document.querySelector('[data-vehicle-container]')
+
+    // * Reset cloneCount when decrement
+    cloneCount = 1
+
+    // * Remove the the next sibling of child-1
+    if (vehicleContainer.firstElementChild.nextElementSibling !== null) {
+        vehicleContainer.lastElementChild.remove()
     }
 
 }
@@ -302,20 +368,40 @@ function subVehicle() {
 
 // * Add Property
 function addProperty() {
+
     const propertyForm = document.querySelector('[data-property]')
     const propertyContainer = document.querySelector('[data-property-container]')
 
-    const clone = propertyForm.cloneNode(true)
-    propertyContainer.appendChild(clone)
+    propertyForm.setAttribute('id', 'property-1')
+
+    // * Clone the original element
+    const clonedChild = propertyForm.cloneNode(true)
+
+    // * Increment the clone count and modify the ID
+    cloneCount++
+    const newId = `property-${cloneCount}`
+    clonedChild.id = newId
+
+    // * Hide the increment button
+    clonedChild.lastElementChild.children[1].children[0].style.visibility = 'hidden'
+
+
+    // * Append the cloned element to the target container
+    propertyContainer.appendChild(clonedChild)
 
 }
 
 // * Subtract Property
 function subProperty() {
-    const propertyForm = document.querySelector('[data-property]')
 
-    if (propertyForm.nextElementSibling) {
-        propertyForm.remove()
+    const propertyContainer = document.querySelector('[data-property-container]')
+
+    // * Reset cloneCount when decrement
+    cloneCount = 1
+
+    // * Remove the the next sibling of property-1
+    if (propertyContainer.firstElementChild.nextElementSibling !== null) {
+        propertyContainer.lastElementChild.remove()
     }
 
 }
@@ -327,20 +413,40 @@ function subProperty() {
 
 // * Add Appliances
 function addAppliances() {
+
     const appliancesForm = document.querySelector('[data-appliances]')
     const appliancesContainer = document.querySelector('[data-appliances-container]')
 
-    const clone = appliancesForm.cloneNode(true)
-    appliancesContainer.appendChild(clone)
+    appliancesForm.setAttribute('id', 'property-1')
+
+    // * Clone the original element
+    const clonedChild = appliancesForm.cloneNode(true)
+
+    // * Increment the clone count and modify the ID
+    cloneCount++
+    const newId = `property-${cloneCount}`
+    clonedChild.id = newId
+
+    // * Hide the increment button
+    clonedChild.lastElementChild.children[0].style.visibility = 'hidden'
+
+
+    // * Append the cloned element to the target container
+    appliancesContainer.appendChild(clonedChild)
 
 }
 
 // * Subtract Appliances
 function subAppliances() {
-    const appliancesForm = document.querySelector('[data-appliances]')
 
-    if (appliancesForm.nextElementSibling) {
-        appliancesForm.remove()
+    const appliancesContainer = document.querySelector('[data-appliances-container]')
+
+    // * Reset cloneCount when decrement
+    cloneCount = 1
+
+    // * Remove the the next sibling of appliance-1
+    if (appliancesContainer.firstElementChild.nextElementSibling !== null) {
+        appliancesContainer.lastElementChild.remove()
     }
 
 }
@@ -352,21 +458,42 @@ function subAppliances() {
 
 // * Add Bank
 function addBank() {
+
     const bankForm = document.querySelector('[data-bank]')
     const bankContainer = document.querySelector('[data-bank-container]')
 
-    const clone = bankForm.cloneNode(true)
-    bankContainer.appendChild(clone)
+    bankForm.setAttribute('id', 'bank-1')
+
+    // * Clone the original element
+    const clonedChild = bankForm.cloneNode(true)
+
+    // * Increment the clone count and modify the ID
+    cloneCount++
+    const newId = `bank-${cloneCount}`
+    clonedChild.id = newId
+
+    // * Hide the increment button
+    clonedChild.lastElementChild.children[0].style.visibility = 'hidden'
+
+
+    // * Append the cloned element to the target container
+    bankContainer.appendChild(clonedChild)
 
 }
 
 // * Subtract Bank
 function subBank() {
-    const bankForm = document.querySelector('[data-bank]')
 
-    if (bankForm.nextElementSibling) {
-        bankForm.remove()
+    const bankContainer = document.querySelector('[data-bank-container]')
+
+    // * Reset cloneCount when decrement
+    cloneCount = 1
+
+    // * Remove the the next sibling of appliance-1
+    if (bankContainer.firstElementChild.nextElementSibling !== null) {
+        bankContainer.lastElementChild.remove()
     }
+
 
 }
 

@@ -420,3 +420,11 @@ First Commit:
 • New Application Children's Info Add&Sub Child Function Optimization
 - Made changes in the function
 - When incrementing the row fields container the container IDs also increments 
+
+June 03, 2023 (Monday)
+First Commit:
+• New Application Revisions 
+- Job Information: Employment and Unemployment Toggle
+- Radio Buttons: Border 4px, Height 4.6rem
+- Implemented the Assets and Properties, Appliances, and Bank Accounts Layout Revisions
+• Implemented incrementing of IDs in  Assets and Properties, Appliances, and Bank Accounts Forms

@@ -2094,11 +2094,11 @@ body {
   border-radius: 0.4rem;
   background-color: #EBEBEB;
   box-shadow: none;
-  aspect-ratio: none;
-  height: 4.4rem;
-  width: 4.4rem;
+  scale: 0.8;
+  height: 4.6rem;
+  width: 4.6rem;
   border-radius: 50%;
-  border: max(1px, 0.15em) solid #D6A330;
+  border: max(4px, 0.15em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .no-form-con .no-container-wrapper .no-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -2859,11 +2859,11 @@ body {
   border-radius: 0.4rem;
   background-color: #EBEBEB;
   box-shadow: none;
-  aspect-ratio: none;
-  height: 4.4rem;
-  width: 4.4rem;
+  scale: 0.8;
+  height: 4.6rem;
+  width: 4.6rem;
   border-radius: 50%;
-  border: max(1px, 0.15em) solid #D6A330;
+  border: max(4px, 0.15em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -3075,11 +3075,11 @@ body {
   border-radius: 0.4rem;
   background-color: #EBEBEB;
   box-shadow: none;
-  aspect-ratio: none;
-  height: 4.4rem;
-  width: 4.4rem;
+  scale: 0.8;
+  height: 4.6rem;
+  width: 4.6rem;
   border-radius: 50%;
-  border: max(1px, 0.15em) solid #D6A330;
+  border: max(4px, 0.15em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .top-container-2 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -3288,11 +3288,11 @@ body {
   border-radius: 0.4rem;
   background-color: #EBEBEB;
   box-shadow: none;
-  aspect-ratio: none;
-  height: 4.4rem;
-  width: 4.4rem;
+  scale: 0.8;
+  height: 4.6rem;
+  width: 4.6rem;
   border-radius: 50%;
-  border: max(1px, 0.15em) solid #D6A330;
+  border: max(4px, 0.15em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .nh-con .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -4023,11 +4023,11 @@ body {
   border-radius: 0.4rem;
   background-color: #EBEBEB;
   box-shadow: none;
-  aspect-ratio: none;
-  height: 4.4rem;
-  width: 4.4rem;
+  scale: 0.8;
+  height: 4.6rem;
+  width: 4.6rem;
   border-radius: 50%;
-  border: max(1px, 0.15em) solid #D6A330;
+  border: max(4px, 0.15em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -4326,11 +4326,11 @@ body {
   border-radius: 0.4rem;
   background-color: #EBEBEB;
   box-shadow: none;
-  aspect-ratio: none;
-  height: 4.4rem;
-  width: 4.4rem;
+  scale: 0.8;
+  height: 4.6rem;
+  width: 4.6rem;
   border-radius: 50%;
-  border: max(1px, 0.15em) solid #D6A330;
+  border: max(4px, 0.15em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .na-form-con .na-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -4679,11 +4679,11 @@ body {
   border-radius: 0.4rem;
   background-color: #EBEBEB;
   box-shadow: none;
-  aspect-ratio: none;
-  height: 4.4rem;
-  width: 4.4rem;
+  scale: 0.8;
+  height: 4.6rem;
+  width: 4.6rem;
   border-radius: 50%;
-  border: max(1px, 0.15em) solid #D6A330;
+  border: max(4px, 0.15em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -5050,11 +5050,11 @@ body {
   border-radius: 0.4rem;
   background-color: #EBEBEB;
   box-shadow: none;
-  aspect-ratio: none;
-  height: 4.4rem;
-  width: 4.4rem;
+  scale: 0.8;
+  height: 4.6rem;
+  width: 4.6rem;
   border-radius: 50%;
-  border: max(1px, 0.15em) solid #D6A330;
+  border: max(4px, 0.15em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .na-form-con .na-container-5 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -5295,17 +5295,16 @@ body {
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 {
   height: 100 200%;
-  display: flex;
-  flex-direction: row;
+  display: grid;
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 {
   height: 100%;
-  width: 35%;
-  padding: 2rem 1rem 2rem 2rem;
+  padding: 2rem;
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 {
   height: minmax(25%, 50%);
   width: 100%;
+  padding: 2rem;
   padding: min(4rem, 10%) min(4rem, 10%);
   display: flex;
   flex-direction: column;
@@ -5314,7 +5313,6 @@ body {
   background-color: #FFFFFF;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
-  overflow-y: scroll;
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container {
   display: flex;
@@ -5337,11 +5335,9 @@ body {
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan,
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan {
   display: grid;
-  grid-auto-flow: row;
-  grid-auto-columns: minmax(0, 1fr);
-  grid-auto-rows: minmax(0, 0.6fr);
-  grid-template-rows: minmax(0, 0.6fr) minmax(0, 0.2fr) minmax(0, 0.6fr);
-  gap: 2rem 0px;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr) minmax(0, 6fr);
+  gap: 0 4rem;
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan > span,
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan > span {
@@ -5393,11 +5389,11 @@ body {
   border-radius: 0.4rem;
   background-color: #EBEBEB;
   box-shadow: none;
-  aspect-ratio: none;
-  height: 4.4rem;
-  width: 4.4rem;
+  scale: 0.8;
+  height: 4.6rem;
+  width: 4.6rem;
   border-radius: 50%;
-  border: max(1px, 0.15em) solid #D6A330;
+  border: max(4px, 0.15em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after,
@@ -5421,15 +5417,35 @@ body {
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan > .input-wrapper .box-wrap > .radio-btn-wrapper:first-of-type span {
   margin-right: 1rem;
 }
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .rowspan-2.child,
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .rowspan-2.child {
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .box-wrap-2,
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .box-wrap-2 {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-  align-items: center;
-  gap: 0 2rem;
+  grid-auto-flow: row;
+  gap: 2rem;
 }
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .rowspan-2.child .input-wrapper:first-of-type input,
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .rowspan-2.child .input-wrapper:first-of-type input {
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .box-wrap-2 > .input-wrapper,
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .box-wrap-2 > .input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .box-wrap-2 > .input-wrapper span,
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .box-wrap-2 > .input-wrapper span {
+  font-size: 1.2rem;
+}
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child,
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child {
+  display: grid;
+  align-items: flex-end;
+  grid-template-columns: minmax(0, 8fr) minmax(0, 1fr);
+  gap: 0px 2rem;
+}
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper,
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper {
+  width: 100%;
+}
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper:first-of-type input,
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper:first-of-type input {
   font-size: 2rem;
   padding: 1rem 2rem;
   border: none;
@@ -5439,15 +5455,15 @@ body {
   box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   width: 100%;
 }
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .rowspan-2.child .input-wrapper:last-of-type,
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .rowspan-2.child .input-wrapper:last-of-type {
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper:last-of-type,
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper:last-of-type {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   gap: 2rem;
 }
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .rowspan-2.child .input-wrapper:last-of-type button,
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .rowspan-2.child .input-wrapper:last-of-type button {
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper:last-of-type button,
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper:last-of-type button {
   cursor: pointer;
   font-size: 3rem;
   font-weight: 700;
@@ -5458,35 +5474,28 @@ body {
   margin-bottom: 0.5rem;
   transition: all ease-in-out 100ms;
 }
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .rowspan-2.child .input-wrapper:last-of-type button:hover,
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .rowspan-2.child .input-wrapper:last-of-type button:hover {
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper:last-of-type button:hover,
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper:last-of-type button:hover {
   background: rgba(0, 0, 0, 0.125);
   background-blend-mode: darken;
 }
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .rowspan-2.child .input-wrapper:last-of-type button:active,
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .rowspan-2.child .input-wrapper:last-of-type button:active {
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper:last-of-type button:active,
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper:last-of-type button:active {
   transform: translateY(4px);
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 {
-  width: 65%;
   height: 100%;
-  padding: 2rem 2rem 2rem 1rem;
+  padding: 2rem;
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2rem 0;
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap {
   display: grid;
-  grid-auto-flow: row;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: minmax(0, 1fr);
-  grid-template-rows: minmax(0, 0.6fr) minmax(0, 1fr);
-  gap: 2rem 0px;
-  align-items: flex-start;
+  gap: 5rem 0;
   padding: min(4rem, 5%) min(4rem, 10%);
   border-radius: 1.5rem;
   background-color: #FFFFFF;
@@ -5496,25 +5505,28 @@ body {
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan h2 {
   font-size: 2.5rem;
 }
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan.child {
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .box-wrap-2 {
+  display: grid;
+  gap: 2rem;
+}
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .box-wrap-2 .rowspan.child {
   display: grid;
   align-items: flex-end;
-  grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 2fr) minmax(0, 0.4fr);
   gap: 0px 2rem;
 }
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan.child .input-wrapper {
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .box-wrap-2 .rowspan.child .input-wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan.child .input-wrapper > span {
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .box-wrap-2 .rowspan.child .input-wrapper > span {
   margin-bottom: 1rem;
   font-weight: 700;
   font-size: 1.2rem;
 }
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan.child .input-wrapper input {
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .box-wrap-2 .rowspan.child .input-wrapper input {
   font-size: 2rem;
   padding: 1rem 2rem;
   border: none;
@@ -5524,13 +5536,13 @@ body {
   box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   width: 100%;
 }
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan.child .input-wrapper:last-of-type {
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .box-wrap-2 .rowspan.child .input-wrapper:last-of-type {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   gap: 2rem;
 }
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan.child .input-wrapper:last-of-type button {
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .box-wrap-2 .rowspan.child .input-wrapper:last-of-type button {
   cursor: pointer;
   font-size: 3rem;
   font-weight: 700;
@@ -5541,19 +5553,19 @@ body {
   margin-bottom: 0.5rem;
   transition: all 200ms ease-in-out;
 }
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan.child .input-wrapper:last-of-type button:hover {
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .box-wrap-2 .rowspan.child .input-wrapper:last-of-type button:hover {
   background: rgba(0, 0, 0, 0.125);
   background-blend-mode: darken;
 }
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .rowspan.child .input-wrapper:last-of-type button:active {
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-10 .small-con-6 .box-wrap .box-wrap-2 .rowspan.child .input-wrapper:last-of-type button:active {
   transform: translateY(4px);
 }
-.main-dashboard .na-form-con .na-container-10 {
+.main-dashboard .na-form-con .na-container-12 {
   height: 60%;
   width: 100%;
   padding: 2rem;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 {
   height: 100%;
   width: 100%;
   display: grid;
@@ -5564,22 +5576,22 @@ body {
   gap: 2rem 0px;
   padding: 3rem 4rem 3rem 4rem;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan {
   min-height: 0;
   /* NEW */
   min-width: 0;
   /* NEW; needed for Firefox */
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan .input-wrapper {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan .input-wrapper {
   display: flex;
   flex-direction: column;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan .input-wrapper > span {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan .input-wrapper > span {
   margin-bottom: 1rem;
   font-weight: 700;
   font-size: 1.2rem;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan .input-wrapper input {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan .input-wrapper input {
   font-size: 2rem;
   padding: 1rem 2rem;
   border: none;
@@ -5589,15 +5601,15 @@ body {
   box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   height: 8rem;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:first-of-type .input-wrapper h2 {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:first-of-type .input-wrapper h2 {
   font-size: 2.5rem;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:first-of-type .input-wrapper span {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:first-of-type .input-wrapper span {
   color: #D6A330;
   text-align: right;
   font-size: 2.5rem;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:nth-of-type(2) {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) {
   display: grid;
   grid-auto-flow: row dense;
   grid-auto-columns: minmax(0, 1fr);
@@ -5605,7 +5617,7 @@ body {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 0px 2rem;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper {
   display: grid;
   grid-auto-flow: row dense;
   grid-auto-columns: minmax(0, 1fr);
@@ -5613,26 +5625,26 @@ body {
   grid-template-rows: minmax(0, 2fr) minmax(0, 0.4fr);
   gap: 2rem 0px;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) {
   position: relative;
   height: clamp(10rem, 20vh, 40vh);
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .signature-wrapper {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .signature-wrapper {
   border: 1px solid #8C8686;
   border-right: 0;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .signature-wrapper canvas.signature-pad {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .signature-wrapper canvas.signature-pad {
   background: #fff;
   width: 100%;
   height: 100%;
   cursor: crosshair;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .clear-btn {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .clear-btn {
   position: absolute;
   height: 100%;
   right: 0;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .clear-btn button[type=button] {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .clear-btn button[type=button] {
   width: 5rem;
   position: relative;
   height: 100%;
@@ -5642,11 +5654,11 @@ body {
   cursor: pointer;
   transition: ease-in-out 200ms;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .clear-btn button[type=button]:hover {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .clear-btn button[type=button]:hover {
   color: #29292B;
   background: rgba(140, 134, 134, 0.8);
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .clear-btn button[type=button] span {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .clear-btn button[type=button] span {
   position: absolute;
   top: 30%;
   left: 70%;
@@ -5655,31 +5667,31 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.5rem;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .signature-wrapper-2 {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .signature-wrapper-2 {
   position: relative;
   height: 100%;
   display: flex;
   justify-content: center;
   border: 1px solid #8C8686;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .signature-wrapper-2 img {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .signature-wrapper-2 img {
   height: 100%;
   width: 100%;
   box-shadow: none;
   background: none;
   font-size: 0;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .signature-wrapper-2 span {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .signature-wrapper-2 span {
   position: absolute;
   bottom: 2rem;
   font-size: 2rem;
   font-weight: 700;
   font-style: italic;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(2) {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(2) {
   padding: 0 15rem;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(2) button {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(2) button {
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -5693,7 +5705,7 @@ body {
   justify-content: center;
   white-space: nowrap;
 }
-.main-dashboard .na-form-con .na-container-10 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(2) button:hover {
+.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(2) button:hover {
   background-color: #29292B;
   color: #FFFFFF;
 }
