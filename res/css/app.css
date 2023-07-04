@@ -24,21 +24,14 @@ html {
 body {
   font-family: "Inter", sans-serif;
   height: 100vh;
-  overflow: hidden;
 }
 
 main {
   height: 100%;
 }
-main::-webkit-scrollbar {
-  width: 1rem;
-}
-main::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-main::-webkit-scrollbar-thumb {
-  background-color: #DAB77A;
-  outline: 1px solid slategrey;
+
+.main-dashboard {
+  overflow-y: scroll;
 }
 
 :focus:not(:focus-visible) {
@@ -286,6 +279,89 @@ table th {
 }
 .checkbox:checked:after {
   visibility: visible;
+}
+
+.selected {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #EBEBEB;
+  border-radius: 1rem;
+  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 30rem;
+  height: 3.6rem;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+}
+.selected::after {
+  /* BG Img	 */
+  content: url("../assets/icons/carret-down.svg");
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transition: transform 0.5s;
+  transform: translateY(-50%);
+}
+
+.selected h4,
+.select-box h4 {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #29292B;
+}
+
+.select-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.select-box .options-container {
+  z-index: 10;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 300ms;
+  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: #EBEBEB;
+  position: absolute;
+  top: 100%;
+}
+.select-box .options-container.active {
+  max-height: 240px;
+  box-shadow: none;
+  opacity: 1;
+}
+.select-box .options-container.active + .selected {
+  box-shadow: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.select-box .options-container.active + .selected::after {
+  transform: translateY(-50%) rotateX(180deg);
+}
+.select-box .options-container .option {
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+}
+.select-box .options-container .option input[type=radio] {
+  display: none;
+}
+.select-box .options-container .option:hover {
+  background-color: #D6A330;
+}
+.select-box .options-container .option:hover > label > h4 {
+  color: #FFFFFF;
+}
+.select-box .options-container .option label {
+  cursor: pointer;
 }
 
 body {
@@ -550,87 +626,6 @@ body {
 }
 .na-modal .modal-container .rowspan:nth-of-type(1) h3 {
   font-size: 2.5rem;
-}
-.na-modal .modal-container .rowspan:nth-of-type(1) .selected {
-  font-size: 2rem;
-  padding: 1rem 2rem;
-  border: none;
-  outline: none;
-  background-color: #EBEBEB;
-  border-radius: 1rem;
-  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 30rem;
-  height: 3.6rem;
-}
-.na-modal .modal-container .rowspan:nth-of-type(1) .selected::after {
-  /* BG Img	 */
-  content: url("../assets/icons/carret-down.svg");
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transition: transform 0.5s;
-  transform: translateY(-50%);
-}
-.na-modal .modal-container .rowspan:nth-of-type(1) .selected h4,
-.na-modal .modal-container .rowspan:nth-of-type(1) .select-box h4 {
-  cursor: pointer;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #29292B;
-}
-.na-modal .modal-container .rowspan:nth-of-type(1) .select-box {
-  display: flex;
-  width: 30rem;
-  flex-direction: column;
-  position: relative;
-}
-.na-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container {
-  z-index: 5;
-  max-height: 0;
-  width: 100%;
-  opacity: 0;
-  overflow: hidden;
-  transition: all 300ms;
-  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  background-color: #EBEBEB;
-  position: absolute;
-  top: 100%;
-}
-.na-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container.active {
-  max-height: 240px;
-  box-shadow: none;
-  opacity: 1;
-}
-.na-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container.active + .selected {
-  box-shadow: none;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.na-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container.active + .selected::after {
-  transform: translateY(-50%) rotateX(180deg);
-}
-.na-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container .option:hover {
-  color: #FFFFFF;
-  background-color: #D6A330;
-}
-.na-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container .option:hover > label > h4 {
-  color: #FFFFFF;
-}
-.na-modal .modal-container .rowspan:nth-of-type(1) .select-box .options-container .option label {
-  cursor: pointer;
-}
-.na-modal .modal-container .rowspan:nth-of-type(1) input[type=radio] {
-  display: none;
-}
-.na-modal .modal-container .rowspan:nth-of-type(1) .select-box .option,
-.na-modal .modal-container .rowspan:nth-of-type(1) .selected {
-  padding: 1.5rem 2rem;
-  cursor: pointer;
 }
 .na-modal .modal-container .rowspan:nth-of-type(2) {
   display: grid;
@@ -1223,8 +1218,8 @@ body {
 
 .na-loan-details-modal {
   margin: auto;
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 90%;
   z-index: 5;
   background: none;
   padding: 0;
@@ -1286,7 +1281,7 @@ body {
   filter: opacity(0.7);
 }
 .na-loan-details-modal .modal-container .na-container-7 {
-  height: 50rem;
+  height: 40rem;
   width: 100%;
   padding: 2rem;
 }
@@ -1303,6 +1298,7 @@ body {
   background-color: #FFFFFF;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
+  overflow-y: scroll;
   padding: 3rem 4rem 3rem 4rem;
 }
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan {
@@ -1311,11 +1307,16 @@ body {
   min-width: 0;
   /* NEW; needed for Firefox */
 }
+.na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:first-of-type {
+  position: sticky;
+  top: 0;
+}
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:first-of-type h2 {
   font-size: 2.5rem;
   font-weight: 700;
 }
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:nth-of-type(2) table tr {
+  top: 5rem;
   text-align: left;
 }
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:nth-of-type(2) table tr:first-of-type {
@@ -1328,7 +1329,7 @@ body {
   padding: 2rem 0;
 }
 .na-loan-details-modal .modal-container .na-container-8 {
-  height: 50rem;
+  height: 40rem;
   width: 100%;
   padding: 2rem;
 }
@@ -1345,6 +1346,7 @@ body {
   background-color: #FFFFFF;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
+  overflow-y: scroll;
   padding: 3rem 4rem 3rem 4rem;
 }
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan {
@@ -1353,11 +1355,16 @@ body {
   min-width: 0;
   /* NEW; needed for Firefox */
 }
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:first-of-type {
+  position: sticky;
+  top: 0;
+}
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:first-of-type h2 {
   font-size: 2.5rem;
   font-weight: 700;
 }
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table tr {
+  top: 2rem;
   text-align: left;
 }
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table tr:first-of-type {
@@ -2345,47 +2352,27 @@ body {
   white-space: nowrap;
 }
 .main-dashboard .no-form-con .no-container-wrapper .no-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio] {
-  cursor: pointer;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
   box-shadow: none;
   scale: 0.7;
-  height: 4.8rem;
-  width: 4.7rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   border: max(4px, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .no-form-con .no-container-wrapper .no-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .no-form-con .no-container-wrapper .no-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .no-form-con .no-container-wrapper .no-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
-  visibility: visible;
-}
-.main-dashboard .no-form-con .no-container-wrapper .no-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
   position: absolute;
-  width: 50%;
   height: 50%;
-  border-radius: 50%;
+  width: 50%;
   background-color: #D6A330;
+  border-radius: 50%;
   visibility: hidden;
   opacity: 0;
   transition: ease-out 250ms;
@@ -3152,47 +3139,27 @@ body {
   white-space: nowrap;
 }
 .main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio] {
-  cursor: pointer;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
   box-shadow: none;
   scale: 0.7;
-  height: 4.8rem;
-  width: 4.7rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   border: max(4px, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
-  visibility: visible;
-}
-.main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
   position: absolute;
-  width: 50%;
   height: 50%;
-  border-radius: 50%;
+  width: 50%;
   background-color: #D6A330;
+  border-radius: 50%;
   visibility: hidden;
   opacity: 0;
   transition: ease-out 250ms;
@@ -3381,47 +3348,27 @@ body {
   white-space: nowrap;
 }
 .main-dashboard .top-container-2 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio] {
-  cursor: pointer;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
   box-shadow: none;
   scale: 0.7;
-  height: 4.8rem;
-  width: 4.7rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   border: max(4px, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .top-container-2 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .top-container-2 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .top-container-2 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
-  visibility: visible;
-}
-.main-dashboard .top-container-2 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
   position: absolute;
-  width: 50%;
   height: 50%;
-  border-radius: 50%;
+  width: 50%;
   background-color: #D6A330;
+  border-radius: 50%;
   visibility: hidden;
   opacity: 0;
   transition: ease-out 250ms;
@@ -3607,47 +3554,27 @@ body {
   white-space: nowrap;
 }
 .main-dashboard .nh-con .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio] {
-  cursor: pointer;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
   box-shadow: none;
   scale: 0.7;
-  height: 4.8rem;
-  width: 4.7rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   border: max(4px, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .nh-con .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .nh-con .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .nh-con .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
-  visibility: visible;
-}
-.main-dashboard .nh-con .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
   position: absolute;
-  width: 50%;
   height: 50%;
-  border-radius: 50%;
+  width: 50%;
   background-color: #D6A330;
+  border-radius: 50%;
   visibility: hidden;
   opacity: 0;
   transition: ease-out 250ms;
@@ -4550,47 +4477,27 @@ body {
   white-space: nowrap;
 }
 .main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio] {
-  cursor: pointer;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
   box-shadow: none;
   scale: 0.7;
-  height: 4.8rem;
-  width: 4.7rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   border: max(4px, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
-  visibility: visible;
-}
-.main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
   position: absolute;
-  width: 50%;
   height: 50%;
-  border-radius: 50%;
+  width: 50%;
   background-color: #D6A330;
+  border-radius: 50%;
   visibility: hidden;
   opacity: 0;
   transition: ease-out 250ms;
@@ -4880,47 +4787,27 @@ body {
   white-space: nowrap;
 }
 .main-dashboard .na-form-con .na-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio] {
-  cursor: pointer;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
   box-shadow: none;
   scale: 0.7;
-  height: 4.8rem;
-  width: 4.7rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   border: max(4px, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .na-form-con .na-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .na-form-con .na-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .na-form-con .na-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
-  visibility: visible;
-}
-.main-dashboard .na-form-con .na-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
   position: absolute;
-  width: 50%;
   height: 50%;
-  border-radius: 50%;
+  width: 50%;
   background-color: #D6A330;
+  border-radius: 50%;
   visibility: hidden;
   opacity: 0;
   transition: ease-out 250ms;
@@ -5259,47 +5146,27 @@ body {
   white-space: nowrap;
 }
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio] {
-  cursor: pointer;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
   box-shadow: none;
   scale: 0.7;
-  height: 4.8rem;
-  width: 4.7rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   border: max(4px, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
-  visibility: visible;
-}
-.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
   position: absolute;
-  width: 50%;
   height: 50%;
-  border-radius: 50%;
+  width: 50%;
   background-color: #D6A330;
+  border-radius: 50%;
   visibility: hidden;
   opacity: 0;
   transition: ease-out 250ms;
@@ -5643,47 +5510,27 @@ body {
   white-space: nowrap;
 }
 .main-dashboard .na-form-con .na-container-5 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio] {
-  cursor: pointer;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
   box-shadow: none;
   scale: 0.7;
-  height: 4.8rem;
-  width: 4.7rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   border: max(4px, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .na-form-con .na-container-5 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .na-form-con .na-container-5 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .na-form-con .na-container-5 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
-  visibility: visible;
-}
-.main-dashboard .na-form-con .na-container-5 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
   position: absolute;
-  width: 50%;
   height: 50%;
-  border-radius: 50%;
+  width: 50%;
   background-color: #D6A330;
+  border-radius: 50%;
   visibility: hidden;
   opacity: 0;
   transition: ease-out 250ms;
@@ -5911,51 +5758,29 @@ body {
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio],
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio] {
-  cursor: pointer;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
   box-shadow: none;
   scale: 0.7;
-  height: 4.8rem;
-  width: 4.7rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   border: max(4px, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
-}
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after,
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked,
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after,
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
-  visibility: visible;
+  border: max(6px, 0.3em) solid #D6A330;
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after,
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
   position: absolute;
-  width: 50%;
   height: 50%;
-  border-radius: 50%;
+  width: 50%;
   background-color: #D6A330;
+  border-radius: 50%;
   visibility: hidden;
   opacity: 0;
   transition: ease-out 250ms;
@@ -6852,47 +6677,27 @@ body {
   white-space: nowrap;
 }
 .nu-con-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio] {
-  cursor: pointer;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
   box-shadow: none;
   scale: 0.7;
-  height: 4.8rem;
-  width: 4.7rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   border: max(4px, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .nu-con-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.nu-con-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.nu-con-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
-  visibility: visible;
-}
-.nu-con-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
   position: absolute;
-  width: 50%;
   height: 50%;
-  border-radius: 50%;
+  width: 50%;
   background-color: #D6A330;
+  border-radius: 50%;
   visibility: hidden;
   opacity: 0;
   transition: ease-out 250ms;

@@ -16,22 +16,15 @@ html {
 body {
     font-family: $font-family;
     height: 100vh;
-    overflow: hidden;
-    
+    // overflow: hidden;
 }
 
 main {
     height: 100%;
-    &::-webkit-scrollbar {
-        width: 1rem;
-    }
-    &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    }
-    &::-webkit-scrollbar-thumb {
-        background-color: $accent;
-        outline: 1px solid slategrey;
-      }
+}
+
+.main-dashboard {
+    overflow-y: scroll;
 }
 
 :focus:not(:focus-visible) {
@@ -124,30 +117,58 @@ table {
     transition: all 200ms ease-in-out;
 }
 
+// * Primary Button Global
 .button {
     @include primaryButton;
 }
 
+// * Transparent Button Global
 .transparentButton {
     @include transparentButton;
 }
 
+// * Transparent Underline Button Global
 .transparentButtonUnderline {
     @include transparentButton4;
 }
 
+// * Decline Button Global
 .declineButton {
     @include declineButton;
 }
 
+// * Release Button Global
 .releaseButton {
     @include releaseButton;
 }
 
+// * Table Chip Global
 .tb-chip {
     @include tableChips;
 }
 
+// * Checkbox Global
 .checkbox {
     @include tableCheckboxInput;
+}
+
+// * Select Input Global Styles
+.selected {
+    @include selectDropdown;
+}
+.selected h4,
+.select-box h4 {
+    cursor: pointer;
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    color: $black;
+}
+.select-box {
+    display: flex;
+    // width: 30rem;
+    flex-direction: column;
+    position: relative;
+    .options-container {
+        @include selectDropdownOptionContainer;
+    }
 }

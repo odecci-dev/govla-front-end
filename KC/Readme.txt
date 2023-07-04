@@ -452,3 +452,6 @@ Fifth Commit:
 
 Sixth Commit:
 • Completed Application List
+
+Sixth Commit:
+• Updated New Application Modal
