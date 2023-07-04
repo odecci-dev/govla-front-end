@@ -680,6 +680,13 @@
     width: calc(100% - 20%);
     z-index: 5;
     background: none;
+    padding: 0;
+    padding-right: 1rem;
+    @include custom-scroll;
+    &::-webkit-scrollbar {
+        padding-left: 1rem;
+        width: 1rem;
+    }
     &::backdrop {
         background-color: rgba($black, 0.7);
     }
@@ -700,31 +707,113 @@
     &::backdrop[closing] {
         animation: fade-out 500ms forwards;
     }
-    // * Hide Scroll Bars
-    &::-webkit-scrollbar {
-        display: none;
-    }
-    // * Hide Scroll Bars
-    & {
-        -ms-overflow-style: none;
-        /* IE and Edge */
-        scrollbar-width: none;
-        /* Firefox */
-    }
-    .button-wrapper {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 0 1.2rem;
-        button {
-            cursor: pointer;
-            background: none;
-            img {
-                transition: all 150ms ease-in-out;
+
+    .modal-container {
+        border-radius: $border-radius-large;
+        background-color: $white;
+        padding: 1rem;
+        .button-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 1.2rem;
+            button {
+                cursor: pointer;
+                background: none;
+                img {
+                    transition: all 150ms ease-in-out;
+                }
+                img:hover {
+                    transform: scale(1.1);
+                    filter: opacity(.7);
+                }
             }
-            img:hover {
-                transform: scale(1.1);
-                filter: opacity(.7);
+        }
+        // * Container 11: Loan History Table 
+        // * Container 7: Payment History Table
+        .na-container-7 {
+            height: 50rem;
+            width: 100%;
+            padding: 2rem;
+            .small-con-4 {
+                height: 100%;
+                width: 100%;
+                @include naSmallContainerGrid4;
+                @include containerDefault2;
+                padding: 3rem 4rem 3rem 4rem;
+                .rowspan {
+                    min-height: 0;
+                    /* NEW */
+                    min-width: 0;
+                    /* NEW; needed for Firefox */
+                }
+                // * Rowspan Header
+                .rowspan:first-of-type {
+                    h2 {
+                        font-size: $font-size-x-large;
+                        font-weight: $font-weight-bold;
+                    }
+                }
+                // * Rowspan 2: Payment History Table 
+                .rowspan:nth-of-type(2) {
+                    table {
+                        tr {
+                            text-align: left;
+                        }
+                        tr:first-of-type {
+                            border-bottom: 1px solid $secondary-bg;
+                        }
+                        th,
+                        td {
+                            font-weight: $font-weight;
+                            font-size: $font-size-x-medium;
+                            padding: 2rem 0;
+                        }
+                    }
+                }
+            }
+        }
+        // * Container 8: Loan History Table
+        .na-container-8 {
+            height: 50rem;
+            width: 100%;
+            padding: 2rem;
+            .small-con-5 {
+                height: 100%;
+                width: 100%;
+                @include naSmallContainerGrid4;
+                @include containerDefault2;
+                padding: 3rem 4rem 3rem 4rem;
+                .rowspan {
+                    min-height: 0;
+                    /* NEW */
+                    min-width: 0;
+                    /* NEW; needed for Firefox */
+                }
+                // * Rowspan Header
+                .rowspan:first-of-type {
+                    h2 {
+                        font-size: $font-size-x-large;
+                        font-weight: $font-weight-bold;
+                    }
+                }
+                // * Rowspan 2: Payment History Table 
+                .rowspan:nth-of-type(2) {
+                    table {
+                        tr {
+                            text-align: left;
+                        }
+                        tr:first-of-type {
+                            border-bottom: 1px solid $secondary-bg;
+                        }
+                        th,
+                        td {
+                            font-weight: $font-weight;
+                            font-size: $font-size-x-medium;
+                            padding: 2rem 0;
+                        }
+                    }
+                }
             }
         }
     }

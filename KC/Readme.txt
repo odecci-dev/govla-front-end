@@ -428,3 +428,9 @@ First Commit:
 - Radio Buttons: Border 4px, Height 4.6rem
 - Implemented the Assets and Properties, Appliances, and Bank Accounts Layout Revisions
 • Implemented incrementing of IDs in  Assets and Properties, Appliances, and Bank Accounts Forms
+
+June 03, 2023 (Tuesday)
+First Commit:
+• New Application: Loan Details Layout Revisions 
+- Increased height of each table 
+- Custom scrollbar
