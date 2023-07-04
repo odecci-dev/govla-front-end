@@ -439,3 +439,6 @@ Second Commit:
 • Started the User Access and Control 
 - Created user.html
 - Added user link in sidebar nav
+
+Third Commit:
+• Completed the table layout for User List

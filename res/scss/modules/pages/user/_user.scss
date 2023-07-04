@@ -1,0 +1,255 @@
+// * User List Container
+    // * Container 1: Header, Buttons, and Searchbar
+    .ul-con-1 {
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 74%);
+        padding: $spacing-4x-large $spacing-4x-large $spacing-2x-large $spacing-4x-large;
+        h2 {
+            font-size: $font-size-x-large;
+        }
+        .p-1 {
+            margin-top: $spacing-large;
+            font-size: $font-size-x-medium;
+            span {
+                font-weight: $font-weight-bold;
+            }
+        }
+        // * Button Container
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: $spacing-large;
+            .wrapper {
+                display: flex;
+            }
+            // * Button Wrapper
+            .wrapper:first-of-type {
+                gap: 2rem;
+                // * All-Member Button Styles
+                button {
+                    @include primaryButton;
+                    a {
+                        color: $white;
+                    }
+                    img {
+                        cursor: pointer;
+                        margin-left: $spacing-3x-large;
+                    }
+                }
+                // * Borrower and Type Of Loan Dropdown Button
+                button:nth-of-type(n+2) {
+                    position: relative;
+                    background-color: aqua;
+                    img {
+                        position: absolute;
+                        transform: translateY(.3rem);
+                    }
+                }
+                // * Borrower Dropdown Button
+                .borrower-dropdown {
+                    position: relative;
+                    .dropdown-menu {
+                        // * When a link IS NOT clicked 
+                        // * Styles for submenu
+                        @include dropdownMenu;
+                        box-shadow: $box-shadow;
+                        width: 100%;
+                        a {
+                            li {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                width: 100%;
+                                padding: $spacing-large $spacing-4x-large;
+                                span {
+                                    font-size: $font-size-medium;
+                                    font-weight: $font-weight-bold;
+                                    white-space: nowrap;
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+                .borrower-dropdown.showMenu>.link.dropdown {
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                    box-shadow: none;
+                }
+                .borrower-dropdown>.link.dropdown>img {
+                    transition: transform ease-out 300ms;
+                }
+                .borrower-dropdown.showMenu>.link.dropdown>img {
+                    -webkit-transform: scaleY(-1);
+                    transform: scaleY(-1);
+                }
+                // * Borrower Dropdown Menu
+                .borrower-dropdown.showMenu>.link.dropdown+.dropdown-menu {
+                    visibility: visible;
+                    pointer-events: auto;
+                    opacity: 1;
+                    border-bottom-left-radius: $border-radius-large;
+                    border-bottom-right-radius: $border-radius-large;
+                    // transition: opacity ease-out 250ms;
+                    animation: drop-down 500ms ease-in-out forwards;
+                }
+            }
+            // * Search Wrapper
+            .wrapper:last-of-type {
+                gap: 2rem;
+                display: flex;
+                align-items: center;
+                button {
+                    cursor: pointer;
+                    background: none;
+                    &:hover {
+                        transform: scale(1.015);
+                    }
+                }
+                .search-wrap {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    // * Search input text-field
+                    input {
+                        @include inputField;
+                        position: relative;
+                        padding-left: $spacing-6x-large;
+                        &::placeholder {
+                            font-size: $font-size-large;
+                            position: absolute;
+                            top: 0;
+                            transform: translateY(1rem);
+                        }
+                        &::-webkit-search-cancel-button {
+                            -webkit-appearance: none;
+                        }
+                    }
+                    img {
+                        position: absolute;
+                        width: 8%;
+                        transform: translateX(1.5rem);
+                    }
+                }
+            }
+        }
+        // * View Trash Button
+        .btn-container {
+            margin-top: $spacing-large;
+            button {
+                @include transparentButton;
+            }
+        }
+    }
+    // * Container 2: Table 
+    .ul-con-2 {
+        height: calc(100% - 26%);
+        padding: $spacing-4x-large $spacing-4x-large $spacing-2x-large $spacing-4x-large;
+        // * Table Container
+        .table-container {
+            display: flex;
+            flex-direction: column;
+            height: calc(100% - 10%);
+            border-radius: $border-radius-large;
+            box-shadow: $box-shadow;
+            table {
+                // **                         ** //
+                // **** Table Header Styles **** //
+                // **                         ** //
+                th {
+                    padding: 2rem 0;
+                    text-align: center;
+                    span.th-name {
+                        font-size: $font-size-medium;
+                        font-weight: $font-weight-bold;
+                    }
+                    .th-wrapper {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            cursor: pointer;
+                            padding-left: .5rem;
+                        }
+                    }
+                }
+                // * Table Checkbox
+                input[type="checkbox"] {
+                    @include tableCheckboxInput;
+                    &::after {
+                        content: url('../assets/icons/white-check.svg');
+                        position: absolute;
+                        top: .1rem;
+                        visibility: hidden;
+                    }
+                    &:checked {
+                        background-color: $primary;
+                        animation: pop-up-big 300ms forwards;
+                    }
+                    &:checked:after {
+                        // animation: pop-up 300ms forwards;
+                        visibility: visible;
+                    }
+                }
+                // * All table header except the last child
+                th:nth-of-type(-n+5) {
+                    text-align: left;
+                }
+                // * Table Checkbox
+                th:first-of-type {
+                    padding-left: 1rem;
+                }
+                // * Borrower
+                th:nth-of-type(2) {
+                    padding-left: 1rem;
+                }
+                // **                       ** //
+                // **** Table Data Styles **** //
+                // **                       ** //
+                td {
+                    padding: $spacing-medium 0;
+                    font-size: $font-size-medium;
+                    // * Borrowers' Data Styles
+                    .td-wrapper {
+                        display: flex;
+                        align-items: center;
+                        .td-num {
+                            font-weight: $font-weight-bold;
+                            margin-left: 1rem;
+                        }
+                        .td-name {
+                            margin-left: 2rem;
+                        }
+                    }
+                    // * Table Buttons Styles
+                    .td-btn-wrapper {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        button {
+                            cursor: pointer;
+                        }
+                        // * Table View Button 
+                        .a-btn-view {
+                            @include secondaryButton;
+                        }
+                        // * Table Trash Button
+                        .a-btn-trash {
+                            @include transparentButton2;
+                        }
+                    }
+                }
+                // * Due Date Data
+                .td-due {
+                    font-weight: $font-weight-bold;
+                }
+                td:first-of-type {
+                    padding-left: 1rem;
+                }
+                td:nth-of-type(2) {
+                    padding-left: 1rem;
+                }
+            }
+        }
+    }

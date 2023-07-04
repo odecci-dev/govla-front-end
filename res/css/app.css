@@ -6039,4 +6039,314 @@ body {
   grid-auto-rows: minmax(0, 1fr);
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   gap: 0px 2rem;
+}
+
+.ul-con-1 {
+  display: flex;
+  flex-direction: column;
+  height: 26%;
+  padding: 4rem 4rem 2rem 4rem;
+}
+.ul-con-1 h2 {
+  font-size: 2.5rem;
+}
+.ul-con-1 .p-1 {
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+}
+.ul-con-1 .p-1 span {
+  font-weight: 700;
+}
+.ul-con-1 .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.ul-con-1 .container .wrapper {
+  display: flex;
+}
+.ul-con-1 .container .wrapper:first-of-type {
+  gap: 2rem;
+}
+.ul-con-1 .container .wrapper:first-of-type button {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.ul-con-1 .container .wrapper:first-of-type button:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
+.ul-con-1 .container .wrapper:first-of-type button a {
+  color: #FFFFFF;
+}
+.ul-con-1 .container .wrapper:first-of-type button img {
+  cursor: pointer;
+  margin-left: 3rem;
+}
+.ul-con-1 .container .wrapper:first-of-type button:nth-of-type(n+2) {
+  position: relative;
+  background-color: aqua;
+}
+.ul-con-1 .container .wrapper:first-of-type button:nth-of-type(n+2) img {
+  position: absolute;
+  transform: translateY(0.3rem);
+}
+.ul-con-1 .container .wrapper:first-of-type .borrower-dropdown {
+  position: relative;
+}
+.ul-con-1 .container .wrapper:first-of-type .borrower-dropdown .dropdown-menu {
+  position: absolute;
+  z-index: -9;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #D6A330;
+  pointer-events: none;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+.ul-con-1 .container .wrapper:first-of-type .borrower-dropdown .dropdown-menu a {
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+.ul-con-1 .container .wrapper:first-of-type .borrower-dropdown .dropdown-menu a:hover {
+  background-color: #29292B;
+}
+.ul-con-1 .container .wrapper:first-of-type .borrower-dropdown .dropdown-menu a:not(:first-of-type):hover {
+  background-color: #29292B;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+.ul-con-1 .container .wrapper:first-of-type .borrower-dropdown .dropdown-menu a:last-of-type {
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+.ul-con-1 .container .wrapper:first-of-type .borrower-dropdown .dropdown-menu a li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 4rem;
+}
+.ul-con-1 .container .wrapper:first-of-type .borrower-dropdown .dropdown-menu a li span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #FFFFFF;
+}
+.ul-con-1 .container .wrapper:first-of-type .borrower-dropdown.showMenu > .link.dropdown {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: none;
+}
+.ul-con-1 .container .wrapper:first-of-type .borrower-dropdown > .link.dropdown > img {
+  transition: transform ease-out 300ms;
+}
+.ul-con-1 .container .wrapper:first-of-type .borrower-dropdown.showMenu > .link.dropdown > img {
+  transform: scaleY(-1);
+}
+.ul-con-1 .container .wrapper:first-of-type .borrower-dropdown.showMenu > .link.dropdown + .dropdown-menu {
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 1;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  animation: drop-down 500ms ease-in-out forwards;
+}
+.ul-con-1 .container .wrapper:last-of-type {
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+}
+.ul-con-1 .container .wrapper:last-of-type button {
+  cursor: pointer;
+  background: none;
+}
+.ul-con-1 .container .wrapper:last-of-type button:hover {
+  transform: scale(1.015);
+}
+.ul-con-1 .container .wrapper:last-of-type .search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.ul-con-1 .container .wrapper:last-of-type .search-wrap input {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #EBEBEB;
+  border-radius: 1rem;
+  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  position: relative;
+  padding-left: 6rem;
+}
+.ul-con-1 .container .wrapper:last-of-type .search-wrap input::placeholder {
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  transform: translateY(1rem);
+}
+.ul-con-1 .container .wrapper:last-of-type .search-wrap input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+.ul-con-1 .container .wrapper:last-of-type .search-wrap img {
+  position: absolute;
+  width: 8%;
+  transform: translateX(1.5rem);
+}
+.ul-con-1 .btn-container {
+  margin-top: 1.5rem;
+}
+.ul-con-1 .btn-container button {
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #D6A330;
+  background: transparent;
+  transition: all 200ms ease-in-out;
+}
+.ul-con-1 .btn-container button:hover {
+  color: #29292B;
+  transform: scale(1.005);
+}
+
+.ul-con-2 {
+  height: 74%;
+  padding: 4rem 4rem 2rem 4rem;
+}
+.ul-con-2 .table-container {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  border-radius: 1.5rem;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.ul-con-2 .table-container table th {
+  padding: 2rem 0;
+  text-align: center;
+}
+.ul-con-2 .table-container table th span.th-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.ul-con-2 .table-container table th .th-wrapper {
+  display: flex;
+  align-items: center;
+}
+.ul-con-2 .table-container table th .th-wrapper img {
+  cursor: pointer;
+  padding-left: 0.5rem;
+}
+.ul-con-2 .table-container table input[type=checkbox] {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  aspect-ratio: 1/1;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.4rem;
+  background-color: #EBEBEB;
+}
+.ul-con-2 .table-container table input[type=checkbox]::after {
+  content: url("../assets/icons/white-check.svg");
+  position: absolute;
+  top: 0.1rem;
+  visibility: hidden;
+}
+.ul-con-2 .table-container table input[type=checkbox]:checked {
+  background-color: #D6A330;
+  animation: pop-up-big 300ms forwards;
+}
+.ul-con-2 .table-container table input[type=checkbox]:checked:after {
+  visibility: visible;
+}
+.ul-con-2 .table-container table th:nth-of-type(-n+5) {
+  text-align: left;
+}
+.ul-con-2 .table-container table th:first-of-type {
+  padding-left: 1rem;
+}
+.ul-con-2 .table-container table th:nth-of-type(2) {
+  padding-left: 1rem;
+}
+.ul-con-2 .table-container table td {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+.ul-con-2 .table-container table td .td-wrapper {
+  display: flex;
+  align-items: center;
+}
+.ul-con-2 .table-container table td .td-wrapper .td-num {
+  font-weight: 700;
+  margin-left: 1rem;
+}
+.ul-con-2 .table-container table td .td-wrapper .td-name {
+  margin-left: 2rem;
+}
+.ul-con-2 .table-container table td .td-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ul-con-2 .table-container table td .td-btn-wrapper button {
+  cursor: pointer;
+}
+.ul-con-2 .table-container table td .td-btn-wrapper .a-btn-view {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  padding: 0.6rem 3.5rem;
+}
+.ul-con-2 .table-container table td .td-btn-wrapper .a-btn-view:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
+.ul-con-2 .table-container table td .td-btn-wrapper .a-btn-view:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
+.ul-con-2 .table-container table td .td-btn-wrapper .a-btn-trash {
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #D6A330;
+  background: transparent;
+  transition: all 200ms ease-in-out;
+  padding: 0.8rem 4rem;
+  font-size: 1.5rem;
+}
+.ul-con-2 .table-container table td .td-btn-wrapper .a-btn-trash:hover {
+  color: #29292B;
+  transform: scale(1.005);
+}
+.ul-con-2 .table-container table .td-due {
+  font-weight: 700;
+}
+.ul-con-2 .table-container table td:first-of-type {
+  padding-left: 1rem;
+}
+.ul-con-2 .table-container table td:nth-of-type(2) {
+  padding-left: 1rem;
 }/*# sourceMappingURL=app.css.map */
