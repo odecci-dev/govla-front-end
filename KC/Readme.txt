@@ -442,3 +442,6 @@ Second Commit:
 
 Third Commit:
 • Completed the table layout for User List
+
+Fourth Commit:
+• Completed the User Registration and Restrictions

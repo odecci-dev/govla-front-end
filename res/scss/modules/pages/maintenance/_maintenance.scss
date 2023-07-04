@@ -319,6 +319,7 @@
                 padding: 2rem 1rem 1rem 2rem;
                 // * Big Container 
                 .big-con {
+                    height: 100%;
                     width: 100%;
                     // height: calc(100% - 20%);
                     padding: 5rem 4rem 4rem 4rem;
@@ -612,7 +613,7 @@
                         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
                         gap: 0 $spacing-2x-large;
                         .input-wrapper>input[type=image] {
-                            height: 30%;
+                            height: clamp(10vh, 5rem, 100vh);
                             object-fit: cover;
                         }
                     }
@@ -627,6 +628,10 @@
                         display: grid;
                         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
                         gap: 0 $spacing-2x-large;
+                        
+                    }
+                    .input-wrapper {
+                        justify-content: flex-end;
                     }
                 }
             }

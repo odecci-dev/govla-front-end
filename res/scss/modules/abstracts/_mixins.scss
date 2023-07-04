@@ -379,6 +379,20 @@
     width: 2rem;
     border-radius: .4rem;
     background-color: $primary-bg;
+    &::after {
+        content: url('../assets/icons/white-check.svg');
+        position: absolute;
+        top: .1rem;
+        visibility: hidden;
+    }
+    &:checked {
+        background-color: $primary;
+        animation: pop-up-big 300ms forwards;
+    }
+    &:checked:after {
+        // animation: pop-up 300ms forwards;
+        visibility: visible;
+    }
 }
 
 // * Form Radio Buttons
