@@ -434,3 +434,8 @@ First Commit:
 • New Application: Loan Details Layout Revisions 
 - Increased height of each table 
 - Custom scrollbar
+
+Second Commit:
+• Started the User Access and Control 
+- Created user.html
+- Added user link in sidebar nav

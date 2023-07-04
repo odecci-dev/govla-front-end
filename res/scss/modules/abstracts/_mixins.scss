@@ -385,11 +385,11 @@
 @mixin formRadioButtons {
     @include tableCheckboxInput;
     box-shadow: none;
-    scale: .8;
-    height: 4.6rem;
-    width: 4.6rem;
+    scale: .7;
+    height: 4.8rem;
+    width: 4.7rem;
     border-radius: $circle;
-    border: max(4px, 0.15em) solid $primary;
+    border: max(4px, 0.3em) solid $primary;
     background-color: $white;
 }
 

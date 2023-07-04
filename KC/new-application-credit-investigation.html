@@ -505,7 +505,7 @@
 
                             <!-- * Form Header -->
 
-                            <!-- * Rowspan 1: Rowspan Header: Header and Buttons -->
+                            <!-- * Rowspan 1: Rowspan Header: Header and CI Time -->
                             <div class="rowspan">
 
                                 <!-- * Header Wrapper -->
@@ -514,17 +514,17 @@
                                     <button type="button" id="data-open-loan-details">View loan & payment history</button>
                                 </div>
 
-                                <!-- * Buttons -->
-                                <div class="btn-wrapper">
-
-                                    <!-- * Save -->
-                                    <button type="button" id="saveBtn" class="button" data-save>Save</button>
-
-                                    <!-- * Save & Apply for loan  -->
-                                    <a href="new-application-credit-investigation.html">
-                                        <button type="button" id="proceedToCI" class="button" onclick="activeProgressButton()" data-proceed-to-ci>Save & Proceed to CI</button>
-                                    </a>
-
+                                <!-- * CI Time -->
+                                <div class="CI-time-wrapper">
+                                    <img src="../res/assets/icons/time.svg" alt="Time">
+                                    <div class="box">
+                                        <span>CI Time</span>
+                                        <span id="ciTime">
+                                            <span id="ciTimeWeek">1</span>W 
+                                            <span id="ciTimeDay">3</span>D 
+                                            <span id="ciTimeHour">4</span>H
+                                        </span>
+                                    </div>
                                 </div>
 
                             </div>
