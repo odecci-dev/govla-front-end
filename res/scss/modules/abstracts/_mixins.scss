@@ -188,6 +188,15 @@
     }
 }
 
+// * Transparent Button 4
+@mixin transparentButton4 {
+    @include transparentButton3;
+    color: $font-accent;
+    &:hover {
+        color: $black
+    }
+}
+
 // * Add/Subtract Button
 @mixin addOrSubButton {
     cursor: pointer;

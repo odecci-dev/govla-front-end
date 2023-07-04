@@ -22,81 +22,6 @@
     justify-content: space-between;
     align-items: center;
     margin-top: $spacing-large;
-    .wrapper {
-      display: flex;
-    }
-    // * Button Wrapper
-    .wrapper:first-of-type {
-      gap: 2rem;
-      // * All-Member Button Styles
-      button {
-        @include primaryButton;
-        a {
-          color: $white;
-        }
-        img {
-          cursor: pointer;
-          margin-left: $spacing-3x-large;
-        }
-      }
-      // * Borrower and Type Of Loan Dropdown Button
-      button:nth-of-type(n + 2) {
-        position: relative;
-        background-color: aqua;
-        img {
-          position: absolute;
-          transform: translateY(0.3rem);
-        }
-      }
-      // * Borrower Dropdown Button
-      .borrower-dropdown {
-        position: relative;
-        .dropdown-menu {
-          // * When a link IS NOT clicked
-          // * Styles for submenu
-          @include dropdownMenu;
-          box-shadow: $box-shadow;
-          width: 100%;
-          a {
-            li {
-              display: flex;
-              justify-content: flex-start;
-              align-items: center;
-              width: 100%;
-              padding: $spacing-large $spacing-4x-large;
-              span {
-                font-size: $font-size-medium;
-                font-weight: $font-weight-bold;
-                white-space: nowrap;
-                color: $white;
-              }
-            }
-          }
-        }
-      }
-      .borrower-dropdown.showMenu > .link.dropdown {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        box-shadow: none;
-      }
-      .borrower-dropdown > .link.dropdown > img {
-        transition: transform ease-out 300ms;
-      }
-      .borrower-dropdown.showMenu > .link.dropdown > img {
-        -webkit-transform: scaleY(-1);
-        transform: scaleY(-1);
-      }
-      // * Borrower Dropdown Menu
-      .borrower-dropdown.showMenu > .link.dropdown + .dropdown-menu {
-        visibility: visible;
-        pointer-events: auto;
-        opacity: 1;
-        border-bottom-left-radius: $border-radius-large;
-        border-bottom-right-radius: $border-radius-large;
-        // transition: opacity ease-out 250ms;
-        animation: drop-down 500ms ease-in-out forwards;
-      }
-    }
     // * Search Wrapper
     .wrapper:last-of-type {
       gap: 2rem;
@@ -139,9 +64,6 @@
   // * View Trash Button
   .btn-container {
     margin-top: $spacing-large;
-    button {
-      @include transparentButton;
-    }
   }
 }
 // * Container 2: Table
@@ -421,16 +343,9 @@
             .btn-wrapper {
               display: flex;
               flex-direction: column;
+              align-items: center;
               gap: 2rem;
-              .cancel-btn {
-                cursor: pointer;
-                pointer-events: all;
-                font-size: $font-size-medium;
-                font-weight: $font-weight-bold;
-                color: $font-accent;
-                text-decoration: underline;
-                background: none;
-              }
+              
             }
           }
         }
@@ -478,7 +393,7 @@
             padding: 4rem 0;
             text-align: left;
             &.th-name {
-              font-size: $font-size-medium;
+              font-size: $font-size-x-medium;
               font-weight: $font-weight-bold;
               
             }
@@ -500,7 +415,7 @@
           // **                       ** //
           td {
             padding: $spacing-large 0;
-            font-size: $font-size-medium;
+            font-size: $font-size-x-medium;
           }
           
           td:first-of-type {

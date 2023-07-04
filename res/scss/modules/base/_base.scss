@@ -95,6 +95,14 @@ table {
     @include primaryButton;
 }
 
+.transparentButton {
+    @include transparentButton;
+}
+
+.transparentButtonUnderline {
+    @include transparentButton4;
+}
+
 .declineButton {
     @include declineButton;
 }

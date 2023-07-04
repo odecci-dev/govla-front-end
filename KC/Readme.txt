@@ -445,3 +445,7 @@ Third Commit:
 
 Fourth Commit:
 • Completed the User Registration and Restrictions
+
+Fifth Commit:
+• Updated the New Application Modal
+• Created a seperate JS file for New Application Modal (newApplicationModal.js)
