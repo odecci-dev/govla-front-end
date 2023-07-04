@@ -449,3 +449,6 @@ Fourth Commit:
 Fifth Commit:
 • Updated the New Application Modal
 • Created a seperate JS file for New Application Modal (newApplicationModal.js)
+
+Sixth Commit:
+• Completed Application List

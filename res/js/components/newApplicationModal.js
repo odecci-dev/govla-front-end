@@ -61,5 +61,5 @@ function modalDropdown() {
 }
 
 
-// newAppModal()
 modalDropdown()
+newAppModal()

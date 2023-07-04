@@ -213,10 +213,6 @@
                             border-bottom: 1px solid $black;
                             transition: 200ms ease-in-out;
                         }
-                        tr:not(:first-of-type):hover {
-                            color: $white;
-                            background-color: $primary;
-                        }
                         th {
                             padding: 2rem 0;
                             text-align: center;

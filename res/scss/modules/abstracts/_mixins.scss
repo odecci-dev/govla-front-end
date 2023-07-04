@@ -112,9 +112,17 @@
 // * Table Button
 @mixin tableButton {
     @include primaryButton;
-    font-size: 1rem;
+    font-size: $font-size-small;
     padding: $btn-padding-5;
 }
+
+// * Table Trash Button
+@mixin tableTransparentTrashButton {
+    @include transparentButton2();
+    font-size: $font-size-small;
+    padding: $btn-padding-5;
+}
+
 
 @mixin tableChips {
     position: relative;
@@ -225,7 +233,8 @@
         width: 1rem;
     }
     &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: $border-radius-btn;
+        box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2);
     }
     &::-webkit-scrollbar-thumb {
         border-radius: $border-radius-btn;

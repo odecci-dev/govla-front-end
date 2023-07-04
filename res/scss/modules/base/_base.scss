@@ -75,6 +75,39 @@ button {
 table {
     border-collapse: collapse;
     width: 100%;
+    tr:first-of-type {
+        isolation: isolate;
+        position: sticky;
+        z-index: 5;
+        top: 0;
+
+        &::after {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            inset: 0;
+            background-color: rgba(253, 253, 253, 0.9);
+            backdrop-filter: blur(.2rem);
+            box-shadow: 0px 2px 11px 1px rgba(233, 233, 233, 0.75);
+        }
+
+    }
+    tr:not(:first-of-type):hover {
+        transition: 200ms ease-in-out;
+        color: $white;
+        background-color: $primary;
+    }
+    
+    th {
+        position: sticky;
+        top: 0;
+    }
+}
+
+.table-container {
+    @include custom-scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .active {

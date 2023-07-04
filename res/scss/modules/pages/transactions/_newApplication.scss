@@ -4,7 +4,7 @@
 // * Main Dashboard 2 Styles
 .main-dashboard {
     @include dashboard2;
-    overflow-y: scroll;
+    // overflow-y: scroll;
     scroll-behavior: smooth;
     // * New-Member-Form-Container
     .na-form-con {
@@ -12,6 +12,162 @@
         flex-direction: column;
         height: 100%;
         width: 100%;
+        // * New Application List: Header
+        .nal-con-1 {
+            display: flex;
+            flex-direction: column;
+            height: calc(100% - 74%);
+            padding: $spacing-4x-large $spacing-4x-large $spacing-2x-large
+            $spacing-4x-large;
+            h2 {
+            font-size: $font-size-x-large;
+            }
+            .p-1 {
+            margin-top: $spacing-large;
+            font-size: $font-size-x-medium;
+            span {
+                font-weight: $font-weight-bold;
+            }
+            }
+            // * Button Container
+            .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: $spacing-large;
+            // * Search Wrapper
+            .wrapper:last-of-type {
+                gap: 2rem;
+                display: flex;
+                align-items: center;
+                button {
+                cursor: pointer;
+                background: none;
+                &:hover {
+                    transform: scale(1.015);
+                }
+                }
+                .search-wrap {
+                position: relative;
+                display: flex;
+                align-items: center;
+                // * Search input text-field
+                input {
+                    @include inputField;
+                    position: relative;
+                    padding-left: $spacing-6x-large;
+                    &::placeholder {
+                    font-size: $font-size-large;
+                    position: absolute;
+                    top: 0;
+                    transform: translateY(1rem);
+                    }
+                    &::-webkit-search-cancel-button {
+                    -webkit-appearance: none;
+                    }
+                }
+                img {
+                    position: absolute;
+                    width: 8%;
+                    transform: translateX(1.5rem);
+                }
+                }
+            }
+            }
+            // * View Trash Button
+            .btn-container {
+            margin-top: $spacing-large;
+            }
+        }
+        // * New Application List: Table
+        .nal-con-2 {
+            height: calc(100% - 26%);
+            padding: $spacing-4x-large $spacing-4x-large $spacing-2x-large
+            $spacing-4x-large;
+            // * Table Container
+            .table-container {
+            display: flex;
+            flex-direction: column;
+            height: calc(100% - 10%);
+            border-radius: $border-radius-large;
+            box-shadow: $box-shadow;
+            table {
+                // **                         ** //
+                // **** Table Header Styles **** //
+                // **                         ** //
+                th {
+                padding: $spacing-2x-large $spacing-large;
+                text-align: center;
+                    span.th-name {
+                        font-size: $font-size;
+                        font-weight: $font-weight-bold;
+                    }
+                    .th-wrapper {
+                        display: flex;
+                        align-items: center;
+                        img {
+                        cursor: pointer;
+                        padding-left: 0.5rem;
+                        }
+                    }
+                }
+                // * All table header except the last child
+                th:nth-of-type(-n+8) {
+                text-align: left;
+                }
+                // * Table Checkbox
+                th:first-of-type,
+                th:nth-of-type(2){
+                padding-left: 2rem;
+                }
+                th:nth-of-type(6) {
+                    .th-wrapper {
+                        justify-content: flex-end;
+                    }
+                }
+               
+                // **                       ** //
+                // **** Table Data Styles **** //
+                // **                       ** //
+                td {
+                padding: $spacing-medium $spacing-large;
+                font-size: $font-size-small;
+                // * Borrowers' Data Styles
+                .td-wrapper {
+                    display: flex;
+                    align-items: center;
+                }
+                // * Table Buttons Styles
+                .td-btn-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    button {
+                    cursor: pointer;
+                    }
+                    // * Table View Button
+                    .a-btn-view {
+                    @include tableButton;
+                    }
+                    // * Table Trash Button
+                    .a-btn-trash {
+                    @include tableTransparentTrashButton;
+                    }
+                }
+                }
+                // * Applied Loan Amount
+                .td-num {
+                    text-align: right;
+
+                font-weight: $font-weight-bold;
+                }
+                td:first-of-type,
+                td:nth-of-type(2) {
+                padding-left: 2rem;
+                }
+            }
+            }
+        }
         // * New Application: Progress Bar
         .na-progress-bar-container {
             height: 30%;

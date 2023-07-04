@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gold One Victory Lending App</title>
+    <link rel="stylesheet" href="../res/css/app.css" />
+  </head>
+
+  <body>
+    <main>
+
+      <!-- * Main Dashboard -->
+      <div class="main-dashboard">
+
+        <div class="na-form-con">
+
+            <!-- * Application List Containers -->
+            <!-- * Container 1: User list Header, Buttons, and Searchbar -->
+
+            <div class="nal-con-1">
+            <h2>Application List</h2>
+            <p class="p-1">
+              Total of <span id="numOfApplicants">50</span> active users
+            </p>
+  
+            <!-- * Button Container -->
+            <div class="container">
+              <!-- * Button Wrapper -->
+              <div class="wrapper">
+                <!-- * Add New Button -->
+                <a href="../KC/new-application-modal.html">
+                  <button class="button">
+                    <span>Add New</span>
+                  </button>
+                </a>
+              </div>
+  
+              <!-- * Search Wrapper -->
+              <div class="wrapper">
+                <!-- * Filter Button -->
+                <button>
+                  <img src="../res/assets/icons/filter.svg" alt="filter" />
+                </button>
+  
+                <!-- * Search Bar -->
+                <div class="search-wrap">
+                  <input
+                    type="search"
+                    id="search"
+                    name="search"
+                    placeholder="Search"
+                  />
+                  <img
+                    src="../res/assets/icons/magnifyingglass.svg"
+                    alt="search"
+                  />
+                </div>
+              </div>
+            </div>
+  
+            <!-- * View Trash Button -->
+                  <div class="btn-container">
+                      <button class="transparentButton">View Trash</button>
+                  </div>
+            </div>
+  
+            <!-- * Container 2: User List - Table and Pagination -->
+            <div class="nal-con-2">
+    
+                <!-- * Table Container -->
+                <div class="table-container">
+    
+                <!-- * User Table -->
+                <table>
+                    <!-- * Table Header -->
+                    <tr>
+                    <!-- * Checkbox All-->
+                    <th>
+                        <input
+                        type="checkbox"
+                        class="checkbox"
+                        id="allCheckbox"
+                        onchange="checkAll(this)"
+                        />
+                    </th>
+    
+                    <!-- * Borrower -->
+                    <th>
+                        <div class="th-wrapper">
+                            <span class="th-name">Borrower</span>
+                            <img src="../res/assets/icons/funnel-simple.svg" alt="funnel">
+                        </div>
+                    </th>
+    
+                    <!-- * Borrower Contact # -->
+                    <th>
+                        <span class="th-name">Borrower Contact #</span>
+                    </th>
+    
+                    <!-- * Co-Borrower -->
+                    <th>
+                        <div class="th-wrapper">
+                            <span class="th-name">Co-Borrower</span>
+                            <img src="../res/assets/icons/funnel-simple.svg" alt="funnel">
+                        </div>
+                    </th>
+    
+                    <!-- * Co-Borrower Contact # -->
+                    <th>
+                        <span class="th-name">Co-Borrower Contact #</span>
+                    </th>
+    
+                    <!-- * Applied Loan Amount -->
+                    <th>
+                        <div class="th-wrapper">
+                            <span class="th-name">Applied Loan Amount</span>
+                            <img src="../res/assets/icons/funnel-simple.svg" alt="funnel">
+                        </div>
+                    </th>
+    
+                    <!-- * Loan type -->
+                    <th>
+                        <span class="th-name">Loan type</span>
+                    </th>
+    
+                    <!-- * Date Created -->
+                    <th>
+                        <div class="th-wrapper">
+                            <span class="th-name">Date Created</span>
+                            <img src="../res/assets/icons/funnel-simple.svg" alt="funnel">
+                        </div>
+                    </th>
+    
+                    <!-- * Action -->
+                    <th><span class="th-name">Action</span></th>
+                    </tr>
+    
+                    <!-- * Table Data -->
+                    <tr>
+                    <!-- * Checkbox Opt -->
+                    <td><input type="checkbox" class="checkbox" id="checkbox" data-checkbox /></td>
+                        
+                    <!-- * Borrower -->
+                    <td>
+                        Dela Cruz, Juana
+                    </td>
+    
+                    <!-- * Borrower Contact Number -->
+                    <td>
+                        0935-887-8176
+                    </td>
+                        
+                    <!-- * Co-Borrower -->
+                    <td>
+                        Palermo, Juliana
+                    </td>
+    
+                    <!-- * Co-Borrower Contact Number -->
+                    <td>
+                        0912-345-6789
+                    </td>
+    
+                    <!-- * Applied Loan Amount -->
+                    <td class="td-num">
+                        10,000
+                    </td>
+    
+                    <!-- * Loan type -->
+                    <td>
+                        Individual Loan
+                    </td>
+    
+                    <!-- * Date Created -->
+                    <td>
+                        11/11/2023
+                    </td>
+    
+                    <!-- * Table View and Trash Button -->
+                    <td class="td-btns">
+                        <div class="td-btn-wrapper">
+                        <button class="a-btn-view">View</button>
+                        <button class="a-btn-trash">Trash</button>
+                        </div>
+                    </td>
+                    </tr>
+                    <tr>
+                    <!-- * Checkbox Opt -->
+                    <td><input type="checkbox" class="checkbox" id="checkbox" data-checkbox /></td>
+                        
+                    <!-- * Borrower -->
+                    <td>
+                        Beverly, Haily
+                    </td>
+    
+                    <!-- * Borrower Contact Number -->
+                    <td>
+                        0919-294-8542
+                    </td>
+                        
+                    <!-- * Co-Borrower -->
+                    <td>
+                        Barbosa, June
+                    </td>
+    
+                    <!-- * Co-Borrower Contact Number -->
+                    <td>
+                        0998-765-4321
+                    </td>
+    
+                    <!-- * Applied Loan Amount -->
+                    <td class="td-num">
+                        10,000
+                    </td>
+    
+                    <!-- * Loan type -->
+                    <td>
+                        Individual Loan
+                    </td>
+    
+                    <!-- * Date Created -->
+                    <td>
+                        11/12/2023
+                    </td>
+    
+                    <!-- * Table View and Trash Button -->
+                    <td class="td-btns">
+                        <div class="td-btn-wrapper">
+                        <button class="a-btn-view">View</button>
+                        <button class="a-btn-trash">Trash</button>
+                        </div>
+                    </td>
+                    </tr>
+                   
+                </table>
+                
+                </div>
+    
+            </div>
+  
+  
+        </div>
+        
+      </div>
+
+    </main>
+
+    <script src="../res/js/app.js" defer></script>
+    <script src="../res/js/components/newApplication.js" defer></script>
+  </body>
+</html>
