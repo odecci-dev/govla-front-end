@@ -73,7 +73,6 @@ table {
         position: sticky;
         z-index: 5;
         top: 0;
-
         &::after {
             content: '';
             z-index: -1;

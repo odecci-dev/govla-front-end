@@ -468,3 +468,9 @@ Second Commit:
 • New Application Module: Updated Assets and Properties
 - Update:
     - Buttons form toggle
+
+Second Commit:
+• New Application Module: Updated Progress Bar
+- Update:
+    - Progress Bar
+    - Progress Level
