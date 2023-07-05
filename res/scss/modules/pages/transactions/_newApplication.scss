@@ -352,42 +352,42 @@
                             input {
                                 @include inputField;
                             }
-                            // * Select Input Global Styles
-                            .select-box {
-                                position: relative;
-                                select {
-                                    @include selectField;
-                                    width: 100%;
-                                    option {
-                                        position: absolute;
-                                        outline: none;
-                                        border: none;
-                                        background-color: $secondary-bg;
-                                    }
-                                }
-                            }
-                            // * Select Input Arrow
-                            .select-box::before {
-                                content: '';
-                                position: absolute;
-                                width: 15px;
-                                height: 15px;
-                                z-index: 2;
-                                right: 0;
-                                transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
-                                // border: 2px solid $black;
-                                border-bottom: 2px solid $black;
-                                border-left: 2px solid $black;
-                                transition: ease-out 300ms;
-                                pointer-events: none;
-                            }
-                            .select-box:focus-within::before {
-                                border-top: 2px solid $black;
-                                border-right: 2px solid $black;
-                                border-bottom: none;
-                                border-left: none;
-                                transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
-                            }
+                            // // * Select Input Global Styles
+                            // .select-box {
+                            //     position: relative;
+                            //     select {
+                            //         @include selectField;
+                            //         width: 100%;
+                            //         option {
+                            //             position: absolute;
+                            //             outline: none;
+                            //             border: none;
+                            //             background-color: $secondary-bg;
+                            //         }
+                            //     }
+                            // }
+                            // // * Select Input Arrow
+                            // .select-box::before {
+                            //     content: '';
+                            //     position: absolute;
+                            //     width: 15px;
+                            //     height: 15px;
+                            //     z-index: 2;
+                            //     right: 0;
+                            //     transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
+                            //     // border: 2px solid $black;
+                            //     border-bottom: 2px solid $black;
+                            //     border-left: 2px solid $black;
+                            //     transition: ease-out 300ms;
+                            //     pointer-events: none;
+                            // }
+                            // .select-box:focus-within::before {
+                            //     border-top: 2px solid $black;
+                            //     border-right: 2px solid $black;
+                            //     border-bottom: none;
+                            //     border-left: none;
+                            //     transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
+                            // }
                             // * Radio Buttons
                             .box-wrap {
                                 display: flex;
@@ -584,42 +584,6 @@
                         input {
                             @include inputField;
                         }
-                        // * Select Input Global Styles
-                        .select-box {
-                            position: relative;
-                            select {
-                                @include selectField;
-                                width: 100%;
-                                option {
-                                    position: absolute;
-                                    outline: none;
-                                    border: none;
-                                    background-color: $secondary-bg;
-                                }
-                            }
-                        }
-                        // * Select Input Arrow
-                        .select-box::before {
-                            content: '';
-                            position: absolute;
-                            width: 15px;
-                            height: 15px;
-                            z-index: 2;
-                            right: 0;
-                            transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
-                            // border: 2px solid $black;
-                            border-bottom: 2px solid $black;
-                            border-left: 2px solid $black;
-                            transition: ease-out 300ms;
-                            pointer-events: none;
-                        }
-                        .select-box:focus-within::before {
-                            border-top: 2px solid $black;
-                            border-right: 2px solid $black;
-                            border-bottom: none;
-                            border-left: none;
-                            transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
-                        }
                         // * Radio Buttons
                         .box-wrap {
                             display: flex;
@@ -700,41 +664,6 @@
                         // * Input Global Styles
                         input {
                             @include inputField;
-                        }
-                        // * Select Input Global Styles
-                        .select-box {
-                            position: relative;
-                            select {
-                                @include selectField;
-                                width: 100%;
-                                option {
-                                    position: absolute;
-                                    outline: none;
-                                    border: none;
-                                    background-color: $secondary-bg;
-                                }
-                            }
-                        }
-                        // * Select Input Arrow
-                        .select-box::before {
-                            content: '';
-                            position: absolute;
-                            width: 15px;
-                            height: 15px;
-                            z-index: 2;
-                            right: 0;
-                            transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
-                            border-bottom: 2px solid $black;
-                            border-left: 2px solid $black;
-                            transition: ease-out 300ms;
-                            pointer-events: none;
-                        }
-                        .select-box:focus-within::before {
-                            border-top: 2px solid $black;
-                            border-right: 2px solid $black;
-                            border-bottom: none;
-                            border-left: none;
-                            transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
                         }
                         // * Radio Buttons
                         .box-wrap {
@@ -1072,42 +1001,6 @@
                             // * Input Global Styles
                             input {
                                 @include inputField;
-                            }
-                            // * Select Input Global Styles
-                            .select-box {
-                                position: relative;
-                                select {
-                                    @include selectField;
-                                    width: 100%;
-                                    option {
-                                        position: absolute;
-                                        outline: none;
-                                        border: none;
-                                        background-color: $secondary-bg;
-                                    }
-                                }
-                            }
-                            // * Select Input Arrow
-                            .select-box::before {
-                                content: '';
-                                position: absolute;
-                                width: 15px;
-                                height: 15px;
-                                z-index: 2;
-                                right: 0;
-                                transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
-                                // border: 2px solid $black;
-                                border-bottom: 2px solid $black;
-                                border-left: 2px solid $black;
-                                transition: ease-out 300ms;
-                                pointer-events: none;
-                            }
-                            .select-box:focus-within::before {
-                                border-top: 2px solid $black;
-                                border-right: 2px solid $black;
-                                border-bottom: none;
-                                border-left: none;
-                                transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
                             }
                             // * Radio Buttons
                             .box-wrap {

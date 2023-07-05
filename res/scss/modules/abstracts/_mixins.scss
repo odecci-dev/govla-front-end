@@ -46,9 +46,9 @@
     display: flex;
     align-items: center;
     position: relative;
-    width: 30rem;
-    height: 3.6rem;
-    padding: 1.5rem 2rem;
+    width: 100%;
+    height: 4.4rem;
+    padding: 1rem 3rem 1rem 2rem;
     cursor: pointer;
     // * Select Input Arrow
     &::after {
@@ -662,7 +662,7 @@
 // * Rowspan 3
 @mixin rowspan3 {
     @include displayGrid;
-    grid-template-columns: minmax(0, 0.4fr) minmax(0, 1fr) minmax(0, 0.4fr) minmax(0, 1fr) minmax(0, 0.4fr);
+    grid-template-columns: minmax(0, 0.5fr) minmax(0, 0.9fr) minmax(0, 0.28fr) minmax(0, 0.9fr) minmax(0, 0.5fr);
     gap: 0px $spacing-2x-large;
 }
 

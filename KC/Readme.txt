@@ -469,8 +469,21 @@ Second Commit:
 - Update:
     - Buttons form toggle
 
-Second Commit:
+Third Commit:
 • New Application Module: Updated Progress Bar
 - Update:
     - Progress Bar
     - Progress Level
+
+Fourth Commit:
+• New Application Module: Updated Dropdown and Toggles
+• New Application Module: Modal Dropdown
+- Update:
+    - Select Dropdown
+    - Assets and Properties Y or N Toggle
+• Modified Files
+- newApplication.js
+- newApplication.scss
+
+- modal.scss
+- _mixins.scss
