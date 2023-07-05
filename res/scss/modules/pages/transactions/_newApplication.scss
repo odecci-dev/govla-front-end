@@ -4,14 +4,15 @@
 // * Main Dashboard 2 Styles
 .main-dashboard {
     @include dashboard2;
-    // overflow-y: scroll;
     scroll-behavior: smooth;
+    
     // * New-Member-Form-Container
     .na-form-con {
         display: flex;
         flex-direction: column;
         height: 100%;
         width: 100%;
+
         // * New Application List: Header
         .nal-con-1 {
             display: flex;

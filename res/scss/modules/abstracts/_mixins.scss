@@ -285,17 +285,6 @@
 }
 
 // *** Dashboard Mixins
-// * Dashboard 1
-@mixin dashboard {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    height: calc(100% - 10%);
-    width: calc(100% - 8%);
-    z-index: 10;
-    @include custom-scroll;
-}
-
 @mixin custom-scroll {
     &::-webkit-scrollbar {
         width: 1rem;
@@ -310,11 +299,24 @@
       }
 }
 
+
+// * Dashboard 1
+@mixin dashboard {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: calc(100% - 10%);
+    width: calc(100% - 8%);
+    z-index: 10;
+    @include custom-scroll;
+}
+
 // * Dashboard 2
 @mixin dashboard2 {
     @include dashboard;
     background-color: $third-bg;
 }
+
 
 // *** Dashboard Grid Layouts
 // ** md-con-2

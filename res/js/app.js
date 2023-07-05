@@ -1,18 +1,16 @@
-const dashboard = document.querySelector(".main-dashboard")
-
 function navigationEvents() {
     // * Side Nav
+    const dashboard = document.querySelector(".main-dashboard")
 
     // * Submenu Toggle
     document.addEventListener("click", e => {
-
+    
 
         // * When a link is clicked, toggle the submenu
         const isDropdownButton = e.target.matches("[data-dropdown-button]")
 
         // * Ignore the click in the submenus (to not close when the dropdown is clicked inside the submenu)
         if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return
-
 
         // * If this is a dropdown button, I want toggle submenu by clicking
         let currentDropdown
@@ -38,7 +36,7 @@ function navigationEvents() {
 
             // * Otherwise, close it
             dropdown.classList.remove("showMenu")
-            dashboard.style.zIndex = 10
+            dashboard.style.zIndex = ''
             return
 
         })
@@ -47,23 +45,9 @@ function navigationEvents() {
 
 }
 
-
 window.onload = function() {
     navigationEvents();
 }
-
-
-const navLinkEls = document.querySelectorAll('[data-nav-link]')
-const windowPathName = window.location.pathname;
-
-navLinkEls.forEach(navLink => {
-    const navLinkPathName = new URL(navLink.href).pathname
-
-    if ((windowPathName === navLinkPathName) || (windowPathName === '/index.html' && navLinkPathName === '/')) {
-        navLink.classList.toggle("active");
-    }
-})
-
 
 // * All Members: Dropdown Menu Toggle
 document.addEventListener("click", e => {

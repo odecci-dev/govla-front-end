@@ -491,3 +491,6 @@ Fourth Commit:
 Fifth Commit:
 • New Application Module: Sprint 1
 - Implemented the New Application Layout
+
+Sixth Commit:
+• New Application Module: Updated Navigation Links
