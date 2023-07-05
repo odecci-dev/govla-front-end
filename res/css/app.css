@@ -1218,23 +1218,9 @@ body {
 
 .na-loan-details-modal {
   margin: auto;
-  height: 100%;
   width: 90%;
   z-index: 5;
   background: none;
-  padding: 0;
-  padding-right: 1rem;
-}
-.na-loan-details-modal::-webkit-scrollbar {
-  width: 1rem;
-}
-.na-loan-details-modal::-webkit-scrollbar-track {
-  border-radius: 3rem;
-  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2);
-}
-.na-loan-details-modal::-webkit-scrollbar-thumb {
-  border-radius: 3rem;
-  background-color: #D6A330;
 }
 .na-loan-details-modal::-webkit-scrollbar {
   padding-left: 1rem;
@@ -1294,12 +1280,24 @@ body {
   grid-auto-rows: minmax(0, 1fr);
   grid-template-rows: minmax(0, 0.1fr) minmax(0, 1fr);
   gap: 2rem 0px;
+  grid-template-rows: minmax(0, 0.12fr) minmax(0, 1fr);
   border-radius: 1.5rem;
   background-color: #FFFFFF;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
   overflow-y: scroll;
   padding: 3rem 4rem 3rem 4rem;
+}
+.na-loan-details-modal .modal-container .na-container-7 .small-con-4::-webkit-scrollbar {
+  width: 1rem;
+}
+.na-loan-details-modal .modal-container .na-container-7 .small-con-4::-webkit-scrollbar-track {
+  border-radius: 3rem;
+  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+.na-loan-details-modal .modal-container .na-container-7 .small-con-4::-webkit-scrollbar-thumb {
+  border-radius: 3rem;
+  background-color: #D6A330;
 }
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan {
   min-height: 0;
@@ -1310,13 +1308,27 @@ body {
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:first-of-type {
   position: sticky;
   top: 0;
+  background-color: #FFFFFF;
+  isolation: isolate;
+}
+.na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:first-of-type::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  inset: 0;
+  transform: scaleY(3);
+  background-color: #FFFFFF;
+  z-index: -1;
 }
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:first-of-type h2 {
   font-size: 2.5rem;
   font-weight: 700;
+  padding-left: 1rem;
+}
+.na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:nth-of-type(2) table tr:first-of-type {
+  top: 5rem;
 }
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:nth-of-type(2) table tr {
-  top: 5rem;
   text-align: left;
 }
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:nth-of-type(2) table tr:first-of-type {
@@ -1326,7 +1338,7 @@ body {
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:nth-of-type(2) table td {
   font-weight: 400;
   font-size: 1.8rem;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 .na-loan-details-modal .modal-container .na-container-8 {
   height: 40rem;
@@ -1342,12 +1354,24 @@ body {
   grid-auto-rows: minmax(0, 1fr);
   grid-template-rows: minmax(0, 0.1fr) minmax(0, 1fr);
   gap: 2rem 0px;
+  grid-template-rows: minmax(0, 0.12fr) minmax(0, 1fr);
   border-radius: 1.5rem;
   background-color: #FFFFFF;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
   overflow-y: scroll;
   padding: 3rem 4rem 3rem 4rem;
+}
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5::-webkit-scrollbar {
+  width: 1rem;
+}
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5::-webkit-scrollbar-track {
+  border-radius: 3rem;
+  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5::-webkit-scrollbar-thumb {
+  border-radius: 3rem;
+  background-color: #D6A330;
 }
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan {
   min-height: 0;
@@ -1358,13 +1382,25 @@ body {
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:first-of-type {
   position: sticky;
   top: 0;
+  background-color: #FFFFFF;
+  isolation: isolate;
+}
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:first-of-type::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  inset: 0;
+  transform: scaleY(3);
+  background-color: #FFFFFF;
+  z-index: -1;
 }
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:first-of-type h2 {
   font-size: 2.5rem;
   font-weight: 700;
+  padding-left: 1rem;
 }
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table tr {
-  top: 2rem;
+  top: 5rem;
   text-align: left;
 }
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table tr:first-of-type {
@@ -1374,7 +1410,7 @@ body {
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table td {
   font-weight: 400;
   font-size: 1.8rem;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 
 .main-dashboard {
@@ -2363,7 +2399,7 @@ body {
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
-  border: max(4px, 0.3em) solid #D6A330;
+  border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .no-form-con .no-container-wrapper .no-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -2375,7 +2411,10 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
-  transition: ease-out 250ms;
+}
+.main-dashboard .no-form-con .no-container-wrapper .no-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
+  background-color: #FFFFFF;
+  animation: pop-up-big 300ms forwards;
 }
 .main-dashboard .no-form-con .no-container-wrapper .no-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
   visibility: visible;
@@ -3150,7 +3189,7 @@ body {
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
-  border: max(4px, 0.3em) solid #D6A330;
+  border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -3162,7 +3201,10 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
-  transition: ease-out 250ms;
+}
+.main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
+  background-color: #FFFFFF;
+  animation: pop-up-big 300ms forwards;
 }
 .main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
   visibility: visible;
@@ -3359,7 +3401,7 @@ body {
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
-  border: max(4px, 0.3em) solid #D6A330;
+  border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .top-container-2 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -3371,7 +3413,10 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
-  transition: ease-out 250ms;
+}
+.main-dashboard .top-container-2 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
+  background-color: #FFFFFF;
+  animation: pop-up-big 300ms forwards;
 }
 .main-dashboard .top-container-2 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
   visibility: visible;
@@ -3565,7 +3610,7 @@ body {
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
-  border: max(4px, 0.3em) solid #D6A330;
+  border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .nh-con .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -3577,7 +3622,10 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
-  transition: ease-out 250ms;
+}
+.main-dashboard .nh-con .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
+  background-color: #FFFFFF;
+  animation: pop-up-big 300ms forwards;
 }
 .main-dashboard .nh-con .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
   visibility: visible;
@@ -4488,7 +4536,7 @@ body {
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
-  border: max(4px, 0.3em) solid #D6A330;
+  border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -4500,7 +4548,10 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
-  transition: ease-out 250ms;
+}
+.main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
+  background-color: #FFFFFF;
+  animation: pop-up-big 300ms forwards;
 }
 .main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
   visibility: visible;
@@ -4798,7 +4849,7 @@ body {
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
-  border: max(4px, 0.3em) solid #D6A330;
+  border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .na-form-con .na-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -4810,7 +4861,10 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
-  transition: ease-out 250ms;
+}
+.main-dashboard .na-form-con .na-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
+  background-color: #FFFFFF;
+  animation: pop-up-big 300ms forwards;
 }
 .main-dashboard .na-form-con .na-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
   visibility: visible;
@@ -5157,7 +5211,7 @@ body {
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
-  border: max(4px, 0.3em) solid #D6A330;
+  border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -5169,7 +5223,10 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
-  transition: ease-out 250ms;
+}
+.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
+  background-color: #FFFFFF;
+  animation: pop-up-big 300ms forwards;
 }
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
   visibility: visible;
@@ -5521,7 +5578,7 @@ body {
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
-  border: max(4px, 0.3em) solid #D6A330;
+  border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .main-dashboard .na-form-con .na-container-5 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -5533,7 +5590,10 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
-  transition: ease-out 250ms;
+}
+.main-dashboard .na-form-con .na-container-5 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
+  background-color: #FFFFFF;
+  animation: pop-up-big 300ms forwards;
 }
 .main-dashboard .na-form-con .na-container-5 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
   visibility: visible;
@@ -5769,9 +5829,9 @@ body {
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
-  border: max(4px, 0.3em) solid #D6A330;
+  border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
-  border: max(6px, 0.3em) solid #D6A330;
+  border: max(0.6rem, 0.3em) solid #D6A330;
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after,
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -5783,7 +5843,11 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
-  transition: ease-out 250ms;
+}
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked,
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
+  background-color: #FFFFFF;
+  animation: pop-up-big 300ms forwards;
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after,
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
@@ -6688,7 +6752,7 @@ body {
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
-  border: max(4px, 0.3em) solid #D6A330;
+  border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
 }
 .nu-con-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
@@ -6700,7 +6764,10 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
-  transition: ease-out 250ms;
+}
+.nu-con-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
+  background-color: #FFFFFF;
+  animation: pop-up-big 300ms forwards;
 }
 .nu-con-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
   visibility: visible;

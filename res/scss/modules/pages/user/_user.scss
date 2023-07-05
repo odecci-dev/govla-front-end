@@ -267,12 +267,6 @@
               input[type="radio"] {
                 @include formRadioButtons;
               }
-              input[type="radio"]::after {
-                @include formRadioButtonsAfter;
-              }
-              input[type="radio"]:checked:after {
-                @include formRadioButtonsChecked;
-              }
               // input[type="radio"]:focus {
               //     outline: max(1px, 0.15em) solid $primary;
               //     outline-offset: max(2px, 0.15em);

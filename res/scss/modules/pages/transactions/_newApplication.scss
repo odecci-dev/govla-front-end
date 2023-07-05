@@ -403,12 +403,6 @@
                                     input[type="radio"] {
                                         @include formRadioButtons;
                                     }
-                                    input[type="radio"]::after {
-                                        @include formRadioButtonsAfter;
-                                    }
-                                    input[type="radio"]:checked:after {
-                                        @include formRadioButtonsChecked;
-                                    }
                                     // input[type="radio"]:focus {
                                     //     outline: max(1px, 0.15em) solid $primary;
                                     //     outline-offset: max(2px, 0.15em);
@@ -641,12 +635,6 @@
                                 }
                                 input[type="radio"] {
                                     @include formRadioButtons;
-                                }
-                                input[type="radio"]::after {
-                                    @include formRadioButtonsAfter;
-                                }
-                                input[type="radio"]:checked:after {
-                                    @include formRadioButtonsChecked;
                                 }
                                 // input[type="radio"]:focus {
                                 //     outline: max(1px, 0.15em) solid $primary;
@@ -882,12 +870,6 @@
                                 }
                                 input[type="radio"] {
                                     @include formRadioButtons;
-                                }
-                                input[type="radio"]::after {
-                                    @include formRadioButtonsAfter;
-                                }
-                                input[type="radio"]:checked:after {
-                                    @include formRadioButtonsChecked;
                                 }
                                 // input[type="radio"]:focus {
                                 //     outline: max(1px, 0.15em) solid $primary;
@@ -1142,12 +1124,6 @@
                                     input[type="radio"] {
                                         @include formRadioButtons;
                                     }
-                                    input[type="radio"]::after {
-                                        @include formRadioButtonsAfter;
-                                    }
-                                    input[type="radio"]:checked:after {
-                                        @include formRadioButtonsChecked;
-                                    }
                                     // input[type="radio"]:focus {
                                     //     outline: max(1px, 0.15em) solid $primary;
                                     //     outline-offset: max(2px, 0.15em);
@@ -1328,7 +1304,7 @@
                                         }
                                         input[type="radio"] {
                                             @include formRadioButtons;
-                                            border: max(6px, 0.3em) solid $primary;
+                                            border: max(.6rem, 0.3em) solid $primary;
                                         }
                                         // input[type="radio"]:focus {
                                         //     outline: max(1px, 0.15em) solid $primary;

@@ -838,6 +838,24 @@
                                             <td>Lorem ipsum dolor sit.</td>
                                             <td>Lorem ipsum dolor sit.</td>
                                         </tr>
+                                        <tr>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                        </tr>
                                         
 
                                     </table>
@@ -881,23 +899,43 @@
                                             <th>Penalty</th>
                                         </tr>
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
                                         </tr>
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
                                         </tr>
+                                        <tr>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                        </tr>
+                                        
+                                        
 
                                     </table>
 
@@ -1103,18 +1141,25 @@
                             <div class="input-wrapper">
                                 <span>Employment Status</span>
                                 <div class="select-box">
-                                    <select name="empStat" id="empStat">
-                                        <option value="0"></option>
-                                        <option value="1">Employed</option>
-                                        <option value="2">Unemployed</option>
+                                    <select name="empStat" id="spouseEmpStat">
+                                    <option value="0" disabled></option>
+                                    <option value="Employed">Employed</option>
+                                    <option value="Unemployed">Unemployed</option>
                                     </select>
                                 </div>
                             </div>
 
                             <!-- * Current Job / Position -->
                             <div class="input-wrapper">
-                                <span>Current Job / Position</span>
-                                <input type="text" id="currentJob" name="currentJob">
+
+                                <!-- * Current Job -->
+                                <span data-spouse-current-job>Current Job / Position</span>
+                                <input type="text" id="currentJob" name="currentJob" data-spouse-current-job>
+
+                                <!-- * Previous Job -->
+                                <span data-spouse-previous-job>Previous Job / Position</span>
+                                <input type="text" id="previousJob" name="previousJob" data-spouse-previous-job>
+
                             </div>
 
                             <!-- * Years Of Service -->
@@ -1281,18 +1326,25 @@
                             <div class="input-wrapper">
                                 <span>Employment Status</span>
                                 <div class="select-box">
-                                    <select name="empStat" id="empStat">
-                                        <option value="0"></option>
-                                        <option value="1">Employed</option>
-                                        <option value="2">Unemployed</option>
+                                    <select name="empStat" id="fdrEmpStat">
+                                    <option value="0" disabled></option>
+                                    <option value="Employed">Employed</option>
+                                    <option value="Unemployed">Unemployed</option>
                                     </select>
                                 </div>
                             </div>
 
                             <!-- * Current Job / Position -->
                             <div class="input-wrapper">
-                                <span>Current Job / Position</span>
-                                <input type="text" id="currentJob" name="currentJob">
+
+                                <!-- * Current Job -->
+                                <span data-fdr-current-job>Current Job / Position</span>
+                                <input type="text" id="fdrCurrentJob" name="currentJob" data-fdr-current-job>
+
+                                <!-- * Previous Job -->
+                                <span data-fdr-previous-job>Previous Job / Position</span>
+                                <input type="text" id="fdrPreviousJob" name="previousJob" data-fdr-previous-job>
+
                             </div>
 
                             <!-- * Years Of Service -->
@@ -1316,7 +1368,7 @@
                         <!-- * Rowspan 5: Number Of Dependants -->
                         <div class="rowspan">
 
-                            <!-- * Current Job / Position -->
+                            <!-- * Number Of Dependants -->
                             <div class="input-wrapper">
                                 <span>Number Of Dependants</span>
                                 <input type="number" id="numOfDependants" name="numOfDependants">
@@ -2121,18 +2173,25 @@
                             <div class="input-wrapper">
                                 <span>Employment Status</span>
                                 <div class="select-box">
-                                    <select name="empStat" id="empStat">
-                                    <option value="0"></option>
-                                    <option value="1">Employed</option>
-                                    <option value="2">Unemployed</option>
+                                    <select name="empStat" id="cbEmpStat">
+                                    <option value="0" disabled></option>
+                                    <option value="Employed">Employed</option>
+                                    <option value="Unemployed">Unemployed</option>
                                     </select>
                                 </div>
                             </div>
 
                             <!-- * Current Job / Position -->
                             <div class="input-wrapper">
-                                <span>Current Job / Position</span>
-                                <input type="text" id="currentJob" name="currentJob">
+
+                                <!-- * Current Job -->
+                                <span data-cb-current-job>Current Job / Position</span>
+                                <input type="text" id="cbCurrentJob" name="currentJob" data-cb-current-job>
+
+                                <!-- * Previous Job -->
+                                <span data-cb-previous-job>Previous Job / Position</span>
+                                <input type="text" id="cbPreviousJob" name="previousJob" data-cb-previous-job>
+
                             </div>
 
                             <!-- * Years Of Service -->

@@ -210,7 +210,7 @@ function subChildSingle() {
 // ****** END --- Child Form Toggle ***** //
 
 
-// * Job Information
+// * Borrower Job Information
 const employmentStatus = document.getElementById('empStat')
 const previousJob = document.querySelectorAll('[data-previous-job]')
 
@@ -229,6 +229,81 @@ for (const previousJobItems of previousJob) {
             } else if (employmentStatus.selectedIndex === 2) {
                 previousJobItems.style.display = 'block'
                 currentJobItems.style.display = 'none'
+            }
+        }
+
+    })
+}
+
+// * Co-Borrower Job Information
+const cbEmploymentStatus = document.getElementById('cbEmpStat')
+const cbPreviousJob = document.querySelectorAll('[data-cb-previous-job]')
+
+for (const cbPreviousJobItems of cbPreviousJob) {
+    cbPreviousJobItems.style.display = 'none'
+
+    cbEmploymentStatus.addEventListener('change', () => {
+        const cbCurrentJob = document.querySelectorAll('[data-cb-current-job]')
+
+        for (const cbCurrentJobItems of cbCurrentJob) {
+            // * If Employed is Selected show Current Job / Position
+            if (cbEmploymentStatus.selectedIndex === 1) {
+                cbPreviousJobItems.style.display = 'none'
+                cbCurrentJobItems.style.display = 'block'
+                    // * If Unemployed is Selected show Previous Job / Position
+            } else if (cbEmploymentStatus.selectedIndex === 2) {
+                cbPreviousJobItems.style.display = 'block'
+                cbCurrentJobItems.style.display = 'none'
+            }
+        }
+
+    })
+}
+
+// * Spouse Job Information
+const spouseEmploymentStatus = document.getElementById('spouseEmpStat')
+const spousePreviousJob = document.querySelectorAll('[data-spouse-previous-job]')
+
+for (const spousePreviousJobItems of spousePreviousJob) {
+    spousePreviousJobItems.style.display = 'none'
+
+    spouseEmploymentStatus.addEventListener('change', () => {
+        const spouseCurrentJob = document.querySelectorAll('[data-spouse-current-job]')
+
+        for (const spouseCurrentJobItems of spouseCurrentJob) {
+            // * If Employed is Selected show Current Job / Position
+            if (spouseEmploymentStatus.selectedIndex === 1) {
+                spousePreviousJobItems.style.display = 'none'
+                spouseCurrentJobItems.style.display = 'block'
+                    // * If Unemployed is Selected show Previous Job / Position
+            } else if (spouseEmploymentStatus.selectedIndex === 2) {
+                spousePreviousJobItems.style.display = 'block'
+                spouseCurrentJobItems.style.display = 'none'
+            }
+        }
+
+    })
+}
+
+// * First Degree Relative Job Information
+const fdrEmploymentStatus = document.getElementById('fdrEmpStat')
+const fdrPreviousJob = document.querySelectorAll('[data-fdr-previous-job]')
+
+for (const fdrPreviousJobItems of fdrPreviousJob) {
+    fdrPreviousJobItems.style.display = 'none'
+
+    fdrEmploymentStatus.addEventListener('change', () => {
+        const fdrCurrentJob = document.querySelectorAll('[data-fdr-current-job]')
+
+        for (const fdrCurrentJobItems of fdrCurrentJob) {
+            // * If Employed is Selected show Current Job / Position
+            if (fdrEmploymentStatus.selectedIndex === 1) {
+                fdrPreviousJobItems.style.display = 'none'
+                fdrCurrentJobItems.style.display = 'block'
+                    // * If Unemployed is Selected show Previous Job / Position
+            } else if (fdrEmploymentStatus.selectedIndex === 2) {
+                fdrPreviousJobItems.style.display = 'block'
+                fdrCurrentJobItems.style.display = 'none'
             }
         }
 

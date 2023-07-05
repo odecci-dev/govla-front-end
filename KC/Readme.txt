@@ -453,5 +453,13 @@ Fifth Commit:
 Sixth Commit:
 • Completed Application List
 
-Sixth Commit:
+Seventh Commit:
 • Updated New Application Modal
+
+June 04, 2023 (Wednesday)
+First Commit:
+New Application Module: Updates on btns, modal, and forms
+- Updates:
+    - Radio Buttons
+    - Loan Modal
+    - Job Informations

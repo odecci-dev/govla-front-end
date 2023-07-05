@@ -493,7 +493,7 @@
     height: 5rem;
     width: 5rem;
     border-radius: $circle;
-    border: max(4px, 0.3em) solid $primary;
+    border: max(.4rem, 0.3em) solid $primary;
     background-color: $white;
     &::after {
         content: '';
@@ -504,11 +504,9 @@
         border-radius: $circle;
         visibility: hidden;
         opacity: 0;
-        // transition: ease-out 250ms;
-        animation: pop-up-big 300ms forwards;
     }
     &:checked {
-        background-color: $primary;
+        background-color: $white;
         animation: pop-up-big 300ms forwards;
     }
     &:checked:after {
