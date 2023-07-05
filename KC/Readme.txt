@@ -487,3 +487,7 @@ Fourth Commit:
 
 - modal.scss
 - _mixins.scss
+
+Fifth Commit:
+• New Application Module: Sprint 1
+- Implemented the New Application Layout

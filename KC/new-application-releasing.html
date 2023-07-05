@@ -573,26 +573,13 @@
 
                             <!-- * Form Header -->
 
-                            <!-- * Rowspan 1: Rowspan Header: Header and Buttons -->
+                            <!-- * Rowspan 1: Rowspan Header: Header and CI Time -->
                             <div class="rowspan">
 
                                 <!-- * Header Wrapper -->
                                 <div class="header-wrapper">
                                     <h2>Borrower Information</h2>
                                     <button type="button" id="data-open-loan-details">View loan & payment history</button>
-                                </div>
-
-                                <!-- * Buttons -->
-                                <div class="btn-wrapper">
-
-                                    <!-- * Save -->
-                                    <button type="button" id="saveBtn" class="button" data-save>Save</button>
-
-                                    <!-- * Save & Apply for loan  -->
-                                    <a href="new-application-credit-investigation.html">
-                                        <button type="button" id="proceedToCI" class="button" onclick="activeProgressButton()" data-proceed-to-ci>Save & Proceed to CI</button>
-                                    </a>
-
                                 </div>
 
                             </div>
@@ -633,11 +620,32 @@
                                 <div class="input-wrapper">
                                     <span>Gender</span>
                                     <div class="select-box">
-                                        <select name="Gender" id="gender">
-                                        <option value="0"></option>
-                                        <option value="1">Male</option>
-                                        <option value="2">Female</option>
-                                    </select>
+    
+                                        <div class="options-container" data-option-con1>
+    
+                                            <div class="option"  data-option-item1>
+    
+                                                <input type="radio" class="radio" name="category" value="Male" />
+                                                <label for="Male">
+                                                    <h4>Male</h4>
+                                                </label>
+    
+                                            </div>
+    
+                                            <div class="option"  data-option-item1>
+    
+                                                <input type="radio" class="radio" name="category" value="Female"/>
+                                                <label for="Female">
+                                                    <h4>Female</h4>
+                                                </label>
+    
+                                            </div>
+    
+                                        </div>
+                                        
+                                        <div class="selected" data-option-select1>
+                                        </div>
+    
                                     </div>
                                 </div>
 
@@ -663,12 +671,41 @@
                                 <div class="input-wrapper">
                                     <span>Civil Status</span>
                                     <div class="select-box">
-                                        <select name="Civil Status" id="civStat" data-civil-status>
-                                            <option value="0"></option>
-                                            <option value="Widow">Widow</option>
-                                            <option value="Married">Married</option>
-                                            <option value="Single">Single</option>
-                                        </select>
+    
+                                        <div class="options-container" data-option-con2>
+    
+                                            <div class="option" data-option-item2>
+    
+                                                <input type="radio" class="radio" name="category" value="Widow" />
+                                                <label for="Widow">
+                                                    <h4>Widow</h4>
+                                                </label>
+    
+                                            </div>
+    
+                                            <div class="option" data-option-item2>
+    
+                                                <input type="radio" class="radio" name="category" value="Married"/>
+                                                <label for="Married">
+                                                    <h4>Married</h4>
+                                                </label>
+    
+                                            </div>
+    
+                                            <div class="option" data-option-item2>
+    
+                                                <input type="radio" class="radio" name="category" value="Single"/>
+                                                <label for="Single">
+                                                    <h4>Single</h4>
+                                                </label>
+    
+                                            </div>
+    
+                                        </div>
+                                        
+                                        <div class="selected" data-option-select2>
+                                        </div>
+    
                                     </div>
                                 </div>
 
@@ -854,7 +891,6 @@
 
                 </div>
 
-
                 <!-- * New Application Loan Details Modal -->
                 <dialog class="na-loan-details-modal" data-loan-details-modal>
 
@@ -898,23 +934,60 @@
                                             <th>Due Date</th>
                                         </tr>
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
                                         </tr>
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
                                         </tr>
+                                        <tr>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>Lorem ipsum dolor sit.</td>
+                                        </tr>
+                                        
 
                                     </table>
 
@@ -957,23 +1030,43 @@
                                             <th>Penalty</th>
                                         </tr>
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
                                         </tr>
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
                                         </tr>
+                                        <tr>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                        </tr>
+                                        
+                                        
 
                                     </table>
 
@@ -1011,23 +1104,50 @@
                         <!-- * Rowspan 2: Employment Status, Current Job / Position, Years Of Service and Company Name -->
                         <div class="rowspan">
 
-
                             <!-- * Employment Status -->
                             <div class="input-wrapper">
                                 <span>Employment Status</span>
                                 <div class="select-box">
-                                    <select name="empStat" id="empStat">
-                                    <option value="0"></option>
-                                    <option value="1">Employed</option>
-                                    <option value="2">Unemployed</option>
-                                    </select>
+
+                                    <div class="options-container" data-option-con3>
+
+                                        <div class="option" data-option-item3>
+
+                                            <input type="radio" class="radio" name="category" value="Employed" />
+                                            <label for="Employed">
+                                                <h4>Employed</h4>
+                                            </label>
+
+                                        </div>
+
+                                        <div class="option" data-option-item3>
+
+                                            <input type="radio" class="radio" name="category" value="Unemployed"/>
+                                            <label for="Unemployed">
+                                                <h4>Unemployed</h4>
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                    
+                                    <div class="selected" data-option-select3>
+                                    </div>
+
                                 </div>
                             </div>
 
                             <!-- * Current Job / Position -->
                             <div class="input-wrapper">
-                                <span>Current Job / Position</span>
-                                <input type="text" id="currentJob" name="currentJob">
+
+                                <!-- * Current Job -->
+                                <span data-current-job>Current Job / Position</span>
+                                <input type="text" id="currentJob" name="currentJob" data-current-job>
+
+                                <!-- * Previous Job -->
+                                <span data-previous-job>Previous Job / Position</span>
+                                <input type="text" id="previousJob" name="previousJob" data-previous-job>
+
                             </div>
 
                             <!-- * Years Of Service -->
@@ -1043,7 +1163,6 @@
                             </div>
 
                         </div>
-
 
                         <!-- * Rowspan 3: Company Address, Monthly Salary, Other Source of Income, and Do you own a Business?  -->
                         <div class="rowspan">
@@ -1172,18 +1291,46 @@
                             <div class="input-wrapper">
                                 <span>Employment Status</span>
                                 <div class="select-box">
-                                    <select name="empStat" id="empStat">
-                                        <option value="0"></option>
-                                        <option value="1">Employed</option>
-                                        <option value="2">Unemployed</option>
-                                    </select>
+
+                                    <div class="options-container" data-option-con7>
+
+                                        <div class="option" data-option-item7>
+
+                                            <input type="radio" class="radio" name="category" value="Employed" />
+                                            <label for="Employed">
+                                                <h4>Employed</h4>
+                                            </label>
+
+                                        </div>
+
+                                        <div class="option" data-option-item7>
+
+                                            <input type="radio" class="radio" name="category" value="Unemployed"/>
+                                            <label for="Unemployed">
+                                                <h4>Unemployed</h4>
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                    
+                                    <div class="selected" data-option-select7>
+                                    </div>
+
                                 </div>
                             </div>
 
                             <!-- * Current Job / Position -->
                             <div class="input-wrapper">
-                                <span>Current Job / Position</span>
-                                <input type="text" id="currentJob" name="currentJob">
+
+                                <!-- * Current Job -->
+                                <span data-spouse-current-job>Current Job / Position</span>
+                                <input type="text" id="currentJob" name="currentJob" data-spouse-current-job>
+
+                                <!-- * Previous Job -->
+                                <span data-spouse-previous-job>Previous Job / Position</span>
+                                <input type="text" id="previousJob" name="previousJob" data-spouse-previous-job>
+
                             </div>
 
                             <!-- * Years Of Service -->
@@ -1221,7 +1368,7 @@
                         </div>
 
                         <!-- * Rowspan 7: Subheader - Children(s) Information -->
-                        <div class="rowspan">
+                        <div class="rowspan" data-child-sibling>
 
                             <!-- * Family Background Information -->
                             <div class="input-wrapper">
@@ -1236,25 +1383,25 @@
                             <!-- * First Name -->
                             <div class="input-wrapper">
                                 <span>First Name</span>
-                                <input autocomplete="off" type="text" id="fName" name="fName">
+                                <input autocomplete="off" type="text" id="childFName" name="fName">
                             </div>
 
                             <!-- * Middle Name -->
                             <div class="input-wrapper">
                                 <span>Middle Name</span>
-                                <input autocomplete="off" type="text" id="midName" name="midName">
+                                <input autocomplete="off" type="text" id="childMidName" name="midName">
                             </div>
 
                             <!-- * Last Name -->
                             <div class="input-wrapper">
                                 <span>Last Name</span>
-                                <input autocomplete="off" type="text" id="lName" name="lName">
+                                <input autocomplete="off" type="text" id="childLName" name="lName">
                             </div>
 
                             <!-- * Age -->
                             <div class="input-wrapper">
                                 <span>Age</span>
-                                <input autocomplete="off" type="number" id="age" name="age">
+                                <input autocomplete="off" type="number" id="childAge" name="age">
                             </div>
 
                             <!-- * Name Of School -->
@@ -1268,7 +1415,6 @@
                                 <button type="button" onclick="addChild()">+</button>
                                 <button type="button" onclick="subChild()">-</button>
                             </div>
-
 
                         </div>
 
@@ -1351,18 +1497,47 @@
                             <div class="input-wrapper">
                                 <span>Employment Status</span>
                                 <div class="select-box">
-                                    <select name="empStat" id="empStat">
-                                        <option value="0"></option>
-                                        <option value="1">Employed</option>
-                                        <option value="2">Unemployed</option>
-                                    </select>
+
+                                    <div class="options-container" data-option-con8>
+
+                                        <div class="option" data-option-item8>
+
+                                            <input type="radio" class="radio" name="category" value="Employed" />
+                                            <label for="Employed">
+                                                <h4>Employed</h4>
+                                            </label>
+
+                                        </div>
+
+                                        <div class="option" data-option-item8>
+
+                                            <input type="radio" class="radio" name="category" value="Unemployed"/>
+                                            <label for="Unemployed">
+                                                <h4>Unemployed</h4>
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                    
+                                    <div class="selected" data-option-select8>
+                                    </div>
+
                                 </div>
                             </div>
 
+
                             <!-- * Current Job / Position -->
                             <div class="input-wrapper">
-                                <span>Current Job / Position</span>
-                                <input type="text" id="currentJob" name="currentJob">
+
+                                <!-- * Current Job -->
+                                <span data-fdr-current-job>Current Job / Position</span>
+                                <input type="text" id="fdrCurrentJob" name="currentJob" data-fdr-current-job>
+
+                                <!-- * Previous Job -->
+                                <span data-fdr-previous-job>Previous Job / Position</span>
+                                <input type="text" id="fdrPreviousJob" name="previousJob" data-fdr-previous-job>
+
                             </div>
 
                             <!-- * Years Of Service -->
@@ -1386,7 +1561,7 @@
                         <!-- * Rowspan 5: Number Of Dependants -->
                         <div class="rowspan">
 
-                            <!-- * Current Job / Position -->
+                            <!-- * Number Of Dependants -->
                             <div class="input-wrapper">
                                 <span>Number Of Dependants</span>
                                 <input type="number" id="numOfDependants" name="numOfDependants">
@@ -1640,7 +1815,7 @@
 
                 </div>
 
-                <!-- * Container 6 (Wrapper): Assets and Properties, Appliances and Bank Accounts -->
+                <!-- * Container 6: (Wrapper): Assets and Properties, Appliances and Bank Accounts -->
                 <div class="na-container-wrapper-3">
 
                     <!-- * Container 9: Assets and Properties -->
@@ -1663,7 +1838,7 @@
                             <!-- * Rowspan Container 2: Do you own motor vehicles? -->
                             <div class="rowspan-container">
                                 <!-- * Rowspan 2: Do you own motor vehicles? -->
-                                <div class="rowspan" data-vehicle-container>
+                                <div class="rowspan">
 
                                     <!-- * Do you own motor vehicles? -->
                                     <div class="input-wrapper">
@@ -1673,15 +1848,15 @@
                                         <!-- * Form Toggle -->
                                         <div class="box-wrap">
 
-                                            <!-- * Rented -->
+                                            <!-- * Yes -->
                                             <div class="radio-btn-wrapper">
-                                                <input autocomplete="off" type="radio" name="formToggle" value="formToggleYes" id="formToggleYes">
+                                                <input autocomplete="off" type="radio" name="formToggle" value="formToggleYes" id="vehicleFormToggleYes">
                                                 <span>Yes</span>
                                             </div>
 
-                                            <!-- * Owned -->
+                                            <!-- * No -->
                                             <div class="radio-btn-wrapper">
-                                                <input autocomplete="off" type="radio" name="formToggle" value="formToggleNo" id="formToggleNo">
+                                                <input autocomplete="off" type="radio" name="formToggle" value="formToggleNo" id="vehicleFormToggleNo">
                                                 <span>No</span>
                                             </div>
 
@@ -1689,23 +1864,30 @@
 
                                     </div>
 
-                                    <span>If yes please specify,</span>
 
                                     <!-- * Rowspan 3: Vehicle Input Field -->
-                                    <div class="rowspan-2 child" data-vehicle>
+                                    <div class="box-wrap-2" data-vehicle-container>
+                                        <div class="input-wrapper" data-vehicle >
+                                            <span>If yes please specify,</span>
 
-                                        <!-- * Vehicle Input Field -->
-                                        <div class="input-wrapper">
-                                            <input autocomplete="off" type="text" id="ownVehicle" name="ownVehicle">
+                                            <div class="rowspan-2 child">
+
+
+                                                <!-- * Vehicle Input Field -->
+                                                <div class="input-wrapper">
+                                                    <input autocomplete="off" type="text" id="ownVehicle" name="ownVehicle" value="">
+                                                </div>
+
+                                                <!-- * Add and Subtract Button  -->
+                                                <div class="input-wrapper">
+                                                    <button type="button" onclick="addVehicle()">+</button>
+                                                    <button type="button" onclick="subVehicle()">-</button>
+                                                </div>
+
+                                            </div>
                                         </div>
-
-                                        <!-- * Add and Subtract Button  -->
-                                        <div class="input-wrapper">
-                                            <button type="button" onclick="addVehicle()">+</button>
-                                            <button type="button" onclick="subVehicle()">-</button>
-                                        </div>
-
                                     </div>
+
 
                                 </div>
                             </div>
@@ -1714,7 +1896,7 @@
                             <div class="rowspan-container">
 
                                 <!-- * Rowspan 4: Do you own real property? -->
-                                <div class="rowspan" data-property-container>
+                                <div class="rowspan">
 
                                     <!-- * Do you own real property? -->
                                     <div class="input-wrapper">
@@ -1724,15 +1906,15 @@
 
                                         <div class="box-wrap">
 
-                                            <!-- * Rented -->
+                                            <!-- * Yes -->
                                             <div class="radio-btn-wrapper">
-                                                <input autocomplete="off" type="radio" name="formToggle" value="formToggleYes" id="formToggleYes">
+                                                <input autocomplete="off" type="radio" name="formToggle" value="formToggleYes" id="propertyFormToggleYes">
                                                 <span>Yes</span>
                                             </div>
 
-                                            <!-- * Owned -->
+                                            <!-- * No -->
                                             <div class="radio-btn-wrapper">
-                                                <input autocomplete="off" type="radio" name="formToggle" value="formToggleNo" id="formToggleNo">
+                                                <input autocomplete="off" type="radio" name="formToggle" value="formToggleNo" id="propertyFormToggleNo">
                                                 <span>No</span>
                                             </div>
 
@@ -1740,22 +1922,29 @@
 
                                     </div>
 
-                                    <span>If yes please specify,</span>
-                                    <!-- * Rowspan 5: Property Input Field -->
-                                    <div class="rowspan-2 child" data-property>
+                                    <div class="box-wrap-2" data-property-container>
+                                        <div class="input-wrapper" data-property>
+                                            <span>If yes please specify,</span>
 
-                                        <!-- * Vehicle Input Field -->
-                                        <div class="input-wrapper">
-                                            <input autocomplete="off" type="text" id="nameOfSchool" name="nameOfSchool">
+
+                                            <!-- * Rowspan 5: Property Input Field -->
+                                            <div class="rowspan-2 child">
+
+                                                <!-- * Vehicle Input Field -->
+                                                <div class="input-wrapper">
+                                                    <input autocomplete="off" type="text" id="nameOfSchool" name="nameOfSchool">
+                                                </div>
+
+                                                <!-- * Add and Subtract Button  -->
+                                                <div class="input-wrapper">
+                                                    <button type="button" onclick="addProperty()">+</button>
+                                                    <button type="button" onclick="subProperty()">-</button>
+                                                </div>
+
+                                            </div>
                                         </div>
-
-                                        <!-- * Add and Subtract Button  -->
-                                        <div class="input-wrapper">
-                                            <button type="button" onclick="addProperty()">+</button>
-                                            <button type="button" onclick="subProperty()">-</button>
-                                        </div>
-
                                     </div>
+
 
                                 </div>
 
@@ -1766,80 +1955,92 @@
 
 
                     </div>
+
                     <!-- * Container 10: Appliances and Bank Accounts -->
                     <div class="na-container-10">
 
                         <!-- * Small Container -->
                         <div class="small-con-6">
 
-                            <div class="box-wrap" data-appliances-container>
+                            <div class="box-wrap">
 
                                 <!-- * Rowspan 1: Appliances -->
-                                <div class="rowspan">
+                                <div class="rowspan header">
 
                                     <h2>Appliances</h2>
 
                                 </div>
 
-
                                 <!-- * Rowspan 2: Appliances and Brand / Model -->
-                                <div class="rowspan child" data-appliances>
+                                <div class="box-wrap-2" data-appliances-container>
+                                    <div class="rowspan child" data-appliances>
 
-                                    <!-- * Appliances -->
-                                    <div class="input-wrapper">
-                                        <span>Appliances</span>
-                                        <input autocomplete="off" type="number" id="appliances" name="appliances">
+                                        <!-- * Appliances -->
+                                        <div class="input-wrapper">
+                                            <span>Appliances</span>
+                                            <input autocomplete="off" type="number" id="appliances" name="appliances">
+                                        </div>
+
+                                        <!-- * Brand / Model -->
+                                        <div class="input-wrapper">
+                                            <span>Brand / Model</span>
+                                            <input autocomplete="off" type="text" id="brandModel" name="brandModel">
+                                        </div>
+
+                                        <!-- * Add and Subtract Button  -->
+                                        <div class="input-wrapper">
+                                            <button type="button" onclick="addAppliances()">+</button>
+                                            <button type="button" onclick="subAppliances()">-</button>
+                                        </div>
+
+
                                     </div>
-
-                                    <!-- * Brand / Model -->
-                                    <div class="input-wrapper">
-                                        <span>Brand / Model</span>
-                                        <input autocomplete="off" type="text" id="brandModel" name="brandModel">
-                                    </div>
-
-                                    <!-- * Add and Subtract Button  -->
-                                    <div class="input-wrapper">
-                                        <button type="button" onclick="addAppliances()">+</button>
-                                        <button type="button" onclick="subAppliances()">-</button>
-                                    </div>
-
-
                                 </div>
 
                             </div>
 
-                            <div class="box-wrap" data-bank-container>
+                        </div>
+
+                    </div>
+
+                    <div class="na-container-10">
+
+                        <!-- * Small Container -->
+                        <div class="small-con-6">
+
+                            <div class="box-wrap">
 
                                 <!-- * Rowspan 3: Bank Accounts -->
-                                <div class="rowspan">
+                                <div class="rowspan header">
 
                                     <h2>Bank Accounts</h2>
 
                                 </div>
 
-
                                 <!-- * Rowspan 4: Bank account and Address -->
-                                <div class="rowspan child" data-bank>
+                                <div class="box-wrap-2" data-bank-container>
+                                    <div class="rowspan child" data-bank>
 
-                                    <!-- * Bank account -->
-                                    <div class="input-wrapper">
-                                        <span>Bank account</span>
-                                        <input autocomplete="off" type="bankAcc" id="bankAcc" name="appliances">
+                                        <!-- * Bank account -->
+                                        <div class="input-wrapper">
+                                            <span>Bank account</span>
+                                            <input autocomplete="off" type="bankAcc" id="bankAcc" name="appliances">
+                                        </div>
+
+                                        <!-- * Address -->
+                                        <div class="input-wrapper">
+                                            <span>Address</span>
+                                            <input autocomplete="off" type="bankAddr" id="bankAddr" name="brandModel">
+                                        </div>
+
+                                        <!-- * Add and Subtract Button  -->
+                                        <div class="input-wrapper">
+                                            <button type="button" onclick="addBank()">+</button>
+                                            <button type="button" onclick="subBank()">-</button>
+                                        </div>
+
+
                                     </div>
-
-                                    <!-- * Address -->
-                                    <div class="input-wrapper">
-                                        <span>Address</span>
-                                        <input autocomplete="off" type="bankAddr" id="bankAddr" name="brandModel">
-                                    </div>
-
-                                    <!-- * Add and Subtract Button  -->
-                                    <div class="input-wrapper">
-                                        <button type="button" onclick="addBank()">+</button>
-                                        <button type="button" onclick="subBank()">-</button>
-                                    </div>
-
-
                                 </div>
 
                             </div>
@@ -1950,11 +2151,32 @@
                                     <div class="input-wrapper">
                                         <span>Gender</span>
                                         <div class="select-box">
-                                            <select name="Gender" id="gender">
-                                            <option value="0"></option>
-                                            <option value="1">Male</option>
-                                            <option value="2">Female</option>
-                                        </select>
+        
+                                            <div class="options-container" data-option-con4>
+        
+                                                <div class="option"  data-option-item4>
+        
+                                                    <input type="radio" class="radio" name="category" value="Male" />
+                                                    <label for="Male">
+                                                        <h4>Male</h4>
+                                                    </label>
+        
+                                                </div>
+        
+                                                <div class="option"  data-option-item4>
+        
+                                                    <input type="radio" class="radio" name="category" value="Female"/>
+                                                    <label for="Female">
+                                                        <h4>Female</h4>
+                                                    </label>
+        
+                                                </div>
+        
+                                            </div>
+                                            
+                                            <div class="selected" data-option-select4>
+                                            </div>
+        
                                         </div>
                                     </div>
 
@@ -1980,12 +2202,41 @@
                                     <div class="input-wrapper">
                                         <span>Civil Status</span>
                                         <div class="select-box">
-                                            <select name="Civil Status" id="civStat" data-civil-status>
-                                                <option value="0"></option>
-                                                <option value="Widow">Widow</option>
-                                                <option value="Married">Married</option>
-                                                <option value="Single">Single</option>
-                                            </select>
+        
+                                            <div class="options-container" data-option-con5>
+        
+                                                <div class="option" data-option-item5>
+        
+                                                    <input type="radio" class="radio" name="category" value="Widow" />
+                                                    <label for="Widow">
+                                                        <h4>Widow</h4>
+                                                    </label>
+        
+                                                </div>
+        
+                                                <div class="option" data-option-item5>
+        
+                                                    <input type="radio" class="radio" name="category" value="Married"/>
+                                                    <label for="Married">
+                                                        <h4>Married</h4>
+                                                    </label>
+        
+                                                </div>
+        
+                                                <div class="option" data-option-item5>
+        
+                                                    <input type="radio" class="radio" name="category" value="Single"/>
+                                                    <label for="Single">
+                                                        <h4>Single</h4>
+                                                    </label>
+        
+                                                </div>
+        
+                                            </div>
+                                            
+                                            <div class="selected" data-option-select5>
+                                            </div>
+        
                                         </div>
                                     </div>
 
@@ -2132,9 +2383,8 @@
                                 </div>
 
                             </div>
+
                         </div>
-
-
 
                     </div>
 
@@ -2165,18 +2415,46 @@
                             <div class="input-wrapper">
                                 <span>Employment Status</span>
                                 <div class="select-box">
-                                    <select name="empStat" id="empStat">
-                                    <option value="0"></option>
-                                    <option value="1">Employed</option>
-                                    <option value="2">Unemployed</option>
-                                    </select>
+
+                                    <div class="options-container" data-option-con6>
+
+                                        <div class="option" data-option-item6>
+
+                                            <input type="radio" class="radio" name="category" value="Employed" />
+                                            <label for="Employed">
+                                                <h4>Employed</h4>
+                                            </label>
+
+                                        </div>
+
+                                        <div class="option" data-option-item6>
+
+                                            <input type="radio" class="radio" name="category" value="Unemployed"/>
+                                            <label for="Unemployed">
+                                                <h4>Unemployed</h4>
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                    
+                                    <div class="selected" data-option-select6>
+                                    </div>
+
                                 </div>
                             </div>
 
                             <!-- * Current Job / Position -->
                             <div class="input-wrapper">
-                                <span>Current Job / Position</span>
-                                <input type="text" id="currentJob" name="currentJob">
+
+                                <!-- * Current Job -->
+                                <span data-cb-current-job>Current Job / Position</span>
+                                <input type="text" id="cbCurrentJob" name="currentJob" data-cb-current-job>
+
+                                <!-- * Previous Job -->
+                                <span data-cb-previous-job>Previous Job / Position</span>
+                                <input type="text" id="cbPreviousJob" name="previousJob" data-cb-previous-job>
+
                             </div>
 
                             <!-- * Years Of Service -->
@@ -2245,126 +2523,8 @@
 
                 </div>
 
-                <!-- * Container 10: Payment History Table -->
-                <div class="na-container-7">
-
-                    <!-- * Small Container -->
-                    <div class="small-con-4">
-
-                        <!-- * Rowspan 1: Header -->
-                        <div class="rowspan">
-
-                            <!-- * Payment History -->
-                            <div class="input-wrapper">
-                                <h2>Payment History</h2>
-                            </div>
-
-                        </div>
-
-                        <!-- * Rowspan 2: Payment History Table -->
-                        <div class="rowspan">
-
-                            <table>
-                                <tr>
-                                    <th>Loan Amount</th>
-                                    <th>Outstanding Balance</th>
-                                    <th>Paid Amount</th>
-                                    <th>Collector</th>
-                                    <th>Payment Date</th>
-                                    <th>Payment Type</th>
-                                    <th>Penalty</th>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-
-                            </table>
-
-
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-
-                <!-- * Container 11: Loan History Table -->
-                <div class="na-container-8">
-
-                    <!-- * Small Container -->
-                    <div class="small-con-5">
-
-                        <!-- * Rowspan 1: Header -->
-                        <div class="rowspan">
-
-                            <!-- * Loan History -->
-                            <div class="input-wrapper">
-                                <h2>Loan History</h2>
-                            </div>
-
-                        </div>
-
-                        <!-- * Rowspan 2: Loan History Table -->
-                        <div class="rowspan">
-
-                            <table>
-                                <tr>
-                                    <th>Loan Amount</th>
-                                    <th>Savings</th>
-                                    <th>Penalty</th>
-                                    <th>Outstanding Balance</th>
-                                    <th>Date Released</th>
-                                    <th>Due Date</th>
-                                    <th>Due Date</th>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-
-                            </table>
-
-
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-
                 <!-- * Container 12: Signature Field -->
-                <div class="na-container-10">
+                <div class="na-container-12">
 
                     <!-- * Small Container 7 -->
                     <div class="small-con-7">
