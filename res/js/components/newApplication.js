@@ -331,12 +331,63 @@ yesToggle.addEventListener('click', _ => {
 
 })
 
+// ***** Assets and Properties ***** //
+const vehicleFormToggleYes = document.getElementById('vehicleFormToggleYes')
+const vehicleFormToggleNo = document.getElementById('vehicleFormToggleNo')
+const vehicleContainer = document.querySelector('[data-vehicle-container]')
+ 
+vehicleContainer.style.opacity = '.4'
+vehicleContainer.style.pointerEvents = 'none'
+
+vehicleFormToggleYes.addEventListener('change', () => {
+
+    if (vehicleFormToggleYes) {
+        vehicleContainer.style.opacity = '1'
+        vehicleContainer.style.pointerEvents = 'auto'
+    } 
+
+    vehicleFormToggleNo.addEventListener('change', () => {
+        const vehicle = document.getElementById('ownVehicle')
+        if (vehicleFormToggleNo) {
+            vehicleContainer.style.opacity = '.4'
+            vehicleContainer.style.pointerEvents = 'none'
+            vehicle.value = ''
+        } 
+    })
+
+})
+
+const propertyFormToggleYes = document.getElementById('propertyFormToggleYes')
+const propertyFormToggleNo = document.getElementById('propertyFormToggleNo')
+const propertyContainer = document.querySelector('[data-property-container]')
+ 
+propertyContainer.style.opacity = '.4'
+propertyContainer.style.pointerEvents = 'none'
+
+propertyFormToggleYes.addEventListener('change', () => {
+
+    if (propertyFormToggleYes) {
+        propertyContainer.style.opacity = '1'
+        propertyContainer.style.pointerEvents = 'auto'
+    } 
+
+    propertyFormToggleNo.addEventListener('change', () => {
+        const property = document.getElementById('ownProperty')
+        if (propertyFormToggleNo) {
+            propertyContainer.style.opacity = '.4'
+            propertyContainer.style.pointerEvents = 'none'
+            property.value = ''
+        } 
+    })
+
+})
+
+
 // ***** Add and Subtract Vehicle ***** //
 // * Add Vehicle
 function addVehicle() {
 
     const vehicleForm = document.querySelector('[data-vehicle]')
-    const vehicleContainer = document.querySelector('[data-vehicle-container]')
 
     vehicleForm.setAttribute('id', 'vehicle-1')
 
@@ -381,7 +432,6 @@ function subVehicle() {
 function addProperty() {
 
     const propertyForm = document.querySelector('[data-property]')
-    const propertyContainer = document.querySelector('[data-property-container]')
 
     propertyForm.setAttribute('id', 'property-1')
 

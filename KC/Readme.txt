@@ -458,8 +458,13 @@ Seventh Commit:
 
 June 04, 2023 (Wednesday)
 First Commit:
-New Application Module: Updates on btns, modal, and forms
+• New Application Module: Updates on btns, modal, and forms
 - Updates:
     - Radio Buttons
     - Loan Modal
     - Job Informations
+
+Second Commit:
+• New Application Module: Updated Assets and Properties
+- Update:
+    - Buttons form toggle
