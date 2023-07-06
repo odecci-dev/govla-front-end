@@ -135,16 +135,28 @@ table {
         background-color: $primary;
     }
 
+    // tr:hover>.td-btns>.td-btn-wrapper>button {
+    //     transition: 200ms ease-in-out;
+    //     background-color: $white;
+    //     color: $black;
+    // }
+
+    tr:hover>.td-btns>.td-btn-wrapper>button {
+        background-color: $white;
+        color: $primary;
+        transition: 200ms ease-out;
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+    }
+
     tr:not(:first-of-type):hover>.td-btns>.td-btn-wrapper>button.a-btn-trash {
         transition: 200ms ease-in-out;
         color: $white;
     }
 
-    tr:not(:first-of-type):hover>.td-btns>.td-btn-wrapper>button {
-        transition: 200ms ease-in-out;
-        background-color: $white;
-        color: $black;
-    }
+    
     
     th {
         position: sticky;

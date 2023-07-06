@@ -537,4 +537,8 @@ Ninth Commit:
     - .checkboxes 
 - Removed every input=['checkbox'] specific styles
 
+Tenth Commit:
+• Fixed all console error messages
+• Transferred all navigation functions from app.js to nav.js
+
 

@@ -30,14 +30,13 @@ function navigationEvents() {
             // * If this dropdown is equal to the current dropdown then add a z-index of 1 to prevent overlapping...   
             if (dropdown === currentDropdown) {
                 dropdown.style.zIndex = 9
-                // dashboard.style.zIndex = -9
-                // console.log(dropdown)
+                dashboard.style.zIndex = -9
                 return
             }
 
             // * Otherwise, close it
             dropdown.classList.remove("showMenu")
-            // dashboard.style.zIndex = 10
+            dashboard.style.zIndex = ''
             return
 
         })
@@ -50,15 +49,19 @@ window.onload = function() {
     navigationEvents();
 }
 
+// TODO: Active Nav Links
+// const navLinkEls = document.querySelectorAll('[data-nav-link]')
+// const windowPathName = window.location.pathname;
 
-const navLinkEls = document.querySelectorAll('[data-nav-link]')
-const windowPathName = window.location.pathname;
+// navLinkEls.forEach(navLink => {
+//     const navLinkPathName = new URL(navLink.href).pathname
+    
+//     console.log(navLinkPathName);
 
-navLinkEls.forEach(navLink => {
-    const navLinkPathName = new URL(navLink.href).pathname
-
-    if ((windowPathName === navLinkPathName) || (windowPathName === '/index.html' && navLinkPathName === '/')) {
-        navLink.classList.toggle("active");
-        navLink.closest('[data-dropdown]').classList.toggle("active");
-    }
-})
+//     if ((windowPathName === navLinkPathName) || (windowPathName === '/index.html' && navLinkPathName === '/')) {
+//         // if (navLink.closest('[no-data-dropdown]') === null) {
+//             navLink.classList.toggle("active");
+//             // navLink.closest('[data-dropdown-button]').classList.toggle("active");
+//         // }
+//     }
+// })

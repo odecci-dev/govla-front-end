@@ -833,21 +833,21 @@
                                     tr:last-of-type {
                                         border-bottom: 1px solid $black;
                                     }
-                                    tr:not(:first-of-type):hover {
-                                        cursor: pointer;
-                                        background-color: $primary;
-                                        color: $white;
-                                        transition: 300ms ease-out;
-                                    }
-                                    tr:hover>.td-btns>.td-btn-wrapper>button {
-                                        background-color: $white;
-                                        color: $primary;
-                                        transition: 200ms ease-out;
-                                        &:hover {
-                                            background-color: $black;
-                                            color: $white;
-                                        }
-                                    }
+                                    // tr:not(:first-of-type):hover {
+                                    //     cursor: pointer;
+                                    //     background-color: $primary;
+                                    //     color: $white;
+                                    //     transition: 300ms ease-out;
+                                    // }
+                                    // tr:hover>.td-btns>.td-btn-wrapper>button {
+                                    //     background-color: $white;
+                                    //     color: $primary;
+                                    //     transition: 200ms ease-out;
+                                    //     &:hover {
+                                    //         background-color: $black;
+                                    //         color: $white;
+                                    //     }
+                                    // }
                                     th {
                                         padding: $spacing-2x-large $spacing-medium;
                                         text-align: center;

@@ -137,14 +137,18 @@ table tr:not(:first-of-type):hover {
   color: #FFFFFF;
   background-color: #D6A330;
 }
+table tr:hover > .td-btns > .td-btn-wrapper > button {
+  background-color: #FFFFFF;
+  color: #D6A330;
+  transition: 200ms ease-out;
+}
+table tr:hover > .td-btns > .td-btn-wrapper > button:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
 table tr:not(:first-of-type):hover > .td-btns > .td-btn-wrapper > button.a-btn-trash {
   transition: 200ms ease-in-out;
   color: #FFFFFF;
-}
-table tr:not(:first-of-type):hover > .td-btns > .td-btn-wrapper > button {
-  transition: 200ms ease-in-out;
-  background-color: #FFFFFF;
-  color: #29292B;
 }
 table th {
   position: sticky;
@@ -2974,21 +2978,6 @@ body {
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table tr:first-of-type,
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table tr:last-of-type {
   border-bottom: 1px solid #29292B;
-}
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table tr:not(:first-of-type):hover {
-  cursor: pointer;
-  background-color: #D6A330;
-  color: #FFFFFF;
-  transition: 300ms ease-out;
-}
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table tr:hover > .td-btns > .td-btn-wrapper > button {
-  background-color: #FFFFFF;
-  color: #D6A330;
-  transition: 200ms ease-out;
-}
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table tr:hover > .td-btns > .td-btn-wrapper > button:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table th {
   padding: 2rem 1rem;
