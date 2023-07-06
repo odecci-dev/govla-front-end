@@ -112,6 +112,12 @@
                         transform: translateX(25.5rem);
                     }
                 }
+                button[data-link-to-newapp] {
+                    visibility: hidden;
+                    // transition: 300ms ease-in-out;
+                    // animation: name duration timing-function delay iteration-count direction fill-mode;
+                    // animation: pop-up 300ms 2s forwards;
+                }
             }
         }
         // * Table
@@ -259,10 +265,10 @@
     }
 }
 
-// * New Application Modal
+// * New Group Application Modal
 .ng-modal {
     margin: auto;
-    height: calc(100% - 10%);
+    height: calc(100% - 25%);
     width: calc(100% - 45%);
     z-index: 5;
     background-color: $white;
@@ -300,7 +306,7 @@
     }
     .modal-container {
         display: grid;
-        grid-template-rows: minmax(0, 0.6fr) minmax(0, 0.6fr) minmax(0, 2fr);
+        grid-template-rows: minmax(0, 0.6fr) minmax(0, 2fr);
         gap: 2rem 0;
         padding: 3rem 5rem;
         position: relative;
@@ -318,93 +324,8 @@
                 filter: opacity(.7);
             }
         }
-        // * Choose Type Of Loan
-        .rowspan:nth-of-type(1) {
-            display: grid;
-            gap: 2rem 0;
-            h3 {
-                font-size: $font-size-x-large;
-            }
-            // * Select Input Global Styles
-            .selected {
-                @include inputField;
-                display: flex;
-                align-items: center;
-                position: relative;
-                width: 30rem;
-                height: 3.6rem;
-                // * Select Input Arrow
-                &::after {
-                    /* BG Img	 */
-                    content: url("../assets/icons/carret-down.svg");
-                    position: absolute;
-                    right: 15px;
-                    top: 50%;
-                    transition: transform .5s;
-                    transform: translateY(-50%);
-                }
-            }
-            .selected h4,
-            .select-box h4 {
-                cursor: pointer;
-                font-size: $font-size-large;
-                font-weight: $font-weight-bold;
-                color: $black;
-            }
-            .select-box {
-                display: flex;
-                width: 30rem;
-                flex-direction: column;
-                position: relative;
-                .options-container {
-                    z-index: 5;
-                    max-height: 0;
-                    width: 100%;
-                    opacity: 0;
-                    overflow: hidden;
-                    transition: all 300ms;
-                    box-shadow: inset $box-shadow;
-                    border-bottom-left-radius: $border-radius-medium;
-                    border-bottom-right-radius: $border-radius-medium;
-                    background-color: $primary-bg;
-                    position: absolute;
-                    top: 100%;
-                    &.active {
-                        max-height: 240px;
-                        box-shadow: none;
-                        opacity: 1;
-                    }
-                    &.active+.selected {
-                        box-shadow: none;
-                        border-bottom-left-radius: 0;
-                        border-bottom-right-radius: 0;
-                    }
-                    &.active+.selected::after {
-                        transform: translateY(-50%) rotateX(180deg);
-                    }
-                    .option:hover {
-                        color: $white;
-                        background-color: $primary;
-                    }
-                    .option:hover>label>h4 {
-                        color: $white;
-                    }
-                    .option label {
-                        cursor: pointer;
-                    }
-                }
-            }
-            input[type='radio'] {
-                display: none;
-            }
-            .select-box .option,
-            .selected {
-                padding: 1.5rem 2rem;
-                cursor: pointer;
-            }
-        }
         // * Search Bar
-        .rowspan:nth-of-type(2) {
+        .rowspan:nth-of-type(1) {
             display: grid;
             gap: 2rem 0;
             h3 {
@@ -444,14 +365,20 @@
                         transform: translateX(25.5rem);
                     }
                 }
+                button[data-link-to-newapp] {
+                    visibility: hidden;
+                    // transition: 300ms ease-in-out;
+                    // animation: name duration timing-function delay iteration-count direction fill-mode;
+                    // animation: pop-up 300ms 2s forwards;
+                }
             }
         }
         // * Table
-        .rowspan:nth-of-type(3) {
+        .rowspan:nth-of-type(2) {
             // * Container 2: Table and Pagination
             .na-table-con {
                 width: 100%;
-                height: clamp(10vh, 30rem, 100vh);
+                height: clamp(10vh, 70rem, 45vh);
                 // margin-top: $spacing-4x-large;
                 // * Table Container
                 .table-container {
@@ -470,10 +397,6 @@
                         tr {
                             border-bottom: 1px solid $black;
                             transition: 200ms ease-in-out;
-                        }
-                        tr:not(:first-of-type):hover {
-                            color: $white;
-                            background-color: $primary;
                         }
                         th {
                             padding: 2rem 0;

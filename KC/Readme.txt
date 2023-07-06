@@ -508,4 +508,8 @@ Second Commit:
 - Modified the location chips container
 • Made overflow-y auto for scroll
 
+Third Commit:
+• New Application Modal: Modified the button
+• New Group Application Modal: Completed the Group Application Modal
+
 

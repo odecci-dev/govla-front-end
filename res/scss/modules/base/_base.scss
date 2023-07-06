@@ -94,11 +94,18 @@ table {
         transition: 200ms ease-in-out;
         color: $white;
     }
+
+    tr:not(:first-of-type):hover>.td-btns>.td-btn-wrapper>button {
+        transition: 200ms ease-in-out;
+        background-color: $white;
+        color: $black;
+    }
     
     th {
         position: sticky;
         top: 0;
     }
+
 }
 
 .table-container {

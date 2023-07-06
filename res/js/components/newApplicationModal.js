@@ -1,4 +1,3 @@
-
 // *** New Application Modal *** //
 function newAppModal() {
 
@@ -24,6 +23,24 @@ function newAppModal() {
 
 }
 
+
+// function groupAppModal() {
+    
+//     const openNewGroupModal = document.querySelector('#data-open-new-group-modal')
+    
+    
+//     openNewGroupModal.addEventListener('click', () => {
+    
+//         const dataNewGroupModal = document.querySelector('[data-new-group-modal]')
+//         // console.log(openNewGroupModal)
+//         dataNewGroupModal.showModal()
+    
+//     })
+
+// }
+
+// groupAppModal()
+
 function modalDropdown() {
 
     // ** Loan Type Dropdown
@@ -43,19 +60,30 @@ function modalDropdown() {
     });
 
     // * Linked to Group Loan
-    const groupLoanOpt = document.querySelector('[data-group-app-link]')
+    const groupLoanOpt = document.querySelector('[data-group-loan-link]')
 
     groupLoanOpt.addEventListener('click', () => {
-        const url = '/KC/new-group-application.html'
+
+        const url = '/KC/transactions/new-group-application.html'
         window.location = url;
+
+    })
+
+    // * Linked to Individual Loan
+    const individualLoanOpt = document.querySelector('[data-individual-loan-link]')
+    
+    individualLoanOpt.addEventListener('click', () => {
+        btnToNewApp.style.visibility = 'visible'
     })
 
     // * Linked to New Application
     const btnToNewApp = document.querySelector('[data-link-to-newapp]')
 
     btnToNewApp.addEventListener('click', () => {
-        const url = '/KC/new-application.html'
+
+        const url = '/KC/transactions/new-application.html'
         window.location = url;
+
     })
 
 }
@@ -63,3 +91,12 @@ function modalDropdown() {
 
 modalDropdown()
 newAppModal()
+
+
+
+// openNewGroupModal.addEventListener('click', () => {
+    
+//     const url = '/KC/_modals/new-application-modal.html'
+//     window.location = url
+
+// })
