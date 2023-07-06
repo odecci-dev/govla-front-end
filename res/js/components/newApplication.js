@@ -676,6 +676,7 @@ function subBank() {
 
 // ***** END ---- Add and Subtract Bank ***** //
 
+
 // ***** Signature Pad ***** //
 
 // let canvas = document.querySelectorAll(".signature-pad").forEach((e) => {

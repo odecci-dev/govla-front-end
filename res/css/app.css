@@ -4004,6 +4004,171 @@ body {
 .main-dashboard .am-con-2 .pagination-container a:last-of-type {
   margin-left: 6rem;
 }
+.main-dashboard .amg-con-2 {
+  height: 74%;
+  padding: 4rem 4rem 2rem 4rem;
+}
+.main-dashboard .amg-con-2 .table-container {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  border-radius: 1.5rem;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.main-dashboard .amg-con-2 .table-container table th {
+  padding: 2rem 0;
+  text-align: center;
+}
+.main-dashboard .amg-con-2 .table-container table th span.th-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.main-dashboard .amg-con-2 .table-container table th .th-wrapper {
+  display: flex;
+  align-items: center;
+}
+.main-dashboard .amg-con-2 .table-container table th .th-wrapper img {
+  cursor: pointer;
+  padding-left: 0.5rem;
+}
+.main-dashboard .amg-con-2 .table-container table input[type=checkbox] {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  aspect-ratio: 1/1;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.4rem;
+  background-color: #EBEBEB;
+}
+.main-dashboard .amg-con-2 .table-container table input[type=checkbox]::after {
+  content: url("../assets/icons/white-check.svg");
+  position: absolute;
+  top: 0.1rem;
+  visibility: hidden;
+}
+.main-dashboard .amg-con-2 .table-container table input[type=checkbox]:checked {
+  background-color: #D6A330;
+  animation: pop-up-big 300ms forwards;
+}
+.main-dashboard .amg-con-2 .table-container table input[type=checkbox]:checked:after {
+  visibility: visible;
+}
+.main-dashboard .amg-con-2 .table-container table input[type=checkbox]::after {
+  content: url("../assets/icons/white-check.svg");
+  position: absolute;
+  top: 0.1rem;
+  visibility: hidden;
+}
+.main-dashboard .amg-con-2 .table-container table input[type=checkbox]:checked {
+  background-color: #D6A330;
+  animation: pop-up-big 300ms forwards;
+}
+.main-dashboard .amg-con-2 .table-container table input[type=checkbox]:checked:after {
+  visibility: visible;
+}
+.main-dashboard .amg-con-2 .table-container table th:nth-of-type(-n+4) {
+  text-align: left;
+}
+.main-dashboard .amg-con-2 .table-container table th:first-of-type {
+  padding-left: 1rem;
+}
+.main-dashboard .amg-con-2 .table-container table th:nth-of-type(2) {
+  padding-left: 1rem;
+}
+.main-dashboard .amg-con-2 .table-container table td {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+.main-dashboard .amg-con-2 .table-container table td .td-wrapper {
+  display: flex;
+  align-items: center;
+}
+.main-dashboard .amg-con-2 .table-container table td .td-wrapper .td-num {
+  font-weight: 700;
+  margin-left: 1rem;
+}
+.main-dashboard .amg-con-2 .table-container table td .td-wrapper .td-name {
+  margin-left: 2rem;
+}
+.main-dashboard .amg-con-2 .table-container table td .td-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-dashboard .amg-con-2 .table-container table td .td-btn-wrapper button {
+  cursor: pointer;
+}
+.main-dashboard .amg-con-2 .table-container table td .td-btn-wrapper .a-btn-view {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  padding: 0.6rem 3.5rem;
+}
+.main-dashboard .amg-con-2 .table-container table td .td-btn-wrapper .a-btn-view:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
+.main-dashboard .amg-con-2 .table-container table td .td-btn-wrapper .a-btn-view:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
+.main-dashboard .amg-con-2 .table-container table td .td-btn-wrapper .a-btn-trash {
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #D6A330;
+  background: transparent;
+  transition: all 200ms ease-in-out;
+  padding: 0.8rem 4rem;
+  font-size: 1.5rem;
+}
+.main-dashboard .amg-con-2 .table-container table td .td-btn-wrapper .a-btn-trash:hover {
+  color: #29292B;
+  transform: scale(1.005);
+}
+.main-dashboard .amg-con-2 .table-container table .td-due {
+  font-weight: 700;
+}
+.main-dashboard .amg-con-2 .table-container table td:first-of-type {
+  padding-left: 1rem;
+}
+.main-dashboard .amg-con-2 .table-container table td:nth-of-type(2) {
+  padding-left: 1rem;
+}
+.main-dashboard .amg-con-2 .pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+  height: 10%;
+}
+.main-dashboard .amg-con-2 .pagination-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0.5rem;
+  color: #29292B;
+}
+.main-dashboard .amg-con-2 .pagination-container a:first-of-type {
+  margin-right: 6rem;
+}
+.main-dashboard .amg-con-2 .pagination-container a:last-of-type {
+  margin-left: 6rem;
+}
 
 .main-dashboard {
   position: fixed;

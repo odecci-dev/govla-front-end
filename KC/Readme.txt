@@ -518,4 +518,7 @@ Fourth Commit:
 Fifth Commit:
 • New Application Module (Group): Completed the module
 
+Sixth Commit:
+• Member List: Button links transferred to members.js
+
 
