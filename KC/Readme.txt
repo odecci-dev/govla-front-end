@@ -515,4 +515,7 @@ Third Commit:
 Fourth Commit:
 • Applications Modal: Fixed bugs in the modals
 
+Fifth Commit:
+• New Application Module (Group): Completed the module
+
 
