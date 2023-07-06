@@ -186,7 +186,7 @@
 
 // * Table Trash Button
 @mixin tableTransparentTrashButton {
-    @include transparentButton2();
+    @include transparentButton2;
     font-size: $font-size-small;
     padding: $btn-padding-5;
 }

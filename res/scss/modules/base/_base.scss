@@ -89,6 +89,11 @@ table {
         color: $white;
         background-color: $primary;
     }
+
+    tr:not(:first-of-type):hover>.td-btns>.td-btn-wrapper>button.a-btn-trash {
+        transition: 200ms ease-in-out;
+        color: $white;
+    }
     
     th {
         position: sticky;

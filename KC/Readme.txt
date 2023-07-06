@@ -494,3 +494,13 @@ Fifth Commit:
 
 Sixth Commit:
 • New Application Module: Updated Navigation Links
+
+June 05, 2023 (Thursday)
+First Commit:
+• Navlinks URL transferred from HTML pages to links.js 
+- For fast access when modifying the URL
+• Made Folders for HTML Pages
+- For better file structure
+    - transferred each HTML Pages for each respective Folders
+
+

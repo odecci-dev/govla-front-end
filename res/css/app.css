@@ -96,6 +96,10 @@ table tr:not(:first-of-type):hover {
   color: #FFFFFF;
   background-color: #D6A330;
 }
+table tr:not(:first-of-type):hover > .td-btns > .td-btn-wrapper > button.a-btn-trash {
+  transition: 200ms ease-in-out;
+  color: #FFFFFF;
+}
 table th {
   position: sticky;
   top: 0;
@@ -4214,9 +4218,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-.main-dashboard .na-form-con .nal-con-2 .table-container table td .td-btn-wrapper button {
-  cursor: pointer;
-}
 .main-dashboard .na-form-con .nal-con-2 .table-container table td .td-btn-wrapper .a-btn-view {
   border-radius: 1rem;
   padding: 0.8rem 4rem;
@@ -5210,29 +5211,26 @@ body {
   transition: all 200ms ease-in-out;
   font-size: 1rem;
   padding: 0.4rem 2.5rem;
-  font-size: calc(1.2rem + 1px);
 }
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table .td-btn-wrapper .a-btn-edit:hover {
   background-color: #29292B;
   color: #FFFFFF;
 }
-.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table .td-btn-wrapper .a-btn-delete {
-  border-radius: 1rem;
+.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table .td-btn-wrapper .a-btn-trash {
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #D6A330;
+  background: transparent;
+  transition: all 200ms ease-in-out;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
   font-size: 1rem;
   padding: 0.4rem 2.5rem;
-  font-size: calc(1.2rem + 1px);
 }
-.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table .td-btn-wrapper .a-btn-delete:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
+.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table .td-btn-wrapper .a-btn-trash:hover {
+  color: #29292B;
+  transform: scale(1.005);
 }
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(6) {
   display: grid;
