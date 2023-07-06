@@ -526,5 +526,8 @@ Seventh Commit:
 • Members: Button transitions
 • New Application Module: Button transitions
 
+Eighth Commit:
+• New Application Module: Modified Loan & Payment Modal Button
+- Passed the viewLoanDetailsButton class for every corresponding button
 
 
