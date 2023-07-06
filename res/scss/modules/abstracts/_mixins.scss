@@ -24,9 +24,7 @@
     a {
         cursor: pointer;
         transition: background-color 200ms ease-in-out;
-        &:hover {
-            background-color: $black;
-        }
+        
         &:not(:first-of-type):hover {
             background-color: $black;
             border-bottom-left-radius: $border-radius-large;
@@ -472,6 +470,10 @@
     width: 2rem;
     border-radius: .4rem;
     background-color: $primary-bg;
+    transition: background-color 150ms ease-in-out;
+    &:hover {
+        background-color: $blackTR;
+    }
     &::after {
         content: url('../assets/icons/white-check.svg');
         position: absolute;
@@ -503,6 +505,7 @@
     border-radius: $circle;
     border: max(.4rem, 0.3em) solid $primary;
     background-color: $white;
+    transition: background-color 150ms ease-in-out;
     &::after {
         content: '';
         position: absolute;
@@ -512,6 +515,9 @@
         border-radius: $circle;
         visibility: hidden;
         opacity: 0;
+    }
+    &:hover {
+        background-color: $primaryTR;
     }
     &:checked {
         background-color: $white;
@@ -524,29 +530,46 @@
 }
 
 // * Form Checkbox
-@mixin formCheckbox {
-    @include tableCheckboxInput;
-    box-shadow: none;
-    height: 4.4rem;
-    width: 4.4rem;
-    border-radius: $border-radius-medium;
-    border: 1px solid $font-accent;
-    background-color: $white;
-}
+// @mixin formCheckbox {
+//     @include tableCheckboxInput;
+//     box-shadow: none;
+//     height: 4.4rem;
+//     width: 4.4rem;
+//     border-radius: $border-radius-medium;
+//     border: 1px solid $font-accent;
+//     background-color: $white;
+//     &::after {
+//         content: url('../assets/icons/white-check.svg');
+//         position: absolute;
+//         top: .1rem;
+//         visibility: hidden;
+//     }
+//     &:hover {
+//         background-color: black;
+//     }
+//     &:checked {
+//         background-color: $primary;
+//         animation: pop-up-big 300ms forwards;
+//     }
+//     &:checked:after {
+//         // animation: pop-up 300ms forwards;
+//         visibility: visible;
+//     }
+// }
 
-@mixin formCheckboxAfter {
-    content: url('../assets/icons/big-check.svg');
-    position: absolute;
-    top: 1.2rem;
-    visibility: hidden;
-    opacity: 0;
-    transition: ease-out 250ms;
-}
+// @mixin formCheckboxAfter {
+//     content: url('../assets/icons/big-check.svg');
+//     position: absolute;
+//     top: 1.2rem;
+//     visibility: hidden;
+//     opacity: 0;
+//     transition: ease-out 250ms;
+// }
 
-@mixin formCheckboxChecked {
-    visibility: visible;
-    opacity: 1;
-}
+// @mixin formCheckboxChecked {
+//     visibility: visible;
+//     opacity: 1;
+// }
 
 // **** Grid Layout Mixins **** //
 // *** Containers Grid Layouts

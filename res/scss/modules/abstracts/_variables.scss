@@ -1,9 +1,11 @@
 /* Theme Colors */
 
 $primary: #D6A330;
+$primaryTR: transparentize($primary, 0.6);
 $secondary: #FFFF4E;
 $accent: #DAB77A;
 $black: #29292B;
+$blackTR: transparentize($black, 0.4);
 $white: #FFFFFF;
 $primary-bg: #EBEBEB;
 $secondary-bg: #E0DFDF;

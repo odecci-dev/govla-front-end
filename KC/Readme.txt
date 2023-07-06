@@ -530,4 +530,11 @@ Eighth Commit:
 • New Application Module: Modified Loan & Payment Modal Button
 - Passed the viewLoanDetailsButton class for every corresponding button
 
+Ninth Commit:
+• Members and Applications: Modified Checkboxes
+- Addition to Global Styles (_base.scss)
+- Passed the checkboxes class for every corresponding elements in the table
+    - .checkboxes 
+- Removed every input=['checkbox'] specific styles
+
 

@@ -570,14 +570,14 @@
                                     white-space: nowrap;
                                 }
                                 input[type="radio"] {
-                                    @include formCheckbox;
+                                    @include tableCheckboxInput;
                                 }
-                                input[type="radio"]::after {
-                                    @include formCheckboxAfter;
-                                }
-                                input[type="radio"]:checked:after {
-                                    @include formCheckboxChecked;
-                                }
+                                // input[type="radio"]::after {
+                                //     @include formCheckboxAfter;
+                                // }
+                                // input[type="radio"]:checked:after {
+                                //     @include formCheckboxChecked;
+                                // }
                             }
                         }
                     }

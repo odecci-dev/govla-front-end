@@ -330,6 +330,10 @@ table th {
   width: 2rem;
   border-radius: 0.4rem;
   background-color: #EBEBEB;
+  transition: background-color 150ms ease-in-out;
+}
+.checkbox:hover {
+  background-color: rgba(41, 41, 43, 0.6);
 }
 .checkbox::after {
   content: url("../assets/icons/white-check.svg");
@@ -802,6 +806,10 @@ body {
   width: 2rem;
   border-radius: 0.4rem;
   background-color: #EBEBEB;
+  transition: background-color 150ms ease-in-out;
+}
+.na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table input[type=checkbox]:hover {
+  background-color: rgba(41, 41, 43, 0.6);
 }
 .na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table input[type=checkbox]::after {
   content: url("../assets/icons/white-check.svg");
@@ -1085,6 +1093,10 @@ body {
   width: 2rem;
   border-radius: 0.4rem;
   background-color: #EBEBEB;
+  transition: background-color 150ms ease-in-out;
+}
+.ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table input[type=checkbox]:hover {
+  background-color: rgba(41, 41, 43, 0.6);
 }
 .ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table input[type=checkbox]::after {
   content: url("../assets/icons/white-check.svg");
@@ -1991,9 +2003,6 @@ body {
   cursor: pointer;
   transition: background-color 200ms ease-in-out;
 }
-.main-dashboard .m-con-1 .container .wrapper:first-of-type .borrower-dropdown .dropdown-menu a:hover {
-  background-color: #29292B;
-}
 .main-dashboard .m-con-1 .container .wrapper:first-of-type .borrower-dropdown .dropdown-menu a:not(:first-of-type):hover {
   background-color: #29292B;
   border-bottom-left-radius: 1.5rem;
@@ -2153,6 +2162,10 @@ body {
   width: 2rem;
   border-radius: 0.4rem;
   background-color: #EBEBEB;
+  transition: background-color 150ms ease-in-out;
+}
+.main-dashboard .m-con-2 .table-container table input[type=checkbox]:hover {
+  background-color: rgba(41, 41, 43, 0.6);
 }
 .main-dashboard .m-con-2 .table-container table input[type=checkbox]::after {
   content: url("../assets/icons/white-check.svg");
@@ -2405,6 +2418,7 @@ body {
   border-radius: 50%;
   border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
+  transition: background-color 150ms ease-in-out;
 }
 .main-dashboard .no-form-con .no-container-wrapper .no-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
@@ -2415,6 +2429,9 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
+}
+.main-dashboard .no-form-con .no-container-wrapper .no-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:hover {
+  background-color: rgba(214, 163, 48, 0.4);
 }
 .main-dashboard .no-form-con .no-container-wrapper .no-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
   background-color: #FFFFFF;
@@ -2644,12 +2661,10 @@ body {
   width: 2rem;
   border-radius: 0.4rem;
   background-color: #EBEBEB;
-  box-shadow: none;
-  height: 4.4rem;
-  width: 4.4rem;
-  border-radius: 1rem;
-  border: 1px solid #8C8686;
-  background-color: #FFFFFF;
+  transition: background-color 150ms ease-in-out;
+}
+.main-dashboard .no-form-con .no-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:hover {
+  background-color: rgba(41, 41, 43, 0.6);
 }
 .main-dashboard .no-form-con .no-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: url("../assets/icons/white-check.svg");
@@ -2663,18 +2678,6 @@ body {
 }
 .main-dashboard .no-form-con .no-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
   visibility: visible;
-}
-.main-dashboard .no-form-con .no-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
-  content: url("../assets/icons/big-check.svg");
-  position: absolute;
-  top: 1.2rem;
-  visibility: hidden;
-  opacity: 0;
-  transition: ease-out 250ms;
-}
-.main-dashboard .no-form-con .no-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
-  visibility: visible;
-  opacity: 1;
 }
 .main-dashboard .no-form-con .no-container-3 .small-con-2 .rowspan:nth-of-type(1) {
   grid-area: 1/1/2/-1;
@@ -3018,6 +3021,10 @@ body {
   width: 2rem;
   border-radius: 0.4rem;
   background-color: #EBEBEB;
+  transition: background-color 150ms ease-in-out;
+}
+.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table input[type=checkbox]:hover {
+  background-color: rgba(41, 41, 43, 0.6);
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table input[type=checkbox]::after {
   content: url("../assets/icons/white-check.svg");
@@ -3225,6 +3232,7 @@ body {
   border-radius: 50%;
   border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
+  transition: background-color 150ms ease-in-out;
 }
 .main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
@@ -3235,6 +3243,9 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
+}
+.main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:hover {
+  background-color: rgba(214, 163, 48, 0.4);
 }
 .main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
   background-color: #FFFFFF;
@@ -3442,6 +3453,7 @@ body {
   border-radius: 50%;
   border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
+  transition: background-color 150ms ease-in-out;
 }
 .main-dashboard .top-container-2 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
@@ -3452,6 +3464,9 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
+}
+.main-dashboard .top-container-2 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:hover {
+  background-color: rgba(214, 163, 48, 0.4);
 }
 .main-dashboard .top-container-2 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
   background-color: #FFFFFF;
@@ -3656,6 +3671,7 @@ body {
   border-radius: 50%;
   border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
+  transition: background-color 150ms ease-in-out;
 }
 .main-dashboard .nh-con .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
@@ -3666,6 +3682,9 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
+}
+.main-dashboard .nh-con .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:hover {
+  background-color: rgba(214, 163, 48, 0.4);
 }
 .main-dashboard .nh-con .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
   background-color: #FFFFFF;
@@ -3845,9 +3864,6 @@ body {
   cursor: pointer;
   transition: background-color 200ms ease-in-out;
 }
-.main-dashboard .am-con-1 .container .wrapper:first-of-type .borrower-dropdown .dropdown-menu a:hover {
-  background-color: #29292B;
-}
 .main-dashboard .am-con-1 .container .wrapper:first-of-type .borrower-dropdown .dropdown-menu a:not(:first-of-type):hover {
   background-color: #29292B;
   border-bottom-left-radius: 1.5rem;
@@ -3969,47 +3985,6 @@ body {
 .main-dashboard .am-con-2 .table-container table th .th-wrapper img {
   cursor: pointer;
   padding-left: 0.5rem;
-}
-.main-dashboard .am-con-2 .table-container table input[type=checkbox] {
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
-}
-.main-dashboard .am-con-2 .table-container table input[type=checkbox]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .am-con-2 .table-container table input[type=checkbox]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .am-con-2 .table-container table input[type=checkbox]:checked:after {
-  visibility: visible;
-}
-.main-dashboard .am-con-2 .table-container table input[type=checkbox]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .am-con-2 .table-container table input[type=checkbox]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .am-con-2 .table-container table input[type=checkbox]:checked:after {
-  visibility: visible;
 }
 .main-dashboard .am-con-2 .table-container table th:nth-of-type(-n+6) {
   text-align: left;
@@ -4134,47 +4109,6 @@ body {
 .main-dashboard .amg-con-2 .table-container table th .th-wrapper img {
   cursor: pointer;
   padding-left: 0.5rem;
-}
-.main-dashboard .amg-con-2 .table-container table input[type=checkbox] {
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
-}
-.main-dashboard .amg-con-2 .table-container table input[type=checkbox]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .amg-con-2 .table-container table input[type=checkbox]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .amg-con-2 .table-container table input[type=checkbox]:checked:after {
-  visibility: visible;
-}
-.main-dashboard .amg-con-2 .table-container table input[type=checkbox]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .amg-con-2 .table-container table input[type=checkbox]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .amg-con-2 .table-container table input[type=checkbox]:checked:after {
-  visibility: visible;
 }
 .main-dashboard .amg-con-2 .table-container table th:nth-of-type(-n+4) {
   text-align: left;
@@ -4713,6 +4647,7 @@ body {
   border-radius: 50%;
   border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
+  transition: background-color 150ms ease-in-out;
 }
 .main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
@@ -4723,6 +4658,9 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
+}
+.main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:hover {
+  background-color: rgba(214, 163, 48, 0.4);
 }
 .main-dashboard .na-form-con .na-container-wrapper .na-container-1 .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
   background-color: #FFFFFF;
@@ -4981,6 +4919,7 @@ body {
   border-radius: 50%;
   border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
+  transition: background-color 150ms ease-in-out;
 }
 .main-dashboard .na-form-con .na-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
@@ -4991,6 +4930,9 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
+}
+.main-dashboard .na-form-con .na-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:hover {
+  background-color: rgba(214, 163, 48, 0.4);
 }
 .main-dashboard .na-form-con .na-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
   background-color: #FFFFFF;
@@ -5095,45 +5037,37 @@ body {
 }
 .main-dashboard .na-form-con .nm-container-4 .small-con-3 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio] {
   cursor: pointer;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
   box-shadow: none;
-  height: 4.4rem;
-  width: 4.4rem;
-  border-radius: 1rem;
-  border: 1px solid #8C8686;
+  scale: 0.7;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
+  transition: background-color 150ms ease-in-out;
 }
 .main-dashboard .na-form-con .nm-container-4 .small-con-3 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
-  content: url("../assets/icons/white-check.svg");
+  content: "";
   position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .na-form-con .nm-container-4 .small-con-3 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
+  height: 50%;
+  width: 50%;
   background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .na-form-con .nm-container-4 .small-con-3 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
-  visibility: visible;
-}
-.main-dashboard .na-form-con .nm-container-4 .small-con-3 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
-  content: url("../assets/icons/big-check.svg");
-  position: absolute;
-  top: 1.2rem;
+  border-radius: 50%;
   visibility: hidden;
   opacity: 0;
-  transition: ease-out 250ms;
+}
+.main-dashboard .na-form-con .nm-container-4 .small-con-3 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:hover {
+  background-color: rgba(214, 163, 48, 0.4);
+}
+.main-dashboard .na-form-con .nm-container-4 .small-con-3 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
+  background-color: #FFFFFF;
+  animation: pop-up-big 300ms forwards;
 }
 .main-dashboard .na-form-con .nm-container-4 .small-con-3 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
   visibility: visible;
@@ -5309,6 +5243,7 @@ body {
   border-radius: 50%;
   border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
+  transition: background-color 150ms ease-in-out;
 }
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
@@ -5319,6 +5254,9 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
+}
+.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:hover {
+  background-color: rgba(214, 163, 48, 0.4);
 }
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
   background-color: #FFFFFF;
@@ -5639,6 +5577,7 @@ body {
   border-radius: 50%;
   border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
+  transition: background-color 150ms ease-in-out;
 }
 .main-dashboard .na-form-con .na-container-5 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
@@ -5649,6 +5588,9 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
+}
+.main-dashboard .na-form-con .na-container-5 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:hover {
+  background-color: rgba(214, 163, 48, 0.4);
 }
 .main-dashboard .na-form-con .na-container-5 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
   background-color: #FFFFFF;
@@ -5891,6 +5833,7 @@ body {
   border-radius: 50%;
   border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
+  transition: background-color 150ms ease-in-out;
   border: max(0.6rem, 0.3em) solid #D6A330;
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after,
@@ -5903,6 +5846,10 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
+}
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:hover,
+.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:hover {
+  background-color: rgba(214, 163, 48, 0.4);
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked,
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan > .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
@@ -6305,46 +6252,6 @@ body {
   cursor: pointer;
   padding-left: 0.5rem;
 }
-.main-dashboard .na-form-con .na-container-group-2 .table-container table input[type=checkbox] {
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
-}
-.main-dashboard .na-form-con .na-container-group-2 .table-container table input[type=checkbox]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .na-form-con .na-container-group-2 .table-container table input[type=checkbox]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .na-form-con .na-container-group-2 .table-container table input[type=checkbox]:checked:after {
-  visibility: visible;
-}
-.main-dashboard .na-form-con .na-container-group-2 .table-container table input[type=checkbox]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  display: none;
-}
-.main-dashboard .na-form-con .na-container-group-2 .table-container table input[type=checkbox]:checked {
-  background-color: #D6A330;
-}
-.main-dashboard .na-form-con .na-container-group-2 .table-container table input[type=checkbox]:checked:after {
-  display: block;
-}
 .main-dashboard .na-form-con .na-container-group-2 .table-container table th:nth-of-type(-n+6) {
   text-align: left;
 }
@@ -6613,6 +6520,10 @@ body {
   width: 2rem;
   border-radius: 0.4rem;
   background-color: #EBEBEB;
+  transition: background-color 150ms ease-in-out;
+}
+.ul-con-2 .table-container table input[type=checkbox]:hover {
+  background-color: rgba(41, 41, 43, 0.6);
 }
 .ul-con-2 .table-container table input[type=checkbox]::after {
   content: url("../assets/icons/white-check.svg");
@@ -6844,6 +6755,7 @@ body {
   border-radius: 50%;
   border: max(0.4rem, 0.3em) solid #D6A330;
   background-color: #FFFFFF;
+  transition: background-color 150ms ease-in-out;
 }
 .nu-con-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
   content: "";
@@ -6854,6 +6766,9 @@ body {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
+}
+.nu-con-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:hover {
+  background-color: rgba(214, 163, 48, 0.4);
 }
 .nu-con-1 .container-wrapper .big-con .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
   background-color: #FFFFFF;
