@@ -59,6 +59,51 @@ img {
     -ms-user-select: none;
 }
 
+img[data-back-to-members-table] {
+    cursor: pointer;
+    pointer-events: all;
+    transition: 200ms ease-in-out;
+
+    &:hover {
+        transform: translateX(-1rem)
+    }
+}
+
+img[alt='funnel'] {
+    transition: scale 150ms ease-in-out;
+    &:hover {
+        scale: 1.150;
+    }
+}
+
+button:has([alt='filter']){
+    cursor: pointer;
+    background: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate;
+
+    &::before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+        background-color: $secondary-bg;
+        border-radius: $border-radius-small;
+        opacity: 0;
+        transition: all 150ms ease-in-out;
+    }
+
+    &:hover::before {
+        opacity: .6;
+        transition: all 150ms ease-in-out;
+    }
+
+}
+
 button {
     font-family: $font-family;
     border: none;
@@ -114,6 +159,7 @@ table {
     overflow-y: auto;
 }
 
+// * Active Primary Color
 .active {
     display: block;
     background-color: $primary;
@@ -121,6 +167,7 @@ table {
     transition: all 200ms ease-in-out;
 }
 
+// * Active Green Color
 .activeGreen {
     display: block;
     background-color: $green;
@@ -141,6 +188,11 @@ table {
 // * Transparent Underline Button Global
 .transparentButtonUnderline {
     @include transparentButton4;
+}
+
+// * View Loan Details Button Global
+.viewLoanDetailsButton {
+    @include transparentButton3;
 }
 
 // * Decline Button Global

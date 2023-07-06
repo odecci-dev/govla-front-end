@@ -218,35 +218,39 @@ for (let areaLocation of areaLocations) {
 const fieldOfficerForm = document.getElementById('field-area-maintenance-form')
 
 // * Form Submission
-fieldOfficerForm.addEventListener('submit', (e) => {
-    e.preventDefault()
-    const fd = new FormData(fieldOfficerForm)
-    const obj = Object.fromEntries(fd)
-
-    // * Storing the data to local storage
-    const json = JSON.stringify(obj)
-    localStorage.setItem('famForm', json)
-
-    // * Getting the data to local storage
-    const getJson = localStorage.getItem('famForm')
-    const famObjects = JSON.parse(getJson)
-
-    const locationName = document.createTextNode(famObjects.mLocation)
-    spans = document.createElement('span')
-    spans.classList.add('tb-chip')
-    spans.setAttribute('data-tb-chip', '')
-    spans.appendChild(locationName)
-        // * Creating a span for the delete button on chips
-    spanXs = document.createElement('span')
-    spanXs.classList.add('tb-chips-w-x')
-    spans.appendChild(spanXs)
-    const spanLocation = locationContainer.appendChild(spans)
-
-    // * Removing the chips on clicking the x button
-    spanXs.addEventListener('click', _ => {
-        spanLocation.remove()
+if (fieldOfficerForm) {
+    
+    fieldOfficerForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const fd = new FormData(fieldOfficerForm)
+        const obj = Object.fromEntries(fd)
+    
+        // * Storing the data to local storage
+        const json = JSON.stringify(obj)
+        localStorage.setItem('famForm', json)
+    
+        // * Getting the data to local storage
+        const getJson = localStorage.getItem('famForm')
+        const famObjects = JSON.parse(getJson)
+    
+        const locationName = document.createTextNode(famObjects.mLocation)
+        spans = document.createElement('span')
+        spans.classList.add('tb-chip')
+        spans.setAttribute('data-tb-chip', '')
+        spans.appendChild(locationName)
+            // * Creating a span for the delete button on chips
+        spanXs = document.createElement('span')
+        spanXs.classList.add('tb-chips-w-x')
+        spans.appendChild(spanXs)
+        const spanLocation = locationContainer.appendChild(spans)
+    
+        // * Removing the chips on clicking the x button
+        spanXs.addEventListener('click', _ => {
+            spanLocation.remove()
+        })
     })
-})
+
+}
 
 
 // ** Field Are Maintenance Hori-Con 2: Un-assigned Locations

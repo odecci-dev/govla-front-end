@@ -418,8 +418,11 @@
                             h2 {
                                 font-size: $font-size-x-large;
                             }
-                            button {
-                                @include transparentButton3;
+                            .header-inner-wrapper {
+                                display: flex;
+                                align-items: center;
+                                gap: $spacing-2x-large;
+                                
                             }
                         }
                         .btn-wrapper {
@@ -466,9 +469,11 @@
                     .rowspan:nth-of-type(7) {
                         @include rowspan7;
                     }
-                    // * Rowspan 8: Check Toggle 
+                    // * Rowspan 8: View Loan and Payment History
                     .rowspan:nth-of-type(8) {
-                        @include rowspan8;
+                        // @include rowspan8;
+                        place-self: flex-end;
+                        align-self: center;
                     }
                 }
             }

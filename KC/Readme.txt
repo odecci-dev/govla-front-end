@@ -519,6 +519,12 @@ Fifth Commit:
 • New Application Module (Group): Completed the module
 
 Sixth Commit:
-• Member List: Button links transferred to members.js
+• Member: Button links transferred to members.js
+
+Seventh Commit:
+• Members: View members
+• Members: Button transitions
+• New Application Module: Button transitions
+
 
 

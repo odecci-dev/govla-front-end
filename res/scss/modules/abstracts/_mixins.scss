@@ -421,6 +421,10 @@
     background-color: $primary-bg;
     border-radius: $border-radius-medium;
     box-shadow: inset $box-shadow;
+    transition: opacity 100ms ease-in-out;
+    &:hover {
+        opacity: .8;
+    }
 }
 
 // * Input Select Field
@@ -485,6 +489,7 @@
 
 // * Form Radio Buttons
 @mixin formRadioButtons {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;

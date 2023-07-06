@@ -112,13 +112,13 @@
                 gap: 2rem;
                 display: flex;
                 align-items: center;
-                button {
-                    cursor: pointer;
-                    background: none;
-                    &:hover {
-                        transform: scale(1.015);
-                    }
-                }
+                // button {
+                //     cursor: pointer;
+                //     background: none;
+                //     &:hover {
+                //         transform: scale(1.015);
+                //     }
+                // }
                 .search-wrap {
                     position: relative;
                     display: flex;
