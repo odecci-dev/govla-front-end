@@ -24,7 +24,7 @@
         display: block;
         pointer-events: none;
         inset: 0;
-        animation: fade-out 500ms forwards, slide-down 500ms forwards;
+        animation: fade-out 500ms forwards, slide-down 500ms forwards; 
     }
     &::backdrop[closing] {
         animation: fade-out 500ms forwards;

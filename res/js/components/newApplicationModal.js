@@ -7,7 +7,7 @@ function newAppModal() {
     const newApplicationModal = document.querySelector('[data-new-application-modal]')
 
 
-    openNewApplicationButton.addEventListener('click', () => {
+    openNewApplicationButton.addEventListener('click', (e) => {
         newApplicationModal.showModal();
     })
 
@@ -23,27 +23,12 @@ function newAppModal() {
 
 }
 
+newAppModal()
 
-// function groupAppModal() {
-    
-//     const openNewGroupModal = document.querySelector('#data-open-new-group-modal')
-    
-    
-//     openNewGroupModal.addEventListener('click', () => {
-    
-//         const dataNewGroupModal = document.querySelector('[data-new-group-modal]')
-//         // console.log(openNewGroupModal)
-//         dataNewGroupModal.showModal()
-    
-//     })
 
-// }
-
-// groupAppModal()
-
+// ** Loan Type Dropdown
 function modalDropdown() {
 
-    // ** Loan Type Dropdown
     const selected = document.querySelector('[data-type-loan-select]');
     const optionsContainer = document.querySelector('[data-type-opt-con');
     const optionsList = document.querySelectorAll('[data-type-loan-opt]');
@@ -88,15 +73,5 @@ function modalDropdown() {
 
 }
 
-
 modalDropdown()
-newAppModal()
 
-
-
-// openNewGroupModal.addEventListener('click', () => {
-    
-//     const url = '/KC/_modals/new-application-modal.html'
-//     window.location = url
-
-// })

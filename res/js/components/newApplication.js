@@ -427,33 +427,6 @@ function subChildSingle() {
 // ****** END --- Child Form Toggle ***** //
 
 
-
-// // * First Degree Relative Job Information
-// const fdrEmploymentStatus = document.getElementById('fdrEmpStat')
-// const fdrPreviousJob = document.querySelectorAll('[data-fdr-previous-job]')
-
-// for (const fdrPreviousJobItems of fdrPreviousJob) {
-//     fdrPreviousJobItems.style.display = 'none'
-
-//     fdrEmploymentStatus.addEventListener('change', () => {
-//         const fdrCurrentJob = document.querySelectorAll('[data-fdr-current-job]')
-
-//         for (const fdrCurrentJobItems of fdrCurrentJob) {
-//             // * If Employed is Selected show Current Job / Position
-//             if (fdrEmploymentStatus.selectedIndex === 1) {
-//                 fdrPreviousJobItems.style.display = 'none'
-//                 fdrCurrentJobItems.style.display = 'block'
-//                     // * If Unemployed is Selected show Previous Job / Position
-//             } else if (fdrEmploymentStatus.selectedIndex === 2) {
-//                 fdrPreviousJobItems.style.display = 'block'
-//                 fdrCurrentJobItems.style.display = 'none'
-//             }
-//         }
-
-//     })
-// }
-
-
 // * Business Information Form Toggle
 const yesToggle = document.getElementById('formToggleYes')
 const noToggle = document.getElementById('formToggleNo')

@@ -512,4 +512,7 @@ Third Commit:
 • New Application Modal: Modified the button
 • New Group Application Modal: Completed the Group Application Modal
 
+Fourth Commit:
+• Applications Modal: Fixed bugs in the modals
+
 
