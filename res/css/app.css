@@ -107,7 +107,7 @@ table th {
 
 .table-container {
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .table-container::-webkit-scrollbar {
   width: 1rem;
@@ -1427,6 +1427,7 @@ body {
   height: 90%;
   width: 92%;
   z-index: 10;
+  overflow-y: auto;
   background-color: #E0DFDF;
 }
 .main-dashboard::-webkit-scrollbar {
@@ -1908,6 +1909,7 @@ body {
   height: 90%;
   width: 92%;
   z-index: 10;
+  overflow-y: auto;
   background-color: #FFFFFF;
 }
 .main-dashboard::-webkit-scrollbar {
@@ -2796,21 +2798,30 @@ body {
   background-color: #EBEBEB;
   border-radius: 1rem;
   box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  height: 50%;
   display: grid;
-  grid-template-rows: minmax(0, 2fr) minmax(0, 1fr);
   gap: 1.5rem;
   padding: 2rem;
-  height: 100%;
+  height: clamp(1rem, 40vh, 85%);
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .chip-container {
   padding: 0.5rem;
-  height: clamp(1rem, 10vw, 10rem);
-  max-height: 100%;
+  height: clamp(1rem, 50vh, 100%);
   overflow-y: auto;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 4rem;
   gap: 1.5rem;
+}
+.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .chip-container::-webkit-scrollbar {
+  width: 1rem;
+}
+.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .chip-container::-webkit-scrollbar-track {
+  border-radius: 3rem;
+  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .chip-container::-webkit-scrollbar-thumb {
+  border-radius: 3rem;
+  background-color: #D6A330;
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .chip-container .tb-chip {
   position: relative;
@@ -3712,6 +3723,7 @@ body {
   height: 90%;
   width: 92%;
   z-index: 10;
+  overflow-y: auto;
   background-color: #FFFFFF;
 }
 .main-dashboard::-webkit-scrollbar {
@@ -4081,6 +4093,7 @@ body {
   height: 90%;
   width: 92%;
   z-index: 10;
+  overflow-y: auto;
   background-color: #FFFFFF;
   scroll-behavior: smooth;
 }

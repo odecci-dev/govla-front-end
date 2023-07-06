@@ -503,4 +503,9 @@ First Commit:
 - For better file structure
     - transferred each HTML Pages for each respective Folders
 
+Second Commit:
+• Field Area Maintenance: Removed Input Location
+- Modified the location chips container
+• Made overflow-y auto for scroll
+
 

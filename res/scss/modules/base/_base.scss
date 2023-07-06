@@ -104,7 +104,7 @@ table {
 .table-container {
     @include custom-scroll;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .active {
