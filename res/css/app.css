@@ -152,6 +152,9 @@ table tr:not(:first-of-type):hover > .td-btns > .td-btn-wrapper > button.a-btn-t
   transition: 200ms ease-in-out;
   color: #FFFFFF;
 }
+table tr:not(:first-of-type):hover > .td-btns > .td-btn-wrapper > button.a-btn-trash:hover {
+  color: #29292B;
+}
 table th {
   position: sticky;
   top: 0;
@@ -432,7 +435,7 @@ table th {
   height: 2rem;
   width: 2rem;
   border-radius: 0.4rem;
-  background-color: #EBEBEB;
+  background-color: #D9D9D9;
   transition: background-color 150ms ease-in-out;
 }
 .checkbox:hover {
@@ -908,7 +911,7 @@ body {
   height: 2rem;
   width: 2rem;
   border-radius: 0.4rem;
-  background-color: #EBEBEB;
+  background-color: #D9D9D9;
   transition: background-color 150ms ease-in-out;
 }
 .na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table input[type=checkbox]:hover {
@@ -2569,7 +2572,7 @@ body {
   height: 2rem;
   width: 2rem;
   border-radius: 0.4rem;
-  background-color: #EBEBEB;
+  background-color: #D9D9D9;
   transition: background-color 150ms ease-in-out;
 }
 .main-dashboard .no-form-con .no-container-3 .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:hover {

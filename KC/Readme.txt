@@ -551,3 +551,8 @@ First Commit:
     - All List Filter
     - Modal Search Filter
 
+Second Commit:
+• Modified trash hover
+• Modified checkbox
+    - Background color #D9D9D9 (_mixins.scss)
+

@@ -151,6 +151,9 @@ table {
         &>.td-btns>.td-btn-wrapper>button.a-btn-trash {
             transition: 200ms ease-in-out;
             color: $white;
+            &:hover {
+                color: $black;
+            }
         }
     }
     
