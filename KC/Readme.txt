@@ -571,3 +571,6 @@ Seventh Commit:
 • Created Borrower & Co-Borower View and Edit
 • Converted button styles to Global Styles
 
+Eight Commit:
+• Created a HTML page for Group View (all-members-view-group.html)
+
