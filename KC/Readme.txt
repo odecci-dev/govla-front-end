@@ -558,3 +558,8 @@ Second Commit:
 
 Third Commit:
 • User Access Control: Hover
+
+Fourth Commit:
+• Member List Filters (members.js)
+- Created a new js file for filter modal
+

@@ -272,3 +272,33 @@ table {
         @include selectDropdownOptionContainer;
     }
 }
+
+// * Input Global
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    >span {
+        font-weight: $font-weight-bold;
+        font-size: $font-size;
+    }
+    // * Input Global Styles
+    input {
+        @include inputField;
+    }
+}
+
+// * Input Modal Global
+.input-wrapper-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    >span {
+        font-weight: $font-weight-bold;
+        font-size: $font-size-medium;
+    }
+    // * Input Global Styles
+    input {
+        @include inputField;
+    }
+}

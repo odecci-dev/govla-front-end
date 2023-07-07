@@ -313,9 +313,54 @@
         <!-- * Main Dashboard -->
         <div class="main-dashboard">
 
+            <!-- * Filter Modal -->
+            <dialog class="am-filter-modal" data-filter-member-modal>
+
+                <div class="modal-container">
+
+                    <!-- * Modal Header and Exit Button -->
+                    <div class="modal-header">
+                        <h4>Filter</h4>
+                        <button class="exit-button" data-close-filter-member-modal>
+                            <img src="../../res/assets/icons/x-circle.svg" alt="exit">
+                        </button>
+                    </div>
+
+                    <!-- * Current Loan -->
+                    <div class="rowspan">
+
+                        <div class="input-wrapper-modal">
+                            <span>Current Loan</span>
+                            <input autocomplete="off" type="number" id="filterCurrentLoanFrom" name="filterCurrentLoanFrom" placeholder="From">
+                        </div>
+
+                        <div class="input-wrapper-modal">
+                            <input autocomplete="off" type="number" id="filterCurrentLoanTo" name="filterCurrentLoanTo" placeholder="To">
+                        </div>
+
+                    </div>
+
+                    <!-- * Outstanding Balance -->
+                    <div class="rowspan">
+
+                        <div class="input-wrapper-modal">
+                            <span>Outstanding Balance</span>
+                            <input autocomplete="off" type="number" id="filterOutstandingBal" name="filterOutstandingBal">
+                        </div>
+
+                    </div>
+
+                    <!-- * Save Button -->
+                    <div class="rowspan">
+                        <button class="button" data-save-filter-member-modal>Save</button>
+                    </div>
+
+                </div>
+
+            </dialog>
+
             <!-- * All Members' Containers -->
             <!-- * Container 1: All Members Header, Buttons, and Searchbar -->
-
             <div class="am-con-1">
                 <h2>Members</h2>
                 <p class="p-1">(Please select member type or loan type)</p>
@@ -395,7 +440,7 @@
                     <div class="wrapper">
 
                         <!-- * Filter Button -->
-                        <button><img src="../../res/assets/icons/filter.svg" alt="filter"></button>
+                        <button data-open-filter-member-modal><img src="../../res/assets/icons/filter.svg" alt="filter"></button>
 
                         <!-- * Search Bar -->
                         <div class="search-wrap">
@@ -602,6 +647,7 @@
     <script src="../../res/js/components/links.js"></script>
     <script src="../../res/js/components/nav.js"></script>
     <script src="../../res/js/components/members.js"></script>
+    <script src="../../res/js/components/members-modal.js"></script>
 
 </body>
 

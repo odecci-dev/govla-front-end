@@ -47,7 +47,7 @@
     }
 }
 
-// * Slide-down
+// * Slide-Down
 @keyframes slide-down {
     0% {
         transform: translateY(0%);
@@ -57,7 +57,7 @@
     }
 }
 
-// * Drop-down
+// * Drop-Down
 @keyframes drop-down {
     0% {
         opacity: 0;
@@ -66,5 +66,25 @@
     100% {
         opacity: 1;
         transform: translateY(0%);
+    }
+}
+
+// * Slide-from-Left-to-Right
+@keyframes slide-from-left-to-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+// * Slide-from-Center-to-left
+@keyframes slide-from-center-to-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }
