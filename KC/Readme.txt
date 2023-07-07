@@ -574,3 +574,6 @@ Seventh Commit:
 Eight Commit:
 • Created a HTML page for Group View (all-members-view-group.html)
 
+Ninth Commit:
+• Finished View Group Members
+

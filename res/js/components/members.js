@@ -120,6 +120,12 @@ backToMembersButtons.forEach((backTo) => {
             window.location = url
         })
     }
+    if (backTo.matches('[data-back-to-group-members-table]')) {
+        backTo.addEventListener('click', () => {
+            url = '/KC/transactions/new-group-application.html'
+            window.location = url
+        })
+    }
 })
 
 

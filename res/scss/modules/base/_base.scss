@@ -69,6 +69,16 @@ img[data-back-to-members-table] {
     }
 }
 
+img[data-back-to-group-members-table] {
+    cursor: pointer;
+    pointer-events: all;
+    transition: 200ms ease-in-out;
+
+    &:hover {
+        transform: translateX(-1rem)
+    }
+}
+
 img[alt='funnel'] {
     transition: scale 150ms ease-in-out;
     &:hover {
