@@ -560,6 +560,10 @@ Third Commit:
 • User Access Control: Hover
 
 Fourth Commit:
-• Member List Filters (members.js)
+• Member List Filters (membersModal.js)
 - Created a new js file for filter modal
+
+Sixth Commit:
+• Implemented filter layouts for Member and Application Lists
+• Renamed membersModal to filterModal.js
 

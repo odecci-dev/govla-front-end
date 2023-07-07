@@ -14,164 +14,93 @@
       <!-- * Main Dashboard -->
       <div class="main-dashboard">
 
-        <!-- * New Application Modal -->
-        <dialog class="na-modal" data-new-application-modal>
+        
+        <!-- * Filter Modal -->
+        <dialog class="am-filter-modal" data-filter-member-modal>
 
-            <div class="modal-container">
+                <div class="modal-container-3">
 
-                <!-- * Exit Button -->
-                <button class="exit-button" id="data-close-new-application-modal">
-                    <img src="../../res/assets/icons/x-circle.svg" alt="exit">
-                </button>
+                    <!-- * Modal Header and Exit Button -->
+                    <div class="modal-header">
+                        <h4>Filter</h4>
+                        <button class="exit-button" data-close-filter-member-modal>
+                            <img src="../../res/assets/icons/x-circle.svg" alt="exit">
+                        </button>
+                    </div>
+                    
+                    <!-- * Choose Type of Loan -->
+                    <div class="rowspan">
 
-                <!-- * Choose Type of Loan -->
-                <div class="rowspan">
-                    <h3>Choose Type of Loan</h3>
+                        <h3>Choose Type of Loan</h3>
+                        <!-- * Type Of Loan Dropdown Menu -->
+                        <div class="loan-type-dropdown">
 
-                    <!-- * Type Of Loan Dropdown Menu -->
-                    <div class="loan-type-dropdown">
+                            <!-- * Type Of Loan -->
+                            <div class="input-wrapper">
 
-                        <!-- * Type Of Loan -->
-                        <div class="input-wrapper">
+                                <div class="select-box">
 
-                            <div class="select-box">
+                                    <div class="options-container" data-type-opt-con>
 
-                                <div class="options-container" data-type-opt-con>
+                                        <div class="option" data-type-loan-opt data-individual-loan-link>
 
-                                    <div class="option" data-type-loan-opt data-individual-loan-link>
+                                            <input type="radio" class="radio" name="category" />
+                                            <label for="Individual Loan">
+                                                <h4>Individual Loan</h4>
+                                            </label>
 
-                                        <input type="radio" class="radio" name="category" />
-                                        <label for="Individual Loan">
-                                            <h4>Individual Loan</h4>
-                                        </label>
+                                        </div>
+
+                                        <div class="option" data-type-loan-opt data-group-loan-link>
+
+                                            <input type="radio" class="radio" name="category" />
+                                            <label for="Group Loan">
+                                                <h4>Group Loan</h4>
+                                            </label>
+
+                                        </div>
+
+                                        <div class="option" data-type-loan-opt>
+
+                                            <input type="radio" class="radio" name="category" />
+                                            <label for="Sample Loan">
+                                                <h4>Sample Loan</h4>
+                                            </label>
+
+                                        </div>
 
                                     </div>
-
-                                    <div class="option" data-type-loan-opt data-group-loan-link>
-
-                                        <input type="radio" class="radio" name="category" />
-                                        <label for="Group Loan">
-                                            <h4>Group Loan</h4>
-                                        </label>
-
-                                    </div>
-
-                                    <div class="option" data-type-loan-opt>
-
-                                        <input type="radio" class="radio" name="category" />
-                                        <label for="Sample Loan">
-                                            <h4>Sample Loan</h4>
-                                        </label>
-
+                                    
+                                    <div class="selected" data-type-loan-select>
                                     </div>
 
                                 </div>
-                                
-                                <div class="selected" data-type-loan-select>
-                                </div>
-
                             </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- * Search for existing member -->
-                <div class="rowspan">
-
-                    <!-- * Search for existing member -->
-                    <h3>Search for existing member</h3>
-
-                    <div class="wrapper">
-
-                        <!-- * Search Bar -->
-                        <div class="search-wrap">
-                            <input type="search" id="search" name="search" placeholder="Search name or member ID">
-                            <img src="../../res/assets/icons/magnifyingglass.svg" alt="search">
-                        </div>
-
-                        <!-- * Create New Button -->
-                        <button class="button" data-link-to-newapp>Create New</button>
-
-                    </div>
-
-
-                </div>
-
-                <!-- * Table -->
-                <div class="rowspan">
-
-                    <!-- * Container: Table and Pagination -->
-                    <div class="na-table-con">
-
-                        <!-- * Table Container -->
-                        <div class="table-container">
-
-                            <!-- * Members Table -->
-                            <table>
-
-                                <!-- * Table Header -->
-                                <tr>
-
-                                    <!-- * Checkbox ALl
-                                    <th><input type="checkbox" class="checkbox" id="allCheckbox" onchange="checkAll(this)"></th> -->
-
-                                    <!-- * Header Name -->
-                                    <th><span class="th-name">Name</span></th>
-
-                                    <!-- * Header Member ID -->
-                                    <th><span class="th-name">Member ID</span></th>
-
-                                </tr>
-
-
-                                <!-- * Members Data -->
-                                <tr>
-
-                                    <!-- * Checkbox Opt
-                                    <td><input type="checkbox" class="checkbox" id="checkbox" data-checkbox></td> -->
-
-                                    <td>
-
-                                        <!-- * Data Name-->
-                                        <span class="td-name">Dela Cruz, Juana</span>
-
-                                    </td>
-
-                                    <td>
-
-                                        <!-- * Data Member ID-->
-                                        <span class="td-name">778 8596 2125</span>
-
-                                    </td>
-
-
-                                </tr>
-
-                            </table>
-
-                        </div>
-
-                        <!-- * Pagination Container -->
-                        <div class="pagination-container">
-
-                            <!-- * Pagination Links -->
-                            <a href="#"><img src="../../res/assets/icons/caret-left.svg" alt="caret-left"></a>
-                            <a href="#">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
-                            <a href="#"><img src="../../res/assets/icons/caret-right.svg" alt="caret-right"></a>
 
                         </div>
 
                     </div>
 
-                </div>
+                    <!-- * Applied Loan Amount -->
+                    <div class="rowspan">
 
-            </div>
+                        <div class="input-wrapper-modal">
+                            <span>Applied Loan Amount</span>
+                            <input autocomplete="off" type="number" id="filterAppliedLoanAmntFrom" name="filterAppliedLoanAmntFrom" placeholder="From">
+                        </div>
+
+                        <div class="input-wrapper-modal">
+                            <input autocomplete="off" type="number" id="filterAppliedLoanAmntTo" name="filterAppliedLoanAmntTo" placeholder="To">
+                        </div>
+
+                    </div>
+
+                    <!-- * Save Button -->
+                    <div class="rowspan">
+                        <button class="button" data-save-filter-member-modal>Save</button>
+                    </div>
+
+                </div>
 
         </dialog>
 
@@ -188,6 +117,7 @@
   
             <!-- * Button Container -->
             <div class="container">
+
               <!-- * Button Wrapper -->
               <div class="wrapper">
                 <!-- * Add New Button -->
@@ -198,8 +128,9 @@
   
               <!-- * Search Wrapper -->
               <div class="wrapper">
+
                 <!-- * Filter Button -->
-                <button>
+                <button data-open-filter-member-modal>
                   <img src="../../res/assets/icons/filter.svg" alt="filter" />
                 </button>
   
@@ -410,5 +341,6 @@
     <script src="../../res/js/components/links.js"></script>
     <script src="../../res/js/components/nav.js"></script>
     <script src="../../res/js/components/newApplicationModal.js" defer></script>
+    <script src="../../res/js/components/filterModal.js" defer></script>
   </body>
 </html>

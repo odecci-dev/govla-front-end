@@ -1621,6 +1621,65 @@ body {
   display: grid;
   place-self: flex-end;
 }
+.am-filter-modal .modal-container-3 {
+  display: grid;
+  grid-template-rows: minmax(0, 0.6fr) repeat(2, minmax(0, 1fr)) minmax(0, 0.6fr);
+  gap: 1.5rem 0;
+  padding: 1.5rem 2rem 2rem;
+}
+.am-filter-modal .modal-container-3 .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 2rem;
+}
+.am-filter-modal .modal-container-3 .modal-header::after {
+  content: "";
+  position: absolute;
+  height: 0.2rem;
+  width: 100%;
+  background-color: #D6A330;
+  top: 100%;
+  left: 0;
+  transform: scaleX(50);
+}
+.am-filter-modal .modal-container-3 .modal-header h4 {
+  font-size: 2rem;
+}
+.am-filter-modal .modal-container-3 .modal-header button {
+  padding: 0;
+}
+.am-filter-modal .modal-container-3 .modal-header .exit-button {
+  padding: 0;
+  cursor: pointer;
+  background: none;
+}
+.am-filter-modal .modal-container-3 .modal-header .exit-button img {
+  transition: all 150ms ease-in-out;
+}
+.am-filter-modal .modal-container-3 .modal-header .exit-button img:hover {
+  transform: scale(1.1);
+  filter: opacity(0.7);
+}
+.am-filter-modal .modal-container-3 .rowspan:nth-of-type(2) {
+  display: grid;
+  align-items: flex-end;
+}
+.am-filter-modal .modal-container-3 .rowspan:nth-of-type(2) h3 {
+  font-size: 1.5rem;
+}
+.am-filter-modal .modal-container-3 .rowspan:nth-of-type(3) {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 2rem;
+  align-items: flex-end;
+}
+.am-filter-modal .modal-container-3 .rowspan:nth-of-type(4) {
+  display: grid;
+  place-self: flex-end;
+}
 
 .main-dashboard {
   position: fixed;

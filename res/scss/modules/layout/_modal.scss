@@ -707,6 +707,7 @@
         scrollbar-width: none;
         /* Firefox */
     }
+    // * Member List & Borrower Filter
     .modal-container {
         display: grid;
         grid-template-rows: minmax(0, 0.6fr) repeat(2, minmax(0, 1fr)) minmax(0, 0.6fr) ;
@@ -773,6 +774,7 @@
             place-self: flex-end;
         }
     }
+    // * Member List (Group) Filter
     .modal-container-2 {
         display: grid;
         grid-template-rows: minmax(0, 1fr) repeat(3, minmax(0, 1.4fr)) minmax(0, 1fr) ;
@@ -844,6 +846,75 @@
             display: grid;
             place-self: flex-end;
         }
+    }
+    // * Application List Filter
+    .modal-container-3 {
+            display: grid;
+            grid-template-rows: minmax(0, 0.6fr) repeat(2, minmax(0, 1fr)) minmax(0, 0.6fr) ;
+            gap: $spacing-large 0;
+            padding: 1.5rem 2rem 2rem;
+    
+            // * Modal Header and Exit Button 
+            .modal-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                padding-bottom: 2rem;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: .2rem;
+                    width: 100%;
+                    background-color: $primary;
+                    top: 100%;
+                    left: 0;
+                    transform: scaleX(50);
+                }
+                h4 {
+                    font-size: $font-size-large;
+                }
+                // * Exit Button
+                button {
+                    padding: 0;
+                }
+                .exit-button {
+                    padding: 0;
+                    cursor: pointer;
+                    background: none;
+                    img {
+                        transition: all 150ms ease-in-out;
+                    }
+                    img:hover {
+                        transform: scale(1.1);
+                        filter: opacity(.7);
+                    }
+                }
+            }
+    
+            // * Shoose Type Loan
+            .rowspan:nth-of-type(2) {
+                display: grid;
+                align-items: flex-end;
+                h3 {
+                    font-size: $font-size-medium;
+                }
+            }
+    
+            // * Applied Loan Amount
+            .rowspan:nth-of-type(3) {
+                padding-top: 2rem;
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 0 $spacing-2x-large;
+                align-items: flex-end;
+            }
+    
+            // * Save Button
+            .rowspan:nth-of-type(4) {
+                display: grid;
+                place-self: flex-end;
+            }
     }
 }
 
