@@ -22,52 +22,53 @@ function newAppModal() {
             }, { once: true });
     
         })
+    } 
 
-    }
-    
     // ** Loan Type Dropdown
-    
-        const selected = document.querySelector('[data-type-loan-select]');
-        const optionsContainer = document.querySelector('[data-type-opt-con');
-        const optionsList = document.querySelectorAll('[data-type-loan-opt]');
-    
-        selected.addEventListener("click", () => {
-            optionsContainer.classList.toggle("active");
-        });
-    
-        optionsList.forEach(option => {
-            option.addEventListener("click", () => {
-                selected.innerHTML = option.querySelector("label").innerHTML;
-                optionsContainer.classList.remove("active");
-            });
-        });
-    
-        // * Linked to Group Loan
-        const groupLoanOpt = document.querySelector('[data-group-loan-link]')
-    
-        groupLoanOpt.addEventListener('click', () => {
-    
-            const url = '/KC/transactions/new-group-application.html'
-            window.location = url;
-    
-        })
-    
-        // * Linked to Individual Loan
-        const individualLoanOpt = document.querySelector('[data-individual-loan-link]')
         
-        individualLoanOpt.addEventListener('click', () => {
-            btnToNewApp.style.visibility = 'visible'
-        })
+    const selected = document.querySelector('[data-type-loan-select]');
+    const optionsContainer = document.querySelector('[data-type-opt-con');
+    const optionsList = document.querySelectorAll('[data-type-loan-opt]');
+
+    selected.addEventListener("click", () => {
+        optionsContainer.classList.toggle("active");
+    });
+
+    optionsList.forEach(option => {
+        option.addEventListener("click", () => {
+            selected.innerHTML = option.querySelector("label").innerHTML;
+            optionsContainer.classList.remove("active");
+        });
+    });
+
+    // * Linked to Group Loan
+    const groupLoanOpt = document.querySelector('[data-group-loan-link]')
+
+    groupLoanOpt.addEventListener('click', () => {
+
+        const url = '/KC/transactions/new-group-application.html'
+        window.location = url;
+
+    })
+
+    // * Linked to Individual Loan
+    const individualLoanOpt = document.querySelector('[data-individual-loan-link]')
     
-        // * Linked to New Application
-        const btnToNewApp = document.querySelector('[data-link-to-newapp]')
+    individualLoanOpt.addEventListener('click', () => {
+        btnToNewApp.style.visibility = 'visible'
+    })
+
+    // * Linked to New Application
+    const btnToNewApp = document.querySelector('[data-link-to-newapp]')
+
+    btnToNewApp.addEventListener('click', () => {
+
+        const url = '/KC/transactions/new-application.html'
+        window.location = url;
+
+    })  
+        
     
-        btnToNewApp.addEventListener('click', () => {
-    
-            const url = '/KC/transactions/new-application.html'
-            window.location = url;
-    
-        })
 
 }
 

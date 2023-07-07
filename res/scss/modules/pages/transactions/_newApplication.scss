@@ -1233,16 +1233,7 @@
                                                 margin-bottom: $spacing-small;
                                                 transition: all ease-in-out 100ms;
                                             }
-                                            button:hover {
-                                                background: rgba(0, 0, 0, 0.125);
-                                                background-blend-mode: darken;
-                                            }
-                                            button:active {
-                                                transform: translateY(4px);
-                                            }
-                                            // button:first-of-type {
-                                            //     margin-left: $spacing-2x-large;
-                                            // }
+ 
                                         }
                                     }
                                 }
@@ -1305,14 +1296,6 @@
                                     button {
                                         @include addOrSubButton;
                                         margin-bottom: $spacing-small;
-                                        transition: all 200ms ease-in-out;
-                                        &:hover {
-                                            background: rgba(0, 0, 0, 0.125);
-                                            background-blend-mode: darken;
-                                        }
-                                        &:active {
-                                            transform: translateY(4px);
-                                        }
                                     }
                                 }
                             }
@@ -1522,6 +1505,22 @@
                     // **                         ** //
                     // **** Table Header Styles **** //
                     // **                         ** //
+                    tr:not(:first-of-type):hover {
+                        cursor: pointer;
+                        background-color: $primary;
+                        color: $white;
+                        transition: 300ms ease-out;
+                
+                        &>.td-btns>.td-btn-wrapper>button:nth-of-type(n) {
+                            background-color: $white;
+                            color: $primary;
+                            transition: 200ms ease-out;
+                            &:hover {
+                                background-color: $black;
+                                color: $white;
+                            }
+                        }
+                    }
                     th {
                         padding: 2rem 0;
                         text-align: center;

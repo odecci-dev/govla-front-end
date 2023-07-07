@@ -52,24 +52,59 @@ linkToMemberGroupLoan.forEach((link) => {
     })
 })
 
-const viewBorrowersBtn = document.querySelectorAll('.a-btn-view')
+
+// * Members View Buttons Function
+const viewBorrowersBtn = document.querySelectorAll('[data-member-view-borrower]')
 
 if (viewBorrowersBtn) {
     
     viewBorrowersBtn.forEach((view) => {
     
-        view.setAttribute('data-view-button', '')
+        view.addEventListener('click', () => {
+
+            url = '/KC/members/all-members-view-borrower.html'
+            window.location = url
     
-        if (view.matches('[data-view-button]')) {
+        })
     
-            view.addEventListener('click', () => {
-    
-                url = '/KC/members/all-members-view.html'
-                window.location = url
         
-            })
     
-        }
+    })
+
+    
+}
+
+const viewCoBorrowersBtn = document.querySelectorAll('[data-member-view-co-borrower]')
+
+if (viewCoBorrowersBtn) {
+    
+    viewCoBorrowersBtn.forEach((view) => {
+    
+        view.addEventListener('click', () => {
+
+            url = '/KC/members/all-members-view-co-borrower.html'
+            window.location = url
+    
+        })
+        
+    
+    })
+
+    
+}
+
+const viewGroupBtn = document.querySelectorAll('[data-member-view-group]')
+
+if (viewGroupBtn) {
+    
+    viewGroupBtn.forEach((view) => {
+    
+        view.addEventListener('click', () => {
+
+            url = '/KC/transactions/new-group-application.html'
+            window.location = url
+    
+        })
         
     
     })

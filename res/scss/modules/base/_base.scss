@@ -197,6 +197,16 @@ table {
     @include transparentButton;
 }
 
+// * Transparent 2 Button Global
+.transparentButton2 {
+    @include tableTransparentTrashButton;
+}
+
+// * Transparent 3 (Show All) Button Global
+.transparentButton3 {
+    @include transparentButton5;
+}
+
 // * Transparent Underline Button Global
 .transparentButtonUnderline {
     @include transparentButton4;
@@ -207,7 +217,12 @@ table {
     @include secondaryButton;
 }
 
-// * Table Trash Button Global
+// * Table View 2 Button Global
+.a-btn-view-2 {
+    @include tableButton;
+}
+
+// * Table Trash (Transparent) Button Global
 .a-btn-trash {
     @include transparentButton2;
 }
@@ -215,6 +230,16 @@ table {
 // * Table Trash 2 Button Global
 .a-btn-trash-2 {
     @include tableButton;
+}
+
+// * Table Trash 3 (Transparent) Button Global
+.a-btn-trash-3 {
+    @include tableTransparentTrashButton;
+}
+
+// * Table Trash 4  Button Global
+.a-btn-trash-4 {
+    @include secondaryButton;
 }
 
 // * Table Edit Button Global
@@ -240,6 +265,16 @@ table {
 // * Release Button Global
 .releaseButton {
     @include releaseButton;
+}
+
+// * Add or Sub Button Global
+.addOrSubButton {
+    @include addOrSubButton;
+}
+
+// * File Button Global
+.fileButton {
+    @include fileButton;
 }
 
 // * Table Chip Global

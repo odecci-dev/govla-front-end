@@ -178,7 +178,7 @@
 // * Table Button
 @mixin tableButton {
     @include primaryButton;
-    font-size: $font-size-small;
+    font-size: $font-size;
     padding: $btn-padding-5;
 }
 
@@ -266,12 +266,25 @@
     }
 }
 
-// * Transparent Button 4
+// * Table Trash Button
 @mixin transparentButton4 {
-    @include transparentButton3;
-    color: $font-accent;
+    @include transparentButton2;
+    font-size: $font-size-small;
+    padding: $btn-padding-5;
+    color: $blackTR;
     &:hover {
-        color: $black
+        color: $primary;
+    }
+}
+
+// * Table Trash Button
+@mixin transparentButton5 {
+    @include transparentButton2;
+    font-size: $font-size-small;
+    padding: $btn-padding-5;
+    color: $blackTR;
+    &:hover {
+        color: $primary;
     }
 }
 
@@ -284,6 +297,55 @@
     height: 4rem;
     border-radius: $border-radius-x-small;
     box-shadow: $box-shadow-3;
+    transition: all ease-in-out 150ms;
+    &:hover {
+        background: rgba(0, 0, 0, 0.125);
+        background-blend-mode: darken;
+    }
+    &:active {
+        transform: translateY(0.4rem);
+    }
+}
+
+// * File Button
+@mixin fileButton {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-small;
+    font-weight: $font-weight;
+    padding:  $spacing-medium $spacing-medium;
+    border-radius: $border-radius-medium;
+    box-shadow: $box-shadow-3;
+    gap: 1rem;
+    position: relative;
+    transition: all ease-in-out 150ms;
+    &:hover {
+        background: rgba(0, 0, 0, 0.125);
+        background-blend-mode: darken;
+    }
+    &:active {
+        transform: translateY(0.4rem);
+    }
+    &:hover::before {
+        content: 'X';
+        cursor: pointer;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        top: 0;
+        transform: translate(0.6rem, -0.4rem);
+        font-size: $font-size-small;
+        font-weight: $font-weight;
+        color: $white;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: $circle;
+        background-color: $alert;
+    }
 }
 
 // *** Dashboard Mixins
@@ -298,7 +360,7 @@
     &::-webkit-scrollbar-thumb {
         border-radius: $border-radius-btn;
         background-color: $primary;
-      }
+    }
 }
 
 
@@ -416,6 +478,9 @@
 // *** Input Field Mixins
 // * Input Field
 @mixin inputField {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    margin: 0;
     font-size: $font-size-large;
     padding: 1rem 2rem;
     border: none;
@@ -587,14 +652,14 @@
 // * Big Container
 @mixin bigContainerGrid {
     @include displayGrid;
-    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: repeat(8, minmax(0, 1fr));
     gap: $spacing-2x-large 0px;
 }
 
 // * Big Container 2
 @mixin bigContainerGrid2 {
     @include displayGrid;
-    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: repeat(6, minmax(0, 1fr));
     gap: $spacing-2x-large 0px;
 }
 

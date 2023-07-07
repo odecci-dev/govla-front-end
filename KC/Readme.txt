@@ -567,3 +567,7 @@ Sixth Commit:
 • Implemented filter layouts for Member and Application Lists
 • Renamed membersModal to filterModal.js
 
+Seventh Commit:
+• Created Borrower & Co-Borower View and Edit
+• Converted button styles to Global Styles
+

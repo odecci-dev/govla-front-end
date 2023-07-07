@@ -52,7 +52,6 @@
                 // * Borrower and Type Of Loan Dropdown Button
                 button:nth-of-type(n+2) {
                     position: relative;
-                    background-color: aqua;
                     img {
                         position: absolute;
                         transform: translateY(.3rem);
@@ -81,30 +80,32 @@
                                     color: $white;
                                 }
                             }
+                            &:hover {
+                                background-color: $black;
+                            }
                         }
                     }
-                }
-                .borrower-dropdown.showMenu>.link.dropdown {
-                    border-bottom-left-radius: 0;
-                    border-bottom-right-radius: 0;
-                    box-shadow: none;
-                }
-                .borrower-dropdown>.link.dropdown>img {
-                    transition: transform ease-out 300ms;
-                }
-                .borrower-dropdown.showMenu>.link.dropdown>img {
-                    -webkit-transform: scaleY(-1);
-                    transform: scaleY(-1);
-                }
-                // * Borrower Dropdown Menu
-                .borrower-dropdown.showMenu>.link.dropdown+.dropdown-menu {
-                    visibility: visible;
-                    pointer-events: auto;
-                    opacity: 1;
-                    border-bottom-left-radius: $border-radius-large;
-                    border-bottom-right-radius: $border-radius-large;
-                    // transition: opacity ease-out 250ms;
-                    animation: drop-down 500ms ease-in-out forwards;
+                    &.showMenu>.link.dropdown {
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                        box-shadow: none;
+                    }
+                    &>.link.dropdown>img {
+                        transition: transform ease-out 300ms;
+                    }
+                    &.showMenu>.link.dropdown>img {
+                        -webkit-transform: scaleY(-1);
+                        transform: scaleY(-1);
+                    }
+                    // * Borrower Dropdown Menu
+                    &.showMenu>.link.dropdown+.dropdown-menu {
+                        visibility: visible;
+                        pointer-events: auto;
+                        opacity: 1;
+                        border-bottom-left-radius: $border-radius-large;
+                        border-bottom-right-radius: $border-radius-large;
+                        animation: drop-down 500ms ease-in-out forwards;
+                    }
                 }
             }
             // * Search Wrapper
@@ -188,6 +189,85 @@
                 }
                 // * All table header except the last child
                 th:nth-of-type(-n+6) {
+                    text-align: left;
+                }
+                // * Table Checkbox
+                th:first-of-type {
+                    padding-left: 1rem;
+                }
+                // * Borrower
+                th:nth-of-type(2) {
+                    padding-left: 1rem;
+                }
+                // **                       ** //
+                // **** Table Data Styles **** //
+                // **                       ** //
+                td {
+                    padding: $spacing-medium 0;
+                    font-size: $font-size-medium;
+                    // * Borrowers' Data Styles
+                    .td-wrapper {
+                        display: flex;
+                        align-items: center;
+                        .td-num {
+                            font-weight: $font-weight-bold;
+                            margin-left: 1rem;
+                        }
+                        .td-name {
+                            margin-left: 2rem;
+                        }
+                    }
+                    // * Table Buttons Styles
+                    .td-btn-wrapper {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        button {
+                            cursor: pointer;
+                        }
+                    }
+                }
+                // * Due Date Data
+                .td-due {
+                    font-weight: $font-weight-bold;
+                }
+                td:first-of-type {
+                    padding-left: 1rem;
+                }
+                td:nth-of-type(2) {
+                    padding-left: 1rem;
+                }
+            }
+        }
+        // * Table Container
+        .table-container-2 {
+            display: flex;
+            flex-direction: column;
+            height: calc(100% - 10%);
+            border-radius: $border-radius-large;
+            box-shadow: $box-shadow;
+            table {
+                // **                         ** //
+                // **** Table Header Styles **** //
+                // **                         ** //
+                th {
+                    padding: 2rem 0;
+                    text-align: center;
+                    span.th-name {
+                        font-size: $font-size-medium;
+                        font-weight: $font-weight-bold;
+                    }
+                    .th-wrapper {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            cursor: pointer;
+                            padding-left: .5rem;
+                        }
+                    }
+                }
+                // * All table header except the last child
+                th:nth-of-type(-n+5) {
                     text-align: left;
                 }
                 // * Table Checkbox
@@ -366,6 +446,555 @@
             }
             a:last-of-type {
                 margin-left: $spacing-6x-large;
+            }
+        }
+    }
+    // * Container Wrapper 1: New Member Container Wrapper
+    .view-borrower-con {
+            height: 120%;
+            display: flex;
+            flex-direction: row;
+            // * Container 1: New Member Form Fields and Buttons
+            .na-container-1 {
+                width: calc(100% - 20%);
+                padding: 2rem 1rem 2rem 2rem;
+                // * Big Container 
+                .big-con {
+                    height: 100%;
+                    width: 100%;
+                    padding: 5rem 4rem 2rem 4rem;
+                    @include containerDefault2;
+                    @include bigContainerGrid;
+                    // ** Rowspan Global Styles
+                    .rowspan {
+                        min-height: 0;
+                        /* NEW */
+                        min-width: 0;
+                        /* NEW; needed for Firefox */
+                        .input-wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            span {
+                                margin-bottom: 1rem;
+                                font-weight: $font-weight-bold;
+                                font-size: $font-size;
+                            }
+                            // * Input Global Styles
+                            input {
+                                @include inputField;
+                            }
+                            // // * Select Input Global Styles
+                            // .select-box {
+                            //     position: relative;
+                            //     select {
+                            //         @include selectField;
+                            //         width: 100%;
+                            //         option {
+                            //             position: absolute;
+                            //             outline: none;
+                            //             border: none;
+                            //             background-color: $secondary-bg;
+                            //         }
+                            //     }
+                            // }
+                            // // * Select Input Arrow
+                            // .select-box::before {
+                            //     content: '';
+                            //     position: absolute;
+                            //     width: 15px;
+                            //     height: 15px;
+                            //     z-index: 2;
+                            //     right: 0;
+                            //     transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
+                            //     // border: 2px solid $black;
+                            //     border-bottom: 2px solid $black;
+                            //     border-left: 2px solid $black;
+                            //     transition: ease-out 300ms;
+                            //     pointer-events: none;
+                            // }
+                            // .select-box:focus-within::before {
+                            //     border-top: 2px solid $black;
+                            //     border-right: 2px solid $black;
+                            //     border-bottom: none;
+                            //     border-left: none;
+                            //     transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
+                            // }
+                            // * Radio Buttons
+                            .box-wrap {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-around;
+                                .radio-btn-wrapper {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    span {
+                                        white-space: nowrap;
+                                    }
+                                    input[type="radio"] {
+                                        @include formRadioButtons;
+                                    }
+                                    // input[type="radio"]:focus {
+                                    //     outline: max(1px, 0.15em) solid $primary;
+                                    //     outline-offset: max(2px, 0.15em);
+                                    // }
+                                }
+                            }
+                        }
+                    }
+                    // * Rowspan Header: Header and Buttons 
+                    .rowspan:first-of-type {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .header-wrapper {
+                            h2 {
+                                font-size: $font-size-x-large;
+                            }
+                            .header-inner-wrapper {
+                                display: flex;
+                                align-items: center;
+                                gap: $spacing-2x-large;
+                                
+                            }
+                        }
+                        .btn-wrapper {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 1.5rem;
+                        }
+                        .CI-time-wrapper {
+                            display: flex;
+                            gap: 2rem;
+                            .box {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                span {
+                                    font-size: $font-size-large;
+                                    font-weight: $font-weight-bold;
+                                    color: $primary;
+                                }
+                            }
+                        }
+                    }
+                    // * Rowspan 2: First Name, Middle Name , Last Name, and Suffix
+                    .rowspan:nth-of-type(2) {
+                        @include rowspan2;
+                    }
+                    // * Rowspan 3: Gender, Date Of Birth, Age, Place Of Birth and Civil Status
+                    .rowspan:nth-of-type(3) {
+                        @include rowspan3;
+                    }
+                    // * Rowspan 4: Contact Number and Email Address
+                    .rowspan:nth-of-type(4) {
+                        @include rowspan4;
+                    }
+                    // * Rowspan 5: Rented, Owned, Free of Use Radio Buttons and House Address
+                    .rowspan:nth-of-type(5) {
+                        @include rowspan5;
+                    }
+                    // * Rowspan 6: Barangay, City / Municipality, Province / Region, and Country
+                    .rowspan:nth-of-type(6) {
+                        @include rowspan6;
+                    }
+                    // * Rowspan 7: Zip Code and Years Of Stay 
+                    .rowspan:nth-of-type(7) {
+                        @include rowspan7;
+                    }
+                    // * Rowspan 8: View Loan and Payment History
+                    .rowspan:nth-of-type(8) {
+                        // @include rowspan8;
+                        place-self: flex-end;
+                        align-self: center;
+                    }
+                }
+            }
+            // * Container 2: File Attachments and Monthly Bills
+            .na-container-2 {
+                width: calc(100% - 80%);
+                padding: 2rem 2rem 2rem 1rem;
+                // * Small Container
+                .small-con {
+                    height: 100%;
+                    width: 100%;
+                    @include twoBlockGrid;
+                    // * Rowspan Global Styles
+                    .box-wrap {
+                        // padding: 3rem 4rem;
+                        padding: min(3rem, 5%) min(4rem, 10%);
+                        @include containerDefault2;
+                    }
+                    // * Boxwrap 1
+                    .box-wrap:first-of-type {
+                        // padding: 3rem 4rem;
+                        padding: min(3rem, 5%) min(4rem, 10%);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        // * Colspan 1
+                        .colspan {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 2rem;
+                            .input-wrapper {
+                                display: grid;
+                                place-items: center;
+                                position: relative;
+    
+                                input[type="image"] {
+                                    width: clamp(4rem, 20vw, 100%);
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+                                    &:hover::before {
+                                        content: 'X';
+                                        cursor: pointer;
+                                        position: absolute;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        right: 0;
+                                        top: 0;
+                                        transform: translate(0.6rem, -0.4rem);
+                                        font-size: $font-size-small;
+                                        font-weight: $font-weight;
+                                        color: $white;
+                                        width: 1.5rem;
+                                        height: 1.5rem;
+                                        border-radius: $circle;
+                                        background-color: $alert;
+                                        z-index: 9;
+                                    }
+                            }
+                            // * Colspan 1 : Buttons
+                            .btn-wrapper:nth-of-type(2) {
+                                display: flex;
+                                flex-direction: column;
+                                gap: $spacing-2x-large;
+                            }
+                            .btn-wrapper:last-of-type {
+                                display: flex;
+                                gap: $spacing-2x-large;
+                            }
+                            .transparentButton3 {
+                                place-self: flex-end;
+                            }
+                        }
+                    }
+                    // * Boxwrap 2
+                    .box-wrap:last-of-type {
+                        display: flex;
+                        flex-direction: column;
+                        // * Colspan 2
+                        .colspan:last-of-type {
+                            display: flex;
+                            flex-direction: column;
+                            h3 {
+                                margin: min(0.5rem, 5%) 0;
+                                font-style: italic;
+                                font-size: $font-size-medium;
+                                span {
+                                    font-weight: $font-weight;
+                                }
+                            }
+                            // * Colspan 2 : Input Fields
+                            .input-wrapper {
+                                display: flex;
+                                flex-direction: column;
+                                span {
+                                    font-weight: $font-weight-bold;
+                                    margin: min(1rem, 5%) 0;
+                                    font-size: $font-size;
+                                }
+                                // * Input Global Styles
+                                input {
+                                    @include inputField;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    }
+    // * View Co Borrower Container 1
+    .view-co-borrower-con-1 {
+        height: 120%;
+        display: flex;
+        flex-direction: column;
+        // * Container 1: New Member Form Fields and Buttons
+        .view-inner-con-1 {
+            display: grid;
+            grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.4fr);
+            margin: 2rem;
+            // background-color: rebeccapurple;
+            @include containerDefault2;
+
+            // * Big Container 
+            .big-con {
+                // height: 100%;
+                padding: $spacing-5x-large $spacing-large $spacing-5x-large $spacing-5x-large;
+                @include bigContainerGrid;
+                grid-template-rows: repeat(6, minmax(0, 1fr));
+                
+                // ** Rowspan Global Styles
+                .rowspan {
+                    min-height: 0;
+                    /* NEW */
+                    min-width: 0;
+                    /* NEW; needed for Firefox */
+                    .input-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        span {
+                            margin-bottom: 1rem;
+                            font-weight: $font-weight-bold;
+                            font-size: $font-size;
+                        }
+                        // * Input Global Styles
+                        input {
+                            @include inputField;
+                        }
+                        // * Radio Buttons
+                        .box-wrap {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            .radio-btn-wrapper {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                span {
+                                    white-space: nowrap;
+                                }
+                                input[type="radio"] {
+                                    @include formRadioButtons;
+                                }
+                                // input[type="radio"]:focus {
+                                //     outline: max(1px, 0.15em) solid $primary;
+                                //     outline-offset: max(2px, 0.15em);
+                                // }
+                            }
+                        }
+                    }
+                }
+                // * Rowspan Header: Header and Buttons 
+                .rowspan:first-of-type {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .header-wrapper {
+                        h2 {
+                            font-size: $font-size-x-large;
+                        }
+                        .header-inner-wrapper {
+                            display: flex;
+                            align-items: flex-start;
+                            gap: $spacing-2x-large;
+                            .box-wrapper {
+                                display: flex;
+                                flex-direction: column;
+                                p {
+                                    font-size: $font-size-medium;
+                                    font-style: italic;
+                                }
+                            }
+                        }
+                    }
+                    .btn-wrapper {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 1.5rem;
+                    }
+                }
+                // * Rowspan 2: First Name, Middle Name , Last Name, and Suffix
+                .rowspan:nth-of-type(2) {
+                    @include rowspan2;
+                }
+                // * Rowspan 3: Gender, Date Of Birth, Age, Place Of Birth and Civil Status
+                .rowspan:nth-of-type(3) {
+                    @include rowspan3;
+                }
+                // * Rowspan 4: Contact Number and Email Address
+                .rowspan:nth-of-type(4) {
+                    @include rowspan4;
+                }
+                // * Rowspan 5: Rented, Owned, Free of Use Radio Buttons and House Address
+                .rowspan:nth-of-type(5) {
+                    @include rowspan5;
+                }
+                // * Rowspan 6: Barangay, City / Municipality, Province / Region, and Country
+                .rowspan:nth-of-type(6) {
+                    @include rowspan6;
+                }
+                // * Rowspan 7: Zip Code and Years Of Stay 
+                .rowspan:nth-of-type(7) {
+                    @include rowspan7;
+                    grid-template-columns: minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 0.6fr);
+                }
+                // * Rowspan 8: View Loan and Payment History
+                .rowspan:nth-of-type(8) {
+                    // @include rowspan8;
+                    place-self: flex-end;
+                    align-self: center;
+                }
+            }
+            // * Small Container
+            .small-con {
+                height: 100%;
+                width: 100%;
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                padding: 0 $spacing-2x-large;
+                // * Rowspan Global Styles
+                .box-wrap {
+                    // padding: 3rem 4rem;
+                    padding: min(3rem, 5%) min(4rem, 10%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    // * Colspan 1
+                    .colspan {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 2rem;
+                        .input-wrapper {
+                            display: grid;
+                            place-items: center;
+                            position: relative;
+
+                            input[type="image"] {
+                                width: clamp(4rem, 20vw, 100%);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                                &:hover::before {
+                                    content: 'X';
+                                    cursor: pointer;
+                                    position: absolute;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    right: 0;
+                                    top: 0;
+                                    transform: translate(0.6rem, -0.4rem);
+                                    font-size: $font-size-small;
+                                    font-weight: $font-weight;
+                                    color: $white;
+                                    width: 1.5rem;
+                                    height: 1.5rem;
+                                    border-radius: $circle;
+                                    background-color: $alert;
+                                    z-index: 9;
+                                }
+                        }
+                        // * Colspan 1 : Buttons
+                        .btn-wrapper:nth-of-type(2) {
+                            display: flex;
+                            flex-direction: column;
+                            gap: $spacing-2x-large;
+                        }
+                        .btn-wrapper:last-of-type {
+                            display: flex;
+                            gap: $spacing-2x-large;
+                        }
+                        .transparentButton3 {
+                            place-self: flex-end;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // * View Co Borrower Container 2
+    .view-co-borrower-con-2 {
+        height: calc(100% - 50%);
+        width: 100%;
+        padding: 2rem;
+        .small-con-2 {
+            height: 100%;
+            width: 100%;
+            @include smallContainerGrid2;
+            @include containerDefault2;
+            grid-template-rows: repeat(4, minmax(0, 1fr));
+            padding: 3rem 4rem 3rem 4rem;
+            .rowspan {
+                min-height: 0;
+                /* NEW */
+                min-width: 0;
+                /* NEW; needed for Firefox */
+                .input-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    >span {
+                        margin-bottom: 1rem;
+                        font-weight: $font-weight-bold;
+                        font-size: $font-size;
+                    }
+                    // * Input Global Styles
+                    input {
+                        @include inputField;
+                    }
+                    // * Radio Buttons
+                    .box-wrap {
+                        display: flex;
+                        align-items: center;
+                        .radio-btn-wrapper {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            span {
+                                font-weight: $font-weight-bold;
+                                margin-left: calc(1rem - 0.4rem);
+                                white-space: nowrap;
+                            }
+                            input[type="radio"] {
+                                @include formRadioButtons;
+                            }
+                            // input[type="radio"]:focus {
+                            //     outline: max(1px, 0.15em) solid $primary;
+                            //     outline-offset: max(2px, 0.15em);
+                            // }
+                        }
+                    }
+                }
+            }
+            // * Rowspan Header
+            .rowspan:first-of-type {
+                h2 {
+                    font-size: $font-size-x-large;
+                }
+                span {
+                    font-size: $font-size-medium;
+                    font-weight: $font-weight;
+                    font-style: italic;
+                }
+            }
+            // * Rowspan 2: Employment Status, Current Job / Position, Years Of Service and Company Name
+            .rowspan:nth-of-type(2) {
+                @include smallcon2Rowspan2;
+            }
+            // * Rowspan 3: Company Address, Monthly Salary, Other Source of Income, and Do you own a Business?
+            .rowspan:nth-of-type(3) {
+                @include smallcon2Rowspan3;
+                // *  Do you own a Business?
+                .input-wrapper:last-of-type>span {
+                    font-style: italic;
+                }
+                span:first-of-type {
+                    margin-right: 1.5rem;
+                }
+            }
+            // * Rowspan 4: Update Button
+            .rowspan:nth-of-type(4) {
+                display: grid;
+                justify-content: flex-end;
+                align-items: flex-end;
             }
         }
     }

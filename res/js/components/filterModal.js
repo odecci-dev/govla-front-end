@@ -28,4 +28,27 @@ if (filterMemberModal) {
     
     })
 
+
+    // If the dropdown filter is in the DOM
+    const selected = document.querySelector('[data-filter-type-loan-select]');
+
+    if (selected) {
+        
+        const optionsContainer = document.querySelector('[data-filter-type-opt-con');
+        const optionsList = document.querySelectorAll('[data-filter-type-loan-opt]');
+    
+        selected.addEventListener("click", () => {
+            optionsContainer.classList.toggle("active");
+        });
+    
+        optionsList.forEach(option => {
+            option.addEventListener("click", () => {
+                selected.innerHTML = option.querySelector("label").innerHTML;
+                optionsContainer.classList.remove("active");
+            });
+        });
+
+    }
+
+
 }
