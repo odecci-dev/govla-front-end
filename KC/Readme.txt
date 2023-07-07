@@ -556,3 +556,5 @@ Second Commit:
 • Modified checkbox
     - Background color #D9D9D9 (_mixins.scss)
 
+Third Commit:
+• User Access Control: Hover

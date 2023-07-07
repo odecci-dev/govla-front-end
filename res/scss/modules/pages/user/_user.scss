@@ -357,8 +357,27 @@
           // **                         ** //
           // **** Table Header Styles **** //
           // **                         ** //
+          empty-cells: hide;
+          tr {
+            &:hover {
+              background: none;
+              color: $black;
+            }
+            td {
+              transition: 200ms ease-in-out;
+              &.empty-cell:not(:empty) {
+                pointer-events: none;
+
+            }
+            }
+            &>td:hover {
+              background-color: $primary;
+              color: $white;
+            }
+          }
+          // * Table Checkbox
           th {
-            padding: 4rem 0;
+            padding: $spacing-4x-large $spacing-large;
             text-align: left;
             &.th-name {
               font-size: $font-size-x-medium;
@@ -370,28 +389,14 @@
             display: flex;
             gap: 0 1rem;
           }
-          // * Table Checkbox
-          th:first-of-type {
-            padding-left: 1rem;
-          }
-          // * Borrower
-          th:nth-of-type(2) {
-            padding-left: 1rem;
-          }
           // **                       ** //
           // **** Table Data Styles **** //
           // **                       ** //
           td {
-            padding: $spacing-large 0;
+            padding: $spacing-large;
             font-size: $font-size-x-medium;
           }
           
-          td:first-of-type {
-            padding-left: 1rem;
-          }
-          td:nth-of-type(2) {
-            padding-left: 1rem;
-          }
         }
       }
     }

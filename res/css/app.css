@@ -6467,8 +6467,25 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
 }
+.nu-con-2 .container-wrapper .ur-con-1 .table-container table {
+  empty-cells: hide;
+}
+.nu-con-2 .container-wrapper .ur-con-1 .table-container table tr:hover {
+  background: none;
+  color: #29292B;
+}
+.nu-con-2 .container-wrapper .ur-con-1 .table-container table tr td {
+  transition: 200ms ease-in-out;
+}
+.nu-con-2 .container-wrapper .ur-con-1 .table-container table tr td.empty-cell:not(:empty) {
+  pointer-events: none;
+}
+.nu-con-2 .container-wrapper .ur-con-1 .table-container table tr > td:hover {
+  background-color: #D6A330;
+  color: #FFFFFF;
+}
 .nu-con-2 .container-wrapper .ur-con-1 .table-container table th {
-  padding: 4rem 0;
+  padding: 4rem 1.5rem;
   text-align: left;
 }
 .nu-con-2 .container-wrapper .ur-con-1 .table-container table th.th-name {
@@ -6479,19 +6496,7 @@ body {
   display: flex;
   gap: 0 1rem;
 }
-.nu-con-2 .container-wrapper .ur-con-1 .table-container table th:first-of-type {
-  padding-left: 1rem;
-}
-.nu-con-2 .container-wrapper .ur-con-1 .table-container table th:nth-of-type(2) {
-  padding-left: 1rem;
-}
 .nu-con-2 .container-wrapper .ur-con-1 .table-container table td {
-  padding: 1.5rem 0;
+  padding: 1.5rem;
   font-size: 1.8rem;
-}
-.nu-con-2 .container-wrapper .ur-con-1 .table-container table td:first-of-type {
-  padding-left: 1rem;
-}
-.nu-con-2 .container-wrapper .ur-con-1 .table-container table td:nth-of-type(2) {
-  padding-left: 1rem;
 }/*# sourceMappingURL=app.css.map */

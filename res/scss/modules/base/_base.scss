@@ -115,6 +115,7 @@ button {
 table {
     border-collapse: collapse;
     width: 100%;
+
     tr:first-of-type {
         isolation: isolate;
         position: sticky;
