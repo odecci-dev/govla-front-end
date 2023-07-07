@@ -98,24 +98,6 @@
           }
         }
       }
-      // * Table Checkbox
-      input[type="checkbox"] {
-        @include tableCheckboxInput;
-        &::after {
-          content: url("../assets/icons/white-check.svg");
-          position: absolute;
-          top: 0.1rem;
-          visibility: hidden;
-        }
-        &:checked {
-          background-color: $primary;
-          animation: pop-up-big 300ms forwards;
-        }
-        &:checked:after {
-          // animation: pop-up 300ms forwards;
-          visibility: visible;
-        }
-      }
       // * All table header except the last child
       th:nth-of-type(-n + 5) {
         text-align: left;
@@ -153,14 +135,6 @@
           justify-content: center;
           button {
             cursor: pointer;
-          }
-          // * Table View Button
-          .a-btn-view {
-            @include secondaryButton;
-          }
-          // * Table Trash Button
-          .a-btn-trash {
-            @include transparentButton2;
           }
         }
       }

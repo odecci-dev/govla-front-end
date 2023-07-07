@@ -429,7 +429,7 @@ First Commit:
 - Implemented the Assets and Properties, Appliances, and Bank Accounts Layout Revisions
 • Implemented incrementing of IDs in  Assets and Properties, Appliances, and Bank Accounts Forms
 
-June 03, 2023 (Tuesday)
+June 04, 2023 (Tuesday)
 First Commit:
 • New Application: Loan Details Layout Revisions 
 - Increased height of each table 
@@ -456,7 +456,7 @@ Sixth Commit:
 Seventh Commit:
 • Updated New Application Modal
 
-June 04, 2023 (Wednesday)
+June 05, 2023 (Wednesday)
 First Commit:
 • New Application Module: Updates on btns, modal, and forms
 - Updates:
@@ -495,7 +495,7 @@ Fifth Commit:
 Sixth Commit:
 • New Application Module: Updated Navigation Links
 
-June 05, 2023 (Thursday)
+June 06, 2023 (Thursday)
 First Commit:
 • Navlinks URL transferred from HTML pages to links.js 
 - For fast access when modifying the URL
@@ -541,4 +541,13 @@ Tenth Commit:
 • Fixed all console error messages
 • Transferred all navigation functions from app.js to nav.js
 
+
+June 07, 2023 (Thursday)
+First Commit:
+• Converted all button styles to Global Styles (_base.scss)
+• Fixed all console error messages
+• TODO: 
+    - Filter Modal Design
+    - All List Filter
+    - Modal Search Filter
 

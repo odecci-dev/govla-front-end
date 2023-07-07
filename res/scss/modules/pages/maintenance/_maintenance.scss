@@ -201,24 +201,6 @@
                         }
                     }
                 }
-                // * Table Checkbox
-                input[type="checkbox"] {
-                    @include tableCheckboxInput;
-                    &::after {
-                        content: url('../assets/icons/white-check.svg');
-                        position: absolute;
-                        top: .1rem;
-                        visibility: hidden;
-                    }
-                    &:checked {
-                        background-color: $primary;
-                        animation: pop-up-big 300ms forwards;
-                    }
-                    &:checked:after {
-                        // animation: pop-up 300ms forwards;
-                        visibility: visible;
-                    }
-                }
                 // * All table header except the last child
                 th:nth-of-type(-n+6) {
                     text-align: left;
@@ -256,14 +238,6 @@
                         justify-content: center;
                         button {
                             cursor: pointer;
-                        }
-                        // * Table View Button 
-                        .a-btn-view {
-                            @include secondaryButton;
-                        }
-                        // * Table Trash Button
-                        .a-btn-trash {
-                            @include transparentButton2;
                         }
                     }
                 }
@@ -833,21 +807,6 @@
                                     tr:last-of-type {
                                         border-bottom: 1px solid $black;
                                     }
-                                    // tr:not(:first-of-type):hover {
-                                    //     cursor: pointer;
-                                    //     background-color: $primary;
-                                    //     color: $white;
-                                    //     transition: 300ms ease-out;
-                                    // }
-                                    // tr:hover>.td-btns>.td-btn-wrapper>button {
-                                    //     background-color: $white;
-                                    //     color: $primary;
-                                    //     transition: 200ms ease-out;
-                                    //     &:hover {
-                                    //         background-color: $black;
-                                    //         color: $white;
-                                    //     }
-                                    // }
                                     th {
                                         padding: $spacing-2x-large $spacing-medium;
                                         text-align: center;
@@ -863,24 +822,6 @@
                                                 cursor: pointer;
                                                 padding-left: .5rem;
                                             }
-                                        }
-                                    }
-                                    // * Table Checkbox
-                                    input[type="checkbox"] {
-                                        @include tableCheckboxInput;
-                                        &::after {
-                                            content: url('../assets/icons/white-check.svg');
-                                            position: absolute;
-                                            top: .1rem;
-                                            visibility: hidden;
-                                        }
-                                        &:checked {
-                                            background-color: $primary;
-                                            animation: pop-up-big 300ms forwards;
-                                        }
-                                        &:checked:after {
-                                            // animation: pop-up 300ms forwards;
-                                            visibility: visible;
                                         }
                                     }
                                     // * All table header except the last child
@@ -904,17 +845,11 @@
                                             display: flex;
                                             align-items: center;
                                             justify-content: center;
-                                            button {
-                                                cursor: pointer;
-                                            }
-                                            // // * Table View Button 
-                                            // .a-btn-view {
-                                            //     @include secondaryButton;
-                                            // }
+                                            // TODO: Different Trash Button Style
                                             // * Table Trash Button
-                                            .a-btn-trash {
-                                                @include tableButton;
-                                            }
+                                            // .a-btn-trash {
+                                            //     @include tableButton;
+                                            // }
                                         }
                                     }
                                 }

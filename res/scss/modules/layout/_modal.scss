@@ -214,14 +214,6 @@
                                 button {
                                     cursor: pointer;
                                 }
-                                // * Table View Button 
-                                .a-btn-view {
-                                    @include secondaryButton;
-                                }
-                                // * Table Trash Button
-                                .a-btn-trash {
-                                    @include transparentButton2;
-                                }
                             }
                         }
                         // * Due Date Data
@@ -414,22 +406,6 @@
                                 }
                             }
                         }
-                        // * Table Checkbox
-                        input[type="checkbox"] {
-                            @include tableCheckboxInput;
-                        }
-                        input[type="checkbox"]::after {
-                            content: url('../assets/icons/white-check.svg');
-                            position: absolute;
-                            top: .1rem;
-                            display: none;
-                        }
-                        input[type="checkbox"]:checked {
-                            background-color: $primary;
-                        }
-                        input[type="checkbox"]:checked:after {
-                            display: block;
-                        }
                         th {
                             text-align: left;
                         }
@@ -464,17 +440,6 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
-                                button {
-                                    cursor: pointer;
-                                }
-                                // * Table View Button 
-                                .a-btn-view {
-                                    @include secondaryButton;
-                                }
-                                // * Table Trash Button
-                                .a-btn-trash {
-                                    @include transparentButton2;
-                                }
                             }
                         }
                         // * Due Date Data
@@ -701,3 +666,6 @@
         }
     }
 }
+
+
+// ***** Filter Modals ***** //

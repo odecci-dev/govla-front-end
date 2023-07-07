@@ -1,4 +1,5 @@
 const linkToNewApplication = document.querySelector('[data-member-new-application]')
+const linkToNewApplicationGroup = document.querySelector('[data-member-new-application-group]')
 const linkToMemberBorrower = document.querySelectorAll('[data-member-borrower]')
 const linkToMemberCoBorrower = document.querySelectorAll('[data-member-co-borrower]')
 const linkToMemberGroupLoan = document.querySelectorAll('[data-member-group-loan]')
@@ -7,6 +8,15 @@ if (linkToNewApplication) {
     linkToNewApplication.addEventListener('click', () => {
 
         url = '/KC/transactions/new-application.html'
+        window.location = url
+    
+    })
+}
+
+if (linkToNewApplicationGroup) {
+    linkToNewApplicationGroup.addEventListener('click', () => {
+
+        url = '/KC/transactions/new-group-application.html'
         window.location = url
     
     })

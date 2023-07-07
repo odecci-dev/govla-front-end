@@ -111,6 +111,7 @@ button {
   font-family: "Inter", sans-serif;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 table {
@@ -133,16 +134,17 @@ table tr:first-of-type::after {
   box-shadow: 0px 2px 11px 1px rgba(233, 233, 233, 0.75);
 }
 table tr:not(:first-of-type):hover {
-  transition: 200ms ease-in-out;
-  color: #FFFFFF;
+  cursor: pointer;
   background-color: #D6A330;
+  color: #FFFFFF;
+  transition: 300ms ease-out;
 }
-table tr:hover > .td-btns > .td-btn-wrapper > button {
+table tr:not(:first-of-type):hover > .td-btns > .td-btn-wrapper > button:nth-of-type(1) {
   background-color: #FFFFFF;
   color: #D6A330;
   transition: 200ms ease-out;
 }
-table tr:hover > .td-btns > .td-btn-wrapper > button:hover {
+table tr:not(:first-of-type):hover > .td-btns > .td-btn-wrapper > button:nth-of-type(1):hover {
   background-color: #29292B;
   color: #FFFFFF;
 }
@@ -230,6 +232,103 @@ table th {
 }
 .transparentButtonUnderline:hover {
   color: #29292B;
+}
+
+.a-btn-view {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  padding: 0.6rem 3.5rem;
+}
+.a-btn-view:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
+.a-btn-view:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
+
+.a-btn-trash {
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #D6A330;
+  background: transparent;
+  transition: all 200ms ease-in-out;
+  padding: 0.8rem 4rem;
+  font-size: 1.5rem;
+}
+.a-btn-trash:hover {
+  color: #29292B;
+  transform: scale(1.005);
+}
+.a-btn-trash:hover {
+  color: #29292B;
+  transform: scale(1.005);
+}
+
+.a-btn-trash-2 {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  font-size: 1rem;
+  padding: 0.4rem 2.5rem;
+}
+.a-btn-trash-2:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
+
+.a-btn-edit {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  font-size: 1rem;
+  padding: 0.4rem 2.5rem;
+}
+.a-btn-edit:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
+
+.a-btn-delete {
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #D6A330;
+  background: transparent;
+  transition: all 200ms ease-in-out;
+  padding: 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-size: 1rem;
+  padding: 0.4rem 2.5rem;
+}
+.a-btn-delete:hover {
+  color: #29292B;
+  transform: scale(1.005);
+}
+.a-btn-delete:hover {
+  color: #29292B;
+  transform: scale(1.005);
 }
 
 .viewLoanDetailsButton {
@@ -872,40 +971,6 @@ body {
 .na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td .td-btn-wrapper button {
   cursor: pointer;
 }
-.na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td .td-btn-wrapper .a-btn-view {
-  border-radius: 1rem;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
-  padding: 0.6rem 3.5rem;
-}
-.na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td .td-btn-wrapper .a-btn-view:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
-}
-.na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td .td-btn-wrapper .a-btn-view:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
-}
-.na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td .td-btn-wrapper .a-btn-trash {
-  cursor: pointer;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #D6A330;
-  background: transparent;
-  transition: all 200ms ease-in-out;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-}
-.na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table td .td-btn-wrapper .a-btn-trash:hover {
-  color: #29292B;
-  transform: scale(1.005);
-}
 .na-modal .modal-container .rowspan:nth-of-type(3) .na-table-con .table-container table .td-due {
   font-weight: 700;
 }
@@ -1083,50 +1148,6 @@ body {
   cursor: pointer;
   padding-left: 0.5rem;
 }
-.ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table input[type=checkbox] {
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
-  transition: background-color 150ms ease-in-out;
-}
-.ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table input[type=checkbox]:hover {
-  background-color: rgba(41, 41, 43, 0.6);
-}
-.ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table input[type=checkbox]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table input[type=checkbox]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table input[type=checkbox]:checked:after {
-  visibility: visible;
-}
-.ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table input[type=checkbox]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  display: none;
-}
-.ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table input[type=checkbox]:checked {
-  background-color: #D6A330;
-}
-.ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table input[type=checkbox]:checked:after {
-  display: block;
-}
 .ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table th {
   text-align: left;
 }
@@ -1155,43 +1176,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table td .td-btn-wrapper button {
-  cursor: pointer;
-}
-.ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table td .td-btn-wrapper .a-btn-view {
-  border-radius: 1rem;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
-  padding: 0.6rem 3.5rem;
-}
-.ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table td .td-btn-wrapper .a-btn-view:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
-}
-.ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table td .td-btn-wrapper .a-btn-view:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
-}
-.ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table td .td-btn-wrapper .a-btn-trash {
-  cursor: pointer;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #D6A330;
-  background: transparent;
-  transition: all 200ms ease-in-out;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-}
-.ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table td .td-btn-wrapper .a-btn-trash:hover {
-  color: #29292B;
-  transform: scale(1.005);
 }
 .ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container table .td-due {
   font-weight: 700;
@@ -2152,51 +2136,6 @@ body {
   cursor: pointer;
   padding-left: 0.5rem;
 }
-.main-dashboard .m-con-2 .table-container table input[type=checkbox] {
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
-  transition: background-color 150ms ease-in-out;
-}
-.main-dashboard .m-con-2 .table-container table input[type=checkbox]:hover {
-  background-color: rgba(41, 41, 43, 0.6);
-}
-.main-dashboard .m-con-2 .table-container table input[type=checkbox]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .m-con-2 .table-container table input[type=checkbox]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .m-con-2 .table-container table input[type=checkbox]:checked:after {
-  visibility: visible;
-}
-.main-dashboard .m-con-2 .table-container table input[type=checkbox]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .m-con-2 .table-container table input[type=checkbox]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .m-con-2 .table-container table input[type=checkbox]:checked:after {
-  visibility: visible;
-}
 .main-dashboard .m-con-2 .table-container table th:nth-of-type(-n+6) {
   text-align: left;
 }
@@ -2228,40 +2167,6 @@ body {
 }
 .main-dashboard .m-con-2 .table-container table td .td-btn-wrapper button {
   cursor: pointer;
-}
-.main-dashboard .m-con-2 .table-container table td .td-btn-wrapper .a-btn-view {
-  border-radius: 1rem;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
-  padding: 0.6rem 3.5rem;
-}
-.main-dashboard .m-con-2 .table-container table td .td-btn-wrapper .a-btn-view:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
-}
-.main-dashboard .m-con-2 .table-container table td .td-btn-wrapper .a-btn-view:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
-}
-.main-dashboard .m-con-2 .table-container table td .td-btn-wrapper .a-btn-trash {
-  cursor: pointer;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #D6A330;
-  background: transparent;
-  transition: all 200ms ease-in-out;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-}
-.main-dashboard .m-con-2 .table-container table td .td-btn-wrapper .a-btn-trash:hover {
-  color: #29292B;
-  transform: scale(1.005);
 }
 .main-dashboard .m-con-2 .table-container table .td-due {
   font-weight: 700;
@@ -2996,51 +2901,6 @@ body {
   cursor: pointer;
   padding-left: 0.5rem;
 }
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table input[type=checkbox] {
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
-  transition: background-color 150ms ease-in-out;
-}
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table input[type=checkbox]:hover {
-  background-color: rgba(41, 41, 43, 0.6);
-}
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table input[type=checkbox]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table input[type=checkbox]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table input[type=checkbox]:checked:after {
-  visibility: visible;
-}
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table input[type=checkbox]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table input[type=checkbox]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table input[type=checkbox]:checked:after {
-  visibility: visible;
-}
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table th:nth-of-type(-n+4) {
   text-align: left;
 }
@@ -3057,26 +2917,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table td .td-btn-wrapper button {
-  cursor: pointer;
-}
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table td .td-btn-wrapper .a-btn-trash {
-  border-radius: 1rem;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
-  font-size: 1rem;
-  padding: 0.4rem 2.5rem;
-}
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table td .td-btn-wrapper .a-btn-trash:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container.tbc-2 tr {
   display: flex;
@@ -4007,40 +3847,6 @@ body {
 .main-dashboard .am-con-2 .table-container table td .td-btn-wrapper button {
   cursor: pointer;
 }
-.main-dashboard .am-con-2 .table-container table td .td-btn-wrapper .a-btn-view {
-  border-radius: 1rem;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
-  padding: 0.6rem 3.5rem;
-}
-.main-dashboard .am-con-2 .table-container table td .td-btn-wrapper .a-btn-view:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
-}
-.main-dashboard .am-con-2 .table-container table td .td-btn-wrapper .a-btn-view:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
-}
-.main-dashboard .am-con-2 .table-container table td .td-btn-wrapper .a-btn-trash {
-  cursor: pointer;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #D6A330;
-  background: transparent;
-  transition: all 200ms ease-in-out;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-}
-.main-dashboard .am-con-2 .table-container table td .td-btn-wrapper .a-btn-trash:hover {
-  color: #29292B;
-  transform: scale(1.005);
-}
 .main-dashboard .am-con-2 .table-container table .td-due {
   font-weight: 700;
 }
@@ -4127,43 +3933,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.main-dashboard .amg-con-2 .table-container table td .td-btn-wrapper button {
-  cursor: pointer;
-}
-.main-dashboard .amg-con-2 .table-container table td .td-btn-wrapper .a-btn-view {
-  border-radius: 1rem;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
-  padding: 0.6rem 3.5rem;
-}
-.main-dashboard .amg-con-2 .table-container table td .td-btn-wrapper .a-btn-view:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
-}
-.main-dashboard .amg-con-2 .table-container table td .td-btn-wrapper .a-btn-view:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
-}
-.main-dashboard .amg-con-2 .table-container table td .td-btn-wrapper .a-btn-trash {
-  cursor: pointer;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #D6A330;
-  background: transparent;
-  transition: all 200ms ease-in-out;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-}
-.main-dashboard .amg-con-2 .table-container table td .td-btn-wrapper .a-btn-trash:hover {
-  color: #29292B;
-  transform: scale(1.005);
 }
 .main-dashboard .amg-con-2 .table-container table .td-due {
   font-weight: 700;
@@ -4345,39 +4114,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.main-dashboard .na-form-con .nal-con-2 .table-container table td .td-btn-wrapper .a-btn-view {
-  border-radius: 1rem;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
-  font-size: 1rem;
-  padding: 0.4rem 2.5rem;
-}
-.main-dashboard .na-form-con .nal-con-2 .table-container table td .td-btn-wrapper .a-btn-view:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
-}
-.main-dashboard .na-form-con .nal-con-2 .table-container table td .td-btn-wrapper .a-btn-trash {
-  cursor: pointer;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #D6A330;
-  background: transparent;
-  transition: all 200ms ease-in-out;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-size: 1rem;
-  padding: 0.4rem 2.5rem;
-}
-.main-dashboard .na-form-con .nal-con-2 .table-container table td .td-btn-wrapper .a-btn-trash:hover {
-  color: #29292B;
-  transform: scale(1.005);
 }
 .main-dashboard .na-form-con .nal-con-2 .table-container table .td-num {
   text-align: right;
@@ -5347,39 +5083,6 @@ body {
   cursor: pointer;
   margin: 0 0.5rem;
 }
-.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table .td-btn-wrapper .a-btn-edit {
-  border-radius: 1rem;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
-  font-size: 1rem;
-  padding: 0.4rem 2.5rem;
-}
-.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table .td-btn-wrapper .a-btn-edit:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
-}
-.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table .td-btn-wrapper .a-btn-trash {
-  cursor: pointer;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #D6A330;
-  background: transparent;
-  transition: all 200ms ease-in-out;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-size: 1rem;
-  padding: 0.4rem 2.5rem;
-}
-.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table .td-btn-wrapper .a-btn-trash:hover {
-  color: #29292B;
-  transform: scale(1.005);
-}
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(6) {
   display: grid;
   grid-auto-flow: row dense;
@@ -6270,29 +5973,6 @@ body {
   justify-content: center;
   gap: 0 1rem;
 }
-.main-dashboard .na-form-con .na-container-group-2 .table-container table td .td-btn-wrapper .a-btn-view,
-.main-dashboard .na-form-con .na-container-group-2 .table-container table td .td-btn-wrapper .a-btn-trash {
-  border-radius: 1rem;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
-  padding: 0.6rem 3.5rem;
-}
-.main-dashboard .na-form-con .na-container-group-2 .table-container table td .td-btn-wrapper .a-btn-view:hover,
-.main-dashboard .na-form-con .na-container-group-2 .table-container table td .td-btn-wrapper .a-btn-trash:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
-}
-.main-dashboard .na-form-con .na-container-group-2 .table-container table td .td-btn-wrapper .a-btn-view:hover,
-.main-dashboard .na-form-con .na-container-group-2 .table-container table td .td-btn-wrapper .a-btn-trash:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
-}
 .main-dashboard .na-form-con .na-container-group-2 .table-container table td:first-of-type {
   padding-left: 1rem;
 }
@@ -6495,51 +6175,6 @@ body {
   cursor: pointer;
   padding-left: 0.5rem;
 }
-.ul-con-2 .table-container table input[type=checkbox] {
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-  aspect-ratio: 1/1;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 0.4rem;
-  background-color: #EBEBEB;
-  transition: background-color 150ms ease-in-out;
-}
-.ul-con-2 .table-container table input[type=checkbox]:hover {
-  background-color: rgba(41, 41, 43, 0.6);
-}
-.ul-con-2 .table-container table input[type=checkbox]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.ul-con-2 .table-container table input[type=checkbox]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.ul-con-2 .table-container table input[type=checkbox]:checked:after {
-  visibility: visible;
-}
-.ul-con-2 .table-container table input[type=checkbox]::after {
-  content: url("../assets/icons/white-check.svg");
-  position: absolute;
-  top: 0.1rem;
-  visibility: hidden;
-}
-.ul-con-2 .table-container table input[type=checkbox]:checked {
-  background-color: #D6A330;
-  animation: pop-up-big 300ms forwards;
-}
-.ul-con-2 .table-container table input[type=checkbox]:checked:after {
-  visibility: visible;
-}
 .ul-con-2 .table-container table th:nth-of-type(-n + 5) {
   text-align: left;
 }
@@ -6571,40 +6206,6 @@ body {
 }
 .ul-con-2 .table-container table td .td-btn-wrapper button {
   cursor: pointer;
-}
-.ul-con-2 .table-container table td .td-btn-wrapper .a-btn-view {
-  border-radius: 1rem;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #D6A330;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
-  padding: 0.6rem 3.5rem;
-}
-.ul-con-2 .table-container table td .td-btn-wrapper .a-btn-view:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
-}
-.ul-con-2 .table-container table td .td-btn-wrapper .a-btn-view:hover {
-  background-color: #29292B;
-  color: #FFFFFF;
-}
-.ul-con-2 .table-container table td .td-btn-wrapper .a-btn-trash {
-  cursor: pointer;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #D6A330;
-  background: transparent;
-  transition: all 200ms ease-in-out;
-  padding: 0.8rem 4rem;
-  font-size: 1.5rem;
-}
-.ul-con-2 .table-container table td .td-btn-wrapper .a-btn-trash:hover {
-  color: #29292B;
-  transform: scale(1.005);
 }
 .ul-con-2 .table-container table .td-due {
   font-weight: 700;

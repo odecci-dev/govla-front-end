@@ -1,68 +1,12 @@
 // ****** New Application Module ****** //
 
-
-// // * New Application (Group)
-// const openNewGroupButton = document.getElementById('data-open-new-group-modal')
-// const closeNewGroupButton = document.querySelector('#data-close-new-group-modal')
-// const newGroupModal = document.querySelector('[data-new-group-modal]')
-
-// openNewGroupButton.addEventListener('click', () => {
-//     // window.alert('open')
-//     console.log('open')
-//         // newGroupModal.showModal();
-// })
-
-// closeNewGroupButton.addEventListener('click', () => {
-//     newGroupModal.setAttribute("closing", "");
-//     newGroupModal.addEventListener("animationend", () => {
-//         newGroupModal.removeAttribute("closing");
-//         newGroupModal.close();
-//     }, { once: true });
-
-// })
-
-
-// newApplicationModal.addEventListener('click', e => {
-
-//     newApplicationModal.setAttribute("closing", "");
-//     newApplicationModal.addEventListener("animationend", () => {
-
-//         if (e.target.nodeName === 'DIALOG')
-//             newApplicationModal.removeAttribute("closing")
-
-//         newApplicationModal.close()
-
-//     }, { once: true })
-// })
-
-// newApplicationModal.addEventListener('click', e => {
-//     newApplicationModal.setAttribute("closing", "");
-//     newApplicationModal.addEventListener("animationend", () => {
-
-//         const newApplicationModalDimensions = newApplicationModal.getBoundingClientRect()
-
-//         if (
-//             e.clientX < newApplicationModalDimensions.left ||
-//             e.clientX > newApplicationModalDimensions.right ||
-//             e.clientY < newApplicationModalDimensions.top ||
-//             e.clientY > newApplicationModalDimensions.bottom
-//         ) {
-//             newApplicationModal.removeAttribute("closing");
-//         }
-//         newApplicationModal.close()
-
-//     }, { once: true })
-
-// })
-
-// *** END --- New Application Modal *** //
-
 // * Loan and Payement History Modal * //
 
 const loanDetailsModal = document.querySelector('[data-loan-details-modal]')
+const openLoanDetailsButton = document.querySelector('#data-open-loan-details')
 
-if (loanDetailsModal) {
-    const openLoanDetailsButton = document.querySelector('#data-open-loan-details')
+// * If this element is in the DOM, run else do nothing
+if (loanDetailsModal && openLoanDetailsButton) {
     const closeLoanDetailsButton = document.querySelector('#data-close-loan-details')
     
     

@@ -245,6 +245,10 @@
     @include transparentButton;
     padding: $btn-padding-2;
     font-size: $font-size-medium;
+    &:hover {
+        color: $black;
+        transform: scale(1.005);
+    }
 }
 
 // * Transparent Button 3

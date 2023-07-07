@@ -224,14 +224,6 @@
                         button {
                             cursor: pointer;
                         }
-                        // * Table View Button 
-                        .a-btn-view {
-                            @include secondaryButton;
-                        }
-                        // * Table Trash Button
-                        .a-btn-trash {
-                            @include transparentButton2;
-                        }
                     }
                 }
                 // * Due Date Data
@@ -338,17 +330,6 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        button {
-                            cursor: pointer;
-                        }
-                        // * Table View Button 
-                        .a-btn-view {
-                            @include secondaryButton;
-                        }
-                        // * Table Trash Button
-                        .a-btn-trash {
-                            @include transparentButton2;
-                        }
                     }
                 }
                 // * Due Date Data

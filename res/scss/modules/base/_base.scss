@@ -108,6 +108,8 @@ button {
     font-family: $font-family;
     border: none;
     outline: none;
+    cursor: pointer;
+
 }
 
 table {
@@ -129,34 +131,28 @@ table {
         }
 
     }
+
     tr:not(:first-of-type):hover {
-        transition: 200ms ease-in-out;
-        color: $white;
+        cursor: pointer;
         background-color: $primary;
-    }
+        color: $white;
+        transition: 300ms ease-out;
 
-    // tr:hover>.td-btns>.td-btn-wrapper>button {
-    //     transition: 200ms ease-in-out;
-    //     background-color: $white;
-    //     color: $black;
-    // }
+        &>.td-btns>.td-btn-wrapper>button:nth-of-type(1) {
+            background-color: $white;
+            color: $primary;
+            transition: 200ms ease-out;
+            &:hover {
+                background-color: $black;
+                color: $white;
+            }
+        }
 
-    tr:hover>.td-btns>.td-btn-wrapper>button {
-        background-color: $white;
-        color: $primary;
-        transition: 200ms ease-out;
-        &:hover {
-            background-color: $black;
+        &>.td-btns>.td-btn-wrapper>button.a-btn-trash {
+            transition: 200ms ease-in-out;
             color: $white;
         }
     }
-
-    tr:not(:first-of-type):hover>.td-btns>.td-btn-wrapper>button.a-btn-trash {
-        transition: 200ms ease-in-out;
-        color: $white;
-    }
-
-    
     
     th {
         position: sticky;
@@ -200,6 +196,31 @@ table {
 // * Transparent Underline Button Global
 .transparentButtonUnderline {
     @include transparentButton4;
+}
+
+// * Table View Button Global
+.a-btn-view {
+    @include secondaryButton;
+}
+
+// * Table Trash Button Global
+.a-btn-trash {
+    @include transparentButton2;
+}
+
+// * Table Trash 2 Button Global
+.a-btn-trash-2 {
+    @include tableButton;
+}
+
+// * Table Edit Button Global
+.a-btn-edit {
+    @include tableButton;
+}
+
+// * Table Delete Button Global
+.a-btn-delete {
+    @include tableTransparentTrashButton;
 }
 
 // * View Loan Details Button Global

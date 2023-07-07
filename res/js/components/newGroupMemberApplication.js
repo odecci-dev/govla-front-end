@@ -1,3 +1,4 @@
+// * Redirecting to the new group application
 const addMemberToGroupBtn = document.querySelector('[data-add-to-group]')
 
 addMemberToGroupBtn.addEventListener('click', () => {
