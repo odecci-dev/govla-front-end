@@ -122,9 +122,15 @@ button {
 
 }
 
+.rowspan:has(table) {
+    overflow-y: auto;
+    @include custom-scroll;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
+    overflow-y: auto;
 
     tr:first-of-type {
         isolation: isolate;
@@ -160,6 +166,14 @@ table {
         }
 
         &>.td-btns>.td-btn-wrapper>button.a-btn-trash {
+            transition: 200ms ease-in-out;
+            color: $white;
+            &:hover {
+                color: $black;
+            }
+        }
+
+        &>.td-btns>.td-btn-wrapper>button.a-btn-trash-3 {
             transition: 200ms ease-in-out;
             color: $white;
             &:hover {

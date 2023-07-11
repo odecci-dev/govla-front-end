@@ -542,7 +542,7 @@ Tenth Commit:
 • Transferred all navigation functions from app.js to nav.js
 
 
-June 07, 2023 (Thursday)
+June 07, 2023 (Friday)
 First Commit:
 • Converted all button styles to Global Styles (_base.scss)
 • Fixed all console error messages
@@ -577,3 +577,6 @@ Eight Commit:
 Ninth Commit:
 • Finished View Group Members
 
+June 11, 2023 (Tuesday)
+First Commit:
+• Made the overflow-y:auto global to all tables 

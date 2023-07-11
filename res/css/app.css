@@ -123,9 +123,25 @@ button {
   cursor: pointer;
 }
 
+.rowspan:has(table) {
+  overflow-y: auto;
+}
+.rowspan:has(table)::-webkit-scrollbar {
+  width: 1rem;
+}
+.rowspan:has(table)::-webkit-scrollbar-track {
+  border-radius: 3rem;
+  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+.rowspan:has(table)::-webkit-scrollbar-thumb {
+  border-radius: 3rem;
+  background-color: #D6A330;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
+  overflow-y: auto;
 }
 table tr:first-of-type {
   isolation: isolate;
@@ -162,6 +178,13 @@ table tr:not(:first-of-type):hover > .td-btns > .td-btn-wrapper > button.a-btn-t
   color: #FFFFFF;
 }
 table tr:not(:first-of-type):hover > .td-btns > .td-btn-wrapper > button.a-btn-trash:hover {
+  color: #29292B;
+}
+table tr:not(:first-of-type):hover > .td-btns > .td-btn-wrapper > button.a-btn-trash-3 {
+  transition: 200ms ease-in-out;
+  color: #FFFFFF;
+}
+table tr:not(:first-of-type):hover > .td-btns > .td-btn-wrapper > button.a-btn-trash-3:hover {
   color: #29292B;
 }
 table th {
@@ -6154,7 +6177,7 @@ body {
   grid-auto-flow: row dense;
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-rows: minmax(0, 1fr);
-  grid-template-rows: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);
   gap: 2rem 0px;
   border-radius: 1.5rem;
   background-color: #FFFFFF;
@@ -6297,6 +6320,17 @@ body {
   grid-template-columns: minmax(0, 1fr);
   gap: 0px 2rem;
   border-radius: 1rem;
+}
+.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5)::-webkit-scrollbar {
+  width: 1rem;
+}
+.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5)::-webkit-scrollbar-track {
+  border-radius: 3rem;
+  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5)::-webkit-scrollbar-thumb {
+  border-radius: 3rem;
+  background-color: #D6A330;
 }
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table {
   border-radius: 1rem;

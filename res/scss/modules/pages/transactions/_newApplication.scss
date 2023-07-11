@@ -832,6 +832,7 @@
                 // * Rowspan 5: Add Business Table
                 .rowspan:nth-of-type(5) {
                     @include smallcon4Rowspan5;
+                    @include custom-scroll;
                     // padding: 2rem;
                     border-radius: $border-radius-medium;
                     table {
