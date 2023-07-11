@@ -586,3 +586,6 @@ Second Commit:
 
 Third Commit:
 • Modified the all-members-view-borrower's co-maker section (all-members-view-borrower.html)
+
+Fourth Commit:
+• Created new application view (new-application-view.html)
