@@ -583,3 +583,6 @@ First Commit:
 
 Second Commit:
 • Minor modifications in loan & payment modal (_modal.scss)
+
+Third Commit:
+• Modified the all-members-view-borrower's co-maker section (all-members-view-borrower.html)
