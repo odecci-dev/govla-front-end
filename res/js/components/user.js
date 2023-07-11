@@ -11,6 +11,25 @@ if (addNewUserBtn) {
 
 }
 
+
+const viewUserBtn = document.querySelectorAll('[data-user-view]')
+
+viewUserBtn.forEach((user) => {
+
+    if (user) {
+    
+       user.addEventListener('click', () => {
+
+        url = '/KC/user/user-view.html'
+        window.location = url
+
+       })
+
+    }
+
+})
+
+
 const backToUserList = document.querySelector('[data-back-to-user-list]')
 
 if (backToUserList) {

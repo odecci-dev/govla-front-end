@@ -216,6 +216,7 @@
     &::before {
         content: 'X';
         cursor: pointer;
+        z-index: 9;
         position: absolute;
         display: flex;
         align-items: center;
@@ -276,7 +277,9 @@
 // * Table Trash Button
 @mixin transparentButton4 {
     @include transparentButton2;
-    font-size: $font-size-small;
+    // font-size: $font-size-small;
+    font-size: $font-size-medium;
+    text-decoration: underline;
     padding: $btn-padding-5;
     color: $blackTR;
     &:hover {

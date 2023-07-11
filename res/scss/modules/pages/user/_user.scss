@@ -402,3 +402,261 @@
     }
   }
 }
+
+// * Add New User Container
+// * Container 1: User Registration Form Fields and Buttons
+.view-nu-con-1 {
+  width: 100%;
+  padding: 2rem 2rem;
+  // * Container Wrapper
+  .container-wrapper {
+    @include bigContainer2Grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.6fr);
+    @include containerDefault2;
+    padding: 5rem 4rem 5rem 5rem;
+    // * Big Container
+    .big-con {
+      height: 100%;
+      width: 100%;
+      @include bigContainerGrid;
+      grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(
+          0,
+          1fr
+        ) minmax(0, 1fr) minmax(0, 1fr);
+      // ** Rowspan Global Styles
+      .rowspan {
+        min-height: 0;
+        /* NEW */
+        min-width: 0;
+        /* NEW; needed for Firefox */
+        .input-wrapper {
+          display: flex;
+          flex-direction: column;
+          span {
+            margin-bottom: 1rem;
+            font-weight: $font-weight-bold;
+            font-size: $font-size;
+          }
+          // * Input Global Styles
+          input {
+            @include inputField;
+          }
+          // * Select Input Global Styles
+          .select-box {
+            position: relative;
+            select {
+              @include selectField;
+              width: 100%;
+              option {
+                position: absolute;
+                outline: none;
+                border: none;
+                background-color: $secondary-bg;
+              }
+            }
+          }
+          // * Select Input Arrow
+          .select-box::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            z-index: 2;
+            right: 0;
+            transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
+            // border: 2px solid $black;
+            border-bottom: 2px solid $black;
+            border-left: 2px solid $black;
+            transition: ease-out 300ms;
+            pointer-events: none;
+          }
+          .select-box:focus-within::before {
+            border-top: 2px solid $black;
+            border-right: 2px solid $black;
+            border-bottom: none;
+            border-left: none;
+            transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
+          }
+          // * Radio Buttons
+          .box-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .radio-btn-wrapper {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              span {
+                white-space: nowrap;
+              }
+              input[type="radio"] {
+                @include formRadioButtons;
+              }
+              // input[type="radio"]:focus {
+              //     outline: max(1px, 0.15em) solid $primary;
+              //     outline-offset: max(2px, 0.15em);
+              // }
+            }
+          }
+        }
+      }
+      // * Rowspan Header: Header and Buttons
+      .rowspan:first-of-type {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+          font-size: $font-size-x-large;
+        }
+        .btn-wrapper {
+          button {
+            @include primaryButton;
+          }
+          button:first-of-type {
+            margin-right: 1.5rem;
+          }
+        }
+      }
+    }
+    // * Small Container
+    .small-con {
+      width: 100%;
+      // display: grid;
+      // place-content: center;
+      padding: 2rem 0 2rem 2rem;
+      // * Box
+      .box {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        padding-top: 10rem;
+        // * Rowspan Global Styles
+        .box-wrap {
+          box-shadow: none;
+          // padding: min(3rem, 5%) min(4rem, 10%);
+        }
+        // * Boxwrap 1
+        .box-wrap:first-of-type {
+          // * Colspan 1
+          .colspan {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem;
+            .input-wrapper {
+              width: 100%;
+              // margin-bottom: min(2rem, 10%);
+              display: grid;
+              place-items: center;
+              .input-inner-wrapper {
+                position: relative;
+                &:hover {
+                  @include tableChipsWithX;
+                }
+                input {
+                  box-shadow: none;
+                }
+                input[type="image"] {
+  
+                  width: clamp(4rem, 15vw, 100%);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+              }
+            }
+            // * Buttons
+            .btn-wrapper {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 2rem;
+              
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// * Container 2: User Restrictions Radio Buttons
+.view-nu-con-2 {
+  width: 100%;
+  padding: 2rem 2rem;
+  // * Container Wrapper
+  .container-wrapper {
+    // @include bigContainer2Grid;
+    display: grid;
+    grid-template-rows: minmax(0, 0.4fr) minmax(0, 1.6fr);
+    @include containerDefault2;
+    padding: 5rem 4rem 5rem 5rem;
+    .header-con {
+      display: flex;
+      align-items: center;
+      gap: 0 6rem;
+      border-bottom: 4px solid $black;
+      h2 {
+        font-size: $font-size-x-large;
+      }
+      .input-wrapper-checkbox {
+        display: flex;
+        gap: 1rem;
+        span {
+          font-size: $font-size-x-medium;
+          font-weight: $font-weight-bold;
+        }
+      }
+    }
+    // * Container 1: Table
+    .ur-con-1 {
+      // * Table Container
+      .table-container {
+        table {
+          // **                         ** //
+          // **** Table Header Styles **** //
+          // **                         ** //
+          empty-cells: hide;
+          tr {
+            &:hover {
+              background: none;
+              color: $black;
+            }
+            td {
+              transition: 200ms ease-in-out;
+              &.empty-cell:not(:empty) {
+                pointer-events: none;
+
+            }
+            }
+            &>td:hover {
+              background-color: $primary;
+              color: $white;
+            }
+          }
+          // * Table Checkbox
+          th {
+            padding: $spacing-4x-large $spacing-large;
+            text-align: left;
+            &.th-name {
+              font-size: $font-size-x-medium;
+              font-weight: $font-weight-bold;
+              
+            }
+          }
+          .flex-data {
+            display: flex;
+            gap: 0 1rem;
+          }
+          // **                       ** //
+          // **** Table Data Styles **** //
+          // **                       ** //
+          td {
+            padding: $spacing-large;
+            font-size: $font-size-x-medium;
+          }
+          
+        }
+      }
+    }
+  }
+}
