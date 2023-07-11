@@ -156,7 +156,7 @@
                       type="checkbox"
                       class="checkbox"
                       id="checkbox"
-                      data-select-all-checkbox
+                      data-select-all-res-checkbox
                     />
                     <span>All</span>
                   </div>
@@ -167,7 +167,7 @@
                       type="checkbox"
                       class="checkbox"
                       id="checkbox"
-                      data-checkbox
+                      data-select-checkbox
                     />
                     <span>Overview</span>
                   </div>
@@ -178,7 +178,7 @@
                       type="checkbox"
                       class="checkbox"
                       id="checkbox"
-                      data-checkbox
+                      data-select-checkbox
                     />
                     <span>Members</span>
                   </div>
@@ -189,7 +189,7 @@
                   <!-- * Table Container -->
                   <div class="table-container">
                     <!-- * User Restrictions Table -->
-                    <table id="addUserTable">
+                    <table id="addResUserTable">
 
                       <!-- * Table Header -->
                       <tr>
@@ -201,6 +201,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-all-maintenance-res-checkboxes
                             />
                             <span>Maintenance</span>
                           </div>
@@ -213,6 +214,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-all-collection-res-checkboxes
                             />
                             <span>Collection</span>
                           </div>
@@ -224,8 +226,8 @@
                             <input
                             type="checkbox"
                             class="checkbox"
-                            id="checkboxallCheckbox"
-                            onchange="checkAll(this)"
+                            data-select-checkbox
+                            data-select-all-transactions-res-checkboxes
                           />
                           <span>Transactions</span>
                           </div>
@@ -238,6 +240,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-all-reports-res-checkboxes
                             />
                             <span>Reports</span>
                           </div>
@@ -256,6 +259,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-maintenance-checkbox
                             />
                             <span>Field Officer</span>
                           </div>
@@ -268,6 +272,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-collection-checkbox
                             />
                             <span>Areas</span>
                           </div>
@@ -280,6 +285,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-transactions-checkbox
                             />
                             <span>Applications</span>
                           </div>
@@ -292,6 +298,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-reports-checkbox
                             />
                             <span>Outstanding Reports</span>
                           </div>
@@ -309,6 +316,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-maintenance-checkbox
                             />
                             <span>Field Area</span>
                           </div>
@@ -325,6 +333,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-transactions-checkbox
                             />
                             <span>Credit Investigation</span>
                           </div>
@@ -337,6 +346,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-reports-checkbox
                             />
                             <span>Custom Report 1</span>
                           </div>
@@ -354,6 +364,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-maintenance-checkbox
                             />
                             <span>Loan Types</span>
                           </div>
@@ -370,6 +381,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-transactions-checkbox
                             />
                             <span>Remittance</span>
                           </div>
@@ -382,6 +394,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-reports-checkbox
                             />
                             <span>Custom Report 2</span>
                           </div>
@@ -399,6 +412,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-maintenance-checkbox
                             />
                             <span>Holidays</span>
                           </div>
@@ -415,6 +429,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-transactions-checkbox
                             />
                             <span>Approval</span>
                           </div>
@@ -427,6 +442,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-reports-checkbox
                             />
                             <span>Custom Report 3</span>
                           </div>
@@ -450,6 +466,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-transactions-checkbox
                             />
                             <span>Releasing</span>
                           </div>
@@ -462,6 +479,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-reports-checkbox
                             />
                             <span>Custom Report 4</span>
                           </div>
@@ -485,6 +503,7 @@
                               type="checkbox"
                               class="checkbox"
                               data-select-checkbox
+                              data-select-transactions-checkbox
                             />
                             <span>Loan Calculator</span>
                           </div>
@@ -505,7 +524,6 @@
       </div>
     </main>
 
-    <script src="../../res/js/app.js" defer></script>
     <script src="../../res/js/components/nav.js"></script>
     <script src="../../res/js/components/user.js" defer></script>
     

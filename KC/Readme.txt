@@ -610,3 +610,8 @@ Ninth Commit:
 Tenth Commit:
 • Implemented Checkbox function 
 • TODO: Checkbox function for User Restriction
+
+
+June 12, 2023 (Wednesday)
+First Commit:
+• Implemented Checkbox function for User Restriction (user.js)

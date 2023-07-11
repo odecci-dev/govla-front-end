@@ -44,57 +44,72 @@ if (backToUserList) {
 }
 
 
-// TODO: User Restriction Checkbox Function
-// // * Select All Table Checkbox 
-// const selectAllCheckboxes = document.querySelectorAll('[data-select-all-checkbox]')
+// * Select All Table Checkbox 
+const selectAllResCheckboxes = document.querySelector('[data-select-all-res-checkbox]')
+const restrictionTable = document.getElementById('addResUserTable')
 
-// selectAllCheckboxes.forEach((checkbox) => {
+// * Add event listener to select all checkbox
+selectAllResCheckboxes.addEventListener('change', () => {
+    let siblingCheckboxes = document.querySelectorAll('[data-select-checkbox]')
+    let checkboxes = restrictionTable.querySelectorAll('[data-select-checkbox]');
+    let isChecked = selectAllResCheckboxes.checked;
 
-//     checkbox.addEventListener('click', () => {
+    // * Set the checked state of all sibling checkboxes
+    siblingCheckboxes.forEach((siblingCheckbox) => {
+        siblingCheckbox.checked = isChecked;
+    })
 
-//         // * Get the corresponding table based on the checkbox's parent element
-//         const tableBody = checkbox.closest('table').querySelector('tbody')
-    
-//         // * Get all select-item checkboxes within the table body
-//         const selectItemCheckboxes = tableBody.querySelectorAll('[data-select-checkbox]')
-        
-//         // * Set the checked property of each select-item checkbox based on the select-all checkbox state
-//         selectItemCheckboxes.forEach(itemCheckbox => {
+    // * Set the checked state of all checkboxes in the table
+    checkboxes.forEach((checkbox) => {
+        checkbox.checked = isChecked;
+    })
 
-//             const trSelect = itemCheckbox.closest('tr')
+});
 
-//             // * Checkbox Checked
-//             if (itemCheckbox.checked = checkbox.checked) {
+// * Select All Maintenance Table Checkbox 
+const selectAllMaintenanceResCheckboxes = document.querySelector('[data-select-all-maintenance-res-checkboxes]')
+selectAllMaintenanceResCheckboxes.addEventListener('change', () => {
+    let checkboxes = restrictionTable.querySelectorAll('[data-select-maintenance-checkbox]');
+    let isChecked = selectAllMaintenanceResCheckboxes.checked;
 
-//                 trSelect.classList.add('activeColumn')
+    // * Set the checked state of all checkboxes in the table
+    checkboxes.forEach((checkbox) => {
+        checkbox.checked = isChecked;
+    })
+})
 
-//             } else if (itemCheckbox.checked = checkbox.checked && !trSelect.classList.contains('activeColumn')) {
-                
-//                 // * Select the closest tr, hence select all its children
-                
-//                 trSelect.classList.add('activeColumn')
-                
-//             } else {
-//                 trSelect.classList.remove('activeColumn')
+// * Select All Collection Table Checkbox 
+const selectAllCollectionResCheckboxes = document.querySelector('[data-select-all-collection-res-checkboxes]')
+selectAllCollectionResCheckboxes.addEventListener('change', () => {
+    let checkboxes = restrictionTable.querySelectorAll('[data-select-collection-checkbox]');
+    let isChecked = selectAllCollectionResCheckboxes.checked;
 
-//             }
-//             itemCheckbox.checked = checkbox.checked;
+    // * Set the checked state of all checkboxes in the table
+    checkboxes.forEach((checkbox) => {
+        checkbox.checked = isChecked;
+    })
+})
 
-            
-//         });
+// * Select All Transactions Table Checkbox 
+const selectAllTransactionsResCheckboxes = document.querySelector('[data-select-all-transactions-res-checkboxes]')
+selectAllTransactionsResCheckboxes.addEventListener('change', () => {
+    let checkboxes = restrictionTable.querySelectorAll('[data-select-transactions-checkbox]');
+    let isChecked = selectAllTransactionsResCheckboxes.checked;
 
-//     })
+    // * Set the checked state of all checkboxes in the table
+    checkboxes.forEach((checkbox) => {
+        checkbox.checked = isChecked;
+    })
+})
 
-    
-//     const selectItemCheckboxes = document.querySelectorAll('[data-select-checkbox]')
-    
-//     selectItemCheckboxes.forEach((itemCheckbox) => {
-//         itemCheckbox.addEventListener('click', () => {
-//             // * Select the closest tr, hence select all its children
-//             const trSelect = itemCheckbox.closest('tr')
-    
-//             trSelect.classList.toggle('activeColumn')
+// * Select All Reports Table Checkbox 
+const selectAllReportsResCheckboxes = document.querySelector('[data-select-all-reports-res-checkboxes]')
+selectAllReportsResCheckboxes.addEventListener('change', () => {
+    let checkboxes = restrictionTable.querySelectorAll('[data-select-reports-checkbox]');
+    let isChecked = selectAllReportsResCheckboxes.checked;
 
-//         })
-//     })
-// })
+    // * Set the checked state of all checkboxes in the table
+    checkboxes.forEach((checkbox) => {
+        checkbox.checked = isChecked;
+    })
+})
