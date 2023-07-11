@@ -122,9 +122,17 @@ button {
 
 }
 
-.rowspan:has(table) {
-    overflow-y: auto;
+// .rowspan:has(table) {
+//     overflow-y: auto;
+//     @include custom-scroll;
+// }
+
+// * Custom Scroll and Overflow-y: auto made Global
+.rowspan.table,
+.table-container {
     @include custom-scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 table {
@@ -187,14 +195,6 @@ table {
         top: 0;
     }
 
-}
-
-// * Custom Scroll and Overflow-y: auto made Global
-.rowspan table,
-.table-container {
-    @include custom-scroll;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 // * Active Primary Color

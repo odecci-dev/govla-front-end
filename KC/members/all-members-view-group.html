@@ -80,7 +80,7 @@
                                 <div class="btn-wrapper">
 
                                     <!-- * Add to Group -->
-                                    <button type="button" id="addToGroupBtn" class="button" data-add-group-member>Add to Group</button>
+                                    <button type="button" id="addToGroupBtn" class="button" data-add-to-group>Add to Group</button>
 
                                 </div>
 
@@ -430,7 +430,7 @@
                                 </div>
 
                                 <!-- * Rowspan 2: Loan History Table -->
-                                <div class="rowspan">
+                                <div class="rowspan table">
 
                                     <table>
                                         <tr>
@@ -526,7 +526,7 @@
                                 </div>
 
                                 <!-- * Rowspan 2: Payment History Table -->
-                                <div class="rowspan">
+                                <div class="rowspan table">
 
                                     <table>
                                         <tr>
@@ -1251,7 +1251,7 @@
                         </div>
 
                         <!-- * Rowspan 5: Add Business Table -->
-                        <div class="rowspan">
+                        <div class="rowspan table">
 
                             <table>
                                 <tr>
@@ -1606,292 +1606,317 @@
                 </div>
 
                 <!-- * Container 8: Co-Maker New Application Form Fields -->
-                <div class="na-container-wrapper-2">
+                <div class="view-co-borrower-con-1">
 
-                    <!-- * Container 5: New Application Form Fields and Buttons -->
-                    <div class="na-container-5">
+                    <!-- * Container 1: Co-Borrower New Application Form Fields and Buttons -->
+                    <div class="view-inner-con-1">
 
-                        <!-- * Container Wrapper -->
-                        <div class="container-wrapper">
+                        <!-- * Big Container -->
+                        <div class="big-con">
 
-                            <!-- * Big Container -->
-                            <div class="big-con">
+                            <!-- * Form Header -->
 
-                                <!-- * Form Header -->
+                            <!-- * Rowspan 1: Rowspan Header: Header and Buttons -->
+                            <div class="rowspan">
 
-                                <!-- * Rowspan 1: Rowspan Header - Co-Maker Information -->
-                                <div class="rowspan">
-                                    <h2>Co-Maker Information</h2>
-                                </div>
-
-                                <!-- * Rowspan 2: First Name, Middle Name , Last Name, and Suffix -->
-                                <div class="rowspan">
-
-                                    <!-- * First Name -->
-                                    <div class="input-wrapper">
-                                        <span>First Name</span>
-                                        <input autocomplete="off" type="text" id="fName" name="fName">
-                                    </div>
-
-                                    <!-- * Middle Name -->
-                                    <div class="input-wrapper">
-                                        <span>Middle Name</span>
-                                        <input autocomplete="off" type="text" id="midName" name="midName">
-                                    </div>
-
-                                    <!-- * Last Name -->
-                                    <div class="input-wrapper">
-                                        <span>Last Name</span>
-                                        <input autocomplete="off" type="text" id="lName" name="lName">
-                                    </div>
-
-                                    <!-- * Suffix -->
-                                    <div class="input-wrapper">
-                                        <span>Suffix</span>
-                                        <input autocomplete="off" type="text" id="suffix" name="suffix">
-                                    </div>
-
-                                </div>
-
-                                <!-- * Rowspan 3: Gender, Date Of Birth, Age, Place Of Birth and Civil Status -->
-                                <div class="rowspan">
-
-                                    <!-- * Gender -->
-                                    <div class="input-wrapper">
-                                        <span>Gender</span>
-                                        <div class="select-box">
-        
-                                            <div class="options-container" data-option-con4>
-        
-                                                <div class="option"  data-option-item4>
-        
-                                                    <input type="radio" class="radio" name="category" value="Male" />
-                                                    <label for="Male">
-                                                        <h4>Male</h4>
-                                                    </label>
-        
-                                                </div>
-        
-                                                <div class="option"  data-option-item4>
-        
-                                                    <input type="radio" class="radio" name="category" value="Female"/>
-                                                    <label for="Female">
-                                                        <h4>Female</h4>
-                                                    </label>
-        
-                                                </div>
-        
-                                            </div>
-                                            
-                                            <div class="selected" data-option-select4>
-                                            </div>
-        
+                                <!-- * Header Wrapper -->
+                                <div class="header-wrapper">
+                                    <div class="header-inner-wrapper">
+                                        <!-- <div class="box-wrapper">
+                                            <img src="../../res/assets/icons/arrow-left.svg" alt="Left Button" data-back-to-members-table>
+                                        </div> -->
+                                        <div class="box-wrapper">
+                                            <h2>Co-Maker Information</h2>
                                         </div>
                                     </div>
-
-                                    <!-- * Date Of Birth -->
-                                    <div class="input-wrapper">
-                                        <span>Date Of Birth</span>
-                                        <input autocomplete="off" type="text" id="doBirth" name="doBirth">
-                                    </div>
-
-                                    <!-- * Age -->
-                                    <div class="input-wrapper">
-                                        <span>Age</span>
-                                        <input autocomplete="off" type="number" id="age" name="age">
-                                    </div>
-
-                                    <!-- * Place Of Birth -->
-                                    <div class="input-wrapper">
-                                        <span>Place Of Birth</span>
-                                        <input autocomplete="off" type="text" id="poBirth" name="poBirth">
-                                    </div>
-
-                                    <!-- * Civil Status -->
-                                    <div class="input-wrapper">
-                                        <span>Civil Status</span>
-                                        <div class="select-box">
-        
-                                            <div class="options-container" data-option-con5>
-        
-                                                <div class="option" data-option-item5>
-        
-                                                    <input type="radio" class="radio" name="category" value="Widow" />
-                                                    <label for="Widow">
-                                                        <h4>Widow</h4>
-                                                    </label>
-        
-                                                </div>
-        
-                                                <div class="option" data-option-item5>
-        
-                                                    <input type="radio" class="radio" name="category" value="Married"/>
-                                                    <label for="Married">
-                                                        <h4>Married</h4>
-                                                    </label>
-        
-                                                </div>
-        
-                                                <div class="option" data-option-item5>
-        
-                                                    <input type="radio" class="radio" name="category" value="Single"/>
-                                                    <label for="Single">
-                                                        <h4>Single</h4>
-                                                    </label>
-        
-                                                </div>
-        
-                                            </div>
-                                            
-                                            <div class="selected" data-option-select5>
-                                            </div>
-        
-                                        </div>
-                                    </div>
-
+                                    <!-- <button type="button" id="data-open-loan-details">View loan & payment history</button> -->
                                 </div>
 
-                                <!-- * Rowspan 4: Contact Number and Email Address -->
-                                <div class="rowspan">
+                                <!-- * Buttons -->
+                                <!-- <div class="btn-wrapper"> -->
 
-                                    <!-- * Contact Number -->
-                                    <div class="input-wrapper">
-                                        <div class="input-wrapper">
-                                            <span>Contact Number</span>
-                                            <input autocomplete="off" type="number" id="conNum" name="conNum">
-                                        </div>
-                                    </div>
+                                    <!-- * Save -->
+                                    <!-- <button type="button" id="saveBtn" class="button" data-save>Save</button>
 
-                                    <!-- * Email Address -->
-                                    <div class="input-wrapper">
-                                        <div class="input-wrapper">
-                                            <span>Email Address</span>
-                                            <input autocomplete="off" type="email" id="eMail" name="eMail">
-                                        </div>
-                                    </div>
+                                </div> -->
 
+                            </div>
+
+                            <!-- * Rowspan 2: First Name, Middle Name , Last Name, and Suffix -->
+                            <div class="rowspan">
+
+                                <!-- * First Name -->
+                                <div class="input-wrapper">
+                                    <span>First Name</span>
+                                    <input autocomplete="off" type="text" id="fName" name="fName">
                                 </div>
 
-                                <!-- * Rowspan 5: Rented, Owned, Free of Use Radio Buttons and House Address-->
-                                <div class="rowspan">
-
-                                    <!-- * Rented, Owned, and Free of Use Radio Buttons -->
-                                    <div class="input-wrapper">
-
-                                        <div class="box-wrap">
-
-                                            <!-- * Rented -->
-                                            <div class="radio-btn-wrapper">
-                                                <span>Rented</span>
-                                                <input autocomplete="off" type="radio" name="radio" value="rented" id="rented">
-                                            </div>
-
-                                            <!-- * Owned -->
-                                            <div class="radio-btn-wrapper">
-                                                <span>Owned</span>
-                                                <input autocomplete="off" type="radio" name="radio" value="owned" id="owned">
-                                            </div>
-
-                                            <!-- * Free Use -->
-                                            <div class="radio-btn-wrapper">
-                                                <span>Free Use</span>
-                                                <input autocomplete="off" type="radio" name="radio" value="freeUse" id="freeUse">
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <!-- * House No./ Bldg. No./ Room No./ Subdivision/ Street -->
-                                    <div class="input-wrapper">
-                                        <span>House No./ Bldg. No./ Room No./ Subdivision/ Street</span>
-                                        <input autocomplete="off" type="text" id="houseAdd" name="houseAdd">
-                                    </div>
-
+                                <!-- * Middle Name -->
+                                <div class="input-wrapper">
+                                    <span>Middle Name</span>
+                                    <input autocomplete="off" type="text" id="midName" name="midName">
                                 </div>
 
-                                <!-- * Rowspan 6: Barangay, City / Municipality, Province / Region, and Country -->
-                                <div class="rowspan">
-
-                                    <!-- * Barangay -->
-                                    <div class="input-wrapper">
-                                        <span>Barangay</span>
-                                        <input autocomplete="off" type="text" id="brgy" name="brgy">
-                                    </div>
-
-                                    <!-- * City / Municipality -->
-                                    <div class="input-wrapper">
-                                        <span>City / Municipality</span>
-                                        <input autocomplete="off" type="text" id="city" name="city">
-                                    </div>
-
-                                    <!-- * Province / Region -->
-                                    <div class="input-wrapper">
-                                        <span>Province / Region</span>
-                                        <input autocomplete="off" type="text" id="province" name="province">
-                                    </div>
-
-                                    <!-- * Country -->
-                                    <div class="input-wrapper">
-                                        <span>Country</span>
-                                        <input autocomplete="off" type="text" id="country" name="country">
-                                    </div>
-
-
+                                <!-- * Last Name -->
+                                <div class="input-wrapper">
+                                    <span>Last Name</span>
+                                    <input autocomplete="off" type="text" id="lName" name="lName">
                                 </div>
 
-                                <!-- * Rowspan 7: Zip Code and Years Of Stay -->
-                                <div class="rowspan">
-
-                                    <!-- * Zip Code -->
-                                    <div class="input-wrapper">
-                                        <span>Zip Code</span>
-                                        <input type="number" id="zipCode" name="zipCode">
-                                    </div>
-
-                                    <!-- * Years Of Stay -->
-                                    <div class="input-wrapper">
-                                        <span>Years of stay on the mentioned address</span>
-                                        <input type="number" id="yoStay" name="yoStay">
-                                    </div>
-
-                                </div>
-
-                                <!-- * Rowspan 8: Empty Rowspan -->
-                                <div class="rowspan">
-
+                                <!-- * Suffix -->
+                                <div class="input-wrapper">
+                                    <span>Suffix</span>
+                                    <input autocomplete="off" type="text" id="suffix" name="suffix">
                                 </div>
 
                             </div>
-                            <!-- * Container 2: Upload Images, Files and Monthly Bills Input Fields -->
-                            <div class="na-container-2">
 
-                                <!-- * Small Container -->
-                                <div class="small-con">
+                            <!-- * Rowspan 3: Gender, Date Of Birth, Age, Place Of Birth and Civil Status -->
+                            <div class="rowspan">
+
+                                <!-- * Gender -->
+                                <div class="input-wrapper">
+                                    <span>Gender</span>
+                                    <div class="select-box">
+    
+                                        <div class="options-container" data-option-con1>
+    
+                                            <div class="option"  data-option-item1>
+    
+                                                <input type="radio" class="radio" name="category" value="Male" />
+                                                <label for="Male">
+                                                    <h4>Male</h4>
+                                                </label>
+    
+                                            </div>
+    
+                                            <div class="option"  data-option-item1>
+    
+                                                <input type="radio" class="radio" name="category" value="Female"/>
+                                                <label for="Female">
+                                                    <h4>Female</h4>
+                                                </label>
+    
+                                            </div>
+    
+                                        </div>
+                                        
+                                        <div class="selected" data-option-select1>
+                                        </div>
+    
+                                    </div>
+                                </div>
+
+                                <!-- * Date Of Birth -->
+                                <div class="input-wrapper">
+                                    <span>Date Of Birth</span>
+                                    <input autocomplete="off" type="text" id="doBirth" name="doBirth">
+                                </div>
+
+                                <!-- * Age -->
+                                <div class="input-wrapper">
+                                    <span>Age</span>
+                                    <input autocomplete="off" type="number" id="age" name="age">
+                                </div>
+
+                                <!-- * Place Of Birth -->
+                                <div class="input-wrapper">
+                                    <span>Place Of Birth</span>
+                                    <input autocomplete="off" type="text" id="poBirth" name="poBirth">
+                                </div>
+
+                                <!-- * Civil Status -->
+                                <div class="input-wrapper">
+                                    <span>Civil Status</span>
+                                    <div class="select-box">
+    
+                                        <div class="options-container" data-option-con2>
+    
+                                            <div class="option" data-option-item2>
+    
+                                                <input type="radio" class="radio" name="category" value="Widow" />
+                                                <label for="Widow">
+                                                    <h4>Widow</h4>
+                                                </label>
+    
+                                            </div>
+    
+                                            <div class="option" data-option-item2>
+    
+                                                <input type="radio" class="radio" name="category" value="Married"/>
+                                                <label for="Married">
+                                                    <h4>Married</h4>
+                                                </label>
+    
+                                            </div>
+    
+                                            <div class="option" data-option-item2>
+    
+                                                <input type="radio" class="radio" name="category" value="Single"/>
+                                                <label for="Single">
+                                                    <h4>Single</h4>
+                                                </label>
+    
+                                            </div>
+    
+                                        </div>
+                                        
+                                        <div class="selected" data-option-select2>
+                                        </div>
+    
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- * Rowspan 4: Contact Number and Email Address -->
+                            <div class="rowspan">
+
+                                <!-- * Contact Number -->
+                                <div class="input-wrapper">
+                                    <div class="input-wrapper">
+                                        <span>Contact Number</span>
+                                        <input autocomplete="off" type="number" id="conNum" name="conNum">
+                                    </div>
+                                </div>
+
+                                <!-- * Email Address -->
+                                <div class="input-wrapper">
+                                    <div class="input-wrapper">
+                                        <span>Email Address</span>
+                                        <input autocomplete="off" type="email" id="eMail" name="eMail">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- * Rowspan 5: Rented, Owned, Free of Use Radio Buttons and House Address-->
+                            <div class="rowspan">
+
+                                <!-- * Rented, Owned, and Free of Use Radio Buttons -->
+                                <div class="input-wrapper">
 
                                     <div class="box-wrap">
 
-                                        <!-- * Colspan 1: Upload Image and Attach Files Buttons  -->
-                                        <div class="colspan">
+                                        <!-- * Rented -->
+                                        <div class="radio-btn-wrapper">
+                                            <span>Rented</span>
+                                            <input autocomplete="off" type="radio" name="radio" value="rented" id="rented">
+                                        </div>
 
-                                            <!-- * Upload Image -->
-                                            <div class="input-wrapper">
-                                                <input type="image" src="../../res/assets/icons/upload-image.svg" alt="upload-image">
-                                            </div>
+                                        <!-- * Owned -->
+                                        <div class="radio-btn-wrapper">
+                                            <span>Owned</span>
+                                            <input autocomplete="off" type="radio" name="radio" value="owned" id="owned">
+                                        </div>
 
-                                            <!-- * Upload Button -->
-                                            <button submit="">Upload Image</button>
-
-                                            <!-- * Attach Button -->
-                                            <button submit="">Attach Files</button>
-
+                                        <!-- * Free Use -->
+                                        <div class="radio-btn-wrapper">
+                                            <span>Free Use</span>
+                                            <input autocomplete="off" type="radio" name="radio" value="freeUse" id="freeUse">
                                         </div>
 
                                     </div>
 
                                 </div>
 
+                                <!-- * House No./ Bldg. No./ Room No./ Subdivision/ Street -->
+                                <div class="input-wrapper">
+                                    <span>House No./ Bldg. No./ Room No./ Subdivision/ Street</span>
+                                    <input autocomplete="off" type="text" id="houseAdd" name="houseAdd">
+                                </div>
+
                             </div>
+
+                            <!-- * Rowspan 6: Barangay, City / Municipality, Province / Region, and Country -->
+                            <div class="rowspan">
+
+                                <!-- * Barangay -->
+                                <div class="input-wrapper">
+                                    <span>Barangay</span>
+                                    <input autocomplete="off" type="text" id="brgy" name="brgy">
+                                </div>
+
+                                <!-- * City / Municipality -->
+                                <div class="input-wrapper">
+                                    <span>City / Municipality</span>
+                                    <input autocomplete="off" type="text" id="city" name="city">
+                                </div>
+
+                                <!-- * Province / Region -->
+                                <div class="input-wrapper">
+                                    <span>Province / Region</span>
+                                    <input autocomplete="off" type="text" id="province" name="province">
+                                </div>
+
+                                <!-- * Country -->
+                                <div class="input-wrapper">
+                                    <span>Country</span>
+                                    <input autocomplete="off" type="text" id="country" name="country">
+                                </div>
+
+
+                            </div>
+
+                            <!-- * Rowspan 7: Zip Code and Years Of Stay -->
+                            <div class="rowspan">
+
+                                <!-- * Zip Code -->
+                                <div class="input-wrapper">
+                                    <span>Zip Code</span>
+                                    <input type="number" id="zipCode" name="zipCode">
+                                </div>
+
+                                <!-- * Years Of Stay -->
+                                <div class="input-wrapper">
+                                    <span>Years of stay on the mentioned address</span>
+                                    <input type="number" id="yoStay" name="yoStay">
+                                </div>
+
+                                <!-- * Relationship to the Borrower -->
+                                <div class="input-wrapper">
+                                    <span> Relationship to the Borrower</span>
+                                    <input type="number" id="relatioshipToBorrower" name="relatioshipToBorrower"></yoStay">
+                                </div>
+
+                            </div>
+
+                            <!-- * Rowspan 8: Empty Rowspan -->
+                            <!-- <div class="rowspan"> -->
+                                <!-- <button type="button" class="viewLoanDetailsButton" id="data-open-loan-details">View loan & payment history</button> -->
+                            <!-- </div> -->
+                            
+                        </div>
+
+                        <!-- * Small Container -->
+                        <div class="small-con">
+
+                                <div class="box-wrap">
+
+                                    <!-- * Colspan 1: Upload Image and Attach Files Buttons  -->
+                                    <div class="colspan">
+
+                                        <!-- * Upload Image -->
+                                        <div class="input-wrapper">
+                                            <input type="image" src="../../res/assets/icons/upload-image.svg" alt="upload-image">
+                                        </div>
+
+                                        <div class="btn-wrapper">
+                                            <!-- * Upload Button -->
+                                            <button type="button" submit="" class="button">Upload Image</button>
+                                            <!-- * Attach Button -->
+                                            <button type="button" submit="" class="button">Attach Files</button>
+                                        </div>
+
+                                        <div class="btn-wrapper">
+                                            <button type="button" class="fileButton"><img src="../../res/assets/icons/file.svg" alt="file.png">File.png</button>
+                                            <button type="button" class="fileButton"><img src="../../res/assets/icons/file.svg" alt="file.pdf">File.pdf</button>
+                                        </div>
+
+                                        <button type="button" class="transparentButton3">Show All</button>
+                                    </div>
+
+                                </div>
 
                         </div>
 
@@ -2124,6 +2149,7 @@
     <script src="../../res/js/components/nav.js"></script>
     <script src="../../res/js/components/members.js"></script>
     <script src="../../res/js/components/newApplication.js" defer></script>
+    <script src="../../res/js/components/newGroupMemberApplication.js" defer></script>
 
 </body>
 

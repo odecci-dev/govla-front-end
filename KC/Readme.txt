@@ -596,3 +596,6 @@ Fifth Commit:
 
 Sixth Commit:
 • Minor modifications in view application buttons layout
+
+SEventh Commit:
+• Added table class in all rowspan container with tables 

@@ -371,7 +371,6 @@
             .na-table-con {
                 width: 100%;
                 height: clamp(10vh, 70rem, 45vh);
-                // margin-top: $spacing-4x-large;
                 // * Table Container
                 .table-container {
                     display: flex;
@@ -381,6 +380,8 @@
                     height: 100%;
                     border-radius: $border-radius-large;
                     box-shadow: $box-shadow;
+                    padding-bottom: $spacing-2x-large;
+
                     table {
                         // **                         ** //
                         // **** Table Header Styles **** //
