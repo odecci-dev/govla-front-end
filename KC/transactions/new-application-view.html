@@ -69,11 +69,8 @@
 
                                 <!-- * Header Wrapper -->
                                 <div class="header-wrapper">
-                                    <div class="header-inner-wrapper">
-                                        <img src="../../res/assets/icons/arrow-left.svg" alt="Left Button" data-back-to-members-table>
-                                        <h2>Borrower Information</h2>
-                                    </div>
-                                    <!-- <button type="button" id="data-open-loan-details">View loan & payment history</button> -->
+                                    <h2>Borrower Information</h2>
+                                    <button type="button" class="viewLoanDetailsButton" id="data-open-loan-details">View loan & payment history</button>
                                 </div>
 
                                 <!-- * Buttons -->
@@ -81,6 +78,11 @@
 
                                     <!-- * Save -->
                                     <button type="button" id="saveBtn" class="button" data-save>Save</button>
+
+                                    <!-- * Save & Apply for loan  -->
+                                    <a href="new-application-credit-investigation.html">
+                                        <button type="button" id="proceedToCI" class="button" onclick="activeProgressButton()" data-proceed-to-ci>Save & Proceed to CI</button>
+                                    </a>
 
                                 </div>
 
@@ -319,9 +321,9 @@
 
                             </div>
 
-                            <!-- * Rowspan 8: Loan Details -->
+                            <!-- * Rowspan 8: Empty Rowspan -->
                             <div class="rowspan">
-                                <button type="button" class="viewLoanDetailsButton" id="data-open-loan-details">View loan & payment history</button>
+
                             </div>
                         </div>
                     </div>

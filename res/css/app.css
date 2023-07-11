@@ -5487,7 +5487,7 @@ body {
 }
 .main-dashboard .na-form-con .na-approval-sec .rowspan {
   display: grid;
-  align-items: center;
+  align-items: flex-end;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   gap: 0 2rem;
 }
@@ -5524,11 +5524,15 @@ body {
 .main-dashboard .na-form-con .na-approval-sec .rowspan .input-wrapper button.declineButton {
   width: 50%;
   padding: 1rem;
-  margin-top: 2rem;
 }
 .main-dashboard .na-form-con .na-approval-sec .rowspan .input-wrapper button.releaseButton {
   padding: 1rem;
-  margin-top: 2rem;
+}
+.main-dashboard .na-form-con .na-approval-sec .rowspan .input-wrapper:last-of-type {
+  padding-bottom: 0.5rem;
+}
+.main-dashboard .na-form-con .na-approval-sec .rowspan .input-wrapper.input-wrapper-release {
+  padding-bottom: 0.25rem;
 }
 .main-dashboard .na-form-con .na-approval-sec .rowspan:first-of-type {
   display: flex;
@@ -5541,6 +5545,7 @@ body {
 .main-dashboard .na-form-con .na-approval-sec .rowspan:last-of-type .input-wrapper:last-of-type {
   display: flex;
   align-items: center;
+  padding-bottom: 0.25rem;
 }
 .main-dashboard .na-form-con .na-container-wrapper {
   height: 120%;

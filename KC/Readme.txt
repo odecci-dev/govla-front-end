@@ -593,3 +593,6 @@ Fourth Commit:
 Fifth Commit:
 • Conected Application List view button to new-application view
 - app.js
+
+Sixth Commit:
+• Minor modifications in view application buttons layout
