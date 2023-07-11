@@ -602,3 +602,7 @@ Seventh Commit:
 
 Eighth Commit:
 • User Module: Created user-view.html
+
+Ninth Commit:
+• Completed Select All Checkbox function (app.js)
+- all-members-borrower.html

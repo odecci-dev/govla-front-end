@@ -139,6 +139,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     overflow-y: auto;
+    counter-reset: tdNum;
 
     tr:first-of-type {
         isolation: isolate;
@@ -203,6 +204,39 @@ table {
     background-color: $primary;
     color: $white;
     transition: all 200ms ease-in-out;
+}
+
+// * Active Table Td Column
+.activeColumn {
+    transition: all 200ms ease-in-out;
+    background-color: $primary;
+    // border-bottom: 1px solid $white;
+    color: $white;
+    &>.td-btns>.td-btn-wrapper>button:nth-of-type(1) {
+        background-color: $white;
+        color: $primary;
+        transition: 200ms ease-out;
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+    }
+
+    &>.td-btns>.td-btn-wrapper>button.a-btn-trash {
+        transition: 200ms ease-in-out;
+        color: $white;
+        &:hover {
+            color: $black;
+        }
+    }
+
+    &>.td-btns>.td-btn-wrapper>button.a-btn-trash-3 {
+        transition: 200ms ease-in-out;
+        color: $white;
+        &:hover {
+            color: $black;
+        }
+    }
 }
 
 // * Active Green Color

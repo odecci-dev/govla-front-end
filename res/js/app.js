@@ -37,22 +37,72 @@ document.addEventListener("click", e => {
 
 })
 
+let counter = 1
 
-// * All Members: Table Checkbox Toggle
-const allMemberCheckboxes = document.querySelectorAll('[data-allmembers-checkbox]');
+const table = document.querySelector('table')
 
-function checkAll1(tableCheckBox) {
-    if (tableCheckBox.checked == true) {
-        areaCheckboxes.forEach(function(checkbox) {
-            checkbox.checked = true;
-        })
-    } else {
-        areaCheckboxes.forEach(function(checkbox) {
-            checkbox.checked = false;
-        })
-    }
+if (table) {
+    const colspan = table.querySelectorAll('.td-num')
+
+    colspan.forEach((num) => {
+        num.textContent = counter
+        counter++
+    })
 }
 
+// * Select All Table Checkbox 
+const selectAllCheckboxes = document.querySelectorAll('[data-select-all-checkbox]')
+
+selectAllCheckboxes.forEach((checkbox) => {
+
+    checkbox.addEventListener('click', () => {
+
+        // * Get the corresponding table based on the checkbox's parent element
+        const tableBody = checkbox.closest('table').querySelector('tbody')
+    
+        // * Get all select-item checkboxes within the table body
+        const selectItemCheckboxes = tableBody.querySelectorAll('[data-select-checkbox]')
+        
+        // * Set the checked property of each select-item checkbox based on the select-all checkbox state
+        selectItemCheckboxes.forEach(itemCheckbox => {
+
+            const trSelect = itemCheckbox.closest('tr')
+
+            // * Checkbox Checked
+            if (itemCheckbox.checked = checkbox.checked) {
+
+                trSelect.classList.add('activeColumn')
+
+            } else if (itemCheckbox.checked = checkbox.checked && !trSelect.classList.contains('activeColumn')) {
+                
+                // * Select the closest tr, hence select all its children
+                
+                trSelect.classList.add('activeColumn')
+                
+            } else {
+                trSelect.classList.remove('activeColumn')
+
+            }
+            itemCheckbox.checked = checkbox.checked;
+
+            
+        });
+
+    })
+
+    
+    const selectItemCheckboxes = document.querySelectorAll('[data-select-checkbox]')
+    
+    selectItemCheckboxes.forEach((itemCheckbox) => {
+        itemCheckbox.addEventListener('click', () => {
+            // * Select the closest tr, hence select all its children
+            const trSelect = itemCheckbox.closest('tr')
+    
+            trSelect.classList.toggle('activeColumn')
+
+        })
+    })
+})
 
 
 
@@ -228,35 +278,35 @@ for (let location of locations) {
     })
 }
 
-// * Field Area Maintenance: Table Area Checkbox Toggle
-const areaCheckboxes = document.querySelectorAll('[data-area-checkbox]');
+// // * Field Area Maintenance: Table Area Checkbox Toggle
+// const areaCheckboxes = document.querySelectorAll('[data-area-checkbox]');
 
-function checkAll2(tableCheckBox) {
-    if (tableCheckBox.checked == true) {
-        areaCheckboxes.forEach(function(checkbox) {
-            checkbox.checked = true;
-        })
-    } else {
-        areaCheckboxes.forEach(function(checkbox) {
-            checkbox.checked = false;
-        })
-    }
-}
+// function checkAll2(tableCheckBox) {
+//     if (tableCheckBox.checked == true) {
+//         areaCheckboxes.forEach(function(checkbox) {
+//             checkbox.checked = true;
+//         })
+//     } else {
+//         areaCheckboxes.forEach(function(checkbox) {
+//             checkbox.checked = false;
+//         })
+//     }
+// }
 
-// * Field Area Maintenance: Table Locations Checkbox Toggle
-const locationCheckboxes = document.querySelectorAll('[data-location-checkbox]');
+// // * Field Area Maintenance: Table Locations Checkbox Toggle
+// const locationCheckboxes = document.querySelectorAll('[data-location-checkbox]');
 
-function checkAll3(tableCheckBox) {
-    if (tableCheckBox.checked == true) {
-        locationCheckboxes.forEach(function(checkbox) {
-            checkbox.checked = true;
-        })
-    } else {
-        locationCheckboxes.forEach(function(checkbox) {
-            checkbox.checked = false;
-        })
-    }
-}
+// function checkAll3(tableCheckBox) {
+//     if (tableCheckBox.checked == true) {
+//         locationCheckboxes.forEach(function(checkbox) {
+//             checkbox.checked = true;
+//         })
+//     } else {
+//         locationCheckboxes.forEach(function(checkbox) {
+//             checkbox.checked = false;
+//         })
+//     }
+// }
 
 
 const viewApplications = document.querySelectorAll('[data-view-application]')

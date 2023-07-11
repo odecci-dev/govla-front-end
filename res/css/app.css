@@ -147,6 +147,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   overflow-y: auto;
+  counter-reset: tdNum;
 }
 table tr:first-of-type {
   isolation: isolate;
@@ -202,6 +203,35 @@ table th {
   background-color: #D6A330;
   color: #FFFFFF;
   transition: all 200ms ease-in-out;
+}
+
+.activeColumn {
+  transition: all 200ms ease-in-out;
+  background-color: #D6A330;
+  color: #FFFFFF;
+}
+.activeColumn > .td-btns > .td-btn-wrapper > button:nth-of-type(1) {
+  background-color: #FFFFFF;
+  color: #D6A330;
+  transition: 200ms ease-out;
+}
+.activeColumn > .td-btns > .td-btn-wrapper > button:nth-of-type(1):hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
+.activeColumn > .td-btns > .td-btn-wrapper > button.a-btn-trash {
+  transition: 200ms ease-in-out;
+  color: #FFFFFF;
+}
+.activeColumn > .td-btns > .td-btn-wrapper > button.a-btn-trash:hover {
+  color: #29292B;
+}
+.activeColumn > .td-btns > .td-btn-wrapper > button.a-btn-trash-3 {
+  transition: 200ms ease-in-out;
+  color: #FFFFFF;
+}
+.activeColumn > .td-btns > .td-btn-wrapper > button.a-btn-trash-3:hover {
+  color: #29292B;
 }
 
 .activeGreen {
