@@ -384,13 +384,13 @@
                         </div>
 
                         <!-- * Group Table -->
-                        <table>
+                        <table id="newGroupApplicationTable">
 
                             <!-- * Table Header -->
                             <tr>
 
                                 <!-- * Checkbox ALl-->
-                                <th><input type="checkbox" class="checkbox" id="allCheckbox" onchange="checkAll(this)"></th>
+                                <th><input type="checkbox" class="checkbox" data-select-all-checkbox></th>
 
                                 <!-- * Borrower -->
                                 <th><span class="th-name">Borrower</span></th>
@@ -408,12 +408,13 @@
                             <tr>
 
                                 <!-- * Checkbox Opt -->
-                                <td><input type="checkbox" class="checkbox" id="checkbox" data-checkbox></td>
+                                <td><input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox></td>
 
                                 <td>
                                     <!-- * Borrower Data-->
                                     <div class="td-wrapper">
-                                        <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> <span class="td-num">1</span>
+                                        <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> 
+                                        <span class="td-num"></span>
                                         <span class="td-name">Dela Cruz, Juana</span>
                                     </div>
 
@@ -442,12 +443,13 @@
                             <tr>
 
                                 <!-- * Checkbox -->
-                                <td><input type="checkbox" class="checkbox" id=" checkbox" data-checkbox></td>
+                                <td><input type="checkbox" class="checkbox" id=" checkbox" data-select-checkbox></td>
 
                                 <!-- * Borrower Data-->
                                 <td>
                                     <div class="td-wrapper">
-                                        <img src="../../res/assets/icons/sample-dp/Borrower-2.svg" alt=""> <span class="td-num">1</span>
+                                        <img src="../../res/assets/icons/sample-dp/Borrower-2.svg" alt=""> 
+                                        <span class="td-num"></span>
                                         <span class="td-name">Beverly, Haily</span>
                                     </div>
                                 </td>

@@ -476,13 +476,13 @@
                 <div class="table-container">
 
                     <!-- * All Members Group Loan Table -->
-                    <table>
+                    <table id="groupMembersTable">
 
                         <!-- * Table Header -->
                         <tr>
 
                             <!-- * Checkbox ALl-->
-                            <th><input type="checkbox" class="checkbox" id="allCheckbox" onchange="checkAll(this)"></th>
+                            <th><input type="checkbox" class="checkbox" data-select-all-checkbox></th>
 
                             <!-- * Group Name -->
                             <th><span class="th-name">Group Name</span></th>
@@ -514,11 +514,14 @@
                         <tr>
 
                             <!-- * Checkbox Opt -->
-                            <td><input type="checkbox" class="checkbox" id="checkbox" data-checkbox></td>
+                            <td><input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox></td>
 
                             <!-- * Group Name -->
                             <td>
-                                <span class="td-name">Group Sample 1</span>
+                                <div class="td-wrapper">
+                                    <span class="td-num"></span>
+                                    <span class="td-name">Group Sample 1</span>
+                                </div>
                             </td>
 
                             <!-- * No. of Members -->
@@ -546,11 +549,14 @@
                         <tr>
 
                             <!-- * Checkbox Opt -->
-                            <td><input type="checkbox" class="checkbox" id="checkbox" data-checkbox></td>
+                            <td><input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox></td>
 
                             <!-- * Group Name -->
                             <td>
-                                <span class="td-name">Group Sample 1</span>
+                                <div class="td-wrapper">
+                                    <span class="td-num"></span>
+                                    <span class="td-name">Group Sample 2</span>
+                                </div>
                             </td>
 
                             <!-- * No. of Members -->

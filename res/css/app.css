@@ -197,6 +197,17 @@ table th {
   position: sticky;
   top: 0;
 }
+table .td-wrapper {
+  display: flex;
+  align-items: center;
+}
+table .td-wrapper .td-num {
+  margin-left: 1.5rem;
+  font-weight: 700;
+}
+table .td-wrapper .td-name {
+  margin-left: 2rem;
+}
 
 .active {
   display: block;
@@ -4339,7 +4350,6 @@ body {
 }
 .main-dashboard .am-con-2 .table-container table td .td-wrapper .td-num {
   font-weight: 700;
-  margin-left: 1rem;
 }
 .main-dashboard .am-con-2 .table-container table td .td-wrapper .td-name {
   margin-left: 2rem;
@@ -4403,7 +4413,6 @@ body {
 }
 .main-dashboard .am-con-2 .table-container-2 table td .td-wrapper .td-num {
   font-weight: 700;
-  margin-left: 1rem;
 }
 .main-dashboard .am-con-2 .table-container-2 table td .td-wrapper .td-name {
   margin-left: 2rem;
@@ -4493,7 +4502,6 @@ body {
 }
 .main-dashboard .amg-con-2 .table-container table td .td-wrapper .td-num {
   font-weight: 700;
-  margin-left: 1rem;
 }
 .main-dashboard .amg-con-2 .table-container table td .td-wrapper .td-name {
   margin-left: 2rem;

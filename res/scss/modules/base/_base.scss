@@ -196,6 +196,18 @@ table {
         top: 0;
     }
 
+    .td-wrapper {
+        display: flex;
+        align-items: center;
+        .td-num {
+            margin-left: 1.5rem;
+            font-weight: $font-weight-bold;
+        }
+        .td-name {
+            margin-left: 2rem;
+        }
+    }
+
 }
 
 // * Active Primary Color

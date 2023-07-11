@@ -606,3 +606,7 @@ Eighth Commit:
 Ninth Commit:
 • Completed Select All Checkbox function (app.js)
 - all-members-borrower.html
+
+Tenth Commit:
+• Implemented Checkbox function 
+• TODO: Checkbox function for User Restriction
