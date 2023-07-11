@@ -189,6 +189,8 @@ table {
 
 }
 
+// * Custom Scroll and Overflow-y: auto made Global
+.rowspan table,
 .table-container {
     @include custom-scroll;
     overflow-x: hidden;

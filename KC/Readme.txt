@@ -580,3 +580,6 @@ Ninth Commit:
 June 11, 2023 (Tuesday)
 First Commit:
 • Made the overflow-y:auto global to all tables 
+
+Second Commit:
+• Minor modifications in loan & payment modal (_modal.scss)

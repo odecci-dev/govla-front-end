@@ -513,8 +513,6 @@
                 @include naSmallContainerGrid4;
                 grid-template-rows: minmax(0, 0.12fr) minmax(0, 1fr);
                 @include containerDefault2;
-                @include custom-scroll;
-                overflow-y: scroll;
                 padding: 3rem 4rem 3rem 4rem;
 
                 .rowspan {
@@ -549,9 +547,6 @@
                 // * Rowspan 2: Payment History Table 
                 .rowspan:nth-of-type(2) {
                     table {
-                        tr:first-of-type {
-                            top: 5rem;
-                        }
                         tr {
                             text-align: left;
                         }
@@ -579,8 +574,6 @@
                 @include naSmallContainerGrid4;
                 grid-template-rows: minmax(0, 0.12fr) minmax(0, 1fr);
                 @include containerDefault2;
-                @include custom-scroll;
-                overflow-y: scroll;
                 padding: 3rem 4rem 3rem 4rem;
                 .rowspan {
                     min-height: 0;
@@ -613,8 +606,10 @@
                 .rowspan:nth-of-type(2) {
                     table {
                         tr {
-                            top: 5rem;
                             text-align: left;
+                        }
+                        tr {
+                            border-bottom: 1px solid $secondary-bg;
                         }
                         tr:first-of-type {
                             border-bottom: 1px solid $secondary-bg;

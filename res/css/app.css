@@ -192,17 +192,21 @@ table th {
   top: 0;
 }
 
+.rowspan table,
 .table-container {
   overflow-x: hidden;
   overflow-y: auto;
 }
+.rowspan table::-webkit-scrollbar,
 .table-container::-webkit-scrollbar {
   width: 1rem;
 }
+.rowspan table::-webkit-scrollbar-track,
 .table-container::-webkit-scrollbar-track {
   border-radius: 3rem;
   box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2);
 }
+.rowspan table::-webkit-scrollbar-thumb,
 .table-container::-webkit-scrollbar-thumb {
   border-radius: 3rem;
   background-color: #D6A330;
@@ -1526,19 +1530,7 @@ body {
   background-color: #FFFFFF;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
-  overflow-y: scroll;
   padding: 3rem 4rem 3rem 4rem;
-}
-.na-loan-details-modal .modal-container .na-container-7 .small-con-4::-webkit-scrollbar {
-  width: 1rem;
-}
-.na-loan-details-modal .modal-container .na-container-7 .small-con-4::-webkit-scrollbar-track {
-  border-radius: 3rem;
-  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2);
-}
-.na-loan-details-modal .modal-container .na-container-7 .small-con-4::-webkit-scrollbar-thumb {
-  border-radius: 3rem;
-  background-color: #D6A330;
 }
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan {
   min-height: 0;
@@ -1565,9 +1557,6 @@ body {
   font-size: 2.5rem;
   font-weight: 700;
   padding-left: 1rem;
-}
-.na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:nth-of-type(2) table tr:first-of-type {
-  top: 5rem;
 }
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:nth-of-type(2) table tr {
   text-align: left;
@@ -1600,19 +1589,7 @@ body {
   background-color: #FFFFFF;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
-  overflow-y: scroll;
   padding: 3rem 4rem 3rem 4rem;
-}
-.na-loan-details-modal .modal-container .na-container-8 .small-con-5::-webkit-scrollbar {
-  width: 1rem;
-}
-.na-loan-details-modal .modal-container .na-container-8 .small-con-5::-webkit-scrollbar-track {
-  border-radius: 3rem;
-  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2);
-}
-.na-loan-details-modal .modal-container .na-container-8 .small-con-5::-webkit-scrollbar-thumb {
-  border-radius: 3rem;
-  background-color: #D6A330;
 }
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan {
   min-height: 0;
@@ -1641,8 +1618,10 @@ body {
   padding-left: 1rem;
 }
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table tr {
-  top: 5rem;
   text-align: left;
+}
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table tr {
+  border-bottom: 1px solid #E0DFDF;
 }
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table tr:first-of-type {
   border-bottom: 1px solid #E0DFDF;
@@ -6320,17 +6299,6 @@ body {
   grid-template-columns: minmax(0, 1fr);
   gap: 0px 2rem;
   border-radius: 1rem;
-}
-.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5)::-webkit-scrollbar {
-  width: 1rem;
-}
-.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5)::-webkit-scrollbar-track {
-  border-radius: 3rem;
-  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2);
-}
-.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5)::-webkit-scrollbar-thumb {
-  border-radius: 3rem;
-  background-color: #D6A330;
 }
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table {
   border-radius: 1rem;

@@ -37,12 +37,15 @@ document.addEventListener("click", e => {
 
 })
 
-// // * If rowspan has table 
-// const rowspanTableContainer = document.querySelectorAll(".rowspan")
+// * If rowspan has table 
+// const rowspanTableContainer = document.querySelectorAll(".rowspan table")
 
 // rowspanTableContainer.forEach((tableCon) => {
-//     tableCon
+//     // console.log(tableCon);
+//     tableCon.style.backgroundColor = 'rebeccapurple'
+
 // })
+
 // * All Members: Table Checkbox Toggle
 const allMemberCheckboxes = document.querySelectorAll('[data-allmembers-checkbox]');
 
