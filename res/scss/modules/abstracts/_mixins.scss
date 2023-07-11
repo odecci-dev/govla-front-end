@@ -182,6 +182,13 @@
     padding: $btn-padding-5;
 }
 
+// * Table Button 2
+@mixin tableButton2 {
+    @include primaryButton;
+    font-size: $font-size-small;
+    padding: $btn-padding-5;
+}
+
 // * Table Trash Button
 @mixin tableTransparentTrashButton {
     @include transparentButton2;

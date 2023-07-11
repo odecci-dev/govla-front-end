@@ -37,14 +37,6 @@ document.addEventListener("click", e => {
 
 })
 
-// * If rowspan has table 
-// const rowspanTableContainer = document.querySelectorAll(".rowspan table")
-
-// rowspanTableContainer.forEach((tableCon) => {
-//     // console.log(tableCon);
-//     tableCon.style.backgroundColor = 'rebeccapurple'
-
-// })
 
 // * All Members: Table Checkbox Toggle
 const allMemberCheckboxes = document.querySelectorAll('[data-allmembers-checkbox]');
@@ -265,3 +257,12 @@ function checkAll3(tableCheckBox) {
         })
     }
 }
+
+
+const viewApplications = document.querySelectorAll('[data-view-application]')
+viewApplications.forEach((application) => {
+    application.addEventListener('click', () => {
+        url = '/KC/transactions/new-application-view.html'
+        window.location = url
+    })
+})

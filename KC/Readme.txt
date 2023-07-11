@@ -589,3 +589,7 @@ Third Commit:
 
 Fourth Commit:
 • Created new application view (new-application-view.html)
+
+Fifth Commit:
+• Conected Application List view button to new-application view
+- app.js

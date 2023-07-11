@@ -248,6 +248,11 @@ table {
     @include tableButton;
 }
 
+// * Table View 3 Button Global
+.a-btn-view-3 {
+    @include tableButton2;
+}
+
 // * Table Trash (Transparent) Button Global
 .a-btn-trash {
     @include transparentButton2;
@@ -263,7 +268,7 @@ table {
     @include tableTransparentTrashButton;
 }
 
-// * Table Trash 4  Button Global
+// * Table Trash 4 Button Global
 .a-btn-trash-4 {
     @include secondaryButton;
 }
