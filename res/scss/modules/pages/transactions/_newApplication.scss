@@ -869,16 +869,6 @@
                         td:nth-of-type(4) {
                             text-align: center;
                         }
-                        // * Table Buttons Styles
-                        .td-btn-wrapper {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            button {
-                                cursor: pointer;
-                                margin: 0 $spacing-small;
-                            }
-                        }
                     }
                 }
                 // * Rowspan 6: Pagination

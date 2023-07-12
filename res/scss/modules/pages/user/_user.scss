@@ -128,15 +128,6 @@
             margin-left: 2rem;
           }
         }
-        // * Table Buttons Styles
-        .td-btn-wrapper {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          button {
-            cursor: pointer;
-          }
-        }
       }
       // * Due Date Data
       .td-due {
@@ -520,6 +511,8 @@
     }
     // * Small Container
     .small-con {
+      display: flex;
+      justify-content: center;
       width: 100%;
       // display: grid;
       // place-content: center;
@@ -550,6 +543,8 @@
               place-items: center;
               .input-inner-wrapper {
                 position: relative;
+                display: flex;
+                justify-content: center;
                 &:hover {
                   @include tableChipsWithX;
                 }

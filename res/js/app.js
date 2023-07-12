@@ -1,4 +1,3 @@
-
 // * All Members: Dropdown Menu Toggle
 document.addEventListener("click", e => {
 
@@ -37,14 +36,22 @@ document.addEventListener("click", e => {
 
 })
 
+
 let counter = 1
 
 const table = document.querySelector('table')
 
 if (table) {
+    
     const colspan = table.querySelectorAll('.td-num')
 
     colspan.forEach((num) => {
+        num.textContent = counter
+        counter++
+    })
+
+    const colspan2 = table.querySelectorAll('.td-num-out')
+    colspan2.forEach((num) => {
         num.textContent = counter
         counter++
     })

@@ -178,7 +178,7 @@
 // * Table Button
 @mixin tableButton {
     @include primaryButton;
-    font-size: $font-size;
+    font-size: calc($font-size + .1rem);
     padding: $btn-padding-5;
 }
 
@@ -187,6 +187,13 @@
     @include primaryButton;
     font-size: $font-size-small;
     padding: $btn-padding-5;
+}
+
+// * Table Button 2
+@mixin tableButton3 {
+    @include primaryButton;
+    font-size: $font-size-small;
+    padding: $btn-padding-6;
 }
 
 // * Table Trash Button

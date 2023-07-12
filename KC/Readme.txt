@@ -615,3 +615,6 @@ Tenth Commit:
 June 12, 2023 (Wednesday)
 First Commit:
 • Implemented Checkbox function for User Restriction (user.js)
+
+Second Commit:
+• Made the button styles consistent

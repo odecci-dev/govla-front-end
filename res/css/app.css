@@ -147,7 +147,6 @@ table {
   border-collapse: collapse;
   width: 100%;
   overflow-y: auto;
-  counter-reset: tdNum;
 }
 table tr:first-of-type {
   isolation: isolate;
@@ -170,12 +169,12 @@ table tr:not(:first-of-type):hover {
   color: #FFFFFF;
   transition: 300ms ease-out;
 }
-table tr:not(:first-of-type):hover > .td-btns > .td-btn-wrapper > button:nth-of-type(1) {
+table tr:not(:first-of-type):hover > .td-btns > .td-btn-wrapper > button {
   background-color: #FFFFFF;
   color: #D6A330;
   transition: 200ms ease-out;
 }
-table tr:not(:first-of-type):hover > .td-btns > .td-btn-wrapper > button:nth-of-type(1):hover {
+table tr:not(:first-of-type):hover > .td-btns > .td-btn-wrapper > button:hover {
   background-color: #29292B;
   color: #FFFFFF;
 }
@@ -197,9 +196,16 @@ table th {
   position: sticky;
   top: 0;
 }
+table .td-num-out {
+  padding: 0 2rem;
+  font-weight: 700;
+}
 table .td-wrapper {
   display: flex;
   align-items: center;
+}
+table .td-wrapper .td-num.td-no-margin {
+  margin: 0;
 }
 table .td-wrapper .td-num {
   margin-left: 1.5rem;
@@ -207,6 +213,12 @@ table .td-wrapper .td-num {
 }
 table .td-wrapper .td-name {
   margin-left: 2rem;
+}
+table .td-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .active {
@@ -221,12 +233,12 @@ table .td-wrapper .td-name {
   background-color: #D6A330;
   color: #FFFFFF;
 }
-.activeColumn > .td-btns > .td-btn-wrapper > button:nth-of-type(1) {
+.activeColumn > .td-btns > .td-btn-wrapper > button {
   background-color: #FFFFFF;
   color: #D6A330;
   transition: 200ms ease-out;
 }
-.activeColumn > .td-btns > .td-btn-wrapper > button:nth-of-type(1):hover {
+.activeColumn > .td-btns > .td-btn-wrapper > button:hover {
   background-color: #29292B;
   color: #FFFFFF;
 }
@@ -384,7 +396,7 @@ table .td-wrapper .td-name {
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: all 200ms ease-in-out;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding: 0.4rem 2.5rem;
 }
 .a-btn-view-2:hover {
@@ -439,7 +451,7 @@ table .td-wrapper .td-name {
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: all 200ms ease-in-out;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding: 0.4rem 2.5rem;
 }
 .a-btn-trash-2:hover {
@@ -489,6 +501,24 @@ table .td-wrapper .td-name {
   color: #FFFFFF;
 }
 
+.a-btn-trash-5 {
+  border-radius: 1rem;
+  padding: 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  font-size: 1rem;
+  padding: 0.4rem 2.33rem;
+}
+.a-btn-trash-5:hover {
+  background-color: #29292B;
+  color: #FFFFFF;
+}
+
 .a-btn-edit {
   border-radius: 1rem;
   padding: 0.8rem 4rem;
@@ -499,7 +529,7 @@ table .td-wrapper .td-name {
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: all 200ms ease-in-out;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding: 0.4rem 2.5rem;
 }
 .a-btn-edit:hover {
@@ -2590,9 +2620,6 @@ body {
   border-radius: 1.5rem;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.main-dashboard .m-con-2 .table-container table {
-  counter-reset: row-num;
-}
 .main-dashboard .m-con-2 .table-container table tr {
   counter-increment: row-num;
 }
@@ -2635,25 +2662,6 @@ body {
   padding: 1rem 0;
   font-size: 1.5rem;
 }
-.main-dashboard .m-con-2 .table-container table td .td-wrapper {
-  display: flex;
-  align-items: center;
-}
-.main-dashboard .m-con-2 .table-container table td .td-wrapper .td-num {
-  font-weight: 700;
-  margin-left: 1rem;
-}
-.main-dashboard .m-con-2 .table-container table td .td-wrapper .number::before {
-  content: counter(row-num);
-}
-.main-dashboard .m-con-2 .table-container table td .td-btn-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.main-dashboard .m-con-2 .table-container table td .td-btn-wrapper button {
-  cursor: pointer;
-}
 .main-dashboard .m-con-2 .table-container table .td-due {
   font-weight: 700;
 }
@@ -2662,6 +2670,9 @@ body {
 }
 .main-dashboard .m-con-2 .table-container table td:nth-of-type(2) {
   padding-left: 1rem;
+}
+.main-dashboard .m-con-2 .table-container table .td-wrapper .td-name {
+  margin: 0;
 }
 .main-dashboard .m-con-2 .pagination-container {
   display: flex;
@@ -3414,11 +3425,6 @@ body {
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table td .td-wrapper {
   display: flex;
   align-items: center;
-}
-.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table td .td-btn-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container.tbc-2 tr {
   display: flex;
@@ -6378,15 +6384,6 @@ body {
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table td:nth-of-type(4) {
   text-align: center;
 }
-.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table .td-btn-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table .td-btn-wrapper button {
-  cursor: pointer;
-  margin: 0 0.5rem;
-}
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(6) {
   display: grid;
   grid-auto-flow: row dense;
@@ -7543,14 +7540,6 @@ body {
 .ul-con-2 .table-container table td .td-wrapper .td-name {
   margin-left: 2rem;
 }
-.ul-con-2 .table-container table td .td-btn-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.ul-con-2 .table-container table td .td-btn-wrapper button {
-  cursor: pointer;
-}
 .ul-con-2 .table-container table .td-due {
   font-weight: 700;
 }
@@ -8026,6 +8015,8 @@ body {
   margin-right: 1.5rem;
 }
 .view-nu-con-1 .container-wrapper .small-con {
+  display: flex;
+  justify-content: center;
   width: 100%;
   padding: 2rem 0 2rem 2rem;
 }
@@ -8051,6 +8042,8 @@ body {
 }
 .view-nu-con-1 .container-wrapper .small-con .box .box-wrap:first-of-type .colspan .input-wrapper .input-inner-wrapper {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 .view-nu-con-1 .container-wrapper .small-con .box .box-wrap:first-of-type .colspan .input-wrapper .input-inner-wrapper:hover::before {
   content: "X";

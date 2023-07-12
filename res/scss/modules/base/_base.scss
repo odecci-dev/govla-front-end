@@ -139,7 +139,6 @@ table {
     border-collapse: collapse;
     width: 100%;
     overflow-y: auto;
-    counter-reset: tdNum;
 
     tr:first-of-type {
         isolation: isolate;
@@ -164,7 +163,7 @@ table {
         color: $white;
         transition: 300ms ease-out;
 
-        &>.td-btns>.td-btn-wrapper>button:nth-of-type(1) {
+        &>.td-btns>.td-btn-wrapper>button {
             background-color: $white;
             color: $primary;
             transition: 200ms ease-out;
@@ -196,16 +195,30 @@ table {
         top: 0;
     }
 
+    .td-num-out {
+        padding: 0 $spacing-2x-large;
+        font-weight: $font-weight-bold;
+    }
     .td-wrapper {
         display: flex;
         align-items: center;
+        .td-num.td-no-margin {
+            margin: 0;
+        }
         .td-num {
-            margin-left: 1.5rem;
+            margin-left: $spacing-large;
             font-weight: $font-weight-bold;
         }
         .td-name {
             margin-left: 2rem;
         }
+    }
+
+    .td-btn-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-large;
     }
 
 }
@@ -224,7 +237,7 @@ table {
     background-color: $primary;
     // border-bottom: 1px solid $white;
     color: $white;
-    &>.td-btns>.td-btn-wrapper>button:nth-of-type(1) {
+    &>.td-btns>.td-btn-wrapper>button {
         background-color: $white;
         color: $primary;
         transition: 200ms ease-out;
@@ -317,6 +330,11 @@ table {
 // * Table Trash 4 Button Global
 .a-btn-trash-4 {
     @include secondaryButton;
+}
+
+// * Table Trash 5 Button Global
+.a-btn-trash-5 {
+    @include tableButton3;
 }
 
 // * Table Edit Button Global

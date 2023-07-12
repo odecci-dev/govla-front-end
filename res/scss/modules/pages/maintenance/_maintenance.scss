@@ -170,7 +170,6 @@
                 // **                         ** //
                 // **** Table Header Styles **** //
                 // **                         ** //
-                counter-reset: row-num;
                 tr {
                     counter-increment: row-num;
                 }
@@ -219,27 +218,6 @@
                 td {
                     padding: $spacing-medium 0;
                     font-size: $font-size-medium;
-                    // * Borrowers' Data Styles
-                    .td-wrapper {
-                        display: flex;
-                        align-items: center;
-                        .td-num {
-                            font-weight: $font-weight-bold;
-                            margin-left: 1rem;
-                        }
-                        .number::before {
-                            content: counter(row-num);
-                        }
-                    }
-                    // * Table Buttons Styles
-                    .td-btn-wrapper {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        button {
-                            cursor: pointer;
-                        }
-                    }
                 }
                 // * Due Date Data
                 .td-due {
@@ -250,6 +228,9 @@
                 }
                 td:nth-of-type(2) {
                     padding-left: 1rem;
+                }
+                .td-wrapper .td-name {
+                    margin: 0;
                 }
             }
         }
@@ -841,16 +822,6 @@
                                             align-items: center;
                                         }
                                         // * Table Buttons Styles
-                                        .td-btn-wrapper {
-                                            display: flex;
-                                            align-items: center;
-                                            justify-content: center;
-                                            // TODO: Different Trash Button Style
-                                            // * Table Trash Button
-                                            // .a-btn-trash {
-                                            //     @include tableButton;
-                                            // }
-                                        }
                                     }
                                 }
                             }
