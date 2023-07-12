@@ -2,11 +2,14 @@
 
 $primary: #D6A330;
 $primaryTR: transparentize($primary, 0.6);
+$primaryGrad1: linear-gradient(90deg, rgba(214,163,48,0.85) 0%, rgba(214,163,48,0.95) 15%, rgba(214,163,48, 1) 50%, rgba(214,163,48,0.85) 85%, rgba(214,163,48,0.80) 100%);
+$primaryGrad2: linear-gradient(90deg, rgba(214,163,48,0.75) 0%, rgba(214,163,48,0.85) 15%, rgba(214,163,48,0.90) 50%, rgba(214,163,48,0.95) 85%, rgba(214,163,48,1) 100%);
 $secondary: #FFFF4E;
 $accent: #DAB77A;
 $black: #29292B;
 $blackTR: transparentize($black, 0.4);
 $blackTR2: transparentize($black, 0.8);
+$blackGrad1: linear-gradient(90deg, rgba(41,41,43,0.25) 0%, rgba(41,41,43,0.55) 15%, rgba(41,41,43,0.65) 50%, rgba(41,41,43,0.55) 85%, rgba(41,41,43,0.25) 100%);
 $white: #FFFFFF;
 $primary-bg: #EBEBEB;
 $secondary-bg: #E0DFDF;

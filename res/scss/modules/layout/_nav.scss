@@ -42,13 +42,15 @@
                 color: $white;
             }
         }
-        // * navlink
+        // * Navlink
         li {
             transition: background-color ease-out 200ms;
-        }
-        li:hover,
-        li:focus {
-            background-color: $primary;
+            &:hover,
+            &:focus {
+                background: rgba(0, 0, 0, 0.125);
+                background-blend-mode: darken;
+                background: $primaryGrad1;
+            }
         }
         // * Display carret right to all the links
         .link.dropdown::after {
@@ -71,7 +73,9 @@
                 position: relative;
             }
             .dropdown.showMenu {
-                background-color: #D6A330;
+                transition: 500ms ease-in-out;
+                // background-color: rebeccapurple;
+                background: $primaryGrad1;
             }
             // * When a link IS clicked
             .dropdown.showMenu>.link.dropdown+.sub-menu {
@@ -104,6 +108,7 @@
                 }
                 li:hover {
                     cursor: pointer;
+                    // background: $primaryGrad1;
                     background: rgba(0, 0, 0, 0.125);
                     background-blend-mode: darken;
                 }

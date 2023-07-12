@@ -622,3 +622,6 @@ Second Commit:
 Third Commit:
 • Made navigation and url changes consistent when navlink button is active
 • Made the button styles consistent (user.html)
+
+Fourth Commit:
+• Enhanced navigation styles 

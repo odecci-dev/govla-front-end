@@ -1,9 +1,11 @@
-const linkButtons = document.querySelectorAll("[data-nav-link]");
+const linkButtons = document.querySelectorAll("[data-nav-link]")
 const dataDropdown = document.querySelectorAll('[data-dropdown]')
+const noDataDropdown = document.querySelectorAll('[no-data-dropdown]')
+
 const currentURL = window.location.pathname
 
 
-if (linkButtons) {
+if (linkButtons && dataDropdown && noDataDropdown) {
     
     const linkDashboard = "/KC/dashboard.html"
     const linkAllMembers = "/KC/members/all-members.html"
@@ -31,7 +33,8 @@ if (linkButtons) {
     // * Array to hold the items
     const links = []
     const dataDropdownArray = []
-    
+    const noDataDropdownArray = []
+
     // * Links Array
     for (const linkButton of linkButtons) {
         links.push(linkButton)
@@ -42,19 +45,44 @@ if (linkButtons) {
         dataDropdownArray.push(dataDropdownBtns)
     }
 
+    // * No Data Dropdown Array
+    for (const noDataDropdownBtns of noDataDropdown) {
+        noDataDropdownArray.push(noDataDropdownBtns)
+    }
+
 
     // * Accessing the items individually
     
-    // * Dashboard
+    // ***** Overview ***** //
     links[0].setAttribute("href", linkDashboard)
 
     if (links[0].getAttribute('href').match(currentURL)) {
+        
+        noDataDropdownArray[0].classList.add('activeLink')
 
-        const noDataDropdown = document.querySelector('[no-data-dropdown]')
-        noDataDropdown.classList.add('activeLink')
+    }
+
+    
+    // ***** User ***** //
+    links[19].setAttribute("href", linkUser)
+
+    if (links[19].getAttribute('href').match(currentURL)) {
+
+        noDataDropdownArray[1].classList.add('activeLink')
 
     }
     
+    
+    // * Settings
+    links[20].setAttribute("href", linkSettings)
+    
+    if (links[20].getAttribute('href').match(currentURL)) {
+
+        noDataDropdownArray[2].classList.add('activeLink')
+
+    }
+
+
 
     // ***** Members ***** //
 
@@ -178,7 +206,7 @@ if (linkButtons) {
         links[13].classList.add('activeSublink')
 
     }
-    
+
 
     // ***** Reports ***** //
 
@@ -197,11 +225,6 @@ if (linkButtons) {
     // * Custom Report 4
     links[18].setAttribute("href", linkCustomReport4)
 
-    // * User
-    links[19].setAttribute("href", linkUser)
-
-    // * Settings
-    links[20].setAttribute("href", linkSettings)
 
     if (links[14].getAttribute('href').match(currentURL)) {
 
@@ -228,15 +251,6 @@ if (linkButtons) {
         dataDropdownArray[4].classList.add('activeLink')
         links[18].classList.add('activeSublink')
 
-    } else if (links[19].getAttribute('href').match(currentURL)) {
-
-        dataDropdownArray[4].classList.add('activeLink')
-        links[19].classList.add('activeSublink')
-
-    } else if (links[20].getAttribute('href').match(currentURL)) {
-
-        dataDropdownArray[4].classList.add('activeLink')
-        links[20].classList.add('activeSublink')
     }
     
 }

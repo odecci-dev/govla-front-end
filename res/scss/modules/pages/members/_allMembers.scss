@@ -113,37 +113,8 @@
                 gap: 2rem;
                 display: flex;
                 align-items: center;
-                // button {
-                //     cursor: pointer;
-                //     background: none;
-                //     &:hover {
-                //         transform: scale(1.015);
-                //     }
-                // }
                 .search-wrap {
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    // * Search input text-field
-                    input {
-                        @include inputField;
-                        position: relative;
-                        padding-left: $spacing-6x-large;
-                        &::placeholder {
-                            font-size: $font-size-large;
-                            position: absolute;
-                            top: 0;
-                            transform: translateY(1rem);
-                        }
-                        &::-webkit-search-cancel-button {
-                            -webkit-appearance: none;
-                        }
-                    }
-                    img {
-                        position: absolute;
-                        width: 8%;
-                        transform: translateX(1.5rem);
-                    }
+                    @include searchbar;
                 }
             }
         }

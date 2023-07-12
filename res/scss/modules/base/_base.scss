@@ -193,6 +193,7 @@ table {
     th {
         position: sticky;
         top: 0;
+        padding: 0 min(1rem);
     }
 
     .td-num-out {
@@ -232,11 +233,20 @@ table {
 }
 
 .activeLink {
-    background-color: $primary;
+    transition: all 500ms ease-in;
+    background: $primaryGrad1;
+    // background-color: $primary;
 }
 
 .activeSublink {
-    background-color: $blackTR2;
+    transition: all 500ms ease-in;
+    font-weight: $font-weight-black;
+    background: rgba(0, 0, 0, 0.125);
+    background-blend-mode: darken;
+    // background: $blackGrad1;
+    // // background-color: $black;
+    // color: $white;
+    // // background-color: $blackTR2;
 }
 
 // * Active Table Td Column

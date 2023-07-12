@@ -97,8 +97,8 @@
                 // **** Table Header Styles **** //
                 // **                         ** //
                 th {
-                padding: $spacing-2x-large $spacing-large;
-                text-align: center;
+                    padding: $spacing-2x-large $spacing-large;
+                    text-align: center;
                     span.th-name {
                         font-size: $font-size;
                         font-weight: $font-weight-bold;
@@ -117,22 +117,27 @@
                 text-align: left;
                 }
                 // * Table Checkbox
-                th:first-of-type,
+                th:first-of-type {
+                    padding-left: $spacing-2x-large;
+                }
                 th:nth-of-type(2){
-                padding-left: 2rem;
+                    padding-left: $spacing-small;
                 }
                 th:nth-of-type(6) {
                     .th-wrapper {
                         justify-content: flex-end;
                     }
                 }
-               
+                th:nth-of-type(7) {
+                    text-align: center;
+                }
+
                 // **                       ** //
                 // **** Table Data Styles **** //
                 // **                       ** //
                 td {
-                padding: $spacing-medium $spacing-large;
-                font-size: $font-size-small;
+                    padding: $spacing-medium $spacing-large;
+                    font-size: $font-size-small;
                 // * Borrowers' Data Styles
                 .td-wrapper {
                     display: flex;
@@ -151,9 +156,14 @@
 
                 font-weight: $font-weight-bold;
                 }
-                td:first-of-type,
+                td:first-of-type {
+                    padding-left: $spacing-2x-large;
+                }
                 td:nth-of-type(2) {
-                padding-left: 2rem;
+                    padding-left: $spacing-small;
+                }
+                td:nth-of-type(7) {
+                    text-align: center;
                 }
             }
             }
@@ -190,7 +200,7 @@
                     position: relative;
                     transform: translateX(-1.5rem);
                     z-index: -1;
-                    width: 120%;
+                    width: 150%;
                     height: 1.5rem;
                     background-color: $secondary-bg;
                     transition: all 400ms ease;
