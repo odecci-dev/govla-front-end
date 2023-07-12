@@ -228,6 +228,14 @@ table .td-btn-wrapper {
   transition: all 200ms ease-in-out;
 }
 
+.activeLink {
+  background-color: #D6A330;
+}
+
+.activeSublink {
+  background-color: rgba(41, 41, 43, 0.2);
+}
+
 .activeColumn {
   transition: all 200ms ease-in-out;
   background-color: #D6A330;

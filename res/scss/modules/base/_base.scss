@@ -231,6 +231,14 @@ table {
     transition: all 200ms ease-in-out;
 }
 
+.activeLink {
+    background-color: $primary;
+}
+
+.activeSublink {
+    background-color: $blackTR2;
+}
+
 // * Active Table Td Column
 .activeColumn {
     transition: all 200ms ease-in-out;
