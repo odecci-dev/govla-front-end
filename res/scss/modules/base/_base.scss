@@ -129,7 +129,8 @@ button {
 
 // * Custom Scroll and Overflow-y: auto made Global
 .rowspan.table,
-.table-container {
+.table-container,
+.table-container-2 {
     @include custom-scroll;
     overflow-x: hidden;
     overflow-y: auto;
@@ -189,12 +190,18 @@ table {
             }
         }
     }
+
+    // * Background Color Odd   
+    tr:nth-of-type(odd) {
+        background-color: $primaryTR2;
+    }
     
     th {
         position: sticky;
         top: 0;
         padding: 0 min(1rem);
     }
+    
 
     .td-num-out {
         padding: 0 $spacing-2x-large;
@@ -243,18 +250,17 @@ table {
     font-weight: $font-weight-black;
     background: rgba(0, 0, 0, 0.125);
     background-blend-mode: darken;
-    // background: $blackGrad1;
-    // // background-color: $black;
-    // color: $white;
-    // // background-color: $blackTR2;
 }
 
 // * Active Table Td Column
 .activeColumn {
     transition: all 200ms ease-in-out;
     background-color: $primary;
-    // border-bottom: 1px solid $white;
     color: $white;
+    &:nth-of-type(odd) {
+    background-color: $primaryTR3;
+
+    }
     &>.td-btns>.td-btn-wrapper>button {
         background-color: $white;
         color: $primary;
@@ -362,7 +368,7 @@ table {
 
 // * Table Delete Button Global
 .a-btn-delete {
-    @include tableTransparentTrashButton;
+    @include tableButton;
 }
 
 // * View Loan Details Button Global

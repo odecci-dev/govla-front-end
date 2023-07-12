@@ -8,27 +8,30 @@ function newAppModal() {
         
         const openNewApplicationButton = document.querySelector('#data-open-new-application-modal')
         const closeNewApplicationButton = document.querySelector('#data-close-new-application-modal')
+        
+        if (openNewApplicationButton) {
+            openNewApplicationButton.addEventListener('click', (e) => {
+                newApplicationModal.showModal()
+            })
+        }
     
-    
-        openNewApplicationButton.addEventListener('click', (e) => {
-            newApplicationModal.showModal();
-        })
-    
-        closeNewApplicationButton.addEventListener('click', () => {
-            newApplicationModal.setAttribute("closing", "");
-            newApplicationModal.addEventListener("animationend", () => {
-                newApplicationModal.removeAttribute("closing");
-                newApplicationModal.close();
-            }, { once: true });
-    
-        })
+        if (closeNewApplicationButton) {
+            closeNewApplicationButton.addEventListener('click', () => {
+                newApplicationModal.setAttribute("closing", "")
+                newApplicationModal.addEventListener("animationend", () => {
+                    newApplicationModal.removeAttribute("closing")
+                    newApplicationModal.close()
+                }, { once: true })
+        
+            })
+        }
     } 
 
     // ** Loan Type Dropdown
         
-    const selected = document.querySelector('[data-type-loan-select]');
-    const optionsContainer = document.querySelector('[data-type-opt-con');
-    const optionsList = document.querySelectorAll('[data-type-loan-opt]');
+    const selected = document.querySelector('[data-type-loan-select]')
+    const optionsContainer = document.querySelector('[data-type-opt-con')
+    const optionsList = document.querySelectorAll('[data-type-loan-opt]')
 
     selected.addEventListener("click", () => {
         optionsContainer.classList.toggle("active");
@@ -47,7 +50,7 @@ function newAppModal() {
     groupLoanOpt.addEventListener('click', () => {
 
         const url = '/KC/transactions/new-group-application.html'
-        window.location = url;
+        window.location = url
 
     })
 
@@ -64,10 +67,20 @@ function newAppModal() {
     btnToNewApp.addEventListener('click', () => {
 
         const url = '/KC/transactions/new-application.html'
-        window.location = url;
+        window.location = url
 
     })  
         
+    const newAppModalTable = document.getElementById('newApplicationModalTable')
+    const existingMembers = newAppModalTable.querySelectorAll('td')
+
+    existingMembers.forEach((member) => {
+        const url = '/KC/transactions/new-application-view.html'
+
+        member.closest('tr').addEventListener('click', () => {
+            window.location = url
+        })
+    })
     
 
 }

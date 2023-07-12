@@ -2,6 +2,8 @@
 
 $primary: #D6A330;
 $primaryTR: transparentize($primary, 0.6);
+$primaryTR2: transparentize($primary, 0.88);
+$primaryTR3: transparentize($primary, 0.2);
 $primaryGrad1: linear-gradient(90deg, rgba(214,163,48,0.85) 0%, rgba(214,163,48,0.95) 15%, rgba(214,163,48, 1) 50%, rgba(214,163,48,0.85) 85%, rgba(214,163,48,0.80) 100%);
 $primaryGrad2: linear-gradient(90deg, rgba(214,163,48,0.75) 0%, rgba(214,163,48,0.85) 15%, rgba(214,163,48,0.90) 50%, rgba(214,163,48,0.95) 85%, rgba(214,163,48,1) 100%);
 $secondary: #FFFF4E;

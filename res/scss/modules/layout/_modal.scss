@@ -133,7 +133,7 @@
                     align-items: center;
                     width: 100%;
                     height: clamp(min(40vh, 50rem), 10rem, max(100vh, 55rem));
-
+                    padding-bottom: $spacing-2x-large;
                     border-radius: $border-radius-large;
                     box-shadow: $box-shadow;
                     table {

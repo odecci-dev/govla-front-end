@@ -625,3 +625,7 @@ Third Commit:
 
 Fourth Commit:
 • Enhanced navigation styles 
+
+Fifth Commit:
+• Enhanced overall styles 
+• Created dummy data for tables
