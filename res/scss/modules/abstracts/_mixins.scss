@@ -250,6 +250,10 @@
 }
 
 @mixin tableChipsWithX {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-1rem, -0.2rem);
     &::before {
         content: 'X';
         cursor: pointer;
@@ -258,9 +262,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        right: 0;
-        top: 0;
-        transform: translate(0.2rem, -0.2rem);
+        
         font-size: $font-size-small;
         font-weight: $font-weight;
         color: $white;
@@ -270,6 +272,7 @@
         background-color: $alert;
     }
 }
+
 
 // * Transparent Button
 @mixin transparentButton {
@@ -324,10 +327,22 @@
     }
 }
 
-// * Table Trash Button
+// * Table Show All Button
 @mixin transparentButton5 {
     @include transparentButton2;
     font-size: $font-size-small;
+    padding: $btn-padding-5;
+    color: $blackTR;
+    &:hover {
+        color: $primary;
+    }
+}
+
+// * Table Show All Button
+@mixin transparentButton5 {
+    @include transparentButton2;
+    font-size: $font-size-small;
+    font-weight: $font-weight;
     padding: $btn-padding-5;
     color: $blackTR;
     &:hover {
@@ -392,6 +407,68 @@
         height: 1.5rem;
         border-radius: $circle;
         background-color: $alert;
+    }
+}
+
+
+// * Input Image Button
+@mixin inputImageButton {
+    position: relative;
+    border-radius: $border-radius-medium;
+    padding: $btn-padding-2;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    color: transparent;
+    background-color: $primary;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    &::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+    &:before {
+        position: absolute;
+        display: inline;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 1rem);
+        color: $white;
+    }
+    // * Input Image Button Hover
+    &:hover {
+        background-color: $black;
+        color: transparent;
+    }
+}
+
+// * Input Image Button 2
+@mixin inputImageButton2 {
+    width: 100%;
+    position: relative;
+    border-radius: $border-radius-medium;
+    padding: $btn-padding-2;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    color: transparent;
+    background-color: $primary;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    &::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+    &:before {
+        position: absolute;
+        display: inline;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 1rem);
+        color: $white;
+    }
+    // * Input Image Button Hover
+    &:hover {
+        background-color: $black;
+        color: transparent;
     }
 }
 
@@ -644,6 +721,7 @@
         opacity: 1;
     }
 }
+
 
 // * Form Checkbox
 // @mixin formCheckbox {

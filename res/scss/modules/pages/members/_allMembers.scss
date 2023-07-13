@@ -453,42 +453,7 @@
                             input {
                                 @include inputField;
                             }
-                            // // * Select Input Global Styles
-                            // .select-box {
-                            //     position: relative;
-                            //     select {
-                            //         @include selectField;
-                            //         width: 100%;
-                            //         option {
-                            //             position: absolute;
-                            //             outline: none;
-                            //             border: none;
-                            //             background-color: $secondary-bg;
-                            //         }
-                            //     }
-                            // }
-                            // // * Select Input Arrow
-                            // .select-box::before {
-                            //     content: '';
-                            //     position: absolute;
-                            //     width: 15px;
-                            //     height: 15px;
-                            //     z-index: 2;
-                            //     right: 0;
-                            //     transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
-                            //     // border: 2px solid $black;
-                            //     border-bottom: 2px solid $black;
-                            //     border-left: 2px solid $black;
-                            //     transition: ease-out 300ms;
-                            //     pointer-events: none;
-                            // }
-                            // .select-box:focus-within::before {
-                            //     border-top: 2px solid $black;
-                            //     border-right: 2px solid $black;
-                            //     border-bottom: none;
-                            //     border-left: none;
-                            //     transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
-                            // }
+                            
                             // * Radio Buttons
                             .box-wrap {
                                 display: flex;
@@ -609,35 +574,18 @@
                             align-items: center;
                             gap: 2rem;
                             .input-wrapper {
+                                width: calc(100% - 15%);
                                 display: grid;
                                 place-items: center;
                                 position: relative;
-    
+                                
                                 input[type="image"] {
                                     width: clamp(4rem, 20vw, 100%);
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
                                 }
-                                    &:hover::before {
-                                        content: 'X';
-                                        cursor: pointer;
-                                        position: absolute;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        right: 0;
-                                        top: 0;
-                                        transform: translate(0.6rem, -0.4rem);
-                                        font-size: $font-size-small;
-                                        font-weight: $font-weight;
-                                        color: $white;
-                                        width: 1.5rem;
-                                        height: 1.5rem;
-                                        border-radius: $circle;
-                                        background-color: $alert;
-                                        z-index: 9;
-                                    }
+
                             }
                             // * Colspan 1 : Buttons
                             .btn-wrapper:nth-of-type(2) {

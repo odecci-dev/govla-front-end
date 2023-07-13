@@ -91,6 +91,14 @@ img[alt=funnel]:hover {
   scale: 1.15;
 }
 
+img[alt=upload-image] {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
 button:has([alt=filter]) {
   cursor: pointer;
   background: none;
@@ -347,6 +355,7 @@ table .td-btn-wrapper {
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
   font-size: 1rem;
+  font-weight: 400;
   padding: 0.4rem 2.5rem;
   color: rgba(41, 41, 43, 0.6);
 }
@@ -359,6 +368,32 @@ table .td-btn-wrapper {
   transform: scale(1.005);
 }
 .transparentButton3:hover {
+  color: #D6A330;
+}
+
+.transparentButton4 {
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #D6A330;
+  background: transparent;
+  transition: all 200ms ease-in-out;
+  padding: 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.4rem 2.5rem;
+  color: rgba(41, 41, 43, 0.6);
+}
+.transparentButton4:hover {
+  color: #29292B;
+  transform: scale(1.005);
+}
+.transparentButton4:hover {
+  color: #29292B;
+  transform: scale(1.005);
+}
+.transparentButton4:hover {
   color: #D6A330;
 }
 
@@ -724,6 +759,29 @@ table .td-btn-wrapper {
   white-space: nowrap;
 }
 
+.tb-chip-w-x {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(-1rem, -0.2rem);
+}
+.tb-chip-w-x::before {
+  content: "X";
+  cursor: pointer;
+  z-index: 9;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #FF0404;
+}
+
 .checkbox {
   cursor: pointer;
   position: relative;
@@ -871,6 +929,71 @@ table .td-btn-wrapper {
 }
 .input-wrapper input:hover {
   opacity: 0.8;
+}
+.input-wrapper input.input-image {
+  position: relative;
+  border-radius: 1rem;
+  padding: 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: transparent;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.input-wrapper input.input-image::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.input-wrapper input.input-image:before {
+  position: absolute;
+  display: inline;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 1rem);
+  color: #FFFFFF;
+}
+.input-wrapper input.input-image:hover {
+  background-color: #29292B;
+  color: transparent;
+}
+.input-wrapper #imageUploadApplicantSign::before {
+  content: "Upload Applicant Signature";
+}
+.input-wrapper #imageUploadCoMakerSign::before {
+  content: "Upload Co-Maker Signature";
+}
+
+.btn-wrapper input.input-image {
+  width: 100%;
+  position: relative;
+  border-radius: 1rem;
+  padding: 0.8rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: transparent;
+  background-color: #D6A330;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.btn-wrapper input.input-image::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.btn-wrapper input.input-image:before {
+  position: absolute;
+  display: inline;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 1rem);
+  color: #FFFFFF;
+}
+.btn-wrapper input.input-image:hover {
+  background-color: #29292B;
+  color: transparent;
+}
+.btn-wrapper input.input-image.upload-borrower-image-btn::before {
+  content: "Upload Image";
 }
 
 .input-wrapper-modal {
@@ -1563,13 +1686,10 @@ body {
 
 .na-loan-details-modal {
   margin: auto;
-  width: 90%;
+  height: clamp(1rem, 100%, 100vh);
+  width: clamp(1rem, 100%, 100vw);
   z-index: 5;
   background: none;
-}
-.na-loan-details-modal::-webkit-scrollbar {
-  padding-left: 1rem;
-  width: 1rem;
 }
 .na-loan-details-modal::backdrop {
   background-color: rgba(41, 41, 43, 0.7);
@@ -1590,15 +1710,142 @@ body {
   animation: fade-out 500ms forwards;
 }
 .na-loan-details-modal .modal-container {
-  border-radius: 1.5rem;
+  height: 100%;
+  border-radius: 1rem;
   background-color: #FFFFFF;
   padding: 1rem;
+  position: relative;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal {
+  margin: auto;
+  border-radius: 1rem;
+  height: 70%;
+  width: calc(100% - 20rem);
+}
+.na-loan-details-modal .modal-container .daily-payment-modal::backdrop {
+  background-color: rgba(41, 41, 43, 0.7);
+}
+.na-loan-details-modal .modal-container .daily-payment-modal[open] {
+  animation: fade-in 500ms forwards, pop-up 500ms;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal::backdrop[open] {
+  animation: fade-in 500ms forwards;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal[closing] {
+  display: block;
+  pointer-events: none;
+  inset: 0;
+  animation: fade-out 500ms forwards, slide-down 500ms forwards;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal::backdrop[closing] {
+  animation: fade-out 500ms forwards;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container {
+  position: relative;
+  height: 100%;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .button-wrapper {
+  position: absolute;
+  right: 0;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .button-wrapper button {
+  cursor: pointer;
+  background: none;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .button-wrapper button img {
+  transition: all 150ms ease-in-out;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .button-wrapper button img:hover {
+  transform: scale(1.1);
+  filter: opacity(0.7);
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 {
+  height: inherit;
+  padding: 2rem;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 {
+  height: inherit;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-rows: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 0.1fr) minmax(0, 1fr);
+  gap: 2rem 0px;
+  grid-template-rows: minmax(0, 0.15fr) repeat(2, minmax(0, 1fr)) minmax(0, 0.3fr);
+  padding: 2rem;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .rowspan {
+  min-height: 0;
+  /* NEW */
+  min-width: 0;
+  /* NEW; needed for Firefox */
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .rowspan:first-of-type h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .rowspan:nth-of-type(2) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .rowspan:nth-of-type(2) .box-wrapper {
+  display: grid;
+  grid-template-rows: repeat(4, minmax(0, 0.25fr));
+  align-items: center;
+  gap: 1rem 0;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .rowspan:nth-of-type(2) .box-wrapper .detail-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .rowspan:nth-of-type(2) .box-wrapper .detail-wrapper .detail-inner-wrapper span {
+  text-align: left;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .rowspan:nth-of-type(2) .box-wrapper .detail-wrapper .detail-inner-wrapper:first-of-type span {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .rowspan:nth-of-type(2) .box-wrapper .detail-wrapper .detail-inner-wrapper:last-of-type span {
+  color: #D6A330;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .rowspan:nth-of-type(3) {
+  border-top: 1.5px solid rgba(41, 41, 43, 0.6);
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .rowspan:nth-of-type(3) table tr {
+  text-align: left;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .rowspan:nth-of-type(3) table tr:first-of-type {
+  border-bottom: 1px solid #E0DFDF;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .rowspan:nth-of-type(3) table th {
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 1rem 1rem;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .rowspan:nth-of-type(3) table td {
+  font-weight: 400;
+  font-size: 1.2rem;
+  padding: 2rem 1rem;
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .show-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1.5px solid rgba(41, 41, 43, 0.6);
+}
+.na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .show-more span {
+  font-size: 1.8rem;
 }
 .na-loan-details-modal .modal-container .button-wrapper {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 1.2rem;
+  position: absolute;
+  right: 2rem;
+  z-index: 9;
 }
 .na-loan-details-modal .modal-container .button-wrapper button {
   cursor: pointer;
@@ -1612,9 +1859,8 @@ body {
   filter: opacity(0.7);
 }
 .na-loan-details-modal .modal-container .na-container-7 {
-  height: 40rem;
+  height: 50%;
   width: 100%;
-  padding: 2rem;
 }
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 {
   height: 100%;
@@ -1625,12 +1871,8 @@ body {
   grid-auto-rows: minmax(0, 1fr);
   grid-template-rows: minmax(0, 0.1fr) minmax(0, 1fr);
   gap: 2rem 0px;
-  grid-template-rows: minmax(0, 0.12fr) minmax(0, 1fr);
-  border-radius: 1.5rem;
-  background-color: #FFFFFF;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
-  padding: 3rem 4rem 3rem 4rem;
+  grid-template-rows: minmax(0, 0.12fr) minmax(0, 1fr) minmax(0, 0.3fr);
+  padding: 2rem;
 }
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan {
   min-height: 0;
@@ -1649,7 +1891,7 @@ body {
   position: absolute;
   left: 0;
   inset: 0;
-  transform: scaleY(3);
+  transform: scaleY(2.9);
   background-color: #FFFFFF;
   z-index: -1;
 }
@@ -1664,16 +1906,36 @@ body {
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:nth-of-type(2) table tr:first-of-type {
   border-bottom: 1px solid #E0DFDF;
 }
-.na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:nth-of-type(2) table th,
+.na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:nth-of-type(2) table th {
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 1rem 1rem;
+  text-align: right;
+}
+.na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:nth-of-type(2) table th:nth-of-type(-n+3) {
+  text-align: left;
+}
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:nth-of-type(2) table td {
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   padding: 2rem 1rem;
+  text-align: right;
+}
+.na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:nth-of-type(2) table td:nth-of-type(-n+3) {
+  text-align: left;
+}
+.na-loan-details-modal .modal-container .na-container-7 .small-con-4 .show-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1.5px solid rgba(41, 41, 43, 0.6);
+}
+.na-loan-details-modal .modal-container .na-container-7 .small-con-4 .show-more span {
+  font-size: 1.8rem;
 }
 .na-loan-details-modal .modal-container .na-container-8 {
-  height: 40rem;
+  height: 50%;
   width: 100%;
-  padding: 2rem;
 }
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 {
   height: 100%;
@@ -1684,12 +1946,8 @@ body {
   grid-auto-rows: minmax(0, 1fr);
   grid-template-rows: minmax(0, 0.1fr) minmax(0, 1fr);
   gap: 2rem 0px;
-  grid-template-rows: minmax(0, 0.12fr) minmax(0, 1fr);
-  border-radius: 1.5rem;
-  background-color: #FFFFFF;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
-  padding: 3rem 4rem 3rem 4rem;
+  grid-template-rows: minmax(0, 0.12fr) minmax(0, 1fr) minmax(0, 0.3fr);
+  padding: 2rem;
 }
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan {
   min-height: 0;
@@ -1708,7 +1966,7 @@ body {
   position: absolute;
   left: 0;
   inset: 0;
-  transform: scaleY(3);
+  transform: scaleY(2.9);
   background-color: #FFFFFF;
   z-index: -1;
 }
@@ -1720,17 +1978,51 @@ body {
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table tr {
   text-align: left;
 }
-.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table tr {
-  border-bottom: 1px solid #E0DFDF;
-}
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table tr:first-of-type {
   border-bottom: 1px solid #E0DFDF;
 }
-.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table th,
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table th {
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 1rem 1rem;
+}
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table th:nth-of-type(1),
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table th:nth-of-type(5),
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table th:nth-of-type(6),
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table th:nth-of-type(7) {
+  text-align: left;
+}
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table th:nth-of-type(2),
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table th:nth-of-type(3),
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table th:nth-of-type(4),
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table th:nth-of-type(8) {
+  text-align: right;
+}
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table td {
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   padding: 2rem 1rem;
+}
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table td:nth-of-type(1),
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table td:nth-of-type(5),
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table td:nth-of-type(6),
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table td:nth-of-type(7) {
+  text-align: left;
+}
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table td:nth-of-type(2),
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table td:nth-of-type(3),
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table td:nth-of-type(4),
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table td:nth-of-type(8) {
+  text-align: right;
+}
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .show-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1.5px solid rgba(41, 41, 43, 0.6);
+}
+.na-loan-details-modal .modal-container .na-container-8 .small-con-5 .show-more span {
+  font-size: 1.8rem;
 }
 
 .am-filter-modal {
@@ -3289,6 +3581,12 @@ body {
   color: #29292B;
   white-space: nowrap;
 }
+.main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .chip-container .tb-chip .tb-chips-w-x {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(-1rem, -0.2rem);
+}
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .chip-container .tb-chip .tb-chips-w-x::before {
   content: "X";
   cursor: pointer;
@@ -3297,9 +3595,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  right: 0;
-  top: 0;
-  transform: translate(0.2rem, -0.2rem);
   font-size: 1rem;
   font-weight: 400;
   color: #FFFFFF;
@@ -4797,6 +5092,7 @@ body {
   gap: 2rem;
 }
 .main-dashboard .view-borrower-con .na-container-2 .small-con .box-wrap:first-of-type .colspan .input-wrapper {
+  width: 85%;
   display: grid;
   place-items: center;
   position: relative;
@@ -4806,25 +5102,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.main-dashboard .view-borrower-con .na-container-2 .small-con .box-wrap:first-of-type .colspan .input-wrapper:hover::before {
-  content: "X";
-  cursor: pointer;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  right: 0;
-  top: 0;
-  transform: translate(0.6rem, -0.4rem);
-  font-size: 1rem;
-  font-weight: 400;
-  color: #FFFFFF;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  background-color: #FF0404;
-  z-index: 9;
 }
 .main-dashboard .view-borrower-con .na-container-2 .small-con .box-wrap:first-of-type .colspan .btn-wrapper:nth-of-type(2) {
   display: flex;
@@ -7071,6 +7348,7 @@ body {
   grid-auto-rows: minmax(0, 1fr);
   grid-template-rows: minmax(0, 0.1fr) minmax(0, 1fr);
   gap: 2rem 0px;
+  gap: 5rem 0;
   padding: 3rem 4rem 3rem 4rem;
 }
 .main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan {
@@ -7087,23 +7365,6 @@ body {
   margin-bottom: 1rem;
   font-weight: 700;
   font-size: 1.2rem;
-}
-.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan .input-wrapper input {
-  -moz-appearance: textfield;
-  -webkit-appearance: none;
-  margin: 0;
-  font-size: 2rem;
-  padding: 1rem 2rem;
-  border: none;
-  outline: none;
-  background-color: #EBEBEB;
-  border-radius: 1rem;
-  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: opacity 100ms ease-in-out;
-  height: 8rem;
-}
-.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan .input-wrapper input:hover {
-  opacity: 0.8;
 }
 .main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:first-of-type .input-wrapper h2 {
   font-size: 2.5rem;
@@ -7133,44 +7394,6 @@ body {
   position: relative;
   height: clamp(10rem, 20vh, 40vh);
 }
-.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .signature-wrapper {
-  border: 1px solid #8C8686;
-  border-right: 0;
-}
-.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .signature-wrapper canvas.signature-pad {
-  background: #fff;
-  width: 100%;
-  height: 100%;
-  cursor: crosshair;
-}
-.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .clear-btn {
-  position: absolute;
-  height: 100%;
-  right: 0;
-}
-.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .clear-btn button[type=button] {
-  width: 5rem;
-  position: relative;
-  height: 100%;
-  background: #8C8686;
-  color: #fff;
-  font-weight: 700;
-  cursor: pointer;
-  transition: ease-in-out 200ms;
-}
-.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .clear-btn button[type=button]:hover {
-  color: #29292B;
-  background: rgba(140, 134, 134, 0.8);
-}
-.main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .clear-btn button[type=button] span {
-  position: absolute;
-  top: 30%;
-  left: 70%;
-  transform-origin: 0 0;
-  transform: rotate(90deg);
-  text-transform: uppercase;
-  letter-spacing: 0.5rem;
-}
 .main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .signature-wrapper-2 {
   position: relative;
   height: 100%;
@@ -7183,6 +7406,7 @@ body {
   width: 100%;
   box-shadow: none;
   background: none;
+  object-fit: contain;
   font-size: 0;
 }
 .main-dashboard .na-form-con .na-container-12 .small-con-7 .rowspan:nth-of-type(2) .box-wrapper .input-wrapper:nth-of-type(1) .signature-wrapper-2 span {
@@ -8111,6 +8335,12 @@ body {
   display: flex;
   justify-content: center;
 }
+.view-nu-con-1 .container-wrapper .small-con .box .box-wrap:first-of-type .colspan .input-wrapper .input-inner-wrapper:hover {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(-1rem, -0.2rem);
+}
 .view-nu-con-1 .container-wrapper .small-con .box .box-wrap:first-of-type .colspan .input-wrapper .input-inner-wrapper:hover::before {
   content: "X";
   cursor: pointer;
@@ -8119,9 +8349,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  right: 0;
-  top: 0;
-  transform: translate(0.2rem, -0.2rem);
   font-size: 1rem;
   font-weight: 400;
   color: #FFFFFF;

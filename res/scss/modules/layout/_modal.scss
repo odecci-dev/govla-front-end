@@ -452,14 +452,11 @@
 // * New Application Loan Details Modal
 .na-loan-details-modal {
     margin: auto;
-    // height: 100%;
-    width: calc(100% - 10%);
+    height: clamp(1rem, 100%, 100vh);
+    width: clamp(1rem, 100%, 100vw);
     z-index: 5;
     background: none;
-    &::-webkit-scrollbar {
-        padding-left: 1rem;
-        width: 1rem;
-    }
+
     &::backdrop {
         background-color: rgba($black, 0.7);
     }
@@ -482,14 +479,158 @@
     }
 
     .modal-container {
-        border-radius: $border-radius-large;
+        height: 100%;
+        border-radius: $border-radius-medium;
         background-color: $white;
         padding: 1rem;
+        position: relative;
+        // * Daily Payment History Modal
+        .daily-payment-modal {
+            margin: auto;
+            border-radius: $border-radius-medium;
+            height: 70%;
+            width: calc(100% - 20rem);
+            &::backdrop {
+                background-color: rgba($black, 0.7);
+            }
+            // * Modal Open Attribute
+            &[open] {
+                animation: fade-in 500ms forwards, pop-up 500ms;
+            }
+            &::backdrop[open] {
+                animation: fade-in 500ms forwards;
+            }
+            // * Modal Custom Closing Attribute
+            &[closing] {
+                display: block;
+                pointer-events: none;
+                inset: 0;
+                animation: fade-out 500ms forwards, slide-down 500ms forwards;
+            }
+            &::backdrop[closing] {
+                animation: fade-out 500ms forwards;
+            }
+            .daily-payment-modal-container {
+                position: relative;
+                height: 100%;
+                // * Exit Button Wrapper
+                .button-wrapper {
+                    position: absolute;
+                    right: 0;
+                    button {
+                        cursor: pointer;
+                        background: none;
+                        img {
+                            transition: all 150ms ease-in-out;
+                        }
+                        img:hover {
+                            transform: scale(1.1);
+                            filter: opacity(.7);
+                        }
+                    }
+                }
+                .na-container-9 {
+                    height: inherit;
+                    padding: 2rem;
+                    .small-con-5 {
+                        height: inherit;
+                        width: 100%;
+                        @include naSmallContainerGrid4;
+                        grid-template-rows: minmax(0, 0.15fr) repeat(2, minmax(0, 1fr)) minmax(0, 0.3fr);
+                        // @include containerDefault2;
+                        padding: 2rem;
+                        .rowspan {
+                            min-height: 0;
+                            /* NEW */
+                            min-width: 0;
+                            /* NEW; needed for Firefox */
+                        }
+                        // * Rowspan Header
+                        .rowspan:first-of-type {
+                            h2 {
+                                font-size: $font-size-x-large;
+                                font-weight: $font-weight-bold;
+                            }
+                        }
+                        // * Rowspan 2: Payment History Details 
+                        .rowspan:nth-of-type(2) {
+                            display: grid;
+                            grid-template-columns: repeat(2, minmax(0, 1fr));
+                            .box-wrapper {
+                                display: grid;
+                                grid-template-rows: repeat(4, minmax(0, 0.25fr));
+                                align-items: center;
+                                gap: 1rem 0;
+                                .detail-wrapper {
+                                    display: grid;
+                                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                                    .detail-inner-wrapper {
+                                        span {
+                                            text-align: left;
+                                        }
+                                    }
+                                    .detail-inner-wrapper:first-of-type {
+                                        // * Header
+                                        span {
+                                            font-size: calc($font-size-medium - .1rem);
+                                            font-weight: $font-weight-bold;
+                                        }
+                                    }
+                                    .detail-inner-wrapper:last-of-type {
+                                        // * Data
+                                        span {
+                                            color: $primary;
+                                            font-size: $font-size;
+                                            font-weight: $font-weight-bold;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        // * Rowspan 3: Daily Payment History Table 
+                        .rowspan:nth-of-type(3) {
+                            border-top: 1.5px solid $blackTR;
+                            table {
+                                tr {
+                                    text-align: left;
+                                }
+                                tr:first-of-type {
+                                    border-bottom: 1px solid $secondary-bg;
+                                }
+                                th {
+                                    font-weight: $font-weight-bold;
+                                    font-size: calc($font-size-medium - .1rem);
+                                    padding: 1rem 1rem;
+                                }
+                                td {
+                                    font-weight: $font-weight;
+                                    font-size: $font-size;
+                                    padding: 2rem 1rem;
+                                }
+                            }
+                        }
+                        // * Show More
+                        .show-more {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-top: 1.5px solid $blackTR;
+                            span {
+                                font-size: $font-size-x-medium;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // * Exit Button Wrapper
         .button-wrapper {
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            padding: 0 1.2rem;
+            position: absolute;
+            right: 2rem;
+            z-index: 9;
             button {
                 cursor: pointer;
                 background: none;
@@ -505,16 +646,15 @@
         // * Container 11: Loan History Table 
         // * Container 7: Payment History Table
         .na-container-7 {
-            height: 40rem;
+            height: calc(100% - 50%);
             width: 100%;
-            padding: 2rem;
             .small-con-4 {
                 height: 100%;
                 width: 100%;
                 @include naSmallContainerGrid4;
-                grid-template-rows: minmax(0, 0.12fr) minmax(0, 1fr);
-                @include containerDefault2;
-                padding: 3rem 4rem 3rem 4rem;
+                grid-template-rows: minmax(0, 0.12fr) minmax(0, 1fr) minmax(0, 0.3fr);
+                // @include containerDefault2;
+                padding: 2rem;
 
                 .rowspan {
                     min-height: 0;
@@ -533,7 +673,7 @@
                         position: absolute;
                         left: 0;
                         inset: 0;
-                        transform: scaleY(3);
+                        transform: scaleY(2.9);
                         background-color: $white;
                         z-index: -1;
                     }
@@ -554,28 +694,50 @@
                         tr:first-of-type {
                             border-bottom: 1px solid $secondary-bg;
                         }
-                        th,
+                        th {
+                            font-weight: $font-weight-bold;
+                            font-size: $font-size;
+                            padding: 1rem 1rem;
+                            text-align: right;
+                        }
+                        th:nth-of-type(-n+3) {
+                            text-align: left;
+                        }
                         td {
                             font-weight: $font-weight;
-                            font-size: $font-size-x-medium;
+                            font-size: $font-size;
                             padding: 2rem 1rem;
+                            text-align: right;
                         }
+                        td:nth-of-type(-n+3) {
+                            text-align: left;
+                        }
+
+                    }
+                }
+                // * Show More
+                .show-more {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-top: 1.5px solid $blackTR;
+                    span {
+                        font-size: $font-size-x-medium;
                     }
                 }
             }
         }
         // * Container 8: Loan History Table
         .na-container-8 {
-            height: 40rem;
+            height: calc(100% - 50%);
             width: 100%;
-            padding: 2rem;
             .small-con-5 {
                 height: 100%;
                 width: 100%;
                 @include naSmallContainerGrid4;
-                grid-template-rows: minmax(0, 0.12fr) minmax(0, 1fr);
-                @include containerDefault2;
-                padding: 3rem 4rem 3rem 4rem;
+                grid-template-rows: minmax(0, 0.12fr) minmax(0, 1fr) minmax(0, 0.3fr);
+                // @include containerDefault2;
+                padding: 2rem;
                 .rowspan {
                     min-height: 0;
                     /* NEW */
@@ -593,7 +755,7 @@
                         position: absolute;
                         left: 0;
                         inset: 0;
-                        transform: scaleY(3);
+                        transform: scaleY(2.9);
                         background-color: $white;
                         z-index: -1;
                     }
@@ -609,18 +771,53 @@
                         tr {
                             text-align: left;
                         }
-                        tr {
-                            border-bottom: 1px solid $secondary-bg;
-                        }
                         tr:first-of-type {
                             border-bottom: 1px solid $secondary-bg;
                         }
-                        th,
+                        th {
+                            font-weight: $font-weight-bold;
+                            font-size: $font-size;
+                            padding: 1rem 1rem;
+                        }
+                        th:nth-of-type(1),
+                        th:nth-of-type(5),
+                        th:nth-of-type(6),
+                        th:nth-of-type(7) {
+                            text-align: left;
+                        }
+                        th:nth-of-type(2),
+                        th:nth-of-type(3),
+                        th:nth-of-type(4),
+                        th:nth-of-type(8) {
+                            text-align: right;
+                        }
                         td {
                             font-weight: $font-weight;
-                            font-size: $font-size-x-medium;
+                            font-size: $font-size;
                             padding: 2rem 1rem;
                         }
+                        td:nth-of-type(1),
+                        td:nth-of-type(5),
+                        td:nth-of-type(6),
+                        td:nth-of-type(7) {
+                            text-align: left;
+                        }
+                        td:nth-of-type(2),
+                        td:nth-of-type(3),
+                        td:nth-of-type(4),
+                        td:nth-of-type(8) {
+                            text-align: right;
+                        }
+                    }
+                }
+                // * Show More
+                .show-more {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-top: 1.5px solid $blackTR;
+                    span {
+                        font-size: $font-size-x-medium;
                     }
                 }
             }

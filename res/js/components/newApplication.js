@@ -22,25 +22,45 @@ if (loanDetailsModal && openLoanDetailsButton) {
         }, { once: true });
     })
     
-    loanDetailsModal.addEventListener('click', e => {
-        loanDetailsModal.setAttribute("closing", "");
-        loanDetailsModal.addEventListener("animationend", () => {
+    // loanDetailsModal.addEventListener('click', e => {
+    //     loanDetailsModal.setAttribute("closing", "");
+    //     loanDetailsModal.addEventListener("animationend", () => {
     
-            const loanDetailsModalDimensions = loanDetailsModal.getBoundingClientRect()
+    //         const loanDetailsModalDimensions = loanDetailsModal.getBoundingClientRect()
     
-            if (
-                e.clientX < loanDetailsModalDimensions.left ||
-                e.clientX > loanDetailsModalDimensions.right ||
-                e.clientY < loanDetailsModalDimensions.top ||
-                e.clientY > loanDetailsModalDimensions.bottom
-            ) {
-                loanDetailsModal.removeAttribute("closing");
-            }
-            loanDetailsModal.close()
+    //         if (
+    //             e.clientX < loanDetailsModalDimensions.left ||
+    //             e.clientX > loanDetailsModalDimensions.right ||
+    //             e.clientY < loanDetailsModalDimensions.top ||
+    //             e.clientY > loanDetailsModalDimensions.bottom
+    //         ) {
+    //             loanDetailsModal.removeAttribute("closing");
+    //         }
+    //         loanDetailsModal.close()
     
-        }, { once: true })
+    //     }, { once: true })
     
+    // })
+
+    const dailyPaymentModal = loanDetailsModal.querySelector('[data-daily-payment-history-modal]')
+    const openDailyPaymentModal = loanDetailsModal.querySelectorAll('[data-open-daily-payment-modal]')
+    const closeDailyPaymentModal = loanDetailsModal.querySelector('[data-close-daily-payment-modal]')
+
+    openDailyPaymentModal.forEach((dataButton) => {
+
+        dataButton.addEventListener('click', () => {
+            dailyPaymentModal.showModal()
+        })
     })
+
+    closeDailyPaymentModal.addEventListener('click', () => {
+        dailyPaymentModal.setAttribute("closing", "");
+        dailyPaymentModal.addEventListener("animationend", () => {
+            dailyPaymentModal.removeAttribute("closing");
+            dailyPaymentModal.close();
+        }, { once: true });
+    })
+
 }
     
 
@@ -657,6 +677,95 @@ function subBank() {
 }
 
 // ***** END ---- Add and Subtract Bank ***** //
+
+
+const imageUploadBorrowerImageBtn = document.querySelector('[data-upload-borrower-image-btn]');
+const imageBorrowerImageContainer = document.querySelector('[data-borrower-image-container]');
+const imageHoverContainer = document.querySelectorAll('[data-upload-image-hover-container]')
+
+// * Upload Borrower Image
+imageUploadBorrowerImageBtn.addEventListener('change', function(e) {
+    const file = e.target.files[0] // * Get the selected file
+
+    spanXs = document.createElement('span')
+    spanXs.classList.add('tb-chip-w-x')
+    imageHoverContainer.forEach((containers) => {
+        containers.appendChild(spanXs)
+    })
+
+    if (file && file.type.startsWith('image/')) {
+
+        const reader = new FileReader()
+
+        // * Set up the reader to read the image file
+        reader.onload = function() {
+
+            // * Set the source of the image preview element to the image data
+            imageBorrowerImageContainer.src = reader.result
+            
+        };
+
+        // * Read the image file as a data URL
+        reader.readAsDataURL(file)
+
+        
+    }
+
+    // * Removing the chips on clicking the x button
+    spanXs.addEventListener('click', _ => {
+        imageBorrowerImageContainer.src = reader
+        spanXs.remove()
+    })
+
+
+})
+
+const imageUploadApplicantSignature = document.getElementById('imageUploadApplicantSign');
+const imageApplicantSignatureContainer = document.getElementById('applicantSignature');
+
+// * Upload Applicant Signature
+imageUploadApplicantSignature.addEventListener('change', function(e) {
+    const file = e.target.files[0] // * Get the selected file
+
+    if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+
+        // * Set up the reader to read the image file
+        reader.onload = function() {
+          // * Set the source of the image preview element to the image data
+          imageApplicantSignatureContainer.src = reader.result;
+        };
+
+        // * Read the image file as a data URL
+        reader.readAsDataURL(file);
+      }
+
+})
+
+const imageUploadCoMakerSignature = document.getElementById('imageUploadCoMakerSign');
+const imageCoMakerSignatureContainer = document.getElementById('coMakerSignature');
+
+// * Upload Co-Maker Signature
+imageUploadCoMakerSignature.addEventListener('change', function(e) {
+    const file = e.target.files[0] // * Get the selected file
+
+    if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+
+        // * Set up the reader to read the image file
+        reader.onload = function() {
+          // * Set the source of the image preview element to the image data
+          imageCoMakerSignatureContainer.src = reader.result;
+        };
+
+        // * Read the image file as a data URL
+        reader.readAsDataURL(file);
+      }
+
+})
+
+
+
 
 
 // ***** Signature Pad ***** //

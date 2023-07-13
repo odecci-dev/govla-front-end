@@ -1320,6 +1320,7 @@
                 height: 100%;
                 width: 100%;
                 @include naSmallContainerGrid4;
+                gap: 5rem 0;
                 padding: 3rem 4rem 3rem 4rem;
                 .rowspan {
                     min-height: 0;
@@ -1334,11 +1335,7 @@
                             font-weight: $font-weight-bold;
                             font-size: $font-size;
                         }
-                        // * Input Global Styles
-                        input {
-                            @include inputField;
-                            height: $spacing-8x-large;
-                        }
+                        
                     }
                 }
                 // * Rowspan Header
@@ -1364,46 +1361,46 @@
                         .input-wrapper:nth-of-type(1) {
                             position: relative;
                             height: clamp(10rem, 20vh, 40vh);
-                            // * For Signature Pad
-                            .signature-wrapper {
-                                border: 1px solid $font-accent;
-                                border-right: 0;
-                                canvas.signature-pad {
-                                    background: #fff;
-                                    width: 100%;
-                                    height: 100%;
-                                    cursor: crosshair;
-                                }
-                            }
-                            // * For Signature Pad
-                            .clear-btn {
-                                position: absolute;
-                                height: 100%;
-                                right: 0;
-                                button[type="button"] {
-                                    width: 5rem;
-                                    position: relative;
-                                    height: 100%;
-                                    background: $font-accent;
-                                    color: #fff;
-                                    font-weight: $font-weight-bold;
-                                    cursor: pointer;
-                                    transition: ease-in-out 200ms;
-                                    &:hover {
-                                        color: $black;
-                                        background: rgba($font-accent, 0.800)
-                                    }
-                                }
-                                button[type="button"] span {
-                                    position: absolute;
-                                    top: 30%;
-                                    left: 70%;
-                                    transform-origin: 0 0;
-                                    transform: rotate(90deg);
-                                    text-transform: uppercase;
-                                    letter-spacing: .5rem;
-                                }
-                            }
+                            // // * For Signature Pad
+                            // .signature-wrapper {
+                            //     border: 1px solid $font-accent;
+                            //     border-right: 0;
+                            //     canvas.signature-pad {
+                            //         background: #fff;
+                            //         width: 100%;
+                            //         height: 100%;
+                            //         cursor: crosshair;
+                            //     }
+                            // }
+                            // // * For Signature Pad
+                            // .clear-btn {
+                            //     position: absolute;
+                            //     height: 100%;
+                            //     right: 0;
+                            //     button[type="button"] {
+                            //         width: 5rem;
+                            //         position: relative;
+                            //         height: 100%;
+                            //         background: $font-accent;
+                            //         color: #fff;
+                            //         font-weight: $font-weight-bold;
+                            //         cursor: pointer;
+                            //         transition: ease-in-out 200ms;
+                            //         &:hover {
+                            //             color: $black;
+                            //             background: rgba($font-accent, 0.800)
+                            //         }
+                            //     }
+                            //     button[type="button"] span {
+                            //         position: absolute;
+                            //         top: 30%;
+                            //         left: 70%;
+                            //         transform-origin: 0 0;
+                            //         transform: rotate(90deg);
+                            //         text-transform: uppercase;
+                            //         letter-spacing: .5rem;
+                            //     }
+                            // }
                             // * For Signature Image Input
                             .signature-wrapper-2 {
                                 position: relative;
@@ -1411,18 +1408,12 @@
                                 display: flex;
                                 justify-content: center;
                                 border: 1px solid $font-accent;
-                                // input[type="image"] {
-                                //     height: 100%;
-                                //     width: 100%;
-                                //     box-shadow: none;
-                                //     background: none;
-                                //     font-size: 0;
-                                // }
                                 img {
                                     height: 100%;
                                     width: 100%;
                                     box-shadow: none;
                                     background: none;
+                                    object-fit: contain;
                                     font-size: 0;
                                 }
                                 span {

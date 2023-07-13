@@ -629,3 +629,8 @@ Fourth Commit:
 Fifth Commit:
 • Enhanced overall styles 
 • Created dummy data for tables
+
+
+June 13, 2023 (Thursday)
+First Commit:
+• Updated loan and payment details modal
