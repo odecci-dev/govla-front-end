@@ -634,3 +634,7 @@ Fifth Commit:
 June 13, 2023 (Thursday)
 First Commit:
 • Updated loan and payment details modal
+
+Second Commit:
+• Upload Image Function
+• Upload Image Function

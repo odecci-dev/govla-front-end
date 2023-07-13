@@ -5372,25 +5372,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-.main-dashboard .view-co-borrower-con-1 .view-inner-con-1 .small-con .box-wrap .colspan .input-wrapper:hover::before {
-  content: "X";
-  cursor: pointer;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  right: 0;
-  top: 0;
-  transform: translate(0.6rem, -0.4rem);
-  font-size: 1rem;
-  font-weight: 400;
-  color: #FFFFFF;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  background-color: #FF0404;
-  z-index: 9;
-}
 .main-dashboard .view-co-borrower-con-1 .view-inner-con-1 .small-con .box-wrap .colspan .btn-wrapper:nth-of-type(2) {
   display: flex;
   flex-direction: column;

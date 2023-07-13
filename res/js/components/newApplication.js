@@ -681,7 +681,7 @@ function subBank() {
 
 const imageUploadBorrowerImageBtn = document.querySelector('[data-upload-borrower-image-btn]');
 const imageBorrowerImageContainer = document.querySelector('[data-borrower-image-container]');
-const imageHoverContainer = document.querySelectorAll('[data-upload-image-hover-container]')
+const imageBorrowerHoverContainer = document.querySelectorAll('[data-upload-image-hover-container]')
 
 // * Upload Borrower Image
 imageUploadBorrowerImageBtn.addEventListener('change', function(e) {
@@ -689,8 +689,14 @@ imageUploadBorrowerImageBtn.addEventListener('change', function(e) {
 
     spanXs = document.createElement('span')
     spanXs.classList.add('tb-chip-w-x')
-    imageHoverContainer.forEach((containers) => {
-        containers.appendChild(spanXs)
+    imageBorrowerHoverContainer.forEach((containers) => {
+        containers.addEventListener('mouseenter', () => {
+            containers.appendChild(spanXs)
+        })
+        
+        containers.addEventListener('mouseleave', () => {
+            containers.appendChild(spanXs).remove()
+        })
     })
 
     if (file && file.type.startsWith('image/')) {
@@ -703,20 +709,63 @@ imageUploadBorrowerImageBtn.addEventListener('change', function(e) {
             // * Set the source of the image preview element to the image data
             imageBorrowerImageContainer.src = reader.result
             
+            // * Removing the chips on clicking the x button
+            spanXs.addEventListener('click', _ => {
+                imageBorrowerImageContainer.src = '../../res/assets/icons/upload-image.svg'
+                spanXs.remove()
+            })
+
         };
 
         // * Read the image file as a data URL
         reader.readAsDataURL(file)
-
         
     }
 
-    // * Removing the chips on clicking the x button
-    spanXs.addEventListener('click', _ => {
-        imageBorrowerImageContainer.src = reader
-        spanXs.remove()
+})
+
+const imageUploadCoBorrowerImageBtn = document.querySelector('[data-upload-co-borrower-image-btn]');
+const imageCoBorrowerImageContainer = document.querySelector('[data-co-borrower-image-container]');
+const imageCoBorrowerHoverContainer = document.querySelectorAll('[data-upload-image-co-borrower-hover-container]')
+
+// * Upload Co-Borrower Image
+imageUploadCoBorrowerImageBtn.addEventListener('change', function(e) {
+    const file = e.target.files[0] // * Get the selected file
+
+    spanXs = document.createElement('span')
+    spanXs.classList.add('tb-chip-w-x')
+    imageCoBorrowerHoverContainer.forEach((containers) => {
+        containers.addEventListener('mouseenter', () => {
+            containers.appendChild(spanXs)
+        })
+        
+        containers.addEventListener('mouseleave', () => {
+            containers.appendChild(spanXs).remove()
+        })
     })
 
+    if (file && file.type.startsWith('image/')) {
+
+        const reader = new FileReader()
+
+        // * Set up the reader to read the image file
+        reader.onload = function() {
+
+            // * Set the source of the image preview element to the image data
+            imageCoBorrowerImageContainer.src = reader.result
+            
+            // * Removing the chips on clicking the x button
+            spanXs.addEventListener('click', _ => {
+                imageCoBorrowerImageContainer.src = '../../res/assets/icons/upload-image.svg'
+                spanXs.remove()
+            })
+
+        };
+
+        // * Read the image file as a data URL
+        reader.readAsDataURL(file)
+        
+    }
 
 })
 
