@@ -1,3 +1,13 @@
+
+
+/ ************           *************/
+/ ************           *************/
+/ ************ June 2023 *************/
+/ ************           *************/
+/ ************           *************/
+
+
+
 June 05, 2023 (Monday)
 • Dashboard still in progress (80% finished)
 • Changes are made only on _dashboard.scss and dashboard.html
@@ -369,7 +379,7 @@ Fourth Commit:
 • Field Area Maintenance: Un-assigned Locations Function
 - When clicked the location data from the table are converted into a chip in the location input 
 
-June 26, 2023 (Tuesday)
+June 27, 2023 (Tuesday)
 First Commit:
 • Field Area Maintenance Form Functions
 - When the data from the table is clicked it displays in the input
@@ -380,7 +390,7 @@ Second Commit:
 - Seperated the script of the New Application Module
 - Fixed a bug
 
-June 26, 2023 (Thursday)
+June 29, 2023 (Thursday)
 First Commit
 • Created the Loan Type page for Maintenance
 - Commented the animation for clicking outside the modal (newApplication.js, line 25-36)
@@ -415,13 +425,23 @@ Ninth Commit
 • New Application Modal Loan Type Dropdown
 - Implementation of the design
 
-June 26, 2023 (Friday)
+June 30, 2023 (Friday)
 First Commit:
 • New Application Children's Info Add&Sub Child Function Optimization
 - Made changes in the function
 - When incrementing the row fields container the container IDs also increments 
 
-June 03, 2023 (Monday)
+
+
+/ ************           *************/
+/ ************           *************/
+/ ************ July 2023 *************/
+/ ************           *************/
+/ ************           *************/
+
+
+
+July 03, 2023 (Monday)
 First Commit:
 • New Application Revisions 
 - Job Information: Employment and Unemployment Toggle
@@ -429,7 +449,7 @@ First Commit:
 - Implemented the Assets and Properties, Appliances, and Bank Accounts Layout Revisions
 • Implemented incrementing of IDs in  Assets and Properties, Appliances, and Bank Accounts Forms
 
-June 04, 2023 (Tuesday)
+July 04, 2023 (Tuesday)
 First Commit:
 • New Application: Loan Details Layout Revisions 
 - Increased height of each table 
@@ -456,7 +476,7 @@ Sixth Commit:
 Seventh Commit:
 • Updated New Application Modal
 
-June 05, 2023 (Wednesday)
+July 05, 2023 (Wednesday)
 First Commit:
 • New Application Module: Updates on btns, modal, and forms
 - Updates:
@@ -495,7 +515,7 @@ Fifth Commit:
 Sixth Commit:
 • New Application Module: Updated Navigation Links
 
-June 06, 2023 (Thursday)
+July 06, 2023 (Thursday)
 First Commit:
 • Navlinks URL transferred from HTML pages to links.js 
 - For fast access when modifying the URL
@@ -542,7 +562,7 @@ Tenth Commit:
 • Transferred all navigation functions from app.js to nav.js
 
 
-June 07, 2023 (Friday)
+July 07, 2023 (Friday)
 First Commit:
 • Converted all button styles to Global Styles (_base.scss)
 • Fixed all console error messages
@@ -577,7 +597,7 @@ Eight Commit:
 Ninth Commit:
 • Finished View Group Members
 
-June 11, 2023 (Tuesday)
+July 11, 2023 (Tuesday)
 First Commit:
 • Made the overflow-y:auto global to all tables 
 
@@ -612,7 +632,7 @@ Tenth Commit:
 • TODO: Checkbox function for User Restriction
 
 
-June 12, 2023 (Wednesday)
+July 12, 2023 (Wednesday)
 First Commit:
 • Implemented Checkbox function for User Restriction (user.js)
 
@@ -631,10 +651,14 @@ Fifth Commit:
 • Created dummy data for tables
 
 
-June 13, 2023 (Thursday)
+July 13, 2023 (Thursday)
 First Commit:
 • Updated loan and payment details modal
 
 Second Commit:
 • Upload Image Function
-• Upload Image Function
+
+
+July 17, 2023 (Monday)
+First Commit:
+• Applications: Updated Image Function and Layout

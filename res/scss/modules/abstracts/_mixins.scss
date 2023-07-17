@@ -25,7 +25,6 @@
     a {
         cursor: pointer;
         transition: background-color 200ms ease-in-out;
-        
         &:not(:first-of-type):hover {
             background-color: $black;
             border-bottom-left-radius: $border-radius-large;
@@ -195,7 +194,6 @@
 @mixin progressBarButton {
     border-radius: calc(clamp(7rem, 2.604vw + 5rem, 10rem));
     padding: clamp($spacing-large, $spacing-large, $spacing-2x-large) clamp($spacing-medium, $spacing-medium, $spacing-large);
-
     // padding: $spacing-large $spacing-medium;
     font-size: $font-size-medium;
     font-weight: $font-weight-bold;
@@ -233,7 +231,6 @@
     padding: $btn-padding-5;
 }
 
-
 @mixin tableChips {
     position: relative;
     height: clamp(1.5rem, 2.5vw, 4rem);
@@ -262,7 +259,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
         font-size: $font-size-small;
         font-weight: $font-weight;
         color: $white;
@@ -272,7 +268,6 @@
         background-color: $alert;
     }
 }
-
 
 // * Transparent Button
 @mixin transparentButton {
@@ -377,7 +372,7 @@
     justify-content: center;
     font-size: $font-size-small;
     font-weight: $font-weight;
-    padding:  $spacing-medium $spacing-medium;
+    padding: $spacing-medium $spacing-medium;
     border-radius: $border-radius-medium;
     box-shadow: $box-shadow-3;
     gap: 1rem;
@@ -410,12 +405,12 @@
     }
 }
 
-
 // * Input Image Button
 @mixin inputImageButton {
     position: relative;
     border-radius: $border-radius-medium;
-    padding: $btn-padding-2;
+    width: 100%;
+    padding: 0.8rem 4rem;
     font-size: $font-size-medium;
     font-weight: $font-weight-bold;
     color: transparent;
@@ -429,6 +424,8 @@
     &:before {
         position: absolute;
         display: inline;
+        text-align: center;
+        white-space: wrap;
         top: 0;
         left: 50%;
         transform: translate(-50%, 1rem);
@@ -446,7 +443,8 @@
     width: 100%;
     position: relative;
     border-radius: $border-radius-medium;
-    padding: $btn-padding-2;
+    // padding: $btn-padding-2;
+    padding: 0.8rem 4rem;
     font-size: $font-size-medium;
     font-weight: $font-weight-bold;
     color: transparent;
@@ -459,6 +457,7 @@
     }
     &:before {
         position: absolute;
+        text-align: center;
         display: inline;
         top: 0;
         left: 50%;
@@ -487,7 +486,6 @@
     }
 }
 
-
 // * Dashboard 1
 @mixin dashboard {
     position: fixed;
@@ -505,7 +503,6 @@
     @include dashboard;
     background-color: $third-bg;
 }
-
 
 // *** Dashboard Grid Layouts
 // ** md-con-2
@@ -722,7 +719,6 @@
     }
 }
 
-
 // * Form Checkbox
 // @mixin formCheckbox {
 //     @include tableCheckboxInput;
@@ -750,7 +746,6 @@
 //         visibility: visible;
 //     }
 // }
-
 // @mixin formCheckboxAfter {
 //     content: url('../assets/icons/big-check.svg');
 //     position: absolute;
@@ -759,12 +754,10 @@
 //     opacity: 0;
 //     transition: ease-out 250ms;
 // }
-
 // @mixin formCheckboxChecked {
 //     visibility: visible;
 //     opacity: 1;
 // }
-
 // **** Grid Layout Mixins **** //
 // *** Containers Grid Layouts
 @mixin displayGrid {
@@ -849,7 +842,7 @@
 // * Small Container Grid 4
 @mixin smallContainerGrid4 {
     @include displayGrid;
-    grid-template-rows: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 0.14fr) repeat(2, minmax(0, 0.26fr)) minmax(0, 0.14fr) minmax(0, 0.8fr) minmax(0, 0.2fr);
     gap: $spacing-2x-large 0px;
 }
 
@@ -864,7 +857,7 @@
 // * NA Small Container Grid 4
 @mixin naSmallContainerGrid4 {
     @include displayGrid;
-    grid-template-rows: minmax(0, 0.1fr) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 0.2fr) minmax(0, 1fr);
     gap: $spacing-2x-large 0px;
 }
 

@@ -23,7 +23,7 @@
             <!-- * View Co Borrower Details -->
             <form action="" class="na-form-con" autocomplete="off">
 
-                <!-- * View Co Borrower Container 1  -->
+                <!-- * Container 8: Co-Maker New Application Form Fields -->
                 <div class="view-co-borrower-con-1">
 
                     <!-- * Container 1: Co-Borrower New Application Form Fields and Buttons -->
@@ -54,8 +54,8 @@
                                 <!-- * Buttons -->
                                 <!-- <div class="btn-wrapper"> -->
 
-                                    <!-- * Save -->
-                                    <!-- <button type="button" id="saveBtn" class="button" data-save>Save</button>
+                                <!-- * Save -->
+                                <!-- <button type="button" id="saveBtn" class="button" data-save>Save</button>
 
                                 </div> -->
 
@@ -97,32 +97,32 @@
                                 <div class="input-wrapper">
                                     <span>Gender</span>
                                     <div class="select-box">
-    
-                                        <div class="options-container" data-option-con1>
-    
-                                            <div class="option"  data-option-item1>
-    
+
+                                        <div class="options-container" data-option-con4>
+
+                                            <div class="option" data-option-item4>
+
                                                 <input type="radio" class="radio" name="category" value="Male" />
                                                 <label for="Male">
                                                     <h4>Male</h4>
                                                 </label>
-    
+
                                             </div>
-    
-                                            <div class="option"  data-option-item1>
-    
-                                                <input type="radio" class="radio" name="category" value="Female"/>
+
+                                            <div class="option" data-option-item4>
+
+                                                <input type="radio" class="radio" name="category" value="Female" />
                                                 <label for="Female">
                                                     <h4>Female</h4>
                                                 </label>
-    
+
                                             </div>
-    
+
                                         </div>
-                                        
-                                        <div class="selected" data-option-select1>
+
+                                        <div class="selected" data-option-select4>
                                         </div>
-    
+
                                     </div>
                                 </div>
 
@@ -148,41 +148,41 @@
                                 <div class="input-wrapper">
                                     <span>Civil Status</span>
                                     <div class="select-box">
-    
-                                        <div class="options-container" data-option-con2>
-    
-                                            <div class="option" data-option-item2>
-    
+
+                                        <div class="options-container" data-option-con5>
+
+                                            <div class="option" data-option-item5>
+
                                                 <input type="radio" class="radio" name="category" value="Widow" />
                                                 <label for="Widow">
                                                     <h4>Widow</h4>
                                                 </label>
-    
+
                                             </div>
-    
-                                            <div class="option" data-option-item2>
-    
-                                                <input type="radio" class="radio" name="category" value="Married"/>
+
+                                            <div class="option" data-option-item5>
+
+                                                <input type="radio" class="radio" name="category" value="Married" />
                                                 <label for="Married">
                                                     <h4>Married</h4>
                                                 </label>
-    
+
                                             </div>
-    
-                                            <div class="option" data-option-item2>
-    
-                                                <input type="radio" class="radio" name="category" value="Single"/>
+
+                                            <div class="option" data-option-item5>
+
+                                                <input type="radio" class="radio" name="category" value="Single" />
                                                 <label for="Single">
                                                     <h4>Single</h4>
                                                 </label>
-    
+
                                             </div>
-    
+
                                         </div>
-                                        
-                                        <div class="selected" data-option-select2>
+
+                                        <div class="selected" data-option-select5>
                                         </div>
-    
+
                                     </div>
                                 </div>
 
@@ -295,161 +295,160 @@
                                 <!-- * Relationship to the Borrower -->
                                 <div class="input-wrapper">
                                     <span> Relationship to the Borrower</span>
-                                    <input type="number" id="relatioshipToBorrower" name="relatioshipToBorrower"></yoStay">
+                                    <input type="text" id="relatioshipToBorrower" name="relatioshipToBorrower">
+                                    </input>
                                 </div>
 
                             </div>
 
                             <!-- * Rowspan 8: Empty Rowspan -->
                             <!-- <div class="rowspan"> -->
-                                <!-- <button type="button" class="viewLoanDetailsButton" id="data-open-loan-details">View loan & payment history</button> -->
+                            <!-- <button type="button" class="viewLoanDetailsButton" id="data-open-loan-details">View loan & payment history</button> -->
                             <!-- </div> -->
-                            
+
                         </div>
 
                         <!-- * Small Container -->
                         <div class="small-con">
 
-                                <div class="box-wrap">
+                            <div class="box-wrap">
 
-                                    <!-- * Colspan 1: Upload Image and Attach Files Buttons  -->
-                                    <div class="colspan">
+                                <!-- * Colspan 1: Upload Image and Attach Files Buttons  -->
+                                <div class="colspan">
 
-                                        <!-- * Upload Image -->
-                                        <div class="input-wrapper">
-                                            <input type="image" src="../../res/assets/icons/upload-image.svg" alt="upload-image">
-                                        </div>
-
-                                        <div class="btn-wrapper">
-                                            <!-- * Upload Button -->
-                                            <button type="button" submit="" class="button">Upload Image</button>
-                                            <!-- * Attach Button -->
-                                            <button type="button" submit="" class="button">Attach Files</button>
-                                        </div>
-
-                                        <div class="btn-wrapper">
-                                            <button type="button" class="fileButton"><img src="../../res/assets/icons/file.svg" alt="file.png">File.png</button>
-                                            <button type="button" class="fileButton"><img src="../../res/assets/icons/file.svg" alt="file.pdf">File.pdf</button>
-                                        </div>
-
-                                        <button type="button" class="transparentButton3">Show All</button>
+                                    <!-- * Upload Image -->
+                                    <div class="input-wrapper" data-upload-image-co-borrower-hover-container>
+                                        <img type="image" src="../../res/assets/icons/upload-image.svg" alt="upload-image" data-co-borrower-image-container>
                                     </div>
 
+                                    <div class="btn-wrapper">
+                                        <!-- * Upload Button -->
+                                        <input type="file" class="input-image upload-profile-image-btn" data-upload-co-borrower-image-btn></input>
+                                        <!-- * Attach Button -->
+                                        <button type="button" class="button">Attach Files</button>
+                                    </div>
+
+                                    <div class="btn-wrapper">
+                                        <button type="button" class="fileButton"><img src="../../res/assets/icons/file.svg" alt="file.png">File.png</button>
+                                        <button type="button" class="fileButton"><img src="../../res/assets/icons/file.svg" alt="file.pdf">File.pdf</button>
+                                    </div>
+
+                                    <button type="button" class="transparentButton3">Show All</button>
                                 </div>
+
+                            </div>
 
                         </div>
 
                     </div>
 
-                    <!-- * View Co Borrower Container 2: Job Information Input Fields -->
-                    <div class="view-co-borrower-con-2">
+                </div>
 
-                        <!-- * Small Container -->
-                        <div class="small-con-2">
+                <!-- * Container 9: Co-Maker Job Information Input Fields -->
+                <div class="view-co-borrower-con-2">
 
-                            <!-- * Rowspan 1: Header -->
-                            <div class="rowspan">
+                    <!-- * Small Container -->
+                    <div class="small-con-2 ">
 
-                                <!-- * Job Information -->
-                                <div class="input-wrapper">
-                                    <h2>Job Information</h2>
-                                </div>
+                        <!-- * Rowspan 1: Header -->
+                        <div class="rowspan ">
 
+                            <!-- * Job Information -->
+                            <div class="input-wrapper ">
+                                <h2>Job Information</h2>
                             </div>
 
-                            <!-- * Rowspan 2: Employment Status, Current Job / Position, Years Of Service and Company Name -->
-                            <div class="rowspan">
+                        </div>
 
-                                <!-- * Employment Status -->
-                                <div class="input-wrapper">
-                                    <span>Employment Status</span>
-                                    <div class="select-box">
+                        <!-- * Rowspan 2: Employment Status, Current Job / Position, Years Of Service and Company Name -->
+                        <div class="rowspan ">
 
-                                        <div class="options-container" data-option-con3>
+                            <!-- * Employment Status -->
+                            <div class="input-wrapper ">
+                                <span>Employment Status</span>
+                                <div class="select-box ">
 
-                                            <div class="option" data-option-item3>
+                                    <div class="options-container " data-option-con3>
 
-                                                <input type="radio" class="radio" name="category" value="Employed" />
-                                                <label for="Employed">
+                                        <div class="option " data-option-item3>
+
+                                            <label for="Employed ">
                                                     <h4>Employed</h4>
                                                 </label>
 
-                                            </div>
+                                        </div>
 
-                                            <div class="option" data-option-item3>
+                                        <div class="option " data-option-item3>
 
-                                                <input type="radio" class="radio" name="category" value="Unemployed"/>
-                                                <label for="Unemployed">
+                                            <label for="Unemployed ">
                                                     <h4>Unemployed</h4>
                                                 </label>
 
-                                            </div>
-
-                                        </div>
-                                        
-                                        <div class="selected" data-option-select3>
                                         </div>
 
                                     </div>
-                                </div>
 
-                                <!-- * Current Job / Position -->
-                                <div class="input-wrapper">
-
-                                    <!-- * Current Job -->
-                                    <span data-current-job>Current Job / Position</span>
-                                    <input type="text" id="currentJob" name="currentJob" data-current-job>
-
-                                    <!-- * Previous Job -->
-                                    <span data-previous-job>Previous Job / Position</span>
-                                    <input type="text" id="previousJob" name="previousJob" data-previous-job>
+                                    <div class="selected " data-option-select3>
+                                    </div>
 
                                 </div>
+                            </div>
 
-                                <!-- * Years Of Service -->
-                                <div class="input-wrapper">
-                                    <span>Years Of Service</span>
-                                    <input type="text" id="yoService" name="yoService">
-                                </div>
+                            <!-- * Current Job / Position -->
+                            <div class="input-wrapper ">
 
-                                <!-- * Company Name -->
-                                <div class="input-wrapper">
-                                    <span>Company Name</span>
-                                    <input type="text" id="compName" name="compName">
-                                </div>
+                                <!-- * Current Job -->
+                                <span data-current-job>Current Job / Position</span>
+                                <input type="text " id="currentJob " name="currentJob " data-current-job>
+
+                                <!-- * Previous Job -->
+                                <span data-previous-job>Previous Job / Position</span>
+                                <input type="text " id="previousJob " name="previousJob " data-previous-job>
 
                             </div>
 
-                            <!-- * Rowspan 3: Company Address, Monthly Salary, Other Source of Income, and Do you own a Business?  -->
-                            <div class="rowspan">
-
-                                <!-- * Company Address -->
-                                <div class="input-wrapper">
-                                    <span>Company Address</span>
-                                    <input type="text" id="compAddr" name="compAddr">
-                                </div>
-
-                                <!-- * Monthly Salary -->
-                                <div class="input-wrapper">
-                                    <span>Monthly Salary</span>
-                                    <input type="number" id="monthSal" name="monthSal">
-                                </div>
-
-                                <!-- * Other Source Of Income -->
-                                <div class="input-wrapper">
-                                    <span>Other Source Of Income</span>
-                                    <input type="text" id="othSorOfInc" name="othSorOfInc">
-                                </div>
-
-
+                            <!-- * Years Of Service -->
+                            <div class="input-wrapper ">
+                                <span>Years Of Service</span>
+                                <input type="text " id="yoService " name="yoService ">
                             </div>
 
-                            <!-- * Rowspan 3: Update Button -->
-                            <div class="rowspan">
-
-                                <button type="button" class="button" id="data-open-loan-details">Update</button>
-                            
+                            <!-- * Company Name -->
+                            <div class="input-wrapper ">
+                                <span>Company Name</span>
+                                <input type="text " id="compName " name="compName ">
                             </div>
+
+                        </div>
+
+                        <!-- * Rowspan 3: Company Address, Monthly Salary, Other Source of Income, and Do you own a Business?  -->
+                        <div class="rowspan ">
+
+                            <!-- * Company Address -->
+                            <div class="input-wrapper ">
+                                <span>Company Address</span>
+                                <input type="text " id="compAddr " name="compAddr ">
+                            </div>
+
+                            <!-- * Monthly Salary -->
+                            <div class="input-wrapper ">
+                                <span>Monthly Salary</span>
+                                <input type="number " id="monthSal " name="monthSal ">
+                            </div>
+
+                            <!-- * Other Source Of Income -->
+                            <div class="input-wrapper ">
+                                <span>Other Source Of Income</span>
+                                <input type="text " id="othSorOfInc " name="othSorOfInc ">
+                            </div>
+
+
+                        </div>
+
+                        <!-- * Rowspan 3: Update Button -->
+                        <div class="rowspan ">
+
+                            <button type="button " class="button " id="data-open-loan-details ">Update</button>
 
                         </div>
 
@@ -463,11 +462,11 @@
 
     </main>
 
-    <script src="../../res/js/app.js" defer></script>
-    <script src="../../res/js/components/links.js"></script>
-    <script src="../../res/js/components/nav.js"></script>
-    <script src="../../res/js/components/members.js"></script>
-    <script src="../../res/js/components/newApplication.js" defer></script>
+    <script src="../../res/js/app.js " defer></script>
+    <script src="../../res/js/components/links.js "></script>
+    <script src="../../res/js/components/nav.js "></script>
+    <script src="../../res/js/components/members.js "></script>
+    <script src="../../res/js/components/newApplication.js " defer></script>
 
 </body>
 

@@ -421,242 +421,235 @@
     }
     // * Container Wrapper 1: New Member Container Wrapper
     .view-borrower-con {
-            height: 120%;
-            display: flex;
-            flex-direction: row;
-            // * Container 1: New Member Form Fields and Buttons
-            .na-container-1 {
-                width: calc(100% - 20%);
-                padding: 2rem 1rem 2rem 2rem;
-                // * Big Container 
-                .big-con {
-                    height: 100%;
-                    width: 100%;
-                    padding: 5rem 4rem 2rem 4rem;
+        // height: 120%;
+        display: flex;
+        flex-direction: row;
+        // * Container 1: New Member Form Fields and Buttons
+        .na-container-1 {
+            width: calc(100% - 20%);
+            padding: 2rem 1rem 2rem 2rem;
+            // * Big Container 
+            .big-con {
+                height: 100%;
+                width: 100%;
+                padding: 5rem 4rem 2rem 4rem;
+                @include containerDefault2;
+                @include bigContainerGrid;
+                // ** Rowspan Global Styles
+                .rowspan {
+                    min-height: 0;
+                    /* NEW */
+                    min-width: 0;
+                    /* NEW; needed for Firefox */
+                    .input-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        span {
+                            margin-bottom: 1rem;
+                            font-weight: $font-weight-bold;
+                            font-size: $font-size;
+                        }
+                        // * Input Global Styles
+                        input {
+                            @include inputField;
+                        }
+                        // * Radio Buttons
+                        .box-wrap {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            .radio-btn-wrapper {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                span {
+                                    white-space: nowrap;
+                                }
+                                input[type="radio"] {
+                                    @include formRadioButtons;
+                                }
+                                // input[type="radio"]:focus {
+                                //     outline: max(1px, 0.15em) solid $primary;
+                                //     outline-offset: max(2px, 0.15em);
+                                // }
+                            }
+                        }
+                    }
+                }
+                // * Rowspan Header: Header and Buttons 
+                .rowspan:first-of-type {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .header-wrapper {
+                        h2 {
+                            font-size: $font-size-x-large;
+                        }
+                        .header-inner-wrapper {
+                            display: flex;
+                            align-items: center;
+                            gap: $spacing-2x-large;
+                        }
+                    }
+                    .btn-wrapper {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 1.5rem;
+                    }
+                    .CI-time-wrapper {
+                        display: flex;
+                        gap: 2rem;
+                        .box {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            span {
+                                font-size: $font-size-large;
+                                font-weight: $font-weight-bold;
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
+                // * Rowspan 2: First Name, Middle Name , Last Name, and Suffix
+                .rowspan:nth-of-type(2) {
+                    @include rowspan2;
+                }
+                // * Rowspan 3: Gender, Date Of Birth, Age, Place Of Birth and Civil Status
+                .rowspan:nth-of-type(3) {
+                    @include rowspan3;
+                }
+                // * Rowspan 4: Contact Number and Email Address
+                .rowspan:nth-of-type(4) {
+                    @include rowspan4;
+                }
+                // * Rowspan 5: Rented, Owned, Free of Use Radio Buttons and House Address
+                .rowspan:nth-of-type(5) {
+                    @include rowspan5;
+                }
+                // * Rowspan 6: Barangay, City / Municipality, Province / Region, and Country
+                .rowspan:nth-of-type(6) {
+                    @include rowspan6;
+                }
+                // * Rowspan 7: Zip Code and Years Of Stay 
+                .rowspan:nth-of-type(7) {
+                    @include rowspan7;
+                }
+                // * Rowspan 8: View Loan and Payment History
+                .rowspan:nth-of-type(8) {
+                    // @include rowspan8;
+                    place-self: flex-end;
+                    align-self: center;
+                }
+            }
+        }
+        // * Container 2: File Attachments and Monthly Bills
+        .na-container-2 {
+            width: calc(100% - 80%);
+            padding: 2rem 2rem 2rem 1rem;
+            // * Small Container
+            .small-con {
+                height: 100%;
+                width: 100%;
+                @include twoBlockGrid;
+                // * Rowspan Global Styles
+                .box-wrap {
+                    // padding: 3rem 4rem;
+                    padding: min(3rem, 10%) min(4rem, 10%);
                     @include containerDefault2;
-                    @include bigContainerGrid;
-                    // ** Rowspan Global Styles
-                    .rowspan {
-                        min-height: 0;
-                        /* NEW */
-                        min-width: 0;
-                        /* NEW; needed for Firefox */
+                }
+                // * Boxwrap 1
+                .box-wrap:first-of-type {
+                    // padding: 3rem 4rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    // * Colspan 1
+                    .colspan {
+                        display: grid;
+                        justify-items: center;
+                        gap: $spacing-large;
+                        .input-wrapper {
+                            // width: calc(100% - 15%);
+                            display: grid;
+                            place-items: center;
+                            position: relative;
+                            input[type="image"] {
+                                width: clamp(4rem, 20vw, 100%);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                        // * Colspan 1 : Buttons
+                        .btn-wrapper:nth-of-type(2) {
+                            display: flex;
+                            flex-direction: column;
+                            gap: $spacing-large;
+                        }
+                        .btn-wrapper:last-of-type {
+                            display: flex;
+                            gap: $spacing-large;
+                        }
+                        .transparentButton3 {
+                            place-self: flex-end;
+                            padding: 0;
+                        }
+                    }
+                }
+                // * Boxwrap 2
+                .box-wrap:last-of-type {
+                    display: flex;
+                    flex-direction: column;
+                    // * Colspan 2
+                    .colspan:last-of-type {
+                        display: flex;
+                        flex-direction: column;
+                        h3 {
+                            margin: min(0.5rem, 5%) 0;
+                            font-style: italic;
+                            font-size: $font-size-medium;
+                            span {
+                                font-weight: $font-weight;
+                            }
+                        }
+                        // * Colspan 2 : Input Fields
                         .input-wrapper {
                             display: flex;
                             flex-direction: column;
                             span {
-                                margin-bottom: 1rem;
                                 font-weight: $font-weight-bold;
+                                margin: min(1rem, 5%) 0;
                                 font-size: $font-size;
                             }
                             // * Input Global Styles
                             input {
                                 @include inputField;
                             }
-                            
-                            // * Radio Buttons
-                            .box-wrap {
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-around;
-                                .radio-btn-wrapper {
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: center;
-                                    span {
-                                        white-space: nowrap;
-                                    }
-                                    input[type="radio"] {
-                                        @include formRadioButtons;
-                                    }
-                                    // input[type="radio"]:focus {
-                                    //     outline: max(1px, 0.15em) solid $primary;
-                                    //     outline-offset: max(2px, 0.15em);
-                                    // }
-                                }
-                            }
-                        }
-                    }
-                    // * Rowspan Header: Header and Buttons 
-                    .rowspan:first-of-type {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        .header-wrapper {
-                            h2 {
-                                font-size: $font-size-x-large;
-                            }
-                            .header-inner-wrapper {
-                                display: flex;
-                                align-items: center;
-                                gap: $spacing-2x-large;
-                                
-                            }
-                        }
-                        .btn-wrapper {
-                            display: flex;
-                            flex-wrap: wrap;
-                            gap: 1.5rem;
-                        }
-                        .CI-time-wrapper {
-                            display: flex;
-                            gap: 2rem;
-                            .box {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                span {
-                                    font-size: $font-size-large;
-                                    font-weight: $font-weight-bold;
-                                    color: $primary;
-                                }
-                            }
-                        }
-                    }
-                    // * Rowspan 2: First Name, Middle Name , Last Name, and Suffix
-                    .rowspan:nth-of-type(2) {
-                        @include rowspan2;
-                    }
-                    // * Rowspan 3: Gender, Date Of Birth, Age, Place Of Birth and Civil Status
-                    .rowspan:nth-of-type(3) {
-                        @include rowspan3;
-                    }
-                    // * Rowspan 4: Contact Number and Email Address
-                    .rowspan:nth-of-type(4) {
-                        @include rowspan4;
-                    }
-                    // * Rowspan 5: Rented, Owned, Free of Use Radio Buttons and House Address
-                    .rowspan:nth-of-type(5) {
-                        @include rowspan5;
-                    }
-                    // * Rowspan 6: Barangay, City / Municipality, Province / Region, and Country
-                    .rowspan:nth-of-type(6) {
-                        @include rowspan6;
-                    }
-                    // * Rowspan 7: Zip Code and Years Of Stay 
-                    .rowspan:nth-of-type(7) {
-                        @include rowspan7;
-                    }
-                    // * Rowspan 8: View Loan and Payment History
-                    .rowspan:nth-of-type(8) {
-                        // @include rowspan8;
-                        place-self: flex-end;
-                        align-self: center;
-                    }
-                }
-            }
-            // * Container 2: File Attachments and Monthly Bills
-            .na-container-2 {
-                width: calc(100% - 80%);
-                padding: 2rem 2rem 2rem 1rem;
-                // * Small Container
-                .small-con {
-                    height: 100%;
-                    width: 100%;
-                    @include twoBlockGrid;
-                    // * Rowspan Global Styles
-                    .box-wrap {
-                        // padding: 3rem 4rem;
-                        padding: min(3rem, 5%) min(4rem, 10%);
-                        @include containerDefault2;
-                    }
-                    // * Boxwrap 1
-                    .box-wrap:first-of-type {
-                        // padding: 3rem 4rem;
-                        padding: min(3rem, 5%) min(4rem, 10%);
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        // * Colspan 1
-                        .colspan {
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            gap: 2rem;
-                            .input-wrapper {
-                                width: calc(100% - 15%);
-                                display: grid;
-                                place-items: center;
-                                position: relative;
-                                
-                                input[type="image"] {
-                                    width: clamp(4rem, 20vw, 100%);
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                }
-
-                            }
-                            // * Colspan 1 : Buttons
-                            .btn-wrapper:nth-of-type(2) {
-                                display: flex;
-                                flex-direction: column;
-                                gap: $spacing-2x-large;
-                            }
-                            .btn-wrapper:last-of-type {
-                                display: flex;
-                                gap: $spacing-2x-large;
-                            }
-                            .transparentButton3 {
-                                place-self: flex-end;
-                            }
-                        }
-                    }
-                    // * Boxwrap 2
-                    .box-wrap:last-of-type {
-                        display: flex;
-                        flex-direction: column;
-                        // * Colspan 2
-                        .colspan:last-of-type {
-                            display: flex;
-                            flex-direction: column;
-                            h3 {
-                                margin: min(0.5rem, 5%) 0;
-                                font-style: italic;
-                                font-size: $font-size-medium;
-                                span {
-                                    font-weight: $font-weight;
-                                }
-                            }
-                            // * Colspan 2 : Input Fields
-                            .input-wrapper {
-                                display: flex;
-                                flex-direction: column;
-                                span {
-                                    font-weight: $font-weight-bold;
-                                    margin: min(1rem, 5%) 0;
-                                    font-size: $font-size;
-                                }
-                                // * Input Global Styles
-                                input {
-                                    @include inputField;
-                                }
-                            }
                         }
                     }
                 }
             }
+        }
     }
     // * View Co Borrower Container 1
     .view-co-borrower-con-1 {
-        height: 120%;
+        // height: 120%;
         display: flex;
         flex-direction: column;
         // * Container 1: New Member Form Fields and Buttons
         .view-inner-con-1 {
             display: grid;
-            grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.4fr);
+            grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.5fr);
             margin: 2rem;
             // background-color: rebeccapurple;
             @include containerDefault2;
-
             // * Big Container 
             .big-con {
                 // height: 100%;
                 padding: $spacing-5x-large $spacing-large $spacing-5x-large $spacing-5x-large;
                 @include bigContainerGrid;
                 grid-template-rows: repeat(6, minmax(0, 1fr));
-                
                 // ** Rowspan Global Styles
                 .rowspan {
                     min-height: 0;
@@ -770,7 +763,7 @@
                 // * Rowspan Global Styles
                 .box-wrap {
                     // padding: 3rem 4rem;
-                    padding: min(3rem, 5%) min(4rem, 10%);
+                    padding: min(3rem, 10%) min(4rem, 10%);
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -784,7 +777,6 @@
                             display: grid;
                             place-items: center;
                             position: relative;
-
                             input[type="image"] {
                                 width: clamp(4rem, 20vw, 100%);
                                 display: flex;
@@ -804,6 +796,7 @@
                         }
                         .transparentButton3 {
                             place-self: flex-end;
+                            padding: 0;
                         }
                     }
                 }
@@ -812,7 +805,6 @@
     }
     // * View Co Borrower Container 2
     .view-co-borrower-con-2 {
-        height: calc(100% - 50%);
         width: 100%;
         padding: 2rem;
         .small-con-2 {

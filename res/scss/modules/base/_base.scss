@@ -63,7 +63,6 @@ img[data-back-to-members-table] {
     cursor: pointer;
     pointer-events: all;
     transition: 200ms ease-in-out;
-
     &:hover {
         transform: translateX(-1rem)
     }
@@ -73,7 +72,6 @@ img[data-back-to-group-members-table] {
     cursor: pointer;
     pointer-events: all;
     transition: 200ms ease-in-out;
-
     &:hover {
         transform: translateX(-1rem)
     }
@@ -97,7 +95,7 @@ img[alt='upload-image'] {
     border-radius: $border-radius-medium;
 }
 
-button:has([alt='filter']){
+button:has([alt='filter']) {
     cursor: pointer;
     background: none;
     position: relative;
@@ -105,7 +103,6 @@ button:has([alt='filter']){
     align-items: center;
     justify-content: center;
     isolation: isolate;
-
     &::before {
         content: '';
         z-index: -1;
@@ -117,12 +114,10 @@ button:has([alt='filter']){
         opacity: 0;
         transition: all 150ms ease-in-out;
     }
-
     &:hover::before {
         opacity: .6;
         transition: all 150ms ease-in-out;
     }
-
 }
 
 button {
@@ -130,14 +125,12 @@ button {
     border: none;
     outline: none;
     cursor: pointer;
-
 }
 
 // .rowspan:has(table) {
 //     overflow-y: auto;
 //     @include custom-scroll;
 // }
-
 // * Custom Scroll and Overflow-y: auto made Global
 .rowspan.table,
 .table-container,
@@ -151,7 +144,6 @@ table {
     border-collapse: collapse;
     width: 100%;
     overflow-y: auto;
-
     tr:first-of-type {
         isolation: isolate;
         position: sticky;
@@ -166,15 +158,12 @@ table {
             backdrop-filter: blur(.2rem);
             box-shadow: 0px 2px 11px 1px rgba(233, 233, 233, 0.75);
         }
-
     }
-
     tr:not(:first-of-type):hover {
         cursor: pointer;
         background-color: $primary;
         color: $white;
         transition: 300ms ease-out;
-
         &>.td-btns>.td-btn-wrapper>button {
             background-color: $white;
             color: $primary;
@@ -184,7 +173,6 @@ table {
                 color: $white;
             }
         }
-
         &>.td-btns>.td-btn-wrapper>button.a-btn-trash {
             transition: 200ms ease-in-out;
             color: $white;
@@ -192,7 +180,6 @@ table {
                 color: $black;
             }
         }
-
         &>.td-btns>.td-btn-wrapper>button.a-btn-trash-3 {
             transition: 200ms ease-in-out;
             color: $white;
@@ -201,19 +188,15 @@ table {
             }
         }
     }
-
     // * Background Color Odd   
     tr:nth-of-type(odd) {
         background-color: $primaryTR2;
     }
-    
     th {
         position: sticky;
         top: 0;
         padding: 0 min(1rem);
     }
-    
-
     .td-num-out {
         padding: 0 $spacing-2x-large;
         font-weight: $font-weight-bold;
@@ -232,14 +215,12 @@ table {
             margin-left: 2rem;
         }
     }
-
     .td-btn-wrapper {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: $spacing-large;
     }
-
 }
 
 // * Active Primary Color
@@ -269,8 +250,7 @@ table {
     background-color: $primary;
     color: $white;
     &:nth-of-type(odd) {
-    background-color: $primaryTR3;
-
+        background-color: $primaryTR3;
     }
     &>.td-btns>.td-btn-wrapper>button {
         background-color: $white;
@@ -281,7 +261,6 @@ table {
             color: $white;
         }
     }
-
     &>.td-btns>.td-btn-wrapper>button.a-btn-trash {
         transition: 200ms ease-in-out;
         color: $white;
@@ -289,7 +268,6 @@ table {
             color: $black;
         }
     }
-
     &>.td-btns>.td-btn-wrapper>button.a-btn-trash-3 {
         transition: 200ms ease-in-out;
         color: $white;
@@ -305,6 +283,14 @@ table {
     background-color: $green;
     color: $white;
     transition: all 200ms ease-in-out;
+}
+
+.textPrimary {
+    color: $primary;
+}
+
+.textGreen {
+    color: $green;
 }
 
 // * Primary Button Global
@@ -431,6 +417,7 @@ table {
 .selected {
     @include selectDropdown;
 }
+
 .selected h4,
 .select-box h4 {
     cursor: pointer;
@@ -438,6 +425,7 @@ table {
     font-weight: $font-weight-bold;
     color: $black;
 }
+
 .select-box {
     display: flex;
     // width: 30rem;
@@ -461,20 +449,17 @@ table {
     input {
         @include inputField;
     }
-    
     // * Image Input Button
     input.input-image {
         @include inputImageButton;
     }
-
     // * Applicant Signature
     #imageUploadApplicantSign::before {
         content: 'Upload Applicant Signature';
     }
-
     // * Co-Maker Signature
     #imageUploadCoMakerSign::before {
-        content: 'Upload Co-Maker Signature';   
+        content: 'Upload Co-Maker Signature';
     }
 }
 
@@ -483,8 +468,8 @@ table {
     // * Image Input Button
     input.input-image {
         @include inputImageButton2;
-       &.upload-borrower-image-btn::before {
-            content: 'Upload Image';   
+        &.upload-profile-image-btn::before {
+            content: 'Upload Image';
         }
     }
 }
