@@ -24,7 +24,7 @@
         display: block;
         pointer-events: none;
         inset: 0;
-        animation: fade-out 500ms forwards, slide-down 500ms forwards; 
+        animation: fade-out 500ms forwards, slide-down 500ms forwards;
     }
     &::backdrop[closing] {
         animation: fade-out 500ms forwards;
@@ -260,7 +260,7 @@
 // * New Group Application Modal
 .ng-modal {
     margin: auto;
-    height: calc(100% - 25%);
+    // height: calc(100% - 25%);
     width: calc(100% - 45%);
     z-index: 5;
     background-color: $white;
@@ -370,18 +370,16 @@
             // * Container 2: Table and Pagination
             .na-table-con {
                 width: 100%;
-                height: clamp(10vh, 70rem, 45vh);
                 // * Table Container
                 .table-container {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     width: 100%;
-                    height: 100%;
+                    height: clamp(min(40vh, 50rem), 10rem, max(100vh, 55rem));
                     border-radius: $border-radius-large;
                     box-shadow: $box-shadow;
                     padding-bottom: $spacing-2x-large;
-
                     table {
                         // **                         ** //
                         // **** Table Header Styles **** //
@@ -396,7 +394,6 @@
                             padding: $spacing-large $spacing-2x-large;
                             font-size: $font-size-large;
                         }
-
                         // * Table Checkbox
                         th:first-of-type {
                             text-align: left;
@@ -409,7 +406,7 @@
                         // **** Table Data Styles **** //
                         // **                       ** //
                         td {
-                            padding: $spacing-2x-large $spacing-large ;
+                            padding: $spacing-2x-large $spacing-large;
                             font-size: $font-size-medium;
                         }
                         td:first-of-type {
@@ -456,7 +453,6 @@
     width: clamp(1rem, 100%, 100vw);
     z-index: 5;
     background: none;
-
     &::backdrop {
         background-color: rgba($black, 0.7);
     }
@@ -477,7 +473,6 @@
     &::backdrop[closing] {
         animation: fade-out 500ms forwards;
     }
-
     .modal-container {
         height: 100%;
         border-radius: $border-radius-medium;
@@ -655,7 +650,6 @@
                 grid-template-rows: minmax(0, 0.12fr) minmax(0, 1fr) minmax(0, 0.3fr);
                 // @include containerDefault2;
                 padding: 2rem;
-
                 .rowspan {
                     min-height: 0;
                     /* NEW */
@@ -678,11 +672,9 @@
                         z-index: -1;
                     }
                     h2 {
-                        
                         font-size: $font-size-x-large;
                         font-weight: $font-weight-bold;
                         padding-left: 1rem;
-
                     }
                 }
                 // * Rowspan 2: Payment History Table 
@@ -712,7 +704,6 @@
                         td:nth-of-type(-n+3) {
                             text-align: left;
                         }
-
                     }
                 }
                 // * Show More
@@ -833,7 +824,6 @@
     background-color: $white;
     border-radius: $border-radius-medium;
     overflow-x: hidden;
-
     &::backdrop {
         background-color: rgba($black, 0.7);
     }
@@ -868,10 +858,9 @@
     // * Member List & Borrower Filter
     .modal-container {
         display: grid;
-        grid-template-rows: minmax(0, 0.6fr) repeat(2, minmax(0, 1fr)) minmax(0, 0.6fr) ;
+        grid-template-rows: minmax(0, 0.6fr) repeat(2, minmax(0, 1fr)) minmax(0, 0.6fr);
         gap: $spacing-large 0;
         padding: 1.5rem 2rem 2rem;
-
         // * Modal Header and Exit Button 
         .modal-header {
             display: flex;
@@ -909,7 +898,6 @@
                 }
             }
         }
-
         // * Current Loan
         .rowspan:nth-of-type(2) {
             padding-top: 2rem;
@@ -918,14 +906,11 @@
             gap: 0 $spacing-2x-large;
             align-items: flex-end;
         }
-
         // * Outstanding Balance
         .rowspan:nth-of-type(3) {
             display: grid;
             align-items: flex-end;
-
         }
-
         // * Save Button
         .rowspan:nth-of-type(4) {
             display: grid;
@@ -935,10 +920,9 @@
     // * Member List (Group) Filter
     .modal-container-2 {
         display: grid;
-        grid-template-rows: minmax(0, 1fr) repeat(3, minmax(0, 1.4fr)) minmax(0, 1fr) ;
+        grid-template-rows: minmax(0, 1fr) repeat(3, minmax(0, 1.4fr)) minmax(0, 1fr);
         gap: $spacing-large 0;
         padding: 1.5rem 2rem 2rem;
-    
         // * Modal Header and Exit Button 
         .modal-header {
             display: flex;
@@ -976,7 +960,6 @@
                 }
             }
         }
-    
         // * Current Loan
         .rowspan:nth-of-type(2) {
             display: grid;
@@ -984,21 +967,16 @@
             gap: 0 $spacing-2x-large;
             align-items: flex-end;
         }
-    
         // * Outstanding Balance
         .rowspan:nth-of-type(3) {
             display: grid;
             align-items: flex-end;
-    
         }
-    
         // *No. Of Members
         .rowspan:nth-of-type(4) {
             display: grid;
             align-items: flex-end;
-    
         }
-    
         // * Save Button
         .rowspan:nth-of-type(5) {
             display: grid;
@@ -1007,75 +985,69 @@
     }
     // * Application List Filter
     .modal-container-3 {
+        display: grid;
+        grid-template-rows: minmax(0, 0.6fr) repeat(2, minmax(0, 1fr)) minmax(0, 0.6fr);
+        gap: $spacing-large 0;
+        padding: 1.5rem 2rem 2rem;
+        // * Modal Header and Exit Button 
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            padding-bottom: 2rem;
+            &::after {
+                content: '';
+                position: absolute;
+                height: .2rem;
+                width: 100%;
+                background-color: $primary;
+                top: 100%;
+                left: 0;
+                transform: scaleX(50);
+            }
+            h4 {
+                font-size: $font-size-large;
+            }
+            // * Exit Button
+            button {
+                padding: 0;
+            }
+            .exit-button {
+                padding: 0;
+                cursor: pointer;
+                background: none;
+                img {
+                    transition: all 150ms ease-in-out;
+                }
+                img:hover {
+                    transform: scale(1.1);
+                    filter: opacity(.7);
+                }
+            }
+        }
+        // * Shoose Type Loan
+        .rowspan:nth-of-type(2) {
             display: grid;
-            grid-template-rows: minmax(0, 0.6fr) repeat(2, minmax(0, 1fr)) minmax(0, 0.6fr) ;
-            gap: $spacing-large 0;
-            padding: 1.5rem 2rem 2rem;
-    
-            // * Modal Header and Exit Button 
-            .modal-header {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                position: relative;
-                padding-bottom: 2rem;
-                &::after {
-                    content: '';
-                    position: absolute;
-                    height: .2rem;
-                    width: 100%;
-                    background-color: $primary;
-                    top: 100%;
-                    left: 0;
-                    transform: scaleX(50);
-                }
-                h4 {
-                    font-size: $font-size-large;
-                }
-                // * Exit Button
-                button {
-                    padding: 0;
-                }
-                .exit-button {
-                    padding: 0;
-                    cursor: pointer;
-                    background: none;
-                    img {
-                        transition: all 150ms ease-in-out;
-                    }
-                    img:hover {
-                        transform: scale(1.1);
-                        filter: opacity(.7);
-                    }
-                }
+            align-items: flex-end;
+            h3 {
+                font-size: $font-size-medium;
             }
-    
-            // * Shoose Type Loan
-            .rowspan:nth-of-type(2) {
-                display: grid;
-                align-items: flex-end;
-                h3 {
-                    font-size: $font-size-medium;
-                }
-            }
-    
-            // * Applied Loan Amount
-            .rowspan:nth-of-type(3) {
-                padding-top: 2rem;
-                display: grid;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 0 $spacing-2x-large;
-                align-items: flex-end;
-            }
-    
-            // * Save Button
-            .rowspan:nth-of-type(4) {
-                display: grid;
-                place-self: flex-end;
-            }
+        }
+        // * Applied Loan Amount
+        .rowspan:nth-of-type(3) {
+            padding-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0 $spacing-2x-large;
+            align-items: flex-end;
+        }
+        // * Save Button
+        .rowspan:nth-of-type(4) {
+            display: grid;
+            place-self: flex-end;
+        }
     }
 }
-
-
 
 // ***** Filter Modals ***** //

@@ -662,3 +662,6 @@ Second Commit:
 July 17, 2023 (Monday)
 First Commit:
 • Applications: Updated Image Function and Layout
+
+Second Commit:
+• Updated New Group Modal

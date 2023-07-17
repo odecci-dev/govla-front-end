@@ -1521,7 +1521,6 @@ body {
 
 .ng-modal {
   margin: auto;
-  height: 75%;
   width: 55%;
   z-index: 5;
   background-color: #FFFFFF;
@@ -1633,14 +1632,13 @@ body {
 }
 .ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con {
   width: 100%;
-  height: clamp(10vh, 70rem, 45vh);
 }
 .ng-modal .modal-container .rowspan:nth-of-type(2) .na-table-con .table-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: clamp(min(40vh, 50rem), 10rem, max(100vh, 55rem));
   border-radius: 1.5rem;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   padding-bottom: 2rem;
