@@ -9,16 +9,19 @@
 'modules/base/typography';
 //   'modules/base/fonts',
 //   'modules/base/helpers';
-// * 3
+// * 4
+@import // * Breakpoints
+'modules/breakpoints/breakMaintenance';
+// * 5
 @import // * Components
 'modules/components/button',
 'modules/components/animations';
-// * 4 
+// * 6
 @import // * Layouts
 'modules/layout/nav',
 'modules/layout/modal',
 'modules/layout/dashboard';
-// * 5
+// * 7
 @import // * Pages
 'modules/pages/login',
 'modules/pages/maintenance/maintenance',

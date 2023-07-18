@@ -679,3 +679,8 @@ Third Commit:
 • New Field Officer: Updated the layout
 • Created a maintenance.js for maintenance module
 
+Fourth Commit:
+• Created breakpoints sass folder for layout breakpoints
+- breakpoints
+    - _breakMaintenance.scss
+

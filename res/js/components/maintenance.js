@@ -1,3 +1,21 @@
+const viewFieldOfficerBtn = document.querySelectorAll('[data-maintenance-view-field-officer]');
+
+if (viewFieldOfficerBtn) {
+
+    viewFieldOfficerBtn.forEach((view) => {
+
+        view.addEventListener('click', () => {
+
+            url = '/KC/maintenance/maintenance-view-field-officer.html'
+            window.location = url
+
+        })
+
+    })
+
+}
+
+
 // ***** Upload Image and Attach Files ***** //
 
 const imageUploadFieldOfficerImageBtn = document.querySelector('[data-upload-field-officer-image-btn]');
