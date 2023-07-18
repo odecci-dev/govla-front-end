@@ -11,10 +11,12 @@
 //   'modules/base/helpers';
 // * 4
 @import // * Breakpoints
-'modules/breakpoints/breakMaintenance';
+'modules/breakpoints/breakpoints',
+'modules/breakpoints/grid';
 // * 5
 @import // * Components
 'modules/components/button',
+// 'modules/components/breakpoints',
 'modules/components/animations';
 // * 6
 @import // * Layouts

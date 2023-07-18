@@ -306,6 +306,10 @@
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
+                        .header-wrapper {
+                            display: flex;
+                            gap: $spacing-2x-large;
+                        }
                         h2 {
                             font-size: $font-size-x-large;
                         }

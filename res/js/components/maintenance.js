@@ -15,6 +15,19 @@ if (viewFieldOfficerBtn) {
 
 }
 
+const backToFieldOfficerTableBtn = document.querySelector('[data-back-to-field-officer-table]');
+
+if (backToFieldOfficerTableBtn) {
+
+    backToFieldOfficerTableBtn.addEventListener('click', () => {
+
+        url = '/KC/maintenance/maintenance-field-officer.html'
+        window.location = url
+
+    })
+
+}
+
 
 // ***** Upload Image and Attach Files ***** //
 

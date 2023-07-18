@@ -59,16 +59,7 @@ img {
     -ms-user-select: none;
 }
 
-img[data-back-to-members-table] {
-    cursor: pointer;
-    pointer-events: all;
-    transition: 200ms ease-in-out;
-    &:hover {
-        transform: translateX(-1rem)
-    }
-}
-
-img[data-back-to-group-members-table] {
+img[alt='Left Button'] {
     cursor: pointer;
     pointer-events: all;
     transition: 200ms ease-in-out;

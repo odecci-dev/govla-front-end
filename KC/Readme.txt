@@ -684,3 +684,6 @@ Fourth Commit:
 - breakpoints
     - _breakMaintenance.scss
 
+Fifth Commit:
+• Created _grid.scss for layout breakpoints
+
