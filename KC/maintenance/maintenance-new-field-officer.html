@@ -500,11 +500,32 @@
                                 <div class="input-wrapper">
                                     <span>Gender</span>
                                     <div class="select-box">
-                                        <select name="Gender" id="gender">
-                                        <option value="0"></option>
-                                        <option value="1">Male</option>
-                                        <option value="2">Female</option>
-                                    </select>
+
+                                        <div class="options-container" data-option-con1>
+
+                                            <div class="option" data-option-item1>
+
+                                                <input type="radio" class="radio" name="category" value="Male" />
+                                                <label for="Male">
+                                                    <h4>Male</h4>
+                                                </label>
+
+                                            </div>
+
+                                            <div class="option" data-option-item1>
+
+                                                <input type="radio" class="radio" name="category" value="Female" />
+                                                <label for="Female">
+                                                    <h4>Female</h4>
+                                                </label>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="selected" data-option-select1>
+                                        </div>
+
                                     </div>
                                 </div>
 
@@ -530,12 +551,41 @@
                                 <div class="input-wrapper">
                                     <span>Civil Status</span>
                                     <div class="select-box">
-                                        <select name="Civil Status" id="civStat" data-civil-status>
-                                            <option value="0"></option>
-                                            <option value="Widow">Widow</option>
-                                            <option value="Married">Married</option>
-                                            <option value="Single">Single</option>
-                                        </select>
+
+                                        <div class="options-container" data-option-con2>
+
+                                            <div class="option" data-option-item2>
+
+                                                <input type="radio" class="radio" name="category" value="Widow" />
+                                                <label for="Widow">
+                                                    <h4>Widow</h4>
+                                                </label>
+
+                                            </div>
+
+                                            <div class="option" data-option-item2>
+
+                                                <input type="radio" class="radio" name="category" value="Married" />
+                                                <label for="Married">
+                                                    <h4>Married</h4>
+                                                </label>
+
+                                            </div>
+
+                                            <div class="option" data-option-item2>
+
+                                                <input type="radio" class="radio" name="category" value="Single" />
+                                                <label for="Single">
+                                                    <h4>Single</h4>
+                                                </label>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="selected" data-option-select2>
+                                        </div>
+
                                     </div>
                                 </div>
 
@@ -605,6 +655,7 @@
                             </div>
 
                         </div>
+
                     </div>
 
                     <!-- * Container 2: Upload Images, Files and Monthly Bills Input Fields -->
@@ -621,18 +672,24 @@
                                 <div class="colspan">
 
                                     <!-- * Upload Image -->
-                                    <div class="input-wrapper">
-                                        <input type="image" src="../../res/assets/icons/upload-image.svg" alt="upload-image">
+                                    <div class="input-wrapper" data-upload-image-field-officer-hover-container>
+                                        <img type="image" src="../../res/assets/icons/upload-image.svg" alt="upload-image" data-field-officer-image-container>
                                     </div>
 
-                                    <!-- * Upload Button -->
-                                    <button type="button" submit="" class="button">Upload Image</button>
+                                    <!-- * Button Wrapper -->
+                                    <div class="btn-wrapper">
+                                        <!-- * Upload Button -->
+                                        <input type="file" submit="" class="input-image upload-profile-image-btn" accept=".jpg, .jpeg, .png, .gif, .svg" data-upload-field-officer-image-btn></input>
+                                        <!-- * Attach Button -->
+                                        <input type="file" submit="" class="input-image attach-file-btn" accept=".txt, .pdf, .docx, .xlsx" multiple data-attach-field-officer-file-btn></input>
+                                    </div>
 
-                                    <!-- * Attach Button -->
-                                    <button type="button" submit="" class="button">Attach Files</button>
+                                    <!-- * File Chips Container -->
+                                    <div class="file-wrapper" data-attach-field-officer-file-container>
+                                    </div>
 
                                     <!-- * Save Button -->
-                                    <button type="button" submit="" class="button">Save</button>
+                                    <button type="button" submit="" class="button save-btn">Save</button>
 
                                 </div>
 
@@ -663,16 +720,45 @@
                         <!-- * Rowspan 2: Valid ID Presented and ID Number -->
                         <div class="rowspan">
 
-                            <!-- * Valid ID Presented -->
+                            <!-- * Valid ID Presented  -->
                             <div class="input-wrapper">
                                 <span>Valid ID Presented</span>
                                 <div class="select-box">
-                                    <select name="validID" id="validID">
-                                    <option value="0"></option>
-                                    <option value="Philhealth">Philhealth</option>
-                                    <option value="SSS">SSS</option>
-                                    <option value="Pag-ibig">Pag-ibig</option>
-                                    </select>
+
+                                    <div class="options-container" data-option-con3>
+
+                                        <div class="option" data-option-item3>
+
+                                            <input type="radio" class="radio" name="category" value="Philhealth" />
+                                            <label for="Philhealth">
+                                                <h4>Philhealth</h4>
+                                            </label>
+
+                                        </div>
+
+                                        <div class="option" data-option-item3>
+
+                                            <input type="radio" class="radio" name="category" value="SSS" />
+                                            <label for="SSS">
+                                                <h4>SSS</h4>
+                                            </label>
+
+                                        </div>
+
+                                        <div class="option" data-option-item3>
+
+                                            <input type="radio" class="radio" name="category" value="Pag-ibig" />
+                                            <label for="Pag-ibig">
+                                                <h4>Pag-ibig</h4>
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="selected" data-option-select3>
+                                    </div>
+
                                 </div>
                             </div>
 
@@ -746,6 +832,8 @@
     <script src="../../res/js/app.js" defer></script>
     <script src="../../res/js/components/links.js"></script>
     <script src="../../res/js/components/nav.js"></script>
+    <script src="../../res/js/components/maintenance.js"></script>
+    <script src="../../res/js/components/newApplication.js"></script>
 
 </body>
 

@@ -732,7 +732,9 @@ imageUploadBorrowerImageBtn.addEventListener('change', function(e) {
 })
 
 const attachFileBtn = document.querySelector('[data-attach-file-btn]')
+const attachFileBtn2 = document.querySelector('[data-attach-file-btn2]')
 const attachFileContainer = document.querySelector('[data-attach-file-container]')
+const attachFileContainer2 = document.querySelector('[data-attach-file-container2]')
 
 function downloadFile(file) {
     const url = URL.createObjectURL(file)
@@ -751,7 +753,26 @@ function convertFileToChip(file) {
     spanXs = document.createElement('span')
     spanXs.classList.add('tb-chip-w-x')
 
-    attachFileContainer.appendChild(chips);
+    attachFileContainer.appendChild(chips)
+
+    chips.addEventListener('click', e => {
+        if (e.target === spanXs) {
+            return
+        }
+        downloadFile(file)
+    });
+
+}
+
+function convertFileToChip2(file) {
+    chips = document.createElement('div');
+    chips.classList.add('fileButton');
+    chips.setAttribute('data-file-chip2', '')
+    chips.textContent = file.name;
+    spanXs = document.createElement('span')
+    spanXs.classList.add('tb-chip-w-x')
+
+    attachFileContainer2.appendChild(chips)
 
     chips.addEventListener('click', e => {
         if (e.target === spanXs) {
@@ -764,27 +785,48 @@ function convertFileToChip(file) {
 
 function handleFileUpload(event) {
     const files = event.target.files;
-    const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+    const maxSize = 5 * 1024 * 1024; // * 5MB in bytes
 
-    for (let i = 0; i < files.length; i++) {
-        const file = files[i];
+    for (const file of files) {
         if (file.size <= maxSize) {
             convertFileToChip(file);
         } else {
-            // File size exceeds the maximum allowed size
+            // * File size exceeds the maximum allowed size
             alert('Maximum file size allowed is 5MB for each file.');
         }
     }
 
-    event.target.value = ''; // Reset file input
+    event.target.value = ''; // * Reset file input
 }
 
+function handleFileUpload2(event) {
+    const files = event.target.files;
+    const maxSize = 5 * 1024 * 1024; // * 5MB in bytes
+
+    for (const file of files) {
+        if (file.size <= maxSize) {
+            convertFileToChip2(file);
+        } else {
+            // * File size exceeds the maximum allowed size
+            alert('Maximum file size allowed is 5MB for each file.');
+        }
+    }
+
+    event.target.value = ''; // * Reset file input
+}
+
+// * Append the file selected (Borrower)
 attachFileBtn.addEventListener('change', () => {
     handleFileUpload(event)
+
+    // * When hovered display the X button for removal
     attachFileContainer.querySelectorAll('[data-file-chip]').forEach((chip) => {
-        // console.log(chip);
         chip.addEventListener('mouseenter', () => {
             chip.appendChild(spanXs)
+
+            spanXs.addEventListener('click', () => {
+                chip.remove()
+            })
         })
 
         chip.addEventListener('mouseleave', () => {
@@ -794,7 +836,26 @@ attachFileBtn.addEventListener('change', () => {
     })
 })
 
+// * Append the file selected (Co-Borrower)
+attachFileBtn2.addEventListener('change', () => {
+    handleFileUpload2(event)
 
+    // * When hovered display the X button for removal
+    attachFileContainer2.querySelectorAll('[data-file-chip2]').forEach((chip) => {
+        chip.addEventListener('mouseenter', () => {
+            chip.appendChild(spanXs)
+
+            spanXs.addEventListener('click', () => {
+                chip.remove()
+            })
+        })
+
+        chip.addEventListener('mouseleave', () => {
+            chip.appendChild(spanXs).remove()
+        })
+
+    })
+})
 
 
 

@@ -481,7 +481,7 @@ table {
 .file-wrapper {
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, minmax(0, 0.5fr));
     gap: $spacing-large $spacing-2x-large;
 }
 

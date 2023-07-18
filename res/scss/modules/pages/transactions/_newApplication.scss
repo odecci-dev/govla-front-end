@@ -518,15 +518,6 @@
                                 flex-direction: column;
                                 gap: $spacing-large;
                             }
-                            // // * Colspan 1 : Buttons
-                            // button {
-                            //     display: flex;
-                            //     justify-content: center;
-                            //     width: clamp(2rem, 10vw, 100%);
-                            //     // @include primaryButton;
-                            //     margin-bottom: 2rem;
-                            //     white-space: nowrap;
-                            // }
                         }
                     }
                     // * Boxwrap 2
@@ -1095,7 +1086,7 @@
                             display: flex;
                             flex-direction: column;
                             align-items: center;
-                            gap: 2rem;
+                            gap: $spacing-large;
                             .input-wrapper {
                                 display: grid;
                                 place-items: center;
@@ -1111,11 +1102,11 @@
                             .btn-wrapper:nth-of-type(2) {
                                 display: flex;
                                 flex-direction: column;
-                                gap: $spacing-2x-large;
+                                gap: $spacing-large;
                             }
                             .btn-wrapper:last-of-type {
                                 display: flex;
-                                gap: $spacing-2x-large;
+                                gap: $spacing-large;
                             }
                             .transparentButton3 {
                                 place-self: flex-end;
@@ -1142,7 +1133,7 @@
                             display: flex;
                             flex-direction: column;
                             align-items: center;
-                            gap: 2rem;
+                            gap: $spacing-large;
                             .input-wrapper {
                                 display: grid;
                                 place-items: center;
@@ -1158,11 +1149,11 @@
                             .btn-wrapper:nth-of-type(2) {
                                 display: flex;
                                 flex-direction: column;
-                                gap: $spacing-2x-large;
+                                gap: $spacing-large;
                             }
                             .btn-wrapper:last-of-type {
                                 display: flex;
-                                gap: $spacing-2x-large;
+                                gap: $spacing-large;
                             }
                             .transparentButton3 {
                                 place-self: flex-end;

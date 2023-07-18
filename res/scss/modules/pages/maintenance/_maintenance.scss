@@ -299,63 +299,6 @@
                             input {
                                 @include inputField;
                             }
-                            // * Select Input Global Styles
-                            .select-box {
-                                position: relative;
-                                select {
-                                    @include selectField;
-                                    width: 100%;
-                                    option {
-                                        position: absolute;
-                                        outline: none;
-                                        border: none;
-                                        background-color: $secondary-bg;
-                                    }
-                                }
-                            }
-                            // * Select Input Arrow
-                            .select-box::before {
-                                content: '';
-                                position: absolute;
-                                width: 15px;
-                                height: 15px;
-                                z-index: 2;
-                                right: 0;
-                                transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
-                                // border: 2px solid $black;
-                                border-bottom: 2px solid $black;
-                                border-left: 2px solid $black;
-                                transition: ease-out 300ms;
-                                pointer-events: none;
-                            }
-                            .select-box:focus-within::before {
-                                border-top: 2px solid $black;
-                                border-right: 2px solid $black;
-                                border-bottom: none;
-                                border-left: none;
-                                transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
-                            }
-                            // * Radio Buttons
-                            .box-wrap {
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-around;
-                                .radio-btn-wrapper {
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: center;
-                                    span {
-                                        white-space: nowrap;
-                                    }
-                                    input[type="radio"] {
-                                        @include formRadioButtons;
-                                    }
-                                    // input[type="radio"]:focus {
-                                    //     outline: max(1px, 0.15em) solid $primary;
-                                    //     outline-offset: max(2px, 0.15em);
-                                    // }
-                                }
-                            }
                         }
                     }
                     // * Rowspan Header: Header and Buttons 
@@ -390,7 +333,7 @@
                     }
                 }
             }
-            // * Container 2: File Attachments and Monthly Bills
+            // * Container 2: File Attachments
             .no-container-2 {
                 padding: 2rem 2rem 1rem 1rem;
                 // * Small Container
@@ -405,23 +348,27 @@
                     }
                     // * Boxwrap 1
                     .box-wrap:first-of-type {
-                        display: grid;
-                        grid-template-rows: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+                        display: flex;
+                        flex-direction: column;
                         align-items: center;
-                        justify-items: center;
+                        // display: grid;
+                        // grid-template-rows: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+                        // align-items: center;
+                        // justify-items: center;
                         // * Colspan 1
                         h3 {
+                            padding: 6rem 0;
                             font-size: $font-size-x-large;
                         }
                         .colspan {
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            gap: 2rem;
+                            display: grid;
+                            justify-items: center;
+                            // gap: $spacing-large;
                             .input-wrapper {
                                 // margin-bottom: min(2rem, 10%);
                                 display: grid;
                                 place-items: center;
+                                position: relative;
                                 input[type="image"] {
                                     width: clamp(4rem, 10vw, 100%);
                                     display: flex;
@@ -429,15 +376,22 @@
                                     justify-content: center;
                                 }
                             }
-                            // * Colspan 1 : Buttons
-                            button {
+                            .btn-wrapper {
+                                margin-top: $spacing-large;
                                 display: flex;
-                                justify-content: center;
-                                width: clamp(2rem, 10vw, 100%);
-                                white-space: nowrap;
-                                &:last-of-type {
-                                    width: 50%;
-                                }
+                                flex-direction: column;
+                                gap: $spacing-large;
+                            }
+                            .file-wrapper {
+                                display: none;
+                            }
+                            .file-wrapper.activeFileWrapper {
+                                display: grid;
+                                grid-template-columns: repeat(2, minmax(0, 0.5fr));
+                                padding: $spacing-large 0;
+                            }
+                            .button.save-btn {
+                                margin-top: $spacing-large;
                             }
                         }
                     }
@@ -446,7 +400,6 @@
         }
         // * Container 3: Job Information Input Fields
         .no-container-3 {
-            height: calc(100% - 40%);
             width: 100%;
             padding: 1rem 2rem 2rem;
             .small-con-2 {
@@ -475,66 +428,6 @@
                         input {
                             @include inputField;
                         }
-                        // * Select Input Global Styles
-                        .select-box {
-                            position: relative;
-                            select {
-                                @include selectField;
-                                width: 100%;
-                                option {
-                                    position: absolute;
-                                    outline: none;
-                                    border: none;
-                                    background-color: $secondary-bg;
-                                }
-                            }
-                        }
-                        // * Select Input Arrow
-                        .select-box::before {
-                            content: '';
-                            position: absolute;
-                            width: 15px;
-                            height: 15px;
-                            z-index: 2;
-                            right: 0;
-                            transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
-                            // border: 2px solid $black;
-                            border-bottom: 2px solid $black;
-                            border-left: 2px solid $black;
-                            transition: ease-out 300ms;
-                            pointer-events: none;
-                        }
-                        .select-box:focus-within::before {
-                            border-top: 2px solid $black;
-                            border-right: 2px solid $black;
-                            border-bottom: none;
-                            border-left: none;
-                            transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
-                        }
-                        // * Radio Buttons
-                        .box-wrap {
-                            display: flex;
-                            align-items: center;
-                            .radio-btn-wrapper {
-                                display: flex;
-                                flex-direction: row;
-                                align-items: center;
-                                span {
-                                    font-weight: $font-weight-bold;
-                                    margin-left: 1rem;
-                                    white-space: nowrap;
-                                }
-                                input[type="radio"] {
-                                    @include tableCheckboxInput;
-                                }
-                                // input[type="radio"]::after {
-                                //     @include formCheckboxAfter;
-                                // }
-                                // input[type="radio"]:checked:after {
-                                //     @include formCheckboxChecked;
-                                // }
-                            }
-                        }
                     }
                 }
                 // * Rowspan Header
@@ -562,7 +455,7 @@
                         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
                         gap: 0 $spacing-2x-large;
                         .input-wrapper>input[type=image] {
-                            height: clamp(10vh, 5rem, 100vh);
+                            height: clamp(10vh, 8rem, 100vh);
                             object-fit: cover;
                         }
                     }
@@ -577,7 +470,6 @@
                         display: grid;
                         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
                         gap: 0 $spacing-2x-large;
-                        
                     }
                     .input-wrapper {
                         justify-content: flex-end;

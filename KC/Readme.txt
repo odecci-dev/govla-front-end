@@ -674,3 +674,8 @@ First Commit:
 Second Commit:
 • Updated the Sidenav Bar responsiveness
 - Added media queries for the Sidenav (_nav.scss)
+
+Third Commit:
+• New Field Officer: Updated the layout
+• Created a maintenance.js for maintenance module
+
