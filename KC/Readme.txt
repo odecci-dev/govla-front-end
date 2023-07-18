@@ -665,3 +665,12 @@ First Commit:
 
 Second Commit:
 • Updated New Group Modal
+
+
+July 18, 2023 (Tuesday)
+First Commit:
+• Updated table layouts for responsiveness
+
+Second Commit:
+• Updated the Sidenav Bar responsiveness
+- Added media queries for the Sidenav (_nav.scss)

@@ -135,6 +135,7 @@
 // *** Button Mixins
 // * Primary Button
 @mixin primaryButton {
+    pointer-events: all;
     border-radius: $border-radius-medium;
     padding: $btn-padding-2;
     font-size: $font-size-medium;
@@ -385,24 +386,24 @@
     &:active {
         transform: translateY(0.4rem);
     }
-    &:hover::before {
-        content: 'X';
-        cursor: pointer;
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        right: 0;
-        top: 0;
-        transform: translate(0.6rem, -0.4rem);
-        font-size: $font-size-small;
-        font-weight: $font-weight;
-        color: $white;
-        width: 1.5rem;
-        height: 1.5rem;
-        border-radius: $circle;
-        background-color: $alert;
-    }
+    // &:hover::before {
+    //     content: 'X';
+    //     cursor: pointer;
+    //     position: absolute;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     right: 0;
+    //     top: 0;
+    //     transform: translate(0.6rem, -0.4rem);
+    //     font-size: $font-size-small;
+    //     font-weight: $font-weight;
+    //     color: $white;
+    //     width: 1.5rem;
+    //     height: 1.5rem;
+    //     border-radius: $circle;
+    //     background-color: $alert;
+    // }
 }
 
 // * Input Image Button

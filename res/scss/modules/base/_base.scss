@@ -471,7 +471,18 @@ table {
         &.upload-profile-image-btn::before {
             content: 'Upload Image';
         }
+        &.attach-file-btn::before {
+            content: 'Attach Files';
+        }
     }
+}
+
+// * File Wrapper 
+.file-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: $spacing-large $spacing-2x-large;
 }
 
 // * Input Modal Global

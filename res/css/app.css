@@ -304,6 +304,7 @@ table .td-btn-wrapper {
 }
 
 .button {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -432,6 +433,7 @@ table .td-btn-wrapper {
 }
 
 .a-btn-view {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -453,6 +455,7 @@ table .td-btn-wrapper {
 }
 
 .a-btn-view-2 {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -471,6 +474,7 @@ table .td-btn-wrapper {
 }
 
 .a-btn-view-3 {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -508,6 +512,7 @@ table .td-btn-wrapper {
 }
 
 .a-btn-trash-2 {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -547,6 +552,7 @@ table .td-btn-wrapper {
 }
 
 .a-btn-trash-4 {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -568,6 +574,7 @@ table .td-btn-wrapper {
 }
 
 .a-btn-trash-5 {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -586,6 +593,7 @@ table .td-btn-wrapper {
 }
 
 .a-btn-edit {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -604,6 +612,7 @@ table .td-btn-wrapper {
 }
 
 .a-btn-delete {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -636,6 +645,7 @@ table .td-btn-wrapper {
 }
 
 .declineButton {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -662,6 +672,7 @@ table .td-btn-wrapper {
 }
 
 .releaseButton {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -732,24 +743,6 @@ table .td-btn-wrapper {
 }
 .fileButton:active {
   transform: translateY(0.4rem);
-}
-.fileButton:hover::before {
-  content: "X";
-  cursor: pointer;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  right: 0;
-  top: 0;
-  transform: translate(0.6rem, -0.4rem);
-  font-size: 1rem;
-  font-weight: 400;
-  color: #FFFFFF;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  background-color: #FF0404;
 }
 
 .tb-chip {
@@ -1007,6 +1000,16 @@ table .td-btn-wrapper {
 .btn-wrapper input.input-image.upload-profile-image-btn::before {
   content: "Upload Image";
 }
+.btn-wrapper input.input-image.attach-file-btn::before {
+  content: "Attach Files";
+}
+
+.file-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1.5rem 2rem;
+}
 
 .input-wrapper-modal {
   display: flex;
@@ -1254,6 +1257,34 @@ body {
   padding-right: 2rem;
 }
 
+@media (min-width: 617px) and (max-width: 1366px) {
+  .nav {
+    padding: 1.2rem 0;
+  }
+  .nav img {
+    scale: 0.8;
+  }
+  .nav .nav-links {
+    margin-top: 1.6rem;
+  }
+  .nav .nav-links img[data-dropdown-button],
+  .nav .nav-links img[no-data-dropdown] {
+    scale: 0.7;
+  }
+  .nav .nav-links .link {
+    padding: 0.8rem;
+  }
+  .nav .nav-links .link p {
+    margin-top: 0.6rem;
+    font-size: 1rem;
+  }
+  .nav .nav-con-2 .nav-links {
+    margin-top: 3rem;
+  }
+  .profile-nav img {
+    scale: 0.8;
+  }
+}
 .na-modal {
   margin: auto;
   width: 55%;
@@ -1383,7 +1414,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: clamp(min(40vh, 50rem), 10rem, max(100vh, 55rem));
+  height: clamp(min(30vh, 50rem), 10rem, max(100vh, 55rem));
   padding-bottom: 2rem;
   border-radius: 1.5rem;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -2419,6 +2450,7 @@ body {
 }
 .main-dashboard .con-wrapper .md-con-2 .big-card .div-1 .btn-wrapper button {
   white-space: nowrap;
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -2613,6 +2645,7 @@ body {
   justify-content: flex-end;
 }
 .main-dashboard .con-wrapper .md-con-3 .card-2:last-child .div-2 button {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -2782,6 +2815,7 @@ body {
   gap: 2rem;
 }
 .main-dashboard .m-con-1 .container .wrapper:first-of-type button {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -3933,6 +3967,7 @@ body {
   font-size: 2.5rem;
 }
 .main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan:first-of-type .btn-wrapper button {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -4157,6 +4192,7 @@ body {
   font-size: 2.5rem;
 }
 .main-dashboard .top-container-2 .container-wrapper .big-con .rowspan:first-of-type .btn-wrapper button {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -4378,6 +4414,7 @@ body {
   font-size: 2.5rem;
 }
 .main-dashboard .nh-con .container-wrapper .big-con .rowspan:first-of-type .btn-wrapper button {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -4460,7 +4497,6 @@ body {
 .main-dashboard .am-con-1 {
   display: flex;
   flex-direction: column;
-  height: 26%;
   padding: 4rem 4rem 2rem 4rem;
 }
 .main-dashboard .am-con-1 h2 {
@@ -4491,6 +4527,7 @@ body {
   gap: 2rem;
 }
 .main-dashboard .am-con-1 .container .wrapper:first-of-type button {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -4640,13 +4677,13 @@ body {
   transform: scale(1.005);
 }
 .main-dashboard .am-con-2 {
-  height: 74%;
-  padding: 4rem 4rem 2rem 4rem;
+  height: clamp(100% - 26rem, 53%, 66vh);
+  padding: 0 4rem 2rem 4rem;
 }
 .main-dashboard .am-con-2 .table-container {
   display: flex;
   flex-direction: column;
-  height: 90%;
+  height: 100%;
   border-radius: 1.5rem;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -4709,7 +4746,7 @@ body {
 .main-dashboard .am-con-2 .table-container-2 {
   display: flex;
   flex-direction: column;
-  height: 90%;
+  height: 100%;
   border-radius: 1.5rem;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -4773,8 +4810,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 3rem;
-  height: 10%;
+  padding: 1.5rem 0;
 }
 .main-dashboard .am-con-2 .pagination-container a {
   display: flex;
@@ -4792,13 +4828,13 @@ body {
   margin-left: 6rem;
 }
 .main-dashboard .amg-con-2 {
-  height: 74%;
-  padding: 4rem 4rem 2rem 4rem;
+  height: clamp(100% - 26rem, 53%, 66vh);
+  padding: 0 4rem 2rem 4rem;
 }
 .main-dashboard .amg-con-2 .table-container {
   display: flex;
   flex-direction: column;
-  height: 90%;
+  height: 100%;
   border-radius: 1.5rem;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -4859,8 +4895,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 3rem;
-  height: 10%;
+  padding: 1.5rem;
 }
 .main-dashboard .amg-con-2 .pagination-container a {
   display: flex;
@@ -5561,7 +5596,6 @@ body {
 .main-dashboard .na-form-con .nal-con-1 {
   display: flex;
   flex-direction: column;
-  height: 26%;
   padding: 4rem 4rem 2rem 4rem;
 }
 .main-dashboard .na-form-con .nal-con-1 h2 {
@@ -5633,13 +5667,13 @@ body {
   margin-top: 1.5rem;
 }
 .main-dashboard .na-form-con .nal-con-2 {
-  height: 74%;
-  padding: 4rem 4rem 2rem 4rem;
+  height: clamp(100% - 22rem, 60%, 66vh);
+  padding: 0 4rem 2rem 4rem;
 }
 .main-dashboard .na-form-con .nal-con-2 .table-container {
   display: flex;
   flex-direction: column;
-  height: 90%;
+  height: 100%;
   border-radius: 1.5rem;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -6622,6 +6656,7 @@ body {
   gap: 0px 2rem;
 }
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(4) .btn-wrapper button {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -7481,7 +7516,7 @@ body {
   font-size: 2.5rem;
 }
 .main-dashboard .na-form-con .na-container-group-2 {
-  height: 50%;
+  height: clamp(100% - 22rem, 60%, 66vh);
   margin: 2rem;
 }
 .main-dashboard .na-form-con .na-container-group-2 .table-container {
@@ -7994,6 +8029,7 @@ body {
   font-size: 2.5rem;
 }
 .nu-con-1 .container-wrapper .big-con .rowspan:first-of-type .btn-wrapper button {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;
@@ -8278,6 +8314,7 @@ body {
   font-size: 2.5rem;
 }
 .view-nu-con-1 .container-wrapper .big-con .rowspan:first-of-type .btn-wrapper button {
+  pointer-events: all;
   border-radius: 1rem;
   padding: 0.8rem 4rem;
   font-size: 1.5rem;

@@ -681,6 +681,9 @@ function subBank() {
 // ***** END ---- Add and Subtract Bank ***** //
 
 
+
+// ***** Upload Image and Attach Files ***** //
+
 const imageUploadBorrowerImageBtn = document.querySelector('[data-upload-borrower-image-btn]');
 const imageBorrowerImageContainer = document.querySelector('[data-borrower-image-container]');
 const imageBorrowerHoverContainer = document.querySelectorAll('[data-upload-image-hover-container]')
@@ -727,6 +730,73 @@ imageUploadBorrowerImageBtn.addEventListener('change', function(e) {
     }
 
 })
+
+const attachFileBtn = document.querySelector('[data-attach-file-btn]')
+const attachFileContainer = document.querySelector('[data-attach-file-container]')
+
+function downloadFile(file) {
+    const url = URL.createObjectURL(file)
+    const link = document.createElement('a')
+    link.href = url
+    link.download = file.name
+    link.click()
+        // window.open(link, '_blank')
+}
+
+function convertFileToChip(file) {
+    chips = document.createElement('div');
+    chips.classList.add('fileButton');
+    chips.setAttribute('data-file-chip', '')
+    chips.textContent = file.name;
+    spanXs = document.createElement('span')
+    spanXs.classList.add('tb-chip-w-x')
+
+    attachFileContainer.appendChild(chips);
+
+    chips.addEventListener('click', e => {
+        if (e.target === spanXs) {
+            return
+        }
+        downloadFile(file)
+    });
+
+}
+
+function handleFileUpload(event) {
+    const files = event.target.files;
+    const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+
+    for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        if (file.size <= maxSize) {
+            convertFileToChip(file);
+        } else {
+            // File size exceeds the maximum allowed size
+            alert('Maximum file size allowed is 5MB for each file.');
+        }
+    }
+
+    event.target.value = ''; // Reset file input
+}
+
+attachFileBtn.addEventListener('change', () => {
+    handleFileUpload(event)
+    attachFileContainer.querySelectorAll('[data-file-chip]').forEach((chip) => {
+        // console.log(chip);
+        chip.addEventListener('mouseenter', () => {
+            chip.appendChild(spanXs)
+        })
+
+        chip.addEventListener('mouseleave', () => {
+            chip.appendChild(spanXs).remove()
+        })
+
+    })
+})
+
+
+
+
 
 const imageUploadCoBorrowerImageBtn = document.querySelector('[data-upload-co-borrower-image-btn]');
 const imageCoBorrowerImageContainer = document.querySelector('[data-co-borrower-image-container]');
