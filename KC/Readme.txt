@@ -696,3 +696,6 @@ First Commit:
 
 Second Commit:
 • Area Module: Updated responsive layout
+
+Third Commit:
+• Nav: Updated responsive layout
