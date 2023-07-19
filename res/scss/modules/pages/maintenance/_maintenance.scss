@@ -510,6 +510,11 @@
                     grid-template-rows: minmax(0, 0.4fr) minmax(0, 2fr) minmax(0, 0.6fr);
                     gap: $spacing-4x-large;
                     grid-area: 1 / 1 / -1 / 3;
+                    // *** Large Breakpoint ***
+                    @include lgBreakpoint {
+                        grid-template-rows: minmax(0, 0.4fr) minmax(0, 2fr) minmax(0, 0.4fr);
+                        gap: $spacing-2x-large;
+                    }
                     // ** Rowspan Global Styles
                     .rowspan {
                         min-height: 0;
@@ -527,6 +532,10 @@
                             // * Input Global Styles
                             input {
                                 @include inputField;
+                                // *** Large Breakpoint ***
+                                @include lgBreakpoint {
+                                    font-size: 1.5rem;
+                                }
                             }
                         }
                     }
@@ -536,6 +545,10 @@
                         flex-direction: column;
                         h2 {
                             font-size: $font-size-display;
+                            // *** Large Breakpoint ***
+                            @include lgBreakpoint {
+                                font-size: calc($font-size-display - 1rem);
+                            }
                         }
                         p {
                             font-size: $font-size;
@@ -546,6 +559,19 @@
                         display: grid;
                         grid-template-rows: minmax(0, 1.2fr) minmax(0, 2.4fr) minmax(0, 1.2fr);
                         gap: 3rem 0;
+                        @include lgBreakpoint {
+                            grid-template-rows: minmax(0, 1.2fr) minmax(0, 1.8fr) minmax(0, 1.2fr);
+                            gap: 1rem 0;
+                        }
+                        .input-wrapper {
+                            span {
+                                // *** Large Breakpoint ***
+                                @include lgBreakpoint {
+                                    margin-bottom: 0;
+                                    font-size: $font-size-medium;
+                                }
+                            }
+                        }
                         .input-wrapper:nth-of-type(2) {
                             .locations-container {
                                 @include inputField;
@@ -554,6 +580,10 @@
                                 gap: $spacing-large;
                                 padding: $spacing-2x-large;
                                 height: clamp(1rem, 40vh, 80%);
+                                // *** Large Breakpoint ***
+                                @include lgBreakpoint {
+                                    height: clamp(1rem, 40vh, 74%);
+                                }
                                 .chip-container {
                                     padding: .5rem;
                                     height: clamp(1rem, 50vh, 100%);
@@ -599,6 +629,11 @@
                                 right: 0;
                                 transform: translateY(.6rem) translateX(-2.5rem);
                                 transition: 200ms ease-in-out;
+                                // *** Large Breakpoint ***
+                                @include lgBreakpoint {
+                                    width: 2rem;
+                                    transform: translateY(1rem) translateX(-2.5rem);
+                                }
                             }
                         }
                     }
@@ -625,12 +660,20 @@
                         @include containerDefault2;
                         display: grid;
                         grid-template-rows: minmax(0, 0.2fr) minmax(0, 1fr);
+                        // *** Large Breakpoint ***
+                        @include lgBreakpoint {
+                            gap: $spacing-medium;
+                        }
                         .rowspan:first-of-type {
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
                             h3 {
                                 font-size: $font-size-x-large;
+                                // *** Large Breakpoint ***
+                                @include lgBreakpoint {
+                                    font-size: calc($spacing-large + 0.3rem)
+                                }
                             }
                             .input-wrapper {
                                 // * Input Global Styles
@@ -638,6 +681,10 @@
                                     position: relative;
                                     input {
                                         @include inputField;
+                                        // *** Large Breakpoint ***
+                                        @include lgBreakpoint {
+                                            font-size: 1.5rem;
+                                        }
                                         padding-left: 8rem;
                                         transition: 200ms ease-in-out;
                                         &:hover~img {
@@ -663,6 +710,11 @@
                                         left: 0;
                                         transform: translateY(.6rem) translateX(2rem);
                                         transition: 200ms ease-in-out;
+                                        // *** Large Breakpoint ***
+                                        @include lgBreakpoint {
+                                            width: 2rem;
+                                            transform: translateY(1rem) translateX(2rem);
+                                        }
                                     }
                                 }
                             }
@@ -688,8 +740,16 @@
                                         padding: $spacing-2x-large $spacing-medium;
                                         text-align: center;
                                         white-space: nowrap;
+                                        // *** Large Breakpoint ***
+                                        @include lgBreakpoint {
+                                            padding: $spacing $spacing-medium;
+                                        }
                                         span.th-name {
                                             font-size: $font-size-medium;
+                                            // *** Large Breakpoint ***
+                                            @include lgBreakpoint {
+                                                font-size: $font-size;
+                                            }
                                             font-weight: $font-weight-bold;
                                         }
                                         .th-wrapper {
@@ -712,13 +772,27 @@
                                         padding: $spacing-2x-large $spacing-medium;
                                         font-size: $font-size-medium;
                                         white-space: nowrap;
+                                        // *** Large Breakpoint ***
+                                        @include lgBreakpoint {
+                                            padding: $spacing $spacing-medium;
+                                            font-size: $font-size;
+                                        }
                                         // * Borrowers' Data Styles
                                         .td-wrapper {
                                             display: flex;
                                             align-items: center;
                                         }
                                         // * Table Buttons Styles
+                                        // *** Large Breakpoint ***
+                                        .td-btn-wrapper {
+                                            .a-btn-trash-2 {
+                                                @include lgBreakpoint {
+                                                    @include tableButton3;
+                                                }
+                                            }
+                                        }
                                     }
+                                    // *** Large Breakpoint 
                                 }
                             }
                             .table-container.tbc-2 {

@@ -1,4 +1,4 @@
-$breakpoints: ( xsBreakpoint: 576px, smBreakpoint: 768px, mdBreakpoint: 1024px, lgBreakpoint: 1290px, xlBreakpoint: 1440px, );
+$breakpoints: ( xsBreakpoint: 576px, smBreakpoint: 768px, mdBreakpoint: 1024px, lgBreakpoint: 1366px, xlBreakpoint: 1440px, );
 // * Extra-Small Breakpoint
 @mixin xsBreakpoint {
     @media (min-width: map-get($breakpoints, "xsBreakpoint")) {
@@ -15,21 +15,21 @@ $breakpoints: ( xsBreakpoint: 576px, smBreakpoint: 768px, mdBreakpoint: 1024px, 
 
 // * Medium Breakpoint
 @mixin mdBreakpoint {
-    @media (min-width: map-get($breakpoints, "mdBreakpoint")) {
+    @media (max-width: map-get($breakpoints, "mdBreakpoint")) {
         @content;
     }
 }
 
 // * Large Breakpoint
 @mixin lgBreakpoint {
-    @media (min-width: map-get($breakpoints, "lgBreakpoint")) {
+    @media (max-width: map-get($breakpoints, "lgBreakpoint")) {
         @content;
     }
 }
 
 // * Extra-Large Breakpoint
 @mixin xlBreakpoint {
-    @media (min-width: map-get($breakpoints, "xlBreakpoint")) {
+    @media (max-width: map-get($breakpoints, "xlBreakpoint")) {
         @content;
     }
 }
