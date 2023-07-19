@@ -693,3 +693,6 @@ First Commit:
 - Completed the Area List Design
 - Completed the Add New Area
 - Completed the Unassigned Location List
+
+Second Commit:
+• Area Module: Updated responsive layout

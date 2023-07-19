@@ -515,6 +515,10 @@
                         grid-template-rows: minmax(0, 0.4fr) minmax(0, 2fr) minmax(0, 0.4fr);
                         gap: $spacing-2x-large;
                     }
+                    // *** Small Breakpoint ***
+                    @include smBreakpoint {
+                        grid-template-rows: minmax(0, 0.8fr) minmax(0, 2fr) minmax(0, 0.4fr);
+                    }
                     // ** Rowspan Global Styles
                     .rowspan {
                         min-height: 0;
@@ -534,7 +538,12 @@
                                 @include inputField;
                                 // *** Large Breakpoint ***
                                 @include lgBreakpoint {
-                                    font-size: 1.5rem;
+                                    font-size: $font-size-medium;
+                                }
+                                // *** Small Breakpoint ***
+                                @include smBreakpoint {
+                                    font-size: $font-size-medium;
+                                    width: 100%;
                                 }
                             }
                         }
@@ -581,8 +590,19 @@
                                 padding: $spacing-2x-large;
                                 height: clamp(1rem, 40vh, 80%);
                                 // *** Large Breakpoint ***
+                                @include xlBreakpoint {
+                                    height: clamp(1rem, 40vh, 74%);
+                                    padding: $spacing-medium;
+                                }
+                                // *** Large Breakpoint ***
                                 @include lgBreakpoint {
                                     height: clamp(1rem, 40vh, 74%);
+                                    padding: $spacing-medium;
+                                }
+                                // *** Small Breakpoint ***
+                                @include smBreakpoint {
+                                    gap: $spacing;
+                                    padding: $spacing-medium;
                                 }
                                 .chip-container {
                                     padding: .5rem;
@@ -594,8 +614,24 @@
                                     grid-auto-rows: 4rem;
                                     // grid-template-rows: repeat(4, minmax(0, 0.4fr));
                                     gap: $spacing-large;
+                                    // *** Medium Breakpoint ***
+                                    @include mdBreakpoint {
+                                        grid-auto-rows: 3rem;
+                                        grid-template-columns: repeat(3, minmax(0, 1fr));
+                                        gap: $spacing;
+                                    }
+                                    // *** Small Breakpoint ***
+                                    @include smBreakpoint {
+                                        grid-auto-rows: 2rem;
+                                        grid-template-columns: repeat(2, minmax(0, 1fr));
+                                        gap: $spacing;
+                                    }
                                     .tb-chip {
                                         @include tableChips;
+                                        // *** Large Breakpoint ***
+                                        @include lgBreakpoint {
+                                            font-size: $font-size;
+                                        }
                                         .tb-chips-w-x {
                                             @include tableChipsWithX;
                                         }
@@ -617,7 +653,6 @@
                                 &:focus~img,
                                 &:focus-within~img,
                                 &:focus-visible~img {
-                                    scale: 0;
                                     opacity: 0;
                                     transform: translateY(.6rem) translateX(-2.5rem);
                                     transition: 300ms ease-in-out;
@@ -625,7 +660,7 @@
                             }
                             img {
                                 position: absolute;
-                                width: 3rem;
+                                width: 2.5rem;
                                 right: 0;
                                 transform: translateY(.6rem) translateX(-2.5rem);
                                 transition: 200ms ease-in-out;
@@ -668,6 +703,7 @@
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
+                            gap: $spacing-medium;
                             h3 {
                                 font-size: $font-size-x-large;
                                 // *** Large Breakpoint ***
@@ -683,7 +719,12 @@
                                         @include inputField;
                                         // *** Large Breakpoint ***
                                         @include lgBreakpoint {
-                                            font-size: 1.5rem;
+                                            font-size: $font-size-medium;
+                                        }
+                                        // *** Small Breakpoint ***
+                                        @include smBreakpoint {
+                                            width: 100%;
+                                            font-size: $font-size-medium;
                                         }
                                         padding-left: 8rem;
                                         transition: 200ms ease-in-out;
@@ -693,27 +734,43 @@
                                         &:focus~img,
                                         &:focus-within~img,
                                         &:focus-visible~img {
-                                            scale: 0;
-                                            opacity: 0;
-                                            transform: translateY(.6rem) translateX(2rem);
+                                            // scale: 0;
+                                            opacity: .6;
                                             transition: 300ms ease-in-out;
+                                            transform: translateY(.8rem) translateX(1.4rem);
+                                            // *** Large Breakpoint ***
+                                            @include lgBreakpoint {
+                                                transform: translateY(.8rem) translateX(1.4rem);
+                                            }
+                                            // *** Small Breakpoint ***
+                                            @include smBreakpoint {
+                                                transform: translateY(.8rem) translateX(1rem);
+                                            }
                                         }
                                         &:focus,
                                         &:focus-within,
                                         &:focus-visible {
-                                            padding-left: 3.5rem;
+                                            padding-left: 5rem;
+                                            // *** Large Breakpoint ***
+                                            @include lgBreakpoint {
+                                                padding-left: 4rem;
+                                            }
+                                            // *** Small Breakpoint ***
+                                            @include smBreakpoint {
+                                                padding-left: 4rem;
+                                            }
                                         }
                                     }
                                     img {
-                                        width: 3rem;
+                                        width: 2.5rem;
                                         position: absolute;
                                         left: 0;
-                                        transform: translateY(.6rem) translateX(2rem);
+                                        transform: translateY(.8rem) translateX(2rem);
                                         transition: 200ms ease-in-out;
                                         // *** Large Breakpoint ***
                                         @include lgBreakpoint {
                                             width: 2rem;
-                                            transform: translateY(1rem) translateX(2rem);
+                                            transform: translateY(.8rem) translateX(2rem);
                                         }
                                     }
                                 }
@@ -725,6 +782,10 @@
                             gap: $spacing-large 0;
                             // * Table Container
                             .table-container {
+                                // *** Small Breakpoint ***
+                                @include smBreakpoint {
+                                    overflow: auto;
+                                }
                                 table {
                                     // **                         ** //
                                     // **** Table Header Styles **** //
