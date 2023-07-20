@@ -151,40 +151,40 @@
     }
 }
 
-// * CSS styles specific to small laptops
-@include breakpointMin(768px) {
-    .nav {
-        // background-color: rebeccapurple;
-        padding: 1.6rem 0;
-        img {
-            scale: .8;
-        }
-        .nav-links {
-            margin-top: 1.6rem;
-            img[data-dropdown-button],
-            img[no-data-dropdown] {
-                scale: .7;
-            }
-            .link {
-                padding: .8rem;
-            }
-            .link p {
-                margin-top: .6rem;
-                font-size: $font-size-small;
-            }
-        }
-        .nav-con-2 {
-            .nav-links {
-                margin-top: 3rem;
-            }
-        }
-    }
-    .profile-nav {
-        img {
-            scale: .8;
-        }
-    }
-}
+// // * CSS styles specific to small laptops
+// @include breakpointMin(768px) {
+//     .nav {
+//         // background-color: rebeccapurple;
+//         padding: 1.6rem 0;
+//         img {
+//             scale: .8;
+//         }
+//         .nav-links {
+//             margin-top: 1.6rem;
+//             img[data-dropdown-button],
+//             img[no-data-dropdown] {
+//                 scale: .7;
+//             }
+//             .link {
+//                 padding: .8rem;
+//             }
+//             .link p {
+//                 margin-top: .6rem;
+//                 font-size: $font-size-small;
+//             }
+//         }
+//         .nav-con-2 {
+//             .nav-links {
+//                 margin-top: 3rem;
+//             }
+//         }
+//     }
+//     .profile-nav {
+//         img {
+//             scale: .8;
+//         }
+//     }
+// }
 
 @include lgBreakpoint {
     .nav {

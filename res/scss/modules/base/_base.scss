@@ -490,3 +490,9 @@ table {
         @include inputField;
     }
 }
+
+.cancel-btn-wrapper {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: flex-end;
+}

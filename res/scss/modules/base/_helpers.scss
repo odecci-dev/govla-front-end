@@ -1,0 +1,161 @@
+
+.ui-datepicker {
+    background-color: $white;
+    // inset: 0;
+    margin: auto;
+    // height: clamp(100% - 26rem, 85%, 72vh);
+    // height: calc(100% - 30vh);
+    width: 30%;
+    right: 100%;
+    transform: translate(30rem, 0rem);
+    border-radius: 1.2rem;
+    box-shadow:  0 0 500rem $black;
+}
+
+.ui-datepicker-trigger {
+    @include primaryButton;
+    padding: 0.7rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    &::after {
+        content: 'Select Date';
+    }
+
+}
+
+.ui-datepicker-header {
+    &::after {
+        content: '';
+        display: block;
+        background-color: $blackTR2;
+        height: 1px;
+        width: 90%;
+        transform: translateX(2rem);
+    }
+    a.ui-corner-all {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        width: 2rem;
+        height: 2rem;
+        padding: 1.4rem;
+        margin: 0.5rem;
+        border: 1px solid $blackTR2;
+        border-radius: $circle;
+        transition: 0.3s all;
+        &:hover {
+            background-color: #ECEFF1;
+        }
+    }
+
+    a.ui-datepicker-prev {	
+        left: 0;	
+        background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48cGF0aCBmaWxsPSIjNDI0NzcwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjI4OCA2LjI5NkwzLjIwMiAyLjIxYS43MS43MSAwIDAgMSAuMDA3LS45OTljLjI4LS4yOC43MjUtLjI4Ljk5OS0uMDA3TDguODAzIDUuOGEuNjk1LjY5NSAwIDAgMSAuMjAyLjQ5Ni42OTUuNjk1IDAgMCAxLS4yMDIuNDk3bC00LjU5NSA0LjU5NWEuNzA0LjcwNCAwIDAgMS0xLS4wMDcuNzEuNzEgMCAwIDEtLjAwNi0uOTk5bDQuMDg2LTQuMDg2eiIvPjwvc3ZnPg==");
+        background-repeat: no-repeat;
+        background-size: 1.5rem;
+        background-position: 60%;
+        transform: translate(1rem, 0.6rem) rotate(180deg);
+
+    }
+
+    a.ui-datepicker-next {
+        right: 0;
+        background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48cGF0aCBmaWxsPSIjNDI0NzcwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjI4OCA2LjI5NkwzLjIwMiAyLjIxYS43MS43MSAwIDAgMSAuMDA3LS45OTljLjI4LS4yOC43MjUtLjI4Ljk5OS0uMDA3TDguODAzIDUuOGEuNjk1LjY5NSAwIDAgMSAuMjAyLjQ5Ni42OTUuNjk1IDAgMCAxLS4yMDIuNDk3bC00LjU5NSA0LjU5NWEuNzA0LjcwNCAwIDAgMS0xLS4wMDcuNzEuNzEgMCAwIDEtLjAwNi0uOTk5bDQuMDg2LTQuMDg2eiIvPjwvc3ZnPg==');
+        background-repeat: no-repeat;
+        background-size: 1.5rem;
+        background-position: 60%;
+        transform: translate(-1rem, 0.6rem);
+    }
+
+    a > span {
+        display: none;
+    }
+
+    .ui-datepicker-title {
+        text-align: center;
+        line-height: 2rem;
+        margin-bottom: 0.25rem;
+        font-size: 2rem;
+        font-weight: $font-weight-bold;
+        padding: 1.5rem;
+    }
+}
+
+
+    
+
+.ui-datepicker-calendar {
+    thead {
+        tr:first-of-type::after {
+            backdrop-filter: unset;
+            box-shadow: none;
+        }
+        th {
+            padding: 0.25rem 0;
+            text-align: center;
+            padding-top: $spacing-large;
+            padding-bottom: $spacing;
+            font-size: $font-size-small;
+            font-weight: $font-weight-bold;
+            color: $blackTR;
+        }
+    } 
+    tbody {
+        tr:first-of-type::after {
+            backdrop-filter: unset;
+            box-shadow: none;
+        }
+        tr:nth-of-type(odd) {
+            background-color: $white;
+        }
+        tr:hover {
+            cursor: pointer;
+            background-color: $white;
+            transition: 300ms ease-out;
+        }
+        tr {
+            border-radius: 0;
+        }
+        td {
+            width: 14.3%;
+            text-align: center;
+            a {
+            display: block;
+            border-radius: 0.25rem;
+            line-height: 2rem;
+            transition: 0.3s all;
+            color: $black;
+            border-radius: 1.2rem;
+            font-size: 1.3rem;
+            font-weight: $font-weight-bold;
+            padding: $spacing;
+            margin: .5rem; 
+            }
+            a:hover {	
+                background-color: $primary;
+                color: $white;
+            }
+            a.ui-state-active {
+                background-color: $primary;
+                color: white;
+            }
+        }
+    } 
+}
+
+.ui-datepicker-buttonpane {
+    display: flex;
+    align-items: center;
+    gap: 0 1rem;
+    padding: 2rem 2rem;
+    .ui-datepicker-current {
+        @include primaryButton;
+        width: 100%;
+    }
+    .ui-datepicker-close {
+        @include primaryButton;
+        width: 100%
+    }
+}

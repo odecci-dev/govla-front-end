@@ -699,3 +699,8 @@ Second Commit:
 
 Third Commit:
 • Nav: Updated responsive layout
+
+July 20, 2023 (Thursday)
+First Commit:
+• Holiday Module: Implemented the Calendar
+- Imported jQuery and jQuery UI for Calendar

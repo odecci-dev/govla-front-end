@@ -9,7 +9,6 @@
     .m-con-1 {
         display: flex;
         flex-direction: column;
-        height: calc(100% - 74%);
         padding: $spacing-4x-large $spacing-4x-large $spacing-2x-large $spacing-4x-large;
         h2 {
             font-size: $font-size-x-large;
@@ -156,14 +155,17 @@
     }
     // * Field Officer and Loan Type
     // * Container 2: Table and Pagination
+    .m-con-2.min-height {
+        height: clamp(100% - 22rem, 53%, 66vh);
+    }
     .m-con-2 {
-        height: calc(100% - 26%);
-        padding: $spacing-4x-large $spacing-4x-large $spacing-2x-large $spacing-4x-large;
+        height: clamp(100% - 26rem, 53%, 66vh);
+        padding: 0 $spacing-4x-large $spacing-2x-large $spacing-4x-large;
         // * Table Container
         .table-container {
             display: flex;
             flex-direction: column;
-            height: calc(100% - 10%);
+            height: 100%;
             border-radius: $border-radius-large;
             box-shadow: $box-shadow;
             table {
@@ -1258,49 +1260,13 @@
                         display: flex;
                         flex-direction: column;
                         span {
-                            margin-bottom: 1rem;
-                            // font-weight: $font-weight-bold;
+                            // margin-bottom: 1rem;
+                            font-weight: $font-weight;
                             font-size: $font-size-large;
                         }
                         // * Input Global Styles
                         input {
                             @include inputField;
-                        }
-                        // * Select Input Global Styles
-                        .select-box {
-                            position: relative;
-                            select {
-                                @include selectField;
-                                width: 100%;
-                                option {
-                                    position: absolute;
-                                    outline: none;
-                                    border: none;
-                                    background-color: $secondary-bg;
-                                }
-                            }
-                        }
-                        // * Select Input Arrow
-                        .select-box::before {
-                            content: '';
-                            position: absolute;
-                            width: 15px;
-                            height: 15px;
-                            z-index: 2;
-                            right: 0;
-                            transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
-                            // border: 2px solid $black;
-                            border-bottom: 2px solid $black;
-                            border-left: 2px solid $black;
-                            transition: ease-out 300ms;
-                            pointer-events: none;
-                        }
-                        .select-box:focus-within::before {
-                            border-top: 2px solid $black;
-                            border-right: 2px solid $black;
-                            border-bottom: none;
-                            border-left: none;
-                            transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
                         }
                         // * Radio Buttons
                         .box-wrap {
@@ -1360,7 +1326,7 @@
                         text-decoration: underline;
                     }
                 }
-                // * Rowspan 3: Loan Type Name
+                // * Rowspan 3: Holiday Name
                 .rowspan:nth-of-type(3) {
                     // @include rowspan3;
                 }
@@ -1370,26 +1336,51 @@
                     grid-template-columns: minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
                     gap: 0 $spacing-2x-large;
                     .input-wrapper {
-                        input[type='date'] {
-                            // @include primaryButton;
-                            // position: relative;
-                            // pointer-events: all;
-                            // &::-webkit-inner-spin-button {
-                            //     display: none;
-                            // }
-                            // &::-webkit-calendar-picker-indicator {
-                            //     // background-color: white;
-                            //     // pointer-events: none;
-                            // }
-                            // &::-webkit-datetime-edit-text {
-                            //     visibility: hidden;
-                            // }
-                            // &::before {
-                            //     content: url('../assets/icons/calendar.svg');
-                            //     pointer-events: all;
-                            //     position: absolute;
-                            // }
+                        .datepicker-toggle {
+                            display: none;
+                            pointer-events: none;
+                            @include primaryButton;
+                            // display: inline-block;
+                            position: relative;
+                            padding: 1.2rem 0;
+                            .datepicker-toggle-button {
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: $spacing-large;
+                                span {
+                                    font-size: $font-size-medium;
+                                    font-weight: $font-weight-bold;
+                                }
+                            }
+                            .datepicker-input {
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                opacity: 0;
+                                cursor: pointer;
+                                box-sizing: border-box;
+                                &::-webkit-calendar-picker-indicator {
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    margin: 0;
+                                    padding: 0;
+                                    cursor: pointer;
+                                }
+                            }
                         }
+                        
+                        //     
                     }
                 }
                 // * Rowspan 5: Savings, Insurance, and Loan Amount
@@ -1406,7 +1397,7 @@
                                 display: flex;
                                 flex-direction: row-reverse;
                                 align-items: center;
-                                gap: 0 $spacing-large;
+                                // gap: 0 $spacing-large;   
                                 span {
                                     font-size: $font-size;
                                     font-weight: $font-weight-bold;

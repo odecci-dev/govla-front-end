@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gold One Victory Lending App</title>
     <link rel="stylesheet" href="../../res/css/app.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js" integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
 </head>
@@ -445,7 +447,7 @@
 
             </dialog>
 
-            <!-- * New Loan Types Form -->
+            <!-- * New Holiday Form -->
             <form action="" class="na-form-con" autocomplete="off">
 
                 <!-- * Container Wrapper: Add New Holiday -->
@@ -517,25 +519,26 @@
                                     <!-- * Pick a date -->
                                     <div class="input-wrapper">
                                         <span>Pick a date</span>
-                                        <input autocomplete="off" type="date" id="formHolidayDate" name="formHolidayDate">
+                                        <input type="button" class="datepicker-toggle" id="datepicker">
+                                        </input>
                                     </div>
 
                                     <!-- * Month -->
                                     <div class="input-wrapper">
                                         <span>Month:</span>
-                                        <input autocomplete="off" type="text" id="formHolidayMonth" name="formHolidayMonth">
+                                        <input autocomplete="off" type="text" id="formHolidayMonth" name="formHolidayMonth" disabled>
                                     </div>
 
                                     <!-- * Day -->
                                     <div class="input-wrapper">
                                         <span>Day:</span>
-                                        <input autocomplete="off" type="text" id="formHolidayDay" name="formHolidayDay">
+                                        <input autocomplete="off" type="text" id="formHolidayDay" name="formHolidayDay" disabled>
                                     </div>
 
                                     <!-- * Year -->
                                     <div class="input-wrapper">
                                         <span>Year:</span>
-                                        <input autocomplete="off" type="text" id="formHolidayYear" name="formHolidayYear">
+                                        <input autocomplete="off" type="text" id="formHolidayYear" name="formHolidayYear" disabled>
                                     </div>
 
                                 </div>
@@ -583,6 +586,12 @@
 
                         </div>
 
+                        <div class="cancel-btn-wrapper">
+                            <a href="../maintenance/maintenance-holidays.html">
+                                <button type="button" class="transparentButtonUnderline">Cancel</button>
+                            </a>
+                        </div>
+
                     </div>
 
                 </div>
@@ -596,6 +605,7 @@
     <script src="../../res/js/app.js" defer></script>
     <script src="../../res/js/components/links.js"></script>
     <script src="../../res/js/components/nav.js"></script>
+    <script src="../../res/js/components/jquery.js"></script>
 
 </body>
 
