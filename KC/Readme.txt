@@ -704,3 +704,6 @@ July 20, 2023 (Thursday)
 First Commit:
 • Holiday Module: Implemented the Calendar
 - Imported jQuery and jQuery UI for Calendar
+
+Second Commit:
+• Holiday Module: Made the Calendar Responsive
