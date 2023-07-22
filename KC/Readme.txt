@@ -707,3 +707,12 @@ First Commit:
 
 Second Commit:
 • Holiday Module: Made the Calendar Responsive
+
+July 21, 2023 (Friday)
+First Commit:
+• Holiday Module: Updated the Calendar
+
+July 22, 2023 (Saturday)
+First Commit:
+• Application Module: Updated Business Information
+- Fixed table layout for business information

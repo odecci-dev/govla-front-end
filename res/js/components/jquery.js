@@ -4,18 +4,32 @@
 $( () => {
 	$( "#datepicker" ).datepicker({	
 		showButtonPanel: true,
-		altField: "#formHolidayMonth",
+		altField: "#formHolidayMonth, #formHolidayDay, #formHolidayYear",
     	altFormat: "DD, d MM, yy",
 		buttonImage: "/res/assets/icons/calendar.svg",
 		buttonText: "Select Date",
 		showOn: "both",
 		currentText: "Clear",
-		
 	});
-	$(".ui-datepicker-trigger").datepicker({
-		appendText: "Select Date",
+	// $(".ui-datepicker-trigger").datepicker({
+		// appendText: "Select Date",
+	// })
 
-	})
-	// $( "#alttext" ).addClass('primaryButton');
+	// $("#formHolidayMonth").datepicker({
+		// altField: "#formHolidayMonth",
+		// altFormat: "MM",
+		// appendText: "Select Date",
+
+	// });
+
+	// $("#datepicker").datepicker({
+	// 	altField: "#formHolidayDay",
+	// 	altFormat: "DD",
+	// });
+
+	// $("#datepicker").datepicker({
+	// 	altField: "#formHolidayYear",
+	// 	altFormat: "yy",
+	// });
 } );
 

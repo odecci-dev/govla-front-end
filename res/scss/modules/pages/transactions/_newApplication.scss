@@ -762,9 +762,12 @@
             width: 100%;
             padding: 2rem;
             .small-con-4 {
-                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: $spacing-2x-large 0px;
+                // height: 100%;
                 width: 100%;
-                @include smallContainerGrid4;
+                // @include smallContainerGrid4;
                 @include containerDefault2;
                 padding: 3rem 4rem 3rem 4rem;
                 .rowspan {
@@ -809,6 +812,7 @@
                 }
                 // * Rowspan Header
                 .rowspan:first-of-type {
+                    margin-bottom: 4rem;
                     h2 {
                         font-size: $font-size-x-large;
                     }
@@ -835,9 +839,7 @@
                 }
                 // * Rowspan 5: Add Business Table
                 .rowspan:nth-of-type(5) {
-                    @include smallcon4Rowspan5;
-                    // @include custom-scroll;
-                    // padding: 2rem;
+                    height: 25rem;
                     border-radius: $border-radius-medium;
                     table {
                         // border-radius: $border-radius-medium;

@@ -1365,6 +1365,12 @@ body {
     transform: translate(35rem, -25rem);
   }
 }
+@media (max-width: 1366px) {
+  .ui-datepicker {
+    width: 30%;
+    transform: translate(32rem, 10rem);
+  }
+}
 @media (max-width: 1024px) {
   .ui-datepicker {
     width: 40%;
@@ -7117,14 +7123,10 @@ body {
   padding: 2rem;
 }
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-auto-flow: row dense;
-  grid-auto-columns: minmax(0, 1fr);
-  grid-auto-rows: minmax(0, 1fr);
-  grid-template-rows: minmax(0, 0.14fr) repeat(2, minmax(0, 0.26fr)) minmax(0, 0.14fr) minmax(0, 0.8fr) minmax(0, 0.2fr);
+  display: flex;
+  flex-direction: column;
   gap: 2rem 0px;
+  width: 100%;
   border-radius: 1.5rem;
   background-color: #FFFFFF;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -7213,6 +7215,9 @@ body {
   visibility: visible;
   opacity: 1;
 }
+.main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:first-of-type {
+  margin-bottom: 4rem;
+}
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:first-of-type h2 {
   font-size: 2.5rem;
 }
@@ -7260,12 +7265,7 @@ body {
   margin-right: 1.5rem;
 }
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) {
-  display: grid;
-  grid-auto-flow: row dense;
-  grid-auto-columns: minmax(0, 1fr);
-  grid-auto-rows: minmax(0, 1fr);
-  grid-template-columns: minmax(0, 1fr);
-  gap: 0px 2rem;
+  height: 25rem;
   border-radius: 1rem;
 }
 .main-dashboard .na-form-con .nm-container-5 .small-con-4 .rowspan:nth-of-type(5) table {

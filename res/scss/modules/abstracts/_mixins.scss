@@ -843,8 +843,9 @@
 
 // * Small Container Grid 4
 @mixin smallContainerGrid4 {
-    @include displayGrid;
-    grid-template-rows: minmax(0, 0.14fr) repeat(2, minmax(0, 0.26fr)) minmax(0, 0.14fr) minmax(0, 0.8fr) minmax(0, 0.2fr);
+    // @include displayGrid;
+    display: grid;
+    grid-template-rows:minmax(0, 0.8fr) repeat(2, minmax(0, 1fr)) minmax(0, 0.6fr) minmax(0, 2.6fr) minmax(0, 0.6fr);
     gap: $spacing-2x-large 0px;
 }
 

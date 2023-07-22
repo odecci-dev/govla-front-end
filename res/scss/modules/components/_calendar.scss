@@ -15,6 +15,10 @@
         width: 30%;
         transform: translate(35rem, -25rem);
     }
+    @include breakpointMax(map-get($breakpoints, "lgBreakpoint")) {
+        width: 30%;
+        transform: translate(32rem, 10rem);
+    }
     @include breakpointMax(map-get($breakpoints, "mdBreakpoint")) {
         width: 40%;
         transform: translate(18rem, -25rem);
