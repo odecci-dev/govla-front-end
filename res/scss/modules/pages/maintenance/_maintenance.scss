@@ -905,12 +905,15 @@
         // * Container Wrapper
         .container-wrapper {
             @include containerDefault2;
-            padding: 5rem 4rem 2rem 4rem;
+            padding: 5rem 4rem;
             // * Big Container 
             .big-con {
                 height: 100%;
                 width: 100%;
-                @include bigContainerGrid3;
+                // @include bigContainerGrid3;
+                display: grid;
+                grid-template-rows: repeat(2, minmax(0, 0.4fr)) minmax(0, 0.6fr) minmax(0, 1fr) repeat(0, minmax(0, 0.6fr));
+                gap: $spacing-3x-large 0px;
                 // ** Rowspan Global Styles
                 .rowspan {
                     min-height: 0;
@@ -928,42 +931,6 @@
                         // * Input Global Styles
                         input {
                             @include inputField;
-                        }
-                        // * Select Input Global Styles
-                        .select-box {
-                            position: relative;
-                            select {
-                                @include selectField;
-                                width: 100%;
-                                option {
-                                    position: absolute;
-                                    outline: none;
-                                    border: none;
-                                    background-color: $secondary-bg;
-                                }
-                            }
-                        }
-                        // * Select Input Arrow
-                        .select-box::before {
-                            content: '';
-                            position: absolute;
-                            width: 15px;
-                            height: 15px;
-                            z-index: 2;
-                            right: 0;
-                            transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
-                            // border: 2px solid $black;
-                            border-bottom: 2px solid $black;
-                            border-left: 2px solid $black;
-                            transition: ease-out 300ms;
-                            pointer-events: none;
-                        }
-                        .select-box:focus-within::before {
-                            border-top: 2px solid $black;
-                            border-right: 2px solid $black;
-                            border-bottom: none;
-                            border-left: none;
-                            transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
                         }
                         // * Radio Buttons
                         .box-wrap {
@@ -993,6 +960,7 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    padding-bottom: $spacing-2x-large;
                     h2 {
                         font-size: $font-size-x-large;
                     }
@@ -1033,6 +1001,7 @@
                         display: flex;
                         flex-direction: column;
                         gap: 2rem;
+                        
                         .input-inner-wrapper {
                             display: flex;
                             flex-direction: column;
@@ -1052,25 +1021,92 @@
                                     font-size: calc($font-size-large + 0.2rem);
                                     text-align: center;
                                 }
+                                .input-inner-select-wrapper {
+                                    input {
+                                        border-top-left-radius: unset;
+                                        border-bottom-left-radius: unset;
+                                    }
+                                    display: flex;
+                                    @include inputField;
+                                    padding: 0;
+                                    .select-box {
+                                        .selected {
+                                            border-top-right-radius: unset;
+                                            border-bottom-right-radius: unset;
+                                        }
+                                        // border-bottom-right-radius: 0;
+                                        width: 100%;
+                                        h4 {
+                                            font-weight: $font-weight;
+                                        }
+                                    }
+                                }
+                                
                             }
                         }
                     }
                 }
-                // * Rowspan 5: Savings, Insurance, and Loan Amount
+                // * Rowspan 5: Savings, Loan Insurance, and Life Insurance
                 .rowspan:nth-of-type(5) {
                     display: grid;
-                    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+                    grid-template-columns: minmax(0, 1fr) minmax(0, 1.8fr) minmax(0, 1.8fr);
                     gap: $spacing-2x-large;
-                    .input-inner-wrapper-2 {
-                        display: grid;
-                        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                    
+                    .input-wrapper {
+                        display: flex;
+                        flex-direction: column;
                         gap: $spacing-2x-large;
+                        span {
+                            font-weight: $font-weight;
+                        }
+                        .input-inner-wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            gap: $spacing-2x-large;
+                        }
+                        .input-inner-select-wrapper {
+                            input {
+                                border-top-left-radius: unset;
+                                border-bottom-left-radius: unset;
+                            }
+                            display: flex;
+                            @include inputField;
+                            padding: 0;
+                            .select-box {
+                                .selected {
+                                    border-top-right-radius: unset;
+                                    border-bottom-right-radius: unset;
+                                }
+                                // border-bottom-right-radius: 0;
+                                width: 100%;
+                                h4 {
+                                    font-weight: $font-weight;
+                                }
+                            }
+                        }
+                    }
+                }
+                // * Rowspan 6: Loan Amount
+                .rowspan:nth-of-type(6) {
+                    display: grid;
+                    grid-template-columns: repeat(6, (minmax(0, 1fr)));
+                    .input-wrapper{
+                        gap: $spacing-2x-large;
+                        // display: flex; 
+                        // flex-direction: column;
+                        span {
+                            font-weight: $font-weight;
+                        }
+                        .input-inner-wrapper-2 {
+                            display: flex;
+                            gap: $spacing-2x-large;
+                        }
                     }
                 }
             }
         }
     }
-    // * New Loan Type Container 1
+    // * Terms Of Payment Container 
     .top-container-2 {
         width: 100%;
         padding: 2rem 2rem;
@@ -1083,6 +1119,7 @@
                 height: 100%;
                 width: 100%;
                 @include bigContainerGrid4;
+                grid-template-rows: repeat(5, minmax(0, 0.6fr)) minmax(0, 2fr);
                 // ** Rowspan Global Styles
                 .rowspan {
                     min-height: 0;
@@ -1094,48 +1131,12 @@
                         flex-direction: column;
                         span {
                             margin-bottom: 1rem;
-                            // font-weight: $font-weight-bold;
+                            font-weight: $font-weight;
                             font-size: $font-size-large;
                         }
                         // * Input Global Styles
                         input {
                             @include inputField;
-                        }
-                        // * Select Input Global Styles
-                        .select-box {
-                            position: relative;
-                            select {
-                                @include selectField;
-                                width: 100%;
-                                option {
-                                    position: absolute;
-                                    outline: none;
-                                    border: none;
-                                    background-color: $secondary-bg;
-                                }
-                            }
-                        }
-                        // * Select Input Arrow
-                        .select-box::before {
-                            content: '';
-                            position: absolute;
-                            width: 15px;
-                            height: 15px;
-                            z-index: 2;
-                            right: 0;
-                            transform: translateY(1rem) translateX(-1.5rem) rotate(-45deg);
-                            // border: 2px solid $black;
-                            border-bottom: 2px solid $black;
-                            border-left: 2px solid $black;
-                            transition: ease-out 300ms;
-                            pointer-events: none;
-                        }
-                        .select-box:focus-within::before {
-                            border-top: 2px solid $black;
-                            border-right: 2px solid $black;
-                            border-bottom: none;
-                            border-left: none;
-                            transform: translateY(1.3rem) translateX(-1.5rem) rotate(-45deg);
                         }
                         // * Radio Buttons
                         .box-wrap {
@@ -1206,21 +1207,52 @@
                     display: grid;
                     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
                     gap: $spacing-2x-large;
+                    // .selected {
+                    //     color: $font-accent;
+                    // }
+                    .input-inner-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        gap: $spacing-medium 0;
+                    }
+                    .input-inner-select-wrapper {
+                        display: flex;
+                        @include inputField;
+                        padding: 0;
+                        input {
+                            width: 100%;
+                            border-top-left-radius: unset;
+                            border-bottom-left-radius: unset;
+                        }
+                        
+                        .select-box {
+                            width: 100%;
+                            .selected {
+                                border-top-right-radius: unset;
+                                border-bottom-right-radius: unset;
+                            }
+                            // border-bottom-right-radius: 0;
+                            h4 {
+                                font-weight: $font-weight;
+                            }
+                        }
+                    }
                 }
-                // * Rowspan 5: Savings, Insurance, and Loan Amount
+                // * Rowspan 5: Add to list Button
                 .rowspan:nth-of-type(5) {
                     display: grid;
                     align-items: center;
                 }
-                // * Rowspan 5: Savings, Insurance, and Loan Amount
+                // * Rowspan 6: Terms Of Payment Table
                 .rowspan:nth-of-type(6) {
                     height: 100%;
+                    
                     .m-con-2 {
-                        height: 100%;
                         padding: 0;
+                        height: 100%;
                         .table-container {
+                            height: clamp(30rem, 30rem, 60rem);
                             border-spacing: 0 100rem;
-                            height: 100%;
                             tr {
                                 th:nth-of-type(6) {
                                     text-align: center;
@@ -1229,13 +1261,11 @@
                         }
                     }
                 }
+                
             }
         }
     }
-    // // * New Loan Type Container 1
-    // .na-container-wrapper-2:has(.nh-con) {
-    //     height: 100%;
-    // }
+    // * New Holiday Container 
     .nh-con {
         height: 100%;
         width: 100%;

@@ -613,7 +613,9 @@
     box-shadow: inset $box-shadow;
     transition: opacity 100ms ease-in-out;
     &:hover {
-        opacity: .8;
+        filter: brightness(101.5%);
+        -webkit-filter: brightness(101.5%);
+        -moz-filter: brightness(101.5%);
     }
 }
 
@@ -786,7 +788,7 @@
 // * Big Container 3
 @mixin bigContainerGrid3 {
     @include displayGrid;
-    grid-template-rows: minmax(0, 0.4fr) minmax(0, 0.4fr) minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: repeat(2, minmax(0, 0.4fr)) minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 1fr);
     gap: $spacing-2x-large 0px;
 }
 

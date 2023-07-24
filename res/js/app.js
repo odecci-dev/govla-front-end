@@ -323,3 +323,10 @@ viewApplications.forEach((application) => {
         window.location = url
     })
 })
+
+// const selectBoxZindex = document.querySelectorAll('.options-container')
+// selectBoxZindex.forEach((selectBox) => {
+//     if (selectBox.matches(".active")) {
+//         selectBox.style.zIndex = '98'
+//     }
+// })

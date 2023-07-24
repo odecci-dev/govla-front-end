@@ -722,4 +722,9 @@ First Commit:
 • Holiday Module: Completed the Module
 
 Second Commit:
-• Loan Types Module: implemented Checkbox Function
+• Loan Types Module: Implemented Checkbox Function
+
+Third Commit:
+• Loan Types Module: Finished the Layout
+- Add new loan types
+***TODO: Fix Bug in Dropdowns in add loan types page

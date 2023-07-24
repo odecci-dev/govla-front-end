@@ -522,7 +522,38 @@
                                                 <span>Loan Amount + Interest</span>
                                                 <span>&lt;</span>
                                                 <input autocomplete="off" type="number" id="conNum" name="conNum" placeholder="Value">
-                                                <input autocomplete="off" type="number" id="conNum" name="conNum" placeholder="Amount">
+                                                <div class="input-inner-select-wrapper">
+                                                    <div class="select-box">
+
+                                                        <div class="options-container" data-option-con1>
+            
+                                                            <div class="option" data-option-item1>
+            
+                                                                <input type="radio" class="radio" name="category" value="Percent"/>
+                                                                <label for="Percent">
+                                                                    <h4>Percent</h4>
+                                                                </label>
+            
+                                                            </div>
+            
+                                                            <div class="option" data-option-item1>
+            
+                                                                <input type="radio" class="radio" name="category" value="Fixed"/>
+                                                                <label for="Fixed">
+                                                                    <h4>Fixed</h4>
+                                                                </label>
+            
+                                                            </div>
+            
+                                                        </div>
+            
+                                                        <div class="selected" data-option-select1>
+                                                            <!-- Select Formula -->
+                                                        </div>
+            
+                                                    </div>
+                                                    <input autocomplete="off" type="number" id="conNum" name="conNum" placeholder="Amount">
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="input-inner-wrapper">
@@ -530,14 +561,45 @@
                                                 <span>Loan Amount + Interest</span>
                                                 <span>&gt;=</span>
                                                 <input autocomplete="off" type="number" id="conNum" name="conNum" placeholder="Value">
-                                                <input autocomplete="off" type="number" id="conNum" name="conNum" placeholder="Amount">
+                                                <div class="input-inner-select-wrapper">
+                                                    <div class="select-box">
+
+                                                        <div class="options-container" data-option-con2>
+            
+                                                            <div class="option" data-option-item2>
+            
+                                                                <input type="radio" class="radio" name="category" value="Percent"/>
+                                                                <label for="Percent">
+                                                                    <h4>Percent</h4>
+                                                                </label>
+            
+                                                            </div>
+            
+                                                            <div class="option" data-option-item2>
+            
+                                                                <input type="radio" class="radio" name="category" value="Fixed"/>
+                                                                <label for="Fixed">
+                                                                    <h4>Fixed</h4>
+                                                                </label>
+            
+                                                            </div>
+            
+                                                        </div>
+            
+                                                        <div class="selected" data-option-select2>
+                                                            <!-- Select Formula -->
+                                                        </div>
+            
+                                                    </div>
+                                                    <input autocomplete="off" type="number" id="conNum" name="conNum" placeholder="Amount">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
 
                                 </div>
 
-                                <!-- * Rowspan 5: Savings, Insurance, and Loan Amount -->
+                                <!-- * Rowspan 5: Savings, Loan Insurance, and Life Insurance -->
                                 <div class="rowspan">
 
                                     <!-- * Savings -->
@@ -546,11 +608,88 @@
                                         <input autocomplete="off" type="text" id="nltSavings" name="nltSavings">
                                     </div>
 
-                                    <!-- * Insurance -->
+                                    <!-- * Loan Insurance -->
                                     <div class="input-wrapper">
-                                        <span>Insurance</span>
-                                        <input autocomplete="off" type="text" id="nltInsurance" name="nltInsurance">
+                                        <div class="input-inner-wrapper">
+                                            <span>Loan Insurance</span>
+                                            <div class="input-inner-select-wrapper">
+                                                <div class="select-box">
+
+                                                    <div class="options-container" data-option-con3>
+            
+                                                        <div class="option" data-option-item3>
+            
+                                                            <input type="radio" class="radio" name="category" value="Percent"/>
+                                                            <label for="Percent">
+                                                                    <h4>Percent</h4>
+                                                            </label>
+            
+                                                        </div>
+            
+                                                        <div class="option" data-option-item3>
+            
+                                                                <input type="radio" class="radio" name="category" value="Fixed"/>
+                                                                <label for="Fixed">
+                                                                    <h4>Fixed</h4>
+                                                                </label>
+            
+                                                        </div>
+            
+                                                    </div>
+            
+                                                    <div class="selected" data-option-select3>
+                                                            <!-- Select Formula -->
+                                                    </div>
+            
+                                                </div>
+                                                <input autocomplete="off" type="number" id="conNum" name="conNum" placeholder="Amount">
+                                            </div>
+                                        </div>
                                     </div>
+
+                                    <!-- * Life Insurance -->
+                                    <div class="input-wrapper">
+                                        <div class="input-inner-wrapper">
+                                            <span>Life Insurance</span>
+                                            <div class="input-inner-select-wrapper">
+                                                <div class="select-box">
+
+                                                    <div class="options-container" data-option-con4>
+            
+                                                        <div class="option" data-option-item4>
+            
+                                                            <input type="radio" class="radio" name="category" value="Percent"/>
+                                                            <label for="Percent">
+                                                                    <h4>Percent</h4>
+                                                            </label>
+            
+                                                        </div>
+            
+                                                        <div class="option" data-option-item4>
+            
+                                                                <input type="radio" class="radio" name="category" value="Fixed"/>
+                                                                <label for="Fixed">
+                                                                    <h4>Fixed</h4>
+                                                                </label>
+            
+                                                        </div>
+            
+                                                    </div>
+            
+                                                    <div class="selected" data-option-select4>
+                                                            <!-- Select Formula -->
+                                                    </div>
+            
+                                                </div>
+                                                <input autocomplete="off" type="number" id="conNum" name="conNum" placeholder="Amount">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- * Rowspan 6: Loan Amount -->
+                                <div class="rowspan">
 
                                     <!-- * Loan Amount -->
                                     <div class="input-wrapper">
@@ -580,7 +719,7 @@
 
                                 <!-- * Form Header -->
 
-                                <!-- * Rowspan 1: Rowspan Header: Header and Buttons -->
+                                <!-- * Rowspan 1: Rowspan Header - Header -->
                                 <div class="rowspan">
 
                                     <!-- * Header Wrapper -->
@@ -610,7 +749,7 @@
 
                                 </div>
 
-                                <!-- * Rowspan 3: Name of terms -->
+                                <!-- * Rowspan 3: Name of terms and Days -->
                                 <div class="rowspan">
 
                                     <!-- * Name of terms -->
@@ -630,16 +769,77 @@
                                 <!-- * Rowspan 4: Interest Rate and Advance Payment Formula -->
                                 <div class="rowspan">
 
-                                    <!-- * Name of terms -->
+                                    <!-- * Advance Payment Formula -->
                                     <div class="input-wrapper">
-                                        <span>Interest Rate</span>
-                                        <input autocomplete="off" type="text" id="topNot" name="topNot">
+                                        <div class="input-inner-wrapper">
+                                            <span>Loan Insurance</span>
+                                            <div class="input-inner-select-wrapper">
+                                                <div class="select-box">
+
+                                                    <div class="options-container" data-option-con5>
+            
+                                                        <div class="option" data-option-item5>
+            
+                                                            <input type="radio" class="radio" name="category" value="Percent"/>
+                                                            <label for="Percent">
+                                                                    <h4>Percent</h4>
+                                                            </label>
+            
+                                                        </div>
+            
+                                                        <div class="option" data-option-item5>
+            
+                                                                <input type="radio" class="radio" name="category" value="Fixed"/>
+                                                                <label for="Fixed">
+                                                                    <h4>Fixed</h4>
+                                                                </label>
+            
+                                                        </div>
+            
+                                                    </div>
+            
+                                                    <div class="selected" data-option-select5>
+                                                            <!-- Select Formula -->
+                                                    </div>
+            
+                                                </div>
+                                                <input autocomplete="off" type="number" id="conNum" name="conNum" placeholder="Amount">
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <!-- * Days -->
+                                    <!-- * Advance Payment Formula -->
                                     <div class="input-wrapper">
                                         <span>Advance Payment Formula</span>
-                                        <input autocomplete="off" type="number" id="topDays" name="topDays">
+                                        <div class="select-box">
+
+                                            <div class="options-container" data-option-con6>
+
+                                                <div class="option" data-option-item6>
+
+                                                    <input type="radio" class="radio" name="category" value="(Loan Amount + Interest) / Days"/>
+                                                    <label for="(Loan Amount + Interest) / Days">
+                                                        <h4>(Loan Amount + Interest) / Days</h4>
+                                                    </label>
+
+                                                </div>
+
+                                                <div class="option" data-option-item6>
+
+                                                    <input type="radio" class="radio" name="category" value="((Loan Amount + Interest) / Days) x 2"/>
+                                                    <label for="((Loan Amount + Interest) / Days) x 2">
+                                                        <h4>((Loan Amount + Interest) / Days) x 2</h4>
+                                                    </label>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="selected" data-option-select6>
+                                                Select Formula
+                                            </div>
+
+                                        </div>
                                     </div>
 
                                 </div>
@@ -664,14 +864,14 @@
                                         <div class="table-container">
 
                                             <!-- * Terms Of Payment Table -->
-                                            <table>
+                                            <table id="termsOfPaymentTable">
 
                                                 <!-- * Table Header -->
                                                 <tr>
 
                                                     <!-- * Checkbox ALl-->
                                                     <th>
-                                                        <input type="checkbox" class="checkbox" id="allCheckbox" onchange="checkAll(this)">
+                                                        <input type="checkbox" class="checkbox" data-select-all-checkbox>
                                                     </th>
 
                                                     <!-- * Name -->
@@ -706,7 +906,7 @@
 
                                                     <!-- * Checkbox Opt -->
                                                     <td>
-                                                        <input type="checkbox" class="checkbox" id="checkbox" data-checkbox>
+                                                        <input type="checkbox" class="checkbox" data-select-checkbox>
                                                     </td>
 
                                                     <!-- * Name of terms -->
@@ -733,7 +933,7 @@
                                                     <td class="td-btns">
                                                         <div class="td-btn-wrapper">
                                                             <!-- <button class="a-btn-view">View</button> -->
-                                                            <button class="a-btn-trash">Trash</button>
+                                                            <button class="a-btn-trash-2">Trash</button>
                                                         </div>
                                                     </td>
 
@@ -743,7 +943,7 @@
 
                                                     <!-- * Checkbox Opt -->
                                                     <td>
-                                                        <input type="checkbox" class="checkbox" id="checkbox" data-checkbox>
+                                                        <input type="checkbox" class="checkbox" data-select-checkbox>
                                                     </td>
 
                                                     <!-- * Name of terms -->
@@ -770,7 +970,153 @@
                                                     <td class="td-btns">
                                                         <div class="td-btn-wrapper">
                                                             <!-- <button class="a-btn-view">View</button> -->
-                                                            <button class="a-btn-trash">Trash</button>
+                                                            <button class="a-btn-trash-2">Trash</button>
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <!-- * Checkbox Opt -->
+                                                    <td>
+                                                        <input type="checkbox" class="checkbox" data-select-checkbox>
+                                                    </td>
+
+                                                    <!-- * Name of terms -->
+                                                    <td>
+                                                        60 Days
+                                                    </td>
+
+                                                    <!-- * Interest Rate -->
+                                                    <td>
+                                                        18%
+                                                    </td>
+
+                                                    <!-- * Days -->
+                                                    <td>
+                                                        60
+                                                    </td>
+
+                                                    <!-- * Advance payment formula -->
+                                                    <td>
+                                                        (Loan Amount + Interest) / Days
+                                                    </td>
+
+                                                    <!-- * Action -->
+                                                    <td class="td-btns">
+                                                        <div class="td-btn-wrapper">
+                                                            <!-- <button class="a-btn-view">View</button> -->
+                                                            <button class="a-btn-trash-2">Trash</button>
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                    <!-- * Checkbox Opt -->
+                                                    <td>
+                                                        <input type="checkbox" class="checkbox" data-select-checkbox>
+                                                    </td>
+
+                                                    <!-- * Name of terms -->
+                                                    <td>
+                                                        90 Days
+                                                    </td>
+
+                                                    <!-- * Interest Rate -->
+                                                    <td>
+                                                        18%
+                                                    </td>
+
+                                                    <!-- * Days -->
+                                                    <td>
+                                                        90
+                                                    </td>
+
+                                                    <!-- * Advance payment formula -->
+                                                    <td>
+                                                        (Loan Amount + Interest) / Days
+                                                    </td>
+
+                                                    <!-- * Action -->
+                                                    <td class="td-btns">
+                                                        <div class="td-btn-wrapper">
+                                                            <!-- <button class="a-btn-view">View</button> -->
+                                                            <button class="a-btn-trash-2">Trash</button>
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <!-- * Checkbox Opt -->
+                                                    <td>
+                                                        <input type="checkbox" class="checkbox" data-select-checkbox>
+                                                    </td>
+
+                                                    <!-- * Name of terms -->
+                                                    <td>
+                                                        60 Days
+                                                    </td>
+
+                                                    <!-- * Interest Rate -->
+                                                    <td>
+                                                        18%
+                                                    </td>
+
+                                                    <!-- * Days -->
+                                                    <td>
+                                                        60
+                                                    </td>
+
+                                                    <!-- * Advance payment formula -->
+                                                    <td>
+                                                        (Loan Amount + Interest) / Days
+                                                    </td>
+
+                                                    <!-- * Action -->
+                                                    <td class="td-btns">
+                                                        <div class="td-btn-wrapper">
+                                                            <!-- <button class="a-btn-view">View</button> -->
+                                                            <button class="a-btn-trash-2">Trash</button>
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                    <!-- * Checkbox Opt -->
+                                                    <td>
+                                                        <input type="checkbox" class="checkbox" data-select-checkbox>
+                                                    </td>
+
+                                                    <!-- * Name of terms -->
+                                                    <td>
+                                                        90 Days
+                                                    </td>
+
+                                                    <!-- * Interest Rate -->
+                                                    <td>
+                                                        18%
+                                                    </td>
+
+                                                    <!-- * Days -->
+                                                    <td>
+                                                        90
+                                                    </td>
+
+                                                    <!-- * Advance payment formula -->
+                                                    <td>
+                                                        (Loan Amount + Interest) / Days
+                                                    </td>
+
+                                                    <!-- * Action -->
+                                                    <td class="td-btns">
+                                                        <div class="td-btn-wrapper">
+                                                            <!-- <button class="a-btn-view">View</button> -->
+                                                            <button class="a-btn-trash-2">Trash</button>
                                                         </div>
                                                     </td>
 
@@ -802,7 +1148,7 @@
     <script src="../../res/js/app.js" defer></script>
     <script src="../../res/js/components/links.js"></script>
     <script src="../../res/js/components/nav.js"></script>
-    <script src="../../res/js/components/newApplication.js" defer></script>
+    <script src="../../res/js/components/maintenance.js" defer></script>
 
 </body>
 

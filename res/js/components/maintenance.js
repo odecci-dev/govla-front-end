@@ -202,3 +202,138 @@ if (viewHolidayBtn) {
     })
 
 }
+
+
+// ** Select Dropdown 1 (Percentage & Fixed Toggle)
+const selectedOpt1 = document.querySelector('[data-option-select1]');
+
+
+const optionsContainer1 = document.querySelector('[data-option-con1]');
+const optionsList1 = document.querySelectorAll('[data-option-item1]');
+
+if (selectedOpt1) {
+
+    selectedOpt1.addEventListener("click", () => {
+        optionsContainer1.classList.toggle("active");
+    });
+
+    optionsList1.forEach(option => {
+        option.addEventListener("click", () => {
+            selectedOpt1.innerHTML = option.querySelector("label").innerHTML;
+            optionsContainer1.classList.remove("active");
+        });
+    });
+
+}
+
+// ** Select Dropdown 2 (Percentage & Fixed Toggle)
+const selectedOpt2 = document.querySelector('[data-option-select2]');
+
+
+const optionsContainer2 = document.querySelector('[data-option-con2]');
+const optionsList2 = document.querySelectorAll('[data-option-item2]');
+
+if (selectedOpt2) {
+
+    selectedOpt2.addEventListener("click", () => {
+        optionsContainer2.classList.toggle("active");
+    });
+
+    optionsList2.forEach(option => {
+        option.addEventListener("click", () => {
+            selectedOpt2.innerHTML = option.querySelector("label").innerHTML;
+            optionsContainer2.classList.remove("active");
+        });
+    });
+
+}
+
+// ** Select Dropdown 3 (Percentage & Fixed Toggle)
+const selectedOpt3 = document.querySelector('[data-option-select3]');
+
+
+const optionsContainer3 = document.querySelector('[data-option-con3]');
+const optionsList3 = document.querySelectorAll('[data-option-item3]');
+
+if (selectedOpt3) {
+
+    selectedOpt3.addEventListener("click", () => {
+        optionsContainer3.classList.toggle("active");
+    });
+
+    optionsList3.forEach(option => {
+        option.addEventListener("click", () => {
+            selectedOpt3.innerHTML = option.querySelector("label").innerHTML;
+            optionsContainer3.classList.remove("active");
+        });
+    });
+
+}
+
+// ** Select Dropdown 4 (Percentage & Fixed Toggle)
+const selectedOpt4 = document.querySelector('[data-option-select4]');
+
+
+const optionsContainer4 = document.querySelector('[data-option-con4]');
+const optionsList4 = document.querySelectorAll('[data-option-item4]');
+
+if (selectedOpt4) {
+
+    selectedOpt4.addEventListener("click", () => {
+        optionsContainer4.classList.toggle("active");
+    });
+
+    optionsList4.forEach(option => {
+        option.addEventListener("click", () => {
+            selectedOpt4.innerHTML = option.querySelector("label").innerHTML;
+            optionsContainer4.classList.remove("active");
+        });
+    });
+
+}
+
+
+// ** Select Dropdown 5 (Percentage & Fixed Toggle)
+const selectedOpt5 = document.querySelector('[data-option-select5]');
+
+
+const optionsContainer5 = document.querySelector('[data-option-con5]');
+const optionsList5 = document.querySelectorAll('[data-option-item5]');
+
+if (selectedOpt5) {
+
+    selectedOpt5.addEventListener("click", () => {
+        optionsContainer5.classList.toggle("active");
+    });
+
+    optionsList5.forEach(option => {
+        option.addEventListener("click", () => {
+            selectedOpt5.innerHTML = option.querySelector("label").innerHTML;
+            optionsContainer5.classList.remove("active");
+        });
+    });
+
+}
+
+
+// ** Select Dropdown 6 (Percentage & Fixed Toggle)
+const selectedOpt6 = document.querySelector('[data-option-select6]');
+
+
+const optionsContainer6 = document.querySelector('[data-option-con6]');
+const optionsList6 = document.querySelectorAll('[data-option-item6]');
+
+if (selectedOpt6) {
+
+    selectedOpt6.addEventListener("click", () => {
+        optionsContainer6.classList.toggle("active");
+    });
+
+    optionsList6.forEach(option => {
+        option.addEventListener("click", () => {
+            selectedOpt6.innerHTML = option.querySelector("label").innerHTML;
+            optionsContainer6.classList.remove("active");
+        });
+    });
+
+}
