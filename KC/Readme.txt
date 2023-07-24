@@ -720,3 +720,6 @@ First Commit:
 July 24, 2023 (Monday)
 First Commit:
 • Holiday Module: Completed the Module
+
+Second Commit:
+• Loan Types Module: implemented Checkbox Function
