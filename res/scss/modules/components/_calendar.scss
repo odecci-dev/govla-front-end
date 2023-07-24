@@ -11,21 +11,25 @@
     // bottom: -41%;
     // transform: translate(-75%, -75%);
     transform: translate(30rem, 10rem);
+    // @include breakpointMax(3840rem) {
+    //     width: 30%;
+    //     transform: translate(45rem, 25rem);
+    // }
     @include breakpointMax(map-get($breakpoints, "xlBreakpoint")) {
         width: 30%;
-        transform: translate(35rem, -25rem);
+        transform: translate(35rem, 15rem);
     }
     @include breakpointMax(map-get($breakpoints, "lgBreakpoint")) {
         width: 30%;
-        transform: translate(32rem, 10rem);
+        transform: translate(32rem, 15rem);
     }
     @include breakpointMax(map-get($breakpoints, "mdBreakpoint")) {
         width: 40%;
-        transform: translate(18rem, -25rem);
+        transform: translate(18rem, 15rem);
     }
     @include breakpointMax(map-get($breakpoints, "smBreakpoint")) {
         width: 50%;
-        transform: translate(6rem, -25rem);
+        transform: translate(6rem, 15rem);
     }
     // @include breakpointMin(map-get($breakpoints, "xsBreakpoint")) {
     //     // background-color: aqua;

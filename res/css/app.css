@@ -13,6 +13,7 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
+  font-family: "Inter", sans-serif;
 }
 
 /* <html> = the root */
@@ -1035,6 +1036,12 @@ table .td-btn-wrapper {
   justify-content: flex-end;
 }
 
+.calendarSelect {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #989393;
+}
+
 body {
   font-family: "Inter", sans-serif;
 }
@@ -1362,25 +1369,25 @@ body {
 @media (max-width: 1440px) {
   .ui-datepicker {
     width: 30%;
-    transform: translate(35rem, -25rem);
+    transform: translate(35rem, 15rem);
   }
 }
 @media (max-width: 1366px) {
   .ui-datepicker {
     width: 30%;
-    transform: translate(32rem, 10rem);
+    transform: translate(32rem, 15rem);
   }
 }
 @media (max-width: 1024px) {
   .ui-datepicker {
     width: 40%;
-    transform: translate(18rem, -25rem);
+    transform: translate(18rem, 15rem);
   }
 }
 @media (max-width: 768px) {
   .ui-datepicker {
     width: 50%;
-    transform: translate(6rem, -25rem);
+    transform: translate(6rem, 15rem);
   }
 }
 
@@ -4832,9 +4839,6 @@ body {
 }
 .main-dashboard .top-container-2 .container-wrapper .big-con .rowspan:nth-of-type(6) .m-con-2 .table-container tr th:nth-of-type(6) {
   text-align: center;
-}
-.main-dashboard .na-container-wrapper-2:has(.nh-con) {
-  height: 100%;
 }
 .main-dashboard .nh-con {
   height: 100%;

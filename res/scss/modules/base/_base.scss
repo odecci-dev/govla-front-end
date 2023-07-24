@@ -3,6 +3,7 @@
 *::after {
     box-sizing: border-box;
     margin: 0;
+    font-family: $font-family;
 }
 
 
@@ -495,4 +496,11 @@ table {
     padding: 2rem 0;
     display: flex;
     justify-content: flex-end;
+}
+
+.calendarSelect {
+    // font-family: $font-family;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    color: $font-accent-2;
 }

@@ -497,7 +497,7 @@
 
                             <!-- * Checkbox ALl-->
                             <th>
-                                <input type="checkbox" class="checkbox" id="allCheckbox" onchange="checkAll(this)">
+                                <input type="checkbox" class="checkbox" data-select-all-checkbox>
                             </th>
 
                             <!-- * Holiday Name -->
@@ -547,7 +547,7 @@
 
                             <!-- * Checkbox Opt -->
                             <td>
-                                <input type="checkbox" class="checkbox" id="checkbox" data-checkbox>
+                                <input type="checkbox" class="checkbox" data-select-checkbox>
                             </td>
 
                             <!-- * Holiday Name Data -->
@@ -578,13 +578,54 @@
                             <!-- * Table View and Trash Button -->
                             <td class="td-btns">
                                 <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-2">View</button>
+                                    <button class="a-btn-view-2" data-maintenance-view-holiday>View</button>
                                     <button class="a-btn-trash-2">Trash</button>
                                 </div>
                             </td>
 
                         </tr>
+                        <tr class="tr-loan-type">
 
+                            <!-- * Checkbox Opt -->
+                            <td>
+                                <input type="checkbox" class="checkbox" data-select-checkbox>
+                            </td>
+
+                            <!-- * Holiday Name Data -->
+                            <td id="holidayName">
+                                Early Christmas Party
+                            </td>
+
+                            <!-- * Month Data -->
+                            <td id="holidayMonth">
+                                November
+                            </td>
+
+                            <!-- * Day Data -->
+                            <td id="holiDay">
+                                7 (Sunday)
+                            </td>
+
+                            <!-- * Year Data-->
+                            <td id="holidayYear">
+                                2023
+                            </td>
+
+                            <!-- * Location/Area -->
+                            <td id="holidayLocation">
+                                Santol, Bulacan
+                            </td>
+
+                            <!-- * Table View and Trash Button -->
+                            <td class="td-btns">
+                                <div class="td-btn-wrapper">
+                                    <button class="a-btn-view-2" data-maintenance-view-holiday>View</button>
+                                    <button class="a-btn-trash-2">Trash</button>
+                                </div>
+                            </td>
+
+                        </tr>
+                       
                     </table>
 
                 </div>
@@ -613,6 +654,7 @@
     <script src="../../res/js/app.js" defer></script>
     <script src="../../res/js/components/links.js"></script>
     <script src="../../res/js/components/nav.js"></script>
+    <script src="../../res/js/components/maintenance.js"></script>
 
 </body>
 
