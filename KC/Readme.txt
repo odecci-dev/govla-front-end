@@ -728,3 +728,7 @@ Third Commit:
 • Loan Types Module: Finished the Layout
 - Add new loan types
 ***TODO: Fix Bug in Dropdowns in add loan types page
+
+July 24, 2023 (Tuesday)
+First Commit:
+• Loan Types Module: Fixed Bug in Dropdowns

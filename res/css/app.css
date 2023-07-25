@@ -4594,27 +4594,22 @@ body {
 }
 .main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan:nth-of-type(4) .input-wrapper .input-inner-wrapper .wrapper .input-inner-select-wrapper {
   display: flex;
-  -moz-appearance: textfield;
-  -webkit-appearance: none;
-  margin: 0;
+  position: relative;
+  text-align: left;
   font-size: 2rem;
   padding: 1rem 2rem;
   border: none;
   outline: none;
   background-color: #EBEBEB;
   border-radius: 1rem;
-  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: opacity 100ms ease-in-out;
+  /* Firefox */
+  /* Safari and Chrome */
+  appearance: none;
   padding: 0;
 }
 .main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan:nth-of-type(4) .input-wrapper .input-inner-wrapper .wrapper .input-inner-select-wrapper input {
   border-top-left-radius: unset;
   border-bottom-left-radius: unset;
-}
-.main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan:nth-of-type(4) .input-wrapper .input-inner-wrapper .wrapper .input-inner-select-wrapper:hover {
-  filter: brightness(101.5%);
-  -webkit-filter: brightness(101.5%);
-  -moz-filter: brightness(101.5%);
 }
 .main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan:nth-of-type(4) .input-wrapper .input-inner-wrapper .wrapper .input-inner-select-wrapper .select-box {
   width: 100%;
@@ -8634,7 +8629,7 @@ body {
   position: relative;
   text-align: left;
   font-size: 2rem;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem;
   border: none;
   outline: none;
   background-color: #EBEBEB;
@@ -8921,7 +8916,7 @@ body {
   position: relative;
   text-align: left;
   font-size: 2rem;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem;
   border: none;
   outline: none;
   background-color: #EBEBEB;

@@ -4,7 +4,6 @@ function navigationEvents() {
 
     // * Submenu Toggle
     document.addEventListener("click", e => {
-    
 
         // * When a link is clicked, toggle the submenu
         const isDropdownButton = e.target.matches("[data-dropdown-button]")

@@ -1027,7 +1027,7 @@
                                         border-bottom-left-radius: unset;
                                     }
                                     display: flex;
-                                    @include inputField;
+                                    @include selectField;
                                     padding: 0;
                                     .select-box {
                                         .selected {
