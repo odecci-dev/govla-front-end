@@ -773,8 +773,10 @@
 
 // * Big Container
 @mixin bigContainerGrid {
-    @include displayGrid;
-    grid-template-rows: repeat(8, minmax(0, 1fr));
+    // @include displayGrid;
+    // grid-template-rows: repeat(8, minmax(0, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: $spacing-2x-large 0px;
 }
 
@@ -831,15 +833,19 @@
 
 // * Small Container Grid 2
 @mixin smallContainerGrid2 {
-    @include displayGrid;
-    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    // @include displayGrid;
+    // grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: $spacing-2x-large 0px;
 }
 
 // * Small Container Grid 3
 @mixin smallContainerGrid3 {
-    @include displayGrid;
-    grid-template-rows: minmax(0, 0.6fr) minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 0.6fr) minmax(0, 1fr);
+    display: flex;
+    flex-direction: column;
+    // @include displayGrid;
+    // grid-template-rows: minmax(0, 0.6fr) minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 0.6fr) minmax(0, 1fr);
     gap: $spacing-2x-large 0px;
 }
 

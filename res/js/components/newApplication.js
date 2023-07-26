@@ -366,7 +366,7 @@ function addChild() {
     clonedChild.id = newId
 
     // * Hide the increment button
-    clonedChild.lastElementChild.children[0].style.visibility = 'hidden'
+    clonedChild.lastElementChild.lastElementChild.lastElementChild.children[0].style.visibility = 'hidden'
 
 
     // * Append the cloned element to the target container
@@ -404,11 +404,11 @@ function addChildSingle() {
     clonedChild.id = newId
 
     // * Hide the increment button
-    clonedChild.lastElementChild.children[0].style.visibility = 'hidden'
-
+    clonedChild.lastElementChild.lastElementChild.lastElementChild.children[0].style.visibility = 'hidden'
 
     // * Append the cloned element to the target container
     childContainer.appendChild(clonedChild)
+
 }
 
 // * Subtract Child (Single)
@@ -449,6 +449,7 @@ if (yesToggle) {
         })
 
     })
+
 }
 
 // ***** Assets and Properties ***** //
@@ -609,7 +610,7 @@ function addAppliances() {
     clonedChild.id = newId
 
     // * Hide the increment button
-    clonedChild.lastElementChild.children[0].style.visibility = 'hidden'
+    clonedChild.lastElementChild.lastElementChild.lastElementChild.children[0].style.visibility = 'hidden'
 
 
     // * Append the cloned element to the target container
@@ -654,7 +655,7 @@ function addBank() {
     clonedChild.id = newId
 
     // * Hide the increment button
-    clonedChild.lastElementChild.children[0].style.visibility = 'hidden'
+    clonedChild.lastElementChild.lastElementChild.lastElementChild.children[0].style.visibility = 'hidden'
 
 
     // * Append the cloned element to the target container

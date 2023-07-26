@@ -729,6 +729,13 @@ Third Commit:
 - Add new loan types
 ***TODO: Fix Bug in Dropdowns in add loan types page
 
-July 24, 2023 (Tuesday)
+July 25, 2023 (Tuesday)
 First Commit:
 • Loan Types Module: Fixed Bug in Dropdowns
+
+July 26, 2023 (Wednesday)
+First Commit:
+• Applications Module: Validation Layout
+- Made validation.js for testing of form validations
+- Changed the html layout for Assets and Properties, Appliances and Bank Accounts buttons
+- Added new styles for validation in _base.scss

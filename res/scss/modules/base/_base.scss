@@ -119,6 +119,7 @@ button {
     cursor: pointer;
 }
 
+
 // .rowspan:has(table) {
 //     overflow-y: auto;
 //     @include custom-scroll;
@@ -430,16 +431,18 @@ table {
 
 // * Input Global
 .input-wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     >span {
+        margin-bottom: 1rem;
         font-weight: $font-weight-bold;
         font-size: $font-size;
     }
     // * Input Global Styles
     input {
         @include inputField;
+        // margin-bottom: 1rem;
     }
     // * Image Input Button
     input.input-image {
@@ -453,6 +456,63 @@ table {
     #imageUploadCoMakerSign::before {
         content: 'Upload Co-Maker Signature';
     }
+    .box-wrap {
+        display: flex;
+        align-items: center;
+        .radio-btn-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            span {
+                font-size: $font-size;
+                font-weight: $font-weight-bold;
+                white-space: nowrap;
+            }
+            input[type="radio"] {
+                @include formRadioButtons;
+            }
+            // input[type="radio"]:focus {
+            //     outline: max(1px, 0.15em) solid $primary;
+            //     outline-offset: max(2px, 0.15em);
+            // }
+        }
+    }
+}
+
+// *** For Adding Form Styles
+.input-wrapper-add {
+    display: flex;
+    flex-direction: column;
+    span {
+        font-size: $font-size;
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+    }
+    // * Input Global Styles
+    input {
+        @include inputField;
+        // margin-bottom: 1rem;
+    }
+    .inner-container-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        .input-inner-wrapper:first-of-type {
+            width: 100%;
+        }
+        .input-inner-wrapper:last-of-type {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+        }
+    }
+    
+}
+.input-inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    
 }
 
 // * Button Wrapper
@@ -492,15 +552,82 @@ table {
     }
 }
 
+// * Cancel Button
 .cancel-btn-wrapper {
     padding: 2rem 0;
     display: flex;
     justify-content: flex-end;
 }
 
+// * Calendar Select
 .calendarSelect {
     // font-family: $font-family;
     font-size: $font-size-medium;
     font-weight: $font-weight-bold;
     color: $font-accent-2;
 }
+
+// ***** Validation Classes ***** //
+
+.validation {
+    // position: absolute;
+    margin-top: 0.6rem;
+    font-size: 1.2rem;
+}
+
+.is-invalid {
+    color: $alert !important;
+    white-space: pre-wrap !important;
+    // text-align: center;
+}
+
+.is-valid {
+    color: $green !important;
+    white-space: pre-wrap !important;
+    // text-align: center;
+}
+
+.input-is-valid {
+    border-radius: $border-radius-medium !important;
+    border: 1px solid $green !important;
+    box-shadow: inset $box-shadow,
+                0px 0px 0pc 4px $greenTR !important;
+}
+
+.input-is-invalid {
+    border-radius: $border-radius-medium !important;
+    border: 1px solid $alert !important;
+    box-shadow: inset $box-shadow, 
+                0px 0px 0pc 4px $alertTR !important;
+}
+
+.input-radio-is-valid {
+    border-radius: $circle !important;
+    border: max(0.4rem, 0.3em) solid $primary !important;
+    box-shadow: 0px 0px 0pc 4px $primaryTR2 !important;
+}
+
+.input-radio-is-invalid {
+    border-radius: $circle !important;
+    border: max(0.4rem, 0.3em) solid $alert !important;
+    box-shadow: 0px 0px 0pc 4px $alertTR !important;
+}
+
+.input-signature-is-valid {
+    // border-radius: $circle !important;
+    border: 1px solid $green !important;
+    box-shadow: 0px 0px 0pc 4px $greenTR !important;
+    // box-shadow: 0px 0px 0pc 4px $primaryTR2 !important;
+}
+
+.input-signature-is-invalid {
+    // border-radius: $circle !important;
+    border: 1px solid $alert !important;
+    box-shadow: 0px 0px 0pc 4px $alertTR !important;
+    // box-shadow: 0px 0px 0pc 4px $alertTR !important;
+}
+
+// ***** END of Validation Classes ***** //
+
+// *SECTION    border: 1px solid #1dbb1d;
+    // box-shadow: 0px 0px 0pc 4px #61c1613b;
