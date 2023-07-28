@@ -739,3 +739,7 @@ First Commit:
 - Made validation.js for testing of form validations
 - Changed the html layout for Assets and Properties, Appliances and Bank Accounts buttons
 - Added new styles for validation in _base.scss
+
+July 28, 2023 (Friday)
+First Commit:
+• Holiday Module: Calendar Box-shadow Adjustment
