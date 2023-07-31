@@ -743,3 +743,8 @@ First Commit:
 July 28, 2023 (Friday)
 First Commit:
 • Holiday Module: Calendar Box-shadow Adjustment
+
+July 31, 2023 (Monday)
+First Commit:
+• Application Module: Credit Investigation Add Button Layout Adjustment
+- From grid to flex

@@ -2126,17 +2126,20 @@
                                         </div>
 
                                         <!-- * Brand / Model -->
-                                        <div class="input-wrapper">
+                                        <div class="input-wrapper-add">
                                             <span>Brand / Model</span>
-                                            <input autocomplete="off" type="text" id="brandModel" name="brandModel">
+                                            <div class="inner-container-wrapper">
+                                                <!-- * Input Inner Wrapper -->
+                                                <div class="input-inner-wrapper">
+                                                    <input autocomplete="off" class="inp" type="text" id="brandModel" name="brandModel">
+                                                </div>
+                                                <!-- * Add and Subtract Button  -->
+                                                <div class="input-inner-wrapper">
+                                                    <button type="button" class="addOrSubButton" onclick="addAppliances()">+</button>
+                                                    <button type="button" class="addOrSubButton" onclick="subAppliances()">-</button>
+                                                </div>
+                                            </div>
                                         </div>
-
-                                        <!-- * Add and Subtract Button  -->
-                                        <div class="input-wrapper">
-                                            <button type="button" onclick="addAppliances()">+</button>
-                                            <button type="button" onclick="subAppliances()">-</button>
-                                        </div>
-
 
                                     </div>
                                 </div>
@@ -2172,15 +2175,19 @@
                                         </div>
 
                                         <!-- * Address -->
-                                        <div class="input-wrapper">
+                                        <div class="input-wrapper-add">
                                             <span>Address</span>
-                                            <input autocomplete="off" type="bankAddr" id="bankAddr" name="brandModel">
-                                        </div>
-
-                                        <!-- * Add and Subtract Button  -->
-                                        <div class="input-wrapper">
-                                            <button type="button" onclick="addBank()">+</button>
-                                            <button type="button" onclick="subBank()">-</button>
+                                            <div class="inner-container-wrapper">
+                                                <!-- * Input Inner Wrapper -->
+                                                <div class="input-inner-wrapper">
+                                                    <input autocomplete="off" type="text" id="bankAddr" name="brandModel">
+                                                </div>
+                                                <!-- * Add and Subtract Button  -->
+                                                <div class="input-inner-wrapper">
+                                                    <button type="button" class="addOrSubButton" onclick="addBank()">+</button>
+                                                    <button type="button" class="addOrSubButton" onclick="subBank()">-</button>
+                                                </div>
+                                            </div>
                                         </div>
 
 
