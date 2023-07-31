@@ -367,6 +367,54 @@ if (selectedOpt9) {
 
 }
 
+// ** Select Dropdown 10 (Mode of Payment)
+const selectedOpt10 = document.querySelector('[data-option-select10]');
+
+if (selectedOpt10) {
+
+    const optionsContainer10 = document.querySelector('[data-option-con10]');
+    const optionsList10 = document.querySelectorAll('[data-option-item10]');
+
+    selectedOpt10.addEventListener("click", () => {
+        optionsContainer10.classList.toggle("active");
+    });
+
+    optionsList10.forEach(option => {
+        option.addEventListener("click", () => {
+            selectedOpt10.innerHTML = option.querySelector("label").innerHTML;
+            optionsContainer10.classList.remove("active");
+        });
+    });
+
+    // * Mode of Release Toggle
+    const denominationToggle = document.querySelector('[data-toggle-mor-1]')
+    const checkNumberToggle = document.querySelector('[data-toggle-mor-2]')
+
+    optionsContainer10.firstElementChild.addEventListener('click', () => {
+        checkNumberToggle.style.display = 'none'
+        denominationToggle.style.display = 'flex'
+    })
+
+    optionsContainer10.lastElementChild.addEventListener('click', () => {
+        checkNumberToggle.style.display = 'flex'
+        denominationToggle.style.display = 'none'
+    })
+
+}
+
+// * Mode of Release Toggle
+const employeeSearchToggle = document.querySelector('[data-employee-search-toggle]')
+const clientToggle = document.querySelector('[data-client-name-toggle]')
+const contactNumberToggle = document.querySelector('[data-contact-number-toggle]')
+
+// optionsContainer10.firstElementChild.addEventListener('click', () => {
+//     checkNumberToggle.style.display = 'none'
+//     denominationToggle.style.display = 'flex'
+// })
+
+// optionsContainer10.lastElementChild.addEventListener('click', () => {
+//     checkNumberToggle.style.display = 'flex'
+//     de
 
 // ****** Child Form Toggle ***** //
 

@@ -58,6 +58,10 @@ hr {
   border: 0;
 }
 
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
 img {
   max-width: 100%;
   user-select: none;
@@ -6734,6 +6738,236 @@ body {
   display: flex;
   align-items: center;
   padding-bottom: 0.25rem;
+}
+.main-dashboard .na-form-con .na-releasing-sec {
+  border-radius: 1.5rem;
+  background-color: #FFFFFF;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  gap: 2rem 0;
+  margin: 2rem 2rem;
+  padding: 4rem;
+}
+.main-dashboard .na-form-con .na-releasing-sec .rowspan {
+  display: grid;
+  align-items: flex-end;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0 2rem;
+}
+.main-dashboard .na-form-con .na-releasing-sec .rowspan .input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.main-dashboard .na-form-con .na-releasing-sec .rowspan .input-wrapper span {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.main-dashboard .na-form-con .na-releasing-sec .rowspan .input-wrapper input {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  margin: 0;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #EBEBEB;
+  border-radius: 1rem;
+  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: opacity 100ms ease-in-out;
+}
+.main-dashboard .na-form-con .na-releasing-sec .rowspan .input-wrapper input:hover {
+  filter: brightness(101.5%);
+  -webkit-filter: brightness(101.5%);
+  -moz-filter: brightness(101.5%);
+}
+.main-dashboard .na-form-con .na-releasing-sec .rowspan .input-wrapper .button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.main-dashboard .na-form-con .na-releasing-sec .rowspan .input-wrapper button.declineButton {
+  width: 50%;
+  padding: 1rem;
+}
+.main-dashboard .na-form-con .na-releasing-sec .rowspan .input-wrapper button.releaseButton {
+  padding: 1rem;
+}
+.main-dashboard .na-form-con .na-releasing-sec .rowspan .input-wrapper:last-of-type:not([data-toggle-mor-2]) {
+  padding-bottom: 0.5rem;
+}
+.main-dashboard .na-form-con .na-releasing-sec .rowspan .input-wrapper.input-wrapper-release {
+  padding-bottom: 0.25rem;
+}
+.main-dashboard .na-form-con .na-releasing-sec .rowspan:nth-of-type(2) [data-toggle-mor-1],
+.main-dashboard .na-form-con .na-releasing-sec .rowspan:nth-of-type(2) [data-toggle-mor-2] {
+  display: none;
+}
+.main-dashboard .na-form-con .na-releasing-sec .rowspan:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-dashboard .na-form-con .na-releasing-sec .rowspan:first-of-type h3 {
+  font-size: 2.5rem;
+}
+.main-dashboard .na-form-con .na-releasing-sec .rowspan:last-of-type {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr) minmax(0, 1fr);
+}
+.main-dashboard .na-form-con .na-releasing-sec .rowspan:last-of-type .input-wrapper:nth-of-type(2) span {
+  display: flex;
+}
+.main-dashboard .na-form-con .na-releasing-sec .rowspan:last-of-type .input-wrapper:nth-of-type(2) span p {
+  font-style: italic;
+  font-weight: 400;
+}
+.main-dashboard .na-form-con .na-releasing-sec .rowspan:last-of-type .input-wrapper:last-of-type {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.25rem;
+}
+.main-dashboard .na-form-con .na-cash-courier {
+  width: 100%;
+  padding: 2rem;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem 0px;
+  border-radius: 1.5rem;
+  background-color: #FFFFFF;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 3rem 4rem 3rem 4rem;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan {
+  min-height: 0;
+  /* NEW */
+  min-width: 0;
+  /* NEW; needed for Firefox */
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan .input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan .input-wrapper input {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  margin: 0;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #EBEBEB;
+  border-radius: 1rem;
+  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: opacity 100ms ease-in-out;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan .input-wrapper input:hover {
+  filter: brightness(101.5%);
+  -webkit-filter: brightness(101.5%);
+  -moz-filter: brightness(101.5%);
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan .input-wrapper .box-wrap {
+  display: flex;
+  align-items: center;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper span {
+  font-weight: 700;
+  margin-left: 0.6rem;
+  white-space: nowrap;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio] {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  scale: 0.7;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  border: max(0.4rem, 0.3em) solid #D6A330;
+  background-color: #FFFFFF;
+  transition: background-color 150ms ease-in-out;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]::after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  background-color: #D6A330;
+  border-radius: 50%;
+  visibility: hidden;
+  opacity: 0;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:hover {
+  background-color: rgba(214, 163, 48, 0.4);
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked {
+  background-color: #FFFFFF;
+  animation: pop-up-big 300ms forwards;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan .input-wrapper .box-wrap .radio-btn-wrapper input[type=radio]:checked:after {
+  visibility: visible;
+  opacity: 1;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan:first-of-type h2 {
+  font-size: 2.5rem;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan:first-of-type span {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan:nth-of-type(2) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) repeat(2, minmax(0, 2fr)) minmax(0, 1fr);
+  gap: 0 2rem;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan:nth-of-type(2) [data-employee-search-toggle],
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan:nth-of-type(2) [data-client-name-toggle],
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan:nth-of-type(2) [data-contact-number-toggle] {
+  display: none;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan:nth-of-type(2) .search-wrap {
+  position: relative;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan:nth-of-type(2) .search-wrap input {
+  width: 100%;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan:nth-of-type(2) .search-wrap input:hover ~ img {
+  opacity: 0;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan:nth-of-type(2) .search-wrap input:focus ~ img, .main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan:nth-of-type(2) .search-wrap input:focus-within ~ img, .main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan:nth-of-type(2) .search-wrap input:focus-visible ~ img {
+  opacity: 0;
+  transform: translateY(0.6rem) translateX(-2.5rem);
+  transition: 300ms ease-in-out;
+}
+.main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan:nth-of-type(2) .search-wrap img {
+  position: absolute;
+  width: 2.5rem;
+  right: 0;
+  transform: translateY(0.6rem) translateX(-2.5rem);
+  transition: 200ms ease-in-out;
+}
+@media (max-width: 1366px) {
+  .main-dashboard .na-form-con .na-cash-courier .small-con-2 .rowspan:nth-of-type(2) .search-wrap img {
+    width: 2rem;
+    transform: translateY(1rem) translateX(-2.5rem);
+  }
 }
 .main-dashboard .na-form-con .na-container-wrapper {
   display: flex;
