@@ -406,16 +406,23 @@ if (selectedOpt10) {
 const employeeSearchToggle = document.querySelector('[data-employee-search-toggle]')
 const clientToggle = document.querySelector('[data-client-name-toggle]')
 const contactNumberToggle = document.querySelector('[data-contact-number-toggle]')
+const courierRadioButton = document.querySelectorAll('input[type="radio"][name="courierRadioToggle"]')
 
-// optionsContainer10.firstElementChild.addEventListener('click', () => {
-//     checkNumberToggle.style.display = 'none'
-//     denominationToggle.style.display = 'flex'
-// })
+function courierInputToggle() {
+    if (this.value === "employeeToggle") {
+        employeeSearchToggle.style.display = "flex";
+        clientToggle.style.display = "none";
+        contactNumberToggle.style.display = "block";
+    } else if (this.value === "clientToggle") {
+        clientToggle.style.display = "block";
+        employeeSearchToggle.style.display = "none";
+        contactNumberToggle.style.display = "block";
+    }
+}
 
-// optionsContainer10.lastElementChild.addEventListener('click', () => {
-//     checkNumberToggle.style.display = 'flex'
-//     de
-
+courierRadioButton.forEach(radio => {
+    radio.addEventListener("change", courierInputToggle);
+});
 // ****** Child Form Toggle ***** //
 
 // * Add Child (Married)
