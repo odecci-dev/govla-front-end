@@ -6720,6 +6720,16 @@ body {
 .main-dashboard .na-form-con .na-approval-sec .rowspan:first-of-type h3 {
   font-size: 2.5rem;
 }
+.main-dashboard .na-form-con .na-approval-sec .rowspan:last-of-type {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr) minmax(0, 1fr);
+}
+.main-dashboard .na-form-con .na-approval-sec .rowspan:last-of-type .input-wrapper:nth-of-type(2) span {
+  display: flex;
+}
+.main-dashboard .na-form-con .na-approval-sec .rowspan:last-of-type .input-wrapper:nth-of-type(2) span p {
+  font-style: italic;
+  font-weight: 400;
+}
 .main-dashboard .na-form-con .na-approval-sec .rowspan:last-of-type .input-wrapper:last-of-type {
   display: flex;
   align-items: center;

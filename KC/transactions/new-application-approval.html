@@ -362,19 +362,64 @@
                         </div> -->
                     </div>
 
-                    <!-- * Rowspan 2: Applied Loan Amount, Terms of Payment, Purpose, and Approve for Releasing Button -->
+                    <!-- * Rowspan 2: Loan Type, Loan Amount, Purpose, and Approve for Releasing Button -->
                     <div class="rowspan">
 
-                        <!-- * Applied Loan Amount -->
+                        <!-- * Loan Type -->
                         <div class="input-wrapper">
-                            <span>Applied Loan Amount</span>
-                            <input autocomplete="off" type="text" id="appliedLoanAmnt" name="appliedLoanAmnt">
+                            <span>Loan Type</span>
+                            <input autocomplete="off" type="text" id="loanType" name="loanType">
                         </div>
 
-                        <!-- * Terms of Payment -->
+                        <!-- * Loan Amount -->
                         <div class="input-wrapper">
-                            <span>Terms of Payment</span>
-                            <input autocomplete="off" type="text" id="termsOfPaymnt" name="termsOfPaymnt">
+                            <span>Loan Amount</span>
+                            <div class="select-box">
+
+                                <div class="options-container" data-option-con9>
+
+                                    <div class="option" data-option-item9>
+
+                                        <input type="radio" class="radio" name="category" value="5,000" />
+                                        <label for="5,000">
+                                            <h4>5,000</h4>
+                                        </label>
+
+                                    </div>
+
+                                    <div class="option" data-option-item9>
+
+                                        <input type="radio" class="radio" name="category" value="10,000" />
+                                        <label for="10,000">
+                                            <h4>10,000</h4>
+                                        </label>
+
+                                    </div>
+
+                                    <div class="option" data-option-item9>
+
+                                        <input type="radio" class="radio" name="category" value="15,000" />
+                                        <label for="15,000">
+                                            <h4>15,000</h4>
+                                        </label>
+
+                                    </div>
+
+                                    <div class="option" data-option-item9>
+
+                                        <input type="radio" class="radio" name="category" value="20,000" />
+                                        <label for="20,000">
+                                            <h4>20,000</h4>
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="selected" data-option-select9>
+                                </div>
+
+                            </div>
                         </div>
 
                         <!-- * Purpose -->
@@ -392,24 +437,24 @@
 
                     </div>
 
-                    <!-- * Rowspan 3: Savings, Notarial Fee, Advance Payment, and Change Loan Payment Button -->
+                    <!-- * Rowspan 3: Terms of Payment, Number of No Payment, Number of Loans, and Change Loan Payment Button -->
                     <div class="rowspan">
 
-                        <!-- * Savings -->
+                        <!-- * Terms of Payment -->
                         <div class="input-wrapper">
-                            <span>Savings</span>
-                            <input autocomplete="off" type="text" id="loanSavings" name="loanSavings">
+                            <span>Terms of Payment</span>
+                            <input autocomplete="off" type="text" id="termsOfPaymnt" name="termsOfPaymnt">
                         </div>
 
-                        <!-- * Notarial Fee -->
+                        <!-- * Number of No Payment -->
                         <div class="input-wrapper">
-                            <span>Notarial Fee</span>
-                            <input autocomplete="off" type="text" id="notarialFee" name="notarialFee">
+                            <span>Number of No Payment</span>
+                            <input autocomplete="off" type="text" id="noOfNoPayment" name="noOfNoPayment">
                         </div>
 
-                        <!-- * Advance Payment -->
+                        <!-- * Number of Loans -->
                         <div class="input-wrapper">
-                            <span>Advance Payment</span>
+                            <span>Number of Loans</span>
                             <input autocomplete="off" type="text" id="advPayment" name="advPayment">
                         </div>
 
@@ -420,25 +465,19 @@
 
                     </div>
 
-                    <!-- * Rowspan 4: Interest, Releasing Amount, Daily Amount Due, and Decline Button -->
+                    <!-- * Rowspan 4: Approved by:, Notes and Decline Button -->
                     <div class="rowspan">
 
-                        <!-- * Interest -->
+                        <!-- * Approved by: -->
                         <div class="input-wrapper">
-                            <span>Interest</span>
-                            <input autocomplete="off" type="text" id="interest" name="interest">
+                            <span>Approved by:</span>
+                            <input autocomplete="off" type="text" id="approvedBy" name="approvedBy">
                         </div>
 
-                        <!-- * Releasing Amount -->
+                        <!-- * Notes -->
                         <div class="input-wrapper">
-                            <span>Releasing Amount</span>
-                            <input autocomplete="off" type="text" id="releasingAmnt" name="releasingAmnt">
-                        </div>
-
-                        <!-- * Daily Amount Due -->
-                        <div class="input-wrapper">
-                            <span>Daily Amount Due</span>
-                            <input autocomplete="off" type="text" id="dailyAmntDue" name="dailyAmntDue">
+                            <span>Notes &nbsp;<p>(if approving officer is not available)</p></span>
+                            <input autocomplete="off" type="text" id="notes" name="notes">
                         </div>
 
                         <!-- * Decline Button -->
@@ -2189,17 +2228,20 @@
                                         </div>
 
                                         <!-- * Brand / Model -->
-                                        <div class="input-wrapper">
+                                        <div class="input-wrapper-add">
                                             <span>Brand / Model</span>
-                                            <input autocomplete="off" type="text" id="brandModel" name="brandModel">
+                                            <div class="inner-container-wrapper">
+                                                <!-- * Input Inner Wrapper -->
+                                                <div class="input-inner-wrapper">
+                                                    <input autocomplete="off" class="inp" type="text" id="brandModel" name="brandModel">
+                                                </div>
+                                                <!-- * Add and Subtract Button  -->
+                                                <div class="input-inner-wrapper">
+                                                    <button type="button" class="addOrSubButton" onclick="addAppliances()">+</button>
+                                                    <button type="button" class="addOrSubButton" onclick="subAppliances()">-</button>
+                                                </div>
+                                            </div>
                                         </div>
-
-                                        <!-- * Add and Subtract Button  -->
-                                        <div class="input-wrapper">
-                                            <button type="button" onclick="addAppliances()">+</button>
-                                            <button type="button" onclick="subAppliances()">-</button>
-                                        </div>
-
 
                                     </div>
                                 </div>
@@ -2235,15 +2277,19 @@
                                         </div>
 
                                         <!-- * Address -->
-                                        <div class="input-wrapper">
+                                        <div class="input-wrapper-add">
                                             <span>Address</span>
-                                            <input autocomplete="off" type="bankAddr" id="bankAddr" name="brandModel">
-                                        </div>
-
-                                        <!-- * Add and Subtract Button  -->
-                                        <div class="input-wrapper">
-                                            <button type="button" onclick="addBank()">+</button>
-                                            <button type="button" onclick="subBank()">-</button>
+                                            <div class="inner-container-wrapper">
+                                                <!-- * Input Inner Wrapper -->
+                                                <div class="input-inner-wrapper">
+                                                    <input autocomplete="off" type="text" id="bankAddr" name="brandModel">
+                                                </div>
+                                                <!-- * Add and Subtract Button  -->
+                                                <div class="input-inner-wrapper">
+                                                    <button type="button" class="addOrSubButton" onclick="addBank()">+</button>
+                                                    <button type="button" class="addOrSubButton" onclick="subBank()">-</button>
+                                                </div>
+                                            </div>
                                         </div>
 
 

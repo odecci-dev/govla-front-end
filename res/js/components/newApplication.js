@@ -345,6 +345,29 @@ if (selectedOpt8) {
 
 }
 
+
+// ** Select Dropdown 9
+const selectedOpt9 = document.querySelector('[data-option-select9]');
+
+if (selectedOpt9) {
+
+    const optionsContainer9 = document.querySelector('[data-option-con9]');
+    const optionsList9 = document.querySelectorAll('[data-option-item9]');
+
+    selectedOpt9.addEventListener("click", () => {
+        optionsContainer9.classList.toggle("active");
+    });
+
+    optionsList9.forEach(option => {
+        option.addEventListener("click", () => {
+            selectedOpt9.innerHTML = option.querySelector("label").innerHTML;
+            optionsContainer9.classList.remove("active");
+        });
+    });
+
+}
+
+
 // ****** Child Form Toggle ***** //
 
 // * Add Child (Married)

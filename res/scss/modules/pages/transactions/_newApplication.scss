@@ -310,6 +310,16 @@
                 }
             }
             .rowspan:last-of-type {
+                grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr) minmax(0, 1fr);
+                .input-wrapper:nth-of-type(2) {
+                    span {
+                        display: flex;
+                        p {
+                            font-style: italic;
+                            font-weight: $font-weight;
+                        }
+                    }
+                }
                 .input-wrapper:last-of-type {
                     display: flex;
                     align-items: center;
@@ -317,6 +327,77 @@
                 }
             }
         }
+        // // * New Application: Releasing Section
+        // .na-approval-sec {
+        //     @include containerDefault2;
+        //     display: grid;
+        //     grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)minmax(0, 1fr);
+        //     gap: $spacing-2x-large 0;
+        //     margin: 2rem 2rem;
+        //     padding: 4rem;
+        //     .rowspan {
+        //         display: grid;
+        //         align-items: flex-end;
+        //         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        //         gap: 0 $spacing-2x-large;
+        //         .input-wrapper {
+        //             display: flex;
+        //             flex-direction: column;
+        //             span {
+        //                 margin-bottom: 1rem;
+        //                 font-weight: $font-weight-bold;
+        //                 font-size: $font-size;
+        //             }
+        //             // * Input Global Styles
+        //             input {
+        //                 @include inputField;
+        //             }
+        //             .button {
+        //                 width: 100%;
+        //                 padding: 1rem;
+        //                 margin-top: 2rem;
+        //             }
+        //             button.declineButton {
+        //                 width: 50%;
+        //                 padding: 1rem;
+        //             }
+        //             button.releaseButton {
+        //                 padding: 1rem;
+        //             }
+        //         }
+        //         .input-wrapper:last-of-type {
+        //             padding-bottom: .5rem;
+        //         }
+        //         .input-wrapper.input-wrapper-release {
+        //             padding-bottom: .25rem;
+        //         }
+        //     }
+        //     .rowspan:first-of-type {
+        //         display: flex;
+        //         align-items: center;
+        //         justify-content: space-between;
+        //         h3 {
+        //             font-size: $font-size-x-large;
+        //         }
+        //     }
+        //     .rowspan:last-of-type {
+        //         grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr) minmax(0, 1fr);
+        //         .input-wrapper:nth-of-type(2) {
+        //             span {
+        //                 display: flex;
+        //                 p {
+        //                     font-style: italic;
+        //                     font-weight: $font-weight;
+        //                 }
+        //             }
+        //         }
+        //         .input-wrapper:last-of-type {
+        //             display: flex;
+        //             align-items: center;
+        //             padding-bottom: .25rem;
+        //         }
+        //     }
+        // }
         // * Container Wrapper 1: New Member Container Wrapper
         .na-container-wrapper {
             // height: 120%;
