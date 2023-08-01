@@ -757,3 +757,9 @@ Third Commit:
 
 Fourth Commit:
 • Application Module: Completed✅ Relasing Latest Revision
+
+// TODO: Remove this when releasing Revision is Completed
+
+August 01, 2023 (Tuesday)
+First Commit:
+• Application Module: Implemented the Decline Modal 

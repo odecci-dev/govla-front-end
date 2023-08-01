@@ -366,7 +366,7 @@
                     }
                 }
                 .input-wrapper:last-of-type:not([data-toggle-mor-2]) {
-                    padding-bottom: .5rem;
+                    // padding-bottom: .5rem;
                 }
                 .input-wrapper.input-wrapper-release {
                     padding-bottom: .25rem;
@@ -386,6 +386,20 @@
                     font-size: $font-size-x-large;
                 }
             }
+            .rowspan:nth-of-type(3) {
+                .input-wrapper.input-wrapper-decline {
+                    padding-bottom: 0.25rem;
+                }
+            }
+            .rowspan:nth-of-type(4) {
+                .input-wrapper:last-of-type {
+                    padding-bottom: 0.4rem;
+                }
+                .input-wrapper.input-wrapper-decline {
+                    align-items: center;
+                    padding-bottom: 0.25rem;
+                }
+            }
             .rowspan:last-of-type {
                 grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr) minmax(0, 1fr);
                 .input-wrapper:nth-of-type(2) {
@@ -397,7 +411,11 @@
                         }
                     }
                 }
-                .input-wrapper:last-of-type {
+                .input-wrapper.input-wrapper-decline {
+                    align-items: center;
+                    padding-bottom: 0.25rem;
+                }
+                .input-wrapper.input-wrapper-release {
                     display: flex;
                     align-items: center;
                     padding-bottom: .25rem;
@@ -462,7 +480,7 @@
                         font-style: italic;
                     }
                 }
-                // * Rowspan 2: Radio Buttonsa and Input Fields
+                // * Rowspan 2: Radio Buttons and Input Fields
                 .rowspan:nth-of-type(2) {
                     // @include smallcon2Rowspan2;
                     display: grid;

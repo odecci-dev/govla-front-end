@@ -408,6 +408,7 @@ const clientToggle = document.querySelector('[data-client-name-toggle]')
 const contactNumberToggle = document.querySelector('[data-contact-number-toggle]')
 const courierRadioButton = document.querySelectorAll('input[type="radio"][name="courierRadioToggle"]')
 
+// * Courier Input Toggle Function
 function courierInputToggle() {
     if (this.value === "employeeToggle") {
         employeeSearchToggle.style.display = "flex";
@@ -423,6 +424,48 @@ function courierInputToggle() {
 courierRadioButton.forEach(radio => {
     radio.addEventListener("change", courierInputToggle);
 });
+
+// ********** RELEASING ********** //
+// * Sign For Release Button
+const signForReleasingButton = document.querySelector('[data-sign-for-releasing-button]')
+if (signForReleasingButton) {
+    signForReleasingButton.addEventListener("click", () => {
+        url = 'new-application-releasing-completion.html'
+        location.href = url
+    })
+}
+
+// * Complete Button
+const releaseCompleteButton = document.querySelector('[data-application-complete-button]')
+if (releaseCompleteButton) {
+    releaseCompleteButton.addEventListener('click', () => {
+        url = 'new-application-list.html'
+        location.href = url
+    })
+}
+
+// * Decline Application Modal
+const declineApplicationModal = document.querySelector('[data-application-decline-modal]')
+
+if (declineApplicationModal) {
+    const openDeclineApplicationModal = document.querySelector('[data-open-application-decline]')
+    const closeDeclineApplicationModal = document.querySelector('[data-close-application-decline]')
+
+    openDeclineApplicationModal.addEventListener('click', () => {
+        declineApplicationModal.showModal()
+    })
+
+    closeDeclineApplicationModal.addEventListener('click', () => {
+        declineApplicationModal.setAttribute("closing", "");
+        declineApplicationModal.addEventListener("animationend", () => {
+            declineApplicationModal.removeAttribute("closing");
+            declineApplicationModal.close();
+        }, { once: true });
+    
+    })
+}
+
+
 // ****** Child Form Toggle ***** //
 
 // * Add Child (Married)
