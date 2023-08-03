@@ -307,47 +307,132 @@ viewCreditInvestigation.forEach((ci) => {
 
 // * Update Modal
 const saveButton = document.querySelectorAll('[data-save]')
-const updatedModal = document.querySelector('[data-updated-successfully]')
-const okayButton1 = document.querySelector('[data-update-modal]')
+const updatedSuccessfulModal = document.querySelector('[data-updated-successfully]')
+const closeUpdateModal = document.querySelector('[data-close-update-modal]')
 
 if (saveButton) {
     saveButton.forEach((save) => {
         save.addEventListener('click', () => {
-            updatedModal.showModal()
+            updatedSuccessfulModal.showModal()
         })
     })
-    okayButton1.addEventListener('click', () => {
-            updatedModal.setAttribute("closing", "");
-            updatedModal.addEventListener("animationend", () => {
-                updatedModal.removeAttribute("closing");
-                updatedModal.close();
+    if (closeUpdateModal) {
+        closeUpdateModal.addEventListener('click', () => {
+            updatedSuccessfulModal.setAttribute("closing", "");
+            updatedSuccessfulModal.addEventListener("animationend", () => {
+                    updatedSuccessfulModal.removeAttribute("closing");
+                    updatedSuccessfulModal.close();
             }, { once: true });
-    })
+        })
+    }
 }
 
 // * Move To Trash Modal
-const trashButton = document.querySelectorAll('[data-trash-button')
-const moveToTrashModal = document.querySelector('[data-move-to-trash-successful]')
-const okayButton2 = document.querySelector('[data-update-modal-2]')
+const trashButtonYes = document.querySelector('[data-trash-yes]')
+const trashButtoNo = document.querySelector('[data-trash-no]')
+const moveToTrashModal = document.querySelector('[data-move-to-trash-modal]')
+const moveToTrashSuccessfulModal = document.querySelector('[data-move-to-trash-successful]')
+const closeSuccessModal = document.querySelector('[data-close-success-modal]')
 
-if (trashButton) {
+if (moveToTrashModal) {
     // TODO: View trash container
 
-    trashButton.forEach((trash) => {    
-        trash.addEventListener('click', () => {
-            moveToTrashModal.showModal()
-        })
+    trashButtonYes.addEventListener('click', () => {
+        moveToTrashSuccessfulModal.showModal()
+        moveToTrashModal.setAttribute("closing", "")
+        moveToTrashModal.addEventListener("animationend", () => {
+            moveToTrashModal.removeAttribute("closing")
+            moveToTrashModal.close()
+        }, { once: true })
     })
-    okayButton2.addEventListener('click', () => {
-            moveToTrashModal.setAttribute("closing", "");
-            moveToTrashModal.addEventListener("animationend", () => {
-                moveToTrashModal.removeAttribute("closing");
-                moveToTrashModal.close();
-            }, { once: true });
+
+    trashButtoNo.addEventListener('click', () => {
+        moveToTrashModal.setAttribute("closing", "");
+        moveToTrashModal.addEventListener("animationend", () => {
+            moveToTrashModal.removeAttribute("closing");
+            moveToTrashModal.close();
+        }, { once: true });
     })
+
+    closeSuccessModal.addEventListener("click", () => {
+        moveToTrashSuccessfulModal.setAttribute("closing", "");
+        moveToTrashSuccessfulModal.addEventListener("animationend", () => {
+            moveToTrashSuccessfulModal.removeAttribute("closing");
+            moveToTrashSuccessfulModal.close();
+        }, { once: true });
+    })
+
 }
 
+// * Restoration Modal
+const restorationYes = document.querySelector('[data-restoration-yes]')
+const restorationNo = document.querySelector('[data-restoration-no]')
+const restorationModal = document.querySelector('[data-restoration-modal]')
+const restorationSuccessfulModal = document.querySelector('[data-restoration-successful]')
+const closeRestorationSuccessModal = document.querySelector('[data-close-restoration-success-modal]')
 
+if (restorationModal) {
 
-        
-        
+    restorationYes.addEventListener('click', () => {
+        restorationSuccessfulModal.showModal()
+        restorationModal.setAttribute("closing", "")
+        restorationModal.addEventListener("animationend", () => {
+            restorationModal.removeAttribute("closing")
+            restorationModal.close()
+        }, { once: true })
+    })
+
+    restorationNo.addEventListener('click', () => {
+        restorationModal.setAttribute("closing", "");
+        restorationModal.addEventListener("animationend", () => {
+            restorationModal.removeAttribute("closing");
+            restorationModal.close();
+        }, { once: true });
+    })
+
+    closeRestorationSuccessModal.addEventListener("click", () => {
+        restorationSuccessfulModal.setAttribute("closing", "");
+        restorationSuccessfulModal.addEventListener("animationend", () => {
+            restorationSuccessfulModal.removeAttribute("closing");
+            restorationSuccessfulModal.close();
+        }, { once: true });
+    })
+
+}
+
+// * Deletion Modal
+const deletionYes = document.querySelector('[data-deletion-yes]')
+const deletionNo = document.querySelector('[data-deletion-no]')
+const deletionModal = document.querySelector('[data-deletion-modal]')
+const deletionSuccessfulModal = document.querySelector('[data-deletion-successful]')
+const closeDeletionSuccessModal = document.querySelector('[data-close-deletion-success-modal]')
+
+if (deletionModal) {
+
+    deletionYes.addEventListener('click', () => {
+        deletionSuccessfulModal.showModal()
+        deletionModal.setAttribute("closing", "")
+        deletionModal.addEventListener("animationend", () => {
+            deletionModal.removeAttribute("closing")
+            deletionModal.close()
+        }, { once: true })
+    })
+
+    deletionNo.addEventListener('click', () => {
+        deletionModal.setAttribute("closing", "");
+        deletionModal.addEventListener("animationend", () => {
+            deletionModal.removeAttribute("closing");
+            deletionModal.close();
+        }, { once: true });
+    })
+
+    closeDeletionSuccessModal.addEventListener("click", () => {
+        deletionSuccessfulModal.setAttribute("closing", "");
+        deletionSuccessfulModal.addEventListener("animationend", () => {
+            deletionSuccessfulModal.removeAttribute("closing");
+            deletionSuccessfulModal.close();
+        }, { once: true });
+    })
+
+}
+

@@ -800,3 +800,6 @@ Sixth Commit:
 
 Seventh Commit:
 • Modals: Deleted Successfully Modal
+
+Eight Commit:
+• Modals: Restored Successfully Modal

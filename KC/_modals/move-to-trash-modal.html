@@ -17,8 +17,35 @@
         <!-- * Main Dashboard -->
         <div class="main-dashboard">
 
-            <!-- * Move to Trash Success Modal -->
-            <dialog class="us-modal" open data-move-to-trash-successful>
+            <!-- * Move to Trash Modal -->
+            <dialog class="asking-modal" open data-move-to-trash-modal>
+
+                <div class="modal-container">
+
+                    <!-- * Modal Header  -->
+                    <div class="modal-header">
+                        <h4>Trash</h4>
+                    </div>
+
+                    <!-- * Modal Body -->
+                    <div class="rowspan">
+                        <img src="../../res/assets/icons/modal-icon/asking.svg" alt="Asking">
+                        <p>Are you sure you want to move the 
+                            selected data to the trash?</p>
+                    </div>
+
+                    <!-- * Yes or No Button -->
+                    <div class="rowspan">
+                        <button class="modalButton" data-trash-yes>Yes</button>
+                        <button class="modalButton" data-trash-no>No</button>
+                    </div>
+
+                </div>
+
+            </dialog>   
+
+            <!-- * Move to Trash Successful Modal -->
+            <dialog class="us-modal" data-move-to-trash-successful>
 
                 <div class="modal-container">
 
@@ -36,7 +63,7 @@
 
                     <!-- * Okay Button -->
                     <div class="rowspan">
-                        <button class="button" data-update-modal>OK</button>
+                        <button class="button" data-close-success-modal>OK</button>
                     </div>
 
                 </div>
@@ -47,6 +74,7 @@
 
     </main>
 
+    <script src="../../res/js/app.js"></script>
     <script src="../../res/js/components/newApplicationModal.js" defer></script>
 
 </body>

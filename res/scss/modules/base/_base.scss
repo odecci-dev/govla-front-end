@@ -299,6 +299,14 @@ table {
     @include primaryButton;
 }
 
+.modalButton {
+    @include modalButton;
+}
+
+.modalAlertButton {
+    @include modalAlertButton;
+}
+
 // * Transparent Button Global
 .transparentButton {
     @include transparentButton;

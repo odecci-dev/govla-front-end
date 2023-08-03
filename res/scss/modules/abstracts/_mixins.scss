@@ -162,6 +162,31 @@
     }
 }
 
+// ***** Validation Modal Button ***** //
+// * Modal Primary Button
+@mixin modalButton {
+    @include primaryButton;
+    border-radius: $border-radius-x-small;
+    padding: $btn-padding-7;
+    &:hover {
+        background-color: $black;
+        color: $white;
+    }
+}
+
+// * Modal Alert Button
+@mixin modalAlertButton {
+    @include primaryButton;
+    background-color: $alert2;
+    border-radius: $border-radius-x-small;
+    padding: $btn-padding-7;
+    &:hover {
+        outline: 2px solid $alert2;
+        background-color: transparent;
+        color: $alert2;
+    }
+}
+
 // * Decline Button
 @mixin declineButton {
     @include primaryButton;
