@@ -3147,7 +3147,7 @@ body {
 
 .us-modal {
   margin: auto;
-  width: clamp(min(90vw, 44rem), 30%, max(100vw, 55rem));
+  width: clamp(min(90vw, 44rem), 30%, max(18vw, 44rem));
   z-index: 10;
   background-color: #FFFFFF;
   border-radius: 1rem;

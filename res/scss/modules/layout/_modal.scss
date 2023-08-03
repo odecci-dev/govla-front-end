@@ -1137,7 +1137,7 @@
 // * Updated Successfully Modal
 .us-modal {
     margin: auto;
-    width: clamp(min(90vw, 44rem), calc(100% - 70%), max(100vw, 55rem));
+    width: clamp(min(90vw, 44rem), calc(100% - 70%), max(18vw, 44rem));
     z-index: 10;
     background-color: $white;
     border-radius: $border-radius-medium;

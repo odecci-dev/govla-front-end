@@ -302,24 +302,46 @@ viewCreditInvestigation.forEach((ci) => {
     })
 })
 
-const saveModal = document.querySelectorAll('[data-save]')
+const saveButton = document.querySelectorAll('[data-save]')
 const updatedModal = document.querySelector('[data-updated-successfully]')
-const okayButton = document.querySelector('[data-update-modal]')
 
-if (saveModal) {
-    saveModal.forEach((save) => {
+if (saveButton) {
+    saveButton.forEach((save) => {
         save.addEventListener('click', () => {
             updatedModal.showModal()
         })
-
-        okayButton.addEventListener('click', () => {
-            updatedModal.setAttribute("closing", "");
-            updatedModal.addEventListener("animationend", () => {
-                updatedModal.removeAttribute("closing");
-                updatedModal.close();
-            }, { once: true });
-        })
-    
     })
 }
 
+const trashButton = document.querySelectorAll('[data-trash-button')
+const moveToTrashModal = document.querySelector('[data-move-to-trash-successful]')
+
+if (trashButton) {
+    // TODO: View trash container
+
+    trashButton.forEach((trash) => {
+        trash.addEventListener('click', () => {
+            moveToTrashModal.showModal()
+        })
+    })
+}
+
+
+const okayButton = document.querySelector('[data-update-modal]')
+
+if (okayButton) {
+    okayButton.addEventListener('click', () => {
+        updatedModal.setAttribute("closing", "");
+        updatedModal.addEventListener("animationend", () => {
+            updatedModal.removeAttribute("closing");
+            updatedModal.close();
+        }, { once: true });
+    })
+    okayButton.addEventListener('click', () => {
+        moveToTrashModal.setAttribute("closing", "");
+        moveToTrashModal.addEventListener("animationend", () => {
+            moveToTrashModal.removeAttribute("closing");
+            moveToTrashModal.close();
+        }, { once: true });
+    })
+}

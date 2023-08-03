@@ -794,3 +794,6 @@ Fourth Commit:
 
 Fifth Commit:
 • Modals: Updated Successfully Modal
+
+Sixth Commit:
+• Modals: Move To Trash Modal
