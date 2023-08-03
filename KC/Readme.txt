@@ -781,3 +781,6 @@ August 03, 2023 (Thursday)
 First Commit:
 • Application Module: Made the Upload Button on signature field responsive
 • SCSS: Moved _breakpoints to abstracts folder
+
+Second Commit:
+• Application Module: Made the fields with Add and Sub Button Responsive

@@ -1395,6 +1395,11 @@
                                         // grid-auto-rows: 1fr;
                                         grid-template-columns: minmax(0, 8fr) minmax(0, 1fr);
                                         gap: 0px 2rem;
+                                        // * Breakpoints
+                                        @include mdBreakpoint {
+                                            display: flex;
+                                            flex-direction: column;
+                                        }
                                         .input-wrapper {
                                             width: 100%;
                                         }
@@ -1410,6 +1415,10 @@
                                             display: flex;
                                             flex-direction: row;
                                             align-items: flex-end;
+                                            // * Breakpoints
+                                            @include mdBreakpoint {
+                                                justify-content: flex-end;
+                                            }
                                             gap: 2rem;
                                             button {
                                                 @include addOrSubButton;

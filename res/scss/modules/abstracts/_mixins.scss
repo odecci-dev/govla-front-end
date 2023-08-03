@@ -949,7 +949,7 @@
 // * Rowspan 3
 @mixin smallcon2Rowspan3 {
     @include displayGrid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 0.6fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 1fr) repeat(auto-fit, 20rem);
     gap: 0px $spacing-2x-large;
 }
 

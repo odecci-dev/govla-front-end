@@ -296,6 +296,10 @@ table .td-btn-wrapper {
   color: #D6A330;
 }
 
+.textBold {
+  font-weight: 700;
+}
+
 .textGreen {
   color: #36A623;
 }
@@ -1076,6 +1080,12 @@ table .td-btn-wrapper {
   display: flex;
   flex-direction: row;
   gap: 2rem;
+}
+@media (max-width: 1024px) {
+  .input-wrapper-add .inner-container-wrapper {
+    flex-direction: column;
+    align-items: flex-end;
+  }
 }
 .input-wrapper-add .inner-container-wrapper .input-inner-wrapper:first-of-type {
   width: 100%;
@@ -6465,7 +6475,7 @@ body {
   grid-auto-flow: row dense;
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-rows: minmax(0, 1fr);
-  grid-template-columns: minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 0.6fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 1fr) repeat(auto-fit, 20rem);
   gap: 0px 2rem;
 }
 .main-dashboard .view-co-borrower-con-2 .small-con-2 .rowspan:nth-of-type(3) .input-wrapper:last-of-type > span {
@@ -7408,7 +7418,7 @@ body {
   grid-auto-flow: row dense;
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-rows: minmax(0, 1fr);
-  grid-template-columns: minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 0.6fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.6fr) minmax(0, 1fr) repeat(auto-fit, 20rem);
   gap: 0px 2rem;
 }
 .main-dashboard .na-form-con .na-container-3 .small-con-2 .rowspan:nth-of-type(3) .input-wrapper:last-of-type > span {
@@ -8319,6 +8329,13 @@ body {
   grid-template-columns: minmax(0, 8fr) minmax(0, 1fr);
   gap: 0px 2rem;
 }
+@media (max-width: 1024px) {
+  .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child,
+  .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper,
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper {
   width: 100%;
@@ -8350,6 +8367,12 @@ body {
   flex-direction: row;
   align-items: flex-end;
   gap: 2rem;
+}
+@media (max-width: 1024px) {
+  .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper:last-of-type,
+  .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper:last-of-type {
+    justify-content: flex-end;
+  }
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper:last-of-type button,
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child .input-wrapper:last-of-type button {
