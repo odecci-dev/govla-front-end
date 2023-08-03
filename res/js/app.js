@@ -324,6 +324,14 @@ viewApplications.forEach((application) => {
     })
 })
 
+const viewCreditInvestigation = document.querySelectorAll('[data-view-ci]')
+viewCreditInvestigation.forEach((ci) => {
+    ci.addEventListener('click', () => {
+        url = '/KC/transactions/new-application-credit-investigation-view.html'
+        window.location = url
+    })
+})
+
 // const selectBoxZindex = document.querySelectorAll('.options-container')
 // selectBoxZindex.forEach((selectBox) => {
 //     if (selectBox.matches(".active")) {

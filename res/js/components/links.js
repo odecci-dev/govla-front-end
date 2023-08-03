@@ -16,7 +16,7 @@ if (linkButtons && dataDropdown && noDataDropdown) {
     const linkCollection = "/KC/collection/collection.html"
     const linkAreas = "/KC/collection/areas.html"
     const linkApplications = "/KC/transactions/new-application-list.html"
-    const linkCreditInvestigation = "/KC/transactions/new-application-credit-investigation.html"
+    const linkCreditInvestigation = "/KC/transactions/new-application-credit-investigation-list.html"
     const linkRemittance = "/KC/transactions/new-application-remittance.html"
     const linkApproval = "/KC/transactions/new-application-approval.html"
     const linkReleasing = "/KC/transactions/new-application-releasing.html"
