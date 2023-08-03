@@ -450,6 +450,7 @@ const declineApplicationModal = document.querySelector('[data-application-declin
 if (declineApplicationModal) {
     const openDeclineApplicationModal = document.querySelector('[data-open-application-decline]')
     const closeDeclineApplicationModal = document.querySelector('[data-close-application-decline]')
+    const submitDeclineReason = document.querySelector('[data-submit-decline-reason]')
 
     openDeclineApplicationModal.addEventListener('click', () => {
         declineApplicationModal.showModal()
@@ -458,11 +459,18 @@ if (declineApplicationModal) {
     closeDeclineApplicationModal.addEventListener('click', () => {
         declineApplicationModal.setAttribute("closing", "");
         declineApplicationModal.addEventListener("animationend", () => {
-            declineApplicationModal.removeAttribute("closing");
-            declineApplicationModal.close();
-        }, { once: true });
+            declineApplicationModal.removeAttribute("closing")
+            declineApplicationModal.close()
+        }, { once: true })
     
     })
+
+    submitDeclineReason.addEventListener("click", () => {
+        url = 'new-application.html'
+        location.href = url
+    })
+
+
 }
 
 

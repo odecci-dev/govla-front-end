@@ -451,14 +451,31 @@ table {
     // * Image Input Button
     input.input-image {
         @include inputImageButton;
+        // * Breakpoints
+        @include mdBreakpoint {
+            padding: 2.8rem 4rem;
+        }
+        @include breakpointMax(830px) {
+            padding: 3.6rem 4rem;
+        }
     }
     // * Applicant Signature
     #imageUploadApplicantSign::before {
         content: 'Upload Applicant Signature';
+        white-space: nowrap;
+        // * Breakpoints
+        @include mdBreakpoint {
+            white-space: pre-wrap;
+        }
     }
     // * Co-Maker Signature
     #imageUploadCoMakerSign::before {
         content: 'Upload Co-Maker Signature';
+        white-space: nowrap;
+        // * Breakpoints
+        @include mdBreakpoint {
+            white-space: pre-wrap;
+        }
     }
     .box-wrap {
         display: flex;

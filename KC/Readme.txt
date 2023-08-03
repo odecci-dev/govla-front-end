@@ -763,3 +763,21 @@ Fourth Commit:
 August 01, 2023 (Tuesday)
 First Commit:
 • Application Module: Implemented the Decline Modal 
+
+// TODO:
+
+Credit Investigation
+
+Validation Control
+Asking Modal
+Kung kumpleto na -> Validation Modal
+
+List Standard
+- Search
+- Filter
+- Sorting
+
+August 03, 2023 (Thursday)
+First Commit:
+• Application Module: Made the Upload Button on signature field responsive
+• SCSS: Moved _breakpoints to abstracts folder

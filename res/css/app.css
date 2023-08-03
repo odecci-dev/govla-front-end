@@ -963,11 +963,33 @@ table .td-btn-wrapper {
   background-color: #29292B;
   color: transparent;
 }
+@media (max-width: 1024px) {
+  .input-wrapper input.input-image {
+    padding: 2.8rem 4rem;
+  }
+}
+@media (max-width: 830px) {
+  .input-wrapper input.input-image {
+    padding: 3.6rem 4rem;
+  }
+}
 .input-wrapper #imageUploadApplicantSign::before {
   content: "Upload Applicant Signature";
+  white-space: nowrap;
+}
+@media (max-width: 1024px) {
+  .input-wrapper #imageUploadApplicantSign::before {
+    white-space: pre-wrap;
+  }
 }
 .input-wrapper #imageUploadCoMakerSign::before {
   content: "Upload Co-Maker Signature";
+  white-space: nowrap;
+}
+@media (max-width: 1024px) {
+  .input-wrapper #imageUploadCoMakerSign::before {
+    white-space: pre-wrap;
+  }
 }
 .input-wrapper .box-wrap {
   display: flex;
