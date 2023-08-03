@@ -522,12 +522,11 @@
                 }
             }
         }
-        // * Container Wrapper 1: New Member Container Wrapper
+        // * Container Wrapper 1: New Application Container Wrapper
         .na-container-wrapper {
-            // height: 120%;
             display: flex;
             flex-direction: row;
-            // * Container 1: New Member Form Fields and Buttons
+            // * Container 1: New Application Form Fields and Buttons
             .na-container-1 {
                 width: calc(100% - 20%);
                 padding: 2rem 1rem 2rem 2rem;
@@ -691,6 +690,8 @@
                                 // * Input Global Styles
                                 input {
                                     @include inputField;
+                                    color: $primary;
+                                    font-weight: $font-weight-bold;
                                 }
                             }
                         }
@@ -956,6 +957,12 @@
                 // * Rowspan 3: Rented or Owned, Years Of Business, Number Of Employees, Salary / Day, Value Of Stocks and Amount Of Sales / Day 
                 .rowspan:nth-of-type(3) {
                     @include smallcon4Rowspan3;
+                    .input-wrapper:nth-of-type(n+4) {
+                        input {
+                            color: $primary;
+                            font-weight: $font-weight-bold;
+                        }
+                    }
                 }
                 // * Rowspan 4: Rowspan 4: Add Business and Attach Files Buttons 
                 .rowspan:nth-of-type(4) {
@@ -1076,6 +1083,12 @@
                 // * Rowspan 2: Applied Loan Amount, Terms Of Payment and Purpose
                 .rowspan:nth-of-type(2) {
                     @include naSmallcon3Rowspan2;
+                    .input-wrapper {
+                        input {
+                            color: $green;
+                            font-weight: $font-weight-bold;
+                        }
+                    }
                 }
             }
         }

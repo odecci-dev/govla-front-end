@@ -623,6 +623,8 @@
                             // * Input Global Styles
                             input {
                                 @include inputField;
+                                color: $primary;
+                                font-weight: $font-weight-bold;
                             }
                         }
                     }

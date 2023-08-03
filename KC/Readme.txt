@@ -784,3 +784,7 @@ First Commit:
 
 Second Commit:
 • Application Module: Made the fields with Add and Sub Button Responsive
+
+Third Commit:
+• Application Module: Minor changes
+- Font color and font weight of input fields from Monthly Bills to Business Info to Loan Details
