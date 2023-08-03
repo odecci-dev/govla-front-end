@@ -1134,4 +1134,95 @@
     }
 }
 
+// * Updated Successfully Modal
+.us-modal {
+    margin: auto;
+    width: clamp(min(90vw, 44rem), calc(100% - 70%), max(100vw, 55rem));
+    z-index: 10;
+    background-color: $white;
+    border-radius: $border-radius-medium;
+    overflow-x: hidden;
+    &::backdrop {
+        background-color: rgba($black, 0.7);
+    }
+    // * Modal Open Attribute
+    &[open] {
+        animation: fade-in 500ms forwards, slide-up 500ms;
+    }
+    &::backdrop[open] {
+        animation: fade-in 500ms forwards;
+    }
+    // * Modal Custom Closing Attribute
+    &[closing] {
+        display: block;
+        pointer-events: none;
+        inset: 0;
+        animation: fade-out 500ms forwards, slide-down 500ms forwards;
+    }
+    &::backdrop[closing] {
+        animation: fade-out 500ms forwards;
+    }
+    // * Hide Scroll Bars
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    // * Hide Scroll Bars
+    & {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+    // * Member List & Borrower Filter
+    .modal-container {
+        // @include containerDefault;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // grid-template-rows: minmax(0, 0.6fr) repeat(2, minmax(0, 1fr)) minmax(0, 0.6fr);
+        gap: $spacing-large 0;
+        padding: $spacing-large $spacing-2x-large $spacing-2x-large;
+        // * Modal Header and Exit Button 
+        .modal-header {
+            align-self: flex-start;
+            position: relative;
+            padding-bottom: 2rem;
+            &::after {
+                content: '';
+                position: absolute;
+                height: 2rem;
+                width: 100%;
+                // background-color: $primary;
+                box-shadow: $box-shadow-4;
+                top: 100%;
+                left: 0;
+                transform: translateX(14.9rem) scaleX(5.5);
+            }
+            h4 {
+                font-weight: $font-weight-medium;
+                font-size: $font-size-large;
+            }
+        }
+        // * Modal Body
+        .rowspan:nth-of-type(2) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: $spacing-large 0 ;
+            span {
+                font-size: 2.8rem;
+                font-weight: $font-weight-bold;
+            }
+            p {
+                font-size: 2rem;
+            }
+        }
+        // * Okay Button
+        .rowspan:nth-of-type(3) {
+
+        }
+    }
+
+}
+
 // ***** Filter Modals ***** //

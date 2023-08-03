@@ -791,3 +791,6 @@ Third Commit:
 
 Fourth Commit:
 • Credit Investigation Module: Completed✅ CI List
+
+Fifth Commit:
+• Modals: Updated Successfully Modal

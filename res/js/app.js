@@ -285,36 +285,6 @@ for (let location of locations) {
     })
 }
 
-// // * Field Area Maintenance: Table Area Checkbox Toggle
-// const areaCheckboxes = document.querySelectorAll('[data-area-checkbox]');
-
-// function checkAll2(tableCheckBox) {
-//     if (tableCheckBox.checked == true) {
-//         areaCheckboxes.forEach(function(checkbox) {
-//             checkbox.checked = true;
-//         })
-//     } else {
-//         areaCheckboxes.forEach(function(checkbox) {
-//             checkbox.checked = false;
-//         })
-//     }
-// }
-
-// // * Field Area Maintenance: Table Locations Checkbox Toggle
-// const locationCheckboxes = document.querySelectorAll('[data-location-checkbox]');
-
-// function checkAll3(tableCheckBox) {
-//     if (tableCheckBox.checked == true) {
-//         locationCheckboxes.forEach(function(checkbox) {
-//             checkbox.checked = true;
-//         })
-//     } else {
-//         locationCheckboxes.forEach(function(checkbox) {
-//             checkbox.checked = false;
-//         })
-//     }
-// }
-
 
 const viewApplications = document.querySelectorAll('[data-view-application]')
 viewApplications.forEach((application) => {
@@ -332,9 +302,24 @@ viewCreditInvestigation.forEach((ci) => {
     })
 })
 
-// const selectBoxZindex = document.querySelectorAll('.options-container')
-// selectBoxZindex.forEach((selectBox) => {
-//     if (selectBox.matches(".active")) {
-//         selectBox.style.zIndex = '98'
-//     }
-// })
+const saveModal = document.querySelectorAll('[data-save]')
+const updatedModal = document.querySelector('[data-updated-successfully]')
+const okayButton = document.querySelector('[data-update-modal]')
+
+if (saveModal) {
+    saveModal.forEach((save) => {
+        save.addEventListener('click', () => {
+            updatedModal.showModal()
+        })
+
+        okayButton.addEventListener('click', () => {
+            updatedModal.setAttribute("closing", "");
+            updatedModal.addEventListener("animationend", () => {
+                updatedModal.removeAttribute("closing");
+                updatedModal.close();
+            }, { once: true });
+        })
+    
+    })
+}
+

@@ -1803,6 +1803,14 @@ body {
     transform: scale(1);
   }
 }
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 @keyframes slide-down {
   0% {
     transform: translateY(0%);
@@ -3137,6 +3145,80 @@ body {
   place-self: flex-end;
 }
 
+.us-modal {
+  margin: auto;
+  width: clamp(min(90vw, 44rem), 30%, max(100vw, 55rem));
+  z-index: 10;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  overflow-x: hidden;
+}
+.us-modal::backdrop {
+  background-color: rgba(41, 41, 43, 0.7);
+}
+.us-modal[open] {
+  animation: fade-in 500ms forwards, slide-up 500ms;
+}
+.us-modal::backdrop[open] {
+  animation: fade-in 500ms forwards;
+}
+.us-modal[closing] {
+  display: block;
+  pointer-events: none;
+  inset: 0;
+  animation: fade-out 500ms forwards, slide-down 500ms forwards;
+}
+.us-modal::backdrop[closing] {
+  animation: fade-out 500ms forwards;
+}
+.us-modal::-webkit-scrollbar {
+  display: none;
+}
+.us-modal {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.us-modal .modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem 0;
+  padding: 1.5rem 2rem 2rem;
+}
+.us-modal .modal-container .modal-header {
+  align-self: flex-start;
+  position: relative;
+  padding-bottom: 2rem;
+}
+.us-modal .modal-container .modal-header::after {
+  content: "";
+  position: absolute;
+  height: 2rem;
+  width: 100%;
+  box-shadow: inset 0px 4.6px 2px -3px rgba(0, 0, 0, 0.25);
+  top: 100%;
+  left: 0;
+  transform: translateX(14.9rem) scaleX(5.5);
+}
+.us-modal .modal-container .modal-header h4 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+.us-modal .modal-container .rowspan:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem 0;
+}
+.us-modal .modal-container .rowspan:nth-of-type(2) span {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.us-modal .modal-container .rowspan:nth-of-type(2) p {
+  font-size: 2rem;
+}
 .main-dashboard {
   position: fixed;
   right: 0;
