@@ -285,7 +285,7 @@ for (let location of locations) {
     })
 }
 
-
+// * View Applications Button
 const viewApplications = document.querySelectorAll('[data-view-application]')
 viewApplications.forEach((application) => {
     application.addEventListener('click', () => {
@@ -294,6 +294,7 @@ viewApplications.forEach((application) => {
     })
 })
 
+// * View Credit Investigation Application Button
 const viewCreditInvestigation = document.querySelectorAll('[data-view-ci]')
 viewCreditInvestigation.forEach((ci) => {
     ci.addEventListener('click', () => {
@@ -302,8 +303,12 @@ viewCreditInvestigation.forEach((ci) => {
     })
 })
 
+// ***** Confirmation Modals ***** 
+
+// * Update Modal
 const saveButton = document.querySelectorAll('[data-save]')
 const updatedModal = document.querySelector('[data-updated-successfully]')
+const okayButton1 = document.querySelector('[data-update-modal]')
 
 if (saveButton) {
     saveButton.forEach((save) => {
@@ -311,37 +316,38 @@ if (saveButton) {
             updatedModal.showModal()
         })
     })
+    okayButton1.addEventListener('click', () => {
+            updatedModal.setAttribute("closing", "");
+            updatedModal.addEventListener("animationend", () => {
+                updatedModal.removeAttribute("closing");
+                updatedModal.close();
+            }, { once: true });
+    })
 }
 
+// * Move To Trash Modal
 const trashButton = document.querySelectorAll('[data-trash-button')
 const moveToTrashModal = document.querySelector('[data-move-to-trash-successful]')
+const okayButton2 = document.querySelector('[data-update-modal-2]')
 
 if (trashButton) {
     // TODO: View trash container
 
-    trashButton.forEach((trash) => {
+    trashButton.forEach((trash) => {    
         trash.addEventListener('click', () => {
             moveToTrashModal.showModal()
         })
     })
-}
-
-
-const okayButton = document.querySelector('[data-update-modal]')
-
-if (okayButton) {
-    okayButton.addEventListener('click', () => {
-        updatedModal.setAttribute("closing", "");
-        updatedModal.addEventListener("animationend", () => {
-            updatedModal.removeAttribute("closing");
-            updatedModal.close();
-        }, { once: true });
-    })
-    okayButton.addEventListener('click', () => {
-        moveToTrashModal.setAttribute("closing", "");
-        moveToTrashModal.addEventListener("animationend", () => {
-            moveToTrashModal.removeAttribute("closing");
-            moveToTrashModal.close();
-        }, { once: true });
+    okayButton2.addEventListener('click', () => {
+            moveToTrashModal.setAttribute("closing", "");
+            moveToTrashModal.addEventListener("animationend", () => {
+                moveToTrashModal.removeAttribute("closing");
+                moveToTrashModal.close();
+            }, { once: true });
     })
 }
+
+
+
+        
+        

@@ -316,6 +316,58 @@
         <!-- * Main Dashboard -->
         <div class="main-dashboard">
 
+            <!-- * Updated Successfully Modal -->
+            <dialog class="us-modal" data-updated-successfully>
+
+                <div class="modal-container">
+
+                    <!-- * Modal Header  -->
+                    <div class="modal-header">
+                        <h4>Success</h4>
+                    </div>
+
+                    <!-- * Modal Body -->
+                    <div class="rowspan">
+                        <img src="../../res/assets/icons/modal-icon/status-success.svg" alt="Updated Successfully">
+                        <span>Updated</span>
+                        <p>New data was successfully updated</p>
+                    </div>
+
+                    <!-- * Okay Button -->
+                    <div class="rowspan">
+                        <button class="button" data-update-modal>OK</button>
+                    </div>
+
+                </div>
+
+            </dialog> 
+
+            <!-- * Move to Trash Success Modal -->
+            <dialog class="us-modal" data-move-to-trash-successful>
+
+                <div class="modal-container">
+
+                    <!-- * Modal Header  -->
+                    <div class="modal-header">
+                        <h4>Success</h4>
+                    </div>
+
+                    <!-- * Modal Body -->
+                    <div class="rowspan">
+                        <img src="../../res/assets/icons/modal-icon/status-success.svg" alt="Updated Successfully">
+                        <span>Move to Trash</span>
+                        <p>Selected data was successfully moved to Trash</p>
+                    </div>
+
+                    <!-- * Okay Button -->
+                    <div class="rowspan">
+                        <button class="button" data-update-modal-2>OK</button>
+                    </div>
+
+                </div>
+
+            </dialog>   
+
             <!-- * New-Application-Form-Container -->
             <form action="" class="na-form-con" autocomplete="off">
 
@@ -380,7 +432,7 @@
                         <div class="btn-wrapper">
 
                             <button type="button" class="button" id="data-open-new-group-modal">Add Member</button>
-                            <button type="button" class="button">Save</button>
+                            <button type="button" class="button" data-save>Save</button>
 
                         </div>
 
@@ -435,7 +487,7 @@
                                 <td class="td-btns">
                                     <div class="td-btn-wrapper">
                                         <button type="button" class="a-btn-view-2" data-view-group-member>View</button>
-                                        <button type="button" class="a-btn-trash-2">Trash</button>
+                                        <button type="button" class="a-btn-trash-2" data-trash-button>Trash</button>
                                     </div>
                                 </td>
 
@@ -468,7 +520,7 @@
 
                                     <div class="td-btn-wrapper">
                                         <button type="button" class="a-btn-view-2" data-view-group-member>View</button>
-                                        <button type="button" class="a-btn-trash-2">Trash</button>
+                                        <button type="button" class="a-btn-trash-2" data-trash-button>Trash</button>
                                     </div>
 
                                 </td>
@@ -503,7 +555,7 @@
                                 <td class="td-btns">
                                     <div class="td-btn-wrapper">
                                         <button type="button" class="a-btn-view-2" data-view-group-member>View</button>
-                                        <button type="button" class="a-btn-trash-2">Trash</button>
+                                        <button type="button" class="a-btn-trash-2" data-trash-button>Trash</button>
                                     </div>
                                 </td>
 
@@ -536,7 +588,7 @@
 
                                     <div class="td-btn-wrapper">
                                         <button type="button" class="a-btn-view-2" data-view-group-member>View</button>
-                                        <button type="button" class="a-btn-trash-2">Trash</button>
+                                        <button type="button" class="a-btn-trash-2" data-trash-button>Trash</button>
                                     </div>
 
                                 </td>
@@ -571,7 +623,7 @@
                                 <td class="td-btns">
                                     <div class="td-btn-wrapper">
                                         <button type="button" class="a-btn-view-2" data-view-group-member>View</button>
-                                        <button type="button" class="a-btn-trash-2">Trash</button>
+                                        <button type="button" class="a-btn-trash-2" data-trash-button>Trash</button>
                                     </div>
                                 </td>
 
@@ -604,7 +656,7 @@
 
                                     <div class="td-btn-wrapper">
                                         <button type="button" class="a-btn-view-2" data-view-group-member>View</button>
-                                        <button type="button" class="a-btn-trash-2">Trash</button>
+                                        <button type="button" class="a-btn-trash-2" data-trash-button>Trash</button>
                                     </div>
 
                                 </td>
@@ -639,7 +691,7 @@
                                 <td class="td-btns">
                                     <div class="td-btn-wrapper">
                                         <button type="button" class="a-btn-view-2" data-view-group-member>View</button>
-                                        <button type="button" class="a-btn-trash-2">Trash</button>
+                                        <button type="button" class="a-btn-trash-2" data-trash-button>Trash</button>
                                     </div>
                                 </td>
 
@@ -672,7 +724,7 @@
 
                                     <div class="td-btn-wrapper">
                                         <button type="button" class="a-btn-view-2" data-view-group-member>View</button>
-                                        <button type="button" class="a-btn-trash-2">Trash</button>
+                                        <button type="button" class="a-btn-trash-2" data-trash-button>Trash</button>
                                     </div>
 
                                 </td>
@@ -707,7 +759,7 @@
                                 <td class="td-btns">
                                     <div class="td-btn-wrapper">
                                         <button type="button" class="a-btn-view-2" data-view-group-member>View</button>
-                                        <button type="button" class="a-btn-trash-2">Trash</button>
+                                        <button type="button" class="a-btn-trash-2" data-trash-button>Trash</button>
                                     </div>
                                 </td>
 
@@ -740,12 +792,150 @@
 
                                     <div class="td-btn-wrapper">
                                         <button type="button" class="a-btn-view-2" data-view-group-member>View</button>
-                                        <button type="button" class="a-btn-trash-2">Trash</button>
+                                        <button type="button" class="a-btn-trash-2" data-trash-button>Trash</button>
                                     </div>
 
                                 </td>
 
                             </tr>
+                            <tr>
+
+                                <!-- * Checkbox Opt -->
+                                <td><input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox></td>
+
+                                <td>
+                                    <!-- * Borrower Data-->
+                                    <div class="td-wrapper">
+                                        <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana">
+                                        <span class="td-num"></span>
+                                        <span class="td-name">Dela Cruz, Juana</span>
+                                    </div>
+
+                                </td>
+
+                                <td>
+
+                                    <!-- * Co-Makers Data-->
+                                    <div class="td-wrapper">
+                                        <img src="../../res/assets/icons/sample-dp/CoMaker-1.svg" alt="Alfreds Futterkiste">
+                                        <span class="td-name">Palermo, Juliana</span>
+                                    </div>
+
+                                </td>
+
+                                <!-- * Table View and Trash Button -->
+                                <td class="td-btns">
+                                    <div class="td-btn-wrapper">
+                                        <button type="button" class="a-btn-view-2" data-view-group-member>View</button>
+                                        <button type="button" class="a-btn-trash-2" data-trash-button>Trash</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <!-- * Checkbox -->
+                                <td><input type="checkbox" class="checkbox" id=" checkbox" data-select-checkbox></td>
+
+                                <!-- * Borrower Data-->
+                                <td>
+                                    <div class="td-wrapper">
+                                        <img src="../../res/assets/icons/sample-dp/Borrower-2.svg" alt="">
+                                        <span class="td-num"></span>
+                                        <span class="td-name">Beverly, Haily</span>
+                                    </div>
+                                </td>
+
+                                <!-- * Co-Makers Data-->
+                                <td>
+                                    <div class="td-wrapper">
+                                        <img src="../../res/assets/icons/sample-dp/CoMaker-2.svg" alt="">
+                                        <span class="td-name">Barbosa, June</span>
+                                    </div>
+                                </td>
+
+                                <!-- * Table View and Trash Button -->
+                                <td class="td-btns">
+
+                                    <div class="td-btn-wrapper">
+                                        <button type="button" class="a-btn-view-2" data-view-group-member>View</button>
+                                        <button type="button" class="a-btn-trash-2" data-trash-button>Trash</button>
+                                    </div>
+
+                                </td>
+
+                            </tr>
+                            <tr>
+
+                                <!-- * Checkbox Opt -->
+                                <td><input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox></td>
+
+                                <td>
+                                    <!-- * Borrower Data-->
+                                    <div class="td-wrapper">
+                                        <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana">
+                                        <span class="td-num"></span>
+                                        <span class="td-name">Dela Cruz, Juana</span>
+                                    </div>
+
+                                </td>
+
+                                <td>
+
+                                    <!-- * Co-Makers Data-->
+                                    <div class="td-wrapper">
+                                        <img src="../../res/assets/icons/sample-dp/CoMaker-1.svg" alt="Alfreds Futterkiste">
+                                        <span class="td-name">Palermo, Juliana</span>
+                                    </div>
+
+                                </td>
+
+                                <!-- * Table View and Trash Button -->
+                                <td class="td-btns">
+                                    <div class="td-btn-wrapper">
+                                        <button type="button" class="a-btn-view-2" data-view-group-member>View</button>
+                                        <button type="button" class="a-btn-trash-2" data-trash-button>Trash</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <!-- * Checkbox -->
+                                <td><input type="checkbox" class="checkbox" id=" checkbox" data-select-checkbox></td>
+
+                                <!-- * Borrower Data-->
+                                <td>
+                                    <div class="td-wrapper">
+                                        <img src="../../res/assets/icons/sample-dp/Borrower-2.svg" alt="">
+                                        <span class="td-num"></span>
+                                        <span class="td-name">Beverly, Haily</span>
+                                    </div>
+                                </td>
+
+                                <!-- * Co-Makers Data-->
+                                <td>
+                                    <div class="td-wrapper">
+                                        <img src="../../res/assets/icons/sample-dp/CoMaker-2.svg" alt="">
+                                        <span class="td-name">Barbosa, June</span>
+                                    </div>
+                                </td>
+
+                                <!-- * Table View and Trash Button -->
+                                <td class="td-btns">
+
+                                    <div class="td-btn-wrapper">
+                                        <button type="button" class="a-btn-view-2" data-view-group-member>View</button>
+                                        <button type="button" class="a-btn-trash-2" data-trash-button>Trash</button>
+                                    </div>
+
+                                </td>
+
+                            </tr>
+                            
+                            
 
                         </table>
 

@@ -796,4 +796,7 @@ Fifth Commit:
 • Modals: Updated Successfully Modal
 
 Sixth Commit:
-• Modals: Move To Trash Modal
+• Modals: Move To Trash Successfully Modal
+
+Seventh Commit:
+• Modals: Deleted Successfully Modal

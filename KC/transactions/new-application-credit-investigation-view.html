@@ -316,7 +316,7 @@
         <div class="main-dashboard">
 
             <!-- * New-Application-Form-Container -->
-            <form action="" class="na-form-con" autocomplete="off">
+            <form action="" method="GET" class="na-form-con" autocomplete="off">
 
                 <!-- * New Application Progress Bar Container -->
                 <div class="na-progress-bar-container">
@@ -362,10 +362,10 @@
                     <div class="wrapper-1">
                         <h3>Notes/Remarks</h3>
                         <div class="btn-wrapper">
-                            <a href="new-application-approval.html">
-                                <button type="button" class="button">Submit for approval</button>
-                            </a>
-                            <button type="button" class="declineButton">Decline</button>
+                            <!-- <a href="new-application-approval.html"> -->
+                                <button type="button" class="button" data-submit-for-approval>Submit for approval</button>
+                            <!-- </a> -->
+                            <button type="submit" class="declineButton">Decline</button>
                         </div>
                     </div>
                     <div class="wrapper-2">
@@ -2792,6 +2792,7 @@
     <script src="../../res/js/components/links.js "></script>
     <script src="../../res/js/components/nav.js "></script>
     <script src="../../res/js/components/newApplication.js " defer></script>
+    <script src="../../res/js/components/validation.js" defer></script>
 
 </body>
 

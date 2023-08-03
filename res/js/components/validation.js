@@ -25,7 +25,6 @@ document.querySelectorAll("input[type='text'], input[type='number'], input[type=
             signatureValidation.forEach((signatureBtn) => {
                 signatureBtn.classList.remove('input-signature-is-valid')
                 signatureBtn.classList.add('input-signature-is-invalid')
-                // signatureBtn.after(p);
             })
         } else {
             p.classList.remove('is-invalid')
@@ -51,7 +50,4 @@ document.querySelectorAll("input[type='text'], input[type='number'], input[type=
         }
     })
 
-    // if (condition) {
-        
-    // }
 })
