@@ -806,5 +806,10 @@ Eight Commit:
 
 August 07, 2023 (Monday)
 First Commit:
-• Started the implementation of collection list
+• Started the implementation of Collection List
 - KC/collection/collection-list.html
+
+Second Commit:
+• Completed✅ the implementation of Collection List
+• Started the implementation of Adding New Collection
+

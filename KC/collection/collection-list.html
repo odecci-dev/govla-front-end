@@ -14,356 +14,6 @@
       <!-- * Main Dashboard -->
         <div class="main-dashboard">
 
-        <!-- * New Application Modal -->
-        <dialog class="na-modal" data-new-application-modal>
-
-            <div class="modal-container">
-
-                <!-- * Exit Button -->
-                <button class="exit-button" id="data-close-new-application-modal">
-                    <img src="../../res/assets/icons/x-circle.svg" alt="exit">
-                </button>
-
-                <!-- * Choose Type of Loan -->
-                <div class="rowspan">
-                    <h3>Choose Type of Loan</h3>
-
-                    <!-- * Type Of Loan Dropdown Menu -->
-                    <div class="loan-type-dropdown">
-
-                        <!-- * Type Of Loan -->
-                        <div class="input-wrapper">
-
-                            <div class="select-box">
-
-                                <div class="options-container" data-type-opt-con>
-
-                                    <div class="option" data-type-loan-opt data-individual-loan-link>
-
-                                        <input type="radio" class="radio" name="category" />
-                                        <label for="Individual Loan">
-                                            <h4>Individual Loan</h4>
-                                        </label>
-
-                                    </div>
-
-                                    <div class="option" data-type-loan-opt data-group-loan-link>
-
-                                        <input type="radio" class="radio" name="category" />
-                                        <label for="Group Loan">
-                                            <h4>Group Loan</h4>
-                                        </label>
-
-                                    </div>
-
-                                    <div class="option" data-type-loan-opt>
-
-                                        <input type="radio" class="radio" name="category" />
-                                        <label for="Sample Loan">
-                                            <h4>Sample Loan</h4>
-                                        </label>
-
-                                    </div>
-
-                                </div>
-                                
-                                <div class="selected" data-type-loan-select>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- * Search for existing member -->
-                <div class="rowspan">
-
-                    <!-- * Search for existing member -->
-                    <h3>Search for existing member</h3>
-
-                    <div class="wrapper">
-
-                        <!-- * Search Bar -->
-                        <div class="search-wrap">
-                            <input type="search" id="search" name="search" placeholder="Search name or member ID">
-                            <img src="../../res/assets/icons/magnifyingglass.svg" alt="search">
-                        </div>
-
-                        <!-- * Create New Button -->
-                        <button class="button" data-link-to-newapp>Create New</button>
-
-                    </div>
-
-
-                </div>
-
-                <!-- * Table -->
-                <div class="rowspan">
-
-                    <!-- * Container: Table and Pagination -->
-                    <div class="na-table-con">
-
-                        <!-- * Table Container -->
-                        <div class="table-container">
-
-                            <!-- * Members Table -->
-                            <table id="newApplicationModalTable">
-
-                                <!-- * Table Header -->
-                                <tr>
-
-                                    <!-- * Checkbox ALl
-                                    <th><input type="checkbox" class="checkbox" id="allCheckbox" onchange="checkAll(this)"></th> -->
-
-                                    <!-- * Header Name -->
-                                    <th><span class="th-name">Name</span></th>
-
-                                    <!-- * Header Member ID -->
-                                    <th><span class="th-name">Member ID</span></th>
-
-                                </tr>
-
-
-                                <!-- * Members Data -->
-                                <tr>
-
-                                    <!-- * Checkbox Opt
-                                    <td><input type="checkbox" class="checkbox" id="checkbox" data-checkbox></td> -->
-
-                                    <td>
-
-                                        <!-- * Data Name-->
-                                        <span class="td-name">Dela Cruz, Juana</span>
-
-                                    </td>
-
-                                    <td>
-
-                                        <!-- * Data Member ID-->
-                                        <span class="td-name">778 8596 2125</span>
-
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-
-                                    <!-- * Checkbox Opt
-                                    <td><input type="checkbox" class="checkbox" id="checkbox" data-checkbox></td> -->
-
-                                    <td>
-
-                                        <!-- * Data Name-->
-                                        <span class="td-name">Dela Cruz, Juana</span>
-
-                                    </td>
-
-                                    <td>
-
-                                        <!-- * Data Member ID-->
-                                        <span class="td-name">778 8596 2125</span>
-
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-
-                                    <!-- * Checkbox Opt
-                                    <td><input type="checkbox" class="checkbox" id="checkbox" data-checkbox></td> -->
-
-                                    <td>
-
-                                        <!-- * Data Name-->
-                                        <span class="td-name">Dela Cruz, Juana</span>
-
-                                    </td>
-
-                                    <td>
-
-                                        <!-- * Data Member ID-->
-                                        <span class="td-name">778 8596 2125</span>
-
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-
-                                    <!-- * Checkbox Opt
-                                    <td><input type="checkbox" class="checkbox" id="checkbox" data-checkbox></td> -->
-
-                                    <td>
-
-                                        <!-- * Data Name-->
-                                        <span class="td-name">Dela Cruz, Juana</span>
-
-                                    </td>
-
-                                    <td>
-
-                                        <!-- * Data Member ID-->
-                                        <span class="td-name">778 8596 2125</span>
-
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-
-                                    <!-- * Checkbox Opt
-                                    <td><input type="checkbox" class="checkbox" id="checkbox" data-checkbox></td> -->
-
-                                    <td>
-
-                                        <!-- * Data Name-->
-                                        <span class="td-name">Dela Cruz, Juana</span>
-
-                                    </td>
-
-                                    <td>
-
-                                        <!-- * Data Member ID-->
-                                        <span class="td-name">778 8596 2125</span>
-
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-
-                                    <!-- * Checkbox Opt
-                                    <td><input type="checkbox" class="checkbox" id="checkbox" data-checkbox></td> -->
-
-                                    <td>
-
-                                        <!-- * Data Name-->
-                                        <span class="td-name">Dela Cruz, Juana</span>
-
-                                    </td>
-
-                                    <td>
-
-                                        <!-- * Data Member ID-->
-                                        <span class="td-name">778 8596 2125</span>
-
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-
-                                    <!-- * Checkbox Opt
-                                    <td><input type="checkbox" class="checkbox" id="checkbox" data-checkbox></td> -->
-
-                                    <td>
-
-                                        <!-- * Data Name-->
-                                        <span class="td-name">Dela Cruz, Juana</span>
-
-                                    </td>
-
-                                    <td>
-
-                                        <!-- * Data Member ID-->
-                                        <span class="td-name">778 8596 2125</span>
-
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-
-                                    <!-- * Checkbox Opt
-                                    <td><input type="checkbox" class="checkbox" id="checkbox" data-checkbox></td> -->
-
-                                    <td>
-
-                                        <!-- * Data Name-->
-                                        <span class="td-name">Dela Cruz, Juana</span>
-
-                                    </td>
-
-                                    <td>
-
-                                        <!-- * Data Member ID-->
-                                        <span class="td-name">778 8596 2125</span>
-
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-
-                                    <!-- * Checkbox Opt
-                                    <td><input type="checkbox" class="checkbox" id="checkbox" data-checkbox></td> -->
-
-                                    <td>
-
-                                        <!-- * Data Name-->
-                                        <span class="td-name">Dela Cruz, Juana</span>
-
-                                    </td>
-
-                                    <td>
-
-                                        <!-- * Data Member ID-->
-                                        <span class="td-name">778 8596 2125</span>
-
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-
-                                    <!-- * Checkbox Opt
-                                    <td><input type="checkbox" class="checkbox" id="checkbox" data-checkbox></td> -->
-
-                                    <td>
-
-                                        <!-- * Data Name-->
-                                        <span class="td-name">Dela Cruz, Juana</span>
-
-                                    </td>
-
-                                    <td>
-
-                                        <!-- * Data Member ID-->
-                                        <span class="td-name">778 8596 2125</span>
-
-                                    </td>
-
-
-                                </tr>
-
-                            </table>
-
-                        </div>
-
-                        <!-- * Pagination Container -->
-                        <div class="pagination-container">
-
-                            <!-- * Pagination Links -->
-                            <a href="#"><img src="../../res/assets/icons/caret-left.svg" alt="caret-left"></a>
-                            <a href="#">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
-                            <a href="#"><img src="../../res/assets/icons/caret-right.svg" alt="caret-right"></a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </dialog>
-
         <!-- * Filter Modal -->
         <dialog class="am-filter-modal" data-filter-member-modal>
 
@@ -453,88 +103,59 @@
 
         </dialog>
 
-        <!-- * Move to Trash Success Modal -->
-        <dialog class="us-modal" data-move-to-trash-successful>
-
-            <div class="modal-container">
-
-                <!-- * Modal Header  -->
-                <div class="modal-header">
-                    <h4>Success</h4>
-                </div>
-
-                <!-- * Modal Body -->
-                <div class="rowspan">
-                    <img src="../../res/assets/icons/modal-icon/status-success.svg" alt="Updated Successfully">
-                    <span>Move to Trash</span>
-                    <p>Selected data was successfully moved to Trash</p>
-                </div>
-
-                <!-- * Okay Button -->
-                <div class="rowspan">
-                    <button class="button" data-update-modal>OK</button>
-                </div>
-
-            </div>
-
-        </dialog>   
-
         <div class="na-form-con">
 
-            <!-- * Application List Containers -->
+            <!-- * Collection List Containers -->
             <!-- * Container 1: User list Header, Buttons, and Searchbar -->
 
             <div class="nal-con-1">
-            <h2>Application List</h2>
-            <p class="p-1">
-              Total of <span id="numOfApplicants">50</span> active users
-            </p>
+                
+                <h2>Collection List</h2>
+                <p class="p-1">
+                    You have <span id="numOfCollectionList">10</span> Collection list
+                </p>
   
-            <!-- * Button Container -->
-            <div class="container">
+                <!-- * Button Container -->
+                <div class="container">
 
-              <!-- * Button Wrapper -->
-              <div class="wrapper">
+                    <!-- * Button Wrapper -->
+                    <div class="wrapper">
 
-                <!-- * Add New Button -->
-                  <button class="button" id="data-open-new-application-modal">
-                    <span>Add New</span>
-                  </button>
+                        <!-- * Add New Button -->
+                        <button class="button" data-open-new-collection-modal>
+                            <span>Add New</span>
+                        </button>
 
-              </div>
-  
-              <!-- * Search Wrapper -->
-              <div class="wrapper">
+                    </div>
+        
+                    <!-- * Search Wrapper -->
+                    <div class="wrapper">
 
-                <!-- * Filter Button -->
-                <button data-open-filter-member-modal>
-                  <img src="../../res/assets/icons/filter.svg" alt="filter" />
-                </button>
-  
-                <!-- * Search Bar -->
-                <div class="search-wrap">
-                  <input
-                    type="search"
-                    id="search"
-                    name="search"
-                    placeholder="Search"
-                  />
-                  <img
-                    src="../../res/assets/icons/magnifyingglass.svg"
-                    alt="search"
-                  />
+                        <!-- * Filter Button -->
+                        <button data-open-filter-member-modal>
+                        <img src="../../res/assets/icons/filter.svg" alt="filter" />
+                        </button>
+        
+                        <!-- * Search Bar -->
+                        <div class="search-wrap">
+                        <input
+                            type="search"
+                            id="search"
+                            name="search"
+                            placeholder="Search"
+                        />
+                        <img
+                            src="../../res/assets/icons/magnifyingglass.svg"
+                            alt="search"
+                        />
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-  
-            <!-- * View Trash Button -->
-                  <div class="btn-container">
-                      <button class="transparentButton">View Trash</button>
-                  </div>
+
             </div>
 
             <!-- * Container 2: User List - Table and Pagination -->
-            <div class="nal-con-2">
+            <div class="cll-con-2">
     
                 <!-- * Table Container -->
                 <div class="table-container">
@@ -543,741 +164,475 @@
                 <table>
                     <!-- * Table Header -->
                     <tr>
-                        <!-- * Checkbox All-->
-                        <th>
-                            <input
-                            type="checkbox"
-                            class="checkbox"
-                            data-select-all-checkbox
-                            />
-                        </th>
-        
-                        <!-- * Borrower -->
+                    
+                        <!-- * Reference No. -->
                         <th>
                             <div class="th-wrapper">
-                                <span class="th-name">Borrower</span>
-                                <img src="../../res/assets/icons/funnel-simple.svg" alt="funnel">
+                                <span class="th-name">Reference No.</span>
                             </div>
                         </th>
         
-                        <!-- * Borrower Contact # -->
+                        <!-- * Total Collectible -->
                         <th>
-                            <span class="th-name">Borrower Contact #</span>
+                            <span class="th-name">Total Collectible</span>
                         </th>
         
-                        <!-- * Co-Borrower -->
+                        <!-- * Total Balance -->
                         <th>
-                            <div class="th-wrapper">
-                                <span class="th-name">Co-Borrower</span>
-                                <img src="../../res/assets/icons/funnel-simple.svg" alt="funnel">
-                            </div>
+                            <span class="th-name">Total Balance</span>
                         </th>
         
-                        <!-- * Co-Borrower Contact # -->
+                        <!-- * Total Advance -->
                         <th>
-                            <span class="th-name">Co-Borrower Contact #</span>
+                            <span class="th-name">Total Advance</span>
                         </th>
         
-                        <!-- * Applied Loan Amount -->
+                        <!-- * Total Lapses -->
                         <th>
-                            <div class="th-wrapper">
-                                <span class="th-name">Applied Loan Amount</span>
-                                <img src="../../res/assets/icons/funnel-simple.svg" alt="funnel">
-                            </div>
+                            <span class="th-name">Total Lapses</span>
                         </th>
         
-                        <!-- * Loan type -->
+                        <!-- * Date -->
                         <th>
-                            <span class="th-name">Loan type</span>
+                            <span class="th-name">Date</span>
                         </th>
-        
-                        <!-- * Date Created -->
-                        <th>
-                            <div class="th-wrapper">
-                                <span class="th-name">Date Created</span>
-                                <img src="../../res/assets/icons/funnel-simple.svg" alt="funnel">
-                            </div>
-                        </th>
-        
+
                         <!-- * Action -->
                         <th><span class="th-name">Action</span></th>
+                    
                     </tr>
     
                     <!-- * Table Data -->
                     <tr>
-
-                        <!-- * Checkbox Opt -->
-                        <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
                             
-                        <!-- * Borrower -->
+                        <!-- * Reference No. -->
                         <td>
-                            Dela Cruz, Juana
+                            <div class="td-wrapper">
+                                <span class="td-num"></span>
+                                <span class="td-name">ABPA120230525</span>
+                            </div>
                         </td>
         
-                        <!-- * Borrower Contact Number -->
+                        <!-- * Total Collectible -->
                         <td>
-                            0935-887-8176
+                            500.00
                         </td>
                             
-                        <!-- * Co-Borrower -->
+                        <!-- * Total Balance -->
                         <td>
-                            Palermo, Juliana
+                            5,000.00
                         </td>
         
-                        <!-- * Co-Borrower Contact Number -->
+                        <!-- * Total Advance -->
                         <td>
-                            0912-345-6789
+                            500.00
                         </td>
         
-                        <!-- * Applied Loan Amount -->
-                        <td class="td-num">
-                            10,000
-                        </td>
-        
-                        <!-- * Loan type -->
+                        <!-- * Total Lapses -->
                         <td>
-                            Individual Loan
+                            0
                         </td>
         
-                        <!-- * Date Created -->
+                        <!-- * Date -->
                         <td>
-                            11/11/2023
+                            June 18, 2023
                         </td>
         
-                        <!-- * Table View and Trash Button -->
+                        <!-- * Table View Button -->
                         <td class="td-btns">
                             <div class="td-btn-wrapper">
                                 <button class="a-btn-view-3" data-view-application>View</button>
-                                <button class="a-btn-trash-5" data-trash-button>Trash</button>
                             </div>
                         </td>
                     
                     </tr>
                     <tr>
-                        <!-- * Checkbox Opt -->
-                        <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
                             
-                        <!-- * Borrower -->
+                        <!-- * Reference No. -->
                         <td>
-                            Beverly, Haily
-                        </td>
-        
-                        <!-- * Borrower Contact Number -->
-                        <td>
-                            0919-294-8542
-                        </td>
-                            
-                        <!-- * Co-Borrower -->
-                        <td>
-                            Barbosa, June
-                        </td>
-        
-                        <!-- * Co-Borrower Contact Number -->
-                        <td>
-                            0998-765-4321
-                        </td>
-        
-                        <!-- * Applied Loan Amount -->
-                        <td class="td-num">
-                            10,000
-                        </td>
-        
-                        <!-- * Loan type -->
-                        <td>
-                            Individual Loan
-                        </td>
-        
-                        <!-- * Date Created -->
-                        <td>
-                            11/12/2023
-                        </td>
-        
-                        <!-- * Table View and Trash Button -->
-                        <td class="td-btns">
-                            <div class="td-btn-wrapper">
-                            <button class="a-btn-view-3" data-view-application>View</button>
-                            <button class="a-btn-trash-5" data-trash-button>Trash</button>
+                            <div class="td-wrapper">
+                                <span class="td-num"></span>
+                                <span class="td-name">ABPA258468754</span>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
-
-                        <!-- * Checkbox Opt -->
-                        <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
-                            
-                        <!-- * Borrower -->
-                        <td>
-                            Dela Cruz, Juana
-                        </td>
         
-                        <!-- * Borrower Contact Number -->
+                        <!-- * Total Collectible -->
                         <td>
-                            0935-887-8176
+                            800.00
                         </td>
                             
-                        <!-- * Co-Borrower -->
+                        <!-- * Total Balance -->
                         <td>
-                            Palermo, Juliana
+                            4,000.00
                         </td>
         
-                        <!-- * Co-Borrower Contact Number -->
+                        <!-- * Total Advance -->
                         <td>
-                            0912-345-6789
+                            800.00
                         </td>
         
-                        <!-- * Applied Loan Amount -->
-                        <td class="td-num">
-                            10,000
-                        </td>
-        
-                        <!-- * Loan type -->
+                        <!-- * Total Lapses -->
                         <td>
-                            Individual Loan
+                            0
                         </td>
         
-                        <!-- * Date Created -->
+                        <!-- * Date -->
                         <td>
-                            11/11/2023
+                            June 18, 2023
                         </td>
         
-                        <!-- * Table View and Trash Button -->
+                        <!-- * Table View Button -->
                         <td class="td-btns">
                             <div class="td-btn-wrapper">
                                 <button class="a-btn-view-3" data-view-application>View</button>
-                                <button class="a-btn-trash-5" data-trash-button>Trash</button>
                             </div>
                         </td>
                     
                     </tr>
                     <tr>
-                        <!-- * Checkbox Opt -->
-                        <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
                             
-                        <!-- * Borrower -->
+                        <!-- * Reference No. -->
                         <td>
-                            Beverly, Haily
-                        </td>
-        
-                        <!-- * Borrower Contact Number -->
-                        <td>
-                            0919-294-8542
-                        </td>
-                            
-                        <!-- * Co-Borrower -->
-                        <td>
-                            Barbosa, June
-                        </td>
-        
-                        <!-- * Co-Borrower Contact Number -->
-                        <td>
-                            0998-765-4321
-                        </td>
-        
-                        <!-- * Applied Loan Amount -->
-                        <td class="td-num">
-                            10,000
-                        </td>
-        
-                        <!-- * Loan type -->
-                        <td>
-                            Individual Loan
-                        </td>
-        
-                        <!-- * Date Created -->
-                        <td>
-                            11/12/2023
-                        </td>
-        
-                        <!-- * Table View and Trash Button -->
-                        <td class="td-btns">
-                            <div class="td-btn-wrapper">
-                            <button class="a-btn-view-3" data-view-application>View</button>
-                            <button class="a-btn-trash-5" data-trash-button>Trash</button>
+                            <div class="td-wrapper">
+                                <span class="td-num"></span>
+                                <span class="td-name">ABPA120230525</span>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
-
-                        <!-- * Checkbox Opt -->
-                        <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
-                            
-                        <!-- * Borrower -->
-                        <td>
-                            Dela Cruz, Juana
-                        </td>
         
-                        <!-- * Borrower Contact Number -->
+                        <!-- * Total Collectible -->
                         <td>
-                            0935-887-8176
+                            500.00
                         </td>
                             
-                        <!-- * Co-Borrower -->
+                        <!-- * Total Balance -->
                         <td>
-                            Palermo, Juliana
+                            5,000.00
                         </td>
         
-                        <!-- * Co-Borrower Contact Number -->
+                        <!-- * Total Advance -->
                         <td>
-                            0912-345-6789
+                            500.00
                         </td>
         
-                        <!-- * Applied Loan Amount -->
-                        <td class="td-num">
-                            10,000
-                        </td>
-        
-                        <!-- * Loan type -->
+                        <!-- * Total Lapses -->
                         <td>
-                            Individual Loan
+                            0
                         </td>
         
-                        <!-- * Date Created -->
+                        <!-- * Date -->
                         <td>
-                            11/11/2023
+                            June 18, 2023
                         </td>
         
-                        <!-- * Table View and Trash Button -->
+                        <!-- * Table View Button -->
                         <td class="td-btns">
                             <div class="td-btn-wrapper">
                                 <button class="a-btn-view-3" data-view-application>View</button>
-                                <button class="a-btn-trash-5" data-trash-button>Trash</button>
                             </div>
                         </td>
                     
                     </tr>
                     <tr>
-                        <!-- * Checkbox Opt -->
-                        <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
                             
-                        <!-- * Borrower -->
+                        <!-- * Reference No. -->
                         <td>
-                            Beverly, Haily
-                        </td>
-        
-                        <!-- * Borrower Contact Number -->
-                        <td>
-                            0919-294-8542
-                        </td>
-                            
-                        <!-- * Co-Borrower -->
-                        <td>
-                            Barbosa, June
-                        </td>
-        
-                        <!-- * Co-Borrower Contact Number -->
-                        <td>
-                            0998-765-4321
-                        </td>
-        
-                        <!-- * Applied Loan Amount -->
-                        <td class="td-num">
-                            10,000
-                        </td>
-        
-                        <!-- * Loan type -->
-                        <td>
-                            Individual Loan
-                        </td>
-        
-                        <!-- * Date Created -->
-                        <td>
-                            11/12/2023
-                        </td>
-        
-                        <!-- * Table View and Trash Button -->
-                        <td class="td-btns">
-                            <div class="td-btn-wrapper">
-                            <button class="a-btn-view-3" data-view-application>View</button>
-                            <button class="a-btn-trash-5" data-trash-button>Trash</button>
+                            <div class="td-wrapper">
+                                <span class="td-num"></span>
+                                <span class="td-name">ABPA258468754</span>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
-
-                        <!-- * Checkbox Opt -->
-                        <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
-                            
-                        <!-- * Borrower -->
-                        <td>
-                            Dela Cruz, Juana
-                        </td>
         
-                        <!-- * Borrower Contact Number -->
+                        <!-- * Total Collectible -->
                         <td>
-                            0935-887-8176
+                            800.00
                         </td>
                             
-                        <!-- * Co-Borrower -->
+                        <!-- * Total Balance -->
                         <td>
-                            Palermo, Juliana
+                            4,000.00
                         </td>
         
-                        <!-- * Co-Borrower Contact Number -->
+                        <!-- * Total Advance -->
                         <td>
-                            0912-345-6789
+                            800.00
                         </td>
         
-                        <!-- * Applied Loan Amount -->
-                        <td class="td-num">
-                            10,000
-                        </td>
-        
-                        <!-- * Loan type -->
+                        <!-- * Total Lapses -->
                         <td>
-                            Individual Loan
+                            0
                         </td>
         
-                        <!-- * Date Created -->
+                        <!-- * Date -->
                         <td>
-                            11/11/2023
+                            June 18, 2023
                         </td>
         
-                        <!-- * Table View and Trash Button -->
+                        <!-- * Table View Button -->
                         <td class="td-btns">
                             <div class="td-btn-wrapper">
                                 <button class="a-btn-view-3" data-view-application>View</button>
-                                <button class="a-btn-trash-5" data-trash-button>Trash</button>
                             </div>
                         </td>
                     
                     </tr>
                     <tr>
-                        <!-- * Checkbox Opt -->
-                        <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
                             
-                        <!-- * Borrower -->
+                        <!-- * Reference No. -->
                         <td>
-                            Beverly, Haily
-                        </td>
-        
-                        <!-- * Borrower Contact Number -->
-                        <td>
-                            0919-294-8542
-                        </td>
-                            
-                        <!-- * Co-Borrower -->
-                        <td>
-                            Barbosa, June
-                        </td>
-        
-                        <!-- * Co-Borrower Contact Number -->
-                        <td>
-                            0998-765-4321
-                        </td>
-        
-                        <!-- * Applied Loan Amount -->
-                        <td class="td-num">
-                            10,000
-                        </td>
-        
-                        <!-- * Loan type -->
-                        <td>
-                            Individual Loan
-                        </td>
-        
-                        <!-- * Date Created -->
-                        <td>
-                            11/12/2023
-                        </td>
-        
-                        <!-- * Table View and Trash Button -->
-                        <td class="td-btns">
-                            <div class="td-btn-wrapper">
-                            <button class="a-btn-view-3" data-view-application>View</button>
-                            <button class="a-btn-trash-5" data-trash-button>Trash</button>
+                            <div class="td-wrapper">
+                                <span class="td-num"></span>
+                                <span class="td-name">ABPA120230525</span>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
-
-                        <!-- * Checkbox Opt -->
-                        <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
-                            
-                        <!-- * Borrower -->
-                        <td>
-                            Dela Cruz, Juana
-                        </td>
         
-                        <!-- * Borrower Contact Number -->
+                        <!-- * Total Collectible -->
                         <td>
-                            0935-887-8176
+                            500.00
                         </td>
                             
-                        <!-- * Co-Borrower -->
+                        <!-- * Total Balance -->
                         <td>
-                            Palermo, Juliana
+                            5,000.00
                         </td>
         
-                        <!-- * Co-Borrower Contact Number -->
+                        <!-- * Total Advance -->
                         <td>
-                            0912-345-6789
+                            500.00
                         </td>
         
-                        <!-- * Applied Loan Amount -->
-                        <td class="td-num">
-                            10,000
-                        </td>
-        
-                        <!-- * Loan type -->
+                        <!-- * Total Lapses -->
                         <td>
-                            Individual Loan
+                            0
                         </td>
         
-                        <!-- * Date Created -->
+                        <!-- * Date -->
                         <td>
-                            11/11/2023
+                            June 18, 2023
                         </td>
         
-                        <!-- * Table View and Trash Button -->
+                        <!-- * Table View Button -->
                         <td class="td-btns">
                             <div class="td-btn-wrapper">
                                 <button class="a-btn-view-3" data-view-application>View</button>
-                                <button class="a-btn-trash-5" data-trash-button>Trash</button>
                             </div>
                         </td>
                     
                     </tr>
                     <tr>
-                        <!-- * Checkbox Opt -->
-                        <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
                             
-                        <!-- * Borrower -->
+                        <!-- * Reference No. -->
                         <td>
-                            Beverly, Haily
-                        </td>
-        
-                        <!-- * Borrower Contact Number -->
-                        <td>
-                            0919-294-8542
-                        </td>
-                            
-                        <!-- * Co-Borrower -->
-                        <td>
-                            Barbosa, June
-                        </td>
-        
-                        <!-- * Co-Borrower Contact Number -->
-                        <td>
-                            0998-765-4321
-                        </td>
-        
-                        <!-- * Applied Loan Amount -->
-                        <td class="td-num">
-                            10,000
-                        </td>
-        
-                        <!-- * Loan type -->
-                        <td>
-                            Individual Loan
-                        </td>
-        
-                        <!-- * Date Created -->
-                        <td>
-                            11/12/2023
-                        </td>
-        
-                        <!-- * Table View and Trash Button -->
-                        <td class="td-btns">
-                            <div class="td-btn-wrapper">
-                            <button class="a-btn-view-3" data-view-application>View</button>
-                            <button class="a-btn-trash-5" data-trash-button>Trash</button>
+                            <div class="td-wrapper">
+                                <span class="td-num"></span>
+                                <span class="td-name">ABPA258468754</span>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
-
-                        <!-- * Checkbox Opt -->
-                        <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
-                            
-                        <!-- * Borrower -->
-                        <td>
-                            Dela Cruz, Juana
-                        </td>
         
-                        <!-- * Borrower Contact Number -->
+                        <!-- * Total Collectible -->
                         <td>
-                            0935-887-8176
+                            800.00
                         </td>
                             
-                        <!-- * Co-Borrower -->
+                        <!-- * Total Balance -->
                         <td>
-                            Palermo, Juliana
+                            4,000.00
                         </td>
         
-                        <!-- * Co-Borrower Contact Number -->
+                        <!-- * Total Advance -->
                         <td>
-                            0912-345-6789
+                            800.00
                         </td>
         
-                        <!-- * Applied Loan Amount -->
-                        <td class="td-num">
-                            10,000
-                        </td>
-        
-                        <!-- * Loan type -->
+                        <!-- * Total Lapses -->
                         <td>
-                            Individual Loan
+                            0
                         </td>
         
-                        <!-- * Date Created -->
+                        <!-- * Date -->
                         <td>
-                            11/11/2023
+                            June 18, 2023
                         </td>
         
-                        <!-- * Table View and Trash Button -->
+                        <!-- * Table View Button -->
                         <td class="td-btns">
                             <div class="td-btn-wrapper">
                                 <button class="a-btn-view-3" data-view-application>View</button>
-                                <button class="a-btn-trash-5" data-trash-button>Trash</button>
                             </div>
                         </td>
                     
                     </tr>
                     <tr>
-                        <!-- * Checkbox Opt -->
-                        <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
                             
-                        <!-- * Borrower -->
+                        <!-- * Reference No. -->
                         <td>
-                            Beverly, Haily
-                        </td>
-        
-                        <!-- * Borrower Contact Number -->
-                        <td>
-                            0919-294-8542
-                        </td>
-                            
-                        <!-- * Co-Borrower -->
-                        <td>
-                            Barbosa, June
-                        </td>
-        
-                        <!-- * Co-Borrower Contact Number -->
-                        <td>
-                            0998-765-4321
-                        </td>
-        
-                        <!-- * Applied Loan Amount -->
-                        <td class="td-num">
-                            10,000
-                        </td>
-        
-                        <!-- * Loan type -->
-                        <td>
-                            Individual Loan
-                        </td>
-        
-                        <!-- * Date Created -->
-                        <td>
-                            11/12/2023
-                        </td>
-        
-                        <!-- * Table View and Trash Button -->
-                        <td class="td-btns">
-                            <div class="td-btn-wrapper">
-                            <button class="a-btn-view-3" data-view-application>View</button>
-                            <button class="a-btn-trash-5" data-trash-button>Trash</button>
+                            <div class="td-wrapper">
+                                <span class="td-num"></span>
+                                <span class="td-name">ABPA120230525</span>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
-
-                        <!-- * Checkbox Opt -->
-                        <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
-                            
-                        <!-- * Borrower -->
-                        <td>
-                            Dela Cruz, Juana
-                        </td>
         
-                        <!-- * Borrower Contact Number -->
+                        <!-- * Total Collectible -->
                         <td>
-                            0935-887-8176
+                            500.00
                         </td>
                             
-                        <!-- * Co-Borrower -->
+                        <!-- * Total Balance -->
                         <td>
-                            Palermo, Juliana
+                            5,000.00
                         </td>
         
-                        <!-- * Co-Borrower Contact Number -->
+                        <!-- * Total Advance -->
                         <td>
-                            0912-345-6789
+                            500.00
                         </td>
         
-                        <!-- * Applied Loan Amount -->
-                        <td class="td-num">
-                            10,000
-                        </td>
-        
-                        <!-- * Loan type -->
+                        <!-- * Total Lapses -->
                         <td>
-                            Individual Loan
+                            0
                         </td>
         
-                        <!-- * Date Created -->
+                        <!-- * Date -->
                         <td>
-                            11/11/2023
+                            June 18, 2023
                         </td>
         
-                        <!-- * Table View and Trash Button -->
+                        <!-- * Table View Button -->
                         <td class="td-btns">
                             <div class="td-btn-wrapper">
                                 <button class="a-btn-view-3" data-view-application>View</button>
-                                <button class="a-btn-trash-5" data-trash-button>Trash</button>
                             </div>
                         </td>
                     
                     </tr>
                     <tr>
-                        <!-- * Checkbox Opt -->
-                        <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
                             
-                        <!-- * Borrower -->
+                        <!-- * Reference No. -->
                         <td>
-                            Beverly, Haily
-                        </td>
-        
-                        <!-- * Borrower Contact Number -->
-                        <td>
-                            0919-294-8542
-                        </td>
-                            
-                        <!-- * Co-Borrower -->
-                        <td>
-                            Barbosa, June
-                        </td>
-        
-                        <!-- * Co-Borrower Contact Number -->
-                        <td>
-                            0998-765-4321
-                        </td>
-        
-                        <!-- * Applied Loan Amount -->
-                        <td class="td-num">
-                            10,000
-                        </td>
-        
-                        <!-- * Loan type -->
-                        <td>
-                            Individual Loan
-                        </td>
-        
-                        <!-- * Date Created -->
-                        <td>
-                            11/12/2023
-                        </td>
-        
-                        <!-- * Table View and Trash Button -->
-                        <td class="td-btns">
-                            <div class="td-btn-wrapper">
-                            <button class="a-btn-view-3" data-view-application>View</button>
-                            <button class="a-btn-trash-5" data-trash-button>Trash</button>
+                            <div class="td-wrapper">
+                                <span class="td-num"></span>
+                                <span class="td-name">ABPA258468754</span>
                             </div>
                         </td>
+        
+                        <!-- * Total Collectible -->
+                        <td>
+                            800.00
+                        </td>
+                            
+                        <!-- * Total Balance -->
+                        <td>
+                            4,000.00
+                        </td>
+        
+                        <!-- * Total Advance -->
+                        <td>
+                            800.00
+                        </td>
+        
+                        <!-- * Total Lapses -->
+                        <td>
+                            0
+                        </td>
+        
+                        <!-- * Date -->
+                        <td>
+                            June 18, 2023
+                        </td>
+        
+                        <!-- * Table View Button -->
+                        <td class="td-btns">
+                            <div class="td-btn-wrapper">
+                                <button class="a-btn-view-3" data-view-application>View</button>
+                            </div>
+                        </td>
+                    
                     </tr>
-
-
+                    <tr>
+                            
+                        <!-- * Reference No. -->
+                        <td>
+                            <div class="td-wrapper">
+                                <span class="td-num"></span>
+                                <span class="td-name">ABPA120230525</span>
+                            </div>
+                        </td>
+        
+                        <!-- * Total Collectible -->
+                        <td>
+                            500.00
+                        </td>
+                            
+                        <!-- * Total Balance -->
+                        <td>
+                            5,000.00
+                        </td>
+        
+                        <!-- * Total Advance -->
+                        <td>
+                            500.00
+                        </td>
+        
+                        <!-- * Total Lapses -->
+                        <td>
+                            0
+                        </td>
+        
+                        <!-- * Date -->
+                        <td>
+                            June 18, 2023
+                        </td>
+        
+                        <!-- * Table View Button -->
+                        <td class="td-btns">
+                            <div class="td-btn-wrapper">
+                                <button class="a-btn-view-3" data-view-application>View</button>
+                            </div>
+                        </td>
+                    
+                    </tr>
+                    <tr>
+                            
+                        <!-- * Reference No. -->
+                        <td>
+                            <div class="td-wrapper">
+                                <span class="td-num"></span>
+                                <span class="td-name">ABPA258468754</span>
+                            </div>
+                        </td>
+        
+                        <!-- * Total Collectible -->
+                        <td>
+                            800.00
+                        </td>
+                            
+                        <!-- * Total Balance -->
+                        <td>
+                            4,000.00
+                        </td>
+        
+                        <!-- * Total Advance -->
+                        <td>
+                            800.00
+                        </td>
+        
+                        <!-- * Total Lapses -->
+                        <td>
+                            0
+                        </td>
+        
+                        <!-- * Date -->
+                        <td>
+                            June 18, 2023
+                        </td>
+        
+                        <!-- * Table View Button -->
+                        <td class="td-btns">
+                            <div class="td-btn-wrapper">
+                                <button class="a-btn-view-3" data-view-application>View</button>
+                            </div>
+                        </td>
+                    
+                    </tr>
 
                 </table>
                 
@@ -1294,7 +649,6 @@
     <script src="../../res/js/app.js" defer></script>
     <script src="../../res/js/components/links.js"></script>
     <script src="../../res/js/components/nav.js"></script>
-    <script src="../../res/js/components/newApplicationModal.js" defer></script>
     <script src="../../res/js/components/filterModal.js" defer></script>
 
 </body>

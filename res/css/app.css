@@ -6903,6 +6903,80 @@ body {
 .main-dashboard .na-form-con .nal-con-2 .table-container table td:nth-of-type(7) {
   text-align: center;
 }
+.main-dashboard .na-form-con .cll-con-2 {
+  height: clamp(100% - 22rem, 66%, 66vh);
+  padding: 0 4rem 2rem 4rem;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table th {
+  padding: 2rem 3rem;
+  text-align: center;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table th span.th-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table th .th-wrapper {
+  display: flex;
+  align-items: center;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table th .th-wrapper img {
+  cursor: pointer;
+  padding-left: 0.5rem;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table th:nth-of-type(-n+6) {
+  text-align: left;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table th:nth-of-type(n+2):not(:nth-of-type(n+6)) {
+  text-align: right;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table th:first-of-type {
+  padding-left: 2rem;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table th:nth-of-type(2) {
+  padding-left: 0.5rem;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table th:nth-of-type(6) .th-wrapper {
+  justify-content: flex-end;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table th:nth-of-type(7) {
+  text-align: center;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table td {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table td .td-wrapper {
+  display: flex;
+  align-items: center;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table td .td-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table .td-num {
+  text-align: right;
+  font-weight: 700;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table td:nth-of-type(n+2):not(:nth-of-type(n+6)) {
+  text-align: right;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table td:first-of-type {
+  padding-left: 0.8rem;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table td:nth-of-type(2) {
+  padding-left: 0.5rem;
+}
+.main-dashboard .na-form-con .cll-con-2 .table-container table td:nth-of-type(7) {
+  text-align: center;
+}
 .main-dashboard .na-form-con .cil-con-1 {
   display: flex;
   flex-direction: row;
