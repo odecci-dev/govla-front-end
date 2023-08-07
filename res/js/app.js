@@ -15,7 +15,7 @@ document.addEventListener("click", e => {
         currentDropdown = e.target.closest("[data-bor-dropdown]")
             // * Hide or Show submenu toggle
         currentDropdown.classList.toggle("showMenu")
-
+        
     }
 
     // * Get rid off the submenus that are not open (closing submenus that are not clicked)
@@ -34,6 +34,12 @@ document.addEventListener("click", e => {
 
     })
 
+    const closeDropdownAnimation = document.querySelector('.dropdown-menu')
+    closeDropdownAnimation.setAttribute("closing", "");
+        currentDropdown.addEventListener("animationend", () => {
+            currentDropdown.removeAttribute("closing");
+            currentDropdown.close();
+        }, { once: true });
 })
 
 

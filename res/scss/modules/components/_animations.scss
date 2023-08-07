@@ -79,6 +79,16 @@
     }
 }
 
+// * Rise-Up
+@keyframes rise-up {
+    0% {
+        transform: translateY(-0%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
 // * Slide-from-Left-to-Right
 @keyframes slide-from-left-to-right {
     0% {
