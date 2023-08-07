@@ -445,6 +445,16 @@ table {
     }
 }
 
+// * Search Bar
+.search-bar {
+    @include searchbar;
+}
+
+// * Search Bar 2
+.search-bar-2 {
+    @include searchbar2;
+}
+
 // * Input Global
 .input-wrapper {
     position: relative;

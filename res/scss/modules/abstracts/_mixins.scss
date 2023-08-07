@@ -132,6 +132,49 @@
     }
 }
 
+// *** Search Bar 2 *** //
+@mixin searchbar2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    // * Search input text-field
+    input {
+        -moz-appearance: textfield;
+        -webkit-appearance: none;
+        margin: 0;
+        font-size: $font-size-large;
+        font-weight: $font-weight-bold;
+        padding: 1rem 2rem;
+        border: none;
+        outline: none;
+        background-color: $primary-bg;
+        border-radius: $border-radius-medium;
+        box-shadow: $box-shadow;
+        position: relative;
+        padding-left: $spacing-2x-large;
+        transition: opacity 100ms ease-in-out;
+        &::placeholder {
+            font-size: $font-size-large;
+            position: absolute;
+            top: 0;
+            transform: translateY(1rem);
+        }
+        &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+        }
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+    img {
+        position: absolute;
+        width: 3%;
+        top: 0;
+        left: 0;
+        transform: translate(28rem, 0.6rem);
+    }
+}
+
 // *** Button Mixins
 // * Primary Button
 @mixin primaryButton {

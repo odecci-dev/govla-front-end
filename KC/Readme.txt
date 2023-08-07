@@ -817,3 +817,6 @@ Second Commit:
 Third Commit:
 • Finished Collection Dropdown Button
 
+Fourth Commit:
+• Started Implementing Collection Search Bar
+
