@@ -803,3 +803,8 @@ Seventh Commit:
 
 Eight Commit:
 • Modals: Restored Successfully Modal
+
+August 07, 2023 (Monday)
+First Commit:
+• Started the implementation of collection list
+- KC/collection/collection-list.html
