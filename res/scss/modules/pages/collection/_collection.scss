@@ -131,6 +131,27 @@
         display: flex;
         flex-direction: column;
         padding-left: $spacing-2x-large;
+        .inner-container {
+            display: flex;
+            justify-content: space-between;
+            .inner-inner-container:last-of-type {
+                pointer-events: none;
+                visibility: hidden;
+                opacity: 0;
+                display: flex;
+                flex-direction: column;
+                gap: $spacing;
+                margin-right: $spacing-2x-large;
+                animation: rise-up 500ms forwards;
+                // ***** ClassList Toggle ***** //
+                &.show-buttons {
+                    pointer-events: all;
+                    opacity: 1;
+                    visibility: visible;
+                    animation: drop-down 500ms forwards;
+                }
+            }
+        }
         .wrapper-1 {
             padding: $spacing-3x-large 0;
             display: flex;
@@ -151,12 +172,6 @@
                     // **                         ** //
                     // **** Table Header Styles **** //
                     // **                         ** //
-                    // tr:first-of-type {
-                    //     isolation: isolate;
-                    //     position: sticky;
-                    //     z-index: 5;
-                    //     top: 0;
-                    // }
                     // * Background Color Odd   
                     tr:nth-of-type(odd) {
                         background-color: transparent !important;
@@ -277,6 +292,7 @@
                         }
                     }
                     .details-wrapper > td {
+                        display: none;
                         pointer-events: none;
                         opacity: 0;
                         visibility: hidden;
@@ -289,9 +305,6 @@
                         height: 21rem;
                         pointer-events: all;
                         animation: drop-down 500ms forwards;
-                        // &[closing] {
-                        //     animation: slide-up 500ms forwards;
-                        // }
                     }
                     // * td
                     .details-wrapper {

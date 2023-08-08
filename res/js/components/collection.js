@@ -8,6 +8,7 @@ if (addNewCollectionBtn) {
 }
 
 
+const printRemitButton = document.querySelector('[data-print-remit-buttons]')
 const addNewCollectionTable = document.getElementById('clientsTable')
 const detailsWrapperDropdown = addNewCollectionTable.querySelectorAll('[data-details-wrapper-dropdown]')
 
@@ -19,11 +20,7 @@ detailsWrapperDropdown.forEach((dropdownBtn) => {
     dropdownBtn.addEventListener('click', () => {
         detailsWrapper.classList.toggle('open-wrapper')
         details.classList.toggle('open-details')
+        printRemitButton.classList.toggle('show-buttons')
     })
-    
-    // detailsWrapper.setAttribute("closing", "");
-    // detailsWrapper.addEventListener("animationend", () => {
-    //     detailsWrapper.removeAttribute("closing");
-    // }, { once: true });
 
 })

@@ -823,3 +823,6 @@ Fourth Commit:
 August 08, 2023 (Tuesday)
 First Commit:
 • New Collection: Implemented the details dropdown
+
+Second Commit:
+• New Collection: Implemented Print and Remit Button
