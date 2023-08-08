@@ -820,3 +820,6 @@ Third Commit:
 Fourth Commit:
 • Started Implementing Collection Search Bar
 
+August 08, 2023 (Tuesday)
+First Commit:
+• New Collection: Implemented the details dropdown

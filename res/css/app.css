@@ -304,6 +304,10 @@ table .td-btn-wrapper {
   color: #36A623;
 }
 
+.textAlert {
+  color: #FF0404;
+}
+
 .button {
   pointer-events: all;
   border-radius: 1rem;
@@ -1032,10 +1036,10 @@ table .td-btn-wrapper {
 }
 .search-bar-2 img {
   position: absolute;
-  width: 3%;
+  width: 2.6%;
   top: 0;
   left: 0;
-  transform: translate(28rem, 0.6rem);
+  transform: translate(28rem, 0.8rem);
 }
 
 .input-wrapper {
@@ -3960,7 +3964,7 @@ body {
 .can-container-wrapper .can-container-1 {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2.5rem;
 }
 .can-container-wrapper .can-container-1 h3 {
   font-size: 3.5rem;
@@ -4043,7 +4047,7 @@ body {
   display: block;
   pointer-events: none;
   inset: 0;
-  animation: fade-out 700ms forwards, rise-up 500ms forwards;
+  animation: fade-out 500ms forwards, rise-up 500ms forwards;
 }
 .can-container-wrapper .can-container-1 .wrapper .borrower-dropdown .dropdown-menu li {
   overflow: hidden;
@@ -4051,7 +4055,6 @@ body {
   display: flex;
   pointer-events: all;
   cursor: pointer;
-  transition: 200ms ease-in;
   margin: 1rem 0;
 }
 .can-container-wrapper .can-container-1 .wrapper .borrower-dropdown .dropdown-menu li .box-1 {
@@ -4072,6 +4075,7 @@ body {
   width: 65%;
   background-color: #D6A330;
   padding: 0.75rem;
+  transition: 150ms ease-in;
 }
 .can-container-wrapper .can-container-1 .wrapper .borrower-dropdown .dropdown-menu li .box-2 p {
   font-size: 1rem;
@@ -4084,7 +4088,7 @@ body {
   color: #FFFFFF;
 }
 .can-container-wrapper .can-container-1 .wrapper .borrower-dropdown .dropdown-menu li .box-2:hover {
-  background-color: rgba(41, 41, 43, 0.2);
+  background-color: rgba(214, 163, 48, 0.8);
 }
 .can-container-wrapper .can-container-1 .wrapper .borrower-dropdown > .link.dropdown > img {
   transition: transform ease-out 300ms;
@@ -4101,7 +4105,174 @@ body {
   animation: drop-down 500ms ease-in-out forwards;
 }
 .can-container-wrapper .can-container-2 {
-  background-color: rebeccapurple;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-1 {
+  padding: 3rem 0;
+  display: flex;
+  gap: 0 2rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-1 span {
+  font-size: 1.5rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 {
+  height: clamp(100% - 38rem, 50%, 66vh);
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-bottom: 1px solid #29292B;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table tr:nth-of-type(odd) {
+  background-color: transparent !important;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table tr:nth-of-type(odd):hover > td {
+  background-color: rgba(214, 163, 48, 0.8);
+  color: #29292B !important;
+  transition: 300ms ease-out !important;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table th {
+  padding: 2rem 0;
+  text-align: center;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table th span.th-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table th .th-wrapper {
+  display: flex;
+  align-items: center;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table th .th-wrapper img {
+  cursor: pointer;
+  padding-left: 0.5rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table th {
+  text-align: left;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table th:first-of-type {
+  padding-left: 1rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table th:last-of-type {
+  padding-left: 2rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table th:nth-of-type(3) {
+  padding-left: 3rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table th:nth-of-type(n+4):not(:last-of-type) {
+  text-align: right;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table td {
+  padding: 1rem 0;
+  font-size: 1.2rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table td .td-wrapper {
+  display: flex;
+  align-items: center;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table td .td-wrapper .td-name {
+  margin-left: 2rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table .td-num {
+  font-weight: 700;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table td:first-of-type {
+  padding-left: 1rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table td:last-of-type {
+  padding-left: 2rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table td:nth-of-type(3) {
+  padding-left: 1rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table td:nth-of-type(n+4):not(:last-of-type) {
+  text-align: right;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table .details-wrapper {
+  margin-top: 1rem;
+  position: relative;
+  z-index: -9;
+  height: 0;
+  transition: all 280ms ease-in-out;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table .details-wrapper td {
+  border-top: 1px solid #E0DFDF;
+  position: absolute;
+  width: 100%;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table .details-wrapper td .box {
+  display: flex;
+  flex-direction: column;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table .details-wrapper td .box h4 {
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table .details-wrapper td .box .box-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table .details-wrapper td .box .box-wrapper .inner-inner-box:first-of-type p {
+  color: #8C8686;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table .details-wrapper td .box .box-wrapper .inner-inner-box:last-of-type {
+  padding-left: 1rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table .details-wrapper td .box .box-wrapper p {
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table .details-wrapper td .box .inner-box:last-of-type {
+  margin-top: 2rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table .details-wrapper td .box:last-of-type {
+  padding-right: 2rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table .details-wrapper > td {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 280ms ease-in-out;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table .open-wrapper {
+  height: 21rem;
+  pointer-events: all;
+  animation: drop-down 500ms forwards;
+}
+.can-container-wrapper .can-container-2 .wrapper-2 .table-container table .details-wrapper .open-details {
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: all;
+  animation: drop-down 500ms forwards;
+}
+.can-container-wrapper .can-container-2 .wrapper-3 {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.can-container-wrapper .can-container-2 .wrapper-3 .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.can-container-wrapper .can-container-2 .wrapper-3 .box p {
+  font-size: 1.2rem;
+  color: #8C8686;
+}
+.can-container-wrapper .can-container-2 .wrapper-3 .box span {
+  margin-top: 0.75rem;
+  font-size: 1.8rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-3 .box:first-of-type {
+  padding-left: 0.75rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-3 .box:last-of-type {
+  padding-right: 0.75rem;
 }
 
 .main-dashboard {

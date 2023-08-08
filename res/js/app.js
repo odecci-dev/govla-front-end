@@ -35,11 +35,12 @@ document.addEventListener("click", e => {
     })
 
     const closeDropdownAnimation = document.querySelector('.dropdown-menu')
-    closeDropdownAnimation.setAttribute("closing", "");
-        currentDropdown.addEventListener("animationend", () => {
-            currentDropdown.removeAttribute("closing");
-            currentDropdown.close();
-        }, { once: true });
+    if (closeDropdownAnimation) {
+        closeDropdownAnimation.setAttribute("closing", "");
+            currentDropdown.addEventListener("animationend", () => {
+                currentDropdown.removeAttribute("closing");
+            }, { once: true });
+    }
 })
 
 

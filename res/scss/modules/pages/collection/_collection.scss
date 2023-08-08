@@ -7,7 +7,7 @@
     .can-container-1 {
         display: flex;
         flex-direction: column;
-        gap: $spacing-4x-large;
+        gap: calc($spacing-3x-large - 0.5rem) ;
         h3 {
             font-size: $font-size-display;
             font-weight: $font-weight-bold;
@@ -59,7 +59,7 @@
                         display: block;
                         pointer-events: none;
                         inset: 0;
-                        animation: fade-out 700ms forwards, rise-up 500ms forwards;
+                        animation: fade-out 500ms forwards, rise-up 500ms forwards;
                     }
                     li {
                         overflow: hidden;
@@ -67,7 +67,6 @@
                         display: flex;
                         pointer-events: all;
                         cursor: pointer;
-                        transition: 200ms ease-in;
                         margin: $spacing-medium 0;
                         .box-1 {
                             width: calc(100% - 65%);
@@ -87,6 +86,7 @@
                             width: calc(100% - 35%);
                             background-color: $primary;
                             padding: $spacing;
+                            transition: 150ms ease-in;
                             p {
                                 font-size: $font-size-small;
                                 font-weight: $font-weight-bold;
@@ -98,7 +98,7 @@
                                 color: $white;
                             }
                             &:hover {
-                                background-color: $blackTR2;
+                                background-color: $primaryTR3;
                             }
                         }
                     }
@@ -128,6 +128,210 @@
         }
     }
     .can-container-2 {
-        background-color: rebeccapurple;
+        display: flex;
+        flex-direction: column;
+        padding-left: $spacing-2x-large;
+        .wrapper-1 {
+            padding: $spacing-3x-large 0;
+            display: flex;
+            gap: 0 $spacing-2x-large;
+            span {
+                font-size: $font-size-medium;
+            }
+        }
+        .wrapper-2 {
+            height: clamp(100% - 38rem, 50%, 66vh);
+            // * Table Container
+            .table-container {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                border-bottom: 1px solid $black;
+                table {
+                    // **                         ** //
+                    // **** Table Header Styles **** //
+                    // **                         ** //
+                    // tr:first-of-type {
+                    //     isolation: isolate;
+                    //     position: sticky;
+                    //     z-index: 5;
+                    //     top: 0;
+                    // }
+                    // * Background Color Odd   
+                    tr:nth-of-type(odd) {
+                        background-color: transparent !important;
+                        &:hover> td {
+                            background-color: $primaryTR3;
+                            color: $black !important;
+                            transition: 300ms ease-out !important;
+                        }
+                    }
+                    th {
+                        padding: $spacing-2x-large 0;
+                        text-align: center;
+                        span.th-name {
+                            font-size: $font-size;
+                            font-weight: $font-weight-bold;
+                        }
+                        .th-wrapper {
+                            display: flex;
+                            align-items: center;
+                            img {
+                                cursor: pointer;
+                                padding-left: .5rem;
+                            }
+                        }
+                    }
+                    th {
+                        text-align: left;
+                    }
+                    // * CLient Num
+                    th:first-of-type {
+                        padding-left: 1rem;
+                    }
+                    th:last-of-type {
+                        padding-left: 2rem;
+                    }
+                    // * Name
+                    th:nth-of-type(3) {
+                        padding-left: $spacing-3x-large;
+                    }
+                    // * Collectible - Advance / Lapses	
+                    th:nth-of-type(n+4):not(:last-of-type) {
+                        text-align: right;
+                    }
+                    // **                       ** //
+                    // **** Table Data Styles **** //
+                    // **                       ** //
+                    td {
+                        padding: $spacing-medium 0;
+                        font-size: $font-size;
+                        // * Borrowers' Data Styles
+                        .td-wrapper {
+                            display: flex;
+                            align-items: center;
+                            
+                            .td-name {
+                                margin-left: 2rem;
+                            }
+                        }
+                    }
+                    .td-num {
+                        font-weight: $font-weight-bold;
+                        // margin-left: 1rem;
+                    }
+                    td:first-of-type {
+                        padding-left: 1rem;
+                    }
+                    td:last-of-type {
+                        padding-left: 2rem;
+                    }
+                    td:nth-of-type(3) {
+                        padding-left: 1rem;
+                    }
+                    // * Collectible - Advance / Lapses	
+                    td:nth-of-type(n+4):not(:last-of-type) {
+                        text-align: right;
+                    }
+                    // * Details Wrapper
+                    .details-wrapper {
+                        margin-top: 1rem;
+                        position: relative;
+                        z-index: -9;
+                        height: 0;
+                        transition: all 280ms ease-in-out;
+                        td {
+                            border-top: 1px solid $secondary-bg;
+                            position: absolute;
+                            width: 100%;
+                            .box {
+                                display: flex;
+                                flex-direction: column;
+                                h4 {
+                                    padding-bottom: 1rem;
+                                    font-size: $font-size-medium;
+                                }
+                                .box-wrapper {
+                                    display: flex;
+                                    flex-direction: row;
+                                    .inner-inner-box:first-of-type {
+                                        p {
+                                            color: $font-accent;
+                                        }
+                                    }
+                                    .inner-inner-box:last-of-type {
+                                        padding-left: 1rem;
+                                    }
+                                    p {
+                                        padding: $spacing-small 0;
+                                        font-size: $font-size-medium;
+                                    }
+                                }
+                                .inner-box:last-of-type{
+                                    margin-top: 2rem;
+                                }
+                            }
+                            .box:last-of-type {
+                                padding-right: 2rem;
+                            }
+                        }
+                    }
+                    .details-wrapper > td {
+                        pointer-events: none;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all 280ms ease-in-out;
+                    }
+                    // ***** ClassList Toggle ***** //
+                    
+                    // * tr
+                    .open-wrapper {
+                        height: 21rem;
+                        pointer-events: all;
+                        animation: drop-down 500ms forwards;
+                        // &[closing] {
+                        //     animation: slide-up 500ms forwards;
+                        // }
+                    }
+                    // * td
+                    .details-wrapper {
+                        .open-details{
+                            opacity: 1;
+                            visibility: visible;
+                            display: flex;
+                            justify-content: space-between;
+                            pointer-events: all;
+                            animation: drop-down 500ms forwards;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        // * Details Wrapper 3
+        .wrapper-3 {
+            margin-top: $spacing-medium;
+            display: flex;
+            justify-content: space-between;
+            .box {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                p {
+                    font-size: $font-size;
+                    color: $font-accent;
+                }
+                span {
+                    margin-top: $spacing;
+                    font-size: $font-size-x-medium;
+                }
+            }
+            .box:first-of-type {
+                padding-left: $spacing;
+            }
+            .box:last-of-type {
+                padding-right: $spacing;
+            }
+        }
     }
 }

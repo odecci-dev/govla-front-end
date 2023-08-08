@@ -294,6 +294,10 @@ table {
     color: $green;
 }
 
+.textAlert {
+    color: $alert;
+}
+
 // * Primary Button Global
 .button {
     @include primaryButton;
