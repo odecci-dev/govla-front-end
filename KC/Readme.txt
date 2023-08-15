@@ -826,3 +826,10 @@ First Commit:
 
 Second Commit:
 • New Collection: Implemented Print and Remit Button
+
+August 15, 2023 (Tuesday)
+First Commit:
+• New Collection: Revisions
+- Button visibility for print and remit buttons
+• New Collection: Implemented the printables
+- html2canvas.js (for printables)

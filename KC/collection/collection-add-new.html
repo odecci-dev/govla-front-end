@@ -14,6 +14,35 @@
         <!-- * Main Dashboard -->
         <div class="main-dashboard">
             <!-- * Collection Add New Container Wrapper -->
+
+            <!-- * Print Collection Modal -->
+            <dialog class="print-collection-container" data-printables>
+
+                <!-- * Modal Container -->
+                <div class="modal-container">
+                    <div class="header-wrapper">
+                        <p>Field Officer: <span id="printFieldOfficerName">Alfredo L. Dimagsak</span></p>
+                        <p>Area No. <span id="printAreaNum">1</span></p>
+                        <p>Collection List Number <span id="printCollectionListNumber">ABPA120230525</span></p>
+                    </div>
+                    <div class="body-wrapper">
+                        <div class="box-wrapper">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <div class="box-wrapper">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </dialog>
+
             <div class="can-container-wrapper">
 
                 <!-- * Collection Add New Container 1 -->
@@ -190,10 +219,13 @@
 
                         <!-- * Inner-inner Container 1 -->
                         <div class="inner-inner-container" data-print-remit-buttons>
-                            <button type="button" class="button">PRINT</button>
-                            <button type="button" class="button">REMIT</button>
+                            <button type="button" class="button" data-print-button>PRINT</button>
+                            <button type="button" class="button" data-remit-button>REMIT</button>
                         </div>
                         
+                        <dialog>
+
+                        </dialog>
                     </div>
 
 
@@ -545,11 +577,10 @@
                     </div>
 
                 </div>
+
             </div>
         </div>
         
-    </div>
-
     </main>
 
     <script src="../../res/js/app.js" defer></script>
