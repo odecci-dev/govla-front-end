@@ -838,3 +838,9 @@ August 16, 2023 (Wednesday)
 First Commit:
 • New Collection: Finished the printables layout
 
+August 17, 2023 (Thursday)
+First Commit:
+• Collection Module: Created the collection remittance page
+- collection-remittance.html
+
+
