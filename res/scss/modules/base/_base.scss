@@ -303,10 +303,16 @@ table {
     @include primaryButton;
 }
 
+.button-2 {
+    @include primaryButton2;
+}
+
+// * Modal Button Global
 .modalButton {
     @include modalButton;
 }
 
+// * Modal Alert Button Global
 .modalAlertButton {
     @include modalAlertButton;
 }

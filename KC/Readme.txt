@@ -833,3 +833,8 @@ First Commit:
 - Button visibility for print and remit buttons
 • New Collection: Implemented the printables
 - html2canvas.js (for printables)
+
+August 16, 2023 (Wednesday)
+First Commit:
+• New Collection: Finished the printables layout
+

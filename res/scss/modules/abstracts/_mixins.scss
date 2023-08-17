@@ -195,6 +195,25 @@
     }
 }
 
+// * Primary Button 2
+@mixin primaryButton2 {
+    pointer-events: all;
+    border-radius: $border-radius-medium;
+    padding: $btn-padding-8;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    color: $white;
+    background-color: $primary;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    // * Primary Button Hover
+    &:hover {
+        background-color: $black;
+        color: $white;
+    }
+}
+
 // * Secondary Button
 @mixin secondaryButton {
     @include primaryButton;
