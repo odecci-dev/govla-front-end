@@ -56,11 +56,13 @@
             // **                       ** //
             td {
                 padding: $spacing-medium $spacing-3x-large;
-                font-size: $font-size-small;
+                font-size: $font-size;
+                vertical-align: top;
                 // * Borrowers' Data Styles
                 .td-wrapper {
                     display: flex;
                     align-items: center;
+                    
                 }
                 // * Table Buttons Styles
                 .td-btn-wrapper {
@@ -71,8 +73,10 @@
             }
             // * Applied Loan Amount
             .td-num {
+                vertical-align: top;
                 text-align: right;
                 font-weight: $font-weight-bold;
+                margin-bottom: 1rem;
             }
             td:nth-of-type(n+2):not(:nth-of-type(n+6)) {
                 text-align: right;

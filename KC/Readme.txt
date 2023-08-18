@@ -848,4 +848,9 @@ Second Commit:
 - Reference List
 - Field Expenses Modal
 
+August 18, 2023 (Friday)
+First Commit:
+• Collection Module: Implemented the Collection List Rev.
+
+
 
