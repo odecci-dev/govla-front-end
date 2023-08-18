@@ -843,4 +843,9 @@ First Commit:
 • Collection Module: Created the collection remittance page
 - collection-remittance.html
 
+Second Commit:
+• Collection Module: Remittance In-Progress 80% Complete
+- Reference List
+- Field Expenses Modal
+
 

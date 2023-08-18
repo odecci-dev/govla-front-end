@@ -3486,6 +3486,101 @@ body {
   transform: translateX(19.7rem) scaleX(6.46);
 }
 
+.fe-modal {
+  margin: auto;
+  z-index: 5;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+}
+.fe-modal::backdrop {
+  background-color: rgba(41, 41, 43, 0.7);
+}
+.fe-modal[open] {
+  animation: fade-in 500ms forwards, pop-up 500ms;
+}
+.fe-modal::backdrop[open] {
+  animation: fade-in 500ms forwards;
+}
+.fe-modal[closing] {
+  display: block;
+  pointer-events: none;
+  inset: 0;
+  animation: fade-out 500ms forwards, slide-down 500ms forwards;
+}
+.fe-modal::backdrop[closing] {
+  animation: fade-out 500ms forwards;
+}
+.fe-modal::-webkit-scrollbar {
+  display: none;
+}
+.fe-modal {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.fe-modal .modal-container {
+  display: grid;
+  grid-template-rows: repeat(2 minmax(0, 1fr)) minmax(0, 2fr);
+  gap: 2rem 0;
+  padding: 2rem;
+  position: relative;
+}
+.fe-modal .modal-container .modal-header h4 {
+  font-size: 2.6rem;
+}
+.fe-modal .modal-container .modal-header button {
+  margin: 2rem 0 0.8rem 0;
+}
+.fe-modal .modal-container .box-wrap:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: clamp(min(90vh, 20rem), 2rem, max(100vh, 30rem));
+  overflow-y: auto;
+}
+.fe-modal .modal-container .box-wrap:nth-of-type(2)::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+.fe-modal .modal-container .box-wrap:nth-of-type(2)::-webkit-scrollbar-track {
+  border-radius: 3rem;
+  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+.fe-modal .modal-container .box-wrap:nth-of-type(2)::-webkit-scrollbar-thumb {
+  border-radius: 3rem;
+  background-color: #D6A330;
+}
+.fe-modal .modal-container .box-wrap:nth-of-type(2) .rowspan {
+  display: flex;
+  gap: 1rem;
+  margin-right: 1rem;
+}
+.fe-modal .modal-container .box-wrap:nth-of-type(2) .rowspan .input-wrapper {
+  width: 17vw;
+}
+.fe-modal .modal-container .box-wrap:nth-of-type(2) .rowspan .input-wrapper .input {
+  font-size: 1.6rem;
+}
+.fe-modal .modal-container .box-wrap:nth-of-type(2) .rowspan .input-inner-wrapper {
+  display: unset;
+}
+.fe-modal .modal-container .box-wrap:nth-of-type(2) .rowspan .input-inner-wrapper .input {
+  width: 10vw;
+  font-size: 1.6rem;
+}
+.fe-modal .modal-container .box-wrap:nth-of-type(3) p {
+  font-size: 2rem;
+}
+.fe-modal .modal-container .box-wrap:nth-of-type(3) p span {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.fe-modal .modal-container .box-wrap:last-of-type {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .main-dashboard {
   position: fixed;
   right: 0;
@@ -3969,6 +4064,152 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.15);
+}
+
+.cll-con-2 {
+  height: clamp(100% - 22rem, 66%, 66vh);
+  padding: 0 4rem 2rem 4rem;
+}
+.cll-con-2 .table-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.cll-con-2 .table-container table th {
+  padding: 2rem 3rem;
+  text-align: center;
+}
+.cll-con-2 .table-container table th span.th-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.cll-con-2 .table-container table th .th-wrapper {
+  display: flex;
+  align-items: center;
+}
+.cll-con-2 .table-container table th .th-wrapper img {
+  cursor: pointer;
+  padding-left: 0.5rem;
+}
+.cll-con-2 .table-container table th:nth-of-type(-n+6) {
+  text-align: left;
+}
+.cll-con-2 .table-container table th:nth-of-type(n+2):not(:nth-of-type(n+6)) {
+  text-align: right;
+}
+.cll-con-2 .table-container table th:first-of-type {
+  padding-left: 2rem;
+}
+.cll-con-2 .table-container table th:nth-of-type(2) {
+  padding-left: 0.5rem;
+}
+.cll-con-2 .table-container table th:nth-of-type(6) .th-wrapper {
+  justify-content: flex-end;
+}
+.cll-con-2 .table-container table th:nth-of-type(7) {
+  text-align: center;
+}
+.cll-con-2 .table-container table td {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+}
+.cll-con-2 .table-container table td .td-wrapper {
+  display: flex;
+  align-items: center;
+}
+.cll-con-2 .table-container table td .td-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cll-con-2 .table-container table .td-num {
+  text-align: right;
+  font-weight: 700;
+}
+.cll-con-2 .table-container table td:nth-of-type(n+2):not(:nth-of-type(n+6)) {
+  text-align: right;
+}
+.cll-con-2 .table-container table td:first-of-type {
+  padding-left: 0.8rem;
+}
+.cll-con-2 .table-container table td:nth-of-type(2) {
+  padding-left: 0.5rem;
+}
+.cll-con-2 .table-container table td:nth-of-type(7) {
+  text-align: center;
+}
+
+.clr-con-2 {
+  height: clamp(100% - 22rem, 66%, 66vh);
+  padding: 0 4rem 2rem 4rem;
+}
+.clr-con-2 .table-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.clr-con-2 .table-container table th {
+  padding: 2rem 3rem;
+  text-align: center;
+}
+.clr-con-2 .table-container table th span.th-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.clr-con-2 .table-container table th .th-wrapper {
+  display: flex;
+  align-items: center;
+}
+.clr-con-2 .table-container table th .th-wrapper img {
+  cursor: pointer;
+  padding-left: 0.5rem;
+}
+.clr-con-2 .table-container table th:nth-of-type(-n+7) {
+  text-align: left;
+}
+.clr-con-2 .table-container table th:first-of-type {
+  padding-left: 2rem;
+}
+.clr-con-2 .table-container table th:nth-of-type(2) {
+  text-align: left;
+  padding-left: 0;
+}
+.clr-con-2 .table-container table th:nth-of-type(6) .th-wrapper {
+  justify-content: flex-end;
+}
+.clr-con-2 .table-container table th:nth-of-type(7) {
+  text-align: center;
+}
+.clr-con-2 .table-container table td {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+}
+.clr-con-2 .table-container table td .td-wrapper {
+  display: flex;
+  align-items: center;
+}
+.clr-con-2 .table-container table td .td-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clr-con-2 .table-container table td:nth-of-type(-n+7) {
+  text-align: left;
+}
+.clr-con-2 .table-container table .td-num {
+  text-align: right;
+  font-weight: 700;
+}
+.clr-con-2 .table-container table td:first-of-type {
+  padding-left: 2rem;
+  padding-right: 0;
+}
+.clr-con-2 .table-container table td:nth-of-type(2) {
+  padding-left: 0;
 }
 
 .can-container-wrapper {
@@ -7512,80 +7753,6 @@ body {
   padding-left: 0.5rem;
 }
 .main-dashboard .na-form-con .nal-con-2 .table-container table td:nth-of-type(7) {
-  text-align: center;
-}
-.main-dashboard .na-form-con .cll-con-2 {
-  height: clamp(100% - 22rem, 66%, 66vh);
-  padding: 0 4rem 2rem 4rem;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  border-radius: 1.5rem;
-  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table th {
-  padding: 2rem 3rem;
-  text-align: center;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table th span.th-name {
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table th .th-wrapper {
-  display: flex;
-  align-items: center;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table th .th-wrapper img {
-  cursor: pointer;
-  padding-left: 0.5rem;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table th:nth-of-type(-n+6) {
-  text-align: left;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table th:nth-of-type(n+2):not(:nth-of-type(n+6)) {
-  text-align: right;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table th:first-of-type {
-  padding-left: 2rem;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table th:nth-of-type(2) {
-  padding-left: 0.5rem;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table th:nth-of-type(6) .th-wrapper {
-  justify-content: flex-end;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table th:nth-of-type(7) {
-  text-align: center;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table td {
-  padding: 1rem 3rem;
-  font-size: 1rem;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table td .td-wrapper {
-  display: flex;
-  align-items: center;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table td .td-btn-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table .td-num {
-  text-align: right;
-  font-weight: 700;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table td:nth-of-type(n+2):not(:nth-of-type(n+6)) {
-  text-align: right;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table td:first-of-type {
-  padding-left: 0.8rem;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table td:nth-of-type(2) {
-  padding-left: 0.5rem;
-}
-.main-dashboard .na-form-con .cll-con-2 .table-container table td:nth-of-type(7) {
   text-align: center;
 }
 .main-dashboard .na-form-con .cil-con-1 {

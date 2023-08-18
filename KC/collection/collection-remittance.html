@@ -103,6 +103,58 @@
 
             </dialog>
 
+            <!-- * Field Expense Modal -->
+            <dialog class="fe-modal" data-field-expense-modal>
+
+                    <div class="modal-container">
+
+                        <!-- * Modal Header and Exit Button -->
+                        <div class="modal-header">
+                            <h4>Field Expenses</h4>
+                            <button class="button" onclick="addExpenses()">Add Expense</button>
+                        </div>
+
+                        <!-- * Add Expenses -->
+                        <div class="box-wrap" data-expenses-container>
+                            <div class="rowspan child" data-expenses>
+
+                                <!-- * Expense Description -->
+                                <div class="input-wrapper">
+                                    <input autocomplete="off"class="input" type="text" id="expenseDesc" name="expenseDesc" placeholder="Expense Description">
+                                </div>
+
+                                <!-- * Amount -->
+                                <div class="input-wrapper-add">
+                                    <div class="inner-container-wrapper">
+                                        <!-- * Input Inner Wrapper -->
+                                        <div class="input-inner-wrapper">
+                                            <input autocomplete="off" class="input" type="number" id="amount" name="amount" placeholder="Amount">
+                                        </div>
+                                        <!-- * Add and Subtract Button  -->
+                                        <div class="input-inner-wrapper">
+                                            <button type="button" class="addOrSubButton" onclick="subExpenses()">-</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- * Total -->
+                        <div class="box-wrap">
+                            <p>Total <span id="totalFieldExpense">300</span></p>
+                        </div>
+
+                        <!-- * Cancel and Save Button -->
+                        <div class="box-wrap">
+                            <button class="a-btn-trash" data-close-field-expense-modal>Cancel</button>
+                            <button class="button">Save</button>
+                        </div>
+
+                    </div>
+
+            </dialog>
+
             <div class="na-form-con">
 
                 <!-- * Collection List Containers -->
@@ -110,9 +162,9 @@
 
                 <div class="nal-con-1">
                     
-                    <h2>Collection List</h2>
-                    <p class="p-1">
-                        You have <span id="numOfCollectionList">10</span> Collection list
+                    <h2>Reference Number</h2>
+                    <p class="p-1" id="referenceNumber">
+                        ABPA120230525
                     </p>
     
                     <!-- * Button Container -->
@@ -121,9 +173,9 @@
                         <!-- * Button Wrapper -->
                         <div class="wrapper">
 
-                            <!-- * Add New Button -->
-                            <button class="button" data-add-new-collection>
-                                <span>Add New</span>
+                            <!-- * Field Expenses Button -->
+                            <button class="button" data-open-field-expense-modal>
+                                <span>Field Expenses</span>
                             </button>
 
                         </div>
@@ -155,483 +207,139 @@
                 </div>
 
                 <!-- * Container 2: User List - Table and Pagination -->
-                <div class="cll-con-2">
+                <div class="clr-con-2">
         
                     <!-- * Table Container -->
                     <div class="table-container">
         
                     <!-- * User Table -->
                     <table>
+
                         <!-- * Table Header -->
                         <tr>
-                        
-                            <!-- * Reference No. -->
+
+                            <!-- * Checkbox ALl-->
+                            <th><input type="checkbox" class="checkbox" data-select-all-checkbox></th>
+
+                            <!-- * Name -->
+                            <th><span class="th-name">Name</span></th>
+
+                            <!-- * Collectible -->
+                            <th><span class="th-name">Collectible</span></th>
+
+                            <!-- * Savings -->
+                            <th>
+                                <span class="th-name">Savings</span>
+                            </th>
+
+                            <!-- * Lapses -->
+                            <th>
+                                <span class="th-name">Lapses</span>
+                            </th>
+
+                            <!-- * Advance -->
+                            <th>
+                                <span class="th-name">Advance</span> 
+                            </th>
+
+                            <!-- * Mode of Payment -->
                             <th>
                                 <div class="th-wrapper">
-                                    <span class="th-name">Reference No.</span>
+                                    <span class="th-name">Mode of Payment</span> 
                                 </div>
-                            </th>
-            
-                            <!-- * Total Collectible -->
-                            <th>
-                                <span class="th-name">Total Collectible</span>
-                            </th>
-            
-                            <!-- * Total Balance -->
-                            <th>
-                                <span class="th-name">Total Balance</span>
-                            </th>
-            
-                            <!-- * Total Advance -->
-                            <th>
-                                <span class="th-name">Total Advance</span>
-                            </th>
-            
-                            <!-- * Total Lapses -->
-                            <th>
-                                <span class="th-name">Total Lapses</span>
-                            </th>
-            
-                            <!-- * Date -->
-                            <th>
-                                <span class="th-name">Date</span>
                             </th>
 
                             <!-- * Action -->
                             <th><span class="th-name">Action</span></th>
-                        
                         </tr>
-        
-                        <!-- * Table Data -->
+
+                        <!-- * All Members Data -->
                         <tr>
-                                
-                            <!-- * Reference No. -->
+
+                            <!-- * Checkbox -->
+                            <td><input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox></td>
+
+                            <!-- * Name -->
                             <td>
                                 <div class="td-wrapper">
+                                    <img src="../../res/assets/icons/sample-dp/Borrower-2.svg" alt=""> 
                                     <span class="td-num"></span>
-                                    <span class="td-name">ABPA120230525</span>
+                                    <span class="td-name">Dela Cruz, Juana</span>
                                 </div>
                             </td>
-            
-                            <!-- * Total Collectible -->
-                            <td>
-                                500.00
-                            </td>
-                                
-                            <!-- * Total Balance -->
-                            <td>
-                                5,000.00
-                            </td>
-            
-                            <!-- * Total Advance -->
-                            <td>
-                                500.00
-                            </td>
-            
-                            <!-- * Total Lapses -->
-                            <td>
-                                0
-                            </td>
-            
-                            <!-- * Date -->
-                            <td>
-                                June 18, 2023
-                            </td>
-            
-                            <!-- * Table View Button -->
+
+                            <!-- * Co-Makers Data-->
+                            <!-- <td>
+                                <div class="td-wrapper">
+                                    <img src="../../res/assets/icons/sample-dp/CoMaker-2.svg" alt="">
+                                    <span class="td-name">Barbosa, June</span>
+                                </div>
+                            </td> -->
+
+                            <!-- * Collectible -->
+                            <td>350.00</td>
+
+                            <!-- * Savings -->
+                            <td>350.00</td>
+
+                            <!-- * Lapses -->
+                            <td>350.00</td>
+
+                            <!-- * Advance -->
+                            <td>350.00</td>
+
+                            <!-- * Mode of Payment -->
+                            <td>350.00</td>
+
+                            <!-- * Table View and Trash Button -->
                             <td class="td-btns">
+
                                 <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-3" data-view-application>View</button>
+                                    <button class="a-btn-view-3" data-view-remit>Remit</button>
                                 </div>
+
                             </td>
-                        
+
                         </tr>
+
                         <tr>
-                                
-                            <!-- * Reference No. -->
+
+                            <!-- * Checkbox -->
+                            <td><input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox></td>
+
+                            <!-- * Name -->
                             <td>
                                 <div class="td-wrapper">
+                                    <img src="../../res/assets/icons/sample-dp/CoMaker-2.svg" alt="">
                                     <span class="td-num"></span>
-                                    <span class="td-name">ABPA258468754</span>
+                                    <span class="td-name">Barbosa, June</span>
                                 </div>
                             </td>
-            
-                            <!-- * Total Collectible -->
-                            <td>
-                                800.00
-                            </td>
-                                
-                            <!-- * Total Balance -->
-                            <td>
-                                4,000.00
-                            </td>
-            
-                            <!-- * Total Advance -->
-                            <td>
-                                800.00
-                            </td>
-            
-                            <!-- * Total Lapses -->
-                            <td>
-                                0
-                            </td>
-            
-                            <!-- * Date -->
-                            <td>
-                                June 18, 2023
-                            </td>
-            
-                            <!-- * Table View Button -->
+
+                            <!-- * Collectible -->
+                            <td>350.00</td>
+
+                            <!-- * Savings -->
+                            <td>350.00</td>
+
+                            <!-- * Lapses -->
+                            <td>350.00</td>
+
+                            <!-- * Advance -->
+                            <td>350.00</td>
+
+                            <!-- * Mode of Payment -->
+                            <td>350.00</td>
+
+                            <!-- * Table View and Trash Button -->
                             <td class="td-btns">
+
                                 <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-3" data-view-application>View</button>
+                                    <button class="a-btn-view-3" data-view-remit>Remit</button>
                                 </div>
+
                             </td>
-                        
-                        </tr>
-                        <tr>
-                                
-                            <!-- * Reference No. -->
-                            <td>
-                                <div class="td-wrapper">
-                                    <span class="td-num"></span>
-                                    <span class="td-name">ABPA120230525</span>
-                                </div>
-                            </td>
-            
-                            <!-- * Total Collectible -->
-                            <td>
-                                500.00
-                            </td>
-                                
-                            <!-- * Total Balance -->
-                            <td>
-                                5,000.00
-                            </td>
-            
-                            <!-- * Total Advance -->
-                            <td>
-                                500.00
-                            </td>
-            
-                            <!-- * Total Lapses -->
-                            <td>
-                                0
-                            </td>
-            
-                            <!-- * Date -->
-                            <td>
-                                June 18, 2023
-                            </td>
-            
-                            <!-- * Table View Button -->
-                            <td class="td-btns">
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-3" data-view-application>View</button>
-                                </div>
-                            </td>
-                        
-                        </tr>
-                        <tr>
-                                
-                            <!-- * Reference No. -->
-                            <td>
-                                <div class="td-wrapper">
-                                    <span class="td-num"></span>
-                                    <span class="td-name">ABPA258468754</span>
-                                </div>
-                            </td>
-            
-                            <!-- * Total Collectible -->
-                            <td>
-                                800.00
-                            </td>
-                                
-                            <!-- * Total Balance -->
-                            <td>
-                                4,000.00
-                            </td>
-            
-                            <!-- * Total Advance -->
-                            <td>
-                                800.00
-                            </td>
-            
-                            <!-- * Total Lapses -->
-                            <td>
-                                0
-                            </td>
-            
-                            <!-- * Date -->
-                            <td>
-                                June 18, 2023
-                            </td>
-            
-                            <!-- * Table View Button -->
-                            <td class="td-btns">
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-3" data-view-application>View</button>
-                                </div>
-                            </td>
-                        
-                        </tr>
-                        <tr>
-                                
-                            <!-- * Reference No. -->
-                            <td>
-                                <div class="td-wrapper">
-                                    <span class="td-num"></span>
-                                    <span class="td-name">ABPA120230525</span>
-                                </div>
-                            </td>
-            
-                            <!-- * Total Collectible -->
-                            <td>
-                                500.00
-                            </td>
-                                
-                            <!-- * Total Balance -->
-                            <td>
-                                5,000.00
-                            </td>
-            
-                            <!-- * Total Advance -->
-                            <td>
-                                500.00
-                            </td>
-            
-                            <!-- * Total Lapses -->
-                            <td>
-                                0
-                            </td>
-            
-                            <!-- * Date -->
-                            <td>
-                                June 18, 2023
-                            </td>
-            
-                            <!-- * Table View Button -->
-                            <td class="td-btns">
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-3" data-view-application>View</button>
-                                </div>
-                            </td>
-                        
-                        </tr>
-                        <tr>
-                                
-                            <!-- * Reference No. -->
-                            <td>
-                                <div class="td-wrapper">
-                                    <span class="td-num"></span>
-                                    <span class="td-name">ABPA258468754</span>
-                                </div>
-                            </td>
-            
-                            <!-- * Total Collectible -->
-                            <td>
-                                800.00
-                            </td>
-                                
-                            <!-- * Total Balance -->
-                            <td>
-                                4,000.00
-                            </td>
-            
-                            <!-- * Total Advance -->
-                            <td>
-                                800.00
-                            </td>
-            
-                            <!-- * Total Lapses -->
-                            <td>
-                                0
-                            </td>
-            
-                            <!-- * Date -->
-                            <td>
-                                June 18, 2023
-                            </td>
-            
-                            <!-- * Table View Button -->
-                            <td class="td-btns">
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-3" data-view-application>View</button>
-                                </div>
-                            </td>
-                        
-                        </tr>
-                        <tr>
-                                
-                            <!-- * Reference No. -->
-                            <td>
-                                <div class="td-wrapper">
-                                    <span class="td-num"></span>
-                                    <span class="td-name">ABPA120230525</span>
-                                </div>
-                            </td>
-            
-                            <!-- * Total Collectible -->
-                            <td>
-                                500.00
-                            </td>
-                                
-                            <!-- * Total Balance -->
-                            <td>
-                                5,000.00
-                            </td>
-            
-                            <!-- * Total Advance -->
-                            <td>
-                                500.00
-                            </td>
-            
-                            <!-- * Total Lapses -->
-                            <td>
-                                0
-                            </td>
-            
-                            <!-- * Date -->
-                            <td>
-                                June 18, 2023
-                            </td>
-            
-                            <!-- * Table View Button -->
-                            <td class="td-btns">
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-3" data-view-application>View</button>
-                                </div>
-                            </td>
-                        
-                        </tr>
-                        <tr>
-                                
-                            <!-- * Reference No. -->
-                            <td>
-                                <div class="td-wrapper">
-                                    <span class="td-num"></span>
-                                    <span class="td-name">ABPA258468754</span>
-                                </div>
-                            </td>
-            
-                            <!-- * Total Collectible -->
-                            <td>
-                                800.00
-                            </td>
-                                
-                            <!-- * Total Balance -->
-                            <td>
-                                4,000.00
-                            </td>
-            
-                            <!-- * Total Advance -->
-                            <td>
-                                800.00
-                            </td>
-            
-                            <!-- * Total Lapses -->
-                            <td>
-                                0
-                            </td>
-            
-                            <!-- * Date -->
-                            <td>
-                                June 18, 2023
-                            </td>
-            
-                            <!-- * Table View Button -->
-                            <td class="td-btns">
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-3" data-view-application>View</button>
-                                </div>
-                            </td>
-                        
-                        </tr>
-                        <tr>
-                                
-                            <!-- * Reference No. -->
-                            <td>
-                                <div class="td-wrapper">
-                                    <span class="td-num"></span>
-                                    <span class="td-name">ABPA120230525</span>
-                                </div>
-                            </td>
-            
-                            <!-- * Total Collectible -->
-                            <td>
-                                500.00
-                            </td>
-                                
-                            <!-- * Total Balance -->
-                            <td>
-                                5,000.00
-                            </td>
-            
-                            <!-- * Total Advance -->
-                            <td>
-                                500.00
-                            </td>
-            
-                            <!-- * Total Lapses -->
-                            <td>
-                                0
-                            </td>
-            
-                            <!-- * Date -->
-                            <td>
-                                June 18, 2023
-                            </td>
-            
-                            <!-- * Table View Button -->
-                            <td class="td-btns">
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-3" data-view-application>View</button>
-                                </div>
-                            </td>
-                        
-                        </tr>
-                        <tr>
-                                
-                            <!-- * Reference No. -->
-                            <td>
-                                <div class="td-wrapper">
-                                    <span class="td-num"></span>
-                                    <span class="td-name">ABPA258468754</span>
-                                </div>
-                            </td>
-            
-                            <!-- * Total Collectible -->
-                            <td>
-                                800.00
-                            </td>
-                                
-                            <!-- * Total Balance -->
-                            <td>
-                                4,000.00
-                            </td>
-            
-                            <!-- * Total Advance -->
-                            <td>
-                                800.00
-                            </td>
-            
-                            <!-- * Total Lapses -->
-                            <td>
-                                0
-                            </td>
-            
-                            <!-- * Date -->
-                            <td>
-                                June 18, 2023
-                            </td>
-            
-                            <!-- * Table View Button -->
-                            <td class="td-btns">
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-3" data-view-application>View</button>
-                                </div>
-                            </td>
-                        
+
                         </tr>
 
                     </table>
