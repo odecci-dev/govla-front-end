@@ -853,4 +853,10 @@ First Commit:
 • Collection Module: Implemented the Collection List Rev.
 
 
+August 22, 2023 (Tuesday)
+First Commit:
+• Collection Module: Remit Modal
+
+
+
 

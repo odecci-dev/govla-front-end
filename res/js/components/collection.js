@@ -7,9 +7,13 @@ if (addNewCollectionBtn) {
     })
 }
 
+
+// ***** Field Expense Modal ***** //
+
 const fieldExpenseModal = document.querySelector('[data-field-expense-modal]')
 const openFieldExpenseBtn = document.querySelector('[data-open-field-expense-modal]')
 const closeFieldExpenseBtn = document.querySelector('[data-close-field-expense-modal]')
+const saveFieldExpenseBtn = document.querySelector('[data-save-field-expense-modal]')
 
 if (fieldExpenseModal) {
     openFieldExpenseBtn.addEventListener('click', () => {
@@ -24,50 +28,26 @@ if (fieldExpenseModal) {
         }, { once: true });
     
     })
-}
-// * Printables
 
-const printables = document.querySelector('[data-open-printables]')
-const printRemitButton = document.querySelector('[data-print-remit-buttons]')
-const printButton = printRemitButton.querySelector('[data-print-button]')
-const remitButton = printRemitButton.querySelector('[data-remit-button]')
-const addNewCollectionTable = document.getElementById('clientsTable')
-const detailsWrapperDropdown = addNewCollectionTable.querySelectorAll('[data-details-wrapper-dropdown]')
-
-
-detailsWrapperDropdown.forEach((dropdownBtn) => {
+    saveFieldExpenseBtn.addEventListener('click', () => {
+        fieldExpenseModal.setAttribute("closing", "");
+        fieldExpenseModal.addEventListener("animationend", () => {
+            fieldExpenseModal.removeAttribute("closing");
+            fieldExpenseModal.close();
+        }, { once: true });
     
-    let detailsWrapper = dropdownBtn.nextElementSibling
-    let details = dropdownBtn.nextElementSibling.firstElementChild
-
-    dropdownBtn.addEventListener('click', () => {
-        detailsWrapper.classList.toggle('open-wrapper')
-        details.classList.toggle('open-details')
-        printRemitButton.classList.toggle('show-buttons')
     })
+}
 
-})
-
-printButton.addEventListener('click', () => {
-    printables.showModal()
-})
-
-const printContainer = document.querySelector('[data-printables]')
-
-printContainer.addEventListener('click', () => {
-    print()
-})
-
-remitButton.addEventListener('click', () => {
-    url = '/KC/collection/collection-remittance.html'
-    location.href = url
-})
-
+// ***** END ---- Field Expense Modal ***** //
 
 
 // ***** Add and Subtract Field Expenses ***** //
 
 // * Add Expenses
+
+cloneCount = 0;
+
 function addExpenses() {
 
     const expensesForm = document.querySelector('[data-expenses]')
@@ -107,4 +87,80 @@ function subExpenses() {
 
 }
 
-// ***** END ---- Add and Subtract Appliances ***** //
+// ***** END ---- Add and Subtract Expenses ***** //
+
+// ***** Remit Modal ***** //
+
+const remitModal = document.querySelector('[data-remit-modal]')
+const openRemitModalBtn = document.querySelectorAll('[data-open-remit-modal]')
+const closeRemitModalBtn = document.querySelector('[data-close-remit-modal]')
+const saveRemitModalBtn = document.querySelector('[data-save-remit-modal]')
+
+if (remitModal) {
+
+    openRemitModalBtn.forEach((button) => {
+        button.addEventListener('click', () => {
+            remitModal.showModal()
+        })
+    })
+
+    closeRemitModalBtn.addEventListener('click', () => {
+        remitModal.setAttribute("closing", "");
+        remitModal.addEventListener("animationend", () => {
+            remitModal.removeAttribute("closing");
+            remitModal.close();
+        }, { once: true });
+    })
+
+    saveRemitModalBtn.addEventListener('click', () => {
+        remitModal.setAttribute("closing", "");
+        remitModal.addEventListener("animationend", () => {
+            remitModal.removeAttribute("closing");
+            remitModal.close();
+        }, { once: true });
+    })
+
+}
+
+// ***** END ---- Remit Modal ***** //
+
+
+// * Printables
+
+const printables = document.querySelector('[data-open-printables]')
+const printRemitButton = document.querySelector('[data-print-remit-buttons]')
+const printButton = printRemitButton.querySelector('[data-print-button]')
+const remitButton = printRemitButton.querySelector('[data-remit-button]')
+const addNewCollectionTable = document.getElementById('clientsTable')
+const detailsWrapperDropdown = addNewCollectionTable.querySelectorAll('[data-details-wrapper-dropdown]')
+
+
+detailsWrapperDropdown.forEach((dropdownBtn) => {
+    
+    let detailsWrapper = dropdownBtn.nextElementSibling
+    let details = dropdownBtn.nextElementSibling.firstElementChild
+
+    dropdownBtn.addEventListener('click', () => {
+        detailsWrapper.classList.toggle('open-wrapper')
+        details.classList.toggle('open-details')
+        printRemitButton.classList.toggle('show-buttons')
+    })
+
+})
+
+printButton.addEventListener('click', () => {
+    printables.showModal()
+})
+
+const printContainer = document.querySelector('[data-printables]')
+
+printContainer.addEventListener('click', () => {
+    print()
+})
+
+remitButton.addEventListener('click', () => {
+    url = '/KC/collection/collection-remittance.html'
+    location.href = url
+})
+
+

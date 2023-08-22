@@ -148,7 +148,63 @@
                         <!-- * Cancel and Save Button -->
                         <div class="box-wrap">
                             <button class="a-btn-trash" data-close-field-expense-modal>Cancel</button>
-                            <button class="button">Save</button>
+                            <button class="button" data-save-field-expense-modal>Save</button>
+                        </div>
+
+                    </div>
+
+            </dialog>
+
+            <!-- * Remit Modal -->
+            <dialog class="re-modal" data-remit-modal>
+
+                    <div class="modal-container">
+
+                        <!-- * Modal Header and Exit Button -->
+                        <div class="modal-header">
+                            <h4>Field Expenses</h4>
+                        </div>
+
+                        
+                        <!-- * Box-wrap: Amount Collected, Savings, Lapses, Advance, and Mode of Payment -->
+                        <div class="box-wrap">
+
+                            <!-- * Amount Collected -->
+                            <div class="input-wrapper">
+                                <span>Amount Collected</span>
+                                <input autocomplete="off" type="text" id="amntCollected" name="amntCollected">
+                            </div>
+
+                            <!-- * Savings -->
+                            <div class="input-wrapper">
+                                <span>Savings</span>
+                                <input autocomplete="off" type="text" id="savings" name="savings">
+                            </div>
+
+                            <!-- * Lapses -->
+                            <div class="input-wrapper">
+                                <span>Lapses</span>
+                                <input autocomplete="off" type="text" id="lapses" name="lapses">
+                            </div>
+
+                            <!-- * Advance -->
+                            <div class="input-wrapper">
+                                <span>Advance</span>
+                                <input autocomplete="off" type="text" id="advance" name="advance">
+                            </div>
+
+                            <!-- * Mode of Payment -->
+                            <div class="input-wrapper">
+                                <span>Mode of Payment</span>
+                                <input autocomplete="off" type="text" id="mod" name="mod">
+                            </div>
+
+                        </div>
+
+                        <!-- * Cancel and Save Button -->
+                        <div class="box-wrap">
+                            <button class="a-btn-trash" data-close-remit-modal>Cancel</button>
+                            <button class="button" data-save-remit-modal>Save</button>
                         </div>
 
                     </div>
@@ -295,7 +351,7 @@
                             <td class="td-btns">
 
                                 <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-3" data-view-remit>Remit</button>
+                                    <button class="a-btn-view-3" data-open-remit-modal>Remit</button>
                                 </div>
 
                             </td>
@@ -335,7 +391,7 @@
                             <td class="td-btns">
 
                                 <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-3" data-view-remit>Remit</button>
+                                    <button class="a-btn-view-3" data-open-remit-button>Remit</button>
                                 </div>
 
                             </td>
