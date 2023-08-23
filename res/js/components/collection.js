@@ -1,3 +1,4 @@
+// * Add New Collection
 const addNewCollectionBtn = document.querySelector('[data-add-new-collection]')
 
 if (addNewCollectionBtn) {
@@ -5,6 +6,85 @@ if (addNewCollectionBtn) {
         url = '/KC/collection/collection-add-new.html'
         location.href = url
     })
+}
+
+
+// * View Collection
+const viewCollectionBtn = document.querySelector('[data-view-collection]')
+
+if (viewCollectionBtn) {
+    viewCollectionBtn.addEventListener('click', () => {
+        url = '/KC/collection/collection-view.html'
+        location.href = url
+    })
+}
+
+
+
+// ***** Cash Denomination Modal ***** //
+
+const cashDenominationModal = document.querySelector('[data-cash-denomination-modal]')
+const openCashDenominationBtn = document.querySelector('[data-open-cash-denomination-button]')
+const closeCashDenominationBtn = document.querySelector('[data-close-cash-denomination-button]')
+const approveCashDenominationBtn = document.querySelector('[data-approve-cash-denomination-button]')
+
+if (cashDenominationModal) {
+
+    openCashDenominationBtn.addEventListener('click', () => {
+        cashDenominationModal.showModal()
+    })
+    
+    closeCashDenominationBtn.addEventListener('click', () => {
+        cashDenominationModal.setAttribute("closing", "");
+        cashDenominationModal.addEventListener("animationend", () => {
+            cashDenominationModal.removeAttribute("closing");
+            cashDenominationModal.close();
+        }, { once: true });
+    
+    })
+    
+    approveCashDenominationBtn.addEventListener('click', () => {
+        cashDenominationModal.setAttribute("closing", "");
+        cashDenominationModal.addEventListener("animationend", () => {
+            cashDenominationModal.removeAttribute("closing");
+            cashDenominationModal.close();
+        }, { once: true });
+    
+    })
+
+}
+
+// ***** Reject Collection Modal ***** //
+
+const rejectCollectionModal = document.querySelector('[data-collection-reject-modal]')
+const openRejectCollectionBtn = document.querySelector('[data-open-collection-reject-button]')
+const closeRejectCollectionBtn = document.querySelector('[data-close-collection-reject-button]')
+const submitRejectCollectionBtn = document.querySelector('[data-submit-collection-reject-button]')
+
+if (rejectCollectionModal) {
+
+    openRejectCollectionBtn.addEventListener('click', () => {
+        rejectCollectionModal.showModal()
+    })
+    
+    closeRejectCollectionBtn.addEventListener('click', () => {
+        rejectCollectionModal.setAttribute("closing", "");
+        rejectCollectionModal.addEventListener("animationend", () => {
+            rejectCollectionModal.removeAttribute("closing");
+            rejectCollectionModal.close();
+        }, { once: true });
+    
+    })
+    
+    submitRejectCollectionBtn.addEventListener('click', () => {
+        rejectCollectionModal.setAttribute("closing", "");
+        rejectCollectionModal.addEventListener("animationend", () => {
+            rejectCollectionModal.removeAttribute("closing");
+            rejectCollectionModal.close();
+        }, { once: true });
+    
+    })
+
 }
 
 
@@ -129,8 +209,8 @@ if (remitModal) {
 
 const printables = document.querySelector('[data-open-printables]')
 const printRemitButton = document.querySelector('[data-print-remit-buttons]')
-const printButton = printRemitButton.querySelector('[data-print-button]')
-const remitButton = printRemitButton.querySelector('[data-remit-button]')
+const printButton = printRemitButton.querySelector('[data-collection-print-button]')
+const remitButton = printRemitButton.querySelector('[data-collection-remit-button]')
 const addNewCollectionTable = document.getElementById('clientsTable')
 const detailsWrapperDropdown = addNewCollectionTable.querySelectorAll('[data-details-wrapper-dropdown]')
 

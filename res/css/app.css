@@ -357,6 +357,40 @@ table .td-btn-wrapper {
   color: #FFFFFF;
 }
 
+.button-2-green {
+  pointer-events: all;
+  border-radius: 1rem;
+  padding: 0.6rem 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #36A623;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.button-2-green:hover {
+  background-color: rgba(54, 166, 35, 0.2);
+  color: #36A623;
+}
+
+.button-2-alert {
+  pointer-events: all;
+  border-radius: 1rem;
+  padding: 0.6rem 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #FF0404;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.button-2-alert:hover {
+  background-color: rgba(255, 4, 4, 0.2);
+  color: #FF0404;
+}
+
 .modalButton {
   pointer-events: all;
   border-radius: 1rem;

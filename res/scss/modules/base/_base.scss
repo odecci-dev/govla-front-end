@@ -326,6 +326,14 @@ table {
     @include primaryButton2;
 }
 
+.button-2-green {
+    @include primaryButton2Green;
+}
+
+.button-2-alert {
+    @include primaryButton2Alert;
+}
+
 // * Modal Button Global
 .modalButton {
     @include modalButton;

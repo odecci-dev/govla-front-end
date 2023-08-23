@@ -214,6 +214,44 @@
     }
 }
 
+// * Primary Button 2 - Green
+@mixin primaryButton2Green {
+    pointer-events: all;
+    border-radius: $border-radius-medium;
+    padding: $btn-padding-8;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    color: $white;
+    background-color: $green;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    // * Primary Button Hover
+    &:hover {
+        background-color: $greenTR;
+        color: $green;
+    }
+}
+
+// * Primary Button 2 - Alert
+@mixin primaryButton2Alert {
+    pointer-events: all;
+    border-radius: $border-radius-medium;
+    padding: $btn-padding-8;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    color: $white;
+    background-color: $alert;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    // * Primary Button Hover
+    &:hover {
+        background-color: $alertTR;
+        color: $alert;
+    }
+}
+
 // * Secondary Button
 @mixin secondaryButton {
     @include primaryButton;

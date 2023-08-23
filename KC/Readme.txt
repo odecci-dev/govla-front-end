@@ -857,6 +857,16 @@ August 22, 2023 (Tuesday)
 First Commit:
 • Collection Module: Remit Modal
 
+Second Commit:
+• Collection Module: Viewing the Collection
+
+
+August 23, 2023 (Wednesday)
+11AM (Time-in)
+
+
+
+
 
 
 
