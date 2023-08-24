@@ -3690,6 +3690,126 @@ body {
   justify-content: flex-end;
 }
 
+.cd-modal {
+  margin: auto;
+  z-index: 5;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+}
+.cd-modal::backdrop {
+  background-color: rgba(41, 41, 43, 0.7);
+}
+.cd-modal[open] {
+  animation: fade-in 500ms forwards, pop-up 500ms;
+}
+.cd-modal::backdrop[open] {
+  animation: fade-in 500ms forwards;
+}
+.cd-modal[closing] {
+  display: block;
+  pointer-events: none;
+  inset: 0;
+  animation: fade-out 500ms forwards, slide-down 500ms forwards;
+}
+.cd-modal::backdrop[closing] {
+  animation: fade-out 500ms forwards;
+}
+.cd-modal::-webkit-scrollbar {
+  display: none;
+}
+.cd-modal {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.cd-modal .modal-container {
+  display: grid;
+  grid-template-rows: repeat(2 minmax(0, 1fr)) minmax(0, 2fr);
+  gap: 2rem 0;
+  padding: 2rem 1rem;
+  position: relative;
+}
+.cd-modal .modal-container .modal-header {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.cd-modal .modal-container .modal-header h4 {
+  font-size: 2.3rem;
+}
+.cd-modal .modal-container .modal-header button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(2rem, -2.5rem);
+  background: none;
+}
+.cd-modal .modal-container .box-wrap:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+.cd-modal .modal-container .box-wrap:nth-of-type(2)::after {
+  content: "Count";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-3.6rem, -3.6rem);
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+.cd-modal .modal-container .box-wrap:nth-of-type(2) .input-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  border-radius: 1.5rem;
+  background-color: #FFFFFF;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  background-color: #D6A330;
+  gap: 20rem;
+}
+.cd-modal .modal-container .box-wrap:nth-of-type(2) .input-wrapper span {
+  margin-bottom: 0;
+}
+.cd-modal .modal-container .box-wrap:nth-of-type(2) .input-wrapper input {
+  width: 8rem;
+  height: 2.5rem;
+  box-shadow: unset;
+  font-size: 1.6rem;
+  color: #8C8686;
+  border-radius: 0.75rem;
+  outline: 1px solid #8C8686;
+  text-align: right;
+  padding: 1rem 0.6rem;
+}
+.cd-modal .modal-container .box-wrap:nth-of-type(3) .inner-box-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cd-modal .modal-container .box-wrap:nth-of-type(3) .inner-box-wrap p {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.cd-modal .modal-container .box-wrap:nth-of-type(3) .inner-box-wrap span {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.cd-modal .modal-container .box-wrap:nth-of-type(3) .inner-box-wrap:last-of-type p {
+  color: #D6A330;
+}
+.cd-modal .modal-container .box-wrap:nth-of-type(3) .inner-box-wrap:last-of-type span {
+  color: #D6A330;
+}
+.cd-modal .modal-container .box-wrap:last-of-type {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .main-dashboard {
   position: fixed;
   right: 0;

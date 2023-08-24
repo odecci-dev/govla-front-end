@@ -294,7 +294,7 @@
             </dialog>
 
             <!-- * Cash Denomination Modal -->
-            <dialog class="re-modal" data-cash-denomination-modal>
+            <dialog class="cd-modal" data-cash-denomination-modal>
 
                 <div class="modal-container">
 
@@ -306,51 +306,75 @@
                         </button>
                     </div>
 
-                    
-                    <!-- * Box-wrap: Amount Collected, Savings, Lapses, Advance, and Mode of Payment -->
-                    <div class="box-wrap">
-
-                        <!-- * Amount Collected -->
+                    <!-- * Box-wrap: 1, 20, 50, 100, 500, and 1000 -->
+                    <div class="box-wrap" id="cashDenominationForm">
+                        
+                        <!-- * 1 -->
                         <div class="input-wrapper">
-                            <span>Amount Collected</span>
-                            <input autocomplete="off" type="text" id="amntCollected" name="amntCollected">
+                            <span>1</span>
+                            <input autocomplete="off" type="number" id="cd1" name="cd1" value="0" placeholder="0">
                         </div>
 
-                        <!-- * Savings -->
+                        <!-- * 20 -->
                         <div class="input-wrapper">
-                            <span>Savings</span>
-                            <input autocomplete="off" type="text" id="savings" name="savings">
+                            <span>20</span>
+                            <input autocomplete="off" type="number" id="cd20" name="cd20" value="0" placeholder="0">
                         </div>
 
-                        <!-- * Lapses -->
+                        <!-- * 50 -->
                         <div class="input-wrapper">
-                            <span>Lapses</span>
-                            <input autocomplete="off" type="text" id="lapses" name="lapses">
+                            <span>50</span>
+                            <input autocomplete="off" type="number" id="cd50" name="cd50" value="0" placeholder="0">
                         </div>
 
-                        <!-- * Advance -->
+                        <!-- * 100 -->
                         <div class="input-wrapper">
-                            <span>Advance</span>
-                            <input autocomplete="off" type="text" id="advance" name="advance">
+                            <span>100</span>
+                            <input autocomplete="off" type="number" id="cd100" name="cd100" value="0" placeholder="0">
                         </div>
 
-                        <!-- * Mode of Payment -->
+                        <!-- * 200 -->
                         <div class="input-wrapper">
-                            <span>Mode of Payment</span>
-                            <input autocomplete="off" type="text" id="mod" name="mod">
+                            <span>200</span>
+                            <input autocomplete="off" type="number" id="cd200" name="cd200" value="0" placeholder="0">
+                        </div>
+
+                        <!-- * 500 -->
+                        <div class="input-wrapper">
+                            <span>500</span>
+                            <input autocomplete="off" type="number" id="cd500" name="cd500" value="0" placeholder="0">
+                        </div>
+
+                        <!-- * 1000 -->
+                        <div class="input-wrapper">
+                            <span>1000</span>
+                            <input autocomplete="off" type="number" id="cd1000" name="cd1000" value="0" placeholder="0">
                         </div>
 
                     </div>
 
-                    <!-- * Cancel and Save Button -->
+                    <!-- * Box-wrap: Total Cash Denomination and Collected Amount -->
                     <div class="box-wrap">
-                        <button class="button-2-green" data-approve-cash-denomination>Approve</button>
+                        <div class="inner-box-wrap">
+                            <p>TOTAL</p>
+                            <span id="totalCashDenom">-</span>
+                        </div>
+                        <div class="inner-box-wrap">
+                            <p>COLLECTED AMOUNT</p>
+                            <span id="collectedAmnt">3000</span>
+                        </div>
+                    </div>
+
+                    <!-- * Approve Button -->
+                    <div class="box-wrap">
+                        <button class="button-2-green" data-approve-cash-denomination-button>Approve</button>
                     </div>
 
                 </div>
 
             </dialog>
             
+            <!-- * Reject Modal -->
             <dialog class="na-application-decline-modal" data-collection-reject-modal>
                 
                 <!-- * Modal Container -->

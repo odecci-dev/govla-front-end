@@ -864,6 +864,12 @@ Second Commit:
 August 23, 2023 (Wednesday)
 11AM (Time-in)
 
+• Collection Module: Implemented the Cash Denomination Modal
+
+
+August 24, 2023 (Thursday)
+First Commit:
+• Collection Module: Completed✅ the Cash Denomination Modal
 
 
 

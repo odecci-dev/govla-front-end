@@ -35,22 +35,87 @@ if (cashDenominationModal) {
     })
     
     closeCashDenominationBtn.addEventListener('click', () => {
-        cashDenominationModal.setAttribute("closing", "");
+        cashDenominationModal.setAttribute("closing", "")
         cashDenominationModal.addEventListener("animationend", () => {
-            cashDenominationModal.removeAttribute("closing");
-            cashDenominationModal.close();
-        }, { once: true });
+            cashDenominationModal.removeAttribute("closing")
+            cashDenominationModal.close()
+        }, { once: true })
     
     })
     
     approveCashDenominationBtn.addEventListener('click', () => {
-        cashDenominationModal.setAttribute("closing", "");
+        cashDenominationModal.setAttribute("closing", "")
         cashDenominationModal.addEventListener("animationend", () => {
-            cashDenominationModal.removeAttribute("closing");
-            cashDenominationModal.close();
-        }, { once: true });
+            cashDenominationModal.removeAttribute("closing")
+            cashDenominationModal.close()
+        }, { once: true })
     
     })
+
+    // * Denomination values
+    const denominations = {
+        1: 1,
+        20: 20,
+        50: 50,
+        100: 100,
+        200: 200,
+        500: 500,
+        1000: 1000,
+    };
+
+    // * Function to calculate the total value
+    function calculateTotal(collectedDenominations) {
+        let total = 0;
+        
+        for (const denomination in collectedDenominations) {
+        const count = collectedDenominations[denomination]
+            if (denominations[denomination]) {
+                total += denominations[denomination] * count
+            }
+        }
+        
+        // total = total || 0;
+    return total;
+    
+    }
+
+    // * Auto-computation
+    const form = document.getElementById("cashDenominationForm")
+    const totalValueElement = document.getElementById("totalCashDenom")
+    const collectedAmount = document.getElementById("collectedAmnt")
+
+    
+    form.addEventListener("input", (evt) => {
+
+        const collectedDenominations = {};
+        for (const denomination in denominations) {
+            const inputElement = document.getElementById(`cd${denomination}`);
+            const value = parseInt(inputElement.value, 10);
+            
+            if (isNaN(value) ) {
+                value = 0
+            }
+            
+            collectedDenominations[denomination] = value;
+        }
+        
+        
+        const totalValue = calculateTotal(collectedDenominations);
+        totalValueElement.textContent = totalValue;
+        
+        // totalValue(isNaN(totalValue)) = 0
+
+        const collectedAmntValue = parseInt(collectedAmount.innerText, 10)
+
+        if (totalValue >= collectedAmntValue) {
+            totalValueElement.classList.remove('textAlert')
+            totalValueElement.classList.add('textGreen')
+        } else if (totalValue < collectedAmntValue) { 
+            totalValueElement.classList.remove('textGreen')
+            totalValueElement.classList.add('textAlert')
+        } 
+
+    });
 
 }
 
