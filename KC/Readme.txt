@@ -896,6 +896,12 @@ First Commit:
 - Button
 - Responsiveness
 
+Second Commit:
+• Collection Module: Printables Revision
+- made collection-print.html 
+- from modal to another window
+
+
 
 
 
