@@ -104,7 +104,7 @@ if (cashDenominationModal) {
         totalValueElement.textContent = totalValue;
         
         // totalValue(isNaN(totalValue)) = 0
-
+        
         const collectedAmntValue = parseInt(collectedAmount.innerText, 10)
 
         if (totalValue >= collectedAmntValue) {
