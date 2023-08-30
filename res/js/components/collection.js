@@ -102,9 +102,7 @@ if (cashDenominationModal) {
         
         const totalValue = calculateTotal(collectedDenominations);
         totalValueElement.textContent = totalValue;
-        
-        // totalValue(isNaN(totalValue)) = 0
-        
+
         const collectedAmntValue = parseInt(collectedAmount.innerText, 10)
 
         if (totalValue >= collectedAmntValue) {
@@ -198,7 +196,7 @@ function addExpenses() {
     const expensesForm = document.querySelector('[data-expenses]')
     const expensesContainer = document.querySelector('[data-expenses-container]')
 
-    expensesForm.setAttribute('id', 'property-1')
+    expensesForm.setAttribute('id', 'expenses-1')
 
     // * Clone the original element
     const clonedChild = expensesForm.cloneNode(true)
@@ -270,28 +268,132 @@ if (remitModal) {
 // ***** END ---- Remit Modal ***** //
 
 
+let arrayAreaMenuButton = []
+let arrayAreaMenuData = []
+
+function areaMenuButtonIncrement() {
+    
+    const areaMenuButton = document.querySelectorAll('[data-area-menu]')
+    let areaMenuData = document.querySelectorAll('[data-area-menu-toggle]')
+    menuCount = 0
+    
+    for (const button of areaMenuButton) {
+        
+        menuCount++
+        button.setAttribute('id', `area-${menuCount}`)
+        for (const menuData of areaMenuData) {
+
+            let areaMenuDropdown = menuData.nextElementSibling
+            let areaMenuDropdownDetails = menuData.nextElementSibling.firstElementChild
+            
+            menuData.classList.remove('show-area-details')
+
+            button.addEventListener('click', () => {
+                
+                menuData.classList.toggle('show-area-details')
+                areaMenuDropdown.classList.add('open-wrapper')
+                areaMenuDropdown.classList.remove('open-wrapper')
+                areaMenuDropdownDetails.classList.add('open-details')
+                areaMenuDropdownDetails.classList.remove('open-details')
+                
+                function toggleClass(element, className) {
+                    if (element.classList.contains(className)) {
+                        element.classList.remove(className);
+                    } else {
+                        element.classList.add(className);
+                    }
+                }
+                
+                menuData.addEventListener('click', () => {
+                    toggleClass(areaMenuDropdown, 'open-wrapper')
+                    toggleClass(areaMenuDropdownDetails, 'open-details')
+                })
+
+            })
+
+        }
+        arrayAreaMenuButton.push(button)
+    }
+}
+
+areaMenuButtonIncrement()
+
+// const addNewCollectionTable = document.getElementById('clientsTable')
+// const detailsWrapperDropdown = addNewCollectionTable.querySelectorAll('[data-details-wrapper-dropdown]')
+
+// detailsWrapperDropdown.forEach((dropdownBtn) => {
+//     arrayAreaMenuData.push(dropdownBtn)
+    
+//     let detailsWrapper = dropdownBtn.nextElementSibling
+//     let details = dropdownBtn.nextElementSibling.firstElementChild
+
+//     dropdownBtn.addEventListener('click', () => {
+//         detailsWrapper.classList.toggle('open-wrapper')
+//         details.classList.toggle('open-details')
+//         printRemitButton.classList.toggle('show-buttons')
+//     })
+// })
+
+// let arrayAreaMenuData = []
+
+// function areaMenuIncrement() {
+
+//     dataCount = 0
+
+//     for (const menuData of areaMenuData) {
+//         dataCount++
+//         menuData.setAttribute('data-area-menu-toggle', `area-${dataCount}`)
+    
+//         arrayAreaMenuData.push(menuData)
+//     }
+
+// }
+
+// areaMenuIncrement()
+
+// const arrayAreaMenuPairs = {}
+
+// arrayAreaMenuButton.forEach((key, index) => {
+//     arrayAreaMenuPairs[key] = arrayAreaMenuData[index]
+// })
+
+// console.log(arrayAreaMenuPairs);
+// arrayAreaMenuButton.forEach(button => {
+//     button.addEventListener('click', () => {
+//         const key = button.getAttribute('data-area-menu')
+//         const value = arrayAreaMenuPairs[key]
+
+//         if (value) {
+//             button.classList.toggle('show-area-details')
+//         }
+//     })
+// })
+
+
+// arrayAreaMenuButton.forEach(button => {
+    // console.log(button);
+    // arrayAreaMenuData.forEach(data =>  {
+    //     data.getAttribute('data-area-menu-toggle')
+    //     console.log(data);
+    // })
+    
+// })
+// console.log(key);
+
+// arrayAreaMenuData.forEach(data => {
+//     if (button) {
+//         console.log('hello world');
+//     }    
+// })
+
+
 // * Printables
 
 const printables = document.querySelector('[data-open-printables]')
 const printRemitButton = document.querySelector('[data-print-remit-buttons]')
 const printButton = printRemitButton.querySelector('[data-collection-print-button]')
 const remitButton = printRemitButton.querySelector('[data-collection-remit-button]')
-const addNewCollectionTable = document.getElementById('clientsTable')
-const detailsWrapperDropdown = addNewCollectionTable.querySelectorAll('[data-details-wrapper-dropdown]')
 
-
-detailsWrapperDropdown.forEach((dropdownBtn) => {
-    
-    let detailsWrapper = dropdownBtn.nextElementSibling
-    let details = dropdownBtn.nextElementSibling.firstElementChild
-
-    dropdownBtn.addEventListener('click', () => {
-        detailsWrapper.classList.toggle('open-wrapper')
-        details.classList.toggle('open-details')
-        printRemitButton.classList.toggle('show-buttons')
-    })
-
-})
 
 printButton.addEventListener('click', () => {
     printables.showModal()
@@ -302,6 +404,7 @@ const printContainer = document.querySelector('[data-printables]')
 printContainer.addEventListener('click', () => {
     print()
 })
+
 
 remitButton.addEventListener('click', () => {
     url = '/KC/collection/collection-remittance.html'

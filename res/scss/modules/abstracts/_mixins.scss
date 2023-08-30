@@ -623,6 +623,11 @@
     z-index: 10;
     overflow-y: auto;
     @include custom-scroll;
+    @include breakpointMax(430px) {
+        & {
+            width: 100%;
+        }
+    }
 }
 
 // * Dashboard 2
@@ -764,7 +769,7 @@
 // * Login Input Field
 @mixin loginInputField {
     width: 100%;
-    padding: $spacing-2x-large 0 $spacing-large $spacing-large;
+    padding: $spacing-2x-large $spacing-large;
     border-radius: $border-radius-medium;
     outline: none;
     border: none;

@@ -17,14 +17,46 @@
             flex-direction: column;
             // height: calc(100% - 74%);
             padding: $spacing-4x-large $spacing-4x-large $spacing-2x-large $spacing-4x-large;
+            @include breakpointMax(430px) {
+                & {
+                    display: grid;
+                    grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); 
+                    grid-template-rows: repeat(3, minmax(0, auto)); 
+                    align-items: center;
+                }
+            }
             h2 {
                 font-size: $font-size-x-large;
+                @include breakpointMax(430px) {
+                    & {
+                        font-size: $font-size;
+                        color: $font-accent;
+                    }
+                }
             }
             .p-1 {
                 margin-top: $spacing-large;
                 font-size: $font-size-x-medium;
+                @include breakpointMax(430px) {
+                    & {
+                        margin-top: 0;
+                        font-size: calc($font-size + .1rem);
+                        grid-area: 2 / 1;
+                    }
+                }
                 span {
                     font-weight: $font-weight-bold;
+                }
+            }
+            .p-1b {
+                display: none;
+                @include breakpointMax(430px) {
+                    & {
+                        display: unset;
+                        grid-area: 3 / 1;
+                        font-size: $font-size;
+                        color: $font-accent;
+                    }
                 }
             }
             // * Button Container
@@ -33,11 +65,23 @@
                 justify-content: space-between;
                 align-items: center;
                 margin-top: $spacing-large;
+                @include breakpointMax(430px) {
+                    & {
+                        margin-top: 0;
+                        grid-area: 1/2/3/2;
+                        justify-self: flex-end;
+                    }
+                }
                 // * Search Wrapper
                 .wrapper:last-of-type {
                     gap: 2rem;
                     display: flex;
                     align-items: center;
+                    @include breakpointMax(430px) {
+                        & {
+                            display: none;
+                        }
+                    }
                     button {
                         cursor: pointer;
                         background: none;
@@ -71,6 +115,7 @@
                         }
                     }
                 }
+                
             }
             // * View Trash Button
             .btn-container {

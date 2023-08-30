@@ -22,6 +22,23 @@
         -webkit-user-drag: none;
         -webkit-user-select: none;
         -ms-user-select: none;
+        @include breakpointMax(430px) {
+            & {
+                padding-left: 2rem;
+            }
+        }
+    }
+    @include breakpointMax(430px) {
+        & {
+            width: unset;
+            height: unset;
+            background: none;
+            padding: 0 !important;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
     // * Styles for the navlinks inside the containers
     .nav-links {
@@ -59,6 +76,11 @@
             display: inline-block;
             right: 0;
             transform: translateX(-1.5rem) translateY(1rem)
+        }
+        @include breakpointMax(430px) {
+            & {
+                display: none;
+            }
         }
     }
     // * Styles for nav-container-1
@@ -121,6 +143,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include breakpointMax(430px) {
+            & {
+                display: none;
+            }
+        }
     }
 }
 
@@ -142,11 +169,22 @@
     /* IE 10 and IE 11 */
     user-select: none;
     /* Standard syntax */
+    @include breakpointMax(430px) {
+        & {
+            width: 100%;
+            padding-right: 3rem;
+        }
+    }
     .profile-nav-con {
         display: flex;
         align-items: center;
         img:first-child {
             padding-right: 2rem;
+            @include breakpointMax(430px) {
+                & {
+                    display: none;
+                }
+            }
         }
     }
 }

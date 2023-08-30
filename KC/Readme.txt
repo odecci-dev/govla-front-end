@@ -871,6 +871,31 @@ August 24, 2023 (Thursday)
 First Commit:
 • Collection Module: Completed✅ the Cash Denomination Modal
 
+August 25, 2023 (Friday)
+• Remittance Mobile Module: Started implementing the mobile version
+
+
+August 29, 2023 (Tuesday)
+• Remittance Mobile Module: Continous implementation of the mobile version
+- Breakpoints
+    - _nav.scss (
+        .nav, 
+            .nav-links, .nav-con-2, 
+        .profile-nav, 
+            .profile-nav-con
+        )
+    - _newApplication.scss (
+        .nal-con-1,
+            h2, p-1, p-1b, container
+        )
+
+
+August 30, 2023 (Wednesday)
+First Commit:
+• Collection Module: Collection Add New - Area Toggle 
+- Button
+- Responsiveness
+
 
 
 
