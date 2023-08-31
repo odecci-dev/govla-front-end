@@ -348,6 +348,67 @@ const printablesContainer = document.querySelector('[data-printables-button]')
 
 if (printablesContainer) {
     printablesContainer.addEventListener('click', () => {
-        print()
+        window.print()
     })
 }
+
+
+
+const pages = document.querySelectorAll('.page')
+const pagePanel = document.querySelector('[data-page-panel]')
+const spanCurrentPageNum = document.querySelector('[data-current-page-num]')
+const spanTotalPageNum = document.querySelector('[data-total-page-num]')
+
+// * Page Counter
+pageCount = 0;
+spanTotalPageNum.innerText = pages.length
+
+pages.forEach(page => {
+    pageCount++
+    page.setAttribute('id', `Page${pageCount}`)
+
+    page.addEventListener('mouseover', () => {
+        pagePanel.classList.add('show-page-panel')
+    })
+
+    page.addEventListener('mouseout', (e) => {
+        const { relatedTarget } = e;
+        if (!page.contains(relatedTarget)) {
+            pagePanel.classList.remove('show-page-panel')
+        }
+    })
+
+
+})
+
+// * Intersection Observer for Page Number
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // * Extract the page number from the ID attribute
+            const pageNumber = entry.target.id.replace('Page', '');
+            
+            // * Display the current page number
+            spanCurrentPageNum.value = pageNumber;
+        }
+    })
+}, {
+    threshold: 0.7
+})
+
+pages.forEach(page => {
+    observer.observe(page)
+})
+
+// * Add functionality to go to a specific page
+spanCurrentPageNum.addEventListener('input', () => {
+    const pageNumber = parseInt(spanCurrentPageNum.value);
+    
+    // * Validate input
+    if (!isNaN(pageNumber) && pageNumber >= 1 && pageNumber <= pages.length) {
+        
+        // * Scroll to the selected page
+        pages[pageNumber - 1].scrollIntoView({ behavior: 'smooth' })
+    }
+});
+

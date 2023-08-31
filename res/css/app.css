@@ -4723,7 +4723,7 @@ body {
 }
 @media (max-height: 611px) {
   .can-container-wrapper .can-container-2 .wrapper-2 .table-container {
-    height: clamp(28%, 34rem, 55vh);
+    height: 33rem;
   }
 }
 .can-container-wrapper .can-container-2 .wrapper-2 .table-container table tr:not(:first-of-type) {
@@ -4959,7 +4959,6 @@ body {
   width: 297mm;
   min-height: 210mm;
   padding: 1rem;
-  page-break-after: always;
 }
 .print-collection-container .printables-container .page .header-wrapper {
   display: flex;
@@ -5060,41 +5059,205 @@ body {
   justify-self: flex-end;
 }
 
+.page-panel {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  z-index: 9;
+  margin: auto;
+  width: 35%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(-2rem);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-items: center;
+  align-items: center;
+  border-radius: 10rem;
+  background: rgba(41, 41, 43, 0.8);
+  transition: 250ms ease-in-out;
+}
+.page-panel.show-page-panel {
+  visibility: visible;
+  opacity: 1;
+  transition: 250ms ease-in-out;
+}
+.page-panel .panel-inner-wrapper {
+  padding-left: 1rem;
+}
+.page-panel .panel-inner-wrapper [data-current-page-num] {
+  width: 4rem;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: #FFFFFF;
+  font-size: calc(1.8rem - 2px);
+  text-align: center;
+}
+.page-panel .panel-inner-wrapper p, .page-panel .panel-inner-wrapper span {
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  grid-area: 1/1;
+}
+.page-panel .panel-inner-wrapper span:first-of-type {
+  padding-left: 0.5rem;
+}
+.page-panel .panel-inner-wrapper span:last-of-type {
+  padding-left: 1rem;
+}
+.page-panel button {
+  grid-area: 1/3;
+}
+
+.printables-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(41, 41, 43, 0.8);
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.printables-container .page {
+  position: relative;
+  background-color: #FFFFFF;
+  width: 297mm;
+  min-height: 209mm;
+  padding: 0 1rem;
+}
+.printables-container .page .header-wrapper {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.printables-container .page .header-wrapper p, .printables-container .page .header-wrapper span {
+  font-size: 1.2rem;
+}
+.printables-container .page .body-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.printables-container .page .body-wrapper .box-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.printables-container .page .body-wrapper .box-wrapper .box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 3.1rem 1.2rem;
+  outline: 1px dashed #29292B;
+  gap: 1.8rem;
+}
+.printables-container .page .body-wrapper .box-wrapper .box p, .printables-container .page .body-wrapper .box-wrapper .box span {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.printables-container .page .body-wrapper .table-container table tr:first-of-type {
+  background: none;
+  filter: blur(0);
+  box-shadow: none;
+  border-bottom: 1px solid #E0DFDF;
+}
+.printables-container .page .body-wrapper .table-container table tr:not(:first-of-type) {
+  border-bottom: 1px dashed #29292B;
+}
+.printables-container .page .body-wrapper .table-container table tr:hover {
+  background-color: unset;
+  color: unset;
+  cursor: unset;
+}
+.printables-container .page .body-wrapper .table-container table tr {
+  padding: 1rem 0;
+}
+.printables-container .page .body-wrapper .table-container table th {
+  padding: 1rem 0;
+  text-align: left;
+}
+.printables-container .page .body-wrapper .table-container table th:first-of-type {
+  padding-left: 1rem;
+}
+.printables-container .page .body-wrapper .table-container table th:last-of-type {
+  padding-right: 0;
+}
+.printables-container .page .body-wrapper .table-container table td:first-of-type {
+  padding-top: 1.4rem;
+}
+.printables-container .page .body-wrapper .table-container table td:last-of-type {
+  padding-right: 0;
+}
+.printables-container .page .body-wrapper .table-container table td {
+  vertical-align: top;
+  padding: 1.35rem 0;
+  text-align: left;
+}
+.printables-container .page .body-wrapper .table-container table td .td-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+.printables-container .page .body-wrapper .table-container table td .td-wrapper p:first-of-type {
+  font-size: 1rem;
+}
+.printables-container .page .body-wrapper .table-container table td .td-wrapper span {
+  font-size: 0.8rem;
+}
+.printables-container .page .body-wrapper .table-container table .td-name {
+  margin: 0;
+}
+.printables-container .page .footer-wrapper {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-items: center;
+  align-items: center;
+}
+.printables-container .page .footer-wrapper .footer-inner-wrapper {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-2rem);
+}
+.printables-container .page .footer-wrapper .footer-inner-wrapper p, .printables-container .page .footer-wrapper .footer-inner-wrapper span {
+  font-size: 1.8rem;
+  grid-area: 1/2;
+}
+.printables-container .page .footer-wrapper button {
+  width: unset;
+  grid-area: 1/3;
+  justify-self: flex-end;
+}
+
 @page {
   size: A4 landscape;
   margin: 0;
+  padding: 0;
 }
 @media print {
   html, body {
+    box-sizing: border-box;
     width: 297mm;
-    min-height: 210mm;
+    height: 210mm;
   }
-  .print-collection-container {
-    overflow: hidden;
-    margin: 0;
-    background: none;
+  .page-panel {
+    display: none;
   }
   .printables-container {
-    width: 297mm;
-    min-height: 210mm;
     display: unset;
+    gap: 0;
+    padding: 0;
   }
   .page {
     margin: 0;
-    padding-right: 0;
+    padding: 0;
     border: initial;
     border-radius: initial;
     width: initial;
-    min-height: initial;
+    height: initial;
     box-shadow: initial;
     background: initial;
-  }
-  .page.page-1, .page.page-2 {
-    background-color: #FFFFFF;
-    height: 210mm;
-  }
-  button {
-    display: none;
   }
 }
 .main-dashboard {

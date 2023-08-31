@@ -9,8 +9,11 @@ $primaryGrad2: linear-gradient(90deg, rgba(214,163,48,0.75) 0%, rgba(214,163,48,
 $secondary: #FFFF4E;
 $accent: #DAB77A;
 $black: #29292B;
+$fullblack: #000000;
 $blackTR: transparentize($black, 0.4);
 $blackTR2: transparentize($black, 0.8);
+$blackTR3: transparentize($black, 0.2);
+$fullblackTR: transparentize($fullblack, 0.45);
 $blackGrad1: linear-gradient(90deg, rgba(41,41,43,0.25) 0%, rgba(41,41,43,0.55) 15%, rgba(41,41,43,0.65) 50%, rgba(41,41,43,0.55) 85%, rgba(41,41,43,0.25) 100%);
 $white: #FFFFFF;
 $primary-bg: #EBEBEB;

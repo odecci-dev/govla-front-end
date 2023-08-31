@@ -10,15 +10,27 @@
 
 <body>
 
-    <main>
+    <!-- <main>
             <!-- * Print Collection Modal -->
-            <div class="print-collection-container" data-printables>
+            <!-- <div class="print-collection-container"> -->
+                <div class="page-panel" data-page-panel>
+                    <div class="panel-inner-wrapper">
+                        <!-- <p> &lt;<span data-current-page-num>1</span>/<span data-total-page-num>2</span>&gt;</p> -->
+                        <p>Page 
+                            <input type="number" value="" data-current-page-num>
+                            <!-- <span data-current-page-num> 1 </span> -->
+                            <span>/</span> 
+                            <span data-total-page-num> 2 </span>
+                        </p>
+                    </div>
+                    <button class="button-2" data-printables-button>PRINT</button>
+                </div>
 
                 <!-- * Printables Container -->
                 <div class="printables-container">
 
                     <!-- * Page 1 -->
-                    <div class="page page-1">
+                    <div class="page page-1" data-printables>
                         <div class="header-wrapper">
                             <p>Field Officer: <span id="printFieldOfficerName">Alfredo L. Dimagsak</span></p>
                             <p>Area No. <span id="printAreaNum">1</span></p>
@@ -126,10 +138,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="footer-wrapper">
-                            <p> &lt;<span id="">1/2</span>&gt;</p>
+                        <!-- <div class="footer-wrapper">
+                            <div class="footer-inner-wrapper">
+                                <p> &lt;<span id="">1/2</span>&gt;</p>
+                            </div>
                             <button class="button-2" data-printables-button>PRINT</button>
-                        </div>
+                        </div> -->
                     </div>
 
                     <!-- * Page 2 -->
@@ -201,7 +215,807 @@
 
                                     </tr>
 
-                                    <!-- * COllection Data -->
+                                    <!-- * Collection Data -->
+                                    <tr>
+
+                                        <td>
+                                            <!-- * Client No. -->
+                                            <div class="td-wrapper">
+                                                <span class="td-num"></span>
+                                            </div>
+                                            
+                                        </td>
+
+                                        <td>
+                                            <!-- * Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Juana Dela Cruz</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <!-- * Co-Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Melody Ocampo</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Principal Loan -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p>12,000.00</p>
+                                                <span>Released: <span>June 18, 2023</span></span>
+                                                <span>Due: <span>August 30, 2023</span></span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Balance -->
+                                        <td class="td-bal">
+                                            <p>2,350.00</p>
+                                        </td>
+
+                                        <!-- * Savings -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <span>
+                                                    Over All:
+                                                </span>   
+                                                <span>
+                                                    Balance
+                                                </span>   
+                                                <span>
+                                                    Payment:
+                                                </span>   
+
+                                            </div>
+                                        </td>
+
+                                        <!-- * Collection -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p id="printCollectionAmount">
+                                                    350.00
+                                                </p>   
+                                                <span>
+                                                    Daily
+                                                </span>   
+                                                <span>
+                                                    Daily Savings: <span id="printDailySavings">10.00</span>
+                                                </span>   
+                                            </div>
+                                        </td>
+
+                                        <!-- * Advance / Lapses -->
+                                        <td id="printAdvanceAndLapses">
+                                            <p>
+                                                2000.00
+                                            </p>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+                                            <!-- * Client No. -->
+                                            <div class="td-wrapper">
+                                                <span class="td-num"></span>
+                                            </div>
+                                            
+                                        </td>
+
+                                        <td>
+                                            <!-- * Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Juana Dela Cruz</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <!-- * Co-Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Melody Ocampo</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Principal Loan -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p>12,000.00</p>
+                                                <span>Released: <span>June 18, 2023</span></span>
+                                                <span>Due: <span>August 30, 2023</span></span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Balance -->
+                                        <td class="td-bal">
+                                            <p>2,350.00</p>
+                                        </td>
+
+                                        <!-- * Savings -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <span>
+                                                    Over All:
+                                                </span>   
+                                                <span>
+                                                    Balance
+                                                </span>   
+                                                <span>
+                                                    Payment:
+                                                </span>   
+
+                                            </div>
+                                        </td>
+
+                                        <!-- * Collection -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p id="printCollectionAmount">
+                                                    350.00
+                                                </p>   
+                                                <span>
+                                                    Daily
+                                                </span>   
+                                                <span>
+                                                    Daily Savings: <span id="printDailySavings">10.00</span>
+                                                </span>   
+                                            </div>
+                                        </td>
+
+                                        <!-- * Advance / Lapses -->
+                                        <td id="printAdvanceAndLapses">
+                                            <p>
+                                                2000.00
+                                            </p>
+                                        </td>
+
+                                    </tr>
+                                    
+                                    <tr>
+
+                                        <td>
+                                            <!-- * Client No. -->
+                                            <div class="td-wrapper">
+                                                <span class="td-num"></span>
+                                            </div>
+                                            
+                                        </td>
+
+                                        <td>
+                                            <!-- * Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Juana Dela Cruz</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <!-- * Co-Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Melody Ocampo</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Principal Loan -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p>12,000.00</p>
+                                                <span>Released: <span>June 18, 2023</span></span>
+                                                <span>Due: <span>August 30, 2023</span></span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Balance -->
+                                        <td class="td-bal">
+                                            <p>2,350.00</p>
+                                        </td>
+
+                                        <!-- * Savings -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <span>
+                                                    Over All:
+                                                </span>   
+                                                <span>
+                                                    Balance
+                                                </span>   
+                                                <span>
+                                                    Payment:
+                                                </span>   
+
+                                            </div>
+                                        </td>
+
+                                        <!-- * Collection -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p id="printCollectionAmount">
+                                                    350.00
+                                                </p>   
+                                                <span>
+                                                    Daily
+                                                </span>   
+                                                <span>
+                                                    Daily Savings: <span id="printDailySavings">10.00</span>
+                                                </span>   
+                                            </div>
+                                        </td>
+
+                                        <!-- * Advance / Lapses -->
+                                        <td id="printAdvanceAndLapses">
+                                            <p>
+                                                2000.00
+                                            </p>
+                                        </td>
+
+                                    </tr>
+                                    
+                                    <tr>
+
+                                        <td>
+                                            <!-- * Client No. -->
+                                            <div class="td-wrapper">
+                                                <span class="td-num"></span>
+                                            </div>
+                                            
+                                        </td>
+
+                                        <td>
+                                            <!-- * Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Juana Dela Cruz</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <!-- * Co-Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Melody Ocampo</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Principal Loan -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p>12,000.00</p>
+                                                <span>Released: <span>June 18, 2023</span></span>
+                                                <span>Due: <span>August 30, 2023</span></span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Balance -->
+                                        <td class="td-bal">
+                                            <p>2,350.00</p>
+                                        </td>
+
+                                        <!-- * Savings -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <span>
+                                                    Over All:
+                                                </span>   
+                                                <span>
+                                                    Balance
+                                                </span>   
+                                                <span>
+                                                    Payment:
+                                                </span>   
+
+                                            </div>
+                                        </td>
+
+                                        <!-- * Collection -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p id="printCollectionAmount">
+                                                    350.00
+                                                </p>   
+                                                <span>
+                                                    Daily
+                                                </span>   
+                                                <span>
+                                                    Daily Savings: <span id="printDailySavings">10.00</span>
+                                                </span>   
+                                            </div>
+                                        </td>
+
+                                        <!-- * Advance / Lapses -->
+                                        <td id="printAdvanceAndLapses">
+                                            <p>
+                                                2000.00
+                                            </p>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+                                            <!-- * Client No. -->
+                                            <div class="td-wrapper">
+                                                <span class="td-num"></span>
+                                            </div>
+                                            
+                                        </td>
+
+                                        <td>
+                                            <!-- * Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Juana Dela Cruz</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <!-- * Co-Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Melody Ocampo</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Principal Loan -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p>12,000.00</p>
+                                                <span>Released: <span>June 18, 2023</span></span>
+                                                <span>Due: <span>August 30, 2023</span></span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Balance -->
+                                        <td class="td-bal">
+                                            <p>2,350.00</p>
+                                        </td>
+
+                                        <!-- * Savings -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <span>
+                                                    Over All:
+                                                </span>   
+                                                <span>
+                                                    Balance
+                                                </span>   
+                                                <span>
+                                                    Payment:
+                                                </span>   
+
+                                            </div>
+                                        </td>
+
+                                        <!-- * Collection -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p id="printCollectionAmount">
+                                                    350.00
+                                                </p>   
+                                                <span>
+                                                    Daily
+                                                </span>   
+                                                <span>
+                                                    Daily Savings: <span id="printDailySavings">10.00</span>
+                                                </span>   
+                                            </div>
+                                        </td>
+
+                                        <!-- * Advance / Lapses -->
+                                        <td id="printAdvanceAndLapses">
+                                            <p>
+                                                2000.00
+                                            </p>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+                                            <!-- * Client No. -->
+                                            <div class="td-wrapper">
+                                                <span class="td-num"></span>
+                                            </div>
+                                            
+                                        </td>
+
+                                        <td>
+                                            <!-- * Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Juana Dela Cruz</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <!-- * Co-Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Melody Ocampo</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Principal Loan -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p>12,000.00</p>
+                                                <span>Released: <span>June 18, 2023</span></span>
+                                                <span>Due: <span>August 30, 2023</span></span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Balance -->
+                                        <td class="td-bal">
+                                            <p>2,350.00</p>
+                                        </td>
+
+                                        <!-- * Savings -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <span>
+                                                    Over All:
+                                                </span>   
+                                                <span>
+                                                    Balance
+                                                </span>   
+                                                <span>
+                                                    Payment:
+                                                </span>   
+
+                                            </div>
+                                        </td>
+
+                                        <!-- * Collection -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p id="printCollectionAmount">
+                                                    350.00
+                                                </p>   
+                                                <span>
+                                                    Daily
+                                                </span>   
+                                                <span>
+                                                    Daily Savings: <span id="printDailySavings">10.00</span>
+                                                </span>   
+                                            </div>
+                                        </td>
+
+                                        <!-- * Advance / Lapses -->
+                                        <td id="printAdvanceAndLapses">
+                                            <p>
+                                                2000.00
+                                            </p>
+                                        </td>
+
+                                    </tr>
+                                    
+                                    <tr>
+
+                                        <td>
+                                            <!-- * Client No. -->
+                                            <div class="td-wrapper">
+                                                <span class="td-num"></span>
+                                            </div>
+                                            
+                                        </td>
+
+                                        <td>
+                                            <!-- * Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Juana Dela Cruz</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <!-- * Co-Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Melody Ocampo</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Principal Loan -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p>12,000.00</p>
+                                                <span>Released: <span>June 18, 2023</span></span>
+                                                <span>Due: <span>August 30, 2023</span></span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Balance -->
+                                        <td class="td-bal">
+                                            <p>2,350.00</p>
+                                        </td>
+
+                                        <!-- * Savings -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <span>
+                                                    Over All:
+                                                </span>   
+                                                <span>
+                                                    Balance
+                                                </span>   
+                                                <span>
+                                                    Payment:
+                                                </span>   
+
+                                            </div>
+                                        </td>
+
+                                        <!-- * Collection -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p id="printCollectionAmount">
+                                                    350.00
+                                                </p>   
+                                                <span>
+                                                    Daily
+                                                </span>   
+                                                <span>
+                                                    Daily Savings: <span id="printDailySavings">10.00</span>
+                                                </span>   
+                                            </div>
+                                        </td>
+
+                                        <!-- * Advance / Lapses -->
+                                        <td id="printAdvanceAndLapses">
+                                            <p>
+                                                2000.00
+                                            </p>
+                                        </td>
+
+                                    </tr>
+                                    
+                                    <tr>
+
+                                        <td>
+                                            <!-- * Client No. -->
+                                            <div class="td-wrapper">
+                                                <span class="td-num"></span>
+                                            </div>
+                                            
+                                        </td>
+
+                                        <td>
+                                            <!-- * Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Juana Dela Cruz</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <!-- * Co-Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Melody Ocampo</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Principal Loan -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p>12,000.00</p>
+                                                <span>Released: <span>June 18, 2023</span></span>
+                                                <span>Due: <span>August 30, 2023</span></span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Balance -->
+                                        <td class="td-bal">
+                                            <p>2,350.00</p>
+                                        </td>
+
+                                        <!-- * Savings -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <span>
+                                                    Over All:
+                                                </span>   
+                                                <span>
+                                                    Balance
+                                                </span>   
+                                                <span>
+                                                    Payment:
+                                                </span>   
+
+                                            </div>
+                                        </td>
+
+                                        <!-- * Collection -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p id="printCollectionAmount">
+                                                    350.00
+                                                </p>   
+                                                <span>
+                                                    Daily
+                                                </span>   
+                                                <span>
+                                                    Daily Savings: <span id="printDailySavings">10.00</span>
+                                                </span>   
+                                            </div>
+                                        </td>
+
+                                        <!-- * Advance / Lapses -->
+                                        <td id="printAdvanceAndLapses">
+                                            <p>
+                                                2000.00
+                                            </p>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+                                            <!-- * Client No. -->
+                                            <div class="td-wrapper">
+                                                <span class="td-num"></span>
+                                            </div>
+                                            
+                                        </td>
+
+                                        <td>
+                                            <!-- * Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Juana Dela Cruz</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <!-- * Co-Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Melody Ocampo</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Principal Loan -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p>12,000.00</p>
+                                                <span>Released: <span>June 18, 2023</span></span>
+                                                <span>Due: <span>August 30, 2023</span></span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Balance -->
+                                        <td class="td-bal">
+                                            <p>2,350.00</p>
+                                        </td>
+
+                                        <!-- * Savings -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <span>
+                                                    Over All:
+                                                </span>   
+                                                <span>
+                                                    Balance
+                                                </span>   
+                                                <span>
+                                                    Payment:
+                                                </span>   
+
+                                            </div>
+                                        </td>
+
+                                        <!-- * Collection -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p id="printCollectionAmount">
+                                                    350.00
+                                                </p>   
+                                                <span>
+                                                    Daily
+                                                </span>   
+                                                <span>
+                                                    Daily Savings: <span id="printDailySavings">10.00</span>
+                                                </span>   
+                                            </div>
+                                        </td>
+
+                                        <!-- * Advance / Lapses -->
+                                        <td id="printAdvanceAndLapses">
+                                            <p>
+                                                2000.00
+                                            </p>
+                                        </td>
+
+                                    </tr>
+                                    
+                                    <tr>
+
+                                        <td>
+                                            <!-- * Client No. -->
+                                            <div class="td-wrapper">
+                                                <span class="td-num"></span>
+                                            </div>
+                                            
+                                        </td>
+
+                                        <td>
+                                            <!-- * Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Juana Dela Cruz</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <!-- * Co-Borrower Data-->
+                                            <div class="td-wrapper">
+                                                <p class="td-name">Melody Ocampo</p>
+                                                <span>0917232132</span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Principal Loan -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p>12,000.00</p>
+                                                <span>Released: <span>June 18, 2023</span></span>
+                                                <span>Due: <span>August 30, 2023</span></span>
+                                            </div>
+                                        </td>
+
+                                        <!-- * Balance -->
+                                        <td class="td-bal">
+                                            <p>2,350.00</p>
+                                        </td>
+
+                                        <!-- * Savings -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <span>
+                                                    Over All:
+                                                </span>   
+                                                <span>
+                                                    Balance
+                                                </span>   
+                                                <span>
+                                                    Payment:
+                                                </span>   
+
+                                            </div>
+                                        </td>
+
+                                        <!-- * Collection -->
+                                        <td>
+                                            <div class="td-wrapper">
+                                                <p id="printCollectionAmount">
+                                                    350.00
+                                                </p>   
+                                                <span>
+                                                    Daily
+                                                </span>   
+                                                <span>
+                                                    Daily Savings: <span id="printDailySavings">10.00</span>
+                                                </span>   
+                                            </div>
+                                        </td>
+
+                                        <!-- * Advance / Lapses -->
+                                        <td id="printAdvanceAndLapses">
+                                            <p>
+                                                2000.00
+                                            </p>
+                                        </td>
+
+                                    </tr>
+                                    
                                     <tr>
 
                                         <td>
@@ -287,16 +1101,18 @@
                             </div>
 
                         </div>
-                        <div class="footer-wrapper">
-                            <p> &lt;<span id="">2/2</span>&gt;</p>
-                        </div>
+                        <!-- <div class="footer-wrapper">
+                            <div class="footer-inner-wrapper">
+                                <p> &lt;<span id="">2/2</span>&gt;</p>
+                            </div>
+                        </div> -->
                     </div>
 
                 </div>
 
-            </div>
-    </main>
-
+            <!-- </div> -->
+    <!-- </main> -->
+    <script src="../../res/js/app.js" defer></script>
     <script src="../../res/js/components/collection.js" defer></script>
 
 </body>

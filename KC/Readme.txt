@@ -902,6 +902,10 @@ Second Commit:
 - from modal to another window
 
 
+August 31, 2023 (Thursday)
+First Commit:
+• Collection Module: Completed✅the Printables
+
 
 
 
