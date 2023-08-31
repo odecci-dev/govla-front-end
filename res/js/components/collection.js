@@ -363,6 +363,18 @@ const spanTotalPageNum = document.querySelector('[data-total-page-num]')
 pageCount = 0;
 spanTotalPageNum.innerText = pages.length
 
+pagePanel.addEventListener('mouseover', () => {
+    pagePanel.classList.add('show-page-panel')
+})
+
+pagePanel.addEventListener('mouseout', (e) => {
+    const { relatedTarget } = e;
+    if (!pagePanel.contains(relatedTarget)) {
+        pagePanel.classList.remove('show-page-panel')
+    }
+})
+
+
 pages.forEach(page => {
     pageCount++
     page.setAttribute('id', `Page${pageCount}`)

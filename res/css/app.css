@@ -5062,6 +5062,7 @@ body {
 .page-panel {
   visibility: hidden;
   opacity: 0;
+  pointer-events: none;
   position: fixed;
   z-index: 9;
   margin: auto;
@@ -5079,6 +5080,7 @@ body {
   transition: 250ms ease-in-out;
 }
 .page-panel.show-page-panel {
+  pointer-events: all;
   visibility: visible;
   opacity: 1;
   transition: 250ms ease-in-out;
