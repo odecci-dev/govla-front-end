@@ -925,6 +925,9 @@ Fourth Commit:
 • Collection Module: Created Collection Collected All View
 - collection-collected-all.html
 
+Fifth Commit:
+• Collection Module: Completed✅the Collected All View
+
 
 
 

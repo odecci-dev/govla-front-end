@@ -3848,6 +3848,128 @@ body {
   justify-content: flex-end;
 }
 
+.cl-summary-modal {
+  margin: auto;
+  z-index: 5;
+  background: none;
+}
+.cl-summary-modal::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+.cl-summary-modal::-webkit-scrollbar-track {
+  border-radius: 3rem;
+  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+.cl-summary-modal::-webkit-scrollbar-thumb {
+  border-radius: 3rem;
+  background-color: #D6A330;
+}
+.cl-summary-modal::backdrop {
+  background-color: rgba(41, 41, 43, 0.7);
+}
+.cl-summary-modal[open] {
+  animation: fade-in 500ms forwards, pop-up 500ms;
+}
+.cl-summary-modal::backdrop[open] {
+  animation: fade-in 500ms forwards;
+}
+.cl-summary-modal[closing] {
+  display: block;
+  pointer-events: none;
+  inset: 0;
+  animation: fade-out 500ms forwards, slide-down 500ms forwards;
+}
+.cl-summary-modal::backdrop[closing] {
+  animation: fade-out 500ms forwards;
+}
+.cl-summary-modal .modal-container {
+  border-radius: 1rem;
+  background-color: #FFFFFF;
+  position: relative;
+  height: 100%;
+}
+.cl-summary-modal .modal-container .button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  z-index: 9;
+}
+.cl-summary-modal .modal-container .button-wrapper button {
+  cursor: pointer;
+  background: none;
+}
+.cl-summary-modal .modal-container .button-wrapper button img {
+  transition: all 150ms ease-in-out;
+}
+.cl-summary-modal .modal-container .button-wrapper button img:hover {
+  transform: scale(1.1);
+  filter: opacity(0.7);
+}
+.cl-summary-modal .modal-container .small-con {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+.cl-summary-modal .modal-container .small-con .rowspan:first-of-type {
+  padding-bottom: 2rem;
+}
+.cl-summary-modal .modal-container .small-con .rowspan:last-of-type {
+  padding-top: 2rem;
+}
+.cl-summary-modal .modal-container .small-con .rowspan:first-of-type h2 {
+  font-size: 2.5rem;
+}
+.cl-summary-modal .modal-container .small-con .rowspan:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cl-summary-modal .modal-container .small-con .rowspan:nth-of-type(2).table th, .cl-summary-modal .modal-container .small-con .rowspan:nth-of-type(2).table td {
+  padding: 0;
+  text-align: left;
+  font-size: 1.8rem;
+  padding: 3rem 2rem;
+}
+.cl-summary-modal .modal-container .small-con .rowspan:nth-of-type(2).table th {
+  font-weight: 700;
+}
+.cl-summary-modal .modal-container .small-con .rowspan:nth-of-type(2).table th:nth-of-type(n+2) {
+  text-align: right;
+}
+.cl-summary-modal .modal-container .small-con .rowspan:nth-of-type(2).table td:nth-of-type(n+2) {
+  text-align: right;
+}
+.cl-summary-modal .modal-container .small-con .rowspan:last-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.cl-summary-modal .modal-container .small-con .rowspan:last-of-type::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  background-color: #29292B;
+  border-radius: 10rem;
+}
+.cl-summary-modal .modal-container .small-con .rowspan:last-of-type p {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.cl-summary-modal .modal-container .small-con .rowspan:last-of-type p:first-of-type {
+  padding-left: 1rem;
+}
+.cl-summary-modal .modal-container .small-con .rowspan:last-of-type p:last-of-type {
+  font-size: 2.4rem;
+  padding-right: 1rem;
+}
+
 .main-dashboard {
   position: fixed;
   right: 0;
@@ -4741,6 +4863,23 @@ body {
   opacity: 1;
   visibility: visible;
   animation: drop-down 500ms forwards;
+}
+.can-container-wrapper .can-container-2 .wrapper-0 {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.can-container-wrapper .can-container-2 .wrapper-0 .summary-container p {
+  pointer-events: all;
+  cursor: pointer;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  font-weight: 700;
+  transition: 150ms ease-in-out;
+}
+.can-container-wrapper .can-container-2 .wrapper-0 .summary-container p:hover {
+  color: rgba(41, 41, 43, 0.6);
+  scale: 1.01;
 }
 .can-container-wrapper .can-container-2 .wrapper-1 {
   padding: 3rem 0;

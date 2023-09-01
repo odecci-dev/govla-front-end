@@ -444,6 +444,25 @@
                 }
             }
         }
+        .wrapper-0 {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            .summary-container {
+                p {
+                    pointer-events: all;
+                    cursor: pointer;
+                    font-size: $font-size-medium;
+                    text-decoration: underline;
+                    font-weight: $font-weight-bold;
+                    transition: 150ms ease-in-out;
+                    &:hover {
+                        color: $blackTR;
+                        scale: 1.010;
+                    }
+                }
+            }
+        }
         .wrapper-1 {
             padding: $spacing-3x-large 0;
             display: flex;

@@ -185,7 +185,6 @@ if (fieldExpenseModal) {
 
 // ***** END ---- Field Expense Modal ***** //
 
-
 // ***** Add and Subtract Field Expenses ***** //
 
 // * Add Expenses
@@ -267,6 +266,30 @@ if (remitModal) {
 }
 
 // ***** END ---- Remit Modal ***** //
+
+
+// ***** Collection Summary Modal ***** //
+
+const collectionSummaryModal = document.querySelector('[data-collection-summary-modal]')
+const openCollectionSummaryBtn = document.querySelector('[data-open-collection-summary-button]')
+const closeCollectionSummaryBtn = document.querySelector('[data-close-collection-summary-button]')
+
+if (collectionSummaryModal) {
+
+    openCollectionSummaryBtn.addEventListener('click', () => {
+        collectionSummaryModal.showModal()
+    })
+    
+    closeCollectionSummaryBtn.addEventListener('click', () => {
+        collectionSummaryModal.setAttribute("closing", "");
+        collectionSummaryModal.addEventListener("animationend", () => {
+            collectionSummaryModal.removeAttribute("closing");
+            collectionSummaryModal.close();
+        }, { once: true });
+    
+    })
+
+}
 
 
 // * Area Toggle Button
