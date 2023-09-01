@@ -118,7 +118,49 @@ selectAllCheckboxes.forEach((checkbox) => {
     })
 })
 
+// * Search FUnction
+let availableKeywords = [
+    'Ace Caspe',
+    'Alisandro Villegas',
+    'Lerjun Barasona',
+    'Jumar Badajos',
+    'Allan Antonio',
+    'Carl Galvez'
+]
 
+const searchInputBox = document.querySelector('#searchInput')
+const searchResultBox = document.querySelector('[data-search-results]')
+
+console.log(searchInputBox);
+
+searchInputBox.addEventListener('keyup', () => {
+    let result = []
+    let input = searchInputBox.value
+    if (input.length) {
+        result = availableKeywords.filter((keyword) => {
+            return keyword.toLowerCase().includes(input.toLowerCase())
+        })
+    }
+    displaySearchResult(result)
+
+    if (!result.length) {
+        searchResultBox.innerHTML = ''
+    }
+})
+
+function displaySearchResult(result) {
+    const content = result.map((list) => {
+        return '<li onclick=selectInput(this)>' + list + '</li>'
+    })
+
+    searchResultBox.innerHTML = '<ul>' + content.join('') + '</ul>'
+}
+
+
+function selectInput(list) {
+    searchInputBox.value = list.innerHTML
+    searchResultBox.innerHTML = ''
+}
 
 // ***** Maintenance ***** //
 
