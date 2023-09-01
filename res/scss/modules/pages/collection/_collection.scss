@@ -379,6 +379,25 @@
                             }
                         }
                     }
+                    .view-selected-area {
+                        pointer-events: none;
+                        .box-2 {
+                            background-color: $black;
+                            border-left: 1px solid $whiteTR;
+                            p {
+                                font-size: $font-size-small;
+                                font-weight: $font-weight-bold;
+                                white-space: nowrap;
+                                color: $white;
+                            }
+                            span {
+                                font-size: $font-size-medium;
+                                color: $white;
+                            }
+                            &:hover {
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -16,6 +16,7 @@ $blackTR3: transparentize($black, 0.2);
 $fullblackTR: transparentize($fullblack, 0.45);
 $blackGrad1: linear-gradient(90deg, rgba(41,41,43,0.25) 0%, rgba(41,41,43,0.55) 15%, rgba(41,41,43,0.65) 50%, rgba(41,41,43,0.55) 85%, rgba(41,41,43,0.25) 100%);
 $white: #FFFFFF;
+$whiteTR: transparentize($white, 0.8);
 $primary-bg: #EBEBEB;
 $secondary-bg: #E0DFDF;
 $third-bg: #FFFFFF;

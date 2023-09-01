@@ -4683,6 +4683,23 @@ body {
 .can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu li .box-2:hover {
   background-color: rgba(214, 163, 48, 0.8);
 }
+.can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area {
+  pointer-events: none;
+}
+.can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area .box-2 {
+  background-color: #29292B;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+.can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area .box-2 p {
+  font-size: 1rem;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #FFFFFF;
+}
+.can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area .box-2 span {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+}
 .can-container-wrapper .can-container-2 {
   display: flex;
   flex-direction: column;

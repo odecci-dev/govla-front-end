@@ -291,7 +291,7 @@ function areaMenuButtonToggle() {
             let areaMenuDropdown = menuData.nextElementSibling
             let areaMenuDropdownDetails = menuData.nextElementSibling.firstElementChild
             
-            menuData.classList.remove('show-area-details')
+            // menuData.classList.remove('show-area-details')
             
             // * Details Wrapper Dropdown
             function toggleClass(element, className) {
