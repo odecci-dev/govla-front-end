@@ -919,7 +919,11 @@ Second Commit:
 - collection-collected.html
 
 Third Commit:
-• Collection Module: Completed✅the Collection Collected
+• Collection Module: Completed✅the Collection Collected View
+
+Fourth Commit:
+• Collection Module: Created Collection Collected All View
+- collection-collected-all.html
 
 
 
