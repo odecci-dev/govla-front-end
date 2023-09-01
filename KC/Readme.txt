@@ -918,6 +918,9 @@ Second Commit:
 • Collection Module: Created Collected View
 - collection-collected.html
 
+Third Commit:
+• Collection Module: Completed✅the Collection Collected
+
 
 
 

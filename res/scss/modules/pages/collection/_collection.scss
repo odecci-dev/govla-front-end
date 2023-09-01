@@ -394,7 +394,23 @@
                                 font-size: $font-size-medium;
                                 color: $white;
                             }
-                            &:hover {
+                        }
+                        &.area-is-collected {
+                            position: relative;
+                            .box-2 {
+                                border-left: 1px solid $whiteTR;
+                            }
+                            .box-1, .box-2 {
+                                h4, p, span {
+                                    color: $whiteTR2;
+                                }
+                            }
+                            &::after {
+                                content: url('/res/assets/icons/circle-check.svg');
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                transform: translate(-1rem, -1rem);
                             }
                         }
                     }

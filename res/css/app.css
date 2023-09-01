@@ -4700,6 +4700,22 @@ body {
   font-size: 1.5rem;
   color: #FFFFFF;
 }
+.can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area.area-is-collected {
+  position: relative;
+}
+.can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area.area-is-collected .box-2 {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+.can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area.area-is-collected .box-1 h4, .can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area.area-is-collected .box-1 p, .can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area.area-is-collected .box-1 span, .can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area.area-is-collected .box-2 h4, .can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area.area-is-collected .box-2 p, .can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area.area-is-collected .box-2 span {
+  color: rgba(255, 255, 255, 0.5);
+}
+.can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area.area-is-collected::after {
+  content: url("/res/assets/icons/circle-check.svg");
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-1rem, -1rem);
+}
 .can-container-wrapper .can-container-2 {
   display: flex;
   flex-direction: column;

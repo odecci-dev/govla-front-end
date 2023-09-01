@@ -49,7 +49,8 @@ if (cashDenominationModal) {
             cashDenominationModal.removeAttribute("closing")
             cashDenominationModal.close()
         }, { once: true })
-    
+        url = '/KC/collection/collection-collected.html'
+        location.href = url
     })
 
     // * Denomination values
