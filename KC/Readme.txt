@@ -914,6 +914,10 @@ August 31, 2023 (Friday)
 First Commit:
 • Collection Module: Completed✅the Collection View
 
+Second Commit:
+• Collection Module: Created Collected View
+- collection-collected.html
+
 
 
 
