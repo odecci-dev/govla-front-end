@@ -401,58 +401,52 @@
             <!-- * Field Expense Modal -->
             <dialog class="fe-modal" data-field-expense-modal>
 
-                <div class="modal-container">
+                    <div class="modal-container">
 
-                    <!-- * Modal Header and Exit Button -->
-                    <div class="modal-header">
-                        <h4>Field Expenses</h4>
-                        
-                        <!-- * Add and Subtract Button  -->
-                        <div class="button-wrapper">
+                        <!-- * Modal Header and Exit Button -->
+                        <div class="modal-header">
+                            <h4>Field Expenses</h4>
                             <button class="button" onclick="addExpenses()">Add Expense</button>
-                            <button type="button" class="addOrSubButton" onclick="subExpenses()">-</button>
                         </div>
 
-                    </div>
+                        <!-- * Add Expenses -->
+                        <div class="box-wrap" data-expenses-container>
+                            <div class="rowspan child" data-expenses>
 
-                    <!-- * Add Expenses -->
-                    <div class="box-wrap" data-expenses-container>
-                        <div class="rowspan child" data-expenses>
+                                <!-- * Expense Description -->
+                                <div class="input-wrapper">
+                                    <input autocomplete="off"class="input" type="text" id="expenseDesc" name="expenseDesc" placeholder="Expense Description">
+                                </div>
 
-                            <!-- * Expense Description -->
-                            <div class="input-wrapper">
-                                <input autocomplete="off"class="input" type="text" id="expenseDesc" name="expenseDesc" placeholder="Expense Description">
-                            </div>
-
-                            <!-- * Amount -->
-                            <div class="input-wrapper-add">
-
-                                <div class="inner-container-wrapper">
-
-                                    <!-- * Input Inner Wrapper -->
-                                    <div class="input-inner-wrapper">
-                                        <input autocomplete="off" class="input" type="number" id="amount" name="amount" placeholder="Amount">
+                                <!-- * Amount -->
+                                <div class="input-wrapper-add">
+                                    <div class="inner-container-wrapper">
+                                        <!-- * Input Inner Wrapper -->
+                                        <div class="input-inner-wrapper">
+                                            <input autocomplete="off" class="input" type="number" id="amount" name="amount" placeholder="Amount">
+                                        </div>
+                                        <!-- * Add and Subtract Button  -->
+                                        <div class="input-inner-wrapper">
+                                            <button type="button" class="addOrSubButton" onclick="subExpenses()">-</button>
+                                        </div>
                                     </div>
-
                                 </div>
                                 
                             </div>
-                            
                         </div>
-                    </div>
 
-                    <!-- * Total -->
-                    <div class="box-wrap">
-                        <p>Total <span id="totalFieldExpense">300</span></p>
-                    </div>
+                        <!-- * Total -->
+                        <div class="box-wrap">
+                            <p>Total <span id="totalFieldExpense">300</span></p>
+                        </div>
 
-                    <!-- * Cancel and Save Button -->
-                    <div class="box-wrap">
-                        <button class="a-btn-trash" data-close-field-expense-modal>Cancel</button>
-                        <button class="button" data-show-total-remittance>Save</button>
-                    </div>
+                        <!-- * Cancel and Save Button -->
+                        <div class="box-wrap">
+                            <button class="a-btn-trash" data-close-field-expense-modal>Cancel</button>
+                            <button class="button" data-save-field-expense-modal>Save</button>
+                        </div>
 
-                </div>                    
+                    </div>
 
             </dialog>
 
@@ -504,7 +498,7 @@
                         <!-- * Cancel and Save Button -->
                         <div class="box-wrap">
                             <button class="a-btn-trash" data-close-remit-modal>Cancel</button>
-                            <button class="button" data-show-remitted-button>Save</button>
+                            <button class="button" data-save-remit-modal>Save</button>
                         </div>
 
                     </div>
@@ -534,53 +528,6 @@
 
                             <!-- * Field Expenses Button -->
                             <button class="button" data-open-field-expense-modal>
-                                <span>Field Expenses</span>
-                            </button>
-
-                        </div>
-            
-                        <!-- * Filter & Search Wrapper -->
-                        <div class="wrapper">
-
-                            <!-- * Filter Button -->
-                            <button data-open-filter-member-modal>
-                            <img src="../../res/assets/icons/filter.svg" alt="filter" />
-                            </button>
-            
-                            <!-- * Collection Officer Search Bar -->
-                            <div class="primary-search-bar">
-                                <div class="row">
-                                    <input type="search" id="searchInput" name="search" placeholder="Search" autocomplete="off">
-                                    <button>
-                                    </button>
-                                </div>
-                                <div class="result-box" data-search-results>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="nal-con-1-mobile">
-                    
-                    <h2>Reference Number</h2>
-                    <p class="p-1" id="referenceNumber">
-                        ABPA120230525
-                    </p>
-                    <p class="p-1b" id="collectionDate">
-                        July 10, 2023
-                    </p>
-    
-                    <!-- * Button Container -->
-                    <div class="container">
-
-                        <!-- * Button Wrapper -->
-                        <div class="wrapper">
-
-                            <!-- * Field Expenses Button -->
-                            <button class="button" data-open-field-expense-modal data-mobile-toggle-total-footer>
                                 <span>Field Expenses</span>
                             </button>
 
@@ -699,7 +646,7 @@
                             <td class="td-btns">
 
                                 <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-3" data-open-remit-modal>Remit</button>
+                                    <button class="a-btn-view-3 remitted" data-open-remit-modal></button>
                                 </div>
 
                             </td>
@@ -739,7 +686,7 @@
                             <td class="td-btns">
 
                                 <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-3" data-open-remit-modal>Remit</button>
+                                    <button class="a-btn-view-3 remitted" data-open-remit-modal></button>
                                 </div>
 
                             </td>
@@ -748,136 +695,6 @@
 
                     </table>
                     
-                    </div>
-        
-                </div>
-
-                <!-- * Container 2: User List Mobile View -->
-                <div class="clr-con-2-mobile">
-        
-                    <div class="container">
-                        <div class="inner-container">
-                            <div class="inner-wrapper">
-                                <div class="box">
-                                    <img src="/res/assets/icons/sample-dp/Borrower-1.svg" alt="Display Picture">
-                                </div>
-                                <div class="box">
-                                    <p>Juana Dela Cruz</p>
-                                    <p>Client No: <span>1</span></p>
-                                    <p>Collectible: <span>350.00</span></p>
-                                </div>
-                                <div class="box">
-                                    <button class="button" data-open-remit-modal>Remit</button>
-                                </div>
-                            </div>
-                            <div class="inner-wrapper" data-show-more-details-field-exp>
-                                <div class="expandable">
-                                    <div class="box">
-                                        <p>Amount Collected</p>
-                                        <p>350.00</p>
-                                    </div>
-                                    <div class="box">
-                                        <p>Savings</p>
-                                        <p>350.00</p>
-                                    </div>
-                                    <div class="box">
-                                        <p>Lapse/Advance</p>
-                                        <p>350.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="inner-container">
-                            <div class="inner-wrapper">
-                                <div class="box">
-                                    <img src="/res/assets/icons/sample-dp/Borrower-1.svg" alt="Display Picture">
-                                </div>
-                                <div class="box">
-                                    <p>Juana Dela Cruz</p>
-                                    <p>Client No: <span>1</span></p>
-                                    <p>Collectible: <span>350.00</span></p>
-                                </div>
-                                <div class="box">
-                                    <button class="button" data-open-remit-modal>Remit</button>
-                                </div>
-                            </div>
-                            <div class="inner-wrapper" data-show-more-details-field-exp>
-                                <div class="expandable">
-                                    <div class="box">
-                                        <p>Amount Collected</p>
-                                        <p>350.00</p>
-                                    </div>
-                                    <div class="box">
-                                        <p>Savings</p>
-                                        <p>350.00</p>
-                                    </div>
-                                    <div class="box">
-                                        <p>Lapse/Advance</p>
-                                        <p>350.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="inner-container">
-                            <div class="inner-wrapper">
-                                <div class="box">
-                                    <img src="/res/assets/icons/sample-dp/Borrower-1.svg" alt="Display Picture">
-                                </div>
-                                <div class="box">
-                                    <p>Juana Dela Cruz</p>
-                                    <p>Client No: <span>1</span></p>
-                                    <p>Collectible: <span>350.00</span></p>
-                                </div>
-                                <div class="box">
-                                    <button class="button" data-open-remit-modal>Remit</button>
-                                </div>
-                            </div>
-                            <div class="inner-wrapper" data-show-more-details-field-exp>
-                                <div class="expandable">
-                                    <div class="box">
-                                        <p>Amount Collected</p>
-                                        <p>350.00</p>
-                                    </div>
-                                    <div class="box">
-                                        <p>Savings</p>
-                                        <p>350.00</p>
-                                    </div>
-                                    <div class="box">
-                                        <p>Lapse/Advance</p>
-                                        <p>350.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mobile-total-remittance-footer" data-total-remittance-footer>
-                        <div class="container">
-                            <div class="box">
-                                <p>Total Collection</p>
-                                <p>350.00</p>
-                            </div>
-                            <div class="box">
-                                <p>Total Lapses</p>
-                                <p>350.00</p>
-                            </div>
-                            <div class="box">
-                                <p>Total Expenses</p>
-                                <p>350.00</p>
-                            </div>
-                            <div class="box">
-                                <p>Total Savings</p>
-                                <p>350.00</p>
-                            </div>
-                            <div class="box">
-                                <p>Total Advance</p>
-                                <p>350.00</p>
-                            </div>
-                            <div class="box">
-                                <p>Mode of payments</p>
-                                <p>Cash, GCash</p>
-                            </div>
-                        </div>
                     </div>
         
                 </div>

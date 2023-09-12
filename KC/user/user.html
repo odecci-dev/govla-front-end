@@ -9,187 +9,186 @@
   </head>
 
   <body>
-    <main>
 
-      <!-- * Main Dashboard -->
-      <div class="main-dashboard">
-        <!-- * User List Containers -->
-        <!-- * Container 1: User list Header, Buttons, and Searchbar -->
+      <main>
 
-        <div class="ul-con-1">
-          <h2>User List</h2>
-          <p class="p-1">
-            Total of <span id="numActiveUsers">10</span> active users
-          </p>
+        <!-- * Main Dashboard -->
+        <div class="main-dashboard">
+          <!-- * User List Containers -->
+          <!-- * Container 1: User list Header, Buttons, and Searchbar -->
 
-          <!-- * Button Container -->
-          <div class="container">
-            <!-- * Button Wrapper -->
-            <div class="wrapper">
-              <!-- * Add New Button -->
-                <button class="button" data-user-to-add-new-user>
-                  <span>Add New</span>
+          <div class="ul-con-1">
+            <h2>User List</h2>
+            <p class="p-1">
+              Total of <span id="numActiveUsers">10</span> active users
+            </p>
+
+            <!-- * Button Container -->
+            <div class="container">
+              <!-- * Button Wrapper -->
+              <div class="wrapper">
+                <!-- * Add New Button -->
+                  <button class="button" data-user-to-add-new-user>
+                    <span>Add New</span>
+                  </button>
+              </div>
+
+              <!-- * Filter & Search Wrapper -->
+              <div class="wrapper">
+                <!-- * Filter Button -->
+                <button>
+                  <img src="../../res/assets/icons/filter.svg" alt="filter" />
                 </button>
-            </div>
 
-            <!-- * Search Wrapper -->
-            <div class="wrapper">
-              <!-- * Filter Button -->
-              <button>
-                <img src="../../res/assets/icons/filter.svg" alt="filter" />
-              </button>
-
-              <!-- * Search Bar -->
-              <div class="search-wrap">
-                <input
-                  type="search"
-                  id="search"
-                  name="search"
-                  placeholder="Search"
-                />
-                <img
-                  src="../../res/assets/icons/magnifyingglass.svg"
-                  alt="search"
-                />
+                <!-- * Primary Search Bar -->
+                <div class="primary-search-bar">
+                  <div class="row">
+                      <input type="search" id="searchInput" name="search" placeholder="Search" autocomplete="off">
+                      <button>
+                      </button>
+                  </div>
+                  <div class="result-box" data-search-results>
+                  </div>
+                </div>
+                
               </div>
             </div>
+
+            <!-- * View Trash Button -->
+            <div class="btn-container">
+                <button class="transparentButton">View Trash</button>
+            </div>
           </div>
 
-          <!-- * View Trash Button -->
-                <div class="btn-container">
-                    <button class="transparentButton">View Trash</button>
-                </div>
-        </div>
+          <!-- * Container 2: User List - Table and Pagination -->
+          <div class="ul-con-2">
 
-        <!-- * Container 2: User List - Table and Pagination -->
-        <div class="ul-con-2">
+            <!-- * Table Container -->
+            <div class="table-container">
 
-          <!-- * Table Container -->
-          <div class="table-container">
+              <!-- * User Table -->
+              <table>
+                <!-- * Table Header -->
+                <tr>
+                  <!-- * Checkbox ALl-->
+                  <th>
+                    <input
+                      type="checkbox"
+                      class="checkbox"
+                      data-select-all-checkbox
+                    />
+                  </th>
 
-            <!-- * User Table -->
-            <table>
-              <!-- * Table Header -->
-              <tr>
-                <!-- * Checkbox ALl-->
-                <th>
-                  <input
-                    type="checkbox"
-                    class="checkbox"
-                    data-select-all-checkbox
-                  />
-                </th>
-
-                <!-- * User -->
-                <th>
-                  <span class="th-name">Name</span>
-                </th>
-
-                <!-- * Contact Number -->
-                <th>
-                  <span class="th-name">Contact Number</span>
-                </th>
-
-                <!-- * Address -->
-                <th>
-                  <span class="th-name">Address</span>
-                </th>
-
-                <!-- * Date Registered -->
-                <th>
-                  <span class="th-name">Date Registered</span>
-                </th>
-
-                <!-- * Action -->
-                <th><span class="th-name">Action</span></th>
-              </tr>
-
-              <!-- * User List Data -->
-              <tr>
-                <!-- * Checkbox Opt -->
-                <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
-
-                <td>
                   <!-- * User -->
-                  <div class="td-wrapper">
-                    <img
-                      src="../../res/assets/icons/sample-dp/Borrower-1.svg"
-                      alt="Dela Cruz, Juana"
-                    />
-                    <span class="td-num">1</span>
-                    <span class="td-name">Dela Cruz, Juana</span>
-                  </div>
-                </td>
+                  <th>
+                    <span class="th-name">Name</span>
+                  </th>
 
-                <!-- * Contact Number -->
-                <td>
-                    0935-887-8176
-                </td>
+                  <!-- * Contact Number -->
+                  <th>
+                    <span class="th-name">Contact Number</span>
+                  </th>
 
-                <!-- * Address -->
-                <td>
-                    Malaya St...
-                </td>
+                  <!-- * Address -->
+                  <th>
+                    <span class="th-name">Address</span>
+                  </th>
 
-                <!-- * Date Registered -->
-                <td>
-                    June 4, 2023
-                </td>
+                  <!-- * Date Registered -->
+                  <th>
+                    <span class="th-name">Date Registered</span>
+                  </th>
 
-                <!-- * Table View and Trash Button -->
-                <td class="td-btns">
-                  <div class="td-btn-wrapper">
-                    <button class="a-btn-view-2" data-user-view>View</button>
-                    <button class="a-btn-trash-2">Trash</button>
-                  </div>
-                </td>
-              </tr>
+                  <!-- * Action -->
+                  <th><span class="th-name">Action</span></th>
+                </tr>
 
-              <tr>
-                <!-- * Checkbox -->
-                <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
+                <!-- * User List Data -->
+                <tr>
+                  <!-- * Checkbox Opt -->
+                  <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
 
-                <!-- * User -->
-                <td>
-                  <div class="td-wrapper">
-                    <img
-                      src="../../res/assets/icons/sample-dp/Borrower-2.svg"
-                      alt=""
-                    />
-                    <span class="td-num">1</span>
-                    <span class="td-name">Beverly, Haily</span>
-                  </div>
-                </td>
+                  <td>
+                    <!-- * User -->
+                    <div class="td-wrapper">
+                      <img
+                        src="../../res/assets/icons/sample-dp/Borrower-1.svg"
+                        alt="Dela Cruz, Juana"
+                      />
+                      <span class="td-num">1</span>
+                      <span class="td-name">Dela Cruz, Juana</span>
+                    </div>
+                  </td>
 
-                <!-- * Contact Number -->
-                <td>
-                    0919-878-6195
-                </td>
+                  <!-- * Contact Number -->
+                  <td>
+                      0935-887-8176
+                  </td>
 
-                <!-- * Address -->
-                <td>
-                    Bocaue Bulacan...
-                </td>
+                  <!-- * Address -->
+                  <td>
+                      Malaya St...
+                  </td>
 
-                <!-- * Date Registered -->
-                <td>
-                    May 30, 2023
-                </td>
+                  <!-- * Date Registered -->
+                  <td>
+                      June 4, 2023
+                  </td>
 
-                <!-- * Table View and Trash Button -->
-                <td class="td-btns">
-                  <div class="td-btn-wrapper">
-                    <button class="a-btn-view-2" data-user-view>View</button>
-                    <button class="a-btn-trash-2">Trash</button>
-                  </div>
-                </td>
-              </tr>
-            </table>
-            
+                  <!-- * Table View and Trash Button -->
+                  <td class="td-btns">
+                    <div class="td-btn-wrapper">
+                      <button class="a-btn-view-2" data-user-view>View</button>
+                      <button class="a-btn-trash-2">Trash</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <!-- * Checkbox -->
+                  <td><input type="checkbox" class="checkbox" data-select-checkbox/></td>
+
+                  <!-- * User -->
+                  <td>
+                    <div class="td-wrapper">
+                      <img
+                        src="../../res/assets/icons/sample-dp/Borrower-2.svg"
+                        alt=""
+                      />
+                      <span class="td-num">1</span>
+                      <span class="td-name">Beverly, Haily</span>
+                    </div>
+                  </td>
+
+                  <!-- * Contact Number -->
+                  <td>
+                      0919-878-6195
+                  </td>
+
+                  <!-- * Address -->
+                  <td>
+                      Bocaue Bulacan...
+                  </td>
+
+                  <!-- * Date Registered -->
+                  <td>
+                      May 30, 2023
+                  </td>
+
+                  <!-- * Table View and Trash Button -->
+                  <td class="td-btns">
+                    <div class="td-btn-wrapper">
+                      <button class="a-btn-view-2" data-user-view>View</button>
+                      <button class="a-btn-trash-2">Trash</button>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              
+            </div>
+
           </div>
-
         </div>
-      </div>
 
     </main>
 

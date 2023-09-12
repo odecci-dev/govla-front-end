@@ -129,7 +129,8 @@
     // * All-Members-Container-2
     // * Container 2: Table and Pagination
     .am-con-2 {
-        height: clamp(100% - 26rem, 53%, 66vh);
+        height: clamp(100% - 26rem, 30rem, 68vh);
+        // height: 50rem;
         padding: 0 $spacing-4x-large $spacing-2x-large $spacing-4x-large;
         // * Table Container
         .table-container {

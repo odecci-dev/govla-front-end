@@ -3,9 +3,8 @@
 .ul-con-1 {
   display: flex;
   flex-direction: column;
-  height: calc(100% - 74%);
-  padding: $spacing-4x-large $spacing-4x-large $spacing-2x-large
-    $spacing-4x-large;
+  // height: calc(100% - 74%);
+  padding: $spacing-4x-large $spacing-4x-large $spacing-2x-large $spacing-4x-large;
   h2 {
     font-size: $font-size-x-large;
   }
@@ -68,14 +67,13 @@
 }
 // * Container 2: Table
 .ul-con-2 {
-  height: calc(100% - 26%);
-  padding: $spacing-4x-large $spacing-4x-large $spacing-2x-large
-    $spacing-4x-large;
+  height: clamp(100% - 23rem, 30rem, 66vh);
+  padding: 0 $spacing-4x-large $spacing-2x-large $spacing-4x-large;
   // * Table Container
   .table-container {
     display: flex;
     flex-direction: column;
-    height: calc(100% - 10%);
+    height: 100%;
     border-radius: $border-radius-large;
     box-shadow: $box-shadow;
     table {

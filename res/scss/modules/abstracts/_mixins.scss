@@ -105,6 +105,52 @@
     }
 }
 
+// * Search Input 1
+@mixin searchInput {
+    @include inputField;
+    position: relative;
+    padding-left: $spacing-6x-large;
+    &::placeholder {
+        font-size: $font-size-large;
+        position: absolute;
+        top: 0;
+        transform: translateY(1rem);
+    }
+    &::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+    }
+}
+
+// * Search Input 2
+@mixin searchInput2 {
+    -moz-appearance: textfield !important;
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+    font-size: $font-size-large !important;
+    font-weight: $font-weight-bold !important;
+    padding: 1rem 2rem !important;
+    border: none !important;
+    outline: none !important;
+    background-color: $primary-bg !important;
+    border-radius: $border-radius-medium !important;
+    box-shadow: $box-shadow !important;
+    position: relative !important;
+    padding-left: $spacing-2x-large !important;
+    transition: opacity 100ms ease-in-out !important;
+    &::placeholder {
+        font-size: $font-size-large !important;
+        position: absolute !important;
+        top: 0 !important;
+        transform: translateY(1rem) !important;
+    }
+    &::-webkit-search-cancel-button {
+        -webkit-appearance: none !important;
+    }
+    &:hover {
+        opacity: 0.9 !important;
+    }
+}
+
 // *** Search Bar *** //
 @mixin searchbar {
     position: relative;
@@ -112,18 +158,7 @@
     align-items: center;
     // * Search input text-field
     input {
-        @include inputField;
-        position: relative;
-        padding-left: $spacing-6x-large;
-        &::placeholder {
-            font-size: $font-size-large;
-            position: absolute;
-            top: 0;
-            transform: translateY(1rem);
-        }
-        &::-webkit-search-cancel-button {
-            -webkit-appearance: none;
-        }
+        @include searchInput;
     }
     img {
         position: absolute;
@@ -139,32 +174,7 @@
     align-items: center;
     // * Search input text-field
     input {
-        -moz-appearance: textfield;
-        -webkit-appearance: none;
-        margin: 0;
-        font-size: $font-size-large;
-        font-weight: $font-weight-bold;
-        padding: 1rem 2rem;
-        border: none;
-        outline: none;
-        background-color: $primary-bg;
-        border-radius: $border-radius-medium;
-        box-shadow: $box-shadow;
-        position: relative;
-        padding-left: $spacing-2x-large;
-        transition: opacity 100ms ease-in-out;
-        &::placeholder {
-            font-size: $font-size-large;
-            position: absolute;
-            top: 0;
-            transform: translateY(1rem);
-        }
-        &::-webkit-search-cancel-button {
-            -webkit-appearance: none;
-        }
-        &:hover {
-            opacity: 0.9;
-        }
+        @include searchInput2;
     }
     img {
         position: absolute;
@@ -172,6 +182,84 @@
         top: 0;
         left: 0;
         transform: translate(28rem, 1rem);
+    }
+}
+
+// * Primary Search Bar
+@mixin primarySearchBar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    // * Search Div
+    .row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        z-index: 9;
+        input[type=search] {
+            @include searchInput2;
+            overflow-y: hidden;
+            // &:focus, &:focus-visible {
+                // }
+            &.removeBoxShadow {
+                box-shadow: unset !important;
+            }
+        }
+        button {
+            pointer-events: none;
+            background: none;
+            position: absolute;
+            scale: .8;
+            right: 0;
+            bottom: 0;
+            transform: translate(-2rem, -0.4rem);
+            &::after {
+                content: url('/res/assets/icons/magnifyingglass.svg');
+                position: relative;
+                z-index: 9;
+            }
+        }
+    }
+    // * Back Fill for Search Field
+    .back-fill {
+        position: absolute;
+        z-index: 5s;
+        width: 100%;
+        height: 4.4rem;
+        top: 0;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        background-color: $primary-bg;
+        box-shadow: $box-shadow-3;
+    }
+    // * Result Div
+    .result-box {
+        position: absolute;
+        z-index: 6;
+        top: 100%;
+        width: 100%;
+        max-height: 30rem;
+        border-bottom-left-radius: $border-radius-small;
+        border-bottom-right-radius: $border-radius-small;
+        overflow-y: auto;
+        background-color: $primary-bg;
+        box-shadow: $box-shadow-3;
+        @include custom-scroll;
+        ul {
+            // padding: 1.5rem 1rem;
+            li {
+                border-radius: 3px;
+                padding: 1.5rem 2rem;
+                cursor: pointer;
+                font-size: $font-size-large;
+                font-weight: $font-weight-bold;
+                &:hover {
+                    border-radius: unset;
+                    background-color: $blackTR2;
+                }
+            }
+        }
     }
 }
 

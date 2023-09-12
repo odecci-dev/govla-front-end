@@ -17,12 +17,124 @@
             flex-direction: column;
             // height: calc(100% - 74%);
             padding: $spacing-4x-large $spacing-4x-large $spacing-2x-large $spacing-4x-large;
+            // ***** For Mobile devices ***** //
+            @include breakpointMax(430px) {
+                & {
+                    display: none;
+                }
+            }
+            h2 {
+                font-size: $font-size-x-large;
+                @include breakpointMax(430px) {
+                    & {
+                        font-size: $font-size;
+                        color: $font-accent;
+                    }
+                }
+            }
+            .p-1 {
+                margin-top: $spacing-large;
+                font-size: $font-size-x-medium;
+                @include breakpointMax(430px) {
+                    & {
+                        margin-top: 0;
+                        font-size: calc($font-size + .1rem);
+                        grid-area: 2 / 1;
+                    }
+                }
+                span {
+                    font-weight: $font-weight-bold;
+                }
+            }
+            .p-1b {
+                display: none;
+                @include breakpointMax(430px) {
+                    & {
+                        display: unset;
+                        grid-area: 3 / 1;
+                        font-size: $font-size;
+                        color: $font-accent;
+                    }
+                }
+            }
+            // * Button Container
+            .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: $spacing-large;
+                @include breakpointMax(430px) {
+                    & {
+                        margin-top: 0;
+                        grid-area: 1/2/3/2;
+                        justify-self: flex-end;
+                    }
+                }
+                // * Search Wrapper
+                .wrapper:last-of-type {
+                    gap: 2rem;
+                    display: flex;
+                    align-items: center;
+                    @include breakpointMax(430px) {
+                        & {
+                            display: none;
+                        }
+                    }
+                    button {
+                        cursor: pointer;
+                        background: none;
+                        &:hover {
+                            transform: scale(1.015);
+                        }
+                    }
+                    .search-wrap {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        // * Search input text-field
+                        input {
+                            @include inputField;
+                            position: relative;
+                            padding-left: $spacing-6x-large;
+                            &::placeholder {
+                                font-size: $font-size-large;
+                                position: absolute;
+                                top: 0;
+                                transform: translateY(1rem);
+                            }
+                            &::-webkit-search-cancel-button {
+                                -webkit-appearance: none;
+                            }
+                        }
+                        img {
+                            position: absolute;
+                            width: 8%;
+                            transform: translateX(1.5rem);
+                        }
+                    }
+                }
+                
+            }
+            // * View Trash Button
+            .btn-container {
+                margin-top: $spacing-large;
+            }
+        }
+        // * New Application List Mobile: Header
+        .nal-con-1-mobile {
+            display: none;
+            // display: flex;
+            // flex-direction: column;
+            // height: calc(100% - 74%);
+            padding: $spacing-4x-large $spacing-4x-large $spacing-2x-large $spacing-4x-large;
+            // ***** For Mobile devices ***** //
             @include breakpointMax(430px) {
                 & {
                     display: grid;
                     grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); 
                     grid-template-rows: repeat(3, minmax(0, auto)); 
                     align-items: center;
+                    padding: $spacing-3x-large $spacing-2x-large;
                 }
             }
             h2 {
@@ -124,7 +236,7 @@
         }
         // * New Application List: Table
         .nal-con-2 {
-            height: clamp(calc(100% - 22rem), 60%, 66vh);
+            height: clamp(100% - 22rem, 30rem, 66vh);
             padding: 0 $spacing-4x-large $spacing-2x-large $spacing-4x-large;
             // * Table Container
             .table-container {
@@ -276,7 +388,7 @@
         }
         // * Credit Investigation List: Table
         .cil-con-2 {
-            height: clamp(calc(100% - 22rem), 80%, 66vh);
+            height: clamp(100% - 14rem, 33rem, 66vh);
             padding: 0 $spacing-4x-large $spacing-2x-large $spacing-4x-large;
             // * Table Container
             .table-container {

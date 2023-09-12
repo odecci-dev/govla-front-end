@@ -125,10 +125,7 @@ button {
 }
 
 
-// .rowspan:has(table) {
-//     overflow-y: auto;
-//     @include custom-scroll;
-// }
+
 // * Custom Scroll and Overflow-y: auto made Global
 .rowspan.table,
 .table-container,
@@ -186,6 +183,16 @@ table {
                 color: $black;
             }
         }
+        // * Remitted Styles
+        &>.td-btns>.td-btn-wrapper>.a-btn-view-3.remitted {
+            background-color: $black !important;
+            color: unset !important;
+            // transition: 200ms ease-out;
+            &:hover {
+                background-color: unset;
+                color: unset;
+            }
+        }
     }
     tr:not(:first-of-type):hover {
         &>.td-wrapper>.td-inner-wrapper>span {
@@ -237,7 +244,32 @@ table {
         align-items: center;
         justify-content: center;
         gap: $spacing-large;
+        // * Remiited Button Styles
+        .a-btn-view-3 {
+            &.remitted {
+                pointer-events: none;
+                cursor: auto;
+                background-color: $black;
+                padding: 0.5rem 3.2rem;
+                &::after {
+                    content: url('/res/assets/icons/circle-check-2.svg');
+                    display: block;
+                }
+            }
+        }
     }
+
+    // &>.td-btns>.td-btn-wrapper>button {
+    //     background-color: $white;
+    //     color: $primary;
+    //     transition: 200ms ease-out;
+    //     &:hover {
+    //         background-color: $black;
+    //         color: $white;
+    //     }
+        
+    // }
+
 }
 
 // * Active Primary Color
@@ -491,6 +523,10 @@ table {
 // * Search Bar 2
 .search-bar-2 {
     @include searchbar2;
+}
+
+.primary-search-bar {
+    @include primarySearchBar;
 }
 
 // * Input Global

@@ -28,6 +28,12 @@ const openCashDenominationBtn = document.querySelector('[data-open-cash-denomina
 const closeCashDenominationBtn = document.querySelector('[data-close-cash-denomination-button]')
 const approveCashDenominationBtn = document.querySelector('[data-approve-cash-denomination-button]')
 
+// * Cash Denomination (collection-collected.html)
+// * Approved Button
+// * linked to (collection-collected-all.html)
+const approveLinkToCollectedAllBtn = document.querySelector('[data-link-to-collected-all]')
+
+
 if (cashDenominationModal) {
 
     openCashDenominationBtn.addEventListener('click', () => {
@@ -52,6 +58,19 @@ if (cashDenominationModal) {
         url = '/KC/collection/collection-collected.html'
         location.href = url
     })
+    
+    // * Cash Denomination (collection-collected.html)
+    if (approveLinkToCollectedAllBtn) {
+        approveLinkToCollectedAllBtn.addEventListener('click', () => {
+            cashDenominationModal.setAttribute("closing", "")
+            cashDenominationModal.addEventListener("animationend", () => {
+                cashDenominationModal.removeAttribute("closing")
+                cashDenominationModal.close()
+            }, { once: true })
+            url = '/KC/collection/collection-collected-all.html'
+            location.href = url
+        })
+    }
 
     // * Denomination values
     const denominations = {
@@ -146,7 +165,8 @@ if (rejectCollectionModal) {
             rejectCollectionModal.removeAttribute("closing");
             rejectCollectionModal.close();
         }, { once: true });
-    
+        url = '/KC/collection/collection-list.html'
+        location.href = url
     })
 
 }
@@ -155,13 +175,21 @@ if (rejectCollectionModal) {
 // ***** Field Expense Modal ***** //
 
 const fieldExpenseModal = document.querySelector('[data-field-expense-modal]')
-const openFieldExpenseBtn = document.querySelector('[data-open-field-expense-modal]')
+const openFieldExpenseBtn = document.querySelectorAll('[data-open-field-expense-modal]')
 const closeFieldExpenseBtn = document.querySelector('[data-close-field-expense-modal]')
 const saveFieldExpenseBtn = document.querySelector('[data-save-field-expense-modal]')
 
+// * For Mobile Devices
+const showTotalRemittanceBtn = document.querySelector('[data-show-total-remittance]')
+const totalRemittanceFooter = document.querySelector('[data-total-remittance-footer]')
+const showMoreDetailsFieldExp = document.querySelectorAll('[data-show-more-details-field-exp]')
+
 if (fieldExpenseModal) {
-    openFieldExpenseBtn.addEventListener('click', () => {
-        fieldExpenseModal.showModal()
+
+    openFieldExpenseBtn.forEach((button) => {
+        button.addEventListener('click', () => {
+            fieldExpenseModal.showModal()
+        })
     })
     
     closeFieldExpenseBtn.addEventListener('click', () => {
@@ -173,14 +201,33 @@ if (fieldExpenseModal) {
     
     })
 
-    saveFieldExpenseBtn.addEventListener('click', () => {
-        fieldExpenseModal.setAttribute("closing", "");
-        fieldExpenseModal.addEventListener("animationend", () => {
-            fieldExpenseModal.removeAttribute("closing");
-            fieldExpenseModal.close();
-        }, { once: true });
-    
-    })
+    if (saveFieldExpenseBtn) {
+        saveFieldExpenseBtn.addEventListener('click', () => {
+            fieldExpenseModal.setAttribute("closing", "");
+            fieldExpenseModal.addEventListener("animationend", () => {
+                fieldExpenseModal.removeAttribute("closing");
+                fieldExpenseModal.close();
+            }, { once: true });
+            url = '/KC/collection/collection-remittance-field-expense.html'
+            location.href = url
+        })
+    }
+
+    if (showTotalRemittanceBtn) {
+        showTotalRemittanceBtn.addEventListener('click', () => {
+            showMoreDetailsFieldExp.forEach((button) => {
+                button.classList.add('show-more-details')
+            })
+            totalRemittanceFooter.setAttribute("show", "")
+            fieldExpenseModal.setAttribute("closing", "")
+            fieldExpenseModal.addEventListener("animationend", () => {
+                fieldExpenseModal.removeAttribute("closing")
+                fieldExpenseModal.close();
+            }, { once: true });
+        })
+
+    }
+
 }
 
 // ***** END ---- Field Expense Modal ***** //
@@ -190,6 +237,30 @@ if (fieldExpenseModal) {
 // * Add Expenses
 
 cloneCount = 0;
+
+// function addExpenses() {
+
+//     const expensesForm = document.querySelector('[data-expenses]')
+//     const expensesContainer = document.querySelector('[data-expenses-container]')
+
+//     expensesForm.setAttribute('id', 'expenses-1')
+
+//     // * Clone the original element
+//     const clonedChild = expensesForm.cloneNode(true)
+
+//     // * Increment the clone count and modify the ID
+//     cloneCount++
+//     const newId = `expenses-${cloneCount}`
+//     clonedChild.id = newId
+
+//     // * Hide the increment button
+//     clonedChild.lastElementChild.lastElementChild.lastElementChild.children[0].style.visibility = 'hidden'
+
+
+//     // * Append the cloned element to the target container
+//     expensesContainer.appendChild(clonedChild)
+
+// }
 
 function addExpenses() {
 
@@ -203,17 +274,31 @@ function addExpenses() {
 
     // * Increment the clone count and modify the ID
     cloneCount++
-    const newId = `property-${cloneCount}`
+    const newId = `expenses-${cloneCount}`
     clonedChild.id = newId
-
+    
     // * Hide the increment button
-    clonedChild.lastElementChild.lastElementChild.lastElementChild.children[0].style.visibility = 'hidden'
-
+    // clonedChild.lastElementChild.lastElementChild.lastElementChild.children[0].style.visibility = 'hidden'
 
     // * Append the cloned element to the target container
     expensesContainer.appendChild(clonedChild)
 
 }
+
+// // * Subtract Expenses
+// function subExpenses() {
+
+//     const expensesContainer = document.querySelector('[data-expenses-container]')
+
+//     // * Reset cloneCount when decrement
+//     cloneCount = 1
+
+//     // * Remove the the next sibling of appliance-1
+//     if (expensesContainer.firstElementChild.nextElementSibling !== null) {
+//         expensesContainer.lastElementChild.remove()
+//     }
+
+// }
 
 // * Subtract Expenses
 function subExpenses() {
@@ -238,6 +323,10 @@ const remitModal = document.querySelector('[data-remit-modal]')
 const openRemitModalBtn = document.querySelectorAll('[data-open-remit-modal]')
 const closeRemitModalBtn = document.querySelector('[data-close-remit-modal]')
 const saveRemitModalBtn = document.querySelector('[data-save-remit-modal]')
+const linkToRemittedAllBtn = document.querySelector('[data-link-to-remitted-all]')
+
+// ***** For Mobile Devices ***** //
+const showRemittedBtn = document.querySelector('[data-show-remitted-button]')
 
 if (remitModal) {
 
@@ -255,13 +344,43 @@ if (remitModal) {
         }, { once: true });
     })
 
-    saveRemitModalBtn.addEventListener('click', () => {
-        remitModal.setAttribute("closing", "");
-        remitModal.addEventListener("animationend", () => {
-            remitModal.removeAttribute("closing");
-            remitModal.close();
-        }, { once: true });
-    })
+    if (saveRemitModalBtn) {
+        saveRemitModalBtn.addEventListener('click', () => {
+            remitModal.setAttribute("closing", "");
+            remitModal.addEventListener("animationend", () => {
+                remitModal.removeAttribute("closing");
+                remitModal.close();
+            }, { once: true });
+            url = '/KC/collection/collection-remittance-remitted.html'
+            location.href = url
+        })
+    }
+
+    if (linkToRemittedAllBtn) {
+        linkToRemittedAllBtn.addEventListener('click', () => {
+            remitModal.setAttribute("closing", "");
+            remitModal.addEventListener("animationend", () => {
+                remitModal.removeAttribute("closing");
+                remitModal.close();
+            }, { once: true });
+            url = '/KC/collection/collection-remittance-remitted-all.html'
+            location.href = url
+        })
+    }
+
+    if (showRemittedBtn) {
+        showRemittedBtn.addEventListener('click', () => {
+            remitModal.setAttribute("closing", "");
+            remitModal.addEventListener("animationend", () => {
+                remitModal.removeAttribute("closing");
+                remitModal.close();
+            }, { once: true });
+            openRemitModalBtn.forEach((button) => {
+                button.innerText = ''
+                button.classList.add('remitted')
+            })
+        })
+    }
 
 }
 

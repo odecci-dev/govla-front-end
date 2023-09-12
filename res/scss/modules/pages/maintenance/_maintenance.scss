@@ -155,11 +155,8 @@
     }
     // * Field Officer and Loan Type
     // * Container 2: Table and Pagination
-    .m-con-2.min-height {
-        height: clamp(100% - 22rem, 53%, 66vh);
-    }
     .m-con-2 {
-        height: clamp(100% - 26rem, 53%, 66vh);
+        height: clamp(100% - 23rem, 30rem, 66vh);
         padding: 0 $spacing-4x-large $spacing-2x-large $spacing-4x-large;
         // * Table Container
         .table-container {
@@ -241,8 +238,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding-top: 3rem;
-            height: calc(100% - 90%);
+            padding: 1.5rem 0;
             // * Pagination Links
             a {
                 display: flex;
@@ -260,6 +256,9 @@
                 margin-left: $spacing-6x-large;
             }
         }
+    }
+    .m-con-2.min-height {
+        height: clamp(100% - 23rem, 30rem, 66vh);
     }
     // * New Officer Form Container
     .no-form-con {

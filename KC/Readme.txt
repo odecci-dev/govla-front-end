@@ -910,7 +910,7 @@ Second Commit:
 • Collection Module: Printables Minor Bug Fixes
 
 
-August 31, 2023 (Friday)
+September 01, 2023 (Friday)
 First Commit:
 • Collection Module: Completed✅the Collection View
 
@@ -930,6 +930,56 @@ Fifth Commit:
 
 Sixth Commit:
 • Collection Module: Field Officer Search
+
+
+September 04, 2023 (Monday)
+• Collection Module: Remittance Table Footer
+- Div for total remit
+
+
+September 05, 2023 (Tuesday)
+• Implementation of global table height adjustments
+• Added a svg for invalid modal
+
+
+September 06, 2023 (Wednesday)
+• Collection Remittance Module Mobile: Started the implementation of Mobile Remittance Module
+- Field Expense Modal for Mobile Adjustment
+
+
+September 07, 2023 (Thursday)
+• Collection Remittance Module Mobile: Continuation of Mobile Remittance Module
+- Translating the table from desktop to a accordion div in mobile
+- Remittance Modal for Mobile Adjustment
+• Collection Remittance Module: Created a new page for remitted
+- collection-remittance-remitted.html
+• Collection Remittance Module: Completed✅ Collection Remitted
+• Collection Remittance Module: Created a new page for remitted all
+- collection-remittance-remitted-all.html
+
+
+September 08, 2023 (Friday)
+• Collection Remittance Module: Continuation
+- collection-remittance-remitted-all.html
+• Collection Remittance Module: Completed✅ Collection Remitted All
+
+
+September 11, 2023 (Monday)
+• Collection Module & Collection Module Mobile
+• Implementation of Search Bar Globally
+    - Collection Module
+    - Maintenance Module
+    - Transactions Module
+    - Members Module
+    - User Module
+    - _modals
+
+
+September 12, 2023 (Tuesday)
+First Commit:
+• Collection Module & Collection Module Mobile: Completed✅
+
+
 
 
 
