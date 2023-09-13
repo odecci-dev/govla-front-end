@@ -980,6 +980,13 @@ First Commit:
 • Collection Module & Collection Module Mobile: Completed✅
 
 
+September 13, 2023 (Wednesday)
+First Commit:
+• Application Module: Dropdown Value Issue Fixed
+- Made the option div value consistent with the input radio value
+- As well as the selected option value
+
+
 
 
 

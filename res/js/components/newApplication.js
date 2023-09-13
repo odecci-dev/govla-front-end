@@ -70,7 +70,6 @@ if (loanDetailsModal && openLoanDetailsButton) {
 // ** Select Dropdown 1 (Borrower Gender)
 const selectedOpt1 = document.querySelector('[data-option-select1]');
 
-
 const optionsContainer1 = document.querySelector('[data-option-con1]');
 const optionsList1 = document.querySelectorAll('[data-option-item1]');
 
@@ -81,9 +80,11 @@ if (selectedOpt1) {
     });
 
     optionsList1.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
             selectedOpt1.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer1.classList.remove("active");
+            selectedOpt1.setAttribute('value', option.children[0].value);
         });
     });
 
@@ -102,9 +103,11 @@ if (selectedOpt2) {
     });
 
     optionsList2.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
             selectedOpt2.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer2.classList.remove("active");
+            selectedOpt2.setAttribute('value', option.children[0].value);
         });
     });
 
@@ -140,9 +143,11 @@ if (selectedOpt3) {
     });
 
     optionsList3.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
             selectedOpt3.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer3.classList.remove("active");
+            selectedOpt3.setAttribute('value', option.children[0].value);
         });
     });
 
@@ -184,9 +189,11 @@ if (selectedOpt4) {
     });
 
     optionsList4.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
             selectedOpt4.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer4.classList.remove("active");
+            selectedOpt4.setAttribute('value', option.children[0].value);
         });
     });
 
@@ -205,9 +212,11 @@ if (selectedOpt5) {
     });
 
     optionsList5.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
             selectedOpt5.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer5.classList.remove("active");
+            selectedOpt5.setAttribute('value', option.children[0].value);
         });
     });
 
@@ -227,9 +236,11 @@ if (selectedOpt6) {
     });
 
     optionsList6.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
             selectedOpt6.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer6.classList.remove("active");
+            selectedOpt6.setAttribute('value', option.children[0].value);
         });
     });
 
@@ -272,9 +283,11 @@ if (selectedOpt7) {
     });
 
     optionsList7.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
             selectedOpt7.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer7.classList.remove("active");
+            selectedOpt7.setAttribute('value', option.children[0].value);
         });
     });
 
@@ -315,9 +328,11 @@ if (selectedOpt8) {
     });
 
     optionsList8.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
             selectedOpt8.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer8.classList.remove("active");
+            selectedOpt8.setAttribute('value', option.children[0].value);
         });
     });
 
@@ -359,9 +374,11 @@ if (selectedOpt9) {
     });
 
     optionsList9.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
             selectedOpt9.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer9.classList.remove("active");
+            selectedOpt9.setAttribute('value', option.children[0].value);
         });
     });
 
@@ -380,9 +397,11 @@ if (selectedOpt10) {
     });
 
     optionsList10.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
             selectedOpt10.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer10.classList.remove("active");
+            selectedOpt10.setAttribute('value', option.children[0].value);
         });
     });
 
