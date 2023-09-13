@@ -1,3 +1,21 @@
+const addNewFieldOfficerBtn = document.querySelector('[data-add-new-field-officer]')
+
+if (addNewFieldOfficerBtn) {
+    addNewFieldOfficerBtn.addEventListener('click', () => {
+        url = '/KC/maintenance/maintenance-new-field-officer.html'
+        window.location = url
+    })
+}
+
+const addNewLoanType = document.querySelector('[data-add-new-loan-type]')
+
+if (addNewLoanType) {
+    addNewLoanType.addEventListener('click', () => {
+        url = '/KC/maintenance/maintenance-add-loan-type.html'
+        window.location = url
+    })
+}
+
 // *************** Field Officer Table Functions *************** //
 const viewFieldOfficerBtn = document.querySelectorAll('[data-maintenance-view-field-officer]');
 
@@ -276,7 +294,7 @@ if (selectedOpt1) {
         optionsContainer1.classList.toggle("active");
     });
 
-    // Close dropdowns when clicking outside of them
+    // * Close dropdowns when clicking outside of them
     document.addEventListener('click', (e) => {
         if (!e.target.matches('[data-option-select1], [data-option-con1]')) {
             optionsContainer1.classList.remove("active");
@@ -284,9 +302,11 @@ if (selectedOpt1) {
     });
 
     optionsList1.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
             selectedOpt1.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer1.classList.remove("active");
+            selectedOpt1.setAttribute('value', option.children[0].value);
         });
     });
 
@@ -305,7 +325,7 @@ if (selectedOpt2) {
         optionsContainer2.classList.toggle("active");
     });
 
-    // Close dropdowns when clicking outside of them
+    // * Close dropdowns when clicking outside of them
     document.addEventListener('click', (e) => {
         if (!e.target.matches('[data-option-select2], [data-option-con2]')) {
             optionsContainer2.classList.remove("active");
@@ -313,9 +333,11 @@ if (selectedOpt2) {
     });
 
     optionsList2.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
             selectedOpt2.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer2.classList.remove("active");
+            selectedOpt2.setAttribute('value', option.children[0].value);
         });
     });
 
@@ -335,7 +357,7 @@ if (selectedOpt3) {
     });
 
     
-    // Close dropdowns when clicking outside of them
+    // * Close dropdowns when clicking outside of them
     document.addEventListener('click', (e) => {
         if (!e.target.matches('[data-option-select3], [data-option-con3]')) {
             optionsContainer3.classList.remove("active");
@@ -343,9 +365,11 @@ if (selectedOpt3) {
     });
 
     optionsList3.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
             selectedOpt3.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer3.classList.remove("active");
+            selectedOpt3.setAttribute('value', option.children[0].value);
         });
     });
 
@@ -372,9 +396,11 @@ if (selectedOpt4) {
     });
 
     optionsList4.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
             selectedOpt4.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer4.classList.remove("active");
+            selectedOpt4.setAttribute('value', option.children[0].value);
         });
     });
 
@@ -402,9 +428,11 @@ if (selectedOpt5) {
     });
 
     optionsList5.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
             selectedOpt5.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer5.classList.remove("active");
+            selectedOpt4.setAttribute('value', option.children[0].value);
         });
     });
 
@@ -432,9 +460,11 @@ if (selectedOpt6) {
     });
 
     optionsList6.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
             selectedOpt6.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer6.classList.remove("active");
+            selectedOpt4.setAttribute('value', option.children[0].value);
         });
     });
 

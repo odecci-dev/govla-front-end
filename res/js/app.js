@@ -131,47 +131,49 @@ let availableKeywords = [
 const searchInputBox = document.querySelector('#searchInput')
 const searchResultBox = document.querySelector('[data-search-results]')
 
-searchInputBox.addEventListener('keyup', () => {
-    let result = []
-    let input = searchInputBox.value
-    if (input.length) {
-        result = availableKeywords.filter((keyword) => {
-            return keyword.toLowerCase().includes(input.toLowerCase())
-        })
-    }
-    displaySearchResult(result)
-
-    if (!result.length) {
-        searchResultBox.innerHTML = ''
-    }
-
-    let backFillDiv
-    backFillDiv = document.createElement('div');
-    backFillDiv.className = 'back-fill'
-
-    const removeBackFill = document.querySelectorAll('.back-fill')
-    removeBackFill.forEach((rbf) => {
-        rbf.parentNode.removeChild(rbf)
-    })
-
-    // * Toggle Class
-    function toggleClass(element, className) {
-        if (element.classList.contains(className)) {
-            element.classList.remove(className);
-        } else {
-            element.classList.add(className);
+if (searchInputBox) {
+    searchInputBox.addEventListener('keyup', () => {
+        let result = []
+        let input = searchInputBox.value
+        if (input.length) {
+            result = availableKeywords.filter((keyword) => {
+                return keyword.toLowerCase().includes(input.toLowerCase())
+            })
         }
-    }
-
+        displaySearchResult(result)
     
-    searchInputBox.classList.remove('removeBoxShadow')
+        if (!result.length) {
+            searchResultBox.innerHTML = ''
+        }
     
-    if (searchResultBox.childNodes.length > 0) {
-        searchResultBox.parentNode.insertBefore(backFillDiv, searchResultBox)
-        searchInputBox.classList.add('removeBoxShadow')
-        // toggleClass(searchInputBox, 'removeBoxShadow')
-    }
-})
+        let backFillDiv
+        backFillDiv = document.createElement('div');
+        backFillDiv.className = 'back-fill'
+    
+        const removeBackFill = document.querySelectorAll('.back-fill')
+        removeBackFill.forEach((rbf) => {
+            rbf.parentNode.removeChild(rbf)
+        })
+    
+        // * Toggle Class
+        function toggleClass(element, className) {
+            if (element.classList.contains(className)) {
+                element.classList.remove(className);
+            } else {
+                element.classList.add(className);
+            }
+        }
+    
+        
+        searchInputBox.classList.remove('removeBoxShadow')
+        
+        if (searchResultBox.childNodes.length > 0) {
+            searchResultBox.parentNode.insertBefore(backFillDiv, searchResultBox)
+            searchInputBox.classList.add('removeBoxShadow')
+            // toggleClass(searchInputBox, 'removeBoxShadow')
+        }
+    })
+}
 
 function displaySearchResult(result) {
     const content = result.map((list) => {
@@ -186,23 +188,25 @@ function selectInput(list) {
     searchResultBox.innerHTML = ''
 }
 
-document.addEventListener('click', (e) => {
-    searchInputBox.classList.remove('removeBoxShadow')
-
-    // * Check if the click target is outside the div
-    if (!searchInputBox.contains(e.target)) {
-        const removeBackFill = document.querySelectorAll('.back-fill')
-        removeBackFill.forEach((rbf) => {
-            rbf.parentNode.removeChild(rbf)
-        })
-    }
-    // * Remove the result box when clicked outside the div
-
-    const ulElement = searchResultBox.querySelector('ul')
-    if (ulElement) {
-        searchResultBox.removeChild(ulElement)
-    }
-})
+if (searchInputBox) {
+    document.addEventListener('click', (e) => {
+        searchInputBox.classList.remove('removeBoxShadow')
+    
+        // * Check if the click target is outside the div
+        if (!searchInputBox.contains(e.target)) {
+            const removeBackFill = document.querySelectorAll('.back-fill')
+            removeBackFill.forEach((rbf) => {
+                rbf.parentNode.removeChild(rbf)
+            })
+        }
+        // * Remove the result box when clicked outside the div
+    
+        const ulElement = searchResultBox.querySelector('ul')
+        if (ulElement) {
+            searchResultBox.removeChild(ulElement)
+        }
+    })
+}
 
 // ***** Maintenance ***** //
 

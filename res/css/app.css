@@ -1016,6 +1016,7 @@ table .td-btn-wrapper .a-btn-view-3.remitted::after {
   top: 100%;
 }
 .select-box .options-container.active {
+  z-index: 10;
   max-height: 240px;
   box-shadow: none;
   opacity: 1;
@@ -7084,7 +7085,7 @@ body {
 }
 .main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan:nth-of-type(4) .input-wrapper .input-inner-wrapper .wrapper {
   display: grid;
-  grid-template-columns: minmax(0, 0.5fr) minmax(0, 0.2fr) minmax(0, 1.2fr) minmax(0, 1.2fr);
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 0.2fr) repeat(2, minmax(0, 1.2fr));
   gap: 2rem;
   align-items: center;
 }
@@ -7114,11 +7115,12 @@ body {
   padding: 0;
 }
 .main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan:nth-of-type(4) .input-wrapper .input-inner-wrapper .wrapper .input-inner-select-wrapper input {
+  width: 100%;
   border-top-left-radius: unset;
   border-bottom-left-radius: unset;
 }
 .main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan:nth-of-type(4) .input-wrapper .input-inner-wrapper .wrapper .input-inner-select-wrapper .select-box {
-  width: 100%;
+  width: 55%;
 }
 .main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan:nth-of-type(4) .input-wrapper .input-inner-wrapper .wrapper .input-inner-select-wrapper .select-box .selected {
   border-top-right-radius: unset;
@@ -7160,17 +7162,18 @@ body {
   transition: opacity 100ms ease-in-out;
   padding: 0;
 }
-.main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan:nth-of-type(5) .input-wrapper .input-inner-select-wrapper input {
-  border-top-left-radius: unset;
-  border-bottom-left-radius: unset;
-}
 .main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan:nth-of-type(5) .input-wrapper .input-inner-select-wrapper:hover {
   filter: brightness(101.5%);
   -webkit-filter: brightness(101.5%);
   -moz-filter: brightness(101.5%);
 }
-.main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan:nth-of-type(5) .input-wrapper .input-inner-select-wrapper .select-box {
+.main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan:nth-of-type(5) .input-wrapper .input-inner-select-wrapper input {
   width: 100%;
+  border-top-left-radius: unset;
+  border-bottom-left-radius: unset;
+}
+.main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan:nth-of-type(5) .input-wrapper .input-inner-select-wrapper .select-box {
+  width: 55%;
 }
 .main-dashboard .nl-container-1 .container-wrapper .big-con .rowspan:nth-of-type(5) .input-wrapper .input-inner-select-wrapper .select-box .selected {
   border-top-right-radius: unset;
@@ -12120,4 +12123,4 @@ body {
 .view-nu-con-2 .container-wrapper .ur-con-1 .table-container table td {
   padding: 1.5rem;
   font-size: 1.8rem;
-}
+}/*# sourceMappingURL=app.css.map */

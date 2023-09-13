@@ -75,6 +75,7 @@
     position: absolute;
     top: 100%;
     &.active {
+        z-index: 10;
         max-height: 240px;
         box-shadow: none;
         opacity: 1;
