@@ -179,10 +179,11 @@ const openFieldExpenseBtn = document.querySelectorAll('[data-open-field-expense-
 const closeFieldExpenseBtn = document.querySelector('[data-close-field-expense-modal]')
 const saveFieldExpenseBtn = document.querySelector('[data-save-field-expense-modal]')
 
-// * For Mobile Devices
-const showTotalRemittanceBtn = document.querySelector('[data-show-total-remittance]')
+// * For toggling for Total Remittance Footer
 const totalRemittanceFooter = document.querySelector('[data-total-remittance-footer]')
+const totalRemittanceFooterMobile = document.querySelector('[data-total-remittance-footer-mobile]')
 const showMoreDetailsFieldExp = document.querySelectorAll('[data-show-more-details-field-exp]')
+
 
 if (fieldExpenseModal) {
 
@@ -201,32 +202,43 @@ if (fieldExpenseModal) {
     
     })
 
-    if (saveFieldExpenseBtn) {
-        saveFieldExpenseBtn.addEventListener('click', () => {
-            fieldExpenseModal.setAttribute("closing", "");
-            fieldExpenseModal.addEventListener("animationend", () => {
-                fieldExpenseModal.removeAttribute("closing");
-                fieldExpenseModal.close();
-            }, { once: true });
-            url = '/KC/collection/collection-remittance-field-expense.html'
-            location.href = url
-        })
-    }
+    // * Toggle Attributes
+    function toggleAttributes() {
 
-    if (showTotalRemittanceBtn) {
-        showTotalRemittanceBtn.addEventListener('click', () => {
-            showMoreDetailsFieldExp.forEach((button) => {
-                button.classList.add('show-more-details')
+        const isMobile = window.innerWidth <= 430   
+
+        // * If mobile viewport
+        if (isMobile) {
+            saveFieldExpenseBtn.removeAttribute('data-save-field-expense-modal');
+            saveFieldExpenseBtn.setAttribute('data-show-total-remittance', '');
+            
+        } else {
+
+            saveFieldExpenseBtn.removeAttribute('data-show-total-remittance', '');
+            saveFieldExpenseBtn.setAttribute('data-save-field-expense-modal', '');
+            
+        }
+
+        if (saveFieldExpenseBtn.matches('[data-save-field-expense-modal]')) {
+            saveFieldExpenseBtn.addEventListener('click', () => {
+                showMoreDetailsFieldExp.forEach((button) => {
+                    button.classList.add('show-more-details')
+                })
+                totalRemittanceFooter.classList.add('show-remittance-footer')
+                totalRemittanceFooterMobile.setAttribute("show", "")
+                fieldExpenseModal.setAttribute("closing", "")
+                fieldExpenseModal.addEventListener("animationend", () => {
+                    fieldExpenseModal.removeAttribute("closing")
+                    fieldExpenseModal.close();
+                }, { once: true });
             })
-            totalRemittanceFooter.setAttribute("show", "")
-            fieldExpenseModal.setAttribute("closing", "")
-            fieldExpenseModal.addEventListener("animationend", () => {
-                fieldExpenseModal.removeAttribute("closing")
-                fieldExpenseModal.close();
-            }, { once: true });
-        })
+    
+        }
 
     }
+
+    window.addEventListener('resize', toggleAttributes)
+    toggleAttributes()
 
 }
 
@@ -237,30 +249,6 @@ if (fieldExpenseModal) {
 // * Add Expenses
 
 cloneCount = 0;
-
-// function addExpenses() {
-
-//     const expensesForm = document.querySelector('[data-expenses]')
-//     const expensesContainer = document.querySelector('[data-expenses-container]')
-
-//     expensesForm.setAttribute('id', 'expenses-1')
-
-//     // * Clone the original element
-//     const clonedChild = expensesForm.cloneNode(true)
-
-//     // * Increment the clone count and modify the ID
-//     cloneCount++
-//     const newId = `expenses-${cloneCount}`
-//     clonedChild.id = newId
-
-//     // * Hide the increment button
-//     clonedChild.lastElementChild.lastElementChild.lastElementChild.children[0].style.visibility = 'hidden'
-
-
-//     // * Append the cloned element to the target container
-//     expensesContainer.appendChild(clonedChild)
-
-// }
 
 function addExpenses() {
 
@@ -284,21 +272,6 @@ function addExpenses() {
     expensesContainer.appendChild(clonedChild)
 
 }
-
-// // * Subtract Expenses
-// function subExpenses() {
-
-//     const expensesContainer = document.querySelector('[data-expenses-container]')
-
-//     // * Reset cloneCount when decrement
-//     cloneCount = 1
-
-//     // * Remove the the next sibling of appliance-1
-//     if (expensesContainer.firstElementChild.nextElementSibling !== null) {
-//         expensesContainer.lastElementChild.remove()
-//     }
-
-// }
 
 // * Subtract Expenses
 function subExpenses() {
@@ -333,6 +306,11 @@ if (remitModal) {
     openRemitModalBtn.forEach((button) => {
         button.addEventListener('click', () => {
             remitModal.showModal()
+
+            saveRemitModalBtn.addEventListener('click', () => {
+                button.innerText = ''
+                button.classList.add('remitted')
+            })
         })
     })
 
@@ -351,34 +329,6 @@ if (remitModal) {
                 remitModal.removeAttribute("closing");
                 remitModal.close();
             }, { once: true });
-            url = '/KC/collection/collection-remittance-remitted.html'
-            location.href = url
-        })
-    }
-
-    if (linkToRemittedAllBtn) {
-        linkToRemittedAllBtn.addEventListener('click', () => {
-            remitModal.setAttribute("closing", "");
-            remitModal.addEventListener("animationend", () => {
-                remitModal.removeAttribute("closing");
-                remitModal.close();
-            }, { once: true });
-            url = '/KC/collection/collection-remittance-remitted-all.html'
-            location.href = url
-        })
-    }
-
-    if (showRemittedBtn) {
-        showRemittedBtn.addEventListener('click', () => {
-            remitModal.setAttribute("closing", "");
-            remitModal.addEventListener("animationend", () => {
-                remitModal.removeAttribute("closing");
-                remitModal.close();
-            }, { once: true });
-            openRemitModalBtn.forEach((button) => {
-                button.innerText = ''
-                button.classList.add('remitted')
-            })
         })
     }
 

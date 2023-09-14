@@ -994,6 +994,15 @@ Second Commit:
 - maintenance-field-officer.html
 
 
+September 14, 2023 (Thursday)
+First Commit:
+• Remittance Module & Remittance Module Mobile: Optimized✅
+- Deletion of html pages
+    - collection-remittance-field-expense.html
+    - collection-remittance-remitted.html
+    - collection-remittance-remitted-all.html
+
+
 
 
 

@@ -432,7 +432,7 @@ if (selectedOpt5) {
         option.addEventListener("click", () => {
             selectedOpt5.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer5.classList.remove("active");
-            selectedOpt4.setAttribute('value', option.children[0].value);
+            selectedOpt5.setAttribute('value', option.children[0].value);
         });
     });
 
@@ -464,7 +464,7 @@ if (selectedOpt6) {
         option.addEventListener("click", () => {
             selectedOpt6.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer6.classList.remove("active");
-            selectedOpt4.setAttribute('value', option.children[0].value);
+            selectedOpt6.setAttribute('value', option.children[0].value);
         });
     });
 
