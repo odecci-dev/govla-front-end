@@ -1002,6 +1002,11 @@ First Commit:
     - collection-remittance-remitted.html
     - collection-remittance-remitted-all.html
 
+Second Commit:
+• Collection Module: Optimized✅
+- Deletion of html pages
+    - collection-collected.html
+    - collection-collected-all.html
 
 
 

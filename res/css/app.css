@@ -5151,9 +5151,6 @@ body {
 .can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu li .box-2:hover {
   background-color: rgba(214, 163, 48, 0.8);
 }
-.can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area {
-  pointer-events: none;
-}
 .can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area .box-2 {
   background-color: #29292B;
   border-left: 1px solid rgba(255, 255, 255, 0.2);
@@ -5169,6 +5166,7 @@ body {
   color: #FFFFFF;
 }
 .can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area.area-is-collected {
+  pointer-events: none;
   position: relative;
 }
 .can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area.area-is-collected .box-2 {

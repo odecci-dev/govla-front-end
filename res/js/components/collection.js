@@ -19,10 +19,14 @@ if (viewCollectionBtn) {
     })
 }
 
+// ***** Area Menu Button ***** //
+// * used in Cash Denomination
+// * used in Print and Remit Toggle
+const areaMenuButton = document.querySelectorAll('[data-area-menu]')
+const printRemitButton = document.querySelector('[data-print-remit-buttons]')
 
 
 // ***** Cash Denomination Modal ***** //
-
 const cashDenominationModal = document.querySelector('[data-cash-denomination-modal]')
 const openCashDenominationBtn = document.querySelector('[data-open-cash-denomination-button]')
 const closeCashDenominationBtn = document.querySelector('[data-close-cash-denomination-button]')
@@ -36,8 +40,34 @@ const approveLinkToCollectedAllBtn = document.querySelector('[data-link-to-colle
 
 if (cashDenominationModal) {
 
+    areaMenuButton.forEach(button => {
+        button.addEventListener('click', () => {
+
+            areaMenuButton.forEach(btn => {
+                if (btn !== button) {
+                    btn.style.pointerEvents = 'none';
+                }
+            })
+
+            button.classList.toggle('view-selected-area')
+        })
+    })
+
     openCashDenominationBtn.addEventListener('click', () => {
         cashDenominationModal.showModal()
+
+        approveCashDenominationBtn.addEventListener('click', () => {
+            areaMenuButton.forEach((button) => {
+                if (button.matches('.view-selected-area')) {
+                    button.classList.add('area-is-collected')
+                    printRemitButton.classList.remove('show-print-remit-buttons')
+                }
+                button.style.pointerEvents = 'auto'
+                if (button.classList.contains('area-is-collected')) {
+                    button.style.pointerEvents = 'none'
+                }    
+            })
+        })
     })
     
     closeCashDenominationBtn.addEventListener('click', () => {
@@ -55,8 +85,8 @@ if (cashDenominationModal) {
             cashDenominationModal.removeAttribute("closing")
             cashDenominationModal.close()
         }, { once: true })
-        url = '/KC/collection/collection-collected.html'
-        location.href = url
+        // url = '/KC/collection/collection-collected.html'
+        // location.href = url
     })
     
     // * Cash Denomination (collection-collected.html)
@@ -67,8 +97,8 @@ if (cashDenominationModal) {
                 cashDenominationModal.removeAttribute("closing")
                 cashDenominationModal.close()
             }, { once: true })
-            url = '/KC/collection/collection-collected-all.html'
-            location.href = url
+            // url = '/KC/collection/collection-collected-all.html'
+            // location.href = url
         })
     }
 
@@ -364,8 +394,6 @@ if (collectionSummaryModal) {
 // * Area Toggle Button
 function areaMenuButtonToggle() {
     
-    const printRemitButton = document.querySelector('[data-print-remit-buttons]')
-    const areaMenuButton = document.querySelectorAll('[data-area-menu]')
     let areaMenuData = document.querySelectorAll('[data-area-menu-toggle]')
     
     menuCount = 0
