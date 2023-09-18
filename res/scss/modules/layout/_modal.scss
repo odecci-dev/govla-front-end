@@ -1857,7 +1857,10 @@
         border-radius: $border-radius-medium;
         background-color: $white;
         position: relative;
-        height: 100%;
+        width: 297mm;
+        height: 210mm; 
+        // height: 100%;
+        // background-color: aqua;
         // * Exit Button Wrapper
         .button-wrapper {
             display: flex;
@@ -1948,5 +1951,52 @@
                 }
             }
         }
+    }
+}
+
+
+@media print {
+    html, body {
+        box-sizing: border-box;
+        width: 297mm;
+        height: 210mm; 
+    }
+    .cl-summary-modal {
+        &::backdrop {
+            background-color: $white;
+            // background-color: rgba($black, 0.7);
+        }
+        .modal-container {
+            width: inherit;
+            height: inherit;
+            .small-con {
+                padding: 0;
+                table {
+                    tr:first-of-type::after {
+                        border-bottom: 1px solid $blackTR2;
+                        opacity: .5;
+                        box-shadow: unset;
+                    }
+                    tr {
+                        th {
+                            // white-space: nowrap;
+                            padding: 0;
+                        }
+                        td {
+                            white-space: nowrap;
+                            text-align: center;
+                            padding: 0;
+                        }
+                    }
+                }
+                .rowspan:last-of-type {
+                    border-top: 3px solid $black;
+                }
+            }
+        }
+        button {
+            display: none;
+        }
+        
     }
 }

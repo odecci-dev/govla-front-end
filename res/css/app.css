@@ -4029,7 +4029,8 @@ body {
   border-radius: 1rem;
   background-color: #FFFFFF;
   position: relative;
-  height: 100%;
+  width: 297mm;
+  height: 210mm;
 }
 .cl-summary-modal .modal-container .button-wrapper {
   display: flex;
@@ -4114,6 +4115,42 @@ body {
   padding-right: 1rem;
 }
 
+@media print {
+  html, body {
+    box-sizing: border-box;
+    width: 297mm;
+    height: 210mm;
+  }
+  .cl-summary-modal::backdrop {
+    background-color: #FFFFFF;
+  }
+  .cl-summary-modal .modal-container {
+    width: inherit;
+    height: inherit;
+  }
+  .cl-summary-modal .modal-container .small-con {
+    padding: 0;
+  }
+  .cl-summary-modal .modal-container .small-con table tr:first-of-type::after {
+    border-bottom: 1px solid rgba(41, 41, 43, 0.2);
+    opacity: 0.5;
+    box-shadow: unset;
+  }
+  .cl-summary-modal .modal-container .small-con table tr th {
+    padding: 0;
+  }
+  .cl-summary-modal .modal-container .small-con table tr td {
+    white-space: nowrap;
+    text-align: center;
+    padding: 0;
+  }
+  .cl-summary-modal .modal-container .small-con .rowspan:last-of-type {
+    border-top: 3px solid #29292B;
+  }
+  .cl-summary-modal button {
+    display: none;
+  }
+}
 .main-dashboard {
   position: fixed;
   right: 0;

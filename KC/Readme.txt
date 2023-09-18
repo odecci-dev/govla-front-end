@@ -1024,6 +1024,11 @@ First Commit:
     - _mixins.scss
 
 
+September 18, 2023 (Monday)
+First Commit:
+• Collection Module: Summary Printables Completed✅
+- _modal.scss
+
 
 
 
