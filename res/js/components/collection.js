@@ -25,7 +25,14 @@ if (viewCollectionBtn) {
 const areaMenuButton = document.querySelectorAll('[data-area-menu]')
 const printRemitButton = document.querySelector('[data-print-remit-buttons]')
 
-
+// ***** Collection Summary Modal ***** //
+const collectionSummaryContainer = document.querySelector('[data-collection-summary-container]')
+if (collectionSummaryContainer) {
+    const collectionSummaryPrintBtn = document.querySelector('[data-collection-summary-print-button]')
+    collectionSummaryPrintBtn.addEventListener('click', () => {
+        window.print()
+    })
+}
 // ***** Cash Denomination Modal ***** //
 const cashDenominationModal = document.querySelector('[data-cash-denomination-modal]')
 const openCashDenominationBtn = document.querySelector('[data-open-cash-denomination-button]')
@@ -34,24 +41,34 @@ const approveCashDenominationBtn = document.querySelector('[data-approve-cash-de
 
 // * Cash Denomination (collection-collected.html)
 // * Approved Button
-// * linked to (collection-collected-all.html)
-const approveLinkToCollectedAllBtn = document.querySelector('[data-link-to-collected-all]')
 
+areaMenuButton.forEach(button => {
+    button.addEventListener('click', () => {
+
+        // * Current Button Toggled
+        button.classList.toggle('view-selected-area')
+
+        areaMenuButton.forEach(btn => {
+            // * If current button is toggled, all buttons except the current button
+            // * will have pointer-events: none; Otherwise, all buttons will have pointer-events: auto.
+            if (btn !== button) {
+                btn.style.pointerEvents = button.classList.contains('view-selected-area') ? 'none' : 'auto';
+            }
+
+            if (printRemitButton.classList.contains('show-print-remit-buttons')) {
+                button.style.pointerEvents = 'auto';
+            }
+        })
+
+        if (collectionSummaryContainer) {
+            collectionSummaryContainer.classList.remove('show-summary')
+        }
+
+    })
+})
 
 if (cashDenominationModal) {
 
-    areaMenuButton.forEach(button => {
-        button.addEventListener('click', () => {
-
-            areaMenuButton.forEach(btn => {
-                if (btn !== button) {
-                    btn.style.pointerEvents = 'none';
-                }
-            })
-
-            button.classList.toggle('view-selected-area')
-        })
-    })
 
     openCashDenominationBtn.addEventListener('click', () => {
         cashDenominationModal.showModal()
@@ -61,9 +78,11 @@ if (cashDenominationModal) {
                 if (button.matches('.view-selected-area')) {
                     button.classList.add('area-is-collected')
                     printRemitButton.classList.remove('show-print-remit-buttons')
+                    // collectionSummaryContainer.classList.add('show-summary')
                 }
                 button.style.pointerEvents = 'auto'
                 if (button.classList.contains('area-is-collected')) {
+                    collectionSummaryContainer.classList.add('show-summary')
                     button.style.pointerEvents = 'none'
                 }    
             })
@@ -89,18 +108,6 @@ if (cashDenominationModal) {
         // location.href = url
     })
     
-    // * Cash Denomination (collection-collected.html)
-    if (approveLinkToCollectedAllBtn) {
-        approveLinkToCollectedAllBtn.addEventListener('click', () => {
-            cashDenominationModal.setAttribute("closing", "")
-            cashDenominationModal.addEventListener("animationend", () => {
-                cashDenominationModal.removeAttribute("closing")
-                cashDenominationModal.close()
-            }, { once: true })
-            // url = '/KC/collection/collection-collected-all.html'
-            // location.href = url
-        })
-    }
 
     // * Denomination values
     const denominations = {
@@ -405,6 +412,7 @@ function areaMenuButtonToggle() {
 
         button.addEventListener('click', () => {
             printRemitButton.classList.toggle('show-print-remit-buttons')
+            
         })
 
         for (const menuData of areaMenuData) {

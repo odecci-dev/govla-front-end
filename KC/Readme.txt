@@ -1009,6 +1009,20 @@ Second Commit:
     - collection-collected-all.html
 
 
+September 15, 2023 (Friday)
+First Commit:
+• Collection Module: Area Menu Toggle Optimized✅
+- collection.js
+
+• Collection Module: 
+- Deletion of html pages
+    - collection-remittance-field-expense.html
+    - collection-remittance-remitted.html
+    - collection-remittance-remitted-all.html
+
+- Improvements in custom-scrollbars
+    - _mixins.scss
+
 
 
 

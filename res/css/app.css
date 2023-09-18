@@ -130,14 +130,14 @@ button {
 .rowspan.table,
 .table-container,
 .table-container-2 {
+  scrollbar-gutter: stable both-edges;
   overflow-x: hidden;
   overflow-y: auto;
 }
 .rowspan.table::-webkit-scrollbar,
 .table-container::-webkit-scrollbar,
 .table-container-2::-webkit-scrollbar {
-  width: 0.6rem;
-  height: 1rem;
+  width: 0.5rem;
 }
 .rowspan.table::-webkit-scrollbar-track,
 .table-container::-webkit-scrollbar-track,
@@ -1207,10 +1207,10 @@ table .td-btn-wrapper .a-btn-view-3.remitted::after {
   overflow-y: auto;
   background-color: #EBEBEB;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  scrollbar-gutter: stable both-edges;
 }
 .primary-search-bar .result-box::-webkit-scrollbar {
-  width: 0.6rem;
-  height: 1rem;
+  width: 0.5rem;
 }
 .primary-search-bar .result-box::-webkit-scrollbar-track {
   border-radius: 3rem;
@@ -2948,15 +2948,28 @@ body {
   justify-content: center;
 }
 .na-application-decline-modal .modal-container .small-con .rowspan:nth-of-type(2) textarea {
+  scrollbar-gutter: stable both-edges;
   border-radius: 1.5rem;
   background-color: #FFFFFF;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 0.8rem;
   padding: 2rem;
   width: 100%;
   height: clamp(1rem, 100%, 60vh);
   resize: none;
   font-size: 1.6rem;
+}
+.na-application-decline-modal .modal-container .small-con .rowspan:nth-of-type(2) textarea::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.na-application-decline-modal .modal-container .small-con .rowspan:nth-of-type(2) textarea::-webkit-scrollbar-track {
+  border-radius: 3rem;
+  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+.na-application-decline-modal .modal-container .small-con .rowspan:nth-of-type(2) textarea::-webkit-scrollbar-thumb {
+  border-radius: 3rem;
+  background-color: #D6A330;
 }
 .na-application-decline-modal .modal-container .small-con .rowspan:last-of-type {
   display: flex;
@@ -3752,10 +3765,10 @@ body {
   gap: 3rem;
   height: clamp(min(90vh, 20rem), 2rem, max(100vh, 30rem));
   overflow-y: auto;
+  scrollbar-gutter: stable both-edges;
 }
 .fe-modal .modal-container .box-wrap:nth-of-type(2)::-webkit-scrollbar {
-  width: 0.6rem;
-  height: 1rem;
+  width: 0.5rem;
 }
 .fe-modal .modal-container .box-wrap:nth-of-type(2)::-webkit-scrollbar-track {
   border-radius: 3rem;
@@ -3981,10 +3994,10 @@ body {
   margin: auto;
   z-index: 5;
   background: none;
+  scrollbar-gutter: stable both-edges;
 }
 .cl-summary-modal::-webkit-scrollbar {
-  width: 0.6rem;
-  height: 1rem;
+  width: 0.5rem;
 }
 .cl-summary-modal::-webkit-scrollbar-track {
   border-radius: 3rem;
@@ -4044,6 +4057,8 @@ body {
   padding: 3rem;
 }
 .cl-summary-modal .modal-container .small-con .rowspan:first-of-type {
+  display: flex;
+  gap: 2rem;
   padding-bottom: 2rem;
 }
 .cl-summary-modal .modal-container .small-con .rowspan:last-of-type {
@@ -4107,11 +4122,11 @@ body {
   width: 92%;
   z-index: 10;
   overflow-y: auto;
+  scrollbar-gutter: stable both-edges;
   background-color: #E0DFDF;
 }
 .main-dashboard::-webkit-scrollbar {
-  width: 0.6rem;
-  height: 1rem;
+  width: 0.5rem;
 }
 .main-dashboard::-webkit-scrollbar-track {
   border-radius: 3rem;
@@ -4853,10 +4868,10 @@ body {
     display: block;
     height: 53rem;
     overflow: auto;
+    scrollbar-gutter: stable both-edges;
   }
   .clr-con-2-mobile .container::-webkit-scrollbar {
-    width: 0.6rem;
-    height: 1rem;
+    width: 0.5rem;
   }
   .clr-con-2-mobile .container::-webkit-scrollbar-track {
     border-radius: 3rem;
@@ -5213,6 +5228,17 @@ body {
   align-items: center;
   gap: 2rem;
 }
+.can-container-wrapper .can-container-2 .wrapper-0 .summary-container {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: 300ms ease-in-out;
+}
+.can-container-wrapper .can-container-2 .wrapper-0 .summary-container.show-summary {
+  pointer-events: all;
+  opacity: 1;
+  visibility: visible;
+}
 .can-container-wrapper .can-container-2 .wrapper-0 .summary-container p {
   pointer-events: all;
   cursor: pointer;
@@ -5494,10 +5520,10 @@ body {
   justify-content: center;
   background: rgba(41, 41, 43, 0.6);
   z-index: 5;
+  scrollbar-gutter: stable both-edges;
 }
 .print-collection-container::-webkit-scrollbar {
-  width: 0.6rem;
-  height: 1rem;
+  width: 0.5rem;
 }
 .print-collection-container::-webkit-scrollbar-track {
   border-radius: 3rem;
@@ -5829,11 +5855,11 @@ body {
   width: 92%;
   z-index: 10;
   overflow-y: auto;
+  scrollbar-gutter: stable both-edges;
   background-color: #FFFFFF;
 }
 .main-dashboard::-webkit-scrollbar {
-  width: 0.6rem;
-  height: 1rem;
+  width: 0.5rem;
 }
 .main-dashboard::-webkit-scrollbar-track {
   border-radius: 3rem;
@@ -6554,14 +6580,14 @@ body {
   padding: 0.5rem;
   height: clamp(1rem, 50vh, 100%);
   overflow-y: auto;
+  scrollbar-gutter: stable both-edges;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-auto-rows: 4rem;
   gap: 1.5rem;
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .chip-container::-webkit-scrollbar {
-  width: 0.6rem;
-  height: 1rem;
+  width: 0.5rem;
 }
 .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper:nth-of-type(2) .locations-container .chip-container::-webkit-scrollbar-track {
   border-radius: 3rem;
@@ -7609,11 +7635,11 @@ body {
   width: 92%;
   z-index: 10;
   overflow-y: auto;
+  scrollbar-gutter: stable both-edges;
   background-color: #FFFFFF;
 }
 .main-dashboard::-webkit-scrollbar {
-  width: 0.6rem;
-  height: 1rem;
+  width: 0.5rem;
 }
 .main-dashboard::-webkit-scrollbar-track {
   border-radius: 3rem;
@@ -8710,12 +8736,12 @@ body {
   width: 92%;
   z-index: 10;
   overflow-y: auto;
+  scrollbar-gutter: stable both-edges;
   background-color: #FFFFFF;
   scroll-behavior: smooth;
 }
 .main-dashboard::-webkit-scrollbar {
-  width: 0.6rem;
-  height: 1rem;
+  width: 0.5rem;
 }
 .main-dashboard::-webkit-scrollbar-track {
   border-radius: 3rem;

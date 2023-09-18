@@ -688,9 +688,11 @@
 
 // *** Dashboard Mixins
 @mixin custom-scroll {
+
+    scrollbar-gutter: stable both-edges;
     &::-webkit-scrollbar {
-        width: 0.6rem;
-        height: 1rem;
+        width: 0.5rem;
+        // height: 1rem;
     }
     &::-webkit-scrollbar-track {
         border-radius: $border-radius-btn;

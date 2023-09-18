@@ -514,7 +514,9 @@
                 align-items: center;
                 justify-content: center;
                 textarea {
+                    @include custom-scroll;
                     @include containerDefault2;
+                    border-radius: 0.8rem;
                     padding: 2rem;
                     width: 100%;
                     height: clamp(1rem, 100%, 60vh);
@@ -1462,6 +1464,7 @@
 //         }
 //     }
 // }
+// * Field Expense Modal
 .fe-modal {
     margin: auto;
     // height: clamp(min(90vh, 50rem), calc(100% - 20%), max(100vh, 55rem));
@@ -1882,6 +1885,8 @@
             padding: 3rem;
             // gap: $spacing-2x-large;
             .rowspan:first-of-type {
+                display: flex;
+                gap: $spacing-2x-large;
                 padding-bottom: $spacing-2x-large;
             }
             .rowspan:last-of-type {
