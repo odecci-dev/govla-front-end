@@ -30,7 +30,8 @@ const collectionSummaryContainer = document.querySelector('[data-collection-summ
 if (collectionSummaryContainer) {
     const collectionSummaryPrintBtn = document.querySelector('[data-collection-summary-print-button]')
     collectionSummaryPrintBtn.addEventListener('click', () => {
-        window.print()
+        url = '/KC/collection/collection-summary-print.html'
+        window.open(url)
     })
 }
 // ***** Cash Denomination Modal ***** //
@@ -505,6 +506,9 @@ pagePanel.addEventListener('mouseout', (e) => {
 
 
 pages.forEach(page => {
+    if (page) {
+        page.classList.add('page-break-after')
+    }
     pageCount++
     page.setAttribute('id', `Page${pageCount}`)
 

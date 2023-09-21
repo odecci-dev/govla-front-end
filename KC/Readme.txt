@@ -1030,6 +1030,27 @@ First Commit:
 - _modal.scss
 
 
+September 19, 2023 (Tuesday)
+• Collection Module: Summary Printables Optimized✅
+- made consistent with previous printables 
+- collection-summary-print.html
+
+
+September 20, 2023 (Wednesday)
+• Maintenance Module: Optimization
+- Add New Field Officer
+- Loan Types
+    - maintenance.js
+    - _maintenance.scss
+
+
+September 21, 2023 (Thursday)
+First Commit:
+• Application Module: Approval Revision
+- Approval Module: Dropdowns
+    - _modal.scss
+- Decline Modal Implementation
+
 
 
 

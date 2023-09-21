@@ -1419,3 +1419,105 @@
     //     display: none;
     // }
 }
+
+
+// * Print Collection Summary
+.modal-container {
+    // border-radius: $border-radius-medium;
+    background-color: $white;
+    position: relative;
+    width: 297mm;
+    height: 210mm; 
+    // height: 100%;
+    // background-color: aqua;
+    // * Exit Button Wrapper
+    .button-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        top: 1.25rem;
+        right: 1.5rem;
+        z-index: 9;
+        button {
+            cursor: pointer;
+            background: none;
+            img {
+                transition: all 150ms ease-in-out;
+            }
+            img:hover {
+                transform: scale(1.1);
+                filter: opacity(.7);
+            }
+        }
+    }
+    .small-con {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+        // gap: $spacing-2x-large;
+        .rowspan:first-of-type {
+            display: flex;
+            gap: $spacing-2x-large;
+            padding-bottom: $spacing-2x-large;
+        }
+        .rowspan:last-of-type {
+            padding-top: $spacing-2x-large;
+        }
+        .rowspan:first-of-type {
+            h2 {
+                font-size: $font-size-x-large;
+            }
+        }
+        .rowspan:nth-of-type(2) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // height: clamp(1rem, 10vw, 2rem);
+            // max-height: 50rem;
+            &.table {
+                th, td {
+                    padding: 0;
+                    text-align: left;
+                    font-size: $font-size-x-medium;
+                    padding: 3rem 2rem;
+                }
+                th {
+                    font-weight: $font-weight-bold;
+                }
+                th:nth-of-type(n+2) {
+                    text-align: right;
+                }
+                td:nth-of-type(n+2) {
+                    text-align: right;
+                }
+            }
+        }
+        .rowspan:last-of-type {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            &::after {
+                content: '';
+                width: 100%;
+                height: 4px;
+                position: absolute;
+                top: 0;
+                background-color: $black;
+                border-radius: $border-radius-xxx-large;
+            }
+            p {
+                font-size: $font-size-x-medium;
+                font-weight: $font-weight-bold;
+            }
+            p:first-of-type {
+                padding-left: 1rem;
+            }
+            p:last-of-type {
+                font-size: calc($font-size-x-large - .1rem);
+                padding-right: 1rem;
+            }
+        }
+    }
+}

@@ -388,7 +388,7 @@ if (selectedOpt4) {
         optionsContainer4.classList.toggle("active");
     });
     
-    // Close dropdowns when clicking outside of them
+    // * Close dropdowns when clicking outside of them
     document.addEventListener('click', (e) => {
         if (!e.target.matches('[data-option-select4], [data-option-con4]')) {
             optionsContainer4.classList.remove("active");
@@ -420,7 +420,7 @@ if (selectedOpt5) {
         optionsContainer5.classList.toggle("active");
     });
     
-    // Close dropdowns when clicking outside of them
+    // * Close dropdowns when clicking outside of them
     document.addEventListener('click', (e) => {
         if (!e.target.matches('[data-option-select5], [data-option-con5]')) {
             optionsContainer5.classList.remove("active");
@@ -452,7 +452,7 @@ if (selectedOpt6) {
         optionsContainer6.classList.toggle("active");
     });
     
-    // Close dropdowns when clicking outside of them
+    // * Close dropdowns when clicking outside of them
     document.addEventListener('click', (e) => {
         if (!e.target.matches('[data-option-select6], [data-option-con6]')) {
             optionsContainer6.classList.remove("active");

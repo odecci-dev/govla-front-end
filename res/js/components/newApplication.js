@@ -79,6 +79,12 @@ if (selectedOpt1) {
         optionsContainer1.classList.toggle("active");
     });
 
+    document.addEventListener('click', (e) => {
+        if (!e.target.matches('[data-option-select1], [data-option-con1]')) {
+            optionsContainer1.classList.remove("active");
+        }
+    });
+
     optionsList1.forEach(option => {
         option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
@@ -100,6 +106,12 @@ if (selectedOpt2) {
 
     selectedOpt2.addEventListener("click", () => {
         optionsContainer2.classList.toggle("active");
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.matches('[data-option-select2], [data-option-con2]')) {
+            optionsContainer2.classList.remove("active");
+        }
     });
 
     optionsList2.forEach(option => {
@@ -140,6 +152,12 @@ if (selectedOpt3) {
 
     selectedOpt3.addEventListener("click", () => {
         optionsContainer3.classList.toggle("active");
+    });
+    
+    document.addEventListener('click', (e) => {
+        if (!e.target.matches('[data-option-select3], [data-option-con3]')) {
+            optionsContainer3.classList.remove("active");
+        }
     });
 
     optionsList3.forEach(option => {
@@ -188,6 +206,12 @@ if (selectedOpt4) {
         optionsContainer4.classList.toggle("active");
     });
 
+    document.addEventListener('click', (e) => {
+        if (!e.target.matches('[data-option-select4], [data-option-con4]')) {
+            optionsContainer4.classList.remove("active");
+        }
+    });
+
     optionsList4.forEach(option => {
         option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
@@ -209,6 +233,12 @@ if (selectedOpt5) {
 
     selectedOpt5.addEventListener("click", () => {
         optionsContainer5.classList.toggle("active");
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.matches('[data-option-select5], [data-option-con5]')) {
+            optionsContainer5.classList.remove("active");
+        }
     });
 
     optionsList5.forEach(option => {
@@ -233,6 +263,12 @@ if (selectedOpt6) {
 
     selectedOpt6.addEventListener("click", () => {
         optionsContainer6.classList.toggle("active");
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.matches('[data-option-select6], [data-option-con6]')) {
+            optionsContainer6.classList.remove("active");
+        }
     });
 
     optionsList6.forEach(option => {
@@ -282,6 +318,12 @@ if (selectedOpt7) {
         optionsContainer7.classList.toggle("active");
     });
 
+    document.addEventListener('click', (e) => {
+        if (!e.target.matches('[data-option-select7], [data-option-con7]')) {
+            optionsContainer7.classList.remove("active");
+        }
+    });
+
     optionsList7.forEach(option => {
         option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
@@ -325,6 +367,12 @@ if (selectedOpt8) {
 
     selectedOpt8.addEventListener("click", () => {
         optionsContainer8.classList.toggle("active");
+    });
+    
+    document.addEventListener('click', (e) => {
+        if (!e.target.matches('[data-option-select8], [data-option-con8]')) {
+            optionsContainer8.classList.remove("active");
+        }
     });
 
     optionsList8.forEach(option => {
@@ -373,6 +421,12 @@ if (selectedOpt9) {
         optionsContainer9.classList.toggle("active");
     });
 
+    document.addEventListener('click', (e) => {
+        if (!e.target.matches('[data-option-select9], [data-option-con9]')) {
+            optionsContainer9.classList.remove("active");
+        }
+    });
+
     optionsList9.forEach(option => {
         option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
@@ -384,6 +438,7 @@ if (selectedOpt9) {
 
 }
 
+
 // ** Select Dropdown 10 (Mode of Payment)
 const selectedOpt10 = document.querySelector('[data-option-select10]');
 
@@ -394,6 +449,12 @@ if (selectedOpt10) {
 
     selectedOpt10.addEventListener("click", () => {
         optionsContainer10.classList.toggle("active");
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.matches('[data-option-select10], [data-option-con10]')) {
+            optionsContainer10.classList.remove("active");
+        }
     });
 
     optionsList10.forEach(option => {
@@ -418,6 +479,37 @@ if (selectedOpt10) {
         checkNumberToggle.style.display = 'flex'
         denominationToggle.style.display = 'none'
     })
+
+}
+
+
+
+// ** Select Dropdown 11
+const selectedOpt11 = document.querySelector('[data-option-select11]');
+
+if (selectedOpt11) {
+
+    const optionsContainer11 = document.querySelector('[data-option-con11]');
+    const optionsList11 = document.querySelectorAll('[data-option-item11]');
+
+    selectedOpt11.addEventListener("click", () => {
+        optionsContainer11.classList.toggle("active");
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.matches('[data-option-select11], [data-option-con11]')) {
+            optionsContainer11.classList.remove("active");
+        }
+    });
+
+    optionsList11.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
+        option.addEventListener("click", () => {
+            selectedOpt11.innerHTML = option.querySelector("label").innerHTML;
+            optionsContainer11.classList.remove("active");
+            selectedOpt11.setAttribute('value', option.children[0].value);
+        });
+    });
 
 }
 
@@ -462,6 +554,13 @@ if (releaseCompleteButton) {
         location.href = url
     })
 }
+
+// * Cancel Button
+const cancelButton = document.querySelector('[data-link-back-to-approval]')
+cancelButton.addEventListener('click', () => {
+    url = '/KC/transactions/new-application-approval.html'
+    location.href = url
+})
 
 // * Decline Application Modal
 const declineApplicationModal = document.querySelector('[data-application-decline-modal]')

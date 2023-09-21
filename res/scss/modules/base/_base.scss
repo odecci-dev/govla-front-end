@@ -17,7 +17,8 @@ html {
 body {
     font-family: $font-family;
     height: 100vh;
-    // overflow: hidden;
+    // overflow: hidden; 
+    @include custom-scroll;
 }
 
 main {
@@ -270,6 +271,11 @@ table {
         
     // }
 
+}
+
+// * For Printables
+.page-break-after {
+    page-break-after: always;
 }
 
 // * Active Primary Color
