@@ -1052,6 +1052,9 @@ First Commit:
 - Decline Modal Implementation
 
 
+September 23, 2023 (Saturday)
+First Commit:
+• Fixed modal styles for summary modal container
 
 
 

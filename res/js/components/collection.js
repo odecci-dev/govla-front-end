@@ -491,18 +491,23 @@ const spanTotalPageNum = document.querySelector('[data-total-page-num]')
 
 // * Page Counter
 pageCount = 0;
-spanTotalPageNum.innerText = pages.length
 
-pagePanel.addEventListener('mouseover', () => {
-    pagePanel.classList.add('show-page-panel')
-})
+if (spanTotalPageNum) {
+    spanTotalPageNum.innerText = pages.length
+}
 
-pagePanel.addEventListener('mouseout', (e) => {
-    const { relatedTarget } = e;
-    if (!pagePanel.contains(relatedTarget)) {
-        pagePanel.classList.remove('show-page-panel')
-    }
-})
+if (pagePanel) {
+    pagePanel.addEventListener('mouseover', () => {
+        pagePanel.classList.add('show-page-panel')
+    })
+    
+    pagePanel.addEventListener('mouseout', (e) => {
+        const { relatedTarget } = e;
+        if (!pagePanel.contains(relatedTarget)) {
+            pagePanel.classList.remove('show-page-panel')
+        }
+    })
+}
 
 
 pages.forEach(page => {
@@ -546,14 +551,16 @@ pages.forEach(page => {
 })
 
 // * Add functionality to go to a specific page
-spanCurrentPageNum.addEventListener('input', () => {
-    const pageNumber = parseInt(spanCurrentPageNum.value);
-    
-    // * Validate input
-    if (!isNaN(pageNumber) && pageNumber >= 1 && pageNumber <= pages.length) {
+if (spanCurrentPageNum) {
+    spanCurrentPageNum.addEventListener('input', () => {
+        const pageNumber = parseInt(spanCurrentPageNum.value);
         
-        // * Scroll to the selected page
-        pages[pageNumber - 1].scrollIntoView({ behavior: 'smooth' })
-    }
-});
+        // * Validate input
+        if (!isNaN(pageNumber) && pageNumber >= 1 && pageNumber <= pages.length) {
+            
+            // * Scroll to the selected page
+            pages[pageNumber - 1].scrollIntoView({ behavior: 'smooth' })
+        }
+    });
+}
 
