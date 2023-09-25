@@ -1057,5 +1057,14 @@ First Commit:
 • Fixed modal styles for summary modal container
 
 
+September 25, 2023 (Monday)
+First Commit:
+• Completed✅ Receipt Voucher
+- HTML
+    - KC/collection/collection-recipt-voucher-print.html
+- SCSS/_collection.scss
+   - .receipt-voucher-container
+
+
 
 
