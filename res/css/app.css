@@ -3329,6 +3329,130 @@ body {
   font-size: 1.8rem;
 }
 
+.na-receipt-voucher-modal {
+  margin: auto;
+  height: clamp(1rem, 100%, 100vh);
+  width: clamp(1rem, 100%, 100vw);
+  z-index: 5;
+  background: none;
+}
+.na-receipt-voucher-modal::backdrop {
+  background-color: rgba(41, 41, 43, 0.7);
+}
+.na-receipt-voucher-modal[open] {
+  animation: fade-in 500ms forwards, pop-up 500ms;
+}
+.na-receipt-voucher-modal::backdrop[open] {
+  animation: fade-in 500ms forwards;
+}
+.na-receipt-voucher-modal[closing] {
+  display: block;
+  pointer-events: none;
+  inset: 0;
+  animation: fade-out 500ms forwards, slide-down 500ms forwards;
+}
+.na-receipt-voucher-modal::backdrop[closing] {
+  animation: fade-out 500ms forwards;
+}
+.na-receipt-voucher-modal .modal-container {
+  height: 100%;
+  border-radius: 1rem;
+  background-color: #FFFFFF;
+  padding: 1rem;
+  position: relative;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .button-wrapper {
+  position: relative;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .button-wrapper button {
+  position: absolute;
+  right: 0;
+  background: none;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .header-wrapper {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .header-wrapper p {
+  font-size: 1.5rem !important;
+  font-weight: 700;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .body-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .body-wrapper .box-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .body-wrapper .box-wrapper .box {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 1.1rem 1.2rem !important;
+  gap: 1.8rem;
+  outline: unset !important;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .body-wrapper .box-wrapper .box .p-bold {
+  font-weight: 700 !important;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .body-wrapper .box-wrapper .box .p-red-text {
+  color: #FF0404;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .body-wrapper .box-wrapper .box .underline {
+  border-bottom: 1px solid #29292B;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .body-wrapper .box-wrapper .box .underline-thick {
+  border-bottom: 2px solid #29292B !important;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .body-wrapper .box-wrapper .box .line-sig {
+  border-top: 2px solid #29292B;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .body-wrapper .box-wrapper .box p {
+  font-size: 1.2rem !important;
+  font-weight: 400 !important;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .body-wrapper .box-wrapper .box span {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  margin-left: 2rem;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .body-wrapper .box-wrapper .box .box-inner {
+  display: flex;
+  flex-direction: column;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .body-wrapper .box-wrapper .box .box-inner .box-inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .body-wrapper .box-wrapper .box:nth-of-type(2) .box-inner:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .body-wrapper .box-wrapper .box:nth-of-type(4) .box-inner:nth-of-type(2) .box-inner-wrapper:nth-of-type(2) {
+  background-color: rgba(186, 85, 211, 0.445);
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .body-wrapper .box-wrapper .box:nth-of-type(5) {
+  margin-top: 5rem;
+  justify-content: space-around;
+  gap: 15rem;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .body-wrapper .box-wrapper .box:nth-of-type(5) .box-inner {
+  width: 100%;
+  text-align: center;
+}
+.na-receipt-voucher-modal .modal-container .receipt-voucher-container .body-wrapper .box-wrapper .box:nth-of-type(5) .box-inner p:nth-of-type(2) {
+  text-align: left;
+}
+
 .am-filter-modal {
   margin: auto;
   width: clamp(min(90vw, 50rem), 30%, max(100vw, 55rem));

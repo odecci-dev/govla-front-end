@@ -1066,5 +1066,15 @@ First Commit:
    - .receipt-voucher-container
 
 
+September 26, 2023 (Tuesday)
+First Commit:
+• Implemented the View Loan Summary Modal
+    • new-application-approval.html
+        - made new dialog element for modal
+    • newApplication.js 
+        - implementation of modal functionality
+    • _modal.scss
+        - made new class (.na-receipt-voucher-modal)
+
 
 

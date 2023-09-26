@@ -1,6 +1,50 @@
 // ****** New Application Module ****** //
 
-// * Loan and Payement History Modal * //
+// * Receipt Voucher Modal * //
+
+const receiptVoucherModal = document.querySelector('[data-receipt-voucher-modal]')
+const openReceiptVoucherModal = document.querySelector('[data-open-receipt-voucher]')
+
+// * If this element is in the DOM, run else do nothing
+if (receiptVoucherModal && openReceiptVoucherModal) {
+    const closeReceiptVoucherModal = document.querySelector('[data-close-receipt-voucher]')
+
+
+    openReceiptVoucherModal.addEventListener('click', () => {
+        receiptVoucherModal.showModal();
+    })
+
+    closeReceiptVoucherModal.addEventListener('click', () => {
+        receiptVoucherModal.setAttribute("closing", "");
+        receiptVoucherModal.addEventListener("animationend", () => {
+            receiptVoucherModal.removeAttribute("closing");
+            receiptVoucherModal.close();
+        }, { once: true });
+    })
+
+    // receiptVoucherModal.addEventListener('click', e => {
+    //     receiptVoucherModal.setAttribute("closing", "");
+    //     receiptVoucherModal.addEventListener("animationend", () => {
+
+    //         const receiptVoucherModalDimensions = receiptVoucherModal.getBoundingClientRect()
+
+    //         if (
+    //             e.clientX < receiptVoucherModalDimensions.left ||
+    //             e.clientX > receiptVoucherModalDimensions.right ||
+    //             e.clientY < receiptVoucherModalDimensions.top ||
+    //             e.clientY > receiptVoucherModalDimensions.bottom
+    //         ) {
+    //             receiptVoucherModal.removeAttribute("closing");
+    //         }
+    //         receiptVoucherModal.close()
+
+    //     }, { once: true })
+
+    // })
+
+}
+
+// * Loan Details Modal * //
 
 const loanDetailsModal = document.querySelector('[data-loan-details-modal]')
 const openLoanDetailsButton = document.querySelector('#data-open-loan-details')
@@ -21,26 +65,6 @@ if (loanDetailsModal && openLoanDetailsButton) {
             loanDetailsModal.close();
         }, { once: true });
     })
-
-    // loanDetailsModal.addEventListener('click', e => {
-    //     loanDetailsModal.setAttribute("closing", "");
-    //     loanDetailsModal.addEventListener("animationend", () => {
-
-    //         const loanDetailsModalDimensions = loanDetailsModal.getBoundingClientRect()
-
-    //         if (
-    //             e.clientX < loanDetailsModalDimensions.left ||
-    //             e.clientX > loanDetailsModalDimensions.right ||
-    //             e.clientY < loanDetailsModalDimensions.top ||
-    //             e.clientY > loanDetailsModalDimensions.bottom
-    //         ) {
-    //             loanDetailsModal.removeAttribute("closing");
-    //         }
-    //         loanDetailsModal.close()
-
-    //     }, { once: true })
-
-    // })
 
     const dailyPaymentModal = loanDetailsModal.querySelector('[data-daily-payment-history-modal]')
     const openDailyPaymentModal = loanDetailsModal.querySelectorAll('[data-open-daily-payment-modal]')
@@ -557,10 +581,12 @@ if (releaseCompleteButton) {
 
 // * Cancel Button
 const cancelButton = document.querySelector('[data-link-back-to-approval]')
-cancelButton.addEventListener('click', () => {
-    url = '/KC/transactions/new-application-approval.html'
-    location.href = url
-})
+if (cancelButton) {
+    cancelButton.addEventListener('click', () => {
+        url = '/KC/transactions/new-application-approval.html'
+        location.href = url
+    })
+}
 
 // * Decline Application Modal
 const declineApplicationModal = document.querySelector('[data-application-decline-modal]')
