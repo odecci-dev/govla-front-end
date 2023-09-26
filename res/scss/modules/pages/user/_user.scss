@@ -318,12 +318,13 @@
   .container-wrapper {
     // @include bigContainer2Grid;
     display: grid;
-    grid-template-rows: minmax(0, 0.4fr) minmax(0, 1.6fr);
+    grid-template-rows: minmax(0, 0.3fr) minmax(0, 1.6fr);
     @include containerDefault2;
     padding: 5rem 4rem 5rem 5rem;
     .header-con {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 0 6rem;
       border-bottom: 4px solid $black;
       h2 {
@@ -342,37 +343,39 @@
     .ur-con-1 {
       // * Table Container
       .table-container {
-        table {
           // **                         ** //
           // **** Table Header Styles **** //
           // **                         ** //
-          empty-cells: hide;
-          tr {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0 5rem;
+          .tb-tr {
+            cursor: default;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
             &:hover {
               background: none;
               color: $black;
             }
-            td {
+            .tb-td {
               transition: 200ms ease-in-out;
               &.empty-cell:not(:empty) {
                 pointer-events: none;
 
             }
             }
-            &>td:hover {
+            &>.tb-td:hover {
               background-color: $primary;
               color: $white;
             }
           }
           // * Table Checkbox
-          th {
+          .tb-th {
             padding: $spacing-4x-large $spacing-large;
             text-align: left;
-            &.th-name {
-              font-size: $font-size-x-medium;
-              font-weight: $font-weight-bold;
-              
-            }
+            font-size: $font-size-x-medium;
+            font-weight: $font-weight-bold;
           }
           .flex-data {
             display: flex;
@@ -381,12 +384,10 @@
           // **                       ** //
           // **** Table Data Styles **** //
           // **                       ** //
-          td {
+          .tb-td {
             padding: $spacing-large;
             font-size: $font-size-x-medium;
           }
-          
-        }
       }
     }
   }

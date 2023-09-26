@@ -11953,7 +11953,7 @@ body {
 }
 .nu-con-2 .container-wrapper {
   display: grid;
-  grid-template-rows: minmax(0, 0.4fr) minmax(0, 1.6fr);
+  grid-template-rows: minmax(0, 0.3fr) minmax(0, 1.6fr);
   border-radius: 1.5rem;
   background-color: #FFFFFF;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -11963,6 +11963,7 @@ body {
 .nu-con-2 .container-wrapper .header-con {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0 6rem;
   border-bottom: 4px solid #29292B;
 }
@@ -11977,36 +11978,42 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
 }
-.nu-con-2 .container-wrapper .ur-con-1 .table-container table {
-  empty-cells: hide;
+.nu-con-2 .container-wrapper .ur-con-1 .table-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 5rem;
 }
-.nu-con-2 .container-wrapper .ur-con-1 .table-container table tr:hover {
+.nu-con-2 .container-wrapper .ur-con-1 .table-container .tb-tr {
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.nu-con-2 .container-wrapper .ur-con-1 .table-container .tb-tr:hover {
   background: none;
   color: #29292B;
 }
-.nu-con-2 .container-wrapper .ur-con-1 .table-container table tr td {
+.nu-con-2 .container-wrapper .ur-con-1 .table-container .tb-tr .tb-td {
   transition: 200ms ease-in-out;
 }
-.nu-con-2 .container-wrapper .ur-con-1 .table-container table tr td.empty-cell:not(:empty) {
+.nu-con-2 .container-wrapper .ur-con-1 .table-container .tb-tr .tb-td.empty-cell:not(:empty) {
   pointer-events: none;
 }
-.nu-con-2 .container-wrapper .ur-con-1 .table-container table tr > td:hover {
+.nu-con-2 .container-wrapper .ur-con-1 .table-container .tb-tr > .tb-td:hover {
   background-color: #D6A330;
   color: #FFFFFF;
 }
-.nu-con-2 .container-wrapper .ur-con-1 .table-container table th {
+.nu-con-2 .container-wrapper .ur-con-1 .table-container .tb-th {
   padding: 4rem 1.5rem;
   text-align: left;
-}
-.nu-con-2 .container-wrapper .ur-con-1 .table-container table th.th-name {
   font-size: 1.8rem;
   font-weight: 700;
 }
-.nu-con-2 .container-wrapper .ur-con-1 .table-container table .flex-data {
+.nu-con-2 .container-wrapper .ur-con-1 .table-container .flex-data {
   display: flex;
   gap: 0 1rem;
 }
-.nu-con-2 .container-wrapper .ur-con-1 .table-container table td {
+.nu-con-2 .container-wrapper .ur-con-1 .table-container .tb-td {
   padding: 1.5rem;
   font-size: 1.8rem;
 }

@@ -1079,4 +1079,8 @@ First Commit:
 Second Commit:
 • Implementation of View Loan Summary Modal to Relassing Module
 
+Third Commit:
+• User Module: Restrictions Layout
+    - Made changes from table to flex-box
+
 
