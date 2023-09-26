@@ -1076,5 +1076,7 @@ First Commit:
     • _modal.scss
         - made new class (.na-receipt-voucher-modal)
 
+Second Commit:
+• Implementation of View Loan Summary Modal to Relassing Module
 
 
