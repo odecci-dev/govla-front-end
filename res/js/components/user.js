@@ -49,103 +49,80 @@ const restrictionTable = document.getElementById('addResUserTable')
 
 if (restrictionTable) {
     
+    function selectAllGroupCheckbox(checkboxGroup, selectAllButton) {
+        let isChecked = selectAllButton.checked;
+
+        // * Set the checked state of all checkboxes in the table
+        checkboxGroup.forEach((checkbox) => {
+            checkbox.checked = isChecked
+        })
+    }
+
+    function checkboxContainerToggle(checkboxGroup) {
+        checkboxGroup.forEach(checkbox => {
+            const parentDiv = checkbox.closest('.tb-td')
+            parentDiv.addEventListener('click', (e) => {
+                if (e.target !== checkbox) {
+                    // * Toggle the checkbox state
+                    checkbox.checked = !checkbox.checked;
+                }
+            })
+        })
+    }
+    
     const selectAllResCheckboxes = document.querySelector('[data-select-all-res-checkbox]')
+    const siblingCheckboxes = document.querySelectorAll('[data-select-checkbox]')
+    const checkboxes = restrictionTable.querySelectorAll('[data-select-checkbox]');
     
     // * Add event listener to select all checkbox
     selectAllResCheckboxes.addEventListener('change', () => {
-        let siblingCheckboxes = document.querySelectorAll('[data-select-checkbox]')
-        let checkboxes = restrictionTable.querySelectorAll('[data-select-checkbox]');
-        let isChecked = selectAllResCheckboxes.checked;
     
+        // * Set the checked state of all checkboxes in the table
+        selectAllGroupCheckbox(checkboxes, selectAllResCheckboxes)
         // * Set the checked state of all sibling checkboxes
-        siblingCheckboxes.forEach((siblingCheckbox) => {
-            siblingCheckbox.checked = isChecked;
-        })
-    
-        // * Set the checked state of all checkboxes in the table
-        checkboxes.forEach((checkbox) => {
-            checkbox.checked = isChecked;
-        })
-    
+        selectAllGroupCheckbox(siblingCheckboxes, selectAllResCheckboxes)
     });
-    
-    // TODO: Toggle checkboxes even when only the div is clicked
-    // // * Select All Maintenance Table Checkbox 
+
+
+    // * Select All Maintenance Table Checkbox 
     const selectAllMaintenanceResCheckboxes = document.querySelector('[data-select-all-maintenance-res-checkboxes]')
-    const childCheckboxesMaintenanceRes = restrictionTable.querySelectorAll('[data-select-maintenance-checkbox]');
+    const checkboxesGroup1 = restrictionTable.querySelectorAll('[data-select-maintenance-checkbox]');
     
-    selectAllMaintenanceResCheckboxes.addEventListener('change', () => {
-        let isChecked = selectAllMaintenanceResCheckboxes.checked;
-    
-        // * Set the checked state of all checkboxes in the table
-        childCheckboxesMaintenanceRes.forEach((checkbox) => {
-            checkbox.checked = isChecked;
-            
-        })
+
+    selectAllMaintenanceResCheckboxes.addEventListener('click', () => {
+        selectAllGroupCheckbox(checkboxesGroup1, selectAllMaintenanceResCheckboxes)
     })
-
-    // // * Function to toggle all child checkboxes
-    // const toggleChildCheckboxes = () => {
-    //     childCheckboxesMaintenanceRes.forEach(checkbox => {
-    //         checkbox.checked = selectAllMaintenanceResCheckboxes.checked;
-    //     })
-    // }
     
-    // // * Function to toggle parent div checkbox when a child is checked
-    // const toggleParentCheckbox = (e) => {
-    //     const parentDiv = e.target.closest('.tb-tr')
-    //     if (parentDiv.checked) {
-    //         const parentCheckbox = parentDiv.querySelector('[data-select-all-maintenance-res-checkboxes]')
-    //         if (parentCheckbox) {
-    //             const isChecked = Array.from(parentDiv.querySelectorAll('[data-select-maintenance-checkbox]'))
-    //                 .every(checkbox => checkbox.checked)
-    //             parentCheckbox.checked = isChecked
-    //         }
-    //     }
-    // }
-
-    // selectAllMaintenanceResCheckboxes.addEventListener('change', toggleChildCheckboxes)
-    // childCheckboxesMaintenanceRes.forEach(checkbox => {
-    //         checkbox.addEventListener('change', toggleParentCheckbox)
-    // })
-
-    // TODO: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    checkboxContainerToggle(checkboxesGroup1)
 
     // * Select All Collection Table Checkbox 
     const selectAllCollectionResCheckboxes = document.querySelector('[data-select-all-collection-res-checkboxes]')
-    selectAllCollectionResCheckboxes.addEventListener('change', () => {
-        let checkboxes = restrictionTable.querySelectorAll('[data-select-collection-checkbox]');
-        let isChecked = selectAllCollectionResCheckboxes.checked;
-    
-        // * Set the checked state of all checkboxes in the table
-        checkboxes.forEach((checkbox) => {
-            checkbox.checked = isChecked;
-            
-        })
+    const checkboxesGroup2 = restrictionTable.querySelectorAll('[data-select-collection-checkbox]');
+
+    selectAllCollectionResCheckboxes.addEventListener('click', () => {
+        selectAllGroupCheckbox(checkboxesGroup2, selectAllCollectionResCheckboxes)
     })
+    
+    checkboxContainerToggle(checkboxesGroup2)
 
     // * Select All Transactions Table Checkbox 
     const selectAllTransactionsResCheckboxes = document.querySelector('[data-select-all-transactions-res-checkboxes]')
-    selectAllTransactionsResCheckboxes.addEventListener('change', () => {
-        let checkboxes = restrictionTable.querySelectorAll('[data-select-transactions-checkbox]');
-        let isChecked = selectAllTransactionsResCheckboxes.checked;
+    const checkboxesGroup3 = restrictionTable.querySelectorAll('[data-select-transactions-checkbox]');
     
-        // * Set the checked state of all checkboxes in the table
-        checkboxes.forEach((checkbox) => {
-            checkbox.checked = isChecked;
-        })
+    selectAllTransactionsResCheckboxes.addEventListener('click', () => {
+        selectAllGroupCheckbox(checkboxesGroup3, selectAllTransactionsResCheckboxes)
     })
+    
+    checkboxContainerToggle(checkboxesGroup3)
     
     // * Select All Reports Table Checkbox 
     const selectAllReportsResCheckboxes = document.querySelector('[data-select-all-reports-res-checkboxes]')
-    selectAllReportsResCheckboxes.addEventListener('change', () => {
-        let checkboxes = restrictionTable.querySelectorAll('[data-select-reports-checkbox]');
-        let isChecked = selectAllReportsResCheckboxes.checked;
-    
-        // * Set the checked state of all checkboxes in the table
-        checkboxes.forEach((checkbox) => {
-            checkbox.checked = isChecked;
-        })
+    let checkboxesGroup4 = restrictionTable.querySelectorAll('[data-select-reports-checkbox]');
+
+    selectAllReportsResCheckboxes.addEventListener('click', () => {
+        selectAllGroupCheckbox(checkboxesGroup4, selectAllReportsResCheckboxes)
     })
+    
+    checkboxContainerToggle(checkboxesGroup4)
 
 }

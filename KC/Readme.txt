@@ -1084,3 +1084,7 @@ Third Commit:
     - Made changes from table to flex-box
 
 
+September 28, 2023 (Wednesday)
+First Commit:
+• User Module: Restrictions Layout Optimization✅
+
