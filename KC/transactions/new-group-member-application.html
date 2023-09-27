@@ -351,7 +351,7 @@
                 <!-- * New Group Member Application Container Wrapper -->
                 <div class="na-container-wrapper">
 
-                    <!-- * Container 1: Borrower New Group Member Application Form Fields and Buttons -->
+                    <!-- * Container 1: Borrower New Application Form Fields and Buttons -->
                     <div class="na-container-1">
 
                         <!-- * Big Container -->
@@ -365,13 +365,12 @@
                                 <!-- * Header Wrapper -->
                                 <div class="header-wrapper">
                                     <h2>Borrower Information</h2>
-                                    <!-- <button type="button" id="data-open-loan-details">View loan & payment history</button> -->
+                                    <!-- <button type="button" class="viewLoanDetailsButton" id="data-open-loan-details">View loan & payment history</button> -->
                                 </div>
 
                                 <!-- * Buttons -->
                                 <div class="btn-wrapper">
 
-                                    <!-- * Save -->
                                     <button type="button" id="addGroupMember" class="button" data-add-to-group>Add to Group</button>
 
                                 </div>
@@ -414,32 +413,32 @@
                                 <div class="input-wrapper">
                                     <span>Gender</span>
                                     <div class="select-box">
-    
+
                                         <div class="options-container" data-option-con1>
-    
-                                            <div class="option"  data-option-item1>
-    
+
+                                            <div class="option" data-option-item1>
+
                                                 <input type="radio" class="radio" name="category" value="Male" />
                                                 <label for="Male">
                                                     <h4>Male</h4>
                                                 </label>
-    
+
                                             </div>
-    
-                                            <div class="option"  data-option-item1>
-    
-                                                <input type="radio" class="radio" name="category" value="Female"/>
+
+                                            <div class="option" data-option-item1>
+
+                                                <input type="radio" class="radio" name="category" value="Female" />
                                                 <label for="Female">
                                                     <h4>Female</h4>
                                                 </label>
-    
+
                                             </div>
-    
+
                                         </div>
-                                        
+
                                         <div class="selected" data-option-select1>
                                         </div>
-    
+
                                     </div>
                                 </div>
 
@@ -465,41 +464,41 @@
                                 <div class="input-wrapper">
                                     <span>Civil Status</span>
                                     <div class="select-box">
-    
+
                                         <div class="options-container" data-option-con2>
-    
+
                                             <div class="option" data-option-item2>
-    
+
                                                 <input type="radio" class="radio" name="category" value="Widow" />
                                                 <label for="Widow">
                                                     <h4>Widow</h4>
                                                 </label>
-    
+
                                             </div>
-    
+
                                             <div class="option" data-option-item2>
-    
-                                                <input type="radio" class="radio" name="category" value="Married"/>
+
+                                                <input type="radio" class="radio" name="category" value="Married" />
                                                 <label for="Married">
                                                     <h4>Married</h4>
                                                 </label>
-    
+
                                             </div>
-    
+
                                             <div class="option" data-option-item2>
-    
-                                                <input type="radio" class="radio" name="category" value="Single"/>
+
+                                                <input type="radio" class="radio" name="category" value="Single" />
                                                 <label for="Single">
                                                     <h4>Single</h4>
                                                 </label>
-    
+
                                             </div>
-    
+
                                         </div>
-                                        
+
                                         <div class="selected" data-option-select2>
                                         </div>
-    
+
                                     </div>
                                 </div>
 
@@ -624,21 +623,27 @@
                         <!-- * Small Container -->
                         <div class="small-con">
 
+                            <!-- * Box Wrap 1: Upload Image and Files -->
                             <div class="box-wrap">
 
                                 <!-- * Colspan 1: Upload Image and Attach Files Buttons  -->
                                 <div class="colspan">
 
                                     <!-- * Upload Image -->
-                                    <div class="input-wrapper">
-                                        <input type="image" src="../../res/assets/icons/upload-image.svg" alt="upload-image">
+                                    <div class="input-wrapper" data-upload-image-hover-container>
+                                        <img type="image" src="../../res/assets/icons/upload-image.svg" alt="upload-image" data-borrower-image-container>
                                     </div>
 
-                                    <!-- * Upload Button -->
-                                    <button type="button" submit="" class="button">Upload Image</button>
+                                    <div class="btn-wrapper">
+                                        <!-- * Upload Button -->
+                                        <input type="file" submit="" class="input-image upload-profile-image-btn" accept=".jpg, .jpeg, .png, .gif, .svg" data-upload-borrower-image-btn></input>
+                                        <!-- * Attach Button -->
+                                        <input type="file" submit="" class="input-image attach-file-btn" accept=".txt, .pdf, .docx, .xlsx" multiple data-attach-file-btn></input>
+                                    </div>
 
-                                    <!-- * Attach Button -->
-                                    <button type="button" submit="" class="button">Attach Files</button>
+                                    <div class="file-wrapper" data-attach-file-container>
+
+                                    </div>
 
                                 </div>
 
@@ -685,11 +690,201 @@
 
                 </div>
 
-                <!-- * New Group Member Application Loan Details Modal -->
+                <!-- * New Application Loan Details Modal -->
                 <dialog class="na-loan-details-modal" data-loan-details-modal>
 
                     <!-- * Modal Container -->
                     <div class="modal-container">
+
+                        <!-- * Daily Payment History -->
+                        <dialog class="daily-payment-modal" data-daily-payment-history-modal>
+
+                            <!-- * Daily Payment History Modal Container -->
+                            <div class="daily-payment-modal-container">
+
+                                <!-- * Button Wrapper -->
+                                <div class="button-wrapper">
+                                    <button type="button" data-close-daily-payment-modal>
+                                            <img src="../../res/assets/icons/x-circle.svg" alt="close">
+                                    </button>
+                                </div>
+
+                                <!-- * Container 13: Daily Payment History Table -->
+                                <div class="na-container-9">
+
+                                    <!-- * Small Container -->
+                                    <div class="small-con-5">
+
+                                        <!-- * Rowspan 1: Header -->
+                                        <div class="rowspan">
+
+                                            <!-- * Loan History -->
+                                            <div class="input-wrapper">
+                                                <h2>Daily Payment History</h2>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- * Rowspan 2: Payment History Details -->
+                                        <div class="rowspan">
+                                            <div class="box-wrapper">
+                                                <div class="detail-wrapper">
+                                                    <div class="detail-inner-wrapper">
+                                                        <span>Name:</span>
+                                                    </div>
+                                                    <div class="detail-inner-wrapper">
+                                                        <span>Dela Cruz, Juana</span>
+                                                    </div>
+                                                </div>
+                                                <div class="detail-wrapper">
+                                                    <div class="detail-inner-wrapper">
+                                                        <span>Loan Reference Number:</span>
+                                                    </div>
+                                                    <div class="detail-inner-wrapper">
+                                                        <span>REF-0000001</span>
+                                                    </div>
+                                                </div>
+                                                <div class="detail-wrapper">
+                                                    <div class="detail-inner-wrapper">
+                                                        <span>Loan Amount:</span>
+                                                    </div>
+                                                    <div class="detail-inner-wrapper">
+                                                        <span>5,000</span>
+                                                    </div>
+                                                </div>
+                                                <div class="detail-wrapper">
+                                                    <div class="detail-inner-wrapper">
+                                                        <span>First Payment:</span>
+                                                    </div>
+                                                    <div class="detail-inner-wrapper">
+                                                        <span>1,000</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box-wrapper">
+                                                <div class="detail-wrapper">
+                                                    <div class="detail-inner-wrapper">
+                                                        <span>Loan Balance:</span>
+                                                    </div>
+                                                    <div class="detail-inner-wrapper">
+                                                        <span>5,000</span>
+                                                    </div>
+                                                </div>
+                                                <div class="detail-wrapper">
+                                                    <div class="detail-inner-wrapper">
+                                                        <span>Overall Savings:</span>
+                                                    </div>
+                                                    <div class="detail-inner-wrapper">
+                                                        <span>2,000</span>
+                                                    </div>
+                                                </div>
+                                                <div class="detail-wrapper">
+                                                    <div class="detail-inner-wrapper">
+                                                        <span>Date Release:</span>
+                                                    </div>
+                                                    <div class="detail-inner-wrapper">
+                                                        <span>July 6, 2023</span>
+                                                    </div>
+                                                </div>
+                                                <div class="detail-wrapper">
+                                                    <div class="detail-inner-wrapper">
+                                                        <span>Due Date</span>
+                                                    </div>
+                                                    <div class="detail-inner-wrapper">
+                                                        <span>Sept 6, 2023</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- * Rowspan 3: Daily Payment History Table -->
+                                        <div class="rowspan table">
+
+                                            <table>
+                                                <!-- * Table Header -->
+                                                <tr>
+                                                    <th>No. of Days</th>
+                                                    <th>Date</th>
+                                                    <th>Amount Paid</th>
+                                                    <th>Savings</th>
+                                                    <th>Advance</th>
+                                                    <th>Lapses</th>
+                                                </tr>
+
+                                                <!-- * Table Data -->
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>July 3, 2023</td>
+                                                    <td>500</td>
+                                                    <td>1,000</td>
+                                                    <td>3,000</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>July 3, 2023</td>
+                                                    <td>500</td>
+                                                    <td>1,000</td>
+                                                    <td>3,000</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>July 3, 2023</td>
+                                                    <td>500</td>
+                                                    <td>1,000</td>
+                                                    <td>3,000</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>July 3, 2023</td>
+                                                    <td>500</td>
+                                                    <td>1,000</td>
+                                                    <td>3,000</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>July 3, 2023</td>
+                                                    <td>500</td>
+                                                    <td>1,000</td>
+                                                    <td>3,000</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>July 3, 2023</td>
+                                                    <td>500</td>
+                                                    <td>1,000</td>
+                                                    <td>3,000</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>July 3, 2023</td>
+                                                    <td>500</td>
+                                                    <td>1,000</td>
+                                                    <td>3,000</td>
+                                                    <td>0</td>
+                                                </tr>
+
+                                            </table>
+
+                                        </div>
+
+                                        <div class="show-more">
+                                            <span class="transparentButton4">Show more</span>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </dialog>
 
                         <!-- * Button Wrapper -->
                         <div class="button-wrapper">
@@ -718,74 +913,109 @@
                                 <div class="rowspan table">
 
                                     <table>
+                                        <!-- * Table Header -->
                                         <tr>
+                                            <th>Loan Reference no.</th>
                                             <th>Loan Amount</th>
                                             <th>Savings</th>
                                             <th>Penalty</th>
-                                            <th>Outstanding Balance</th>
                                             <th>Date Released</th>
                                             <th>Due Date</th>
-                                            <th>Due Date</th>
+                                            <th>Date of Full Payment</th>
+                                            <th>No. of NP's</th>
+                                        </tr>
+
+                                        <!-- * Table Data -->
+                                        <tr>
+                                            <td>REF-0000001</td>
+                                            <td>4,000</td>
+                                            <td>3,000</td>
+                                            <td>1,000</td>
+                                            <td>April 2, 2023</td>
+                                            <td>July 3, 2023</td>
+                                            <td>August 1, 2023</td>
+                                            <td>3</td>
                                         </tr>
                                         <tr>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>REF-0000002</td>
+                                            <td>7,000</td>
+                                            <td>5,000</td>
+                                            <td>2,000</td>
+                                            <td>June 22, 2023</td>
+                                            <td>August 23, 2023</td>
+                                            <td>September 23, 2023</td>
+                                            <td>4</td>
                                         </tr>
                                         <tr>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>REF-0000003</td>
+                                            <td>4,000</td>
+                                            <td>3,000</td>
+                                            <td>1,000</td>
+                                            <td>April 2, 2023</td>
+                                            <td>July 3, 2023</td>
+                                            <td>August 1, 2023</td>
+                                            <td>3</td>
                                         </tr>
                                         <tr>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>REF-0000004</td>
+                                            <td>7,000</td>
+                                            <td>5,000</td>
+                                            <td>2,000</td>
+                                            <td>June 22, 2023</td>
+                                            <td>August 23, 2023</td>
+                                            <td>September 23, 2023</td>
+                                            <td>4</td>
                                         </tr>
                                         <tr>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>REF-0000005</td>
+                                            <td>4,000</td>
+                                            <td>3,000</td>
+                                            <td>1,000</td>
+                                            <td>April 2, 2023</td>
+                                            <td>July 3, 2023</td>
+                                            <td>August 1, 2023</td>
+                                            <td>3</td>
                                         </tr>
                                         <tr>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>REF-0000006</td>
+                                            <td>7,000</td>
+                                            <td>5,000</td>
+                                            <td>2,000</td>
+                                            <td>June 22, 2023</td>
+                                            <td>August 23, 2023</td>
+                                            <td>September 23, 2023</td>
+                                            <td>4</td>
                                         </tr>
                                         <tr>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
-                                            <td>Lorem ipsum dolor sit.</td>
+                                            <td>REF-0000007</td>
+                                            <td>4,000</td>
+                                            <td>3,000</td>
+                                            <td>1,000</td>
+                                            <td>April 2, 2023</td>
+                                            <td>July 3, 2023</td>
+                                            <td>August 1, 2023</td>
+                                            <td>3</td>
                                         </tr>
-                                        
+                                        <tr>
+                                            <td>REF-0000008</td>
+                                            <td>7,000</td>
+                                            <td>5,000</td>
+                                            <td>2,000</td>
+                                            <td>June 22, 2023</td>
+                                            <td>August 23, 2023</td>
+                                            <td>September 23, 2023</td>
+                                            <td>4</td>
+                                        </tr>
+
+
 
                                     </table>
 
 
+                                </div>
+
+                                <div class="show-more ">
+                                    <span class="transparentButton4">Show more</span>
                                 </div>
 
                             </div>
@@ -814,57 +1044,107 @@
                                 <div class="rowspan table">
 
                                     <table>
+
+                                        <!-- * Table Header -->
                                         <tr>
+                                            <th>Loan Reference no.</th>
+                                            <th>Date Released</th>
+                                            <th>Due Date</th>
                                             <th>Loan Amount</th>
-                                            <th>Outstanding Balance</th>
-                                            <th>Paid Amount</th>
-                                            <th>Collector</th>
-                                            <th>Payment Date</th>
-                                            <th>Payment Type</th>
-                                            <th>Penalty</th>
+                                            <th>Overall Savings</th>
+                                            <th>Total Balance</th>
+                                            <th>Total Amount Paid</th>
+                                            <th>Total Savings</th>
                                         </tr>
-                                        <tr>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
+
+                                        <!-- * Table Data -->
+                                        <tr data-open-daily-payment-modal>
+                                            <td>REF-0000001</td>
+                                            <td>July 6, 2023</td>
+                                            <td>Sept 6, 2023</td>
+                                            <td>5,000</td>
+                                            <td>2,000</td>
+                                            <td>4,254</td>
+                                            <td>2,000</td>
+                                            <td>2,500</td>
                                         </tr>
-                                        <tr>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
+                                        <tr data-open-daily-payment-modal>
+                                            <td>REF-0000002</td>
+                                            <td>June 2, 2023</td>
+                                            <td>Aug 2, 2023</td>
+                                            <td>8,000</td>
+                                            <td>3,250</td>
+                                            <td>6,958</td>
+                                            <td>3,670</td>
+                                            <td>3,200</td>
                                         </tr>
-                                        <tr>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
+                                        <tr data-open-daily-payment-modal>
+                                            <td>REF-0000003</td>
+                                            <td>Sept 13, 2023</td>
+                                            <td>Aug 6, 2023</td>
+                                            <td>5,000</td>
+                                            <td>2,000</td>
+                                            <td>4,254</td>
+                                            <td>2,000</td>
+                                            <td>2,500</td>
                                         </tr>
-                                        <tr>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
-                                            <td>Lorem ipsum dolor sit amet.</td>
+                                        <tr data-open-daily-payment-modal>
+                                            <td>REF-0000004</td>
+                                            <td>Oct 21, 2023</td>
+                                            <td>Nov 9, 2023</td>
+                                            <td>8,000</td>
+                                            <td>3,250</td>
+                                            <td>6,958</td>
+                                            <td>3,670</td>
+                                            <td>3,200</td>
                                         </tr>
-                                        
-                                        
+                                        <tr data-open-daily-payment-modal>
+                                            <td>REF-0000005</td>
+                                            <td>July 6, 2023</td>
+                                            <td>Sept 6, 2023</td>
+                                            <td>5,000</td>
+                                            <td>2,000</td>
+                                            <td>4,254</td>
+                                            <td>2,000</td>
+                                            <td>2,500</td>
+                                        </tr>
+                                        <tr data-open-daily-payment-modal>
+                                            <td>REF-0000006</td>
+                                            <td>June 2, 2023</td>
+                                            <td>Aug 2, 2023</td>
+                                            <td>8,000</td>
+                                            <td>3,250</td>
+                                            <td>6,958</td>
+                                            <td>3,670</td>
+                                            <td>3,200</td>
+                                        </tr>
+                                        <tr data-open-daily-payment-modal>
+                                            <td>REF-0000007</td>
+                                            <td>Sept 13, 2023</td>
+                                            <td>Aug 6, 2023</td>
+                                            <td>5,000</td>
+                                            <td>2,000</td>
+                                            <td>4,254</td>
+                                            <td>2,000</td>
+                                            <td>2,500</td>
+                                        </tr>
+                                        <tr data-open-daily-payment-modal>
+                                            <td>REF-0000008</td>
+                                            <td>Oct 21, 2023</td>
+                                            <td>Nov 9, 2023</td>
+                                            <td>8,000</td>
+                                            <td>3,250</td>
+                                            <td>6,958</td>
+                                            <td>3,670</td>
+                                            <td>3,200</td>
+                                        </tr>
 
                                     </table>
 
+                                </div>
 
+                                <div class="show-more">
+                                    <span class="transparentButton4">Show more</span>
                                 </div>
 
                             </div>
@@ -875,8 +1155,33 @@
 
                     </div>
 
-
                 </dialog>
+
+                <!-- * Updated Successfully Modal -->
+                <dialog class="us-modal" data-updated-successfully>
+
+                    <div class="modal-container">
+
+                        <!-- * Modal Header  -->
+                        <div class="modal-header">
+                            <h4>Success</h4>
+                        </div>
+
+                        <!-- * Modal Body -->
+                        <div class="rowspan">
+                            <img src="../../res/assets/icons/modal-icon/status-success.svg" alt="Updated Successfully">
+                            <span>Updated</span>
+                            <p>New data was successfully updated</p>
+                        </div>
+
+                        <!-- * Okay Button -->
+                        <div class="rowspan">
+                            <button class="button" data-update-modal>OK</button>
+                        </div>
+
+                    </div>
+
+                </dialog>   
 
                 <!-- * Container 3: Job Information Input Fields -->
                 <div class="na-container-3">
@@ -916,7 +1221,7 @@
 
                                         <div class="option" data-option-item3>
 
-                                            <input type="radio" class="radio" name="category" value="Unemployed"/>
+                                            <input type="radio" class="radio" name="category" value="Unemployed" />
                                             <label for="Unemployed">
                                                 <h4>Unemployed</h4>
                                             </label>
@@ -924,7 +1229,7 @@
                                         </div>
 
                                     </div>
-                                    
+
                                     <div class="selected" data-option-select3>
                                     </div>
 
@@ -1099,7 +1404,7 @@
 
                                         <div class="option" data-option-item7>
 
-                                            <input type="radio" class="radio" name="category" value="Unemployed"/>
+                                            <input type="radio" class="radio" name="category" value="Unemployed" />
                                             <label for="Unemployed">
                                                 <h4>Unemployed</h4>
                                             </label>
@@ -1107,7 +1412,7 @@
                                         </div>
 
                                     </div>
-                                    
+
                                     <div class="selected" data-option-select7>
                                     </div>
 
@@ -1199,16 +1504,20 @@
                             </div>
 
                             <!-- * Name Of School -->
-                            <div class="input-wrapper">
+                            <div class="input-wrapper-add">
                                 <span>Name Of School</span>
-                                <input autocomplete="off" type="text" id="nameOfSchool" name="nameOfSchool">
+                                <div class="inner-container-wrapper">
+                                    <div class="input-inner-wrapper">
+                                        <input autocomplete="off" type="text" id="nameOfSchool" name="nameOfSchool">
+                                    </div>
+                                    <!-- * Add and Subtract Button  -->
+                                    <div class="input-inner-wrapper">
+                                        <button type="button" class="addOrSubButton" data-add-button>+</button>
+                                        <button type="button" class="addOrSubButton" data-sub-button>-</button>
+                                    </div>
+                                </div>
                             </div>
 
-                            <!-- * Add and Subtract Button  -->
-                            <div class="input-wrapper">
-                                <button type="button" onclick="addChild()">+</button>
-                                <button type="button" onclick="subChild()">-</button>
-                            </div>
 
                         </div>
 
@@ -1305,7 +1614,7 @@
 
                                         <div class="option" data-option-item8>
 
-                                            <input type="radio" class="radio" name="category" value="Unemployed"/>
+                                            <input type="radio" class="radio" name="category" value="Unemployed" />
                                             <label for="Unemployed">
                                                 <h4>Unemployed</h4>
                                             </label>
@@ -1313,7 +1622,7 @@
                                         </div>
 
                                     </div>
-                                    
+
                                     <div class="selected" data-option-select8>
                                     </div>
 
@@ -1406,16 +1715,21 @@
                             </div>
 
                             <!-- * Name Of School -->
-                            <div class="input-wrapper">
+                            <div class="input-wrapper-add">
                                 <span>Name Of School</span>
-                                <input autocomplete="off" type="text" id="nameOfSchool" name="nameOfSchool">
+                                <div class="inner-container-wrapper">
+                                    <div class="input-inner-wrapper">
+                                        <input autocomplete="off" type="text" id="nameOfSchool" name="nameOfSchool">
+                                    </div>
+                                    <!-- * Add and Subtract Button  -->
+                                    <div class="input-inner-wrapper">
+                                        <button type="button" class="addOrSubButton" data-add-button-2>+</button>
+                                        <button type="button" class="addOrSubButton" data-sub-button-2>-</button>
+                                    </div>
+                                </div>
                             </div>
 
-                            <!-- * Add and Subtract Button  -->
-                            <div class="input-wrapper">
-                                <button type="button" onclick="addChildSingle()">+</button>
-                                <button type="button" onclick="subChildSingle()">-</button>
-                            </div>
+
 
 
                         </div>
@@ -1539,15 +1853,17 @@
                         <div class="rowspan table">
 
                             <table>
+
                                 <!-- * Table Header -->
                                 <tr>
-                                    <th>Business Name</th>
-                                    <th>Business Type</th>
-                                    <th>Business Address</th>
-                                    <th>Years of Business</th>
-                                    <th>Action</th>
+                                        <th>Business Name</th>
+                                        <th>Business Type</th>
+                                        <th>Business Address</th>
+                                        <th>Years of Business</th>
+                                        <th>Action</th>
                                 </tr>
-                                <!-- * Table Data -->
+                                
+                                    <!-- * Table Data -->
                                 <tr>
                                     <td>Baskin'</td>
                                     <td>Sole Proprietorship</td>
@@ -1558,8 +1874,8 @@
                                     <td class="td-btns">
 
                                         <div class="td-btn-wrapper">
-                                            <button class="a-btn-edit">Edit</button>
-                                            <button class="a-btn-delete">Delete</button>
+                                            <button type="button" class="a-btn-edit">Edit</button>
+                                            <button type="button" class="a-btn-trash-2">Delete</button>
                                         </div>
 
                                     </td>
@@ -1575,8 +1891,8 @@
                                     <td class="td-btns">
 
                                         <div class="td-btn-wrapper">
-                                            <button class="a-btn-edit">Edit</button>
-                                            <button class="a-btn-delete">Delete</button>
+                                            <button type="button" class="a-btn-edit">Edit</button>
+                                            <button type="button" class="a-btn-trash-2">Delete</button>
                                         </div>
 
                                     </td>
@@ -1592,8 +1908,8 @@
                                     <td class="td-btns">
 
                                         <div class="td-btn-wrapper">
-                                            <button class="a-btn-edit">Edit</button>
-                                            <button class="a-btn-delete">Delete</button>
+                                            <button type="button" class="a-btn-edit">Edit</button>
+                                            <button type="button" class="a-btn-trash-2">Delete</button>
                                         </div>
 
                                     </td>
@@ -1609,31 +1925,14 @@
                                     <td class="td-btns">
 
                                         <div class="td-btn-wrapper">
-                                            <button class="a-btn-edit">Edit</button>
-                                            <button class="a-btn-delete">Delete</button>
+                                            <button type="button" class="a-btn-edit">Edit</button>
+                                            <button type="button" class="a-btn-trash-2">Delete</button>
                                         </div>
 
                                     </td>
 
                                 </tr>
-                                <tr>
-                                    <td>Baskin'</td>
-                                    <td>Sole Proprietorship</td>
-                                    <td>Germany</td>
-                                    <td>2</td>
-
-                                    <!-- * Table Edit and Delete Button -->
-                                    <td class="td-btns">
-
-                                        <div class="td-btn-wrapper">
-                                            <button class="a-btn-edit">Edit</button>
-                                            <button class="a-btn-delete">Delete</button>
-                                        </div>
-
-                                    </td>
-
-                                </tr>
-                               
+                                
 
                             </table>
 
@@ -1715,7 +2014,7 @@
 
                                     <!-- * Rowspan 3: Vehicle Input Field -->
                                     <div class="box-wrap-2" data-vehicle-container>
-                                        <div class="input-wrapper" data-vehicle >
+                                        <div class="input-wrapper" data-vehicle>
                                             <span>If yes please specify,</span>
 
                                             <div class="rowspan-2 child">
@@ -1728,8 +2027,8 @@
 
                                                 <!-- * Add and Subtract Button  -->
                                                 <div class="input-wrapper">
-                                                    <button type="button" onclick="addVehicle()">+</button>
-                                                    <button type="button" onclick="subVehicle()">-</button>
+                                                    <button type="button" data-add-button-3>+</button>
+                                                    <button type="button" data-sub-button-3>-</button>
                                                 </div>
 
                                             </div>
@@ -1778,15 +2077,15 @@
                                             <!-- * Rowspan 5: Property Input Field -->
                                             <div class="rowspan-2 child">
 
-                                                <!-- * Vehicle Input Field -->
+                                                <!-- * Property Input Field -->
                                                 <div class="input-wrapper">
-                                                    <input autocomplete="off" type="text" id="nameOfSchool" name="nameOfSchool">
+                                                    <input autocomplete="off" type="text" id="nameOfSchool" name="nameOfSchool" value="">
                                                 </div>
 
                                                 <!-- * Add and Subtract Button  -->
                                                 <div class="input-wrapper">
-                                                    <button type="button" onclick="addProperty()">+</button>
-                                                    <button type="button" onclick="subProperty()">-</button>
+                                                    <button type="button" data-add-button-4>+</button>
+                                                    <button type="button" data-sub-button-4>-</button>
                                                 </div>
 
                                             </div>
@@ -1798,9 +2097,7 @@
 
                             </div>
 
-
                         </div>
-
 
                     </div>
 
@@ -1830,16 +2127,21 @@
                                         </div>
 
                                         <!-- * Brand / Model -->
-                                        <div class="input-wrapper">
+                                        <div class="input-wrapper-add">
                                             <span>Brand / Model</span>
-                                            <input autocomplete="off" type="text" id="brandModel" name="brandModel">
+                                            <div class="inner-container-wrapper">
+                                                <!-- * Input Inner Wrapper -->
+                                                <div class="input-inner-wrapper">
+                                                    <input autocomplete="off" class="inp" type="text" id="brandModel" name="brandModel">
+                                                </div>
+                                                <!-- * Add and Subtract Button  -->
+                                                <div class="input-inner-wrapper">
+                                                    <button type="button" class="addOrSubButton" data-add-button-5>+</button>
+                                                    <button type="button" class="addOrSubButton" data-sub-button-5>-</button>
+                                                </div>
+                                            </div>
                                         </div>
-
-                                        <!-- * Add and Subtract Button  -->
-                                        <div class="input-wrapper">
-                                            <button type="button" onclick="addAppliances()">+</button>
-                                            <button type="button" onclick="subAppliances()">-</button>
-                                        </div>
+                                        
 
 
                                     </div>
@@ -1872,20 +2174,25 @@
                                         <!-- * Bank account -->
                                         <div class="input-wrapper">
                                             <span>Bank account</span>
-                                            <input autocomplete="off" type="bankAcc" id="bankAcc" name="appliances">
+                                            <input autocomplete="off" type="text" id="bankAcc" name="appliances">
                                         </div>
 
                                         <!-- * Address -->
-                                        <div class="input-wrapper">
+                                        <div class="input-wrapper-add">
                                             <span>Address</span>
-                                            <input autocomplete="off" type="bankAddr" id="bankAddr" name="brandModel">
+                                            <div class="inner-container-wrapper">
+                                                <!-- * Input Inner Wrapper -->
+                                                <div class="input-inner-wrapper">
+                                                    <input autocomplete="off" type="text" id="bankAddr" name="brandModel">
+                                                </div>
+                                                <!-- * Add and Subtract Button  -->
+                                                <div class="input-inner-wrapper">
+                                                    <button type="button" class="addOrSubButton" data-add-button-6>+</button>
+                                                    <button type="button" class="addOrSubButton" data-sub-button-6>-</button>
+                                                </div>
+                                            </div>
                                         </div>
 
-                                        <!-- * Add and Subtract Button  -->
-                                        <div class="input-wrapper">
-                                            <button type="button" onclick="addBank()">+</button>
-                                            <button type="button" onclick="subBank()">-</button>
-                                        </div>
 
 
                                     </div>
@@ -1944,10 +2251,10 @@
 
                 </div>
 
-                <!-- * Container 8: Co-Maker New Group Member Application Form Fields -->
+                <!-- * Container 8: Co-Maker New Application Form Fields -->
                 <div class="na-container-wrapper-2">
 
-                    <!-- * Container 5: New Group Member Application Form Fields and Buttons -->
+                    <!-- * Container 5: New Application Form Fields and Buttons -->
                     <div class="na-container-5">
 
                         <!-- * Container Wrapper -->
@@ -1958,9 +2265,30 @@
 
                                 <!-- * Form Header -->
 
-                                <!-- * Rowspan 1: Rowspan Header - Co-Maker Information -->
+                                <!-- * Rowspan 1: Rowspan Header: Header and Buttons -->
                                 <div class="rowspan">
-                                    <h2>Co-Maker Information</h2>
+
+                                    <!-- * Header Wrapper -->
+                                    <div class="header-wrapper">
+                                        <div class="header-inner-wrapper">
+                                            <!-- <div class="box-wrapper">
+                                            <img src="../../res/assets/icons/arrow-left.svg" alt="Left Button" data-back-to-members-table>
+                                        </div> -->
+                                            <div class="box-wrapper">
+                                                <h2>Co-Maker Information</h2>
+                                            </div>
+                                        </div>
+                                        <!-- <button type="button" id="data-open-loan-details">View loan & payment history</button> -->
+                                    </div>
+
+                                    <!-- * Buttons -->
+                                    <!-- <div class="btn-wrapper"> -->
+
+                                    <!-- * Save -->
+                                    <!-- <button type="button" id="saveBtn" class="button" data-save>Save</button>
+
+                                </div> -->
+
                                 </div>
 
                                 <!-- * Rowspan 2: First Name, Middle Name , Last Name, and Suffix -->
@@ -1999,32 +2327,32 @@
                                     <div class="input-wrapper">
                                         <span>Gender</span>
                                         <div class="select-box">
-        
+
                                             <div class="options-container" data-option-con4>
-        
-                                                <div class="option"  data-option-item4>
-        
+
+                                                <div class="option" data-option-item4>
+
                                                     <input type="radio" class="radio" name="category" value="Male" />
                                                     <label for="Male">
-                                                        <h4>Male</h4>
-                                                    </label>
-        
+                                                    <h4>Male</h4>
+                                                </label>
+
                                                 </div>
-        
-                                                <div class="option"  data-option-item4>
-        
-                                                    <input type="radio" class="radio" name="category" value="Female"/>
+
+                                                <div class="option" data-option-item4>
+
+                                                    <input type="radio" class="radio" name="category" value="Female" />
                                                     <label for="Female">
-                                                        <h4>Female</h4>
-                                                    </label>
-        
+                                                    <h4>Female</h4>
+                                                </label>
+
                                                 </div>
-        
+
                                             </div>
-                                            
+
                                             <div class="selected" data-option-select4>
                                             </div>
-        
+
                                         </div>
                                     </div>
 
@@ -2050,41 +2378,41 @@
                                     <div class="input-wrapper">
                                         <span>Civil Status</span>
                                         <div class="select-box">
-        
+
                                             <div class="options-container" data-option-con5>
-        
+
                                                 <div class="option" data-option-item5>
-        
+
                                                     <input type="radio" class="radio" name="category" value="Widow" />
                                                     <label for="Widow">
-                                                        <h4>Widow</h4>
-                                                    </label>
-        
+                                                    <h4>Widow</h4>
+                                                </label>
+
                                                 </div>
-        
+
                                                 <div class="option" data-option-item5>
-        
-                                                    <input type="radio" class="radio" name="category" value="Married"/>
+
+                                                    <input type="radio" class="radio" name="category" value="Married" />
                                                     <label for="Married">
-                                                        <h4>Married</h4>
-                                                    </label>
-        
+                                                    <h4>Married</h4>
+                                                </label>
+
                                                 </div>
-        
+
                                                 <div class="option" data-option-item5>
-        
-                                                    <input type="radio" class="radio" name="category" value="Single"/>
+
+                                                    <input type="radio" class="radio" name="category" value="Single" />
                                                     <label for="Single">
-                                                        <h4>Single</h4>
-                                                    </label>
-        
+                                                    <h4>Single</h4>
+                                                </label>
+
                                                 </div>
-        
+
                                             </div>
-                                            
+
                                             <div class="selected" data-option-select5>
                                             </div>
-        
+
                                         </div>
                                     </div>
 
@@ -2194,36 +2522,43 @@
                                         <input type="number" id="yoStay" name="yoStay">
                                     </div>
 
+                                    <!-- * Relationship to the Borrower -->
+                                    <div class="input-wrapper">
+                                        <span> Relationship to the Borrower</span>
+                                        <input type="text" id="relatioshipToBorrower" name="relatioshipToBorrower">
+                                        </input>
+                                    </div>
+
                                 </div>
 
                                 <!-- * Rowspan 8: Empty Rowspan -->
-                                <div class="rowspan">
-
-                                </div>
+                                <!-- <div class="rowspan"> -->
+                                <!-- <button type="button" class="viewLoanDetailsButton" id="data-open-loan-details">View loan & payment history</button> -->
+                                <!-- </div> -->
 
                             </div>
-                            <!-- * Container 2: Upload Images, Files and Monthly Bills Input Fields -->
-                            <div class="na-container-2">
 
-                                <!-- * Small Container -->
-                                <div class="small-con">
+                            <!-- * Small Container -->
+                            <div class="small-con-2">
 
-                                    <div class="box-wrap">
+                                <div class="box-wrap">
 
-                                        <!-- * Colspan 1: Upload Image and Attach Files Buttons  -->
-                                        <div class="colspan">
+                                    <!-- * Colspan 1: Upload Image and Attach Files Buttons  -->
+                                    <div class="colspan">
 
-                                            <!-- * Upload Image -->
-                                            <div class="input-wrapper">
-                                                <input type="image" src="../../res/assets/icons/upload-image.svg" alt="upload-image">
-                                            </div>
+                                        <!-- * Upload Image -->
+                                        <div class="input-wrapper" data-upload-image-co-borrower-hover-container>
+                                            <img type="image" src="../../res/assets/icons/upload-image.svg" alt="upload-image" data-co-borrower-image-container>
+                                        </div>
 
+                                        <div class="btn-wrapper">
                                             <!-- * Upload Button -->
-                                            <button submit="">Upload Image</button>
-
+                                            <input type="file" class="input-image upload-profile-image-btn" data-upload-co-borrower-image-btn></input>
                                             <!-- * Attach Button -->
-                                            <button submit="">Attach Files</button>
+                                            <input type="file" submit="" class="input-image attach-file-btn" accept=".txt, .pdf, .docx, .xlsx" multiple data-attach-file-btn2></input>
+                                        </div>
 
+                                        <div class="file-wrapper" data-attach-file-container2>
                                         </div>
 
                                     </div>
@@ -2277,7 +2612,7 @@
 
                                         <div class="option" data-option-item6>
 
-                                            <input type="radio" class="radio" name="category" value="Unemployed"/>
+                                            <input type="radio" class="radio" name="category" value="Unemployed" />
                                             <label for="Unemployed">
                                                 <h4>Unemployed</h4>
                                             </label>
@@ -2285,7 +2620,7 @@
                                         </div>
 
                                     </div>
-                                    
+
                                     <div class="selected" data-option-select6>
                                     </div>
 
@@ -2406,14 +2741,14 @@
                                 <!-- * Applicant Signature Picture Upload -->
                                 <div class="input-wrapper">
                                     <div class="signature-wrapper-2">
-                                        <img id="applicantSig">
+                                        <img id="applicantSignature">
                                         <span>Applicant’s Signature</span>
                                     </div>
                                 </div>
 
                                 <!-- * Upload Applicant Signature Button -->
                                 <div class="input-wrapper">
-                                    <button type="button">Upload Applicant Signature</button>
+                                    <input type="file" class="input-image" id="imageUploadApplicantSign">
                                 </div>
 
                             </div>
@@ -2434,14 +2769,14 @@
                                 <!-- * Co-Maker Signature Picture Upload -->
                                 <div class="input-wrapper">
                                     <div class="signature-wrapper-2">
-                                        <img id="comSig">
+                                        <img id="coMakerSignature">
                                         <span>Co-Maker Signature</span>
                                     </div>
                                 </div>
 
                                 <!-- * Upload Co-Maker Signature Button -->
                                 <div class="input-wrapper">
-                                    <button type="button">Upload Co-Maker Signature</button>
+                                    <input type="file" class="input-image" id="imageUploadCoMakerSign">
                                 </div>
 
                             </div>
@@ -2452,6 +2787,7 @@
                     </div>
 
                 </div>
+
             </form>
 
         </div>

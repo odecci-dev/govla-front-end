@@ -77,7 +77,7 @@
                                 <div class="btn-wrapper">
 
                                     <!-- * Save -->
-                                    <button type="button" id="saveBtn" class="button" data-save>Save</button>
+                                    <button type="submit" id="saveBtn" class="button" data-save>Save</button>
 
                                     <!-- * Save & Apply for loan  -->
                                     <a href="new-application-credit-investigation.html">
@@ -1191,15 +1191,18 @@
                             </div>
 
                             <!-- * Name Of School -->
-                            <div class="input-wrapper">
+                            <div class="input-wrapper-add">
                                 <span>Name Of School</span>
-                                <input autocomplete="off" type="text" id="nameOfSchool" name="nameOfSchool">
-                            </div>
-
-                            <!-- * Add and Subtract Button  -->
-                            <div class="input-wrapper">
-                                <button type="button" onclick="addChild()">+</button>
-                                <button type="button" onclick="subChild()">-</button>
+                                <div class="inner-container-wrapper">
+                                    <div class="input-inner-wrapper">
+                                        <input autocomplete="off" type="text" id="nameOfSchool" name="nameOfSchool">
+                                    </div>
+                                    <!-- * Add and Subtract Button  -->
+                                    <div class="input-inner-wrapper">
+                                        <button type="button" class="addOrSubButton" data-add-button>+</button>
+                                        <button type="button" class="addOrSubButton" data-sub-button>-</button>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
@@ -1398,15 +1401,18 @@
                             </div>
 
                             <!-- * Name Of School -->
-                            <div class="input-wrapper">
+                            <div class="input-wrapper-add">
                                 <span>Name Of School</span>
-                                <input autocomplete="off" type="text" id="nameOfSchool" name="nameOfSchool">
-                            </div>
-
-                            <!-- * Add and Subtract Button  -->
-                            <div class="input-wrapper">
-                                <button type="button" onclick="addChildSingle()">+</button>
-                                <button type="button" onclick="subChildSingle()">-</button>
+                                <div class="inner-container-wrapper">
+                                    <div class="input-inner-wrapper">
+                                        <input autocomplete="off" type="text" id="nameOfSchool" name="nameOfSchool">
+                                    </div>
+                                    <!-- * Add and Subtract Button  -->
+                                    <div class="input-inner-wrapper">
+                                        <button type="button" class="addOrSubButton" data-add-button-2>+</button>
+                                        <button type="button" class="addOrSubButton" data-sub-button-2>-</button>
+                                    </div>
+                                </div>
                             </div>
 
 
@@ -1703,8 +1709,8 @@
 
                                                 <!-- * Add and Subtract Button  -->
                                                 <div class="input-wrapper">
-                                                    <button type="button" onclick="addVehicle()">+</button>
-                                                    <button type="button" onclick="subVehicle()">-</button>
+                                                    <button type="button" data-add-button-3>+</button>
+                                                    <button type="button" data-sub-button-3>-</button>
                                                 </div>
 
                                             </div>
@@ -1753,15 +1759,15 @@
                                             <!-- * Rowspan 5: Property Input Field -->
                                             <div class="rowspan-2 child">
 
-                                                <!-- * Vehicle Input Field -->
+                                                <!-- * Property Input Field -->
                                                 <div class="input-wrapper">
-                                                    <input autocomplete="off" type="text" id="nameOfSchool" name="nameOfSchool">
+                                                    <input autocomplete="off" type="text" id="nameOfSchool" name="nameOfSchool" value="">
                                                 </div>
 
                                                 <!-- * Add and Subtract Button  -->
                                                 <div class="input-wrapper">
-                                                    <button type="button" onclick="addProperty()">+</button>
-                                                    <button type="button" onclick="subProperty()">-</button>
+                                                    <button type="button" data-add-button-4>+</button>
+                                                    <button type="button" data-sub-button-4>-</button>
                                                 </div>
 
                                             </div>
@@ -1805,17 +1811,20 @@
                                         </div>
 
                                         <!-- * Brand / Model -->
-                                        <div class="input-wrapper">
+                                        <div class="input-wrapper-add">
                                             <span>Brand / Model</span>
-                                            <input autocomplete="off" type="text" id="brandModel" name="brandModel">
+                                            <div class="inner-container-wrapper">
+                                                <!-- * Input Inner Wrapper -->
+                                                <div class="input-inner-wrapper">
+                                                    <input autocomplete="off" type="text" id="brandModel" name="brandModel">
+                                                </div>
+                                                <!-- * Add and Subtract Button  -->
+                                                <div class="input-inner-wrapper">
+                                                    <button type="button" class="addOrSubButton" data-add-button-5>+</button>
+                                                    <button type="button" class="addOrSubButton" data-sub-button-5>-</button>
+                                                </div>
+                                            </div>
                                         </div>
-
-                                        <!-- * Add and Subtract Button  -->
-                                        <div class="input-wrapper">
-                                            <button type="button" onclick="addAppliances()">+</button>
-                                            <button type="button" onclick="subAppliances()">-</button>
-                                        </div>
-
 
                                     </div>
                                 </div>
@@ -1851,15 +1860,19 @@
                                         </div>
 
                                         <!-- * Address -->
-                                        <div class="input-wrapper">
+                                        <div class="input-wrapper-add">
                                             <span>Address</span>
-                                            <input autocomplete="off" type="bankAddr" id="bankAddr" name="brandModel">
-                                        </div>
-
-                                        <!-- * Add and Subtract Button  -->
-                                        <div class="input-wrapper">
-                                            <button type="button" onclick="addBank()">+</button>
-                                            <button type="button" onclick="subBank()">-</button>
+                                            <div class="inner-container-wrapper">
+                                                <!-- * Input Inner Wrapper -->
+                                                <div class="input-inner-wrapper">
+                                                    <input autocomplete="off" type="text" id="bankAddr" name="brandModel">
+                                                </div>
+                                                <!-- * Add and Subtract Button  -->
+                                                <div class="input-inner-wrapper">
+                                                    <button type="button" class="addOrSubButton" data-add-button-6>+</button>
+                                                    <button type="button" class="addOrSubButton" data-sub-button-6>-</button>
+                                                </div>
+                                            </div>
                                         </div>
 
 

@@ -448,86 +448,66 @@ if (declineApplicationModal) {
 }
 
 
-// ****** Child Form Toggle ***** //
-
-// * Add Child (Married)
-const childForm = document.querySelector('[data-child]')
-const childContainer = document.querySelector('[data-child-container]')
-
+// ****** Global Add And/Or Subtract ***** //
 let cloneCount = 1
 
-function addChild() {
+// * Add Global / (Child)
+function addGlobal(itemName, button, form, container) {
+    form.setAttribute('id', itemName)
 
-    childForm.setAttribute('id', 'child-1')
+    button.addEventListener('click', () => {
+        
+            // * Clone the original element
+            const clonedChild = form.cloneNode(true)
+        
+            // * Increment the clone count and modify the ID
+            cloneCount++
+            const newId = `child-${cloneCount}`
+            clonedChild.id = newId
+        
+            // * Hide the increment button
+            clonedChild.lastElementChild.lastElementChild.lastElementChild.children[0].style.visibility = 'hidden'
+        
+        
+            // * Append the cloned element to the target container
+            container.appendChild(clonedChild)
 
-    // * Clone the original element
-    const clonedChild = childForm.cloneNode(true)
-
-    // * Increment the clone count and modify the ID
-    cloneCount++
-    const newId = `child-${cloneCount}`
-    clonedChild.id = newId
-
-    // * Hide the increment button
-    clonedChild.lastElementChild.lastElementChild.lastElementChild.children[0].style.visibility = 'hidden'
-
-
-    // * Append the cloned element to the target container
-    childContainer.appendChild(clonedChild)
+    })
 
 }
 
 // * Subtract Child (Married)
-function subChild() {
+function subChild(button, container) {
 
     // * Reset cloneCount when decrement
-    cloneCount = 1
-
-    // * Remove the the next sibling of child-1
-    if (childContainer.children[7].nextElementSibling !== null) {
-        childContainer.lastElementChild.remove()
-    }
-
-}
-
-// * Add Child (Single)
-function addChildSingle() {
-
-    const childForm = document.querySelector('[data-child-2]')
-    const childContainer = document.querySelector('[data-child-container-2]')
-
-    childForm.setAttribute('id', 'child-1')
-
-    // * Clone the original element
-    const clonedChild = childForm.cloneNode(true)
-
-    // * Increment the clone count and modify the ID
-    cloneCount++
-    const newId = `child-${cloneCount}`
-    clonedChild.id = newId
-
-    // * Hide the increment button
-    clonedChild.lastElementChild.lastElementChild.lastElementChild.children[0].style.visibility = 'hidden'
-
-    // * Append the cloned element to the target container
-    childContainer.appendChild(clonedChild)
+    button.addEventListener('click', () => {
+        cloneCount = 1
+        // * Remove the the next sibling of child-1
+        if (container.children[7].nextElementSibling !== null) {
+            container.lastElementChild.remove()
+        }
+    })
 
 }
 
-// * Subtract Child (Single)
-function subChildSingle() {
+// * Add & Subtract Child (Married)
+const addButton = document.querySelector('[data-add-button]')
+const subButton = document.querySelector('[data-sub-button]')
+const childForm1 = document.querySelector('[data-child]')
+const childContainer1 = document.querySelector('[data-child-container]')
+const child1 = 'child-1'
 
-    const childContainer = document.querySelector('[data-child-container-2]')
+addGlobal(child1, addButton, childForm1, childContainer1)
+subChild(subButton, childContainer1)
 
-    // * Reset cloneCount when decrement
-    cloneCount = 1
+// * Add & Subtract Child (Single)
+const addButton2 = document.querySelector('[data-add-button-2]')
+const subButton2 = document.querySelector('[data-sub-button-2]')
+const childForm2 = document.querySelector('[data-child-2]')
+const childContainer2 = document.querySelector('[data-child-container-2]')
 
-    // * Remove the the next sibling of child-1
-    if (childContainer.children[7].nextElementSibling !== null) {
-        childContainer.lastElementChild.remove()
-    }
-
-}
+addGlobal(child1, addButton2, childForm2, childContainer2)
+subChild(subButton2, childContainer2)
 
 // ****** END --- Child Form Toggle ***** //
 
@@ -537,7 +517,7 @@ const yesToggle = document.getElementById('formToggleYes')
 const noToggle = document.getElementById('formToggleNo')
 
 if (yesToggle) {
-    yesToggle.addEventListener('click', _ => {
+    yesToggle.addEventListener('click', () => {
 
         const businessForm = document.querySelector('[data-business-form]')
 
@@ -545,7 +525,7 @@ if (yesToggle) {
             businessForm.style.display = 'block'
         }
 
-        noToggle.addEventListener('click', _ => {
+        noToggle.addEventListener('click', () => {
             if (noToggle.checked) {
                 businessForm.style.display = 'none'
             }
@@ -554,233 +534,155 @@ if (yesToggle) {
     })
 
 }
-
 // ***** Assets and Properties ***** //
+// * Assets AND/OR Properties Toggle
+function assetsAndPropertiesToggle(container, yesButton, noButton, asset) {
+    container.style.opacity = '.4'
+    container.style.pointerEvents = 'none'
+
+    yesButton.addEventListener('change', () => {
+
+        if (yesButton) {
+            container.style.opacity = '1'
+            container.style.pointerEvents = 'auto'
+        }
+
+        noButton.addEventListener('change', () => {
+            if (noButton) {
+                container.style.opacity = '.4'
+                container.style.pointerEvents = 'none'
+                asset.value = ''
+            }
+        })
+
+    })
+
+}
+
+// * Add Assets AND/OR Properties
+function addAssetOrProperty(button, firstID, asset, assetContainer) {
+
+    asset.setAttribute('id', firstID)
+
+    button.addEventListener('click', () => {
+        // * Clone the original element
+        const clonedChild = asset.cloneNode(true)
+    
+        // * Increment the clone count and modify the ID
+        cloneCount++
+        const newId = `vehicle-${cloneCount}`
+        clonedChild.id = newId
+    
+        // * Hide the increment button
+        clonedChild.lastElementChild.children[1].children[0].style.visibility = 'hidden'
+    
+    
+        // * Append the cloned element to the target container
+        assetContainer.appendChild(clonedChild)
+    })
+
+}
+
+
+// * Subtract Assets AND/OR Properties
+function subAssetOrProperty(button, assetContainer) {
+
+    // * Reset cloneCount when decrement
+    button.addEventListener('click', () => {
+        cloneCount = 1
+        // * Remove the the next sibling of asset-1
+        if (assetContainer.firstElementChild.nextElementSibling !== null) {
+            assetContainer.lastElementChild.remove()
+        }
+    })
+
+}
+
+// ***** Vehicle Form
 const vehicleFormToggleYes = document.getElementById('vehicleFormToggleYes')
 const vehicleFormToggleNo = document.getElementById('vehicleFormToggleNo')
 const vehicleContainer = document.querySelector('[data-vehicle-container]')
+const vehicle = document.getElementById('ownVehicle')
+const vehicleForm = document.querySelector('[data-vehicle]')
+const vehicleAddButton = document.querySelector('[data-add-button-3]')
+const vehicleSubButton = document.querySelector('[data-sub-button-3]')
+const vehicle1 = 'vehicle-1'
 
-vehicleContainer.style.opacity = '.4'
-vehicleContainer.style.pointerEvents = 'none'
+// * Vehicle Form Toggle
+assetsAndPropertiesToggle(vehicleContainer, 
+    vehicleFormToggleYes, vehicleFormToggleNo, vehicle)
 
-vehicleFormToggleYes.addEventListener('change', () => {
-
-    if (vehicleFormToggleYes) {
-        vehicleContainer.style.opacity = '1'
-        vehicleContainer.style.pointerEvents = 'auto'
-    }
-
-    vehicleFormToggleNo.addEventListener('change', () => {
-        const vehicle = document.getElementById('ownVehicle')
-        if (vehicleFormToggleNo) {
-            vehicleContainer.style.opacity = '.4'
-            vehicleContainer.style.pointerEvents = 'none'
-            vehicle.value = ''
-        }
-    })
-
-})
-
-const propertyFormToggleYes = document.getElementById('propertyFormToggleYes')
-const propertyFormToggleNo = document.getElementById('propertyFormToggleNo')
-const propertyContainer = document.querySelector('[data-property-container]')
-
-propertyContainer.style.opacity = '.4'
-propertyContainer.style.pointerEvents = 'none'
-
-propertyFormToggleYes.addEventListener('change', () => {
-
-    if (propertyFormToggleYes) {
-        propertyContainer.style.opacity = '1'
-        propertyContainer.style.pointerEvents = 'auto'
-    }
-
-    propertyFormToggleNo.addEventListener('change', () => {
-        const property = document.getElementById('ownProperty')
-        if (propertyFormToggleNo) {
-            propertyContainer.style.opacity = '.4'
-            propertyContainer.style.pointerEvents = 'none'
-            property.value = ''
-        }
-    })
-
-})
-
-
-// ***** Add and Subtract Vehicle ***** //
 // * Add Vehicle
-function addVehicle() {
-
-    const vehicleForm = document.querySelector('[data-vehicle]')
-
-    vehicleForm.setAttribute('id', 'vehicle-1')
-
-    // * Clone the original element
-    const clonedChild = vehicleForm.cloneNode(true)
-
-    // * Increment the clone count and modify the ID
-    cloneCount++
-    const newId = `vehicle-${cloneCount}`
-    clonedChild.id = newId
-
-    // * Hide the increment button
-    clonedChild.lastElementChild.children[1].children[0].style.visibility = 'hidden'
-
-
-    // * Append the cloned element to the target container
-    vehicleContainer.appendChild(clonedChild)
-
-}
-
+addAssetOrProperty(vehicleAddButton, vehicle1, vehicleForm, vehicleContainer)
 // * Subtract Vehicle
-function subVehicle() {
-
-    const vehicleContainer = document.querySelector('[data-vehicle-container]')
-
-    // * Reset cloneCount when decrement
-    cloneCount = 1
-
-    // * Remove the the next sibling of child-1
-    if (vehicleContainer.firstElementChild.nextElementSibling !== null) {
-        vehicleContainer.lastElementChild.remove()
-    }
-
-}
+subAssetOrProperty(vehicleSubButton, vehicleContainer)
 
 // ***** END ---- Add and Subtract Vehicle ***** //
 
 
 // ***** Add and Subtract Property ***** //
+// * Property Form
+const propertyFormToggleYes = document.getElementById('propertyFormToggleYes')
+const propertyFormToggleNo = document.getElementById('propertyFormToggleNo')
+const propertyContainer = document.querySelector('[data-property-container]')
+const property = document.getElementById('ownProperty')
+const propertyForm = document.querySelector('[data-property]')
+const propertyAddButton = document.querySelector('[data-add-button-4]')
+const propertySubButton = document.querySelector('[data-sub-button-4]')
+const property1 = 'property-1'
+
+assetsAndPropertiesToggle(propertyContainer, 
+    propertyFormToggleYes, propertyFormToggleNo, property)
 
 // * Add Property
-function addProperty() {
-
-    const propertyForm = document.querySelector('[data-property]')
-
-    propertyForm.setAttribute('id', 'property-1')
-
-    // * Clone the original element
-    const clonedChild = propertyForm.cloneNode(true)
-
-    // * Increment the clone count and modify the ID
-    cloneCount++
-    const newId = `property-${cloneCount}`
-    clonedChild.id = newId
-
-    // * Hide the increment button
-    clonedChild.lastElementChild.children[1].children[0].style.visibility = 'hidden'
-
-
-    // * Append the cloned element to the target container
-    propertyContainer.appendChild(clonedChild)
-
-}
-
+addAssetOrProperty(propertyAddButton, property1, propertyForm, propertyContainer)
 // * Subtract Property
-function subProperty() {
-
-    const propertyContainer = document.querySelector('[data-property-container]')
-
-    // * Reset cloneCount when decrement
-    cloneCount = 1
-
-    // * Remove the the next sibling of property-1
-    if (propertyContainer.firstElementChild.nextElementSibling !== null) {
-        propertyContainer.lastElementChild.remove()
-    }
-
-}
+subAssetOrProperty(propertySubButton, propertyContainer)
 
 // ***** END ---- Add and Subtract Property ***** //
 
+// * Subtract Appliances and Banks
+function subAppliancesAndBanks(button, container) {
+
+    button.addEventListener("click", () => {
+        // * Reset cloneCount when decrement
+        cloneCount = 1
+    
+        // * Remove the the next sibling of appliance-1
+        if (container.firstElementChild.nextElementSibling !== null) {
+            container.lastElementChild.remove()
+        }
+    })
+
+}
 
 // ***** Add and Subtract Appliances ***** //
+const applianceAddButton = document.querySelector('[data-add-button-5]')
+const applianceSubButton = document.querySelector('[data-sub-button-5]')
+const appliancesForm = document.querySelector('[data-appliances]')
+const appliancesContainer = document.querySelector('[data-appliances-container]')
+const appliance1 = 'appliance-1'
 
 // * Add Appliances
-function addAppliances() {
-
-    const appliancesForm = document.querySelector('[data-appliances]')
-    const appliancesContainer = document.querySelector('[data-appliances-container]')
-
-    appliancesForm.setAttribute('id', 'property-1')
-
-    // * Clone the original element
-    const clonedChild = appliancesForm.cloneNode(true)
-
-    // * Increment the clone count and modify the ID
-    cloneCount++
-    const newId = `property-${cloneCount}`
-    clonedChild.id = newId
-
-    // * Hide the increment button
-    clonedChild.lastElementChild.lastElementChild.lastElementChild.children[0].style.visibility = 'hidden'
-
-
-    // * Append the cloned element to the target container
-    appliancesContainer.appendChild(clonedChild)
-
-}
-
+addGlobal(appliance1, applianceAddButton, appliancesForm, appliancesContainer)
 // * Subtract Appliances
-function subAppliances() {
+subAppliancesAndBanks(applianceSubButton, appliancesContainer)
 
-    const appliancesContainer = document.querySelector('[data-appliances-container]')
-
-    // * Reset cloneCount when decrement
-    cloneCount = 1
-
-    // * Remove the the next sibling of appliance-1
-    if (appliancesContainer.firstElementChild.nextElementSibling !== null) {
-        appliancesContainer.lastElementChild.remove()
-    }
-
-}
 
 // ***** END ---- Add and Subtract Appliances ***** //
 
 
 // ***** Add and Subtract Bank ***** //
+const bankAddButton = document.querySelector('[data-add-button-6]')
+const bankSubButton = document.querySelector('[data-sub-button-6]')
+const bankForm = document.querySelector('[data-bank]')
+const bankContainer = document.querySelector('[data-bank-container]')
+const bank1 = 'bank-1'
 
 // * Add Bank
-function addBank() {
-
-    const bankForm = document.querySelector('[data-bank]')
-    const bankContainer = document.querySelector('[data-bank-container]')
-
-    bankForm.setAttribute('id', 'bank-1')
-
-    // * Clone the original element
-    const clonedChild = bankForm.cloneNode(true)
-
-    // * Increment the clone count and modify the ID
-    cloneCount++
-    const newId = `bank-${cloneCount}`
-    clonedChild.id = newId
-
-    // * Hide the increment button
-    clonedChild.lastElementChild.lastElementChild.lastElementChild.children[0].style.visibility = 'hidden'
-
-
-    // * Append the cloned element to the target container
-    bankContainer.appendChild(clonedChild)
-
-}
-
+addGlobal(bank1, bankAddButton, bankForm, bankContainer)
 // * Subtract Bank
-function subBank() {
-
-    const bankContainer = document.querySelector('[data-bank-container]')
-
-    // * Reset cloneCount when decrement
-    cloneCount = 1
-
-    // * Remove the the next sibling of appliance-1
-    if (bankContainer.firstElementChild.nextElementSibling !== null) {
-        bankContainer.lastElementChild.remove()
-    }
-
-
-}
+subAppliancesAndBanks(bankSubButton, bankContainer)
 
 // ***** END ---- Add and Subtract Bank ***** //
 

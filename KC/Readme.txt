@@ -1090,7 +1090,21 @@ First Commit:
 
 Second Commit:
 • Maintenance Module: Loan Types Fixed Dropdown✅
+    - maintenance.js
 
 Third Commit:
 • Application Module: Optimized and Fixed Dropdown✅
+    - newApplication.js
 
+Fourth Commit:
+• Application Module: Optimize Add and Subtract Functions✅
+    - newApplication.js
+    • Implemented significant changes in html elements in add and subtract buttons
+    Changed onclick to data attributes(data-add-button-#, data-sub-button-#)
+        - new-application.html
+        - new-application-view.html
+        - new-application-credit-investigation.html
+        - new-application-credit-investigation-view.html
+        - new-application-approval.html
+        - new-application-releasing.html
+        - new-application-releasing-completion.html
