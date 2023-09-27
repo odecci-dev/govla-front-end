@@ -1091,3 +1091,6 @@ First Commit:
 Second Commit:
 • Maintenance Module: Loan Types Fixed Dropdown✅
 
+Third Commit:
+• Application Module: Optimized and Fixed Dropdown✅
+

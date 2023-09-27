@@ -223,66 +223,8 @@ if (viewHolidayBtn) {
 }
 
 
-// // ** Select Dropdown 1 (Percentage & Fixed Toggle)
-// const selectBox = document.querySelectorAll('.select-box')
-
-
-// // const optionsContainer1 = document.querySelector('[data-option-con]');
-
-// selectBox.forEach((dropdownContainer) => {
-//     dropdownContainer.addEventListener('click', (e) => {
-
-//         // * When a link is clicked, toggle the submenu
-//         const isDropdownButton = e.target.matches("[data-option-select]")
-        
-//         // * Ignore the click in the submenus (to not close when the dropdown is clicked inside the submenu)
-//         if (!isDropdownButton && e.target.closest("[data-option-con]") != null) return
-        
-//         // * If this is a dropdown button, I want toggle submenu by clicking
-//         let currentDropdown
-//         if (isDropdownButton) {
-            
-//             // * Hide or Show submenu toggle
-//             currentDropdown = e.target.previousElementSibling
-//             currentDropdown.classList.toggle("active")
-            
-//         }
-        
-//         // * Get rid off the submenus that are not open (closing submenus that are not clicked)
-//         // * Getting all the submenus and looping in each one and close them
-
-//         const optionsList = document.querySelectorAll('[data-option-item]');
-        
-//         document.querySelectorAll("[data-option-con].active").forEach(dropdown => {
-            
-//         optionsList.forEach(option => {
-//             option.addEventListener("click", () => {
-//                 let currentSelectedOption = currentDropdown.nextElementSibling
-//                 console.log(currentSelectedOption);
-//                 currentSelectedOption.innerHTML = option.querySelector("label").innerHTML
-//                 // dropdown.classList.remove("active");
-//             });
-//         });
-
-//             // * If this dropdown is equal to the current dropdown then add a z-index of 1 to prevent overlapping...   
-//             if (dropdown === currentDropdown) {
-//                 dropdown.style.zIndex = 9
-//                 return
-//             }
-
-//             // * Otherwise, close it
-//             dropdown.classList.remove("active")
-
-//             return
-
-//         })
-
-//     })
-// })
-
-
 // * Select Dropdown Function
-function selectDropdown(selectOption, optionsContainer, optionList, selOpt, optCon, optList) {
+export function selectDropdown(selectOption, optionsContainer, optionList, selOpt, optCon, optList) {
     selectOption.addEventListener("click", () => {
         optionsContainer.classList.toggle("active");
 

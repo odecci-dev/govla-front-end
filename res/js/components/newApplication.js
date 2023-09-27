@@ -1,7 +1,7 @@
 // ****** New Application Module ****** //
+// import { selectDropdown } from '../components/maintenance.js';
 
 // * Receipt Voucher Modal * //
-
 const receiptVoucherModal = document.querySelector('[data-receipt-voucher-modal]')
 const openReceiptVoucherModal = document.querySelector('[data-open-receipt-voucher]')
 
@@ -91,123 +91,65 @@ if (loanDetailsModal && openLoanDetailsButton) {
 
 // *** END --- Loan and Payement History Modal *** //
 
-// ** Select Dropdown 1 (Borrower Gender)
-const selectedOpt1 = document.querySelector('[data-option-select1]');
+// * Select Dropdown
+function selectDropdown(selectOption, optionsContainer, optionList, selOpt, optCon, optList) {
+    selectOption.addEventListener("click", () => {
+        optionsContainer.classList.toggle("active");
 
-const optionsContainer1 = document.querySelector('[data-option-con1]');
-const optionsList1 = document.querySelectorAll('[data-option-item1]');
-
-if (selectedOpt1) {
-
-    selectedOpt1.addEventListener("click", () => {
-        optionsContainer1.classList.toggle("active");
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches('[data-option-select1], [data-option-con1]')) {
-            optionsContainer1.classList.remove("active");
+        // * H4 toggle dropdown
+        const h4 = selectOption.lastElementChild
+        if (h4) {
+            h4.setAttribute(optList, "")
         }
     });
 
-    optionsList1.forEach(option => {
+    // * Close dropdowns when clicking outside of them
+    document.addEventListener('click', (e) => {
+        if (!e.target.matches(selOpt, optCon)) {
+            optionsContainer.classList.remove("active");
+        }
+    });
+
+    optionList.forEach(option => {
         option.setAttribute('value', option.children[0].value)
         option.addEventListener("click", () => {
-            selectedOpt1.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer1.classList.remove("active");
-            selectedOpt1.setAttribute('value', option.children[0].value);
+            selectOption.innerHTML = option.querySelector("label").innerHTML;
+            optionsContainer.classList.remove("active");
+            selectOption.setAttribute('value', option.children[0].value);
         });
     });
 
 }
 
-// ** Select Dropdown 2 (Civil Status)
-const selectedOpt2 = document.querySelector('[data-option-select2]');
-
-if (selectedOpt2) {
-
-    const optionsContainer2 = document.querySelector('[data-option-con2]');
-    const optionsList2 = document.querySelectorAll('[data-option-item2]');
-
-    selectedOpt2.addEventListener("click", () => {
-        optionsContainer2.classList.toggle("active");
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches('[data-option-select2], [data-option-con2]')) {
-            optionsContainer2.classList.remove("active");
-        }
-    });
-
-    optionsList2.forEach(option => {
-        option.setAttribute('value', option.children[0].value)
-        option.addEventListener("click", () => {
-            selectedOpt2.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer2.classList.remove("active");
-            selectedOpt2.setAttribute('value', option.children[0].value);
-        });
-    });
-
-    // * Civil Status Selector Form Toggle
-    const famBGFormSingle = document.querySelector('[data-family-background-single]')
-    const famBGFormMarried = document.querySelector('[data-family-background-married]')
-
-    optionsContainer2.children[0].addEventListener('click', () => {
-        famBGFormSingle.style.display = 'none'
-        famBGFormMarried.style.display = 'none'
+// * Family Background Form Toggle
+function famBgFormToggle(optionsContainer, bgFormSingle, bgFormMarried) {
+    optionsContainer.children[0].addEventListener('click', () => {
+        bgFormSingle.style.display = 'none'
+        bgFormMarried.style.display = 'none'
     })
-    optionsContainer2.children[1].addEventListener('click', () => {
-        famBGFormSingle.style.display = 'none'
-        famBGFormMarried.style.display = 'block'
+    optionsContainer.children[1].addEventListener('click', () => {
+        bgFormSingle.style.display = 'none'
+        bgFormMarried.style.display = 'block'
     })
-    optionsContainer2.children[2].addEventListener('click', () => {
-        famBGFormMarried.style.display = 'none'
-        famBGFormSingle.style.display = 'block'
+    optionsContainer.children[2].addEventListener('click', () => {
+        bgFormMarried.style.display = 'none'
+        bgFormSingle.style.display = 'block'
     })
-
 }
 
-// ** Select Dropdown 3 (Employment Status)
-const selectedOpt3 = document.querySelector('[data-option-select3]');
-
-if (selectedOpt3) {
-
-    const optionsContainer3 = document.querySelector('[data-option-con3]');
-    const optionsList3 = document.querySelectorAll('[data-option-item3]');
-
-    selectedOpt3.addEventListener("click", () => {
-        optionsContainer3.classList.toggle("active");
-    });
-    
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches('[data-option-select3], [data-option-con3]')) {
-            optionsContainer3.classList.remove("active");
-        }
-    });
-
-    optionsList3.forEach(option => {
-        option.setAttribute('value', option.children[0].value)
-        option.addEventListener("click", () => {
-            selectedOpt3.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer3.classList.remove("active");
-            selectedOpt3.setAttribute('value', option.children[0].value);
-        });
-    });
-
-    // * Borrower Job Information
-    const previousJob = document.querySelectorAll('[data-previous-job]')
-    const currentJob = document.querySelectorAll('[data-current-job]')
-
-    for (const previousJobItems of previousJob) {
+// * Job Toggle
+function jobToggle(optionsContainer, prevJob, currJob) {
+    for (const previousJobItems of prevJob) {
         previousJobItems.style.display = 'none'
 
-        for (const currentJobItems of currentJob) {
+        for (const currentJobItems of currJob) {
 
-            optionsContainer3.firstElementChild.addEventListener('click', () => {
+            optionsContainer.firstElementChild.addEventListener('click', () => {
                 previousJobItems.style.display = 'none'
                 currentJobItems.style.display = 'block'
             })
-
-            optionsContainer3.lastElementChild.addEventListener('click', () => {
+            
+            optionsContainer.lastElementChild.addEventListener('click', () => {
                 previousJobItems.style.display = 'block'
                 currentJobItems.style.display = 'none'
             })
@@ -216,325 +158,203 @@ if (selectedOpt3) {
     }
 }
 
+// ** Select Dropdown 1 (Borrower Gender)
+const selOpt1 = '[data-option-select1]'
+const optCon1 = '[data-option-con1]'
+const selected1 = 'data-option-select1'
+const selectedOpt1 = document.querySelector(selOpt1)
+const optionsContainer1 = document.querySelector(optCon1)
+const optionsList1 = document.querySelectorAll('[data-option-item1]')
 
+if (selectedOpt1) {
+    selectDropdown(selectedOpt1, optionsContainer1, optionsList1, selOpt1, optCon1, selected1)
+}
 
-// ** Select Dropdown 4
-const selectedOpt4 = document.querySelector('[data-option-select4]');
+// ** Select Dropdown 2 (Civil Status)
+const selOpt2 = '[data-option-select2]'
+const optCon2 = '[data-option-con2]'
+const selected2 = 'data-option-select2'
+const selectedOpt2 = document.querySelector(selOpt2);
+const optionsContainer2 = document.querySelector(optCon2);
+const optionsList2 = document.querySelectorAll('[data-option-item2]');
 
-if (selectedOpt4) {
+if (selectedOpt2) {
 
-    const optionsContainer4 = document.querySelector('[data-option-con4]');
-    const optionsList4 = document.querySelectorAll('[data-option-item4]');
+    selectDropdown(selectedOpt2, optionsContainer2, optionsList2, selOpt2, optCon2, selected2)
 
-    selectedOpt4.addEventListener("click", () => {
-        optionsContainer4.classList.toggle("active");
-    });
+    // * Civil Status Selector Form Toggle
+    const famBGFormSingle = document.querySelector('[data-family-background-single]')
+    const famBGFormMarried = document.querySelector('[data-family-background-married]')
 
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches('[data-option-select4], [data-option-con4]')) {
-            optionsContainer4.classList.remove("active");
-        }
-    });
-
-    optionsList4.forEach(option => {
-        option.setAttribute('value', option.children[0].value)
-        option.addEventListener("click", () => {
-            selectedOpt4.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer4.classList.remove("active");
-            selectedOpt4.setAttribute('value', option.children[0].value);
-        });
-    });
+    famBgFormToggle(optionsContainer2, famBGFormSingle, famBGFormMarried)
 
 }
 
+// ** Select Dropdown 3 (Employment Status)
+const selOpt3 = '[data-option-select3]'
+const optCon3 = '[data-option-con3]'
+const selected3 = 'data-option-select3'
+const selectedOpt3 = document.querySelector(selOpt3);
+const optionsContainer3 = document.querySelector(optCon3);
+const optionsList3 = document.querySelectorAll('[data-option-item3]');
+
+if (selectedOpt3) {
+
+    selectDropdown(selectedOpt3, optionsContainer3, optionsList3, selOpt3, optCon3, selected3)
+
+    // * Borrower Job Information
+    const previousJob = document.querySelectorAll('[data-previous-job]')
+    const currentJob = document.querySelectorAll('[data-current-job]')
+
+    jobToggle(optionsContainer3, previousJob, currentJob)
+
+}
+
+
+// ** Select Dropdown 4
+const selOpt4 = '[data-option-select4]'
+const optCon4 = '[data-option-con4]'
+const selected4 = 'data-option-select4'
+const selectedOpt4 = document.querySelector(selOpt4);
+const optionsContainer4 = document.querySelector(optCon4);
+const optionsList4 = document.querySelectorAll('[data-option-item4]');
+
+if (selectedOpt4) {
+    selectDropdown(selectedOpt4, optionsContainer4, optionsList4, selOpt4, optCon4, selected4)
+}
+
 // ** Select Dropdown 5
-const selectedOpt5 = document.querySelector('[data-option-select5]');
+const selOpt5 = '[data-option-select5]'
+const optCon5 = '[data-option-con5]'
+const selected5 = 'data-option-select5'
+const selectedOpt5 = document.querySelector(selOpt5);
+const optionsContainer5 = document.querySelector(optCon5);
+const optionsList5 = document.querySelectorAll('[data-option-item5]');
 
 if (selectedOpt5) {
-
-    const optionsContainer5 = document.querySelector('[data-option-con5]');
-    const optionsList5 = document.querySelectorAll('[data-option-item5]');
-
-    selectedOpt5.addEventListener("click", () => {
-        optionsContainer5.classList.toggle("active");
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches('[data-option-select5], [data-option-con5]')) {
-            optionsContainer5.classList.remove("active");
-        }
-    });
-
-    optionsList5.forEach(option => {
-        option.setAttribute('value', option.children[0].value)
-        option.addEventListener("click", () => {
-            selectedOpt5.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer5.classList.remove("active");
-            selectedOpt5.setAttribute('value', option.children[0].value);
-        });
-    });
-
+    selectDropdown(selectedOpt5, optionsContainer5, optionsList5, selOpt5, optCon5, selected5)
 }
 
 
 // ** Select Dropdown 6
-const selectedOpt6 = document.querySelector('[data-option-select6]');
+const selOpt6 = '[data-option-select6]'
+const optCon6 = '[data-option-con6]'
+const selected6 = 'data-option-select6'
+const selectedOpt6 = document.querySelector(selOpt6);
+const optionsContainer6 = document.querySelector(optCon6);
+const optionsList6 = document.querySelectorAll('[data-option-item6]');
 
 if (selectedOpt6) {
 
-    const optionsContainer6 = document.querySelector('[data-option-con6]');
-    const optionsList6 = document.querySelectorAll('[data-option-item6]');
-
-    selectedOpt6.addEventListener("click", () => {
-        optionsContainer6.classList.toggle("active");
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches('[data-option-select6], [data-option-con6]')) {
-            optionsContainer6.classList.remove("active");
-        }
-    });
-
-    optionsList6.forEach(option => {
-        option.setAttribute('value', option.children[0].value)
-        option.addEventListener("click", () => {
-            selectedOpt6.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer6.classList.remove("active");
-            selectedOpt6.setAttribute('value', option.children[0].value);
-        });
-    });
-
+    selectDropdown(selectedOpt6, optionsContainer6, optionsList6, selOpt6, optCon6, selected6)
 
     // * Co-Borrower Job Information
     const cbPreviousJob = document.querySelectorAll('[data-cb-previous-job]')
     const cbCurrentJob = document.querySelectorAll('[data-cb-current-job]')
 
-
-    for (const cbPreviousJobItems of cbPreviousJob) {
-        cbPreviousJobItems.style.display = 'none'
-
-        for (const cbCurrentJobItems of cbCurrentJob) {
-
-            optionsContainer6.firstElementChild.addEventListener('click', () => {
-                cbPreviousJobItems.style.display = 'none'
-                cbCurrentJobItems.style.display = 'block'
-            })
-
-            optionsContainer6.lastElementChild.addEventListener('click', () => {
-                cbPreviousJobItems.style.display = 'block'
-                cbCurrentJobItems.style.display = 'none'
-            })
-
-        }
-    }
+    jobToggle(optionsContainer6, cbPreviousJob, cbCurrentJob)
 
 }
 
 // ** Select Dropdown 7
-const selectedOpt7 = document.querySelector('[data-option-select7]');
+const selOpt7 = '[data-option-select7]'
+const optCon7 = '[data-option-con7]'
+const selected7 = 'data-option-select7'
+const selectedOpt7 = document.querySelector(selOpt7);
+const optionsContainer7 = document.querySelector(optCon7);
+const optionsList7 = document.querySelectorAll('[data-option-item7]');
 
 if (selectedOpt7) {
 
-    const optionsContainer7 = document.querySelector('[data-option-con7]');
-    const optionsList7 = document.querySelectorAll('[data-option-item7]');
-
-    selectedOpt7.addEventListener("click", () => {
-        optionsContainer7.classList.toggle("active");
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches('[data-option-select7], [data-option-con7]')) {
-            optionsContainer7.classList.remove("active");
-        }
-    });
-
-    optionsList7.forEach(option => {
-        option.setAttribute('value', option.children[0].value)
-        option.addEventListener("click", () => {
-            selectedOpt7.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer7.classList.remove("active");
-            selectedOpt7.setAttribute('value', option.children[0].value);
-        });
-    });
+    selectDropdown(selectedOpt7, optionsContainer7, optionsList7, selOpt7, optCon7, selected7)
 
     // * Spouse Job Information
     const spousePreviousJob = document.querySelectorAll('[data-spouse-previous-job]')
     const spouseCurrentJob = document.querySelectorAll('[data-spouse-current-job]')
 
-    for (const spousePreviousJobItems of spousePreviousJob) {
-        spousePreviousJobItems.style.display = 'none'
-
-        for (const spouseCurrentJobItems of spouseCurrentJob) {
-
-            optionsContainer7.firstElementChild.addEventListener('click', () => {
-                spousePreviousJobItems.style.display = 'none'
-                spouseCurrentJobItems.style.display = 'block'
-            })
-
-            optionsContainer7.lastElementChild.addEventListener('click', () => {
-                spousePreviousJobItems.style.display = 'block'
-                spouseCurrentJobItems.style.display = 'none'
-            })
-
-        }
-    }
+    jobToggle(optionsContainer7, spousePreviousJob, spouseCurrentJob)
 
 }
 
 // ** Select Dropdown 8
-const selectedOpt8 = document.querySelector('[data-option-select8]');
+const selOpt8 = '[data-option-select8]'
+const optCon8 = '[data-option-con8]'
+const selected8 = 'data-option-select8'
+const selectedOpt8 = document.querySelector(selOpt8);
+const optionsContainer8 = document.querySelector(optCon8);
+const optionsList8 = document.querySelectorAll('[data-option-item8]');
 
 if (selectedOpt8) {
 
-    const optionsContainer8 = document.querySelector('[data-option-con8]');
-    const optionsList8 = document.querySelectorAll('[data-option-item8]');
-
-    selectedOpt8.addEventListener("click", () => {
-        optionsContainer8.classList.toggle("active");
-    });
-    
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches('[data-option-select8], [data-option-con8]')) {
-            optionsContainer8.classList.remove("active");
-        }
-    });
-
-    optionsList8.forEach(option => {
-        option.setAttribute('value', option.children[0].value)
-        option.addEventListener("click", () => {
-            selectedOpt8.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer8.classList.remove("active");
-            selectedOpt8.setAttribute('value', option.children[0].value);
-        });
-    });
+    selectDropdown(selectedOpt8, optionsContainer8, optionsList8, selOpt8, optCon8, selected8)
 
     // * Spouse Job Information
     const fdrPreviousJob = document.querySelectorAll('[data-fdr-previous-job]')
     const fdrCurrentJob = document.querySelectorAll('[data-fdr-current-job]')
 
-    for (const fdrPreviousJobItems of fdrPreviousJob) {
-        fdrPreviousJobItems.style.display = 'none'
-
-        for (const fdrCurrentJobItems of fdrCurrentJob) {
-
-            optionsContainer8.firstElementChild.addEventListener('click', () => {
-                fdrPreviousJobItems.style.display = 'none'
-                fdrCurrentJobItems.style.display = 'block'
-            })
-
-            optionsContainer8.lastElementChild.addEventListener('click', () => {
-                fdrPreviousJobItems.style.display = 'block'
-                fdrCurrentJobItems.style.display = 'none'
-            })
-
-        }
-    }
+    jobToggle(optionsContainer8, fdrPreviousJob, fdrCurrentJob)
 
 }
 
 
 // ** Select Dropdown 9
-const selectedOpt9 = document.querySelector('[data-option-select9]');
+const selOpt9 = '[data-option-select9]'
+const optCon9 = '[data-option-con9]'
+const selected9 = 'data-option-select9'
+const selectedOpt9 = document.querySelector(selOpt9);
+const optionsContainer9 = document.querySelector(optCon9);
+const optionsList9 = document.querySelectorAll('[data-option-item9]');
 
 if (selectedOpt9) {
-
-    const optionsContainer9 = document.querySelector('[data-option-con9]');
-    const optionsList9 = document.querySelectorAll('[data-option-item9]');
-
-    selectedOpt9.addEventListener("click", () => {
-        optionsContainer9.classList.toggle("active");
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches('[data-option-select9], [data-option-con9]')) {
-            optionsContainer9.classList.remove("active");
-        }
-    });
-
-    optionsList9.forEach(option => {
-        option.setAttribute('value', option.children[0].value)
-        option.addEventListener("click", () => {
-            selectedOpt9.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer9.classList.remove("active");
-            selectedOpt9.setAttribute('value', option.children[0].value);
-        });
-    });
-
+    selectDropdown(selectedOpt9, optionsContainer9, optionsList9, selOpt9, optCon9, selected9)
 }
 
 
+// * Mode of Release Toggle
+function modeOfReleaseToggle(optionsContainer, denomToggle, checkNumToggle) {
+    optionsContainer.firstElementChild.addEventListener('click', () => {
+        checkNumToggle.style.display = 'none'
+        denomToggle.style.display = 'flex'
+    })
+
+    optionsContainer.lastElementChild.addEventListener('click', () => {
+        checkNumToggle.style.display = 'flex'
+        denomToggle.style.display = 'none'
+    })
+
+}
+
 // ** Select Dropdown 10 (Mode of Payment)
-const selectedOpt10 = document.querySelector('[data-option-select10]');
+const selOpt10 = '[data-option-select10]'
+const optCon10 = '[data-option-con10]'
+const selected10 = 'data-option-select10'
+const selectedOpt10 = document.querySelector(selOpt10);
+const optionsContainer10 = document.querySelector(optCon10);
+const optionsList10 = document.querySelectorAll('[data-option-item10]');
 
 if (selectedOpt10) {
 
-    const optionsContainer10 = document.querySelector('[data-option-con10]');
-    const optionsList10 = document.querySelectorAll('[data-option-item10]');
-
-    selectedOpt10.addEventListener("click", () => {
-        optionsContainer10.classList.toggle("active");
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches('[data-option-select10], [data-option-con10]')) {
-            optionsContainer10.classList.remove("active");
-        }
-    });
-
-    optionsList10.forEach(option => {
-        option.setAttribute('value', option.children[0].value)
-        option.addEventListener("click", () => {
-            selectedOpt10.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer10.classList.remove("active");
-            selectedOpt10.setAttribute('value', option.children[0].value);
-        });
-    });
+    selectDropdown(selectedOpt10, optionsContainer10, optionsList10, selOpt10, optCon10, selected10)
 
     // * Mode of Release Toggle
     const denominationToggle = document.querySelector('[data-toggle-mor-1]')
     const checkNumberToggle = document.querySelector('[data-toggle-mor-2]')
 
-    optionsContainer10.firstElementChild.addEventListener('click', () => {
-        checkNumberToggle.style.display = 'none'
-        denominationToggle.style.display = 'flex'
-    })
-
-    optionsContainer10.lastElementChild.addEventListener('click', () => {
-        checkNumberToggle.style.display = 'flex'
-        denominationToggle.style.display = 'none'
-    })
+    modeOfReleaseToggle(optionsContainer10, denominationToggle, checkNumberToggle)
 
 }
 
 
-
 // ** Select Dropdown 11
+const selOpt11 = '[data-option-select11]'
+const optCon11 = '[data-option-con11]'
+const selected11 = 'data-option-select11'
 const selectedOpt11 = document.querySelector('[data-option-select11]');
+const optionsContainer11 = document.querySelector('[data-option-con11]');
+const optionsList11 = document.querySelectorAll('[data-option-item11]');
 
 if (selectedOpt11) {
-
-    const optionsContainer11 = document.querySelector('[data-option-con11]');
-    const optionsList11 = document.querySelectorAll('[data-option-item11]');
-
-    selectedOpt11.addEventListener("click", () => {
-        optionsContainer11.classList.toggle("active");
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches('[data-option-select11], [data-option-con11]')) {
-            optionsContainer11.classList.remove("active");
-        }
-    });
-
-    optionsList11.forEach(option => {
-        option.setAttribute('value', option.children[0].value)
-        option.addEventListener("click", () => {
-            selectedOpt11.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer11.classList.remove("active");
-            selectedOpt11.setAttribute('value', option.children[0].value);
-        });
-    });
-
+    selectDropdown(selectedOpt11, optionsContainer11, optionsList11, selOpt11, optCon11, selected11)
 }
 
 // * Mode of Release Toggle
@@ -561,29 +381,50 @@ courierRadioButton.forEach(radio => {
 });
 
 // ********** RELEASING ********** //
-// * Sign For Release Button
-const signForReleasingButton = document.querySelector('[data-sign-for-releasing-button]')
-if (signForReleasingButton) {
-    signForReleasingButton.addEventListener("click", () => {
-        url = 'new-application-releasing-completion.html'
+function linkToPage(button, url) {
+    button.addEventListener("click", () => {
         location.href = url
     })
+}
+
+// * Sign For Release Button
+const signForReleasingButton = document.querySelector('[data-sign-for-releasing-button]')
+
+if (signForReleasingButton) {
+    url = 'new-application-releasing-completion.html'
+    linkToPage(signForReleasingButton, url)
 }
 
 // * Complete Button
 const releaseCompleteButton = document.querySelector('[data-application-complete-button]')
 if (releaseCompleteButton) {
-    releaseCompleteButton.addEventListener('click', () => {
-        url = 'new-application-list.html'
-        location.href = url
-    })
+    url = 'new-application-list.html'
+    linkToPage(releaseCompleteButton, url)
 }
 
 // * Cancel Button
 const cancelButton = document.querySelector('[data-link-back-to-approval]')
 if (cancelButton) {
-    cancelButton.addEventListener('click', () => {
-        url = '/KC/transactions/new-application-approval.html'
+    url = '/KC/transactions/new-application-approval.html'
+    linkToPage(cancelButton, url)
+}
+
+// ***** Modal with Submit Button redirect to another page ***** //
+function submitModalFunction(open, close, submit, modal, url) {
+    open.addEventListener('click', () => {
+        modal.showModal()
+    })
+
+    close.addEventListener('click', () => {
+        modal.setAttribute("closing", "");
+        modal.addEventListener("animationend", () => {
+            modal.removeAttribute("closing")
+            modal.close()
+        }, { once: true })
+    
+    })
+
+    submit.addEventListener("click", () => {
         location.href = url
     })
 }
@@ -595,25 +436,14 @@ if (declineApplicationModal) {
     const openDeclineApplicationModal = document.querySelector('[data-open-application-decline]')
     const closeDeclineApplicationModal = document.querySelector('[data-close-application-decline]')
     const submitDeclineReason = document.querySelector('[data-submit-decline-reason]')
+    url = 'new-application.html'
 
-    openDeclineApplicationModal.addEventListener('click', () => {
-        declineApplicationModal.showModal()
-    })
-
-    closeDeclineApplicationModal.addEventListener('click', () => {
-        declineApplicationModal.setAttribute("closing", "");
-        declineApplicationModal.addEventListener("animationend", () => {
-            declineApplicationModal.removeAttribute("closing")
-            declineApplicationModal.close()
-        }, { once: true })
-    
-    })
-
-    submitDeclineReason.addEventListener("click", () => {
-        url = 'new-application.html'
-        location.href = url
-    })
-
+    submitModalFunction(
+        openDeclineApplicationModal, 
+        closeDeclineApplicationModal,
+        submitDeclineReason,
+        declineApplicationModal,
+        url)
 
 }
 
@@ -1221,34 +1051,3 @@ imageUploadCoMakerSignature.addEventListener('change', function(e) {
     }
 
 })
-
-
-
-
-
-// ***** Signature Pad ***** //
-
-// let canvas = document.querySelectorAll(".signature-pad").forEach((e) => {
-
-//     function resizeCanvas() {
-//         let ratio = Math.max(window.devicePixelRatio || 1, 1);
-//         e.width = e.offsetWidth * ratio;
-//         e.height = e.offsetHeight * ratio;
-//         e.getContext("2d").scale(ratio, ratio);
-//     }
-//     window.onresize = resizeCanvas;
-//     resizeCanvas();
-
-//     let signaturePad = new SignaturePad(e, {
-//         backgroundColor: 'rgb(250,250,250)'
-//     });
-
-//     document.getElementById("clearAppSig").addEventListener('click', function() {
-//         signaturePad.clear();
-//     })
-
-//     document.getElementById("clearCoSig").addEventListener('click', function() {
-//         signaturePad.clear();
-//     })
-
-// });
