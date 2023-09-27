@@ -47,6 +47,7 @@ if (backToFieldOfficerTableBtn) {
 
 }
 
+
 // *************** Add Field Officer Functions *************** //
 
 // ***** Upload Image and Attach Files ***** //
@@ -280,192 +281,97 @@ if (viewHolidayBtn) {
 // })
 
 
+// * Select Dropdown Function
+function selectDropdown(selectOption, optionsContainer, optionList, selOpt, optCon, optList) {
+    selectOption.addEventListener("click", () => {
+        optionsContainer.classList.toggle("active");
+
+        // * H4 toggle dropdown
+        const h4 = selectOption.lastElementChild
+        if (h4) {
+            h4.setAttribute(optList, "")
+        }
+    });
+
+    // * Close dropdowns when clicking outside of them
+    document.addEventListener('click', (e) => {
+        if (!e.target.matches(selOpt, optCon)) {
+            optionsContainer.classList.remove("active");
+        }
+    });
+
+    optionList.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
+        option.addEventListener("click", () => {
+            selectOption.innerHTML = option.querySelector("label").innerHTML;
+            optionsContainer.classList.remove("active");
+            selectOption.setAttribute('value', option.children[0].value);
+        });
+    });
+
+}
 
 // ** Select Dropdown 1 (Percentage & Fixed Toggle)
-let selectedOpt1 = document.querySelector('[data-option-select1]');
+const selOpt1 = '[data-option-select1]'
+const optCon1 = '[data-option-con1]'
+const selected1 = 'data-option-select1'
+const selectedOpt1 = document.querySelector(selOpt1)
+const optionsContainer1 = document.querySelector(optCon1)
+const optionsList1 = document.querySelectorAll('[data-option-item1]')
 
-const optionsContainer1 = document.querySelector('[data-option-con1]');
-const optionsList1 = document.querySelectorAll('[data-option-item1]');
+selectDropdown(selectedOpt1, optionsContainer1, optionsList1, selOpt1, optCon1, selected1)
 
-
-if (selectedOpt1) {
-
-    selectedOpt1.addEventListener("click", () => {
-        optionsContainer1.classList.toggle("active");
-    });
-
-    // * Close dropdowns when clicking outside of them
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches('[data-option-select1], [data-option-con1]')) {
-            optionsContainer1.classList.remove("active");
-        }
-    });
-
-    optionsList1.forEach(option => {
-        option.setAttribute('value', option.children[0].value)
-        option.addEventListener("click", () => {
-            selectedOpt1.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer1.classList.remove("active");
-            selectedOpt1.setAttribute('value', option.children[0].value);
-        });
-    });
-
-}
 
 // ** Select Dropdown 2 (Percentage & Fixed Toggle)
-const selectedOpt2 = document.querySelector('[data-option-select2]');
-
-
-const optionsContainer2 = document.querySelector('[data-option-con2]');
+const selOpt2 = '[data-option-select2]'
+const optCon2 = '[data-option-con2]'
+const selected2 = 'data-option-select2'
+const selectedOpt2 = document.querySelector(selOpt2);
+const optionsContainer2 = document.querySelector(optCon2);
 const optionsList2 = document.querySelectorAll('[data-option-item2]');
 
-if (selectedOpt2) {
+selectDropdown(selectedOpt2, optionsContainer2, optionsList2, selOpt2, optCon2, selected2)
 
-    selectedOpt2.addEventListener("click", () => {
-        optionsContainer2.classList.toggle("active");
-    });
-
-    // * Close dropdowns when clicking outside of them
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches('[data-option-select2], [data-option-con2]')) {
-            optionsContainer2.classList.remove("active");
-        }
-    });
-
-    optionsList2.forEach(option => {
-        option.setAttribute('value', option.children[0].value)
-        option.addEventListener("click", () => {
-            selectedOpt2.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer2.classList.remove("active");
-            selectedOpt2.setAttribute('value', option.children[0].value);
-        });
-    });
-
-}
 
 // ** Select Dropdown 3 (Percentage & Fixed Toggle)
-const selectedOpt3 = document.querySelector('[data-option-select3]');
-
-
-const optionsContainer3 = document.querySelector('[data-option-con3]');
+const selOpt3 = '[data-option-select3]'
+const optCon3 = '[data-option-con3]'
+const selected3 = 'data-option-select3'
+const selectedOpt3 = document.querySelector(selOpt3);
+const optionsContainer3 = document.querySelector(optCon3);
 const optionsList3 = document.querySelectorAll('[data-option-item3]');
 
-if (selectedOpt3) {
+selectDropdown(selectedOpt3, optionsContainer3, optionsList3, selOpt3, optCon3, selected3)
 
-    selectedOpt3.addEventListener("click", () => {
-        optionsContainer3.classList.toggle("active");
-    });
-
-    
-    // * Close dropdowns when clicking outside of them
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches('[data-option-select3], [data-option-con3]')) {
-            optionsContainer3.classList.remove("active");
-        }
-    });
-
-    optionsList3.forEach(option => {
-        option.setAttribute('value', option.children[0].value)
-        option.addEventListener("click", () => {
-            selectedOpt3.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer3.classList.remove("active");
-            selectedOpt3.setAttribute('value', option.children[0].value);
-        });
-    });
-
-}
 
 // ** Select Dropdown 4 (Percentage & Fixed Toggle)
-const selectedOpt4 = document.querySelector('[data-option-select4]');
-
-
-const optionsContainer4 = document.querySelector('[data-option-con4]');
+const selOpt4 = '[data-option-select4]'
+const optCon4 = '[data-option-con4]'
+const selected4 = 'data-option-select4'
+const selectedOpt4 = document.querySelector(selOpt4);
+const optionsContainer4 = document.querySelector(optCon4);
 const optionsList4 = document.querySelectorAll('[data-option-item4]');
 
-if (selectedOpt4) {
-
-    selectedOpt4.addEventListener("click", () => {
-        optionsContainer4.classList.toggle("active");
-    });
-    
-    // * Close dropdowns when clicking outside of them
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches('[data-option-select4], [data-option-con4]')) {
-            optionsContainer4.classList.remove("active");
-        }
-    });
-
-    optionsList4.forEach(option => {
-        option.setAttribute('value', option.children[0].value)
-        option.addEventListener("click", () => {
-            selectedOpt4.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer4.classList.remove("active");
-            selectedOpt4.setAttribute('value', option.children[0].value);
-        });
-    });
-
-}
+selectDropdown(selectedOpt4, optionsContainer4, optionsList4, selOpt4, optCon4, selected4)
 
 
 // ** Select Dropdown 5 (Percentage & Fixed Toggle)
-const selectedOpt5 = document.querySelector('[data-option-select5]');
-
-
-const optionsContainer5 = document.querySelector('[data-option-con5]');
+const selOpt5 = '[data-option-select5]'
+const optCon5 = '[data-option-con5]'
+const selected5 = 'data-option-select5'
+const selectedOpt5 = document.querySelector(selOpt5);
+const optionsContainer5 = document.querySelector(optCon5);
 const optionsList5 = document.querySelectorAll('[data-option-item5]');
 
-if (selectedOpt5) {
-
-    selectedOpt5.addEventListener("click", () => {
-        optionsContainer5.classList.toggle("active");
-    });
-    
-    // * Close dropdowns when clicking outside of them
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches('[data-option-select5], [data-option-con5]')) {
-            optionsContainer5.classList.remove("active");
-        }
-    });
-
-    optionsList5.forEach(option => {
-        option.setAttribute('value', option.children[0].value)
-        option.addEventListener("click", () => {
-            selectedOpt5.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer5.classList.remove("active");
-            selectedOpt5.setAttribute('value', option.children[0].value);
-        });
-    });
-
-}
+selectDropdown(selectedOpt5, optionsContainer5, optionsList5, selOpt5, optCon5, selected5)
 
 
 // ** Select Dropdown 6 (Percentage & Fixed Toggle)
+const selOpt6 = '[data-option-select6]'
+const optCon6 = '[data-option-con6]'
+const selected6 = 'data-option-select6'
 const selectedOpt6 = document.querySelector('[data-option-select6]');
-
-
 const optionsContainer6 = document.querySelector('[data-option-con6]');
 const optionsList6 = document.querySelectorAll('[data-option-item6]');
 
-if (selectedOpt6) {
-
-    selectedOpt6.addEventListener("click", () => {
-        optionsContainer6.classList.toggle("active");
-    });
-    
-    // * Close dropdowns when clicking outside of them
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches('[data-option-select6], [data-option-con6]')) {
-            optionsContainer6.classList.remove("active");
-        }
-    });
-
-    optionsList6.forEach(option => {
-        option.setAttribute('value', option.children[0].value)
-        option.addEventListener("click", () => {
-            selectedOpt6.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer6.classList.remove("active");
-            selectedOpt6.setAttribute('value', option.children[0].value);
-        });
-    });
-
-}
+selectDropdown(selectedOpt6, optionsContainer6, optionsList6, selOpt6, optCon6, selected6)
