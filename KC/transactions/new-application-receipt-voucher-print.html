@@ -8,11 +8,39 @@
     <link rel="stylesheet" href="../../res/css/app.css" />
 </head>
 
-<body>
+<body class="print-landscape">
 
     <!-- <main>
             <!-- * Print Collection Modal -->
             <!-- <div class="print-collection-container"> -->
+
+            <!-- * Query Modal -->
+            <dialog class="asking-modal" data-query-modal>
+
+                <div class="modal-container">
+
+                    <!-- * Modal Header  -->
+                    <div class="modal-header">
+                        <h4>Proceed</h4>
+                    </div>
+
+                    <!-- * Modal Body -->
+                    <div class="rowspan">
+                        <img src="../../res/assets/icons/modal-icon/asking.svg" alt="Asking">
+                        <p>Are you sure you want to proceed?</p>
+                    </div>
+
+                    <!-- * Yes or No Button -->
+                    <div class="rowspan">
+                        <button class="modalButton" data-proceed-print-passbook-button>Yes</button>
+                        <button class="modalButton" data-close-query-modal>No</button>
+                    </div>
+
+                </div>
+
+            </dialog>  
+
+
                 <div class="page-panel" data-page-panel>
                     <div class="panel-inner-wrapper">
                         <!-- <p> &lt;<span data-current-page-num>1</span>/<span data-total-page-num>2</span>&gt;</p> -->
@@ -23,7 +51,7 @@
                             <span data-total-page-num> 2 </span>
                         </p>
                     </div>
-                    <button class="button-2-green done" data-proceed-to-releasing-completion-button>DONE</button>
+                    <button class="button-2 button-opt done" data-open-query-modal>PROCEED</button>
                     <button class="button-2" data-printables-button>PRINT</button>
                 </div>
 
@@ -144,7 +172,7 @@
             <!-- </div> -->
     <!-- </main> -->
     <script src="../../res/js/app.js" defer></script>
-    <script src="../../res/js/components/collection.js" defer></script>
+    <script src="../../res/js/components/printables.js" defer></script>
 
 </body>
 

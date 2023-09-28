@@ -458,9 +458,6 @@ areaMenuButtonToggle()
 const printButton = document.querySelector('[data-collection-print-button]')
 const remitButton = document.querySelector('[data-collection-remit-button]')
 
-// * Application Module: Receipt Voucher Button (Printables)
-const doneButton = document.querySelector('[data-proceed-to-releasing-completion-button]')
-
 if (printButton) {
     printButton.addEventListener('click', () => {
         url = '/KC/collection/collection-print.html'
@@ -473,103 +470,5 @@ if (remitButton) {
         url = '/KC/collection/collection-remittance.html'
         location.href = url
     })
-}
-
-if (doneButton) {
-    doneButton.addEventListener('click', () => {
-        url = '/KC/transactions/new-application-releasing-completion.html'
-        location.href = url
-    })
-}
-
-
-const printablesContainer = document.querySelector('[data-printables-button]')
-
-if (printablesContainer) {
-    printablesContainer.addEventListener('click', () => {
-        window.print()
-    })
-}
-
-
-
-const pages = document.querySelectorAll('.page')
-const pagePanel = document.querySelector('[data-page-panel]')
-const spanCurrentPageNum = document.querySelector('[data-current-page-num]')
-const spanTotalPageNum = document.querySelector('[data-total-page-num]')
-
-// * Page Counter
-pageCount = 0;
-
-if (spanTotalPageNum) {
-    spanTotalPageNum.innerText = pages.length
-}
-
-if (pagePanel) {
-    pagePanel.addEventListener('mouseover', () => {
-        pagePanel.classList.add('show-page-panel')
-    })
-    
-    pagePanel.addEventListener('mouseout', (e) => {
-        const { relatedTarget } = e;
-        if (!pagePanel.contains(relatedTarget)) {
-            pagePanel.classList.remove('show-page-panel')
-        }
-    })
-}
-
-
-pages.forEach(page => {
-    if (page) {
-        page.classList.add('page-break-after')
-    }
-    pageCount++
-    page.setAttribute('id', `Page${pageCount}`)
-
-    page.addEventListener('mouseover', () => {
-        pagePanel.classList.add('show-page-panel')
-    })
-
-    page.addEventListener('mouseout', (e) => {
-        const { relatedTarget } = e;
-        if (!page.contains(relatedTarget)) {
-            pagePanel.classList.remove('show-page-panel')
-        }
-    })
-
-
-})
-
-// * Intersection Observer for Page Number
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            // * Extract the page number from the ID attribute
-            const pageNumber = entry.target.id.replace('Page', '');
-            
-            // * Display the current page number
-            spanCurrentPageNum.value = pageNumber;
-        }
-    })
-}, {
-    threshold: 0.7
-})
-
-pages.forEach(page => {
-    observer.observe(page)
-})
-
-// * Add functionality to go to a specific page
-if (spanCurrentPageNum) {
-    spanCurrentPageNum.addEventListener('input', () => {
-        const pageNumber = parseInt(spanCurrentPageNum.value);
-        
-        // * Validate input
-        if (!isNaN(pageNumber) && pageNumber >= 1 && pageNumber <= pages.length) {
-            
-            // * Scroll to the selected page
-            pages[pageNumber - 1].scrollIntoView({ behavior: 'smooth' })
-        }
-    });
 }
 

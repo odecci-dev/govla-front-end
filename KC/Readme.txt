@@ -1114,6 +1114,7 @@ September 28, 2023 (Thursday)
 First Commit:
 • Application Module: Completed Loan Summary Modal Revs✅
 
+
 Second Commit:
 • Application Module: Implemented Receipt Voucher✅
     - new-application-receipt-voucher-print.html
@@ -1126,4 +1127,39 @@ Second Commit:
         - new-application-receipt-voucher-print.html
         - collection.js
 
+
+Third Commit:
+• Application Module: Passbook
+    - new-application-receipt-voucher-print.html
+    - new-application-approval.html
+    - new-application-releasing.html
+    - new-application-releasing-completion.html
+    - _modal.scss
+    - _collection.scss
+
+• Moved all print functions in (printables.js)
+ - from collection.js
+
+• Moved all print styles in (_printables.scss)
+ - from collection.scss
+
+• Implemented Asking Modal in Printing Receipt Voucher and Passbook
+
+• Added Proceed Button in Receipt Voucher Print
+    - new-application-receipt-voucher-print.html
+    - proceeds to the passbook page for printing
+
+• Added Back Button in Passbook(Front) Print
+    - back button shows Passbook(Back) for printing
+    - new-application-passbook-print.html
+
+• Added Done Button in Passbook(Back) Print
+        - done button proceeds to Releasing Completion
+        - new-application-passbook-print.html
+
+*** Change collection.js to printables.js
+*** Remove export in maintenance.js
+*** Remove containerDefault mixin in _modal.scss
+
+Issue: Printing Size not consistent with the design
 

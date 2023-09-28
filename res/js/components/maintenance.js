@@ -224,7 +224,7 @@ if (viewHolidayBtn) {
 
 
 // * Select Dropdown Function
-export function selectDropdown(selectOption, optionsContainer, optionList, selOpt, optCon, optList) {
+function selectDropdown(selectOption, optionsContainer, optionList, selOpt, optCon, optList) {
     selectOption.addEventListener("click", () => {
         optionsContainer.classList.toggle("active");
 

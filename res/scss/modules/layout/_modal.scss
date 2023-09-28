@@ -1424,7 +1424,7 @@
     }
     // * Member List & Borrower Filter
     .modal-container {
-        @include containerDefault;
+        // @include containerDefault;
         display: flex;
         flex-direction: column;
         align-items: center;
