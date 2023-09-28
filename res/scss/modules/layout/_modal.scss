@@ -1021,7 +1021,8 @@
                         &:nth-of-type(3) {
                             .box-inner:nth-of-type(2) {
                                 .box-inner-wrapper:nth-of-type(2) {
-                                    background-color: rgba(186, 85, 211, 0.445);
+                                    background-color: $primaryTR4;
+                                // background-color: rgba(186, 85, 211, 0.445);
                                 }
                             }
                         }

@@ -387,12 +387,18 @@ function linkToPage(button, url) {
     })
 }
 
+function linkToAWindow(button, url) {
+    button.addEventListener("click", () => {
+        window.open(url)
+    })
+}
+
 // * Sign For Release Button
 const signForReleasingButton = document.querySelector('[data-sign-for-releasing-button]')
 
 if (signForReleasingButton) {
-    url = 'new-application-releasing-completion.html'
-    linkToPage(signForReleasingButton, url)
+    url = 'new-application-receipt-voucher-print.html'
+    linkToAWindow(signForReleasingButton, url)
 }
 
 // * Complete Button

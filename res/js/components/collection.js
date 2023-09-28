@@ -458,6 +458,8 @@ areaMenuButtonToggle()
 const printButton = document.querySelector('[data-collection-print-button]')
 const remitButton = document.querySelector('[data-collection-remit-button]')
 
+// * Application Module: Receipt Voucher Button (Printables)
+const doneButton = document.querySelector('[data-proceed-to-releasing-completion-button]')
 
 if (printButton) {
     printButton.addEventListener('click', () => {
@@ -469,6 +471,13 @@ if (printButton) {
 if (remitButton) {
     remitButton.addEventListener('click', () => {
         url = '/KC/collection/collection-remittance.html'
+        location.href = url
+    })
+}
+
+if (doneButton) {
+    doneButton.addEventListener('click', () => {
+        url = '/KC/transactions/new-application-releasing-completion.html'
         location.href = url
     })
 }

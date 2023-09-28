@@ -1113,3 +1113,17 @@ Fourth Commit:
 September 28, 2023 (Thursday)
 First Commit:
 • Application Module: Completed Loan Summary Modal Revs✅
+
+Second Commit:
+• Application Module: Implemented Receipt Voucher✅
+    - new-application-receipt-voucher-print.html
+    - new-application-approval.html
+    - new-application-releasing.html
+    - new-application-releasing-completion.html
+    - _modal.scss
+    - _collection.scss
+    • Added Done Button in Receipt Voucher Print
+        - new-application-receipt-voucher-print.html
+        - collection.js
+
+
