@@ -5,10 +5,12 @@
 .main-dashboard {
     @include dashboard2; 
     .reports-container {
+        margin: 2rem;
         .filter-button {
             display: flex;
             align-items: center;
             gap: 0 $spacing-4x-large;
+            padding: 0.4rem 4rem;
             &::after {
                 content: url('/res/assets/icons/funnel-simple.svg');
                 filter: brightness(100);
@@ -20,7 +22,91 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                padding-right: $spacing-2x-large;
+                button {
+                    font-size: $font-size;
+                }
+            }
+            .body-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: $spacing-5x-large 0;
+                margin-top: $spacing-2x-large;
+                .area-report-container {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    border-bottom: 1px solid $font-accent;
+                    // * Arrow Down Right
+                    &::after {
+                        content: url('/res/assets/icons/arrow-down-right.svg');
+                        position: absolute;
+                        right: 0;
+                        top: 100%;
+                    }
+                    // * Base Classes
+                    .font-size-x-small{
+                        font-size: $font-size-x-small;
+                    }
+                    .font-size-regular{
+                        font-size: $font-size;
+                    }
+                    .font-size-medium{
+                        font-size: $font-size-medium;
+                    }
+                    // * End of Classes
+
+                    .area-header {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: calc($spacing-large - 0.6rem) $spacing-large;
+                    }
+                    .area-body {
+                        display: flex;
+                        flex-direction: column;
+                        .wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            &.wrapper-expandable {
+                                display: grid;
+                                grid-template-rows: repeat(3, minmax(0, 0fr));
+                                min-height: 0;
+                                opacity: 0;
+                                overflow: hidden;
+                                transition:500ms;
+                            }
+                            &.wrapper-expandable.show{
+                                display: grid;
+                                opacity: 1;
+                                grid-template-rows: repeat(3, minmax(0, 1fr));
+                                min-height: 0;
+                            }
+                            .inner-wrapper {
+                                display: flex;
+                                flex-direction: column;
+                                padding: $spacing-large;
+                                gap: $spacing 0;
+                                border-top: 1px solid $font-accent;
+                                .row {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    &:first-of-type {
+                                        gap: $spacing-large;
+                                    }
+                                    &:last-of-type {
+                                        justify-content: space-between;
+                                    }
+                                    .row-wrapper {
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: flex-end;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

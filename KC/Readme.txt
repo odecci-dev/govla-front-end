@@ -1177,3 +1177,6 @@ First Commit:
 
 • Made _reports.scss
 
+Second Commit:
+• Finished Outstanding Reports Layout
+
