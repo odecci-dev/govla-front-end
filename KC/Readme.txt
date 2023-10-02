@@ -1163,3 +1163,17 @@ Third Commit:
 
 Issue: Printing Size not consistent with the design
 
+
+September 28, 2023 (Friday)
+
+
+October 02, 2023 (Monday)
+First Commit:
+• Started Implementing the Reports 
+- Outstanding Reports
+
+• Made reports folder for reports html pages
+- outstanding-report.html
+
+• Made _reports.scss
+

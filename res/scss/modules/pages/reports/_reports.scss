@@ -1,0 +1,27 @@
+// * MIXINS that are used in this file are in ../res/scss/modules/abstracts/_mixins.scss
+// * VARIABLES that are used in this file are in ../res/scss/modules/abstracts/_variables.scss
+// 
+// * Main Dashboard 2 Styles
+.main-dashboard {
+    @include dashboard2; 
+    .reports-container {
+        .filter-button {
+            display: flex;
+            align-items: center;
+            gap: 0 $spacing-4x-large;
+            &::after {
+                content: url('/res/assets/icons/funnel-simple.svg');
+                filter: brightness(100);
+                -webkit-filter: invert(100%);
+            }
+        }
+        .report-inner-container-1 {
+            .header-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-right: $spacing-2x-large;
+            }
+        }
+    }
+}
