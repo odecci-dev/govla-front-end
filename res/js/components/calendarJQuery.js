@@ -45,4 +45,34 @@ $( () => {
 
 	});
 	
+	$( "#startDate" ).datepicker({
+		showButtonPanel: true,
+		// format: "MM, d DD, yy",
+		// formatSubmit: "MM, d DD, yy",
+		// buttonImage: "/res/assets/icons/calendar.svg",
+		// buttonText: "Start Date",
+		// showOn: "both",
+		currentText: "Clear",
+        onSelect: function( selectedDate ) {
+			$( "#endDate" ).datepicker({
+				minDate: selectedDate
+			});
+        }
+    });
+	
+    $( "#endDate" ).datepicker({
+		showButtonPanel: true,
+		// format: "MM, d DD, yy",
+		// formatSubmit: "MM, d DD, yy",
+		// buttonImage: "/res/assets/icons/calendar.svg",
+		// buttonText: "End Date",
+		// showOn: "both",
+		currentText: "Clear",
+        onSelect: function( selectedDate ) {
+			$( "#startDate" ).datepicker({
+				maxDate: selectedDate
+			});
+        }
+    });
+	
 } );

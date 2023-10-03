@@ -109,5 +109,226 @@
                 }
             }
         }
+        .report-inner-container-2 {
+            .header-wrapper {
+                display: flex;
+                align-items: center;
+                gap: 0 $spacing-2x-large;
+                h2 {
+                    font-size: $font-size-x-large;
+                }
+                input {
+                    border: none;
+                    &::after {
+                        content: url('/res/assets/icons/carret-down.svg');
+                        // display: block;
+                    }
+                }
+                button {
+                    font-size: $font-size;
+                }
+            }
+            .body-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: $spacing-5x-large 0;
+                margin-top: $spacing-2x-large;
+                .area-report-container {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    // * Base Classes
+                    .font-size-x-small{
+                        font-size: $font-size-x-small;
+                    }
+                    .font-size-regular{
+                        font-size: $font-size;
+                    }
+                    .font-size-medium{
+                        font-size: $font-size-medium;
+                    }
+                    // * End of Classes
+                    .area-report-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        .area-header {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: calc($spacing-large - 0.6rem) $spacing-large;
+                        }
+                        .area-body {
+                            display: flex;
+                            flex-direction: column;
+                            border-bottom: 1px solid $font-accent;
+                            .wrapper {
+                                display: flex;
+                                flex-direction: column;
+                                &.wrapper-expandable {
+                                    display: grid;
+                                    grid-template-rows: repeat(3, minmax(0, 0fr));
+                                    min-height: 0;
+                                    opacity: 0;
+                                    overflow: hidden;
+                                    transition:500ms;
+                                }
+                                &.wrapper-expandable.show{
+                                    display: grid;
+                                    opacity: 1;
+                                    grid-template-rows: repeat(3, minmax(0, 1fr));
+                                    min-height: 0;
+                                }
+                                .inner-wrapper {
+                                    display: flex;
+                                    flex-direction: column;
+                                    padding: $spacing-large;
+                                    gap: $spacing 0;
+                                    border-top: 1px solid $font-accent;
+                                    .row {
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center;
+                                        &:first-of-type {
+                                            gap: $spacing-large;
+                                        }
+                                        &:last-of-type {
+                                            justify-content: space-between;
+                                        }
+                                        .row-wrapper {
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: flex-end;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        // * Arrow Down Right
+                        img[alt='arrow-down-right'] {
+                            align-self: flex-end;
+                        }
+                    }
+                }
+                .reports-table-container {
+                    display: flex;
+                    flex-direction: column;
+                    height: 50rem;
+                    // height: clamp(100% - 20rem, 50rem, 66vh);
+                    border-radius: $border-radius-large;
+                    box-shadow: $box-shadow;
+                    // * Table Container
+                    @include breakpointMax(430px) {
+                        display: none;
+                    }
+                    .table-container {
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        @include custom-scroll;
+                        
+                        table {
+                            // **                         ** //
+                            // **** Table Header Styles **** //
+                            // **                         ** //
+                            th {
+                                padding: $spacing-medium $spacing-3x-large;
+                                text-align: left;
+                                span.th-name {
+                                    font-size: $font-size;
+                                    font-weight: $font-weight-bold;
+                                }
+                                .th-wrapper {
+                                    display: flex;
+                                    align-items: center;
+                                    img {
+                                        cursor: pointer;
+                                        padding-left: 0.5rem;
+                                    }
+                                }
+                            }
+                            // * All table header except the last child
+                            th:nth-of-type(1n+3):not(:nth-of-type(7)){
+                                text-align: right;
+                            }
+                            // th:nth-of-type(n+2):not(:nth-of-type(n+6)) {
+                            //     text-align: right;
+                            // }
+                            // * Table Checkbox
+                            th:first-of-type {
+                                padding-left: $spacing-2x-large;
+                            }
+                            th:nth-of-type(2) {
+                                text-align: left;
+                                padding-left: 0;
+                            }
+                            th:nth-of-type(6) {
+                                .th-wrapper {
+                                    justify-content: flex-end;
+                                }
+                            }
+                            // **                       ** //
+                            // **** Table Data Styles **** //
+                            // **                       ** //
+                            td {
+                                padding: $spacing-medium $spacing-3x-large;
+                                font-size: $font-size-small;
+                                text-align: left;
+                                // * Borrowers' Data Styles
+                                .td-wrapper {
+                                    display: flex;
+                                    align-items: center;
+                                }
+                                // * Table Buttons Styles
+                                .td-btn-wrapper {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+                            }
+                            td:nth-of-type(1n+3):not(:nth-of-type(7)){
+                                text-align: right;
+                            }
+                            // * Applied Loan Amount
+                            .td-num {
+                                text-align: right;
+                                font-weight: $font-weight-bold;
+                            }
+                            // td:nth-of-type(n+2):not(:nth-of-type(n+6)) {
+                            //     text-align: right;
+                            // }
+                            td:first-of-type {
+                                padding-left: $spacing-2x-large;
+                                padding-right: 0;
+                            }
+                            td:nth-of-type(2) {
+                                padding-left: 0;
+                                // padding: 0 0;
+                            }
+                            // td:nth-of-type(7) {
+                            //     text-align: center;
+                            // }
+                        }
+                    }
+                    // * Total Collection Footer
+                    .total-collection-footer {
+                        display: grid;
+                        .footer-wrapper {
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            margin: $spacing-2x-large $spacing-4x-large $spacing-2x-large 0;
+                            p {
+                                font-size: $font-size;
+                            }
+                            span {
+                                margin-left: $spacing-large;
+                                font-size: $font-size;
+                                font-weight: $font-weight-bold;
+                            }
+                        }
+                    }
+                }   
+            }
+        }
     }
 }

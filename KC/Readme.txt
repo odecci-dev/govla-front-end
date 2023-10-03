@@ -1182,7 +1182,13 @@ Second Commit:
 
 October 02, 2023 (Tuesday)
 First Commit:
-• Reports Module: Outsanding Reports 
+• Reports Module: Outstanding Reports 
+
+Second Commit:
+• Reports Module: Started Collection Reports
+- made collection-report.html 
+
+• Reports Module: Completed Collection Reports✅
 
 
 
