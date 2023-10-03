@@ -12062,6 +12062,12 @@ body.print-portrait .page.page-2.passbook.show {
   border-radius: 3rem;
   background-color: #D6A330;
 }
+.main-dashboard .reports-container .report-inner-container-2 .body-wrapper .reports-table-container .table-container table#pastDueTable th:nth-of-type(1n+2):not(:nth-of-type(7)) {
+  text-align: right;
+}
+.main-dashboard .reports-container .report-inner-container-2 .body-wrapper .reports-table-container .table-container table#pastDueTable td:nth-of-type(1n+2):not(:nth-of-type(7)) {
+  text-align: right;
+}
 .main-dashboard .reports-container .report-inner-container-2 .body-wrapper .reports-table-container .table-container table th {
   padding: 1rem 3rem;
   text-align: left;

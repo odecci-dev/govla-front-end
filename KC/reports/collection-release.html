@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gold One Victory Lending App</title>
+    <link rel="stylesheet" href="../../res/css/app.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <main>
+
+        <!-- * Main Dashboard -->
+        <div class="main-dashboard">
+            <!-- * Filter Modal -->
+            <dialog class="am-filter-modal" data-filter-member-modal>
+
+                <div class="modal-container">
+
+                    <!-- * Modal Header and Exit Button -->
+                    <div class="modal-header">
+                        <h4>Filter</h4>
+                        <button class="exit-button" data-close-filter-member-modal>
+                            <img src="../../res/assets/icons/x-circle.svg" alt="exit">
+                        </button>
+                    </div>
+
+                    <!-- * Current Loan -->
+                    <div class="rowspan">
+
+                        <div class="input-wrapper-modal">
+                            <span>Current Loan</span>
+                            <input autocomplete="off" type="number" id="filterCurrentLoanFrom" name="filterCurrentLoanFrom" placeholder="From">
+                        </div>
+
+                        <div class="input-wrapper-modal">
+                            <input autocomplete="off" type="number" id="filterCurrentLoanTo" name="filterCurrentLoanTo" placeholder="To">
+                        </div>
+
+                    </div>
+
+                    <!-- * Outstanding Balance -->
+                    <div class="rowspan">
+
+                        <div class="input-wrapper-modal">
+                            <span>Outstanding Balance</span>
+                            <input autocomplete="off" type="number" id="filterOutstandingBal" name="filterOutstandingBal">
+                        </div>
+
+                    </div>
+
+                    <!-- * Save Button -->
+                    <div class="rowspan">
+                        <button class="button" data-save-filter-member-modal>Save</button>
+                    </div>
+
+                </div>
+
+            </dialog>
+            <div class="reports-container">
+                <div class="report-inner-container-2">
+                    <div class="header-wrapper">
+                        <h2>Release Reports</h2>
+                        <input type="button" class="ui-datepicker-trigger" id="startDate" value="Start Date"></input>
+                        <input type="button" class="ui-datepicker-trigger" id="endDate" value="End Date"></input>
+                    </div>
+                    <div class="body-wrapper">
+                        <!-- * Container: Reports Table -->
+                        <div class="reports-table-container">
+                
+                            <!-- * Table Container -->
+                            <div class="table-container">
+                
+                                <!-- * Collection Table -->
+                                <table>
+
+                                    <!-- * Table Header -->
+                                    <tr>
+
+                                        <!-- * Checkbox ALl-->
+                                        <!-- <th><input type="checkbox" class="checkbox" data-select-all-checkbox></th> -->
+
+                                        <!-- * Area -->
+                                        <th><span class="th-name">Area</span></th>
+
+                                        <!-- * Field Officer -->
+                                        <th><span class="th-name">Field Officer</span></th>
+
+                                        <!-- * Total Collection -->
+                                        <th>
+                                            <span class="th-name">Total Collection</span>
+                                        </th>
+
+                                        <!-- * Total Savings -->
+                                        <th>
+                                            <span class="th-name">Total Savings</span>
+                                        </th>
+
+                                        <!-- * Total Lapses -->
+                                        <th>
+                                            <span class="th-name">Total Lapses</span> 
+                                        </th>
+
+                                        <!-- * Total Advance -->
+                                        <th>
+                                            <span class="th-name">Total Advance</span> 
+                                        </th>
+
+                                        <!-- * Cash Remit -->
+                                        <th>
+                                            <span class="th-name">Cash Remit</span> 
+                                        </th>
+
+                                        <!-- * Total NP -->
+                                        <th>
+                                            <span class="th-name">Total NP</span> 
+                                        </th>
+
+                                    </tr>
+
+                                    <!-- * All Members Data -->
+                                    <tr>
+
+                                        
+                                        <!-- * Area -->
+                                        <td><span class="td-name">Area 1</span></td>
+
+                                        <!-- * Field Officer -->
+                                        <td><span class="td-name">Mario Sakay</span></td>
+
+                                        <!-- * Total Collection -->
+                                        <td>
+                                            <span class="td-name">1231</span>
+                                        </td>
+
+                                        <!-- * Total Savings -->
+                                        <td>
+                                            <span class="td-name">123</span>
+                                        </td>
+
+                                        <!-- * Total Lapses -->
+                                        <td>
+                                            <span class="td-name">350.00</span> 
+                                        </td>
+
+                                        <!-- * Total Advance -->
+                                        <td>
+                                            <span class="td-name">700.00</span> 
+                                        </td>
+
+                                        <!-- * Cash Remit -->
+                                        <td>
+                                            <span class="td-name">400.00</span> 
+                                        </td>
+
+                                        <!-- * Total NP -->
+                                        <td>
+                                            <span class="td-name">2</span> 
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        
+                                        <!-- * Area -->
+                                        <td><span class="td-name">Area 1</span></td>
+
+                                        <!-- * Field Officer -->
+                                        <td><span class="td-name">Mario Sakay</span></td>
+
+                                        <!-- * Total Collection -->
+                                        <td>
+                                            <span class="td-name">1231</span>
+                                        </td>
+
+                                        <!-- * Total Savings -->
+                                        <td>
+                                            <span class="td-name">123</span>
+                                        </td>
+
+                                        <!-- * Total Lapses -->
+                                        <td>
+                                            <span class="td-name">350.00</span> 
+                                        </td>
+
+                                        <!-- * Total Advance -->
+                                        <td>
+                                            <span class="td-name">700.00</span> 
+                                        </td>
+
+                                        <!-- * Cash Remit -->
+                                        <td>
+                                            <span class="td-name">400.00</span> 
+                                        </td>
+
+                                        <!-- * Total NP -->
+                                        <td>
+                                            <span class="td-name">2</span> 
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        
+                                        <!-- * Area -->
+                                        <td><span class="td-name">Area 1</span></td>
+
+                                        <!-- * Field Officer -->
+                                        <td><span class="td-name">Mario Sakay</span></td>
+
+                                        <!-- * Total Collection -->
+                                        <td>
+                                            <span class="td-name">1231</span>
+                                        </td>
+
+                                        <!-- * Total Savings -->
+                                        <td>
+                                            <span class="td-name">123</span>
+                                        </td>
+
+                                        <!-- * Total Lapses -->
+                                        <td>
+                                            <span class="td-name">350.00</span> 
+                                        </td>
+
+                                        <!-- * Total Advance -->
+                                        <td>
+                                            <span class="td-name">700.00</span> 
+                                        </td>
+
+                                        <!-- * Cash Remit -->
+                                        <td>
+                                            <span class="td-name">400.00</span> 
+                                        </td>
+
+                                        <!-- * Total NP -->
+                                        <td>
+                                            <span class="td-name">2</span> 
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        
+                                        <!-- * Area -->
+                                        <td><span class="td-name">Area 1</span></td>
+
+                                        <!-- * Field Officer -->
+                                        <td><span class="td-name">Mario Sakay</span></td>
+
+                                        <!-- * Total Collection -->
+                                        <td>
+                                            <span class="td-name">1231</span>
+                                        </td>
+
+                                        <!-- * Total Savings -->
+                                        <td>
+                                            <span class="td-name">123</span>
+                                        </td>
+
+                                        <!-- * Total Lapses -->
+                                        <td>
+                                            <span class="td-name">350.00</span> 
+                                        </td>
+
+                                        <!-- * Total Advance -->
+                                        <td>
+                                            <span class="td-name">700.00</span> 
+                                        </td>
+
+                                        <!-- * Cash Remit -->
+                                        <td>
+                                            <span class="td-name">400.00</span> 
+                                        </td>
+
+                                        <!-- * Total NP -->
+                                        <td>
+                                            <span class="td-name">2</span> 
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        
+                                        <!-- * Area -->
+                                        <td><span class="td-name">Area 1</span></td>
+
+                                        <!-- * Field Officer -->
+                                        <td><span class="td-name">Mario Sakay</span></td>
+
+                                        <!-- * Total Collection -->
+                                        <td>
+                                            <span class="td-name">1231</span>
+                                        </td>
+
+                                        <!-- * Total Savings -->
+                                        <td>
+                                            <span class="td-name">123</span>
+                                        </td>
+
+                                        <!-- * Total Lapses -->
+                                        <td>
+                                            <span class="td-name">350.00</span> 
+                                        </td>
+
+                                        <!-- * Total Advance -->
+                                        <td>
+                                            <span class="td-name">700.00</span> 
+                                        </td>
+
+                                        <!-- * Cash Remit -->
+                                        <td>
+                                            <span class="td-name">400.00</span> 
+                                        </td>
+
+                                        <!-- * Total NP -->
+                                        <td>
+                                            <span class="td-name">2</span> 
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        
+                                        <!-- * Area -->
+                                        <td><span class="td-name">Area 1</span></td>
+
+                                        <!-- * Field Officer -->
+                                        <td><span class="td-name">Mario Sakay</span></td>
+
+                                        <!-- * Total Collection -->
+                                        <td>
+                                            <span class="td-name">1231</span>
+                                        </td>
+
+                                        <!-- * Total Savings -->
+                                        <td>
+                                            <span class="td-name">123</span>
+                                        </td>
+
+                                        <!-- * Total Lapses -->
+                                        <td>
+                                            <span class="td-name">350.00</span> 
+                                        </td>
+
+                                        <!-- * Total Advance -->
+                                        <td>
+                                            <span class="td-name">700.00</span> 
+                                        </td>
+
+                                        <!-- * Cash Remit -->
+                                        <td>
+                                            <span class="td-name">400.00</span> 
+                                        </td>
+
+                                        <!-- * Total NP -->
+                                        <td>
+                                            <span class="td-name">2</span> 
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        
+                                        <!-- * Area -->
+                                        <td><span class="td-name">Area 1</span></td>
+
+                                        <!-- * Field Officer -->
+                                        <td><span class="td-name">Mario Sakay</span></td>
+
+                                        <!-- * Total Collection -->
+                                        <td>
+                                            <span class="td-name">1231</span>
+                                        </td>
+
+                                        <!-- * Total Savings -->
+                                        <td>
+                                            <span class="td-name">123</span>
+                                        </td>
+
+                                        <!-- * Total Lapses -->
+                                        <td>
+                                            <span class="td-name">350.00</span> 
+                                        </td>
+
+                                        <!-- * Total Advance -->
+                                        <td>
+                                            <span class="td-name">700.00</span> 
+                                        </td>
+
+                                        <!-- * Cash Remit -->
+                                        <td>
+                                            <span class="td-name">400.00</span> 
+                                        </td>
+
+                                        <!-- * Total NP -->
+                                        <td>
+                                            <span class="td-name">2</span> 
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        
+                                        <!-- * Area -->
+                                        <td><span class="td-name">Area 1</span></td>
+
+                                        <!-- * Field Officer -->
+                                        <td><span class="td-name">Mario Sakay</span></td>
+
+                                        <!-- * Total Collection -->
+                                        <td>
+                                            <span class="td-name">1231</span>
+                                        </td>
+
+                                        <!-- * Total Savings -->
+                                        <td>
+                                            <span class="td-name">123</span>
+                                        </td>
+
+                                        <!-- * Total Lapses -->
+                                        <td>
+                                            <span class="td-name">350.00</span> 
+                                        </td>
+
+                                        <!-- * Total Advance -->
+                                        <td>
+                                            <span class="td-name">700.00</span> 
+                                        </td>
+
+                                        <!-- * Cash Remit -->
+                                        <td>
+                                            <span class="td-name">400.00</span> 
+                                        </td>
+
+                                        <!-- * Total NP -->
+                                        <td>
+                                            <span class="td-name">2</span> 
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        
+                                        <!-- * Area -->
+                                        <td><span class="td-name">Area 1</span></td>
+
+                                        <!-- * Field Officer -->
+                                        <td><span class="td-name">Mario Sakay</span></td>
+
+                                        <!-- * Total Collection -->
+                                        <td>
+                                            <span class="td-name">1231</span>
+                                        </td>
+
+                                        <!-- * Total Savings -->
+                                        <td>
+                                            <span class="td-name">123</span>
+                                        </td>
+
+                                        <!-- * Total Lapses -->
+                                        <td>
+                                            <span class="td-name">350.00</span> 
+                                        </td>
+
+                                        <!-- * Total Advance -->
+                                        <td>
+                                            <span class="td-name">700.00</span> 
+                                        </td>
+
+                                        <!-- * Cash Remit -->
+                                        <td>
+                                            <span class="td-name">400.00</span> 
+                                        </td>
+
+                                        <!-- * Total NP -->
+                                        <td>
+                                            <span class="td-name">2</span> 
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        
+                                        <!-- * Area -->
+                                        <td><span class="td-name">Area 1</span></td>
+
+                                        <!-- * Field Officer -->
+                                        <td><span class="td-name">Mario Sakay</span></td>
+
+                                        <!-- * Total Collection -->
+                                        <td>
+                                            <span class="td-name">1231</span>
+                                        </td>
+
+                                        <!-- * Total Savings -->
+                                        <td>
+                                            <span class="td-name">123</span>
+                                        </td>
+
+                                        <!-- * Total Lapses -->
+                                        <td>
+                                            <span class="td-name">350.00</span> 
+                                        </td>
+
+                                        <!-- * Total Advance -->
+                                        <td>
+                                            <span class="td-name">700.00</span> 
+                                        </td>
+
+                                        <!-- * Cash Remit -->
+                                        <td>
+                                            <span class="td-name">400.00</span> 
+                                        </td>
+
+                                        <!-- * Total NP -->
+                                        <td>
+                                            <span class="td-name">2</span> 
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        
+                                        <!-- * Area -->
+                                        <td><span class="td-name">Area 1</span></td>
+
+                                        <!-- * Field Officer -->
+                                        <td><span class="td-name">Mario Sakay</span></td>
+
+                                        <!-- * Total Collection -->
+                                        <td>
+                                            <span class="td-name">1231</span>
+                                        </td>
+
+                                        <!-- * Total Savings -->
+                                        <td>
+                                            <span class="td-name">123</span>
+                                        </td>
+
+                                        <!-- * Total Lapses -->
+                                        <td>
+                                            <span class="td-name">350.00</span> 
+                                        </td>
+
+                                        <!-- * Total Advance -->
+                                        <td>
+                                            <span class="td-name">700.00</span> 
+                                        </td>
+
+                                        <!-- * Cash Remit -->
+                                        <td>
+                                            <span class="td-name">400.00</span> 
+                                        </td>
+
+                                        <!-- * Total NP -->
+                                        <td>
+                                            <span class="td-name">2</span> 
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        
+                                        <!-- * Area -->
+                                        <td><span class="td-name">Area 1</span></td>
+
+                                        <!-- * Field Officer -->
+                                        <td><span class="td-name">Mario Sakay</span></td>
+
+                                        <!-- * Total Collection -->
+                                        <td>
+                                            <span class="td-name">1231</span>
+                                        </td>
+
+                                        <!-- * Total Savings -->
+                                        <td>
+                                            <span class="td-name">123</span>
+                                        </td>
+
+                                        <!-- * Total Lapses -->
+                                        <td>
+                                            <span class="td-name">350.00</span> 
+                                        </td>
+
+                                        <!-- * Total Advance -->
+                                        <td>
+                                            <span class="td-name">700.00</span> 
+                                        </td>
+
+                                        <!-- * Cash Remit -->
+                                        <td>
+                                            <span class="td-name">400.00</span> 
+                                        </td>
+
+                                        <!-- * Total NP -->
+                                        <td>
+                                            <span class="td-name">2</span> 
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        
+                                        <!-- * Area -->
+                                        <td><span class="td-name">Area 1</span></td>
+
+                                        <!-- * Field Officer -->
+                                        <td><span class="td-name">Mario Sakay</span></td>
+
+                                        <!-- * Total Collection -->
+                                        <td>
+                                            <span class="td-name">1231</span>
+                                        </td>
+
+                                        <!-- * Total Savings -->
+                                        <td>
+                                            <span class="td-name">123</span>
+                                        </td>
+
+                                        <!-- * Total Lapses -->
+                                        <td>
+                                            <span class="td-name">350.00</span> 
+                                        </td>
+
+                                        <!-- * Total Advance -->
+                                        <td>
+                                            <span class="td-name">700.00</span> 
+                                        </td>
+
+                                        <!-- * Cash Remit -->
+                                        <td>
+                                            <span class="td-name">400.00</span> 
+                                        </td>
+
+                                        <!-- * Total NP -->
+                                        <td>
+                                            <span class="td-name">2</span> 
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        
+                                        <!-- * Area -->
+                                        <td><span class="td-name">Area 1</span></td>
+
+                                        <!-- * Field Officer -->
+                                        <td><span class="td-name">Mario Sakay</span></td>
+
+                                        <!-- * Total Collection -->
+                                        <td>
+                                            <span class="td-name">1231</span>
+                                        </td>
+
+                                        <!-- * Total Savings -->
+                                        <td>
+                                            <span class="td-name">123</span>
+                                        </td>
+
+                                        <!-- * Total Lapses -->
+                                        <td>
+                                            <span class="td-name">350.00</span> 
+                                        </td>
+
+                                        <!-- * Total Advance -->
+                                        <td>
+                                            <span class="td-name">700.00</span> 
+                                        </td>
+
+                                        <!-- * Cash Remit -->
+                                        <td>
+                                            <span class="td-name">400.00</span> 
+                                        </td>
+
+                                        <!-- * Total NP -->
+                                        <td>
+                                            <span class="td-name">2</span> 
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        
+                                        <!-- * Area -->
+                                        <td><span class="td-name">Area 1</span></td>
+
+                                        <!-- * Field Officer -->
+                                        <td><span class="td-name">Mario Sakay</span></td>
+
+                                        <!-- * Total Collection -->
+                                        <td>
+                                            <span class="td-name">1231</span>
+                                        </td>
+
+                                        <!-- * Total Savings -->
+                                        <td>
+                                            <span class="td-name">123</span>
+                                        </td>
+
+                                        <!-- * Total Lapses -->
+                                        <td>
+                                            <span class="td-name">350.00</span> 
+                                        </td>
+
+                                        <!-- * Total Advance -->
+                                        <td>
+                                            <span class="td-name">700.00</span> 
+                                        </td>
+
+                                        <!-- * Cash Remit -->
+                                        <td>
+                                            <span class="td-name">400.00</span> 
+                                        </td>
+
+                                        <!-- * Total NP -->
+                                        <td>
+                                            <span class="td-name">2</span> 
+                                        </td>
+
+                                    </tr>
+
+                                </table>
+                            
+                            </div>
+
+                            <!-- * Total Collection Footer -->
+                            <div class="total-collection-footer">
+                                <div class="footer-wrapper">
+                                    <p>Total Collection:</p> 
+                                    <span id="">1,231.00</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    </main>
+
+    <script src="../../res/js/app.js" defer></script>
+    <script src="../../res/js/components/links.js"></script>
+    <script src="../../res/js/components/nav.js"></script>
+    <script src="../../res/js/components/reports.js" defer></script>
+    <script src="../../res/js/components/calendarJQuery.js"></script>
+    <script src="../../res/js/components/filterModal.js" defer></script>
+
+</body>
+
+</html>
