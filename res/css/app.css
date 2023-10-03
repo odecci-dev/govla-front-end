@@ -12049,6 +12049,7 @@ body.print-portrait .page.page-2.passbook.show {
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow-x: auto !important;
 }
 .main-dashboard .reports-container .report-inner-container-2 .body-wrapper .reports-table-container .table-container::-webkit-scrollbar {
   width: 0.5rem;
@@ -12067,6 +12068,12 @@ body.print-portrait .page.page-2.passbook.show {
 }
 .main-dashboard .reports-container .report-inner-container-2 .body-wrapper .reports-table-container .table-container table#pastDueTable td:nth-of-type(1n+2):not(:nth-of-type(7)) {
   text-align: right;
+}
+.main-dashboard .reports-container .report-inner-container-2 .body-wrapper .reports-table-container .table-container table#savingsTable th:nth-of-type(2) {
+  text-align: center;
+}
+.main-dashboard .reports-container .report-inner-container-2 .body-wrapper .reports-table-container .table-container table#savingsTable td:nth-of-type(2) {
+  text-align: center;
 }
 .main-dashboard .reports-container .report-inner-container-2 .body-wrapper .reports-table-container .table-container table th {
   padding: 1rem 3rem;
