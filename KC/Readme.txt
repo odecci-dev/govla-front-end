@@ -1180,7 +1180,8 @@ First Commit:
 Second Commit:
 • Finished Outstanding Reports Layout
 
-October 02, 2023 (Tuesday)
+
+October 03, 2023 (Tuesday)
 First Commit:
 • Reports Module: Outstanding Reports 
 
@@ -1200,4 +1201,14 @@ Fifth Commit:
 • Reports Module: Completed Release Reports✅
 
 
-
+October 04, 2023 (Tuesday)
+First Commit:
+• Reports Module: Changed pathname
+from
+- collection-past-due.html
+- collection-release.html
+- collection-savings.html
+to
+- past-due-report.html
+- release-report.html
+- savings-report.html
