@@ -21,11 +21,11 @@ if (linkButtons && dataDropdown && noDataDropdown) {
     const linkApproval = "/KC/transactions/new-application-approval.html"
     const linkReleasing = "/KC/transactions/new-application-releasing.html"
     const linkLoanCalculator = "/KC/transactions/new-application-loan-calculator.html"
-    const linkOutstandingReports = "/KC/reports/outstanding-report.html"
-    const linkCustomReport1 = "/KC/reports/custom-report-1.html"
-    const linkCustomReport2 = "/KC/reports/custom-report-2.html"
-    const linkCustomReport3 = "/KC/reports/custom-report-3.html"
-    const linkCustomReport4 = "/KC/reports/custom-report-4.html"
+    const linkOutstandingReport = "/KC/reports/outstanding-report.html"
+    const linkSavingsReport = "/KC/reports/savings-report.html"
+    const linkCollectionReport = "/KC/reports/collection-report.html"
+    const linkReleaseReport = "/KC/reports/release-report.html"
+    const linkPastDueReport = "/KC/reports/past-due-report.html"
     const linkUser = "/KC/user/user.html"
     const linkSettings = "/KC/settings.html"
 
@@ -211,19 +211,19 @@ if (linkButtons && dataDropdown && noDataDropdown) {
     // ***** Reports ***** //
 
     // * Outstanding Reports
-    links[14].setAttribute("href", linkOutstandingReports)
+    links[14].setAttribute("href", linkOutstandingReport)
 
-    // * Custom Report 1
-    links[15].setAttribute("href", linkCustomReport1)
+    // * Savings Report
+    links[15].setAttribute("href", linkSavingsReport)
 
-    // * Custom Report 2
-    links[16].setAttribute("href", linkCustomReport2)
+    // * Collection Report
+    links[16].setAttribute("href", linkCollectionReport)
 
-    // * Custom Report 3
-    links[17].setAttribute("href", linkCustomReport3)
+    // * Releases Report
+    links[17].setAttribute("href", linkReleaseReport)
 
-    // * Custom Report 4
-    links[18].setAttribute("href", linkCustomReport4)
+    // * Past Due Report
+    links[18].setAttribute("href", linkPastDueReport)
 
 
     if (links[14].getAttribute('href').match(currentURL)) {

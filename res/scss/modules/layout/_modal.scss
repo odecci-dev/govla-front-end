@@ -257,6 +257,7 @@
     }
 }
 
+
 // * New Group Application Modal
 .ng-modal {
     margin: auto;
@@ -1277,6 +1278,374 @@
             display: grid;
             place-self: flex-end;
         }
+    }
+}
+
+// * Add New Area Modal
+.nar-modal {
+    margin: auto;
+    // height: clamp(min(90vh, 50rem), calc(100% - 20%), max(100vh, 55rem));
+    width: calc(100% - 45%);
+    z-index: 5;
+    background-color: $white;
+    border-radius: $border-radius-medium;
+    &::backdrop {
+        background-color: rgba($black, 0.7);
+    }
+    // * Modal Open Attribute
+    &[open] {
+        animation: fade-in 500ms forwards, pop-up 500ms;
+    }
+    &::backdrop[open] {
+        animation: fade-in 500ms forwards;
+    }
+    // * Modal Custom Closing Attribute
+    &[closing] {
+        display: block;
+        pointer-events: none;
+        inset: 0;
+        animation: fade-out 500ms forwards, slide-down 500ms forwards;
+    }
+    &::backdrop[closing] {
+        animation: fade-out 500ms forwards;
+    }
+    // * Hide Scroll Bars
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    // * Hide Scroll Bars
+    & {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+    .modal-container {
+        display: grid;
+        grid-template-rows: repeat(3 minmax(0, 1fr)) minmax(0, 2fr);
+        gap: 2rem 0;
+        padding: $spacing-2x-large;
+        position: relative;
+        // * Header and Save Button
+        .rowspan:nth-of-type(1) {
+            display: flex;
+            justify-content: space-between;
+        }
+        // * Input Fields
+        .rowspan:nth-of-type(2) {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0 2rem;
+        }
+        // * Search Bar
+        .rowspan:nth-of-type(3) {
+            display: grid;
+            gap: 2rem 0;
+            
+            .wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        // * Table
+        .rowspan:nth-of-type(4) {
+            // * Container 2: Table and Pagination
+            .na-table-con {
+                display: grid;
+                width: 100%;
+                // height: clamp(min(90vh, 50rem), 10rem, max(100vh, 55rem));
+                // * Table Container
+                .table-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    height: clamp(min(30vh, 50rem), 10rem, max(100vh, 55rem));
+                    padding-bottom: $spacing-2x-large;
+                    border-radius: $border-radius-large;
+                    table {
+                        // **                         ** //
+                        // **** Table Header Styles **** //
+                        // **                         ** //
+                        tr {
+                            border-bottom: 1px solid $black;
+                            transition: 200ms ease-in-out;
+                        }
+                        th {
+                            padding: 2rem 0;
+                            text-align: center;
+                            span.th-name {
+                                font-size: $font-size-medium;
+                                font-weight: $font-weight-bold;
+                            }
+                            .th-wrapper {
+                                display: flex;
+                                align-items: center;
+                                img {
+                                    cursor: pointer;
+                                    padding-left: .5rem;
+                                }
+                            }
+                        }
+                        // * Table Checkbox
+                        input[type="checkbox"] {
+                            @include tableCheckboxInput;
+                        }
+                        input[type="checkbox"]::after {
+                            content: url('../assets/icons/white-check.svg');
+                            position: absolute;
+                            top: .1rem;
+                            display: none;
+                        }
+                        input[type="checkbox"]:checked {
+                            background-color: $primary;
+                        }
+                        input[type="checkbox"]:checked:after {
+                            display: block;
+                        }
+                        th {
+                            text-align: left;
+                        }
+                        // * Table Checkbox
+                        th:first-of-type {
+                            padding-left: 2rem;
+                        }
+                        // * Member ID
+                        th:last-of-type {
+                            padding-right: 2rem;
+                        }
+                        // **                       ** //
+                        // **** Table Data Styles **** //
+                        // **                       ** //
+                        td {
+                            padding: $spacing-medium 0;
+                            font-size: $font-size-medium;
+                            // * Borrowers' Data Styles
+                            .td-wrapper {
+                                display: flex;
+                                align-items: center;
+                                .td-num {
+                                    font-weight: $font-weight-bold;
+                                    margin-left: 1rem;
+                                }
+                                .td-name {
+                                    margin-left: 2rem;
+                                }
+                            }
+                            // * Table Buttons Styles
+                            .td-btn-wrapper {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                button {
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        // * Due Date Data
+                        .td-due {
+                            font-weight: $font-weight-bold;
+                        }
+                        td:first-of-type {
+                            padding-left: 2rem;
+                        }
+                        td:last-of-type {
+                            padding-right: 2rem;
+                        }
+                    }
+                }
+                // * Cancel Button
+                button[data-close-add-new-area-modal] {
+                    padding-top: 2rem;
+                    justify-self: flex-end;
+                }
+            }
+        }
+    }
+    // * View Area Modal
+    .modal-container.view-area {
+        display: flex;
+        padding: $spacing-2x-large;
+        gap: 0 $spacing-4x-large;
+
+        .wrapper:nth-of-type(1) {
+            display: grid;
+            grid-template-rows: repeat(3 minmax(0, 1fr)) minmax(0, 2fr);
+            gap: $spacing-2x-large 0;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 1px;
+                right: 0;
+                transform: translateX(2rem);
+                background-color: $primary;
+            }
+            // * Header and Save Button
+            .rowspan:nth-of-type(1) {
+                display: flex;
+                justify-content: space-between;
+            }
+            // * Input Fields
+            .rowspan:nth-of-type(2) {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 0 2rem;
+            }
+            // * Search Bar
+            .rowspan:nth-of-type(3) {
+                display: grid;
+                gap: 2rem 0;
+                
+                .wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+            // * Table
+            .rowspan:nth-of-type(4) {
+                // * Container 2: Table and Pagination
+                .na-table-con {
+                    display: grid;
+                    width: 100%;
+                    // height: clamp(min(90vh, 50rem), 10rem, max(100vh, 55rem));
+                    // * Table Container
+                    .table-container {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                        height: clamp(min(30vh, 50rem), 10rem, max(100vh, 55rem));
+                        padding-bottom: $spacing-2x-large;
+                        border-radius: $border-radius-large;
+                        table {
+                            // **                         ** //
+                            // **** Table Header Styles **** //
+                            // **                         ** //
+                            tr {
+                                border-bottom: 1px solid $black;
+                                transition: 200ms ease-in-out;
+                            }
+                            th {
+                                padding: 2rem 0;
+                                text-align: center;
+                                span.th-name {
+                                    font-size: $font-size-medium;
+                                    font-weight: $font-weight-bold;
+                                }
+                                .th-wrapper {
+                                    display: flex;
+                                    align-items: center;
+                                    img {
+                                        cursor: pointer;
+                                        padding-left: .5rem;
+                                    }
+                                }
+                            }
+                            // * Table Checkbox
+                            input[type="checkbox"] {
+                                @include tableCheckboxInput;
+                            }
+                            input[type="checkbox"]::after {
+                                content: url('../assets/icons/white-check.svg');
+                                position: absolute;
+                                top: .1rem;
+                                display: none;
+                            }
+                            input[type="checkbox"]:checked {
+                                background-color: $primary;
+                            }
+                            input[type="checkbox"]:checked:after {
+                                display: block;
+                            }
+                            th {
+                                text-align: left;
+                            }
+                            // * Table Checkbox
+                            th:first-of-type {
+                                padding-left: 2rem;
+                            }
+                            // * Member ID
+                            th:last-of-type {
+                                padding-right: 2rem;
+                            }
+                            // **                       ** //
+                            // **** Table Data Styles **** //
+                            // **                       ** //
+                            td {
+                                padding: $spacing-medium 0;
+                                font-size: $font-size-medium;
+                                // * Borrowers' Data Styles
+                                .td-wrapper {
+                                    display: flex;
+                                    align-items: center;
+                                    .td-num {
+                                        font-weight: $font-weight-bold;
+                                        margin-left: 1rem;
+                                    }
+                                    .td-name {
+                                        margin-left: 2rem;
+                                    }
+                                }
+                                // * Table Buttons Styles
+                                .td-btn-wrapper {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    button {
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                            // * Due Date Data
+                            .td-due {
+                                font-weight: $font-weight-bold;
+                            }
+                            td:first-of-type {
+                                padding-left: 2rem;
+                            }
+                            td:last-of-type {
+                                padding-right: 2rem;
+                            }
+                        }
+                    }
+                    // * Cancel Button
+                    button[data-close-add-new-area-modal] {
+                        padding-top: 2rem;
+                        justify-self: flex-end;
+                    }
+                }
+            }
+        }
+        .wrapper:nth-of-type(2) {
+            display: flex;
+            flex-direction: column;
+
+            .rowspan:nth-of-type(1) {
+                display: flex;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 0 $spacing-2x-large;
+            }
+            .rowspan:nth-of-type(2) {
+                display: flex;
+                flex-direction: column;
+                gap: $spacing-2x-large 0;
+                margin-top: $spacing-4x-large;
+                .box {
+                    display: flex;
+                    justify-content: space-between
+                }
+            }
+            button[data-close-view-area-modal] {
+                margin-top: calc(62vh - 43%);
+                // justify-self: flex-end;
+                align-self: flex-end;
+            }
+        }
+        
     }
 }
 

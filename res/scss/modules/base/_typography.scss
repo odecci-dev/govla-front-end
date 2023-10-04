@@ -2,3 +2,64 @@
 body {
     font-family: $font-family;
 }
+
+
+// * 0.6rem
+.font-size-xx-small {
+    font-size: $font-size-xx-small;
+}
+
+// * 0.8rem
+.font-size-x-small {
+    font-size: $font-size-x-small;
+}
+
+// * 1rem
+.font-size-small {
+    font-size: $font-size-small;
+}
+
+// * 1.2rem
+.font-size {
+    font-size: $font-size;
+}
+
+// * 1.5rem
+.font-size-medium {
+    font-size: $font-size-medium;
+}
+
+// * 1.8rem
+.font-size-x-medium {
+    font-size: $font-size-x-medium;
+}
+
+// * 2rem
+.font-size-large {
+    font-size: $font-size-large;
+}
+
+// * 2.5rem
+.font-size-x-large {
+    font-size: $font-size-x-large;
+}
+
+// * 3rem
+.font-size-xx-large {
+    font-size: $font-size-xx-large;
+}
+
+// * 3.5rem
+.font-size-display {
+    font-size: $font-size-display;
+}
+
+// * 7rem
+.font-size-x-display {
+    font-size: $font-size-x-display;
+}
+
+// * 700
+.font-bold {
+    font-weight: $font-weight-bold;
+}

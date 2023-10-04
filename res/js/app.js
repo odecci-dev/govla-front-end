@@ -46,23 +46,25 @@ document.addEventListener("click", e => {
 
 let counter = 1
 
-const table = document.querySelector('table')
+const tables = document.querySelectorAll('table')
 
-if (table) {
+tables.forEach(table => {
+    if (table) {
+        table
+        const colspan = table.querySelectorAll('.td-num')
     
-    const colspan = table.querySelectorAll('.td-num')
-
-    colspan.forEach((num) => {
-        num.textContent = counter
-        counter++
-    })
-
-    const colspan2 = table.querySelectorAll('.td-num-out')
-    colspan2.forEach((num) => {
-        num.textContent = counter
-        counter++
-    })
-}
+        colspan.forEach((num) => {
+            num.textContent = counter
+            counter++
+        })
+    
+        const colspan2 = table.querySelectorAll('.td-num-out')
+        colspan2.forEach((num) => {
+            num.textContent = counter
+            counter++
+        })
+    }
+})
 
 // * Select All Table Checkbox 
 const selectAllCheckboxes = document.querySelectorAll('[data-select-all-checkbox]')
@@ -402,15 +404,23 @@ viewCreditInvestigation.forEach((ci) => {
 
 // * Update Modal
 const saveButton = document.querySelectorAll('[data-save]')
+const updateButton = document.querySelectorAll('[data-update-item]')
 const updatedSuccessfulModal = document.querySelector('[data-updated-successfully]')
 const closeUpdateModal = document.querySelector('[data-close-update-modal]')
 
-if (saveButton) {
+if (updatedSuccessfulModal) {
     saveButton.forEach((save) => {
         save.addEventListener('click', () => {
             updatedSuccessfulModal.showModal()
         })
     })
+
+    updateButton.forEach((update) => {
+        update.addEventListener('click', () => {
+            updatedSuccessfulModal.showModal()
+        })
+    })
+
     if (closeUpdateModal) {
         closeUpdateModal.addEventListener('click', () => {
             updatedSuccessfulModal.setAttribute("closing", "");
@@ -430,7 +440,10 @@ const moveToTrashSuccessfulModal = document.querySelector('[data-move-to-trash-s
 const closeSuccessModal = document.querySelector('[data-close-success-modal]')
 
 if (moveToTrashModal) {
-    // TODO: View trash container
+
+    trashAreaButton.addEventListener('click', () => {
+        moveToTrashModal.showModal()
+    })
 
     trashButtonYes.addEventListener('click', () => {
         moveToTrashSuccessfulModal.showModal()

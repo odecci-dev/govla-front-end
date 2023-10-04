@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gold One Victory Lending App</title>
+    <link rel="stylesheet" href="../../res/css/app.css" />
+</head>
+
+<body>
+
+    <main>
+
+        <!-- * The styles are in ../../res/scss/modules/layout/_nav.scss -->
+
+        <!-- * Main Nav Container -->
+        <div class="nav">
+            <!-- * Nav Container 1 -->
+            <div class="nav-con-1">
+                <!-- * Logo -->
+                <img src="../../res/assets/icons/nav-logo.svg" alt="GOVL Logo" />
+
+                <!-- * Nav Links Container -->
+                <ul class="nav-links">
+
+                    <!-- * Link Wrapper -->
+                    <!-- * Dashboard -->
+                    <a href="" data-nav-link>
+                        <li class="link" no-data-dropdown>
+                            <!-- * Overview -->
+                            <img src="../../res/assets/icons/overview.svg" alt="overview" />
+                            <p>Overview</p>
+                        </li>
+                    </a>
+
+                    <!-- * Link Wrapper w/ SubMenu -->
+                    <!-- * Members -->
+                    <div class="dropdown" data-dropdown>
+
+                        <li class="link dropdown" data-dropdown-button>
+                            <!-- * Members -->
+                            <img src="../../res/assets/icons/members.svg" alt="members" data-dropdown-button />
+                            <p data-dropdown-button>Members</p>
+                        </li>
+
+                        <!-- * Submenu -->
+                        <ul class="sub-menu">
+
+                            <a href="" data-nav-link>
+                                <li>
+                                    <!-- * All Members -->
+                                    <img src="../../res/assets/icons/sub-menu/all-members.svg" alt="all-members" />
+                                    <span>All Members</span>
+                                </li>
+                            </a>
+
+                            <!-- 
+                            <a href="../../KC/new-member.html" data-nav-link>
+                                <li> -->
+                            <!-- * New Member -->
+                            <!-- <img src="../../res/assets/icons/sub-menu/new-member.svg" alt="new-member" />
+                                    <span>New Member</span>
+                                </li>
+                            </a> -->
+
+                        </ul>
+                    </div>
+
+                    <!-- * Link Wrapper w/ SubMenu -->
+                    <!-- * Maintenance -->
+                    <div class="dropdown" data-dropdown>
+
+                        <li class="link dropdown" data-dropdown-button>
+                            <img src="../../res/assets/icons/maintenance.svg" alt="maintenance" data-dropdown-button />
+                            <p data-dropdown-button>Maintenance</p>
+                        </li>
+
+                        <!-- * Submenu -->
+                        <ul class="sub-menu">
+
+                            <!-- <a href="../../KC/co-maker.html" data-nav-link>
+                                <li> -->
+                            <!-- * Co Maker -->
+                            <!-- <img src="../../res/assets/icons/sub-menu/co-maker.svg" alt="co-maker" />
+                                    <span>Co Maker</span>
+                                </li>
+                            </a> -->
+
+                            <a href="" data-nav-link>
+                                <li>
+                                    <!-- * Field Officer -->
+                                    <img src="../../res/assets/icons/sub-menu/field-officer.svg" alt="field-officer" />
+                                    <span>Field Officer</span>
+                                </li>
+                            </a>
+
+                            <a href="" data-nav-link>
+                                <li>
+                                    <!-- * Field Area -->
+                                    <img src="../../res/assets/icons/sub-menu/field-area.svg" alt="field-area" />
+                                    <span>Field Area</span>
+                                </li>
+                            </a>
+
+                            <a href="" data-nav-link>
+                                <li>
+                                    <!-- * Loan Type -->
+                                    <img src="../../res/assets/icons/sub-menu/loan-type.svg" alt="loan-type" />
+                                    <span>Loan Type</span>
+                                </li>
+                            </a>
+
+                            <a href="" data-nav-link>
+                                <li>
+                                    <!-- * Holidays -->
+                                    <img src="../../res/assets/icons/sub-menu/holidays.svg" alt="loan-type" />
+                                    <span>Holidays</span>
+                                </li>
+                            </a>
+
+                        </ul>
+                    </div>
+
+                    <!-- * Link Wrapper w/ SubMenu -->
+                    <!-- * Collection -->
+                    <div class="dropdown" data-dropdown>
+
+                        <li class="link dropdown" data-dropdown-button>
+                            <img src="../../res/assets/icons/collection.svg" alt="collection" data-dropdown-button />
+                            <p data-dropdown-button>Collection</p>
+                        </li>
+
+                        <!-- * Submenu -->
+                        <ul class="sub-menu">
+
+                            <a href="" data-nav-link>
+                                <li>
+                                    <!-- * Collection -->
+                                    <img src="../../res/assets/icons/sub-menu/collection.svg" alt="collection" />
+                                    <span>Collection</span>
+                                </li>
+                            </a>
+
+                            <a href="" data-nav-link>
+                                <li>
+                                    <!-- * Areas -->
+                                    <img src="../../res/assets/icons/sub-menu/areas.svg" alt="areas" />
+                                    <span>Areas</span>
+                                </li>
+                            </a>
+
+                        </ul>
+                    </div>
+
+                    <!-- * Link Wrapper w/ SubMenu -->
+                    <!-- * Transactions -->
+                    <div class="dropdown" data-dropdown>
+
+                        <li class="link dropdown" data-dropdown-button>
+                            <img src="../../res/assets/icons/transactions.svg" alt="transactions" data-dropdown-button />
+                            <p data-dropdown-button>Transactions</p>
+                        </li>
+
+                        <!-- * Submenu -->
+                        <ul class="sub-menu">
+
+                            <a href="" data-nav-link>
+
+                                <li>
+                                    <!-- * Applications -->
+                                    <img src="../../res/assets/icons/sub-menu/new-application.svg" alt="new-member" />
+                                    <span>Applications</span>
+                                </li>
+
+                            </a>
+
+                            <a href="" data-nav-link>
+                                <li>
+                                    <!-- * Credit Investigation  -->
+                                    <img src="../../res/assets/icons/sub-menu/credit-investigation.svg" alt="credit-investigation" />
+                                    <span>Credit Investigation</span>
+                                </li>
+                            </a>
+
+                            <a href="" data-nav-link>
+                                <li>
+                                    <!-- * Remittance  -->
+                                    <img src="../../res/assets/icons/sub-menu/remittance.svg" alt="remittance" />
+                                    <span>Remittance</span>
+                                </li>
+                            </a>
+
+                            <a href="" data-nav-link>
+                                <li>
+                                    <!-- * Approval  -->
+                                    <img src="../../res/assets/icons/sub-menu/approval.svg" alt="approval" />
+                                    <span>Approval</span>
+                                </li>
+                            </a>
+
+                            <a href="" data-nav-link>
+                                <li>
+                                    <!-- * Releasing  -->
+                                    <img src="../../res/assets/icons/sub-menu/releasing.svg" alt="releasing" />
+                                    <span>Releasing</span>
+                                </li>
+                            </a>
+
+                            <a href="" data-nav-link>
+                                <li>
+                                    <!-- * Loan Calculator  -->
+                                    <img src="../../res/assets/icons/sub-menu/loan-calc.svg" alt="loan-calc" />
+                                    <span>Loan Calculator</span>
+                                </li>
+                            </a>
+
+                        </ul>
+                    </div>
+
+                    <!-- * Link Wrapper w/ SubMenu -->
+                    <!-- * Reports -->
+                    <div class="dropdown" data-dropdown>
+
+                        <li class="link dropdown" data-dropdown-button>
+                            <img src="../../res/assets/icons/reports.svg" alt="reports" data-dropdown-button />
+                            <p data-dropdown-button>Reports</p>
+                        </li>
+
+                        <!-- * Submenu -->
+                        <ul class="sub-menu">
+
+                            <a href="" data-nav-link>
+                                <li>
+                                    <!-- * Outstanding Reports -->
+                                    <img src="../../res/assets/icons/sub-menu/outstanding-report.svg" alt="" />
+                                    <span>Outstanding Reports</span>
+                                </li>
+                            </a>
+
+                            <a href="" data-nav-link>
+                                <li>
+                                    <!-- * Custom Report -->
+                                    <img src="../../res/assets/icons/sub-menu/custom-report.svg" alt="outstanding-report" />
+                                    <span>Custom Report</span>
+                                </li>
+                            </a>
+
+                            <a href="" data-nav-link>
+                                <li>
+                                    <!-- * Custom Report -->
+                                    <img src="../../res/assets/icons/sub-menu/custom-report.svg" alt="custom-report" />
+                                    <span>Custom Report</span>
+                                </li>
+                            </a>
+
+                            <a href="" data-nav-link>
+                                <li>
+                                    <!-- * Custom Report -->
+                                    <img src="../../res/assets/icons/sub-menu/custom-report.svg" alt="custom-report" />
+                                    <span>Custom Report</span>
+                                </li>
+                            </a>
+
+                            <a href="" data-nav-link>
+                                <li>
+                                    <!-- * Custom Report -->
+                                    <img src="../../res/assets/icons/sub-menu/custom-report.svg" alt="custom-report" />
+                                    <span>Custom Report</span>
+                                </li>
+                            </a>
+
+                        </ul>
+                    </div>
+
+                </ul>
+            </div>
+
+            <!-- * Nav Container 2 inside main nav-->
+            <div class="nav-con-2">
+
+                <!-- * Nav Links Container -->
+                <ul class="nav-links">
+
+                    <!-- * Link Wrapper -->
+                    <a href="" data-nav-link>
+                        <li class="link" no-data-dropdown>
+                            <img src="../../res/assets/icons/user.svg" alt="user" />
+                            <p>User</p>
+                        </li>
+                    </a>
+
+                    <!-- * Link Wrapper -->
+                    <a href="" data-nav-link>
+                        <li class="link" no-data-dropdown>
+                            <img src="../../res/assets/icons/settings.svg" alt="settings" />
+                            <p>Settings</p>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <!-- * Navigation Profile -->
+        <div class="profile-nav">
+            <div class="profile-nav-con">
+                <img src="../../res/assets/icons/bell.svg" alt="Bell" />
+                <img src="../../res/assets/icons/profile.svg" alt="Profile" />
+            </div>
+        </div>
+
+        <!-- * Main Dashboard -->
+        <div class="main-dashboard">
+
+            <!-- * Add New Area Modal -->
+            <dialog class="nar-modal" data-add-new-area-modal>
+
+                <div class="modal-container">
+
+                    <!-- * Header and Save Button-->
+                    <div class="rowspan">
+                        <h3 class="font-size-x-large">New Area</h3>
+                        <button class="modalButton" data-save-new-area-button>Save</button>
+                    </div>
+
+                    <!-- * Input Fields -->
+                    <div class="rowspan">
+
+                        <!-- * Area Name -->
+                        <div class="input-wrapper">
+                            <span>Area Name</span>
+                            <input autocomplete="off" type="text" id="" name="">
+                        </div>
+
+                        <!-- * Location -->
+                        <div class="input-wrapper">
+                            <span>Location</span>
+                            <input autocomplete="off" type="text" id="" name="">
+                        </div>
+
+                    </div>
+
+                    <!-- * Field Officer Search -->
+                    <div class="rowspan">
+
+                        <div class="input-wrapper">
+                            <span>Field Officer</span>
+    
+                                <!-- * Primary Search Bar -->
+                                <div class="primary-search-bar">
+                                    <div class="row">
+                                        <input type="search" id="searchInput" name="search" placeholder="Search" autocomplete="off">
+                                        <button>
+                                        </button>
+                                    </div>
+                                    <div class="result-box" data-search-results>
+                                    </div>
+                                </div>
+    
+                        </div>
+
+                        <button class="modalButton">Add Member</button>
+
+                    </div>
+
+                    <!-- * Table -->
+                    <div class="rowspan">
+
+                        <!-- * Container: Table and Pagination -->
+                        <div class="na-table-con">
+
+                            <!-- * Table Container -->
+                            <div class="table-container">
+
+                                <!-- * Members Table -->
+                                <table id="addNewAreaTable">
+
+                                    <!-- * Table Header -->
+                                    <tr>
+
+                                        <!-- * Header Name -->
+                                        <th><span class="th-name">Name</span></th>
+
+                                        <!-- * Header Contact Number -->
+                                        <th><span class="th-name">Contact Number</span></th>
+
+                                    </tr>
+
+
+                                    <!-- * Members Data -->
+                                    <tr>
+
+                                        <td>
+
+                                            <!-- * Data Name-->
+                                            <span class="td-name">Dela Cruz, Juana</span>
+
+                                        </td>
+
+                                        <td>
+
+                                            <!-- * Data Contact NUmber -->
+                                            <span class="td-name">0987 675 3856</span>
+
+                                        </td>
+
+                                    </tr>
+
+                                </table>
+
+                            </div>
+
+                            <button class="font-size-medium transparentButton" data-close-add-new-area-modal>Cancel</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </dialog>
+
+            <!-- * View Area Modal -->
+            <dialog class="nar-modal" data-view-area-modal>
+
+                <div class="modal-container view-area">
+
+                    <div class="wrapper">
+                        <!-- * Header and Save Button-->
+                        <div class="rowspan">
+                            <h3 class="font-size-x-large">New Area</h3>
+                        </div>
+    
+                        <!-- * Input Fields -->
+                        <div class="rowspan">
+    
+                            <!-- * Area Name -->
+                            <div class="input-wrapper">
+                                <span>Area Name</span>
+                                <input autocomplete="off" type="text" id="" name="">
+                            </div>
+    
+                            <!-- * Location -->
+                            <div class="input-wrapper">
+                                <span>Location</span>
+                                <input autocomplete="off" type="text" id="" name="">
+                            </div>
+    
+                        </div>
+    
+                        <!-- * Field Officer Search -->
+                        <div class="rowspan">
+    
+                            <div class="input-wrapper">
+                                <span>Field Officer</span>
+        
+                                    <!-- * Primary Search Bar -->
+                                    <div class="primary-search-bar">
+                                        <div class="row">
+                                            <input type="search" id="searchInput" name="search" placeholder="Search" autocomplete="off">
+                                            <button>
+                                            </button>
+                                        </div>
+                                        <div class="result-box" data-search-results>
+                                        </div>
+                                    </div>
+        
+                            </div>
+    
+                            <button class="modalButton">Add Member</button>
+    
+                        </div>
+    
+                        <!-- * Table -->
+                        <div class="rowspan">
+    
+                            <!-- * Container: Table and Pagination -->
+                            <div class="na-table-con">
+    
+                                <!-- * Table Container -->
+                                <div class="table-container">
+    
+                                    <!-- * Members Table -->
+                                    <table id="addNewAreaTable">
+    
+                                        <!-- * Table Header -->
+                                        <tr>
+    
+                                            <!-- * Header Name -->
+                                            <th><span class="th-name">Name</span></th>
+    
+                                            <!-- * Header Contact Number -->
+                                            <th><span class="th-name">Contact Number</span></th>
+    
+                                        </tr>
+    
+    
+                                        <!-- * Members Data -->
+                                        <tr>
+    
+                                            <td>
+    
+                                                <!-- * Data Name-->
+                                                <span class="td-name">Dela Cruz, Juana</span>
+    
+                                            </td>
+    
+                                            <td>
+    
+                                                <!-- * Data Contact NUmber -->
+                                                <span class="td-name">0987 675 3856</span>
+    
+                                            </td>
+    
+                                        </tr>
+    
+                                    </table>
+    
+                                </div>
+    
+    
+                            </div>
+    
+                        </div>
+                    </div>
+
+                    <div class="wrapper">
+                        <div class="rowspan">
+                            <button class="modalButton" data-update-item>Update</button>
+                            <button class="modalButton" data-open-move-to-trash-area-modal>Trash</button>
+                        </div>
+                        <div class="rowspan">
+                            <div class="box">
+                                <p class="font-size">Date Created:</p>
+                                <p class="font-size" id="">May 24, 2023 10:00 AM</p>
+                            </div>
+                            <div class="box">
+                                <p class="font-size">Created By:</p>
+                                <p class="font-size font-bold" id="">Admin</p>
+                            </div>
+                            <div class="box">
+                                <p class="font-size">Last Update:</p>
+                                <p class="font-size" id="">May 24, 2023</p>
+                            </div>
+                            <div class="box">
+                                <p class="font-size">Updated By:</p>
+                                <p class="font-size font-bold" id="">Admin</p>
+                            </div>
+                        </div>
+                        <button class="font-size-medium transparentButton" data-close-view-area-modal>Cancel</button>
+
+                    </div>
+
+                </div>
+
+            </dialog>
+
+            <!-- * Updated Successfully Modal -->
+            <dialog class="us-modal" data-updated-successfully>
+
+                <div class="modal-container">
+
+                    <!-- * Modal Header  -->
+                    <div class="modal-header">
+                        <h4>Success</h4>
+                    </div>
+
+                    <!-- * Modal Body -->
+                    <div class="rowspan">
+                        <img src="../../res/assets/icons/modal-icon/status-success.svg" alt="Updated Successfully">
+                        <span>Updated</span>
+                        <p>New data was successfully updated</p>
+                    </div>
+
+                    <!-- * Okay Button -->
+                    <div class="rowspan">
+                        <button class="modalButton" data-close-update-modal>OK</button>
+                    </div>
+
+                </div>
+
+            </dialog> 
+
+            <!-- * Move to Trash Modal -->
+            <dialog class="asking-modal" data-move-to-trash-modal>
+
+                <div class="modal-container">
+
+                    <!-- * Modal Header  -->
+                    <div class="modal-header">
+                        <h4>Trash</h4>
+                    </div>
+
+                    <!-- * Modal Body -->
+                    <div class="rowspan">
+                        <img src="../../res/assets/icons/modal-icon/asking.svg" alt="Asking">
+                        <p>Are you sure you want to move the 
+                            selected data to the trash?</p>
+                    </div>
+
+                    <!-- * Yes or No Button -->
+                    <div class="rowspan">
+                        <button class="modalButton" data-trash-yes>Yes</button>
+                        <button class="modalButton" data-trash-no>No</button>
+                    </div>
+
+                </div>
+
+            </dialog>   
+
+            <!-- * Move to Trash Successful Modal -->
+            <dialog class="us-modal" data-move-to-trash-successful>
+
+                <div class="modal-container">
+
+                    <!-- * Modal Header  -->
+                    <div class="modal-header">
+                        <h4>Success</h4>
+                    </div>
+
+                    <!-- * Modal Body -->
+                    <div class="rowspan">
+                        <img src="../../res/assets/icons/modal-icon/status-success.svg" alt="Updated Successfully">
+                        <span>Move to Trash</span>
+                        <p>Selected data was successfully moved to Trash</p>
+                    </div>
+
+                    <!-- * Okay Button -->
+                    <div class="rowspan">
+                        <button class="button" data-close-success-modal>OK</button>
+                    </div>
+
+                </div>
+
+            </dialog>   
+
+            <!-- * Maintenance' Containers -->
+            <!-- * Container 1: Maintenance Header, Buttons, and Searchbar -->
+            <div class="na-form-con">
+
+                <!-- * All Areas Containers -->
+                <!-- * Container 1: User list Header, Buttons, and Searchbar -->
+
+                <div class="nal-con-1">
+                    
+                    <h2>All Areas</h2>
+                    <p class="p-1">
+                        Total of <span id="">12</span> <span>active</span> areas
+                    </p>
+    
+                    <!-- * Button Container -->
+                    <div class="container">
+
+                        <!-- * Button Wrapper -->
+                        <div class="wrapper">
+
+                            <!-- * Add New Button -->
+                            <button class="button" data-open-add-new-area-modal>Add New</button>
+
+                        </div>
+            
+                        <!-- * Primary Search Bar -->
+                        <div class="primary-search-bar">
+                            <div class="row">
+                                <input type="search" id="searchInput" name="search" placeholder="Search" autocomplete="off">
+                                <button>
+                                </button>
+                            </div>
+                            <div class="result-box" data-search-results>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- * View Trash Button -->
+                    <div class="btn-container">
+                        <button class="transparentButton">View Trash</button>
+                    </div>
+
+                </div>
+
+                <!-- * Container 2: Area List - Table -->
+                <div class="cla-con-2">
+        
+                    <!-- * Table Container -->
+                    <div class="table-container">
+
+                            <!-- * Areas Table -->
+                            <table id="areasTable">
+
+                                <!-- * Table Header -->
+                                <tr>
+
+                                    <!-- * Number -->
+                                    <th></th>
+
+                                    <!-- * Name -->
+                                    <th>
+                                        <span class="th-name">Name</span>
+                                    </th>
+
+                                    <!-- * Location -->
+                                    <th>
+                                        <span class="th-name">Location</span>
+                                    </th>
+
+                                    <!-- * Active Member -->
+                                    <th>
+                                        <span class="th-name">Active Member</span>
+                                    </th>
+
+                                    <!-- * Total Number -->
+                                    <th>
+                                        <span class="th-name">Total Number</span>
+                                    </th>
+
+                                    <!-- * Field Officer -->
+                                    <th>
+                                        <span class="th-name">Field Officer</span>
+                                    </th>
+
+                                    <!-- * Action -->
+                                    <th>
+                                        <span class="th-name">Action</span>
+                                    </th>
+                                    
+                                </tr>
+
+
+                                <!-- * All Members Data -->
+                                <tr>
+
+                                    <!-- * Number -->
+                                    <td>
+                                        <span class="td-num-out"></span>
+                                    </td>
+
+                                    <!-- * Officer Name -->
+                                    <td>
+
+                                        <!-- * Officers' Name-->
+                                        <span class="td-name">Area1</span>
+
+                                    </td>
+
+                                    <!-- * Location -->
+                                    <td>
+                                        <span class="td-name">Balagtas, Bulacan</span>
+                                    </td>
+
+                                    <!-- * Active Member -->
+                                    <td>
+                                        <span class="td-name">60</span>
+                                    </td>
+
+                                    <!-- * Total Number -->
+                                    <td>
+                                        <span class="td-name">78</span>
+                                    </td>
+
+                                    <!-- * Field Officer -->
+                                    <td>
+                                        <span class="td-name">Dela Cruz, Juana</span>
+                                    </td>
+
+                                    <!-- * Action -->
+                                    <td class="td-btns">
+                                        <div class="td-btn-wrapper">
+                                            <button class="a-btn-view-3" data-open-view-area-modal>View</button>
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                            </table>
+
+                    </div>
+        
+                </div>
+
+            </div>
+        
+        </div>
+
+    </main>
+
+    <script src="../../res/js/app.js" defer></script>
+    <script src="../../res/js/components/links.js"></script>
+    <script src="../../res/js/components/nav.js"></script>
+    <script src="../../res/js/components/collection.js"></script>
+
+</body>
+
+</html>

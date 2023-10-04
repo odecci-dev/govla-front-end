@@ -1212,3 +1212,9 @@ to
 - past-due-report.html
 - release-report.html
 - savings-report.html
+
+Second Commit:
+• Updated Links (links.js)
+
+• Collection Module: Completed Collection Area List
+- made collection-area-list.html 

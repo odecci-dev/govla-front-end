@@ -472,3 +472,68 @@ if (remitButton) {
     })
 }
 
+
+// ***** Collection Areas ***** //
+
+// * Add New Area Modal
+const addNewAreaModal = document.querySelector('[data-add-new-area-modal]')
+const openAddNewAreaModal = document.querySelector('[data-open-add-new-area-modal]')
+const closeAddNewAreaModal = document.querySelector('[data-close-add-new-area-modal]')
+const saveNewAreaButton = document.querySelector('[data-save-new-area-button]')
+
+if (addNewAreaModal) {
+    openAddNewAreaModal.addEventListener('click', () => {
+        addNewAreaModal.showModal()
+    })
+    
+    closeAddNewAreaModal.addEventListener('click', () => {
+        addNewAreaModal.setAttribute("closing", "");
+        addNewAreaModal.addEventListener("animationend", () => {
+            addNewAreaModal.removeAttribute("closing");
+            addNewAreaModal.close();
+        }, { once: true });
+    
+    })
+    
+    saveNewAreaButton.addEventListener('click', () => {
+        addNewAreaModal.setAttribute("closing", "");
+        addNewAreaModal.addEventListener("animationend", () => {
+            addNewAreaModal.removeAttribute("closing");
+            addNewAreaModal.close();
+        }, { once: true });
+    })
+
+}
+
+// * View Area Modal
+const viewAreaModal = document.querySelector('[data-view-area-modal]')
+const openViewAreaModal = document.querySelectorAll('[data-open-view-area-modal]')
+const closeViewAreaModal = document.querySelector('[data-close-view-area-modal]')
+// const updateViewAreaModal = document.querySelector('[data-update-area-modal]')
+
+// * Move to trash
+const trashAreaButton = document.querySelector('[data-open-move-to-trash-area-modal]')
+
+
+if (viewAreaModal) {
+
+    openViewAreaModal.forEach(button => {
+        button.addEventListener('click', () => {
+            viewAreaModal.showModal()
+        })
+    })
+    
+    closeViewAreaModal.addEventListener('click', () => {
+        viewAreaModal.setAttribute("closing", "");
+        viewAreaModal.addEventListener("animationend", () => {
+            viewAreaModal.removeAttribute("closing");
+            viewAreaModal.close();
+        }, { once: true });
+    
+    })
+    
+    // updateViewAreaModal.addEventListener('click', () => {
+    //     viewAreaModal.showModal()
+    // })
+
+}
