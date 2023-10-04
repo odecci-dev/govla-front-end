@@ -654,7 +654,7 @@
                                     .detail-inner-wrapper:first-of-type {
                                         // * Header
                                         span {
-                                            font-size: calc($font-size-medium - .1rem);
+                                            font-size: calc($font-size + .2rem);
                                             font-weight: $font-weight-bold;
                                         }
                                     }
@@ -662,7 +662,7 @@
                                         // * Data
                                         span {
                                             color: $primary;
-                                            font-size: $font-size;
+                                            font-size: calc($font-size + .2rem);
                                             font-weight: $font-weight-bold;
                                         }
                                     }
@@ -681,12 +681,12 @@
                                 }
                                 th {
                                     font-weight: $font-weight-bold;
-                                    font-size: calc($font-size-medium - .1rem);
+                                    font-size: calc($font-size + .2rem);
                                     padding: 1rem 1rem;
                                 }
                                 td {
                                     font-weight: $font-weight;
-                                    font-size: $font-size;
+                                    font-size: calc($font-size + .2rem);
                                     padding: 2rem 1rem;
                                 }
                             }
@@ -775,7 +775,7 @@
                         }
                         th {
                             font-weight: $font-weight-bold;
-                            font-size: $font-size;
+                            font-size: calc($font-size + .2rem);
                             padding: 1rem 1rem;
                             text-align: right;
                         }
@@ -784,7 +784,7 @@
                         }
                         td {
                             font-weight: $font-weight;
-                            font-size: $font-size;
+                            font-size: calc($font-size + .2rem);
                             padding: 2rem 1rem;
                             text-align: right;
                         }
@@ -854,7 +854,7 @@
                         }
                         th {
                             font-weight: $font-weight-bold;
-                            font-size: $font-size;
+                            font-size: calc($font-size + .2rem);
                             padding: 1rem 1rem;
                         }
                         th:nth-of-type(1),
@@ -871,7 +871,7 @@
                         }
                         td {
                             font-weight: $font-weight;
-                            font-size: $font-size;
+                            font-size: calc($font-size + .2rem);
                             padding: 2rem 1rem;
                         }
                         td:nth-of-type(1),

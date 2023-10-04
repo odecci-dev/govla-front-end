@@ -17,7 +17,7 @@
                 padding: $spacing-2x-large $spacing-3x-large;
                 text-align: center;
                 span.th-name {
-                    font-size: $font-size;
+                    font-size: $font-size-medium;
                     font-weight: $font-weight-bold;
                 }
                 .th-wrapper {
@@ -56,7 +56,7 @@
             // **                       ** //
             td {
                 padding: $spacing-medium $spacing-3x-large;
-                font-size: $font-size;
+                font-size: $font-size-medium;
                 vertical-align: top;
                 // * Borrowers' Data Styles
                 .td-wrapper {
@@ -113,7 +113,7 @@
                 padding: $spacing-2x-large $spacing-3x-large;
                 text-align: center;
                 span.th-name {
-                    font-size: $font-size;
+                    font-size: calc($font-size + .2rem);
                     font-weight: $font-weight-bold;
                 }
                 .th-wrapper {
@@ -152,7 +152,7 @@
             // **                       ** //
             td {
                 padding: $spacing-medium $spacing-3x-large;
-                font-size: $font-size;
+                font-size: calc($font-size + .2rem);
             }
             // * All table header except the last child
             td:nth-of-type(-n+6) {
@@ -198,7 +198,7 @@
                 padding: $spacing-2x-large $spacing-3x-large;
                 text-align: center;
                 span.th-name {
-                    font-size: $font-size;
+                    font-size: $font-size-medium;
                     font-weight: $font-weight-bold;
                 }
                 .th-wrapper {
@@ -238,7 +238,7 @@
             // **                       ** //
             td {
                 padding: $spacing-medium $spacing-3x-large;
-                font-size: $font-size-small;
+                font-size: $font-size-medium;
                 // * Borrowers' Data Styles
                 .td-wrapper {
                     display: flex;
@@ -619,7 +619,6 @@
             }
             .area-menu-container {
                 height: 66vh;
-                // background-color: mediumseagreen;
                 border-radius: $border-radius-large;
                 overflow-y: auto;    
                 
@@ -665,7 +664,7 @@
                             padding: $spacing;
                             transition: 150ms ease-in;
                             p {
-                                font-size: $font-size-small;
+                                font-size: $font-size;
                                 font-weight: $font-weight-bold;
                                 white-space: nowrap;
                                 color: $black;
@@ -685,7 +684,7 @@
                             background-color: $black;
                             border-left: 1px solid $whiteTR;
                             p {
-                                font-size: $font-size-small;
+                                font-size: $font-size;
                                 font-weight: $font-weight-bold;
                                 white-space: nowrap;
                                 color: $white;

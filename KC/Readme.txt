@@ -1218,3 +1218,15 @@ Second Commit:
 
 • Collection Module: Completed Collection Area List
 - made collection-area-list.html 
+
+Third Commit:
+• Global Sizes: Adjustments
+- _base.scss
+- _mixins.scss
+- _modal.scss
+- _allMembers.scss
+- _maintenance.scss
+- _newApplication.scss
+- _collection.scss
+- _reports.scss
+- _user.scss

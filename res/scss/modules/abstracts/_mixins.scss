@@ -428,14 +428,14 @@
 // * Table Button 2
 @mixin tableButton2 {
     @include primaryButton;
-    font-size: $font-size-small;
+    font-size: $font-size;
     padding: $btn-padding-5;
 }
 
 // * Table Button 2
 @mixin tableButton3 {
     @include primaryButton;
-    font-size: $font-size-small;
+    font-size: $font-size;
     padding: $btn-padding-6;
 }
 

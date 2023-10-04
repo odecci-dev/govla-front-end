@@ -260,7 +260,7 @@ table .td-wrapper .td-inner-wrapper .td-name {
   margin-left: unset;
 }
 table .td-wrapper .td-inner-wrapper span:nth-of-type(2) {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 table .td-btn-wrapper {
   display: flex;
@@ -637,7 +637,7 @@ table .td-btn-wrapper .a-btn-view-3.remitted::after {
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: all 200ms ease-in-out;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 0.4rem 2.5rem;
 }
 .a-btn-view-3:hover {
@@ -737,7 +737,7 @@ table .td-btn-wrapper .a-btn-view-3.remitted::after {
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: all 200ms ease-in-out;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 0.4rem 2.33rem;
 }
 .a-btn-trash-5:hover {
@@ -1256,7 +1256,7 @@ table .td-btn-wrapper .a-btn-view-3.remitted::after {
 .input-wrapper > span {
   margin-bottom: 1rem;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .input-wrapper input {
   -moz-appearance: textfield;
@@ -1345,7 +1345,7 @@ table .td-btn-wrapper .a-btn-view-3.remitted::after {
   gap: 1rem;
 }
 .input-wrapper .box-wrap .radio-btn-wrapper span {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -1393,7 +1393,7 @@ table .td-btn-wrapper .a-btn-view-3.remitted::after {
   flex-direction: column;
 }
 .input-wrapper-add span {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -3760,7 +3760,7 @@ body.print-portrait .page.page-2.passbook.show {
 }
 .na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .rowspan:nth-of-type(2) .box-wrapper .detail-wrapper .detail-inner-wrapper:last-of-type span {
   color: #D6A330;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
 }
 .na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .rowspan:nth-of-type(3) {
@@ -3779,7 +3779,7 @@ body.print-portrait .page.page-2.passbook.show {
 }
 .na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .rowspan:nth-of-type(3) table td {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 2rem 1rem;
 }
 .na-loan-details-modal .modal-container .daily-payment-modal .daily-payment-modal-container .na-container-9 .small-con-5 .show-more {
@@ -3860,7 +3860,7 @@ body.print-portrait .page.page-2.passbook.show {
 }
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:nth-of-type(2) table th {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 1rem 1rem;
   text-align: right;
 }
@@ -3869,7 +3869,7 @@ body.print-portrait .page.page-2.passbook.show {
 }
 .na-loan-details-modal .modal-container .na-container-7 .small-con-4 .rowspan:nth-of-type(2) table td {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 2rem 1rem;
   text-align: right;
 }
@@ -3935,7 +3935,7 @@ body.print-portrait .page.page-2.passbook.show {
 }
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table th {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 1rem 1rem;
 }
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table th:nth-of-type(1),
@@ -3952,7 +3952,7 @@ body.print-portrait .page.page-2.passbook.show {
 }
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table td {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 2rem 1rem;
 }
 .na-loan-details-modal .modal-container .na-container-8 .small-con-5 .rowspan:nth-of-type(2) table td:nth-of-type(1),
@@ -5814,7 +5814,7 @@ body.print-portrait .page.page-2.passbook.show {
   text-align: center;
 }
 .cll-con-2 .table-container table th span.th-name {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 .cll-con-2 .table-container table th .th-wrapper {
@@ -5845,7 +5845,7 @@ body.print-portrait .page.page-2.passbook.show {
 }
 .cll-con-2 .table-container table td {
   padding: 1rem 3rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   vertical-align: top;
 }
 .cll-con-2 .table-container table td .td-wrapper {
@@ -5892,7 +5892,7 @@ body.print-portrait .page.page-2.passbook.show {
   text-align: center;
 }
 .cla-con-2 .table-container table th span.th-name {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
 }
 .cla-con-2 .table-container table th .th-wrapper {
@@ -5923,7 +5923,7 @@ body.print-portrait .page.page-2.passbook.show {
 }
 .cla-con-2 .table-container table td {
   padding: 1rem 3rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .cla-con-2 .table-container table td:nth-of-type(-n+6) {
   text-align: left;
@@ -5962,7 +5962,7 @@ body.print-portrait .page.page-2.passbook.show {
   text-align: center;
 }
 .clr-con-2 .table-container table th span.th-name {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 .clr-con-2 .table-container table th .th-wrapper {
@@ -5991,7 +5991,7 @@ body.print-portrait .page.page-2.passbook.show {
 }
 .clr-con-2 .table-container table td {
   padding: 1rem 3rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .clr-con-2 .table-container table td .td-wrapper {
   display: flex;
@@ -6392,7 +6392,7 @@ body.print-portrait .page.page-2.passbook.show {
   transition: 150ms ease-in;
 }
 .can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu li .box-2 p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   white-space: nowrap;
   color: #29292B;
@@ -6409,7 +6409,7 @@ body.print-portrait .page.page-2.passbook.show {
   border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 .can-container-wrapper .can-container-1 .wrapper .area-menu-container .area-menu .view-selected-area .box-2 p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   white-space: nowrap;
   color: #FFFFFF;
@@ -7437,7 +7437,6 @@ body.print-portrait .page.page-2.passbook.show {
 }
 @media (max-width: 1366px) {
   .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .verti-con .rowspan:nth-of-type(2) .input-wrapper span {
-    margin-bottom: 0;
     font-size: 1.5rem;
   }
 }
@@ -7786,7 +7785,7 @@ body.print-portrait .page.page-2.passbook.show {
     box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     transition: all 200ms ease-in-out;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 0.4rem 2.33rem;
   }
   .main-dashboard .fa-form-con .fa-container-wrapper .fa-container-1 .horiz-con .box-wrap .rowspan:last-of-type .table-container table td .td-btn-wrapper .a-btn-trash-2:hover {
@@ -9009,29 +9008,6 @@ body.print-portrait .page.page-2.passbook.show {
   display: flex;
   flex-direction: column;
 }
-.main-dashboard .view-borrower-con .na-container-1 .big-con .rowspan .input-wrapper span {
-  margin-bottom: 1rem;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-.main-dashboard .view-borrower-con .na-container-1 .big-con .rowspan .input-wrapper input {
-  -moz-appearance: textfield;
-  -webkit-appearance: none;
-  margin: 0;
-  font-size: 2rem;
-  padding: 1rem 2rem;
-  border: none;
-  outline: none;
-  background-color: #EBEBEB;
-  border-radius: 1rem;
-  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: opacity 100ms ease-in-out;
-}
-.main-dashboard .view-borrower-con .na-container-1 .big-con .rowspan .input-wrapper input:hover {
-  filter: brightness(101.5%);
-  -webkit-filter: brightness(101.5%);
-  -moz-filter: brightness(101.5%);
-}
 .main-dashboard .view-borrower-con .na-container-1 .big-con .rowspan .input-wrapper .box-wrap {
   display: flex;
   align-items: center;
@@ -9297,29 +9273,6 @@ body.print-portrait .page.page-2.passbook.show {
 .main-dashboard .view-co-borrower-con-1 .view-inner-con-1 .big-con .rowspan .input-wrapper {
   display: flex;
   flex-direction: column;
-}
-.main-dashboard .view-co-borrower-con-1 .view-inner-con-1 .big-con .rowspan .input-wrapper span {
-  margin-bottom: 1rem;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-.main-dashboard .view-co-borrower-con-1 .view-inner-con-1 .big-con .rowspan .input-wrapper input {
-  -moz-appearance: textfield;
-  -webkit-appearance: none;
-  margin: 0;
-  font-size: 2rem;
-  padding: 1rem 2rem;
-  border: none;
-  outline: none;
-  background-color: #EBEBEB;
-  border-radius: 1rem;
-  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: opacity 100ms ease-in-out;
-}
-.main-dashboard .view-co-borrower-con-1 .view-inner-con-1 .big-con .rowspan .input-wrapper input:hover {
-  filter: brightness(101.5%);
-  -webkit-filter: brightness(101.5%);
-  -moz-filter: brightness(101.5%);
 }
 .main-dashboard .view-co-borrower-con-1 .view-inner-con-1 .big-con .rowspan .input-wrapper .box-wrap {
   display: flex;
@@ -9918,7 +9871,7 @@ body.print-portrait .page.page-2.passbook.show {
   text-align: center;
 }
 .main-dashboard .na-form-con .nal-con-2 .table-container table th span.th-name {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
 }
 .main-dashboard .na-form-con .nal-con-2 .table-container table th .th-wrapper {
@@ -9946,7 +9899,7 @@ body.print-portrait .page.page-2.passbook.show {
 }
 .main-dashboard .na-form-con .nal-con-2 .table-container table td {
   padding: 1rem 1.5rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .main-dashboard .na-form-con .nal-con-2 .table-container table td .td-wrapper {
   display: flex;
@@ -10062,7 +10015,7 @@ body.print-portrait .page.page-2.passbook.show {
   text-align: center;
 }
 .main-dashboard .na-form-con .cil-con-2 .table-container table th span.th-name {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
 }
 .main-dashboard .na-form-con .cil-con-2 .table-container table th .th-wrapper {
@@ -10090,7 +10043,7 @@ body.print-portrait .page.page-2.passbook.show {
 }
 .main-dashboard .na-form-con .cil-con-2 .table-container table td {
   padding: 1rem 1.5rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .main-dashboard .na-form-con .cil-con-2 .table-container table td .td-wrapper {
   display: flex;
@@ -10241,29 +10194,6 @@ body.print-portrait .page.page-2.passbook.show {
   display: flex;
   flex-direction: column;
 }
-.main-dashboard .na-form-con .na-approval-sec .rowspan .input-wrapper span {
-  margin-bottom: 1rem;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-.main-dashboard .na-form-con .na-approval-sec .rowspan .input-wrapper input {
-  -moz-appearance: textfield;
-  -webkit-appearance: none;
-  margin: 0;
-  font-size: 2rem;
-  padding: 1rem 2rem;
-  border: none;
-  outline: none;
-  background-color: #EBEBEB;
-  border-radius: 1rem;
-  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: opacity 100ms ease-in-out;
-}
-.main-dashboard .na-form-con .na-approval-sec .rowspan .input-wrapper input:hover {
-  filter: brightness(101.5%);
-  -webkit-filter: brightness(101.5%);
-  -moz-filter: brightness(101.5%);
-}
 .main-dashboard .na-form-con .na-approval-sec .rowspan .input-wrapper .button {
   width: 100%;
   padding: 1rem;
@@ -10292,7 +10222,7 @@ body.print-portrait .page.page-2.passbook.show {
 .main-dashboard .na-form-con .na-approval-sec .rowspan:first-of-type span {
   grid-area: 1/4/3/5;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .main-dashboard .na-form-con .na-approval-sec .rowspan:last-of-type {
   grid-template-columns: minmax(0, 2.1fr) repeat(2, minmax(0, 1fr));
@@ -10329,29 +10259,6 @@ body.print-portrait .page.page-2.passbook.show {
 .main-dashboard .na-form-con .na-releasing-sec .rowspan .input-wrapper {
   display: flex;
   flex-direction: column;
-}
-.main-dashboard .na-form-con .na-releasing-sec .rowspan .input-wrapper span {
-  margin-bottom: 1rem;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-.main-dashboard .na-form-con .na-releasing-sec .rowspan .input-wrapper input {
-  -moz-appearance: textfield;
-  -webkit-appearance: none;
-  margin: 0;
-  font-size: 2rem;
-  padding: 1rem 2rem;
-  border: none;
-  outline: none;
-  background-color: #EBEBEB;
-  border-radius: 1rem;
-  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: opacity 100ms ease-in-out;
-}
-.main-dashboard .na-form-con .na-releasing-sec .rowspan .input-wrapper input:hover {
-  filter: brightness(101.5%);
-  -webkit-filter: brightness(101.5%);
-  -moz-filter: brightness(101.5%);
 }
 .main-dashboard .na-form-con .na-releasing-sec .rowspan .input-wrapper .button {
   width: 100%;
@@ -10737,29 +10644,7 @@ body.print-portrait .page.page-2.passbook.show {
   flex-direction: column;
 }
 .main-dashboard .na-form-con .na-container-wrapper .na-container-2 .small-con .box-wrap:last-of-type .colspan:last-of-type .input-wrapper span {
-  font-weight: 700;
   margin: min(1rem, 5%) 0;
-  font-size: 1.2rem;
-}
-.main-dashboard .na-form-con .na-container-wrapper .na-container-2 .small-con .box-wrap:last-of-type .colspan:last-of-type .input-wrapper input {
-  -moz-appearance: textfield;
-  -webkit-appearance: none;
-  margin: 0;
-  font-size: 2rem;
-  padding: 1rem 2rem;
-  border: none;
-  outline: none;
-  background-color: #EBEBEB;
-  border-radius: 1rem;
-  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: opacity 100ms ease-in-out;
-  color: #D6A330;
-  font-weight: 700;
-}
-.main-dashboard .na-form-con .na-container-wrapper .na-container-2 .small-con .box-wrap:last-of-type .colspan:last-of-type .input-wrapper input:hover {
-  filter: brightness(101.5%);
-  -webkit-filter: brightness(101.5%);
-  -moz-filter: brightness(101.5%);
 }
 .main-dashboard .na-form-con .na-container-3 {
   width: 100%;
@@ -11694,7 +11579,6 @@ body.print-portrait .page.page-2.passbook.show {
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan > span,
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan > span {
-  font-size: 1.2rem;
   margin: clamp(1.2rem, 1vw, 1rem) 0;
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan > .input-wrapper,
@@ -11702,11 +11586,6 @@ body.print-portrait .page.page-2.passbook.show {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-}
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan > .input-wrapper span,
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan > .input-wrapper span {
-  font-weight: 700;
-  font-size: 1.2rem;
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan > .input-wrapper .box-wrap,
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan > .input-wrapper .box-wrap {
@@ -11785,10 +11664,6 @@ body.print-portrait .page.page-2.passbook.show {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .box-wrap-2 > .input-wrapper span,
-.main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .box-wrap-2 > .input-wrapper span {
-  font-size: 1.2rem;
 }
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(2) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child,
 .main-dashboard .na-form-con .na-container-wrapper-3 .na-container-9 .big-con-2 .rowspan-container:nth-of-type(3) .rowspan .box-wrap-2 > .input-wrapper .rowspan-2.child {
@@ -12333,9 +12208,6 @@ body.print-portrait .page.page-2.passbook.show {
   align-items: center;
   justify-content: space-between;
 }
-.main-dashboard .reports-container .report-inner-container-1 .header-wrapper button {
-  font-size: 1.2rem;
-}
 .main-dashboard .reports-container .report-inner-container-1 .body-wrapper {
   display: flex;
   flex-direction: column;
@@ -12558,7 +12430,7 @@ body.print-portrait .page.page-2.passbook.show {
   text-align: left;
 }
 .main-dashboard .reports-container .report-inner-container-2 .body-wrapper .reports-table-container .table-container table th span.th-name {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 .main-dashboard .reports-container .report-inner-container-2 .body-wrapper .reports-table-container .table-container table th .th-wrapper {
@@ -12584,7 +12456,7 @@ body.print-portrait .page.page-2.passbook.show {
 }
 .main-dashboard .reports-container .report-inner-container-2 .body-wrapper .reports-table-container .table-container table td {
   padding: 1rem 3rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: left;
 }
 .main-dashboard .reports-container .report-inner-container-2 .body-wrapper .reports-table-container .table-container table td .td-wrapper {
@@ -12620,11 +12492,11 @@ body.print-portrait .page.page-2.passbook.show {
   margin: 2rem 4rem 2rem 0;
 }
 .main-dashboard .reports-container .report-inner-container-2 .body-wrapper .reports-table-container .total-collection-footer .footer-wrapper p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .main-dashboard .reports-container .report-inner-container-2 .body-wrapper .reports-table-container .total-collection-footer .footer-wrapper span {
   margin-left: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -12800,29 +12672,6 @@ body.print-portrait .page.page-2.passbook.show {
 .nu-con-1 .container-wrapper .big-con .rowspan .input-wrapper {
   display: flex;
   flex-direction: column;
-}
-.nu-con-1 .container-wrapper .big-con .rowspan .input-wrapper span {
-  margin-bottom: 1rem;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-.nu-con-1 .container-wrapper .big-con .rowspan .input-wrapper input {
-  -moz-appearance: textfield;
-  -webkit-appearance: none;
-  margin: 0;
-  font-size: 2rem;
-  padding: 1rem 2rem;
-  border: none;
-  outline: none;
-  background-color: #EBEBEB;
-  border-radius: 1rem;
-  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: opacity 100ms ease-in-out;
-}
-.nu-con-1 .container-wrapper .big-con .rowspan .input-wrapper input:hover {
-  filter: brightness(101.5%);
-  -webkit-filter: brightness(101.5%);
-  -moz-filter: brightness(101.5%);
 }
 .nu-con-1 .container-wrapper .big-con .rowspan .input-wrapper .select-box {
   position: relative;
@@ -13013,7 +12862,7 @@ body.print-portrait .page.page-2.passbook.show {
   gap: 1rem;
 }
 .nu-con-2 .container-wrapper .header-con .input-wrapper-checkbox span {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 .nu-con-2 .container-wrapper .ur-con-1 .table-container {
@@ -13044,7 +12893,7 @@ body.print-portrait .page.page-2.passbook.show {
 .nu-con-2 .container-wrapper .ur-con-1 .table-container .tb-th {
   padding: 4rem 1.5rem;
   text-align: left;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 .nu-con-2 .container-wrapper .ur-con-1 .table-container .flex-data {
@@ -13053,7 +12902,7 @@ body.print-portrait .page.page-2.passbook.show {
 }
 .nu-con-2 .container-wrapper .ur-con-1 .table-container .tb-td {
   padding: 1.5rem;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .view-nu-con-1 {
@@ -13357,7 +13206,7 @@ body.print-portrait .page.page-2.passbook.show {
   text-align: left;
 }
 .view-nu-con-2 .container-wrapper .ur-con-1 .table-container table th.th-name {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 .view-nu-con-2 .container-wrapper .ur-con-1 .table-container table .flex-data {
@@ -13366,5 +13215,5 @@ body.print-portrait .page.page-2.passbook.show {
 }
 .view-nu-con-2 .container-wrapper .ur-con-1 .table-container table td {
   padding: 1.5rem;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=app.css.map */

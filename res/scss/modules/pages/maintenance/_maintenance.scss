@@ -577,7 +577,7 @@
                             span {
                                 // *** Large Breakpoint ***
                                 @include lgBreakpoint {
-                                    margin-bottom: 0;
+                                    // margin-bottom: 0;
                                     font-size: $font-size-medium;
                                 }
                             }

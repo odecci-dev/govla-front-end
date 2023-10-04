@@ -443,15 +443,6 @@
                     .input-wrapper {
                         display: flex;
                         flex-direction: column;
-                        span {
-                            margin-bottom: 1rem;
-                            font-weight: $font-weight-bold;
-                            font-size: $font-size;
-                        }
-                        // * Input Global Styles
-                        input {
-                            @include inputField;
-                        }
                         // * Radio Buttons
                         .box-wrap {
                             display: flex;
@@ -660,15 +651,6 @@
                     .input-wrapper {
                         display: flex;
                         flex-direction: column;
-                        span {
-                            margin-bottom: 1rem;
-                            font-weight: $font-weight-bold;
-                            font-size: $font-size;
-                        }
-                        // * Input Global Styles
-                        input {
-                            @include inputField;
-                        }
                         // * Radio Buttons
                         .box-wrap {
                             display: flex;

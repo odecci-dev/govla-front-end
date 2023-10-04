@@ -235,8 +235,7 @@ table {
                 margin-left: unset;
             }
             span:nth-of-type(2) {
-                font-size: $font-size-x-small;
-                // color: $font-accent;
+                font-size: $font-size;
             }
         }
     }
@@ -259,17 +258,6 @@ table {
             }
         }
     }
-
-    // &>.td-btns>.td-btn-wrapper>button {
-    //     background-color: $white;
-    //     color: $primary;
-    //     transition: 200ms ease-out;
-    //     &:hover {
-    //         background-color: $black;
-    //         color: $white;
-    //     }
-        
-    // }
 
 }
 
@@ -543,7 +531,7 @@ table {
     >span {
         margin-bottom: 1rem;
         font-weight: $font-weight-bold;
-        font-size: $font-size;
+        font-size: calc($font-size + .2rem);
     }
     // * Input Global Styles
     input {
@@ -588,7 +576,7 @@ table {
             align-items: center;
             gap: 1rem;
             span {
-                font-size: $font-size;
+                font-size: calc($font-size + .2rem) ;
                 font-weight: $font-weight-bold;
                 white-space: nowrap;
             }
@@ -608,7 +596,7 @@ table {
     display: flex;
     flex-direction: column;
     span {
-        font-size: $font-size;
+        font-size: calc($font-size + .2rem);
         font-weight: $font-weight-bold;
         margin-bottom: 1rem;
     }

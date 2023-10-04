@@ -170,15 +170,6 @@
         .input-wrapper {
           display: flex;
           flex-direction: column;
-          span {
-            margin-bottom: 1rem;
-            font-weight: $font-weight-bold;
-            font-size: $font-size;
-          }
-          // * Input Global Styles
-          input {
-            @include inputField;
-          }
           // * Select Input Global Styles
           .select-box {
             position: relative;
@@ -334,7 +325,7 @@
         display: flex;
         gap: 1rem;
         span {
-          font-size: $font-size-x-medium;
+          font-size: calc($font-size + .3rem);
           font-weight: $font-weight-bold;
         }
       }
@@ -374,7 +365,7 @@
           .tb-th {
             padding: $spacing-4x-large $spacing-large;
             text-align: left;
-            font-size: $font-size-x-medium;
+            font-size: calc($font-size + .3rem) ;
             font-weight: $font-weight-bold;
           }
           .flex-data {
@@ -386,7 +377,7 @@
           // **                       ** //
           .tb-td {
             padding: $spacing-large;
-            font-size: $font-size-x-medium;
+            font-size: calc($font-size + .3rem) ;
           }
       }
     }
@@ -632,7 +623,7 @@
             padding: $spacing-4x-large $spacing-large;
             text-align: left;
             &.th-name {
-              font-size: $font-size-x-medium;
+              font-size: calc($font-size + .3rem);
               font-weight: $font-weight-bold;
               
             }
@@ -646,7 +637,7 @@
           // **                       ** //
           td {
             padding: $spacing-large;
-            font-size: $font-size-x-medium;
+            font-size: calc($font-size + .3rem);
           }
           
         }
