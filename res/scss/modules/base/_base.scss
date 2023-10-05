@@ -486,6 +486,55 @@ table {
     @include tableCheckboxInput;
 }
 
+// * Dropdown Button Global
+.dropdown-button {
+    width: 20rem;
+    .dropdown-selected {
+        @include dropdownSelectButton;
+    }
+    
+    .dropdown-selected h4,
+    .dropdown-select-box h4 {
+        cursor: pointer;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-bold;
+        color: $white;
+    }
+    
+    .dropdown-select-box {
+        display: flex;
+        // width: 30rem;
+        flex-direction: column;
+        position: relative;
+        .options-container {
+            @include dropdownButtonContainer;
+        }
+    }
+}
+
+// * Dropdown Select Button Global Styles
+.dropdown-selected {
+    @include dropdownSelectButton;
+}
+
+.dropdown-selected h4,
+.dropdown-select-box h4 {
+    cursor: pointer;
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    color: $black;
+}
+
+.dropdown-select-box {
+    display: flex;
+    // width: 30rem;
+    flex-direction: column;
+    position: relative;
+    .dropdown-options-container {
+        @include dropdownButtonContainer;
+    }
+}
+
 // * Select Input Global Styles
 .selected {
     @include selectDropdown;

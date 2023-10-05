@@ -315,136 +315,6 @@
         <!-- * Main Dashboard -->
         <div class="main-dashboard">
 
-            <!-- * New Application Modal -->
-            <dialog class="na-modal" data-new-application-modal>
-
-                <div class="modal-container">
-                    <!-- * Exit Button -->
-                    <button class="exit-button" id="data-close-new-application-modal">
-                        <img src="../res/assets/icons/x-circle.svg" alt="exit">
-                    </button>
-
-                    <!-- * Choose Type of Loan -->
-                    <div class="rowspan">
-                        <h3>Choose Type of Loan</h3>
-
-                        <!-- * Type Of Loan Dropdown Menu -->
-                        <div class="loan-type-dropdown" data-bor-dropdown>
-
-                            <!-- * Gender -->
-                            <div class="input-wrapper">
-                                <div class="select-box">
-                                    <select name="typeOfLoan" id="typeOfLoan">
-                                        <option disabled selected value></option>
-                                        <option value="Individual Loan">Individual Loan</option>
-                                        <option value="Group Loan">Group Loan</option>
-                                        <option value="Sample Loan">Sample Loan</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- * Search for existing member -->
-                    <div class="rowspan">
-
-                        <!-- * Search for existing member -->
-                        <h3>Search for existing member</h3>
-
-                        <div class="wrapper">
-
-                            <!-- * Search Bar -->
-                            <div class="search-wrap">
-                                <input type="search" id="search" name="search" placeholder="Search name or member ID">
-                                <img src="../res/assets/icons/magnifyingglass.svg" alt="search">
-                            </div>
-
-                            <!-- * Create New Button -->
-                            <button class="button">Create New</button>
-
-                        </div>
-
-
-                    </div>
-
-                    <!-- * Table -->
-                    <div class="rowspan">
-
-                        <!-- * Container: Table and Pagination -->
-                        <div class="na-table-con">
-
-                            <!-- * Table Container -->
-                            <div class="table-container">
-
-                                <!-- * Members Table -->
-                                <table>
-
-                                    <!-- * Table Header -->
-                                    <tr>
-
-                                        <!-- * Checkbox ALl
-                                        <th><input type="checkbox" id="allCheckbox" onchange="checkAll(this)"></th> -->
-
-                                        <!-- * Header Name -->
-                                        <th><span class="th-name">Name</span></th>
-
-                                        <!-- * Header Member ID -->
-                                        <th><span class="th-name">Member ID</span></th>
-
-                                    </tr>
-
-
-                                    <!-- * Members Data -->
-                                    <tr>
-
-                                        <!-- * Checkbox Opt
-                                        <td><input type="checkbox" id="checkbox" data-checkbox></td> -->
-
-                                        <td>
-
-                                            <!-- * Data Name-->
-                                            <span class="td-name">Dela Cruz, Juana</span>
-
-                                        </td>
-
-                                        <td>
-
-                                            <!-- * Data Member ID-->
-                                            <span class="td-name">778 8596 2125</span>
-
-                                        </td>
-
-
-                                    </tr>
-
-                                </table>
-
-                            </div>
-
-                            <!-- * Pagination Container -->
-                            <div class="pagination-container">
-
-                                <!-- * Pagination Links -->
-                                <a href="#"><img src="../res/assets/icons/caret-left.svg" alt="caret-left"></a>
-                                <a href="#">1</a>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <a href="#">4</a>
-                                <a href="#">5</a>
-                                <a href="#"><img src="../res/assets/icons/caret-right.svg" alt="caret-right"></a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </dialog>
-
             <!-- * Dashboard Container 1 -->
             <div class="md-con-1">
                 <div class="wrapper">
@@ -527,14 +397,57 @@
                         <div class="div-1">
                             <h2>Active Members</h2>
                             <div class="btn-wrapper">
-                                <button>Select Area</button>
-                                <button>
-                                    <span>Last 7 Days</span>
-                                    <img
-                                        src="../res/assets/icons/white-carret-down.svg"
-                                        alt="carret-down"
-                                    />
-                                </button>
+                                <button class="button">Select Area</button>
+                                <!-- * Filter Dropdown Button -->
+                                <div class="dropdown-button">
+                                    <div class="dropdown-select-box">
+    
+                                        <div class="dropdown-options-container" data-option-con0>
+    
+                                            <div class="dropdown-option" data-option-item0>
+    
+                                                <input type="radio" class="radio" name="category" value="7 Days" />
+                                                <label for="7 Days">
+                                                    <h4>7 Days</h4>
+                                                </label>
+    
+                                            </div>
+    
+                                            <div class="dropdown-option" data-option-item0>
+    
+                                                <input type="radio" class="radio" name="category" value="Option 2" />
+                                                <label for="Option 2">
+                                                    <h4>Option 2</h4>
+                                                </label>
+    
+                                            </div>
+    
+                                            <div class="dropdown-option" data-option-item0>
+    
+                                                <input type="radio" class="radio" name="category" value="Option 3" />
+                                                <label for="Option 3">
+                                                    <h4>Option 3</h4>
+                                                </label>
+    
+                                            </div>
+    
+                                            <div class="dropdown-option" data-option-item0>
+    
+                                                <input type="radio" class="radio" name="category" value="Option 4" />
+                                                <label for="Option 4">
+                                                    <h4>Option 4</h4>
+                                                </label>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                        <div class="dropdown-selected" data-option-select0>
+                                            <h4>Select Filter</h4>
+                                        </div>
+    
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- * Line Chart -->

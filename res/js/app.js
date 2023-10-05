@@ -1,3 +1,46 @@
+// * Dashboard: Dropdown Filter
+// * Select Dropdown
+function selectDropdown(selectOption, optionsContainer, optionList, selOpt, optCon, optList) {
+    selectOption.addEventListener("click", () => {
+        optionsContainer.classList.toggle("active");
+
+        // * H4 toggle dropdown
+        const h4 = selectOption.lastElementChild
+        if (h4) {
+            h4.setAttribute(optList, "")
+        }
+    });
+
+    // * Close dropdowns when clicking outside of them
+    document.addEventListener('click', (e) => {
+        if (!e.target.matches(selOpt, optCon)) {
+            optionsContainer.classList.remove("active");
+        }
+    });
+
+    optionList.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
+        option.addEventListener("click", () => {
+            selectOption.innerHTML = option.querySelector("label").innerHTML;
+            optionsContainer.classList.remove("active");
+            selectOption.setAttribute('value', option.children[0].value);
+        });
+    });
+
+}
+
+// ** Select Dropdown 0 (Borrower Gender)
+const selOpt0 = '[data-option-select0]'
+const optCon0 = '[data-option-con0]'
+const selected0 = 'data-option-select0'
+const selectedOpt0 = document.querySelector(selOpt0)
+const optionsContainer0 = document.querySelector(optCon0)
+const optionsList0 = document.querySelectorAll('[data-option-item0]')
+
+if (selectedOpt0) {
+    selectDropdown(selectedOpt0, optionsContainer0, optionsList0, selOpt0, optCon0, selected0)
+}
+
 // * All Members: Dropdown Menu Toggle
 document.addEventListener("click", e => {
 

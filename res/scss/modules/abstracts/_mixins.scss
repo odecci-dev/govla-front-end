@@ -38,6 +38,185 @@
 }
 
 // *** Dropdown Mixins
+// * Dropdown Button
+@mixin dropdownButton {
+    // @include primaryButton;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 4.4rem;
+    padding: 1rem 3rem 1rem 2rem;
+    cursor: pointer;
+    // * Select Input Arrow
+    &::after {
+        /* BG Img	 */
+        content: url("../assets/icons/carret-down.svg");
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transition: transform .5s;
+        transform: translateY(-50%);
+    }
+}
+
+// * Dropdown Button Container
+@mixin dropdownButtonContainer {
+    z-index: 10;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    // overflow: hidden;
+    transition: all 300ms;
+    // box-shadow: $box-shadow;
+    border-bottom-left-radius: $border-radius-medium;
+    border-bottom-right-radius: $border-radius-medium;
+    background-color: $primary;
+    position: absolute;
+    top: 100%;
+    &::before,
+    &::after {
+        visibility: hidden;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -40px;
+        left: 0;
+        height: 40px;
+        width: 40px;
+        border-bottom-left-radius: 25%;
+        background: transparent;
+        box-shadow: 0 20px 0 0 $primary;
+        // $box-shadow-inv-left;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -9;
+        top: -40px;
+        right: 0;
+        height: 40px;
+        width: 40px;
+        border-bottom-right-radius: 25%;
+        background: transparent;
+        box-shadow: 0 20px 0 0 $primary;
+        // $box-shadow-inv-right;
+    }
+    &.active {
+        z-index: 10;
+        max-height: 240px;
+        box-shadow: none;
+        opacity: 1;
+        &::before,
+        &::after {
+            visibility: visible;
+        }
+    }
+    &.active+.selected {
+        box-shadow: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    &.active+.selected::after {
+        transform: translateY(-50%) rotateX(180deg);
+    }
+    .dropdown-option {
+        padding: 1.5rem 2rem;
+        cursor: pointer;
+        transition: all 200ms;
+        input[type='radio'] {
+            display: none;
+        }
+        &:hover {
+            background-color: $black;
+        }
+        &:hover>label>h4 {
+            color: $white;
+        }
+        &label {
+            cursor: pointer;
+        }
+        &:last-of-type {
+            border-bottom-left-radius: $border-radius-medium;
+            border-bottom-right-radius: $border-radius-medium;
+        }
+    }
+}
+
+// * Dropdown Select Button
+@mixin dropdownSelectButton {
+    // @include inputField;
+    @include primaryButton;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 9;
+    width: 100%;
+    height: 4.4rem;
+    padding: 1rem 3rem 1rem 2rem;
+    cursor: pointer;
+    // * Select Input Arrow
+    &::after {
+        /* BG Img	 */
+        content: url("../assets/icons/white-carret-down.svg");
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transition: transform .5s;
+        transform: translateY(-50%);
+    }
+}
+
+
+// ******* Input Dropdown ******* //
+// * Select Dropdown Option Container
+@mixin selectDropdownOptionContainer {
+    z-index: 10;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 300ms;
+    box-shadow: inset $box-shadow;
+    border-bottom-left-radius: $border-radius-medium;
+    border-bottom-right-radius: $border-radius-medium;
+    background-color: $primary-bg;
+    position: absolute;
+    top: 100%;
+    &.active {
+        z-index: 10;
+        max-height: 240px;
+        box-shadow: none;
+        opacity: 1;
+    }
+    &.active+.selected {
+        box-shadow: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    &.active+.selected::after {
+        transform: translateY(-50%) rotateX(180deg);
+    }
+    .option {
+        padding: 1.5rem 2rem;
+        cursor: pointer;
+        input[type='radio'] {
+            display: none;
+        }
+    }
+    .option:hover {
+        background-color: $primary;
+    }
+    .option:hover>label>h4 {
+        color: $white;
+    }
+    .option label {
+        cursor: pointer;
+    }
+}
+
 // * Select Dropdown Menu
 @mixin selectDropdown {
     @include inputField;
