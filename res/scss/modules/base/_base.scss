@@ -637,6 +637,14 @@ table {
             //     outline-offset: max(2px, 0.15em);
             // }
         }
+        .radio-btn-wrapper.horizontal {
+            display: flex;
+            flex-direction: row !important;
+            align-items: center;
+            span {
+                margin-bottom: unset !important;
+            }
+        }
     }
 }
 

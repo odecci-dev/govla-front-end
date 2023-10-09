@@ -1247,3 +1247,22 @@ First Commit:
 
 • GOVLA Weekly Huddle (Thursday)
 
+
+October 05, 2023 (Friday)
+• GOVLA Front-end Debugging
+• Overview: Dashboard button class to element
+
+
+October 09, 2023 (Monday)
+First Commit:
+• Maintenance Module: Completed Loan Type Revision✅
+    Changes and additions are made in the ff.:
+    - maintenance-add-loan-type.html
+    - maintenance.js
+    - _maintenance.scss
+    - _base.scss
+    - _mixins.scss
+    - _fonts.scss
+    - app.scss (enabled _fonts.scss)
+
+• GOVLA Front-end Debugging

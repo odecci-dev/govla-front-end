@@ -317,3 +317,25 @@ const optionsContainer6 = document.querySelector('[data-option-con6]');
 const optionsList6 = document.querySelectorAll('[data-option-item6]');
 
 selectDropdown(selectedOpt6, optionsContainer6, optionsList6, selOpt6, optCon6, selected6)
+
+
+// ** Select Dropdown 7 (Percentage & Fixed Toggle)
+const selOpt7 = '[data-option-select7]'
+const optCon7 = '[data-option-con7]'
+const selected7 = 'data-option-select7'
+const selectedOpt7 = document.querySelector('[data-option-select7]');
+const optionsContainer7 = document.querySelector('[data-option-con7]');
+const optionsList7 = document.querySelectorAll('[data-option-item7]');
+
+selectDropdown(selectedOpt7, optionsContainer7, optionsList7, selOpt7, optCon7, selected7)
+
+
+// ** Select Dropdown 8 (Percentage & Fixed Toggle)
+const selOpt8 = '[data-option-select8]'
+const optCon8 = '[data-option-con8]'
+const selected8 = 'data-option-select8'
+const selectedOpt8 = document.querySelector('[data-option-select8]');
+const optionsContainer8 = document.querySelector('[data-option-con8]');
+const optionsList8 = document.querySelectorAll('[data-option-item8]');
+
+selectDropdown(selectedOpt8, optionsContainer8, optionsList8, selOpt8, optCon8, selected8)
