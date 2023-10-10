@@ -361,9 +361,10 @@
 
             <!-- * All Members' Containers -->
             <!-- * Container 1: All Members Header, Buttons, and Searchbar -->
+
             <div class="am-con-1">
-                <h2>Members</h2>
-                <p class="p-1">(Please select member type or loan type)</p>
+                <h2>Borrower</h2>
+                <p class="p-2">Total of <span>300</span> active Borrowers</p>
 
                 <!-- * Button Container -->
                 <div class="container">
@@ -379,7 +380,7 @@
 
                             <!-- * Member Type Button -->
                             <button class="link dropdown" data-bor-dropdown-button>
-                                <span data-bor-dropdown-button>Member Type</span>
+                                <span data-bor-dropdown-button>Borrower</span>
                                 <img src="../../res/assets/icons/white-carret-down.svg" alt="carret-down"data-bor-dropdown-button>
                             </button>
 
@@ -407,9 +408,9 @@
                         <!-- * Type Of Loan Dropdown Button -->
                         <div class="borrower-dropdown" data-bor-dropdown>
 
-                            <!-- * Borrower Button -->
+                            <!-- * Type Of Loan Button -->
                             <button class="link dropdown" data-bor-dropdown-button>
-                                <span data-bor-dropdown-button>Type Of Loan</span>
+                                <span data-bor-dropdown-button>Collateral Loan</span>
                                 <img src="../../res/assets/icons/white-carret-down.svg" alt="carret-down"data-bor-dropdown-button>
                             </button>
 
@@ -470,25 +471,19 @@
                 <div class="table-container">
 
                     <!-- * All Members Table -->
-                    <table id="allMembersTable">
+                    <table id="borrowerTable">
 
                         <!-- * Table Header -->
                         <tr>
 
                             <!-- * Checkbox ALl-->
-                            <th>
-                                <input type="checkbox" class="checkbox" data-select-all-checkbox>
-                            </th>
+                            <th><input type="checkbox" class="checkbox" data-select-all-checkbox></th>
 
                             <!-- * Borrower -->
-                            <th>
-                                <span class="th-name">Borrower</span>
-                            </th>
+                            <th><span class="th-name">Borrower</span></th>
 
                             <!-- * Co-borrower -->
-                            <th>
-                                <span class="th-name">Co-borrower</span>
-                            </th>
+                            <th><span class="th-name">Co-borrower</span></th>
 
                             <!-- * Current Loan -->
                             <th>
@@ -517,20 +512,17 @@
                             <th><span class="th-name">Action</span></th>
                         </tr>
 
-
                         <!-- * All Members Data -->
                         <tr>
 
                             <!-- * Checkbox Opt -->
-                            <td>
-                                <input type="checkbox" class="checkbox" id="checkbox" data-checkbox>
-                            </td>
+                            <td><input type="checkbox" class="checkbox" data-select-checkbox></td>
 
                             <td>
-
-                                <!-- * Borrower Data -->
+                                <!-- * Borrower Data-->
                                 <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> <span class="td-num">1</span>
+                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana">
+                                    <span class="td-num"></span>
                                     <span class="td-name">Dela Cruz, Juana</span>
                                 </div>
 
@@ -547,41 +539,76 @@
                             </td>
 
                             <!-- * Current Loan Data-->
-                            <td class="td-curLoan">
-                                18,000.00
-                            </td>
+                            <td class="td-curLoan">18,000.00</td>
 
                             <!-- * Outstading Balance Data-->
-                            <td class="td-bal">
-                                10,000.00
-                            </td>
+                            <td class="td-bal">10,000.00</td>
 
                             <!-- * Due Date Info-->
-                            <td class="td-due">
-                                June 4, 2023
-                            </td>
+                            <td class="td-due">June 4, 2023</td>
 
                             <!-- * Table View and Trash Button -->
                             <td class="td-btns">
                                 <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-2">View</button>
+                                    <button class="a-btn-view-2" data-member-view-borrower>View</button>
                                     <button class="a-btn-trash-2">Trash</button>
                                 </div>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <!-- * Checkbox -->
+                            <td><input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox></td>
+
+                            <!-- * Borrower Data-->
+                            <td>
+                                <div class="td-wrapper">
+                                    <img src="../../res/assets/icons/sample-dp/Borrower-2.svg" alt=""> 
+                                    <span class="td-num"></span>
+                                    <span class="td-name">Beverly, Haily</span>
+                                </div>
+                            </td>
+
+                            <!-- * Co-Makers Data-->
+                            <td>
+                                <div class="td-wrapper">
+                                    <img src="../../res/assets/icons/sample-dp/CoMaker-2.svg" alt="">
+                                    <span class="td-name">Barbosa, June</span>
+                                </div>
+                            </td>
+
+                            <!-- * Current Loan Data-->
+                            <td class="td-curLoan">18,000.00</td>
+
+                            <!-- * Outstading Balance Data-->
+                            <td class="td-bal">10,000.00</td>
+
+                            <!-- * Due Date Info-->
+                            <td class="td-due">May 30, 2023</td>
+
+                            <!-- * Table View and Trash Button -->
+                            <td class="td-btns">
+
+                                <div class="td-btn-wrapper">
+                                    <button class="a-btn-view-2" data-member-view-borrower>View</button>
+                                    <button class="a-btn-trash-2">Trash</button>
+                                </div>
+
                             </td>
 
                         </tr>
                         <tr>
 
                             <!-- * Checkbox Opt -->
-                            <td>
-                                <input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox>
-                            </td>
+                            <td><input type="checkbox" class="checkbox" data-select-checkbox></td>
 
                             <td>
-
-                                <!-- * Borrower Data -->
+                                <!-- * Borrower Data-->
                                 <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> <span class="td-num">1</span>
+                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana">
+                                    <span class="td-num"></span>
                                     <span class="td-name">Dela Cruz, Juana</span>
                                 </div>
 
@@ -598,41 +625,76 @@
                             </td>
 
                             <!-- * Current Loan Data-->
-                            <td class="td-curLoan">
-                                18,000.00
-                            </td>
+                            <td class="td-curLoan">18,000.00</td>
 
                             <!-- * Outstading Balance Data-->
-                            <td class="td-bal">
-                                10,000.00
-                            </td>
+                            <td class="td-bal">10,000.00</td>
 
                             <!-- * Due Date Info-->
-                            <td class="td-due">
-                                June 4, 2023
-                            </td>
+                            <td class="td-due">June 4, 2023</td>
 
                             <!-- * Table View and Trash Button -->
                             <td class="td-btns">
                                 <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-2">View</button>
+                                    <button class="a-btn-view-2" data-member-view-borrower>View</button>
                                     <button class="a-btn-trash-2">Trash</button>
                                 </div>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <!-- * Checkbox -->
+                            <td><input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox></td>
+
+                            <!-- * Borrower Data-->
+                            <td>
+                                <div class="td-wrapper">
+                                    <img src="../../res/assets/icons/sample-dp/Borrower-2.svg" alt=""> 
+                                    <span class="td-num"></span>
+                                    <span class="td-name">Beverly, Haily</span>
+                                </div>
+                            </td>
+
+                            <!-- * Co-Makers Data-->
+                            <td>
+                                <div class="td-wrapper">
+                                    <img src="../../res/assets/icons/sample-dp/CoMaker-2.svg" alt="">
+                                    <span class="td-name">Barbosa, June</span>
+                                </div>
+                            </td>
+
+                            <!-- * Current Loan Data-->
+                            <td class="td-curLoan">18,000.00</td>
+
+                            <!-- * Outstading Balance Data-->
+                            <td class="td-bal">10,000.00</td>
+
+                            <!-- * Due Date Info-->
+                            <td class="td-due">May 30, 2023</td>
+
+                            <!-- * Table View and Trash Button -->
+                            <td class="td-btns">
+
+                                <div class="td-btn-wrapper">
+                                    <button class="a-btn-view-2" data-member-view-borrower>View</button>
+                                    <button class="a-btn-trash-2">Trash</button>
+                                </div>
+
                             </td>
 
                         </tr>
                         <tr>
 
                             <!-- * Checkbox Opt -->
-                            <td>
-                                <input type="checkbox" class="checkbox" id="checkbox" data-checkbox>
-                            </td>
+                            <td><input type="checkbox" class="checkbox" data-select-checkbox></td>
 
                             <td>
-
-                                <!-- * Borrower Data -->
+                                <!-- * Borrower Data-->
                                 <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> <span class="td-num">1</span>
+                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana">
+                                    <span class="td-num"></span>
                                     <span class="td-name">Dela Cruz, Juana</span>
                                 </div>
 
@@ -649,41 +711,76 @@
                             </td>
 
                             <!-- * Current Loan Data-->
-                            <td class="td-curLoan">
-                                18,000.00
-                            </td>
+                            <td class="td-curLoan">18,000.00</td>
 
                             <!-- * Outstading Balance Data-->
-                            <td class="td-bal">
-                                10,000.00
-                            </td>
+                            <td class="td-bal">10,000.00</td>
 
                             <!-- * Due Date Info-->
-                            <td class="td-due">
-                                June 4, 2023
-                            </td>
+                            <td class="td-due">June 4, 2023</td>
 
                             <!-- * Table View and Trash Button -->
                             <td class="td-btns">
                                 <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-2">View</button>
+                                    <button class="a-btn-view-2" data-member-view-borrower>View</button>
                                     <button class="a-btn-trash-2">Trash</button>
                                 </div>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <!-- * Checkbox -->
+                            <td><input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox></td>
+
+                            <!-- * Borrower Data-->
+                            <td>
+                                <div class="td-wrapper">
+                                    <img src="../../res/assets/icons/sample-dp/Borrower-2.svg" alt=""> 
+                                    <span class="td-num"></span>
+                                    <span class="td-name">Beverly, Haily</span>
+                                </div>
+                            </td>
+
+                            <!-- * Co-Makers Data-->
+                            <td>
+                                <div class="td-wrapper">
+                                    <img src="../../res/assets/icons/sample-dp/CoMaker-2.svg" alt="">
+                                    <span class="td-name">Barbosa, June</span>
+                                </div>
+                            </td>
+
+                            <!-- * Current Loan Data-->
+                            <td class="td-curLoan">18,000.00</td>
+
+                            <!-- * Outstading Balance Data-->
+                            <td class="td-bal">10,000.00</td>
+
+                            <!-- * Due Date Info-->
+                            <td class="td-due">May 30, 2023</td>
+
+                            <!-- * Table View and Trash Button -->
+                            <td class="td-btns">
+
+                                <div class="td-btn-wrapper">
+                                    <button class="a-btn-view-2" data-member-view-borrower>View</button>
+                                    <button class="a-btn-trash-2">Trash</button>
+                                </div>
+
                             </td>
 
                         </tr>
                         <tr>
 
                             <!-- * Checkbox Opt -->
-                            <td>
-                                <input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox>
-                            </td>
+                            <td><input type="checkbox" class="checkbox" data-select-checkbox></td>
 
                             <td>
-
-                                <!-- * Borrower Data -->
+                                <!-- * Borrower Data-->
                                 <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> <span class="td-num">1</span>
+                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana">
+                                    <span class="td-num"></span>
                                     <span class="td-name">Dela Cruz, Juana</span>
                                 </div>
 
@@ -700,41 +797,76 @@
                             </td>
 
                             <!-- * Current Loan Data-->
-                            <td class="td-curLoan">
-                                18,000.00
-                            </td>
+                            <td class="td-curLoan">18,000.00</td>
 
                             <!-- * Outstading Balance Data-->
-                            <td class="td-bal">
-                                10,000.00
-                            </td>
+                            <td class="td-bal">10,000.00</td>
 
                             <!-- * Due Date Info-->
-                            <td class="td-due">
-                                June 4, 2023
-                            </td>
+                            <td class="td-due">June 4, 2023</td>
 
                             <!-- * Table View and Trash Button -->
                             <td class="td-btns">
                                 <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-2">View</button>
+                                    <button class="a-btn-view-2" data-member-view-borrower>View</button>
                                     <button class="a-btn-trash-2">Trash</button>
                                 </div>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <!-- * Checkbox -->
+                            <td><input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox></td>
+
+                            <!-- * Borrower Data-->
+                            <td>
+                                <div class="td-wrapper">
+                                    <img src="../../res/assets/icons/sample-dp/Borrower-2.svg" alt=""> 
+                                    <span class="td-num"></span>
+                                    <span class="td-name">Beverly, Haily</span>
+                                </div>
+                            </td>
+
+                            <!-- * Co-Makers Data-->
+                            <td>
+                                <div class="td-wrapper">
+                                    <img src="../../res/assets/icons/sample-dp/CoMaker-2.svg" alt="">
+                                    <span class="td-name">Barbosa, June</span>
+                                </div>
+                            </td>
+
+                            <!-- * Current Loan Data-->
+                            <td class="td-curLoan">18,000.00</td>
+
+                            <!-- * Outstading Balance Data-->
+                            <td class="td-bal">10,000.00</td>
+
+                            <!-- * Due Date Info-->
+                            <td class="td-due">May 30, 2023</td>
+
+                            <!-- * Table View and Trash Button -->
+                            <td class="td-btns">
+
+                                <div class="td-btn-wrapper">
+                                    <button class="a-btn-view-2" data-member-view-borrower>View</button>
+                                    <button class="a-btn-trash-2">Trash</button>
+                                </div>
+
                             </td>
 
                         </tr>
                         <tr>
 
                             <!-- * Checkbox Opt -->
-                            <td>
-                                <input type="checkbox" class="checkbox" id="checkbox" data-checkbox>
-                            </td>
+                            <td><input type="checkbox" class="checkbox" data-select-checkbox></td>
 
                             <td>
-
-                                <!-- * Borrower Data -->
+                                <!-- * Borrower Data-->
                                 <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> <span class="td-num">1</span>
+                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana">
+                                    <span class="td-num"></span>
                                     <span class="td-name">Dela Cruz, Juana</span>
                                 </div>
 
@@ -751,491 +883,70 @@
                             </td>
 
                             <!-- * Current Loan Data-->
-                            <td class="td-curLoan">
-                                18,000.00
-                            </td>
+                            <td class="td-curLoan">18,000.00</td>
 
                             <!-- * Outstading Balance Data-->
-                            <td class="td-bal">
-                                10,000.00
-                            </td>
+                            <td class="td-bal">10,000.00</td>
 
                             <!-- * Due Date Info-->
-                            <td class="td-due">
-                                June 4, 2023
-                            </td>
+                            <td class="td-due">June 4, 2023</td>
 
                             <!-- * Table View and Trash Button -->
                             <td class="td-btns">
                                 <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-2">View</button>
+                                    <button class="a-btn-view-2" data-member-view-borrower>View</button>
                                     <button class="a-btn-trash-2">Trash</button>
                                 </div>
                             </td>
 
                         </tr>
+
                         <tr>
 
-                            <!-- * Checkbox Opt -->
+                            <!-- * Checkbox -->
+                            <td><input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox></td>
+
+                            <!-- * Borrower Data-->
                             <td>
-                                <input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox>
+                                <div class="td-wrapper">
+                                    <img src="../../res/assets/icons/sample-dp/Borrower-2.svg" alt=""> 
+                                    <span class="td-num"></span>
+                                    <span class="td-name">Beverly, Haily</span>
+                                </div>
                             </td>
 
+                            <!-- * Co-Makers Data-->
                             <td>
-
-                                <!-- * Borrower Data -->
                                 <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> <span class="td-num">1</span>
-                                    <span class="td-name">Dela Cruz, Juana</span>
+                                    <img src="../../res/assets/icons/sample-dp/CoMaker-2.svg" alt="">
+                                    <span class="td-name">Barbosa, June</span>
                                 </div>
-
-                            </td>
-
-                            <td>
-
-                                <!-- * Co-Makers Data-->
-                                <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/CoMaker-1.svg" alt="Alfreds Futterkiste">
-                                    <span class="td-name">Palermo, Juliana</span>
-                                </div>
-
                             </td>
 
                             <!-- * Current Loan Data-->
-                            <td class="td-curLoan">
-                                18,000.00
-                            </td>
+                            <td class="td-curLoan">18,000.00</td>
 
                             <!-- * Outstading Balance Data-->
-                            <td class="td-bal">
-                                10,000.00
-                            </td>
+                            <td class="td-bal">10,000.00</td>
 
                             <!-- * Due Date Info-->
-                            <td class="td-due">
-                                June 4, 2023
-                            </td>
+                            <td class="td-due">May 30, 2023</td>
 
                             <!-- * Table View and Trash Button -->
                             <td class="td-btns">
+
                                 <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-2">View</button>
+                                    <button class="a-btn-view-2" data-member-view-borrower>View</button>
                                     <button class="a-btn-trash-2">Trash</button>
                                 </div>
-                            </td>
 
-                        </tr>
-                        <tr>
-
-                            <!-- * Checkbox Opt -->
-                            <td>
-                                <input type="checkbox" class="checkbox" id="checkbox" data-checkbox>
-                            </td>
-
-                            <td>
-
-                                <!-- * Borrower Data -->
-                                <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> <span class="td-num">1</span>
-                                    <span class="td-name">Dela Cruz, Juana</span>
-                                </div>
-
-                            </td>
-
-                            <td>
-
-                                <!-- * Co-Makers Data-->
-                                <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/CoMaker-1.svg" alt="Alfreds Futterkiste">
-                                    <span class="td-name">Palermo, Juliana</span>
-                                </div>
-
-                            </td>
-
-                            <!-- * Current Loan Data-->
-                            <td class="td-curLoan">
-                                18,000.00
-                            </td>
-
-                            <!-- * Outstading Balance Data-->
-                            <td class="td-bal">
-                                10,000.00
-                            </td>
-
-                            <!-- * Due Date Info-->
-                            <td class="td-due">
-                                June 4, 2023
-                            </td>
-
-                            <!-- * Table View and Trash Button -->
-                            <td class="td-btns">
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-2">View</button>
-                                    <button class="a-btn-trash-2">Trash</button>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-
-                            <!-- * Checkbox Opt -->
-                            <td>
-                                <input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox>
-                            </td>
-
-                            <td>
-
-                                <!-- * Borrower Data -->
-                                <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> <span class="td-num">1</span>
-                                    <span class="td-name">Dela Cruz, Juana</span>
-                                </div>
-
-                            </td>
-
-                            <td>
-
-                                <!-- * Co-Makers Data-->
-                                <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/CoMaker-1.svg" alt="Alfreds Futterkiste">
-                                    <span class="td-name">Palermo, Juliana</span>
-                                </div>
-
-                            </td>
-
-                            <!-- * Current Loan Data-->
-                            <td class="td-curLoan">
-                                18,000.00
-                            </td>
-
-                            <!-- * Outstading Balance Data-->
-                            <td class="td-bal">
-                                10,000.00
-                            </td>
-
-                            <!-- * Due Date Info-->
-                            <td class="td-due">
-                                June 4, 2023
-                            </td>
-
-                            <!-- * Table View and Trash Button -->
-                            <td class="td-btns">
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-2">View</button>
-                                    <button class="a-btn-trash-2">Trash</button>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-
-                            <!-- * Checkbox Opt -->
-                            <td>
-                                <input type="checkbox" class="checkbox" id="checkbox" data-checkbox>
-                            </td>
-
-                            <td>
-
-                                <!-- * Borrower Data -->
-                                <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> <span class="td-num">1</span>
-                                    <span class="td-name">Dela Cruz, Juana</span>
-                                </div>
-
-                            </td>
-
-                            <td>
-
-                                <!-- * Co-Makers Data-->
-                                <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/CoMaker-1.svg" alt="Alfreds Futterkiste">
-                                    <span class="td-name">Palermo, Juliana</span>
-                                </div>
-
-                            </td>
-
-                            <!-- * Current Loan Data-->
-                            <td class="td-curLoan">
-                                18,000.00
-                            </td>
-
-                            <!-- * Outstading Balance Data-->
-                            <td class="td-bal">
-                                10,000.00
-                            </td>
-
-                            <!-- * Due Date Info-->
-                            <td class="td-due">
-                                June 4, 2023
-                            </td>
-
-                            <!-- * Table View and Trash Button -->
-                            <td class="td-btns">
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-2">View</button>
-                                    <button class="a-btn-trash-2">Trash</button>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-
-                            <!-- * Checkbox Opt -->
-                            <td>
-                                <input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox>
-                            </td>
-
-                            <td>
-
-                                <!-- * Borrower Data -->
-                                <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> <span class="td-num">1</span>
-                                    <span class="td-name">Dela Cruz, Juana</span>
-                                </div>
-
-                            </td>
-
-                            <td>
-
-                                <!-- * Co-Makers Data-->
-                                <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/CoMaker-1.svg" alt="Alfreds Futterkiste">
-                                    <span class="td-name">Palermo, Juliana</span>
-                                </div>
-
-                            </td>
-
-                            <!-- * Current Loan Data-->
-                            <td class="td-curLoan">
-                                18,000.00
-                            </td>
-
-                            <!-- * Outstading Balance Data-->
-                            <td class="td-bal">
-                                10,000.00
-                            </td>
-
-                            <!-- * Due Date Info-->
-                            <td class="td-due">
-                                June 4, 2023
-                            </td>
-
-                            <!-- * Table View and Trash Button -->
-                            <td class="td-btns">
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-2">View</button>
-                                    <button class="a-btn-trash-2">Trash</button>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-
-                            <!-- * Checkbox Opt -->
-                            <td>
-                                <input type="checkbox" class="checkbox" id="checkbox" data-checkbox>
-                            </td>
-
-                            <td>
-
-                                <!-- * Borrower Data -->
-                                <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> <span class="td-num">1</span>
-                                    <span class="td-name">Dela Cruz, Juana</span>
-                                </div>
-
-                            </td>
-
-                            <td>
-
-                                <!-- * Co-Makers Data-->
-                                <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/CoMaker-1.svg" alt="Alfreds Futterkiste">
-                                    <span class="td-name">Palermo, Juliana</span>
-                                </div>
-
-                            </td>
-
-                            <!-- * Current Loan Data-->
-                            <td class="td-curLoan">
-                                18,000.00
-                            </td>
-
-                            <!-- * Outstading Balance Data-->
-                            <td class="td-bal">
-                                10,000.00
-                            </td>
-
-                            <!-- * Due Date Info-->
-                            <td class="td-due">
-                                June 4, 2023
-                            </td>
-
-                            <!-- * Table View and Trash Button -->
-                            <td class="td-btns">
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-2">View</button>
-                                    <button class="a-btn-trash-2">Trash</button>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-
-                            <!-- * Checkbox Opt -->
-                            <td>
-                                <input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox>
-                            </td>
-
-                            <td>
-
-                                <!-- * Borrower Data -->
-                                <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> <span class="td-num">1</span>
-                                    <span class="td-name">Dela Cruz, Juana</span>
-                                </div>
-
-                            </td>
-
-                            <td>
-
-                                <!-- * Co-Makers Data-->
-                                <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/CoMaker-1.svg" alt="Alfreds Futterkiste">
-                                    <span class="td-name">Palermo, Juliana</span>
-                                </div>
-
-                            </td>
-
-                            <!-- * Current Loan Data-->
-                            <td class="td-curLoan">
-                                18,000.00
-                            </td>
-
-                            <!-- * Outstading Balance Data-->
-                            <td class="td-bal">
-                                10,000.00
-                            </td>
-
-                            <!-- * Due Date Info-->
-                            <td class="td-due">
-                                June 4, 2023
-                            </td>
-
-                            <!-- * Table View and Trash Button -->
-                            <td class="td-btns">
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-2">View</button>
-                                    <button class="a-btn-trash-2">Trash</button>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-
-                            <!-- * Checkbox Opt -->
-                            <td>
-                                <input type="checkbox" class="checkbox" id="checkbox" data-checkbox>
-                            </td>
-
-                            <td>
-
-                                <!-- * Borrower Data -->
-                                <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> <span class="td-num">1</span>
-                                    <span class="td-name">Dela Cruz, Juana</span>
-                                </div>
-
-                            </td>
-
-                            <td>
-
-                                <!-- * Co-Makers Data-->
-                                <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/CoMaker-1.svg" alt="Alfreds Futterkiste">
-                                    <span class="td-name">Palermo, Juliana</span>
-                                </div>
-
-                            </td>
-
-                            <!-- * Current Loan Data-->
-                            <td class="td-curLoan">
-                                18,000.00
-                            </td>
-
-                            <!-- * Outstading Balance Data-->
-                            <td class="td-bal">
-                                10,000.00
-                            </td>
-
-                            <!-- * Due Date Info-->
-                            <td class="td-due">
-                                June 4, 2023
-                            </td>
-
-                            <!-- * Table View and Trash Button -->
-                            <td class="td-btns">
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-2">View</button>
-                                    <button class="a-btn-trash-2">Trash</button>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-
-                            <!-- * Checkbox Opt -->
-                            <td>
-                                <input type="checkbox" class="checkbox" id="checkbox" data-select-checkbox>
-                            </td>
-
-                            <td>
-
-                                <!-- * Borrower Data -->
-                                <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/Borrower-1.svg" alt="Dela Cruz, Juana"> <span class="td-num">1</span>
-                                    <span class="td-name">Dela Cruz, Juana</span>
-                                </div>
-
-                            </td>
-
-                            <td>
-
-                                <!-- * Co-Makers Data-->
-                                <div class="td-wrapper">
-                                    <img src="../../res/assets/icons/sample-dp/CoMaker-1.svg" alt="Alfreds Futterkiste">
-                                    <span class="td-name">Palermo, Juliana</span>
-                                </div>
-
-                            </td>
-
-                            <!-- * Current Loan Data-->
-                            <td class="td-curLoan">
-                                18,000.00
-                            </td>
-
-                            <!-- * Outstading Balance Data-->
-                            <td class="td-bal">
-                                10,000.00
-                            </td>
-
-                            <!-- * Due Date Info-->
-                            <td class="td-due">
-                                June 4, 2023
-                            </td>
-
-                            <!-- * Table View and Trash Button -->
-                            <td class="td-btns">
-                                <div class="td-btn-wrapper">
-                                    <button class="a-btn-view-2">View</button>
-                                    <button class="a-btn-trash-2">Trash</button>
-                                </div>
                             </td>
 
                         </tr>
 
-
+                        
                     </table>
+                    
                 </div>
 
                 <!-- * Pagination Container -->
@@ -1263,6 +974,7 @@
     <script src="../../res/js/components/nav.js"></script>
     <script src="../../res/js/components/members.js"></script>
     <script src="../../res/js/components/filterModal.js"></script>
+
 
 </body>
 
