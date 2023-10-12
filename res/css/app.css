@@ -1527,6 +1527,9 @@ table .td-btn-wrapper .a-btn-view-3.remitted::after {
   -webkit-filter: brightness(101.5%);
   -moz-filter: brightness(101.5%);
 }
+.input-wrapper input[type=radio] {
+  padding: 0 !important;
+}
 .input-wrapper input.input-image {
   position: relative;
   border-radius: 1rem;

@@ -248,6 +248,8 @@ function selectDropdown(selectOption, optionsContainer, optionList, selOpt, optC
             selectOption.innerHTML = option.querySelector("label").innerHTML;
             optionsContainer.classList.remove("active");
             selectOption.setAttribute('value', option.children[0].value);
+            let selectToggleCheckRadio = selectOption.querySelector("input[type=radio]")
+            selectToggleCheckRadio.checked = true;
         });
     });
 

@@ -587,6 +587,9 @@ table {
         @include inputField;
         // margin-bottom: 1rem;
     }
+    input[type='radio'] {
+        padding: 0 !important;
+    }
     // * Image Input Button
     input.input-image {
         @include inputImageButton;

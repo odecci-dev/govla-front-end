@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../res/css/app.css">
+</head>
+<!-- <style>
+    .input-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .input-wrapper > span {
+        margin-bottom: 1rem;
+        font-weight: 700;
+        font-size: 1.4rem;
+    }
+    .input-wrapper input {
+        -moz-appearance: textfield;
+        -webkit-appearance: none;
+        margin: 0;
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        border: none;
+        outline: none;
+        background-color: #EBEBEB;
+        border-radius: 1rem;
+        box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        transition: opacity 100ms ease-in-out;
+    }
+    .input-wrapper input:hover {
+        filter: brightness(101.5%);
+        -webkit-filter: brightness(101.5%);
+        -moz-filter: brightness(101.5%);
+    }
+    .input-wrapper input[type=radio] {
+        padding: 0 !important;
+    }       
+
+    .selected {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  margin: 0;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #EBEBEB;
+  border-radius: 1rem;
+  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: opacity 100ms ease-in-out;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 4.4rem;
+  padding: 1rem 3rem 1rem 2rem;
+  cursor: pointer;
+}
+.selected:hover {
+  filter: brightness(101.5%);
+  -webkit-filter: brightness(101.5%);
+  -moz-filter: brightness(101.5%);
+}
+.selected::after {
+  /* BG Img	 */
+  content: ;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transition: transform 0.5s;
+  transform: translateY(-50%);
+}
+
+.selected h4,
+.select-box h4 {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #29292B;
+}
+
+.select-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.select-box .options-container {
+  z-index: 10;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 300ms;
+  box-shadow: inset 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: #EBEBEB;
+  position: absolute;
+  top: 100%;
+}
+.select-box .options-container.active {
+  z-index: 10;
+  max-height: 34rem;
+  box-shadow: none;
+  opacity: 1;
+}
+.select-box .options-container.active + .selected {
+  box-shadow: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.select-box .options-container.active + .selected::after {
+  transform: translateY(-50%) rotateX(180deg);
+}
+.select-box .options-container .option {
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+}
+.select-box .options-container .option input[type=radio] {
+  display: none;
+}
+.select-box .options-container .option:hover {
+  background-color: #D6A330;
+}
+.select-box .options-container .option:hover > label > h4 {
+  color: #FFFFFF;
+}
+.select-box .options-container .option label {
+  cursor: pointer;
+}
+</style> -->
+<body>
+    
+    <!-- * Type Of Collection -->
+    <div class="input-wrapper">
+        <span>Type Of Collection</span>
+        <div class="select-box">
+
+            <div class="options-container" data-option-con1>
+
+                <div class="option" data-option-item1>
+
+                    <label for="Daily">
+                        <input type="radio" class="radio" name="category" value="Daily" />
+                        <h4>Daily</h4>
+                    </label>
+
+                </div>
+
+                <div class="option" data-option-item1>
+
+                    <label for="7 Days">
+                        <input type="radio" class="radio" name="category" value="7 Days" />
+                        <h4>7 Days</h4>
+                    </label>
+
+                </div>
+
+                <div class="option" data-option-item1>
+
+                    <label for="15 Days">
+                        <input type="radio" class="radio" name="category" value="15 Days" />
+                        <h4>15 Days</h4>
+                    </label>
+
+                </div>
+
+                <div class="option" data-option-item1>
+
+                    <label for="Monthly">
+                        <input type="radio" class="radio" name="category" value="Monthly" />
+                        <h4>Monthly</h4>
+                    </label>
+
+                </div>
+
+                <div class="option" data-option-item1>
+
+                    <label for="Quarterly">
+                        <input type="radio" class="radio" name="category" value="Quarterly" />
+                        <h4>Quarterly</h4>
+                    </label>
+
+                </div>
+
+                <div class="option" data-option-item1>
+
+                    <label for="Yearly">
+                        <input type="radio" class="radio" name="category" value="Yearly" />
+                        <h4>Yearly</h4>
+                    </label>
+
+                </div>
+
+            </div>
+
+            <div class="selected" data-option-select1>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        // * Select Dropdown Function
+        function selectDropdown(selectOption, optionsContainer, optionList, selOpt, optCon, optList) {
+            selectOption.addEventListener("click", () => {
+                optionsContainer.classList.toggle("active");
+
+                // * H4 toggle dropdown
+                const h4 = selectOption.lastElementChild
+                if (h4) {
+                    h4.setAttribute(optList, "")
+                }
+            });
+
+            // * Close dropdowns when clicking outside of them
+            document.addEventListener('click', (e) => {
+                if (!e.target.matches(selOpt, optCon)) {
+                    optionsContainer.classList.remove("active");
+                }
+            });
+
+            optionList.forEach(option => {
+                option.setAttribute('value', option.children[0].value)
+                option.addEventListener("click", () => {
+                    selectOption.innerHTML = option.querySelector("label").innerHTML;
+                    optionsContainer.classList.remove("active");
+                    selectOption.setAttribute('value', option.children[0].value);
+                    let selectToggleCheckRadio = selectOption.querySelector("input[type=radio]")
+                    selectToggleCheckRadio.checked = true;
+                });
+            });
+
+        }
+
+        // ** Select Dropdown 1 (Percentage & Fixed Toggle)
+        const selOpt1 = '[data-option-select1]'
+        const optCon1 = '[data-option-con1]'
+        const selected1 = 'data-option-select1'
+        const selectedOpt1 = document.querySelector(selOpt1)
+        const optionsContainer1 = document.querySelector(optCon1)
+        const optionsList1 = document.querySelectorAll('[data-option-item1]')
+
+        selectDropdown(selectedOpt1, optionsContainer1, optionsList1, selOpt1, optCon1, selected1)
+
+    </script>
+</body>
+</html>
