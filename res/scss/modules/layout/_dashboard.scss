@@ -64,7 +64,7 @@
                     }
                     .p-wrap p:first-child {
                         margin-bottom: $spacing-2x-large;
-                        font-size: $font-size-x-medium;
+                        font-size: $font-size-medium;
                         color: $white;
                     }
                     .p-wrap p:last-child {
@@ -74,9 +74,12 @@
                     .tag-wrap {
                         display: flex;
                         justify-content: flex-end;
-                        p {
-                            font-size: $font-size;
-                            color: white;
+                        button {
+                            font-size: $font-size-medium;
+                            color: $black;
+                            &:hover {
+                                opacity: 0.8;
+                            }
                         }
                     }
                 }
@@ -90,14 +93,6 @@
                     background-color: $primary;
                     .p-wrap p:last-child {
                         color: $black;
-                    }
-                }
-                .card:last-of-type {
-                    .p-wrap p:first-child {
-                        margin-bottom: $spacing-medium;
-                    }
-                    .p-wrap p:last-child {
-                        font-size: $font-size-x-display;
                     }
                 }
                 .card:nth-of-type(1) .tag-wrap {
@@ -169,7 +164,7 @@
                 padding: $spacing-2x-large;
             }
             // * Container 3: Card 1
-            .card-2:first-child {
+            .card-2:first-of-type {
                 @include md-con-3-card-1;
                 border-radius: $border-radius-x-large;
                 padding: $spacing-2x-large;
@@ -183,7 +178,7 @@
                         margin-top: $spacing-large;
                         font-size: $font-size-display;
                         font-weight: $font-weight-bold;
-                        color: $secondary;
+                        color: $green2;
                     }
                     p:nth-of-type(2) {
                         margin-top: $spacing-small;
@@ -240,7 +235,7 @@
                             color: $white;
                             span {
                                 font-weight: $font-weight-bold;
-                                color: $green;
+                                color: $green2;
                             }
                         }
                     }
@@ -267,23 +262,29 @@
                 }
             }
             // * Container 3: Card 2
-            .card-2:last-child {
-                @include md-con-3-card-2;
+            .card-2:last-of-type {
+                // @include md-con-3-card-2;
+                display: flex;
+                flex-direction: column;
+                gap: $spacing-2x-large;
                 background-color: $white;
                 box-shadow: $box-shadow;
                 h3 {
                     font-size: $font-size-large;
+                    margin-bottom: $spacing-2x-large;
                 }
                 .div-1 {
+                    display: flex;
+                    flex-direction: column;
+                    gap: $spacing-2x-large 0;
                     margin: min(1rem, 0%);
                     .p-wrap {
-                        padding-top: min(0.4rem, 10%);
-                        padding-bottom: 1rem;
                         border-bottom: $secondary-bg 1px solid;
                         .wrap {
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
+                            padding-bottom: $spacing;
                             p {
                                 font-size: $font-size-large;
                                 font-weight: $font-weight-bold;
@@ -297,11 +298,63 @@
                 .div-2 {
                     display: flex;
                     justify-content: flex-end;
+                    margin-top: $spacing-2x-large;
                     button {
                         @include primaryButton;
                     }
                 }
             }
+            // * Container 3: Card 2
+            .card-2.tlpa {
+                // @include md-con-3-card-2;
+                display: flex;
+                flex-direction: column;
+                gap: $spacing-2x-large;
+                background-color: $white;
+                box-shadow: $box-shadow;
+                h3 {
+                    font-size: $font-size-large;
+                }
+                .div-1 {
+                    display: flex;
+                    flex-direction: column;
+                    gap: $spacing-2x-large 0;
+                    margin: min(1rem, 0%);
+                    .p-wrap {
+                        border-bottom: $secondary-bg 1px solid;
+                        .wrap {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding-bottom: $spacing;
+                            p {
+                                margin-top: unset;
+                                font-size: $font-size-large;
+                                font-weight: $font-weight-bold;
+                                color: $black;
+                            }
+                            ~p {
+                                font-size: $font-size;
+                            }
+                        }
+                    }
+                }
+                .div-2 {
+                    display: flex;
+                    align-items: flex-end;
+                    button {
+                        @include primaryButton;
+                    }
+                }
+            }
+        }
+        .md-con-2.tlpa {
+            display: flex;
+            flex-direction: column;
+        }
+        .md-con-3.tlpa {
+            display: flex;
+            flex-direction: column;
         }
     }
 }
