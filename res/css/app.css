@@ -5974,10 +5974,88 @@ body.print-portrait .page.page-2.passbook.show {
 .main-dashboard .con-wrapper .md-con-2.tlpa {
   display: flex;
   flex-direction: column;
+  height: 39rem;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-1 {
+  display: unset;
+  margin-bottom: 2rem;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 {
+  overflow-y: hidden;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table th {
+  padding: 2rem 0;
+  text-align: left;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table th span.th-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table th .th-wrapper {
+  display: flex;
+  align-items: center;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table th .th-wrapper img {
+  cursor: pointer;
+  padding-left: 0.5rem;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table th:nth-of-type(n+3) {
+  text-align: right;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table th:first-of-type {
+  padding-left: 1rem;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table th:nth-of-type(2) {
+  padding-left: 1rem;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table th:last-of-type {
+  padding-right: 3rem;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table td {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table td .td-wrapper {
+  display: flex;
+  align-items: center;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table td .td-wrapper .td-num {
+  font-weight: 700;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table td .td-wrapper .td-name {
+  margin-left: 2rem;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table td .td-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table td .td-btn-wrapper button {
+  cursor: pointer;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table td:nth-of-type(n+3) {
+  text-align: right;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table td:first-of-type {
+  padding-left: 1rem;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table td:nth-of-type(2) {
+  padding-left: 1rem;
+}
+.main-dashboard .con-wrapper .md-con-2.tlpa .div-2 .table-container table td:last-of-type {
+  padding-right: 3rem;
 }
 .main-dashboard .con-wrapper .md-con-3.tlpa {
   display: flex;
   flex-direction: column;
+}
+.main-dashboard .con-wrapper .tlpa {
+  height: 39rem;
 }
 
 .login-container {

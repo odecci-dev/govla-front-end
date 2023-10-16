@@ -29,7 +29,7 @@ function selectDropdown(selectOption, optionsContainer, optionList, selOpt, optC
 
 }
 
-// ** Select Dropdown 0 (Borrower Gender)
+// ** Select Dropdown 0 (Dropdown Filter)
 const selOpt0 = '[data-option-select0]'
 const optCon0 = '[data-option-con0]'
 const selected0 = 'data-option-select0'
@@ -39,6 +39,18 @@ const optionsList0 = document.querySelectorAll('[data-option-item0]')
 
 if (selectedOpt0) {
     selectDropdown(selectedOpt0, optionsContainer0, optionsList0, selOpt0, optCon0, selected0)
+}
+
+// ** Select Dropdown 00 (Dropdown Filter)
+const selOpt00 = '[data-option-select00]'
+const optCon00 = '[data-option-con00]'
+const selected00 = 'data-option-select00'
+const selectedOpt00 = document.querySelector(selOpt00)
+const optionsContainer00 = document.querySelector(optCon00)
+const optionsList00 = document.querySelectorAll('[data-option-item00]')
+
+if (selectedOpt00) {
+    selectDropdown(selectedOpt00, optionsContainer00, optionsList00, selOpt00, optCon00, selected00)
 }
 
 // * All Members: Dropdown Menu Toggle
