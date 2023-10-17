@@ -65,9 +65,16 @@
             <div class="reports-container">
                 <div class="report-inner-container-2">
                     <div class="header-wrapper">
-                        <h2>Release Reports</h2>
-                        <input type="button" class="ui-datepicker-trigger" id="startDate" value="Start Date"></input>
-                        <input type="button" class="ui-datepicker-trigger" id="endDate" value="End Date"></input>
+                        <div class="inner-wrapper date-picker">
+                            <h2>Release Reports</h2>
+                            <input type="button" class="ui-datepicker-trigger" id="startDate" value="Start Date"></input>
+                            <input type="button" class="ui-datepicker-trigger" id="endDate" value="End Date"></input>
+                        </div>
+                        <!-- * Print and Export Buttons -->
+                        <div class="inner-wrapper">
+                            <button class="button-2" data-print-button>Print</button>
+                            <button class="button-2" data-export-button>Export</button>
+                        </div>
                     </div>
                     <div class="body-wrapper">
                         <!-- * Container: Reports Table -->

@@ -126,12 +126,18 @@
                     align-items: center;
                     gap: 0 $spacing-large;
                 }
+                // * Header w/ Search
                 .inner-wrapper:first-of-type {
                     gap: 0 $spacing-5x-large;
                 }
-                // button {
-                //     font-size: $font-size;
-                // }
+                // * Header w/ Datepicker
+                .inner-wrapper.date-picker {
+                    h2 {
+                        margin-right: $spacing-3x-large;
+                    }
+                    gap: 0 $spacing-large;
+                }
+                
             }
             .body-wrapper {
                 display: flex;

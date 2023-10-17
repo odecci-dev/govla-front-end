@@ -2712,8 +2712,6 @@ body.print-portrait .page {
 @media print {
   html, body {
     box-sizing: border-box;
-    background: none !important;
-    box-shadow: unset !important;
   }
   .page-panel {
     display: none;
@@ -12926,6 +12924,12 @@ body.print-portrait .page {
 }
 .main-dashboard .reports-container .report-inner-container-2 .header-wrapper .inner-wrapper:first-of-type {
   gap: 0 5rem;
+}
+.main-dashboard .reports-container .report-inner-container-2 .header-wrapper .inner-wrapper.date-picker {
+  gap: 0 1.5rem;
+}
+.main-dashboard .reports-container .report-inner-container-2 .header-wrapper .inner-wrapper.date-picker h2 {
+  margin-right: 3rem;
 }
 .main-dashboard .reports-container .report-inner-container-2 .body-wrapper {
   display: flex;

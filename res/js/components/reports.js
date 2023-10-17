@@ -11,3 +11,15 @@ reportAreaExpandButton.forEach(button => {
     })
 
 })
+
+function linkButton(button, path) {
+    button.addEventListener('click', () => {
+        url = path
+        location.href = url
+    })
+}
+const printButton = document.querySelector('[data-print-button]')
+const exportButton = document.querySelector('[data-export-button]')
+
+linkButton(printButton, '/KC/collection/collection-print.html')
+linkButton(exportButton, '/KC/collection/collection-remittance.html')

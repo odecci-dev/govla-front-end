@@ -1299,3 +1299,10 @@ Second Commit:
 • Transactions: Printables - Passbook Revision✅
 • Reports: Started Revision
     - savings-report.html
+
+Third Commit:
+• Reports: Finished Revision✅
+    - collection-report.html
+    - past-due-report.html
+    - release-report.html
+    - savings-report.html
