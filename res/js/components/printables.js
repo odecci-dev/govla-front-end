@@ -161,37 +161,37 @@ if (backButton) {
 
 
 // * Passbook Fill-out Line
-const fillLine = document.querySelectorAll('.p-fill')
+// const fillLine = document.querySelectorAll('.p-fill')
 
-fillLine.forEach(p => {
-    const underline = document.createElement('p')
-    underline.classList.add('fill-line')
-    p.insertAdjacentElement('afterend', underline)
-})
+// fillLine.forEach(p => {
+//     const underline = document.createElement('p')
+//     underline.classList.add('fill-line')
+//     p.insertAdjacentElement('afterend', underline)
+// })
 
 
-function countColumns(item, classname) {
-    count = 0
+// function countColumns(item, classname) {
+//     count = 0
 
-    item.forEach(box => {
-        count ++
-        const spanNum = document.createElement('span')
-        spanNum.classList.add(classname)
-        spanNum.textContent = `${count}`
-        box.appendChild(spanNum)
-    })
-}
+//     item.forEach(box => {
+//         count ++
+//         const spanNum = document.createElement('span')
+//         spanNum.classList.add(classname)
+//         spanNum.textContent = `${count}`
+//         box.appendChild(spanNum)
+//     })
+// }
 
-// * Passbook Number of Days
-const cellNum = document.querySelectorAll('.box-cell.num')
-visible = 'visible'
-const cellNumHidden = document.querySelectorAll('.box-cell.hidden')
-hidden = 'hidden' 
+// // * Passbook Number of Days
+// const cellNum = document.querySelectorAll('.box-cell.num')
+// visible = 'visible'
+// const cellNumHidden = document.querySelectorAll('.box-cell.hidden')
+// hidden = 'hidden' 
 
-// * Visiible Numbers
-countColumns(cellNum, visible)
-// * Hidden Numbers
-countColumns(cellNumHidden, hidden)
+// // * Visiible Numbers
+// countColumns(cellNum, visible)
+// // * Hidden Numbers
+// countColumns(cellNumHidden, hidden)
 
 // const passbookBack = document.querySelector('.page-2 .passbook')
 

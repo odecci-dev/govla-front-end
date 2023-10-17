@@ -110,7 +110,7 @@
             .header-wrapper {
                 display: flex;
                 align-items: center;
-                gap: 0 $spacing-2x-large;
+                justify-content: space-between;
                 h2 {
                     font-size: $font-size-x-large;
                 }
@@ -121,9 +121,17 @@
                         // display: block;
                     }
                 }
-                button {
-                    font-size: $font-size;
+                .inner-wrapper {
+                    display: flex;
+                    align-items: center;
+                    gap: 0 $spacing-large;
                 }
+                .inner-wrapper:first-of-type {
+                    gap: 0 $spacing-5x-large;
+                }
+                // button {
+                //     font-size: $font-size;
+                // }
             }
             .body-wrapper {
                 display: flex;

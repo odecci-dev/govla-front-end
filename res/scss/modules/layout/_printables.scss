@@ -1,4 +1,8 @@
 body {
+    &.print {
+        // background: $black2;
+    }
+    
     // * Voucher
     &.print-portrait {
         .page {
@@ -10,9 +14,13 @@ body {
 
     // * Passbook
     &.print-portrait-passbook {
+        // height: unset !important;
+        height: 1077.1653543px; 
         .page {
-            width: 94.8mm;
-            min-height: 297mm; 
+            // width: 385.51181102px;
+            width: 102mm;
+            // height: 1077.1653543px; 
+            height: 285mm; 
             padding: unset !important;
         }
         .page.page-1.passbook,
@@ -22,6 +30,15 @@ body {
         .page.page-1.passbook.show,
         .page.page-2.passbook.show  {
             display: unset;
+        }
+    }
+
+    // * Collection 
+    &.print-portrait {
+        .page {
+            width: 297mm;
+            min-height: 209mm; 
+            // padding: unset !important;
         }
     }
 }
@@ -97,18 +114,17 @@ body {
 
 // * Print Collection Container
 .printables-container {
+    background: $blackTR3;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: $blackTR3;
     gap: 1rem;
     padding: 1rem 0;
     // * A4 (Landscape)
     .page {
-        position: relative;
         background-color: $white;
-        width: 297mm;
-        min-height: 209mm;
+        // width: 297mm;
+        // min-height: 209mm;
         padding: 0 1rem;
         .header-wrapper {
             padding-top: 1rem;
@@ -328,7 +344,7 @@ body {
 
 
 @page {
-    size: A4 landscape;  
+    // size: A4 landscape;  
     margin: 0;
     padding: 0;
 }
@@ -336,8 +352,10 @@ body {
 @media print {
     html, body {
         box-sizing: border-box;
-        width: 210mm;
-        height: 297mm; 
+        // width: 210mm;
+        // min-height: 297mm;
+        background: none !important;
+        box-shadow: unset !important;
     }
     // body.print-landscape {
     //     box-sizing: border-box !important;
@@ -364,8 +382,9 @@ body {
         border-radius: initial;
         width: initial;
         height: initial;
-        box-shadow: initial;
+        min-height: initial;
         background: initial;
+        outline: initial;
     }
 }
 
@@ -599,7 +618,7 @@ body {
     display: flex;
     gap: 0 $spacing-3x-large;
     .passbook {
-        outline: 2px solid $black;
+        border: 2px solid $black;
         // *** Base Styles
         .p-regular {
             font-weight: $font-weight !important;
@@ -621,6 +640,7 @@ body {
         }
         // *** Base Styles END ***
         .header-wrapper {
+            height: 6rem;
             display: flex;
             justify-content: center !important;
             align-items: center !important;
@@ -633,22 +653,27 @@ body {
                 padding-right: $spacing;
                 gap: 0 $spacing-2x-large;
                 img {
-                    scale: 0.8;
+                    scale: 0.6;
                 }
                 .box-inner {
                     p {
                         padding: .2rem 0;
-                        font-size: calc($font-size-medium / 1.2)  !important;
+                        font-size: calc($font-size-medium / 1.4)  !important;
                         font-weight: $font-weight-bold;
                         &:nth-of-type(2) {
-                            font-size: calc($font-size-medium / 1.4)  !important;
+                            font-size: calc($font-size-medium / 1.5)  !important;
                             font-weight: $font-weight;
                         }
                     }
                     &.p-back {
                         p:nth-of-type(2) {
-                            font-size: calc($font-size / 1.4)  !important;
+                            font-size: calc($font-size / 1.5)  !important;
                             font-weight: $font-weight;
+                        }
+                        span {
+                            font-size: calc($font-size / 1.5)  !important;
+                            font-weight: $font-weight;
+                            font-style: italic;
                         }
                     }
                 }
@@ -669,13 +694,12 @@ body {
                     // justify-content: space-between;
                     width: 100%;
                     height: 100%;
-                    padding: 1.1rem 1.2rem !important;
+                    padding: 0.5rem 0.7rem !important;
                     gap: calc(1.8rem / 3) !important;
                     outline: unset !important; 
-                    
                     p {
                         font-size:calc($font-size / 1.2)  !important;
-                        font-weight: $font-weight !important;
+                        // font-weight: $font-weight !important;
                     }
                     span {
                         font-size:calc($font-size / 1.2)  !important;
@@ -699,25 +723,30 @@ body {
                         outline: 2px solid $black !important;
                         .fill-wrap {
                             display: flex;
+                            gap: $spacing-medium;
                             overflow: hidden;
-                            .fill-line {
-                                position: relative;
-                                    &:before {
-                                        content: '';
-                                        position: absolute;
-                                        display: inline-block;
-                                        height: 0.2rem;
-                                        width: 50rem;
-                                        bottom: 0;
-                                        left: 1rem;
-                                        background-color: $black;
-                                    }
+                            .p-fill {
+                                white-space: nowrap;
                             }
+                            // .fill-line {
+                            //     position: relative;
+                            //         &:before {
+                            //             content: '';
+                            //             position: absolute;
+                            //             display: inline-block;
+                            //             height: 0.2rem;
+                            //             width: 50rem;
+                            //             bottom: 0;
+                            //             left: 1rem;
+                            //             background-color: $black;
+                            //         }
+                            // }
                         }
                         .box-inner {
                             .box-inner-wrapper:nth-of-type(1) {
                                 display: flex;
                                 align-items: center;
+                                margin: 0.2rem 0;
                                 .p-bold.p-red-text {
                                     margin-left: unset !important;
                                     margin-right: 1.6rem;
@@ -740,47 +769,98 @@ body {
                             }
                         }
                     }
-                    // * Box-2
+                    // * Box-2 (Table)
                     &:nth-of-type(2) {
                         padding: unset !important;
-                        .box-inner:nth-of-type(1) {
-                            display: flex;
-                            flex-direction: row;
-                            .box-inner-wrapper {
-                                display: flex;
-                                flex-direction: column;
-                                width: 100%;
-                                .box-header {
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    height: 100%;
-                                    padding: .4rem 0;
-                                    text-align: center;
-                                    outline: 0.1rem solid $black;
-                                    p {
-                                        font-weight: $font-weight-bold !important;
+                        table {
+                            // background: aqua    ;
+                            tr {
+                                &:first-of-type {
+                                    position: unset !important;
+                                    isolation: unset;
+                                    background: none !important;
+                                    th {
+                                        position: unset !important;
+                                        isolation: unset;
                                     }
                                 }
-                                .box-cells-wrapper {
-                                    display: flex;
-                                    flex-direction: column;
-                                    .box-cell {
-                                        padding: 0.3rem 0.4rem 0.3rem 0;
-                                        text-align: right;
-                                        outline: 0.1rem solid $black;
-                                        .hidden {
-                                            visibility: hidden !important;
-                                        }
-                                        .box-cell.num {
-                                            // span {
-                                            //     visibility: visible !important;
-                                            // }
-                                        }
-                                    }
+                                th, td {
+                                    border: 2px solid $black;
+                                    text-align: center;
+                                    padding: 0.110rem 0.5rem;
+                                }
+                                th:first-of-type, 
+                                td:first-of-type {
+                                    border-left: none;
+                                }
+                                // * Date
+                                th:nth-of-type(2){
+                                    padding: 0.3rem 1.6rem;
+                                }
+                                // * Amount Paid
+                                th:nth-of-type(3) {
+                                    white-space: nowrap;
+                                    padding: 0.3rem 1.4rem;
+                                }
+                                // * Field Officer Sign
+                                th:nth-of-type(6) {
+                                    // white-space: nowrap;
+                                    padding: 0.3rem 0.4rem;
+                                }
+                                th:last-of-type, 
+                                td:last-of-type {
+                                    border-right: none;
+                                }
+                                td {
+                                    text-align: right;
+                                    padding-right: 0.4rem;
+                                }
+                                td:first-of-type {
+                                    font-weight: $font-weight-bold;
                                 }
                             }
                         }
+                        // .box-inner:nth-of-type(1) {
+                        //     padding: unset !important;
+                        // }
+                        // .box-inner:nth-of-type(1) {
+                        //     display: flex;
+                        //     flex-direction: row;
+                        //     .box-inner-wrapper {
+                        //         display: flex;
+                        //         flex-direction: column;
+                        //         width: 100%;
+                        //         .box-header {
+                        //             display: flex;
+                        //             align-items: center;
+                        //             justify-content: center;
+                        //             height: 100%;
+                        //             padding: .4rem 0;
+                        //             text-align: center;
+                        //             outline: 0.1rem solid $black;
+                        //             p {
+                        //                 font-weight: $font-weight-bold !important;
+                        //             }
+                        //         }
+                        //         .box-cells-wrapper {
+                        //             display: flex;
+                        //             flex-direction: column;
+                        //             .box-cell {
+                        //                 padding: 0.3rem 0.4rem 0.3rem 0;
+                        //                 text-align: right;
+                        //                 outline: 0.1rem solid $black;
+                        //                 .hidden {
+                        //                     visibility: hidden !important;
+                        //                 }
+                        //                 .box-cell.num {
+                        //                     // span {
+                        //                     //     visibility: visible !important;
+                        //                     // }
+                        //                 }
+                        //             }
+                        //         }
+                        //     }
+                        // }
                     }
                     // * Box-4
                     &:nth-of-type(3) {
@@ -807,8 +887,16 @@ body {
                 }
                 &.p-back {
                     .box.p-back {
+                        gap: unset !important;
+                        padding: unset !important;
                         p {
                             font-weight: $font-weight-bold !important;
+                        }
+                        .inner-box {
+                            padding: 0.520rem 1.2rem !important;
+                            &:nth-of-type(2) {
+                                border-top: 2px solid $black;
+                            }
                         }
                     }
                 }
@@ -823,6 +911,9 @@ body {
             gap: $spacing;
             font-size: calc($font-size / 1.43)  !important;
             font-weight: $font-weight-bold !important;
+            &.center {
+                align-items: center;
+            }
             >p {
                 text-transform: uppercase;
                 font-style: italic;
@@ -831,6 +922,12 @@ body {
                 display: flex;
                 flex-direction: column;
                 gap: 0.4rem;
+                &.p-back {
+                    .box-inner {
+                        display: flex;
+                        gap: $spacing-2x-large;
+                    }
+                }
             }
         }
     }

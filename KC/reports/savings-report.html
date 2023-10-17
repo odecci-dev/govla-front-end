@@ -65,9 +65,24 @@
             <div class="reports-container">
                 <div class="report-inner-container-2">
                     <div class="header-wrapper">
-                        <h2>Savings Reports</h2>
-                        <input type="button" class="ui-datepicker-trigger" id="startDate" value="Start Date"></input>
-                        <input type="button" class="ui-datepicker-trigger" id="endDate" value="End Date"></input>
+                        <div class="inner-wrapper">
+                            <h2>Savings Reports</h2>
+                            <!-- * Primary Search Bar -->
+                            <div class="primary-search-bar">
+                                <div class="row">
+                                    <input type="search" id="searchInput" name="search" placeholder="Search" autocomplete="off">
+                                    <button>
+                                    </button>
+                                </div>
+                                <div class="result-box" data-search-results>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- * Print and Export Buttons -->
+                        <div class="inner-wrapper">
+                            <button class="button-2">Print</button>
+                            <button class="button-2">Export</button>
+                        </div>
                     </div>
                     <div class="body-wrapper">
                         <!-- * Container: Reports Table -->

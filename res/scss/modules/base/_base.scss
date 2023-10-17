@@ -572,7 +572,19 @@ table {
     @include primarySearchBar;
 }
 
+
 // * Input Global
+
+.fill-out-line {
+    width: 100%;
+    border: none !important;
+    outline: none !important;
+    background: none !important;
+    border-bottom: 2px solid $black !important;
+    padding: 0 0 0.2rem 0.2rem;
+    font-size: $font-size-small;
+}
+
 .input-wrapper {
     position: relative;
     display: flex;
