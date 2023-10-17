@@ -1,3 +1,31 @@
+body {
+    // * Voucher
+    &.print-portrait {
+        .page {
+            width: 297mm;
+            min-height: 297mm; 
+            // padding: unset !important;
+        }
+    }
+
+    // * Passbook
+    &.print-portrait-passbook {
+        .page {
+            width: 94.8mm;
+            min-height: 297mm; 
+            padding: unset !important;
+        }
+        .page.page-1.passbook,
+        .page.page-2.passbook {
+            display: none;
+        }
+        .page.page-1.passbook.show,
+        .page.page-2.passbook.show  {
+            display: unset;
+        }
+    }
+}
+
 // * Page Panel
 .page-panel {
     visibility: hidden;
@@ -308,8 +336,8 @@
 @media print {
     html, body {
         box-sizing: border-box;
-        width: 297mm;
-        height: 210mm; 
+        width: 210mm;
+        height: 297mm; 
     }
     // body.print-landscape {
     //     box-sizing: border-box !important;
@@ -564,23 +592,6 @@
                 }
             }
         }
-    }
-}
-
-// * Passbook
-body.print-portrait {
-    .page {
-        width: 94.8mm;
-        min-height: 297mm; 
-        padding: unset !important;
-    }
-    .page.page-1.passbook,
-    .page.page-2.passbook {
-        display: none;
-    }
-    .page.page-1.passbook.show,
-    .page.page-2.passbook.show  {
-        display: unset;
     }
 }
 

@@ -2491,6 +2491,24 @@ body {
     transform: translateX(-100%);
   }
 }
+body.print-portrait .page {
+  width: 297mm;
+  min-height: 297mm;
+}
+body.print-portrait-passbook .page {
+  width: 94.8mm;
+  min-height: 297mm;
+  padding: unset !important;
+}
+body.print-portrait-passbook .page.page-1.passbook,
+body.print-portrait-passbook .page.page-2.passbook {
+  display: none;
+}
+body.print-portrait-passbook .page.page-1.passbook.show,
+body.print-portrait-passbook .page.page-2.passbook.show {
+  display: unset;
+}
+
 .page-panel {
   visibility: hidden;
   opacity: 0;
@@ -2681,8 +2699,8 @@ body {
 @media print {
   html, body {
     box-sizing: border-box;
-    width: 297mm;
-    height: 210mm;
+    width: 210mm;
+    height: 297mm;
   }
   .page-panel {
     display: none;
@@ -2890,20 +2908,6 @@ body {
 }
 .receipt-voucher-container .body-wrapper .box-wrapper .box:nth-of-type(4) .box-inner p:nth-of-type(2) {
   text-align: left;
-}
-
-body.print-portrait .page {
-  width: 94.8mm;
-  min-height: 297mm;
-  padding: unset !important;
-}
-body.print-portrait .page.page-1.passbook,
-body.print-portrait .page.page-2.passbook {
-  display: none;
-}
-body.print-portrait .page.page-1.passbook.show,
-body.print-portrait .page.page-2.passbook.show {
-  display: unset;
 }
 
 .passbook-container {
