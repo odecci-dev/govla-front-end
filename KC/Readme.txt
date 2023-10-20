@@ -1310,6 +1310,9 @@ Third Commit:
     
 October 20, 2023 (Friday)
 First Commit:
-• Remmitance Module: Dropdown Reference Number✅
+• Remittance Module: Dropdown Reference Number✅
 - Removed search bar
 - Removed filer modal
+    Changes are made in the ff:
+        - collection.js
+        - _collection.scss

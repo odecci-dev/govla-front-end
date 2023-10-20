@@ -20,48 +20,6 @@ if (viewCollectionBtn) {
 }
 
 
-// * Select Dropdown Function
-function selectDropdown(selectOption, optionsContainer, optionList, selOpt, optCon, optList) {
-    selectOption.addEventListener("click", () => {
-        optionsContainer.classList.toggle("active");
-
-        // * H4 toggle dropdown
-        const h4 = selectOption.lastElementChild
-        if (h4) {
-            h4.setAttribute(optList, "")
-        }
-    });
-
-    // * Close dropdowns when clicking outside of them
-    document.addEventListener('click', (e) => {
-        if (!e.target.matches(selOpt, optCon)) {
-            optionsContainer.classList.remove("active");
-        }
-    });
-
-    optionList.forEach(option => {
-        option.setAttribute('value', option.children[0].value)
-        option.addEventListener("click", () => {
-            selectOption.innerHTML = option.querySelector("label").innerHTML;
-            optionsContainer.classList.remove("active");
-            selectOption.setAttribute('value', option.children[0].value);
-            let selectToggleCheckRadio = selectOption.querySelector("input[type=radio]")
-            selectToggleCheckRadio.checked = true;
-        });
-    });
-
-}
-
-// ** Select Dropdown 1 (Percentage & Fixed Toggle)
-const selOpt1 = '[data-option-select1]'
-const optCon1 = '[data-option-con1]'
-const selected1 = 'data-option-select1'
-const selectedOpt1 = document.querySelector(selOpt1)
-const optionsContainer1 = document.querySelector(optCon1)
-const optionsList1 = document.querySelectorAll('[data-option-item1]')
-
-selectDropdown(selectedOpt1, optionsContainer1, optionsList1, selOpt1, optCon1, selected1)
-
 
 // ***** Area Menu Button ***** //
 // * used in Cash Denomination
@@ -581,3 +539,46 @@ if (viewAreaModal) {
     // })
 
 }
+
+
+// * Select Dropdown Function
+function selectDropdown(selectOption, optionsContainer, optionList, selOpt, optCon, optList) {
+    selectOption.addEventListener("click", () => {
+        optionsContainer.classList.toggle("active");
+
+        // * H4 toggle dropdown
+        const h4 = selectOption.lastElementChild
+        if (h4) {
+            h4.setAttribute(optList, "")
+        }
+    });
+
+    // * Close dropdowns when clicking outside of them
+    document.addEventListener('click', (e) => {
+        if (!e.target.matches(selOpt, optCon)) {
+            optionsContainer.classList.remove("active");
+        }
+    });
+
+    optionList.forEach(option => {
+        option.setAttribute('value', option.children[0].value)
+        option.addEventListener("click", () => {
+            selectOption.innerHTML = option.querySelector("label").innerHTML;
+            optionsContainer.classList.remove("active");
+            selectOption.setAttribute('value', option.children[0].value);
+            let selectToggleCheckRadio = selectOption.querySelector("input[type=radio]")
+            selectToggleCheckRadio.checked = true;
+        });
+    });
+
+}
+
+// ** Select Dropdown 1 (Percentage & Fixed Toggle)
+const selOpt1 = '[data-option-select1]'
+const optCon1 = '[data-option-con1]'
+const selected1 = 'data-option-select1'
+const selectedOpt1 = document.querySelector(selOpt1)
+const optionsContainer1 = document.querySelector(optCon1)
+const optionsList1 = document.querySelectorAll('[data-option-item1]')
+
+selectDropdown(selectedOpt1, optionsContainer1, optionsList1, selOpt1, optCon1, selected1)
