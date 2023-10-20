@@ -1153,3 +1153,10 @@
         }
     }
 }
+
+.header-wrapper.reference-number {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-large;
+    width: calc(100vw - 85%);
+}

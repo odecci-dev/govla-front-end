@@ -7168,6 +7168,13 @@ body.print-portrait .page {
   padding-right: 0.75rem;
 }
 
+.header-wrapper.reference-number {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: calc(100vw - 85%);
+}
+
 .main-dashboard {
   position: fixed;
   right: 0;
