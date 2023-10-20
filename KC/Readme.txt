@@ -1316,3 +1316,10 @@ First Commit:
     Changes are made in the ff:
         - collection.js
         - _collection.scss
+
+Second Commit:
+• Application Module: Passbook Size Envelope #10✅
+- 4.125 x 9.5 inches
+Changes are made in the ff:
+    - _printables.scss
+        
