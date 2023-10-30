@@ -8,7 +8,23 @@
     <link rel="stylesheet" href="../../res/css/app.css" />
 </head>
 
-<body class="print print-portrait">
+<body class="print print-portrait-stub">
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- ***** Styles are in the ****** -->
+    <!-- ****** _printables.scss ****** -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- ***** Scripts are at the ***** -->
+    <!-- ****** bottom ||||| ********** -->
+    <!-- ************* VVVVV ********** -->
+    <!-- ****************************** -->
 
     <!-- <main>
             <!-- * Print Collection Modal -->
@@ -87,7 +103,7 @@
                                     <p>Advance / Lapses: <span id="printAdvanceOrLapses"></span></p>
                                 </div>
                             </div>
-                            <div class="box-wrapper">
+                            <!-- <div class="box-wrapper">
                                 <div class="box">
                                     <p>Client No: <span id="printClientNo"></span></p>
                                     <p>Name: <span id="printClientName"></span></p>
@@ -136,7 +152,7 @@
                                     <p>Savings Payment: <span id="printSavingsPayment"></span></p>
                                     <p>Advance / Lapses: <span id="printAdvanceOrLapses"></span></p>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <!-- <div class="footer-wrapper">
                             <div class="footer-inner-wrapper">
@@ -1112,6 +1128,14 @@
 
             <!-- </div> -->
     <!-- </main> -->
+    <script>
+        const pages = document.querySelectorAll('.page')
+        pages.forEach(page => {
+            if (page) {
+                page.classList.add('page-break-after')
+            }
+        })
+    </script>
     <script src="../../res/js/app.js" defer></script>
     <script src="../../res/js/components/printables.js" defer></script>
 

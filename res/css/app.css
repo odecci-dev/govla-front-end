@@ -2516,7 +2516,7 @@ body.print-portrait-passbook .page.page-1.passbook.show,
 body.print-portrait-passbook .page.page-2.passbook.show {
   display: unset;
 }
-body.print-portrait .page {
+body.print-portrait-stub .page {
   width: 297mm;
   min-height: 209mm;
 }
@@ -2610,12 +2610,11 @@ body.print-portrait .page {
 }
 .printables-container .page .body-wrapper .box-wrapper {
   display: flex;
-  justify-content: space-between;
 }
 .printables-container .page .body-wrapper .box-wrapper .box {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 27.4rem;
   height: 100%;
   padding: 3.1rem 1.2rem;
   outline: 1px dashed #29292B;
@@ -2703,6 +2702,8 @@ body.print-portrait .page {
 @page {
   margin: 0;
   padding: 0;
+  height: initial;
+  width: initial;
 }
 @media print {
   html, body {

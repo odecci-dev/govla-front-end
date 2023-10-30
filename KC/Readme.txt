@@ -1323,3 +1323,8 @@ Second Commit:
 Changes are made in the ff:
     - _printables.scss
         
+
+October 30, 2023 (Monday)
+First Commit:
+• Collection Stub: collection-print.html / _printables.scss / printables.js
+- printables.js

@@ -6,8 +6,9 @@ if (printablesContainer) {
     })
 }
 
-
-
+// ************************************************ //
+// ************** Start PAGE BREAK **************** //
+// ************************************************ //
 const pages = document.querySelectorAll('.page')
 const pagePanel = document.querySelector('[data-page-panel]')
 const spanCurrentPageNum = document.querySelector('[data-current-page-num]')
@@ -33,11 +34,20 @@ if (pagePanel) {
     })
 }
 
-
+// *********************************** //
+// *********************************** //
+// ********** PAGE BREAK ************* //
+// *********************************** //
+// *********************************** //
 pages.forEach(page => {
     if (page) {
         page.classList.add('page-break-after')
     }
+// *********************************** //
+// *********************************** //
+// ******  end of PAGE BREAK ********* //
+// *********************************** //
+// *********************************** //
     pageCount++
     page.setAttribute('id', `Page${pageCount}`)
 

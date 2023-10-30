@@ -41,7 +41,7 @@ body {
     }
 
     // * Collection 
-    &.print-portrait {
+    &.print-portrait-stub {
         .page {
             width: 297mm;
             min-height: 209mm; 
@@ -119,6 +119,11 @@ body {
 
 }
 
+// *********************************** //
+// *********************************** //
+// ****** Start COLLECTION STUB ****** //
+// *********************************** //
+// *********************************** //
 // * Print Collection Container
 .printables-container {
     background: $blackTR3;
@@ -147,11 +152,11 @@ body {
             flex-direction: column;
             .box-wrapper {
                 display: flex;
-                justify-content: space-between;
+                // justify-content: space-between;
                 .box {
                     display: flex;
                     flex-direction: column;
-                    width: 100%;
+                    width: 27.4rem;
                     height: 100%;
                     padding: 3.1rem 1.2rem;
                     outline: 1px dashed $black;
@@ -348,12 +353,18 @@ body {
     //     padding: 0 1rem;
     // }
 }
-
+// *********************************** //
+// *********************************** //
+// ****** End COLLECTION STUB ****** //
+// *********************************** //
+// *********************************** //
 
 @page {
     // size: A4 landscape;  
     margin: 0;
     padding: 0;
+    height: initial;
+    width: initial;
     // height: 285mm;
 
 }
